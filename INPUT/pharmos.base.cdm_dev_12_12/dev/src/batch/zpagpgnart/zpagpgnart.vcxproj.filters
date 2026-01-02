@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="src\hp_mainz.c">
+      <Filter>Quellcodedateien</Filter>
+    </ClCompile>
+    <ClCompile Include="src\logfile.c">
+      <Filter>Quellcodedateien</Filter>
+    </ClCompile>
+    <ClCompile Include="src\agpTransaction.c">
+      <Filter>Quellcodedateien</Filter>
+    </ClCompile>
+    <ClCompile Include="src\agpTransfer.c">
+      <Filter>Quellcodedateien</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\logfile.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="src\agpTransaction.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="src\agpTransfer.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Headerdateien">
+      <UniqueIdentifier>{9950e197-5958-4a39-ab39-4a1c2f27d7fa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Quellcodedateien">
+      <UniqueIdentifier>{395576b2-f600-4054-974d-0b93995e2ad0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="unix">
+      <UniqueIdentifier>{70ca6213-a6b5-470c-bc0c-fe1ad7a475ed}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="makefile">
+      <Filter>unix</Filter>
+    </None>
+    <None Include="do_procgen.sh">
+      <Filter>unix</Filter>
+    </None>
+  </ItemGroup>
+</Project>

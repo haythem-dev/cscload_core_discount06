@@ -1,0 +1,273 @@
+#####################################################################
+#                                                                   #
+#   aapservinf makefile for informix esqlc sources (Windows)        #
+#   Frank Naumann                                                   #
+#   18.11.2014                                                      #
+#                                                                   #
+#####################################################################
+
+#-------------------------------------------------------------
+#   target
+#-------------------------------------------------------------
+TARGET_NAME = $(OUT_DIR)\aapservinf.lib
+
+#-------------------------------------------------------------
+#   flags
+#-------------------------------------------------------------
+CFLAGS_CMN = /D_LIB /D_CRT_SECURE_NO_WARNINGS /DWIN32 /W4 /D_POSIX_ /D__CPLUS__ /wd"4101" /wd"4244" /wd"4115"
+CFLAGS_DBG = /Od /D_DEBUG /MD /Zi /Fd..\Debug\aapservinf.pdb
+CFLAGS_REL = /O2 /DNDEBUG /MD /Zi /Fd..\Release\aapservinf.pdb
+CFLAGS     = $(CFLAGS_CMN) $(CFLAGS_DBG)
+
+LFLAGS     = /subsystem:console
+
+TOKEN_PREPROCESSED = preprocessed
+TOKEN_PROTECTED    = protected
+
+#-------------------------------------------------------------
+#   libraries, lib path, include path
+#-------------------------------------------------------------
+LIBS        = isqlt09a.lib
+LIBS_DIR    = /LIBPATH:"$(INFORMIXDIR)\lib"
+
+INT_DIR     = Debug
+INT_DIR_REL = Release
+
+OUT_DIR     = ..\Debug
+OUT_DIR_REL = ..\Release
+
+INCS        = -I. \
+              -I..\..\ext\pplib\include \
+              -I..\..\ext\pplib\include\pplib \
+              -I..\..\cxxtools\include \
+              -I..\..\pxverbund\include \
+              -I..\..\ext\hdatum\include \
+              -I..\..\ext\hdatum\include\hdatum \
+              -Iwin32dade
+
+#-------------------------------------------------------------
+#   object files
+#-------------------------------------------------------------
+
+PROJ_OBJS=\
+        $(INT_DIR)\aadruck.obj \
+        $(INT_DIR)\aafil.obj \
+        $(INT_DIR)\aakritik.obj \
+        $(INT_DIR)\aakunde.obj \
+        $(INT_DIR)\aatour.obj \
+        $(INT_DIR)\artikel.obj \
+        $(INT_DIR)\auftraginfo.obj \
+        $(INT_DIR)\callback.obj \
+        $(INT_DIR)\callplanday.obj \
+        $(INT_DIR)\callplanmaintenance.obj \
+        $(INT_DIR)\callplanundertake.obj \
+        $(INT_DIR)\collectivorders.obj \
+        $(INT_DIR)\controlling.obj \
+        $(INT_DIR)\cremamailaddresses.obj \
+        $(INT_DIR)\customer.obj \
+        $(INT_DIR)\dadedb.obj \
+        $(INT_DIR)\dbinit.obj \
+        $(INT_DIR)\eilbotendruck.obj \
+        $(INT_DIR)\filialpartner.obj \
+        $(INT_DIR)\hersteller.obj \
+        $(INT_DIR)\iftsel.obj \
+        $(INT_DIR)\mailsystem.obj \
+        $(INT_DIR)\msv3.obj \
+        $(INT_DIR)\modemtab.obj \
+        $(INT_DIR)\orders.obj \
+        $(INT_DIR)\processcheck.obj \
+        $(INT_DIR)\promo.obj \
+        $(INT_DIR)\promoinfo.obj \
+        $(INT_DIR)\ranges.obj \
+        $(INT_DIR)\serviceorder.obj \
+        $(INT_DIR)\statistics.obj \
+        $(INT_DIR)\tender.obj \
+        $(INT_DIR)\touren.obj \
+        $(INT_DIR)\verbundcheck.obj \
+        $(INT_DIR)\zaaauft.obj \
+        $(INT_DIR)\zaaplan.obj \
+        $(INT_DIR)\zaatart.obj
+
+
+#-------------------------------------------------------------
+#   tools (Microsoft)
+#-------------------------------------------------------------
+MAKE     = nmake /f makefile.win
+LINK     = lib
+ESQL     = "$(INFORMIXDIR)\bin\esql.exe"
+EPROTECT = "$(INFORMIXDIR)\lib\eprotect.exe"
+
+#-------------------------------------------------------------
+#   target rules
+#-------------------------------------------------------------
+
+$(TARGET_NAME): $(INT_DIR) $(PROJ_OBJS) $(OUT_DIR)
+    $(LINK) /OUT:$(TARGET_NAME) $(LIBS_DIR) $(LFLAGS) $(PROJ_OBJS) $(LIBS)
+
+$(OUT_DIR):
+    mkdir $(OUT_DIR)
+
+$(INT_DIR):
+    mkdir $(INT_DIR)
+
+rel:
+    $(MAKE) CFLAGS="$(CFLAGS_CMN) $(CFLAGS_REL)" INT_DIR="$(INT_DIR_REL)" OUT_DIR="$(OUT_DIR_REL)"
+
+rel_all:
+    $(MAKE) rel_clean
+    $(MAKE) rel
+
+dbg_all:
+    $(MAKE) clean
+    $(MAKE)
+
+rel_clean:
+    $(MAKE) INT_DIR="$(INT_DIR_REL)" OUT_DIR="$(OUT_DIR_REL)" clean
+
+clean:
+    del /q $(INT_DIR)\*.obj $(INT_DIR)\*.ec $(OUT_DIR)\aapservinf.lib  $(OUT_DIR)\aapservinf.pdb
+
+#-------------------------------------------------------------
+#   suffix rules
+#-------------------------------------------------------------
+ESQL_DEFINES = /DESQL_C
+
+.cxx.obj:
+    set PATH=%PATH%;$(INFORMIXDIR)\bin
+    @if not exist $(INT_DIR) mkdir $(INT_DIR)
+#   $(CPP) $(CFLAGS) $(ESQL_DEFINES) $(INCS) /E /TC $*.cxx >$(INT_DIR)\$*.ec
+    $(CPP) $(CFLAGS) $(ESQL_DEFINES) $(INCS) /P /Fi$(INT_DIR)\$*.eco /TC $*.cxx
+    ..\rmblanklines.cmd $(INT_DIR)\$*.eco $(INT_DIR)\$*.ec
+    $(ESQL) -dcmdl $(CFLAGS) /Fo$(INT_DIR)\ /TC -c $(INT_DIR)\$*.ec
+    del $(*)*.c $(*)*.c_
+    del $(INT_DIR)\$*.eco
+#   del $(INT_DIR)\$*.ec
+
+dadestubs.obj:
+    set PATH=%PATH%;$(INFORMIXDIR)\bin
+    @if not exist $(INT_DIR) mkdir $(INT_DIR)
+    $(CPP) $(CFLAGS) $(ESQL_DEFINES) $(INCS) /E /TC win32dade\dadestubs.cxx >$(INT_DIR)\dadestubs.ec
+    $(ESQL) -dcmdl $(CFLAGS) /Fo$(INT_DIR)\ /TC -c $(INT_DIR)\dadestubs.ec
+    del $(*)*.c $(*)*.c_
+#-------------------------------------------------------------
+#   suffix
+#-------------------------------------------------------------
+.SUFFIXES:
+.SUFFIXES: .cxx
+
+#-------------------------------------------------------------
+#   dependencies between object and header files
+#-------------------------------------------------------------
+# DEP_START
+$(INT_DIR)\aadruck.obj: aadruck.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" OUT_DIR="$(OUT_DIR)" INT_DIR="$(INT_DIR)" aadruck.obj
+
+$(INT_DIR)\aafil.obj: aafil.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" OUT_DIR="$(OUT_DIR)" INT_DIR="$(INT_DIR)" aafil.obj
+
+$(INT_DIR)\aakritik.obj: aakritik.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" OUT_DIR="$(OUT_DIR)" INT_DIR="$(INT_DIR)" aakritik.obj
+
+$(INT_DIR)\aakunde.obj: aakunde.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" OUT_DIR="$(OUT_DIR)" INT_DIR="$(INT_DIR)" aakunde.obj
+
+$(INT_DIR)\aatour.obj: aatour.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" OUT_DIR="$(OUT_DIR)" INT_DIR="$(INT_DIR)" aatour.obj
+
+$(INT_DIR)\artikel.obj: artikel.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" OUT_DIR="$(OUT_DIR)" INT_DIR="$(INT_DIR)" artikel.obj
+
+$(INT_DIR)\auftraginfo.obj: auftraginfo.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" OUT_DIR="$(OUT_DIR)" INT_DIR="$(INT_DIR)" auftraginfo.obj
+
+$(INT_DIR)\callback.obj: callback.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" OUT_DIR="$(OUT_DIR)" INT_DIR="$(INT_DIR)" callback.obj
+
+$(INT_DIR)\callplanday.obj: callplanday.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" OUT_DIR="$(OUT_DIR)" INT_DIR="$(INT_DIR)" callplanday.obj
+
+$(INT_DIR)\callplanmaintenance.obj: callplanmaintenance.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" OUT_DIR="$(OUT_DIR)" INT_DIR="$(INT_DIR)" callplanmaintenance.obj
+
+$(INT_DIR)\callplanundertake.obj: callplanundertake.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" OUT_DIR="$(OUT_DIR)" INT_DIR="$(INT_DIR)" callplanundertake.obj
+
+$(INT_DIR)\collectivorders.obj: collectivorders.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" OUT_DIR="$(OUT_DIR)" INT_DIR="$(INT_DIR)" collectivorders.obj
+
+$(INT_DIR)\controlling.obj: controlling.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" OUT_DIR="$(OUT_DIR)" INT_DIR="$(INT_DIR)" controlling.obj
+
+$(INT_DIR)\cremamailaddresses.obj: cremamailaddresses.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" OUT_DIR="$(OUT_DIR)" INT_DIR="$(INT_DIR)" cremamailaddresses.obj
+
+$(INT_DIR)\customer.obj: customer.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" OUT_DIR="$(OUT_DIR)" INT_DIR="$(INT_DIR)" customer.obj
+
+$(INT_DIR)\dadedb.obj: dadedb.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" OUT_DIR="$(OUT_DIR)" INT_DIR="$(INT_DIR)" dadedb.obj
+
+$(INT_DIR)\dbinit.obj: dbinit.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" OUT_DIR="$(OUT_DIR)" INT_DIR="$(INT_DIR)" dbinit.obj
+
+$(INT_DIR)\eilbotendruck.obj: eilbotendruck.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" OUT_DIR="$(OUT_DIR)" INT_DIR="$(INT_DIR)" eilbotendruck.obj
+
+$(INT_DIR)\filialpartner.obj: filialpartner.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" OUT_DIR="$(OUT_DIR)" INT_DIR="$(INT_DIR)" filialpartner.obj
+
+$(INT_DIR)\hersteller.obj: hersteller.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" OUT_DIR="$(OUT_DIR)" INT_DIR="$(INT_DIR)" hersteller.obj
+
+$(INT_DIR)\iftsel.obj: iftsel.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" OUT_DIR="$(OUT_DIR)" INT_DIR="$(INT_DIR)" iftsel.obj
+
+$(INT_DIR)\mailsystem.obj: mailsystem.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" OUT_DIR="$(OUT_DIR)" INT_DIR="$(INT_DIR)" mailsystem.obj
+
+$(INT_DIR)\msv3.obj: msv3.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" OUT_DIR="$(OUT_DIR)" INT_DIR="$(INT_DIR)" msv3.obj
+
+$(INT_DIR)\modemtab.obj: modemtab.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" OUT_DIR="$(OUT_DIR)" INT_DIR="$(INT_DIR)" modemtab.obj
+
+$(INT_DIR)\orders.obj: orders.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" OUT_DIR="$(OUT_DIR)" INT_DIR="$(INT_DIR)" orders.obj
+
+$(INT_DIR)\processcheck.obj: processcheck.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" OUT_DIR="$(OUT_DIR)" INT_DIR="$(INT_DIR)" processcheck.obj
+
+$(INT_DIR)\promo.obj: promo.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" OUT_DIR="$(OUT_DIR)" INT_DIR="$(INT_DIR)" promo.obj
+
+$(INT_DIR)\promoinfo.obj: promoinfo.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" OUT_DIR="$(OUT_DIR)" INT_DIR="$(INT_DIR)" promoinfo.obj
+
+$(INT_DIR)\ranges.obj: ranges.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" OUT_DIR="$(OUT_DIR)" INT_DIR="$(INT_DIR)" ranges.obj
+
+$(INT_DIR)\serviceorder.obj: serviceorder.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" OUT_DIR="$(OUT_DIR)" INT_DIR="$(INT_DIR)" serviceorder.obj
+
+$(INT_DIR)\statistics.obj: statistics.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" OUT_DIR="$(OUT_DIR)" INT_DIR="$(INT_DIR)" statistics.obj
+
+$(INT_DIR)\tender.obj: tender.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" OUT_DIR="$(OUT_DIR)" INT_DIR="$(INT_DIR)" tender.obj
+
+$(INT_DIR)\touren.obj: touren.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" OUT_DIR="$(OUT_DIR)" INT_DIR="$(INT_DIR)" touren.obj
+
+$(INT_DIR)\verbundcheck.obj: verbundcheck.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" OUT_DIR="$(OUT_DIR)" INT_DIR="$(INT_DIR)" verbundcheck.obj
+
+$(INT_DIR)\zaaauft.obj: zaaauft.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" OUT_DIR="$(OUT_DIR)" INT_DIR="$(INT_DIR)" zaaauft.obj
+
+$(INT_DIR)\zaaplan.obj: zaaplan.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" OUT_DIR="$(OUT_DIR)" INT_DIR="$(INT_DIR)" zaaplan.obj
+
+$(INT_DIR)\zaatart.obj: zaatart.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" OUT_DIR="$(OUT_DIR)" INT_DIR="$(INT_DIR)" zaatart.obj
+
+# DEP_END

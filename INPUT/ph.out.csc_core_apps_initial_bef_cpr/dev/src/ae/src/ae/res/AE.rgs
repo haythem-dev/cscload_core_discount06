@@ -1,0 +1,11 @@
+HKCR
+{
+	NoRemove AppID
+	{
+		{0C2BCDB3-A608-4C33-BBF2-50229BC91B17} = s 'AE'
+		'AE.EXE'
+		{
+			val AppID = s {0C2BCDB3-A608-4C33-BBF2-50229BC91B17}
+		}
+	}
+}

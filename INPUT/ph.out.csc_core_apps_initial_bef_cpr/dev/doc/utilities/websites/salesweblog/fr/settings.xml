@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<salesweblog>
+	<logservice user="salesweblog" password="ST49fiUt" uri="urn:SalesWebLogServer"/>
+	<serverlist>
+		<server name="All Servers" location=""/>
+		<server name="SalesWeb1" location="http://10.100.121.201:81/SalesWebLogService/SalesWebLogService.php"/>
+		<server name="SalesWeb2" location="http://10.100.121.202:81/SalesWebLogService/SalesWebLogService.php"/>
+		<server name="SalesWeb3" location="http://10.100.121.203:81/SalesWebLogService/SalesWebLogService.php"/>
+		<server name="SalesWeb4" location="http://10.100.121.204:81/SalesWebLogService/SalesWebLogService.php"/>
+		<server name="SalesWeb5" location="http://10.100.121.205:81/SalesWebLogService/SalesWebLogService.php"/>
+		<server name="SalesWeb6" location="http://10.100.121.206:81/SalesWebLogService/SalesWebLogService.php"/>
+		<server name="SalesWeb7" location="http://10.100.121.207:81/SalesWebLogService/SalesWebLogService.php"/>
+		<server name="SalesWeb8" location="http://10.100.121.208:81/SalesWebLogService/SalesWebLogService.php"/>
+	</serverlist>
+	<logdatabases>
+		<logdb name="ArticleCatalogue" dbname="swlog_fr_articlecatalogue_#DATE#_.db" dbnameerrors="swlog_fr_articlecatalogue_errors_#DATE#_.db"/>				
+		<logdb name="Orders" dbname="swlog_fr_order_#DATE#_.db" dbnameerrors="swlog_fr_order_errors_#DATE#_.db"/>
+	</logdatabases>
+	<branchlist>
+		<branch no="" name="All Branches"/>
+		<branch no="17" name="Troyes Veto"/>
+		<branch no="18" name="Blois"/>
+		<branch no="30" name="Creteil"/>								
+		<branch no="32" name="Les Mureaux"/>								
+		<branch no="34" name="St. Aignon"/>								
+		<branch no="35" name="La Roche"/>								
+		<branch no="36" name="Toulon"/>
+		<branch no="37" name="Puget"/>
+		<branch no="38" name="Lille"/>
+		<branch no="39" name="Lyon"/>
+		<branch no="41" name="St. Etienne"/>
+		<branch no="43" name="PWS CAP Business"/>
+		<branch no="48" name="PWS Ris Orangis (Ivrylab)"/>
+		<branch no="45" name="Chatellerault"/>
+		<branch no="50" name="Nancy"/>
+		<branch no="53" name="Metz"/>
+		<branch no="55" name="Bayonne"/>
+		<branch no="60" name="Pau"/>
+		<branch no="65" name="Tarbes"/>
+		<branch no="66" name="Reims"/>
+		<branch no="67" name="St. Dizier"/>
+		<branch no="68" name="Troyes"/>
+		<branch no="75" name="Moulins"/>
+		<branch no="76" name="Clermt. Ferrand"/>
+		<branch no="80" name="Auxerre"/>
+		<branch no="86" name="Combs-La-Ville"/>
+		<branch no="87" name="Toulouse"/>
+	</branchlist>
+</salesweblog>

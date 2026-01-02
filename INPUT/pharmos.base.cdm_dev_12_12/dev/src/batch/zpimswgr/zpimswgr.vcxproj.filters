@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Quellcodedateien">
+      <UniqueIdentifier>{0fa32c2e-45be-420e-8a11-ed8b52d26dbf}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+    <Filter Include="Header-Dateien">
+      <UniqueIdentifier>{6741e11b-72dc-4d61-80a5-bc2a1a6b2b1b}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl</Extensions>
+    </Filter>
+    <Filter Include="unix">
+      <UniqueIdentifier>{cbd80120-1684-4239-9b7a-26b8445a5d84}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\asciidat.c">
+      <Filter>Quellcodedateien</Filter>
+    </ClCompile>
+    <ClCompile Include="src\g_imsart.c">
+      <Filter>Quellcodedateien</Filter>
+    </ClCompile>
+    <ClCompile Include="src\g_imswgr.c">
+      <Filter>Quellcodedateien</Filter>
+    </ClCompile>
+    <ClCompile Include="src\hp_main.c">
+      <Filter>Quellcodedateien</Filter>
+    </ClCompile>
+    <ClCompile Include="src\logfile.c">
+      <Filter>Quellcodedateien</Filter>
+    </ClCompile>
+    <ClCompile Include="src\normdat.c">
+      <Filter>Quellcodedateien</Filter>
+    </ClCompile>
+    <ClCompile Include="src\u_bssg.c">
+      <Filter>Quellcodedateien</Filter>
+    </ClCompile>
+    <ClCompile Include="src\u_imsart.c">
+      <Filter>Quellcodedateien</Filter>
+    </ClCompile>
+    <ClCompile Include="src\u_imswgr.c">
+      <Filter>Quellcodedateien</Filter>
+    </ClCompile>
+    <ClCompile Include="src\zpimswgr.c">
+      <Filter>Quellcodedateien</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\asciidat.h">
+      <Filter>Header-Dateien</Filter>
+    </ClInclude>
+    <ClInclude Include="src\logfile.h">
+      <Filter>Header-Dateien</Filter>
+    </ClInclude>
+    <ClInclude Include="src\pflegevers.h">
+      <Filter>Header-Dateien</Filter>
+    </ClInclude>
+    <ClInclude Include="src\u_bssg.h">
+      <Filter>Header-Dateien</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="makefile">
+      <Filter>unix</Filter>
+    </None>
+  </ItemGroup>
+</Project>

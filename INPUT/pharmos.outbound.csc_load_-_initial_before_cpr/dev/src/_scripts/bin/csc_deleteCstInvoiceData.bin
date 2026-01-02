@@ -1,0 +1,88 @@
+#########################################################################
+# Script to delete cstinvoicedata
+# Thomas Hörath
+# 10.02.2017
+#########################################################################
+
+#########################################################################
+## VARIABLES
+#########################################################################
+db=$1;
+days=$2;
+typeset -i curDay
+typeset -i curMon
+typeset -i curYear
+curDay=`date +%d`
+curMon=`date +%m`
+curYear=`date +%Y`
+
+#########################################################################
+## LOGIC
+#########################################################################
+local tempDays=$days
+while [[ $tempDays -gt 0 ]]
+do
+	curDay=$curDay-1
+	
+	if [[ $curDay -le 0 ]]; then
+		curMon=$curMon-1
+		
+		if [[ $curMon -le 0 ]]; then 
+			curMon=12
+			curYear=$curYear-1
+		fi
+		
+		curDay=30
+	fi
+	tempDays=$tempDays-1
+done
+
+if [[ $curDay -lt 10 ]]; then
+tempCurDay="0$curDay"
+else 
+tempCurDay=$curDay
+fi
+if [[ $curMon -lt 10 ]]; then
+tempCurMon="0$curMon"
+else
+tempCurMon=$curMon
+fi
+
+deleteDate=$curYear$tempCurMon$tempCurDay
+
+#########################################################################
+## Delete
+#########################################################################
+DEL='DELETE FROM cstinvoicedata WHERE invoiced > 0 and date <= '$deleteDate 
+SEL=' SELECT * FROM cstinvoicedata WHERE invoiced > 0 and date <= '$deleteDate' ORDER BY branchno, date, docno; '
+
+#########################################################################
+## PATH
+#########################################################################
+P=$(dirname $0)/../data
+
+#########################################################################
+## NAME OF THE TRANSFERFILE
+#########################################################################
+currentDate=`date '+%Y%m%d'`
+UNLOADFILE=${P}/csc_cstinvoicedata.${db}.$currentDate
+
+#########################################################################
+## UNLAOD
+#########################################################################
+cd $P
+touch $UNLOADFILE
+UN='unload to '$UNLOADFILE' '$SEL' '$DEL
+echo "${UN}"
+${db} -<<%
+$UN
+%
+
+if [[ $? -ne 0 ]]
+then
+   echo "Loeschen der cstinvoicedata nicht erfolgreich"
+   rm $UNLOADFILE 2>/dev/null
+   exit 99
+fi
+
+exit 0;

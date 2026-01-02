@@ -1,0 +1,16 @@
+;
+;               Order Entry Server initialization parameters.
+;
+[Generic]
+MessageFile        = $INI_PATH/message.txt
+LogFile            = $LOG_PATH/kscserverXmlNord.log
+LogMode            = 0
+
+[Session]
+Computer           =
+DataSource         = ode21@ode21s_oxml
+DeviceName         = ZZZZ
+DeviceType         = 2
+Country            = DE
+
+[Dummy]

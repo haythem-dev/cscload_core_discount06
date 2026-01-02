@@ -1,0 +1,81 @@
+# qual
+. /software/etc/profile_prz
+
+dbaccess ofr21 -<<%
+begin work;
+delete from customerrouting where customerno in (
+5413385, 5420155, 5413729, 5413209,
+2500563, 2500592, 2676316, 2951509, 6500092, 6500100, 
+6500146, 6500198, 6500241, 6500258, 6500287, 6500324, 
+6500459, 6500471, 6500548, 5416952, 5417360, 5419382, 5412919 ) and
+weekday in (0,6);
+
+insert into customerrouting values ( 5419382, 35, 1301, 2359, 34, 'SA', 6); 
+insert into customerrouting values ( 2500563, 35, 1303, 2359, 34, 'SA', 6); 
+insert into customerrouting values ( 2500592, 35, 1302, 2359, 34, 'SA', 6); 
+insert into customerrouting values ( 2676316, 35, 1301, 2359, 34, 'SA', 6); 
+insert into customerrouting values ( 2951509, 35, 1, 2359, 34, 'SA', 6); 
+insert into customerrouting values ( 6500092, 35, 1305, 2359, 34, 'SA', 6); 
+insert into customerrouting values ( 6500100, 35, 1302, 2359, 34, 'SA', 6); 
+insert into customerrouting values ( 6500146, 35, 1305, 2359, 34, 'SA', 6); 
+insert into customerrouting values ( 6500198, 35, 1303, 2359, 34, 'SA', 6); 
+insert into customerrouting values ( 6500241, 35, 1301, 2359, 34, 'SA', 6); 
+insert into customerrouting values ( 6500258, 35, 1304, 2359, 34, 'SA', 6); 
+insert into customerrouting values ( 6500287, 35, 1304, 2359, 34, 'SA', 6); 
+insert into customerrouting values ( 6500324, 35, 1, 2359, 34, 'SA', 6); 
+insert into customerrouting values ( 6500459, 35, 1304, 2359, 34, 'SA', 6); 
+insert into customerrouting values ( 6500471, 35, 1301, 2359, 34, 'SA', 6); 
+insert into customerrouting values ( 6500548, 35, 1303, 2359, 34, 'SA', 6); 
+insert into customerrouting values ( 5416952, 35, 1, 2359, 34, 'SA', 6);
+insert into customerrouting values ( 5417360, 35, 1303, 2359, 34, 'SA', 6);
+insert into customerrouting values ( 5413385, 35, 1303, 2359, 34, 'SA', 6);
+insert into customerrouting values ( 5420155, 35, 1303, 2359, 34, 'SA', 6);
+insert into customerrouting values ( 5413729, 35, 1303, 2359, 34, 'SA', 6);
+insert into customerrouting values ( 5413209, 35, 1303, 2359, 34, 'SA', 6);
+insert into customerrouting values ( 5412919, 35, 1303, 2359, 34, 'SA', 6);
+insert into customerrouting values ( 2500563, 35, 1, 2359, 34, 'SO', 0);
+insert into customerrouting values ( 5419382, 35, 1, 2359, 34, 'SO', 0);
+insert into customerrouting values ( 2500592, 35, 1, 2359, 34, 'SO', 0);
+insert into customerrouting values ( 2676316, 35, 1, 2359, 34, 'SO', 0);
+insert into customerrouting values ( 2951509, 35, 1, 2359, 34, 'SO', 0);
+insert into customerrouting values ( 6500092, 35, 1, 2359, 34, 'SO', 0);
+insert into customerrouting values ( 6500100, 35, 1, 2359, 34, 'SO', 0);
+insert into customerrouting values ( 6500146, 35, 1, 2359, 34, 'SO', 0);
+insert into customerrouting values ( 6500198, 35, 1, 2359, 34, 'SO', 0);
+insert into customerrouting values ( 6500241, 35, 1, 2359, 34, 'SO', 0);
+insert into customerrouting values ( 6500258, 35, 1, 2359, 34, 'SO', 0);
+insert into customerrouting values ( 6500287, 35, 1, 2359, 34, 'SO', 0);
+insert into customerrouting values ( 6500324, 35, 1, 2359, 34, 'SO', 0);
+insert into customerrouting values ( 6500459, 35, 1, 2359, 34, 'SO', 0);
+insert into customerrouting values ( 6500471, 35, 1, 2359, 34, 'SO', 0);
+insert into customerrouting values ( 6500548, 35, 1, 2359, 34, 'SO', 0);
+insert into customerrouting values ( 5416952, 35, 1, 2359, 34, 'SO', 0);
+insert into customerrouting values ( 5417360, 35, 1, 2359, 34, 'SO', 0);
+insert into customerrouting values ( 5413385, 35, 1, 2359, 34, 'SO', 0);
+insert into customerrouting values ( 5420155, 35, 1, 2359, 34, 'SO', 0);
+insert into customerrouting values ( 5413729, 35, 1, 2359, 34, 'SO', 0);
+insert into customerrouting values ( 5413209, 35, 1, 2359, 34, 'SO', 0);
+insert into customerrouting values ( 5412919, 35, 1, 2359, 34, 'SO', 0);
+
+{ insert into customerrouting values ( 2500563, 35, 1, 2359, 34, 'MO', 1);
+insert into customerrouting values ( 2500592, 35, 1, 2359, 34, 'MO', 1);
+insert into customerrouting values ( 5419382, 35, 1, 2359, 34, 'MO', 1);
+insert into customerrouting values ( 2676316, 35, 1, 2359, 34, 'MO', 1);
+insert into customerrouting values ( 2951509, 35, 1, 2359, 34, 'MO', 1);
+insert into customerrouting values ( 6500092, 35, 1, 2359, 34, 'MO', 1);
+insert into customerrouting values ( 6500100, 35, 1, 2359, 34, 'MO', 1);
+insert into customerrouting values ( 6500146, 35, 1, 2359, 34, 'MO', 1);
+insert into customerrouting values ( 6500198, 35, 1, 2359, 34, 'MO', 1);
+insert into customerrouting values ( 6500241, 35, 1, 2359, 34, 'MO', 1);
+insert into customerrouting values ( 6500258, 35, 1, 2359, 34, 'MO', 1);
+insert into customerrouting values ( 6500287, 35, 1, 2359, 34, 'MO', 1);
+insert into customerrouting values ( 6500324, 35, 1, 2359, 34, 'MO', 1);
+insert into customerrouting values ( 6500459, 35, 1, 2359, 34, 'MO', 1);
+insert into customerrouting values ( 6500471, 35, 1, 2359, 34, 'MO', 1);
+insert into customerrouting values ( 6500548, 35, 1, 2359, 34, 'MO', 1);
+insert into customerrouting values ( 5416952, 35, 1, 2359, 34, 'MO', 1); 
+insert into customerrouting values ( 5417360, 35, 1, 2359, 34, 'MO', 1); }
+ 
+commit work;
+%
+

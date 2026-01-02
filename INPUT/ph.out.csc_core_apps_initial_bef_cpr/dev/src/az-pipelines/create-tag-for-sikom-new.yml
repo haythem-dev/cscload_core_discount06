@@ -1,0 +1,55 @@
+# Trigger the pipeline on updates to the sikom-new branch
+trigger:
+  branches:
+    include:
+      - sikom-new
+
+jobs:
+- job: CreateTag
+  displayName: 'Create Git Tag for Sikom-New'
+  pool:
+    name: Default
+  steps:
+  - checkout: self
+    persistCredentials: true
+
+  - script: |
+      git pull
+      git tag -l | xargs git tag -d
+      git fetch --tags
+      git tag -l
+    displayName: 'Delete all local Git tags'
+
+  - script: |
+      git checkout sikom-new
+    displayName: 'Checkout Sikom-New'
+   
+  - task: PowerShell@2
+    displayName: 'Get Tag and Comment For Sikom-New'
+    inputs:
+      filePath: dev/src/proc/getNextTagInfoForSikomNew.ps1
+      failOnStderr: true
+    continueOnError: false
+    name: GetNextTagInfoForSikomNew
+    
+  - task: PowerShell@2
+    displayName: 'Parse JSON Output'
+    inputs:
+      targetType: 'inline'
+      script: |
+        $output = '$(TagAndComment)'
+        Write-Output "Raw output: $output"
+        
+        try {
+          $parsedOutput = $output | ConvertFrom-Json
+          Write-Output "##vso[task.setvariable variable=TagName]$($parsedOutput.TagName)"
+          Write-Output "##vso[task.setvariable variable=Comment]$($parsedOutput.Comment)"
+        } catch {
+          Write-Error "Failed to parse JSON: $_"
+          exit 1
+        }
+
+  - script: |
+      git tag -a $(TagName) -m "$(Comment)"
+      git push --tags
+    displayName: 'Use Tag Name and Comment'

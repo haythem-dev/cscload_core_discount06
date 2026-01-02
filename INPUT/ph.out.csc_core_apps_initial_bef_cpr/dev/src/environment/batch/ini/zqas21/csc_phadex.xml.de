@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<KSCRefreshSettings>
+    <Country Country="DE">
+        <Settings>
+            <General PollInterval="3000" LogLevel="Errors" Test="false" BulkInsert="true" MaxSelect="40"/>
+            <SMTP Port="25" Host="10.156.80.21" SendMailFrom="kscrefreshtest@phoenixgroup.eu">
+                <Information eMail="kscrefresh@phoenixgroup.eu"/>
+                <Warnings eMail="kscrefresh@phoenixgroup.eu; a.egerer@phoenixgroup.eu"/>
+                <Errors eMail="cct@phoenixgroup.eu; kscrefresh@phoenixgroup.eu"/>
+            </SMTP>
+            <TCAccess TCATransaction="TCAS" TCAHost="PhoenixGeneric_west" ConnectionRetries="10" ConnectionWaitBeforeRetry="10000" Username="PHADEX" Password=""/>
+            <pxVerbund DeviceType="7" DeviceName="PHADEX" Computer="" LogMode="1" DataSource="ode21@zqas21_shm" MessageFile="/software/wss/de/ksc/batch/ini/message.txt" />
+            <Informix ConnectionRetries="10" ConnectionWaitBeforeRetry="10000" IfxServiceName="53004" IfxHost="zqas21_tcp" IfxDataBase="ode21"/>
+        </Settings>
+        <Branches>
+			<Branch BranchNo="05">
+				<Settings>
+					<TCAccess IPAddress="10.242.5.214" Port="3305"/>
+				</Settings>
+			</Branch>
+			<Branch BranchNo="06">
+				<Settings>
+					<TCAccess IPAddress="10.242.5.214" Port="3306"/>
+				</Settings>
+			</Branch>
+			<Branch BranchNo="08">
+				<Settings>
+					<TCAccess IPAddress="10.242.5.214" Port="3308"/>
+				</Settings>
+			</Branch>
+			<Branch BranchNo="09">
+				<Settings>
+					<TCAccess IPAddress="10.242.5.214" Port="3309"/>
+				</Settings>
+			</Branch>
+			<Branch BranchNo="21">
+				<Settings>
+					<TCAccess IPAddress="10.242.5.214" Port="3321"/>
+				</Settings>
+			</Branch>
+			<Branch BranchNo="31">
+				<Settings>
+					<TCAccess IPAddress="10.242.5.214" Port="3331"/>
+				</Settings>
+			</Branch>
+			<Branch BranchNo="33">
+				<Settings>
+					<TCAccess IPAddress="10.242.5.214" Port="3333"/>
+				</Settings>
+			</Branch>
+			<Branch BranchNo="40">
+				<Settings>
+					<TCAccess IPAddress="10.242.5.214" Port="3340"/>
+				</Settings>
+			</Branch>
+			<Branch BranchNo="44">
+				<Settings>
+					<TCAccess IPAddress="10.242.5.214" Port="3344"/>
+				</Settings>
+			</Branch>
+			<Branch BranchNo="46">
+				<Settings>
+					<TCAccess IPAddress="10.242.5.214" Port="3346"/>
+				</Settings>
+			</Branch>
+			<Branch BranchNo="51">
+				<Settings>
+					<TCAccess IPAddress="10.242.5.214" Port="3351"/>
+				</Settings>
+			</Branch>
+			<Branch BranchNo="52">
+				<Settings>
+					<TCAccess IPAddress="10.242.5.214" Port="3352"/>
+				</Settings>
+			</Branch>
+			<Branch BranchNo="54">
+				<Settings>
+					<TCAccess IPAddress="10.242.5.214" Port="3354"/>
+				</Settings>
+			</Branch>
+			<Branch BranchNo="56">
+				<Settings>
+					<TCAccess IPAddress="10.242.5.214" Port="3356"/>
+				</Settings>
+			</Branch>
+			<Branch BranchNo="57">
+				<Settings>
+					<TCAccess IPAddress="10.242.5.214" Port="3357"/>
+				</Settings>
+			</Branch>
+			<Branch BranchNo="58">
+				<Settings>
+					<TCAccess IPAddress="10.242.5.214" Port="3358"/>
+				</Settings>
+			</Branch>
+			<Branch BranchNo="59">
+				<Settings>
+					<TCAccess IPAddress="10.242.5.214" Port="3359"/>
+				</Settings>
+			</Branch>
+			<Branch BranchNo="70">
+				<Settings>
+					<TCAccess IPAddress="10.242.5.214" Port="3370"/>
+				</Settings>
+			</Branch>
+			<Branch BranchNo="78">
+				<Settings>
+					<TCAccess IPAddress="10.242.5.214" Port="3378"/>
+				</Settings>
+			</Branch>
+			<Branch BranchNo="81">
+				<Settings>
+					<TCAccess IPAddress="10.242.5.214" Port="3381"/>
+				</Settings>
+			</Branch>
+			<Branch BranchNo="82">
+				<Settings>
+					<TCAccess IPAddress="10.242.5.214" Port="3382"/>
+				</Settings>
+			</Branch>
+        </Branches>
+    </Country>
+</KSCRefreshSettings>

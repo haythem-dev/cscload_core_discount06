@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Quellcodedateien">
+      <UniqueIdentifier>{615728d9-55f2-405b-9f11-4a81201a8e66}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+    <Filter Include="Header-Dateien">
+      <UniqueIdentifier>{6602d79d-d6dc-46ad-9633-5687450f18d9}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl</Extensions>
+    </Filter>
+    <Filter Include="unix">
+      <UniqueIdentifier>{91bada3f-b465-4efe-b9e8-1eb5593198a5}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\art_prot.c">
+      <Filter>Quellcodedateien</Filter>
+    </ClCompile>
+    <ClCompile Include="src\li_prot.c">
+      <Filter>Quellcodedateien</Filter>
+    </ClCompile>
+    <ClCompile Include="src\kf_rund.c">
+      <Filter>Quellcodedateien</Filter>
+    </ClCompile>
+    <ClCompile Include="src\logfile.c">
+      <Filter>Quellcodedateien</Filter>
+    </ClCompile>
+    <ClCompile Include="src\main.c">
+      <Filter>Quellcodedateien</Filter>
+    </ClCompile>
+    <ClCompile Include="src\nbr_art.c">
+      <Filter>Quellcodedateien</Filter>
+    </ClCompile>
+    <ClCompile Include="src\wr_prot.c">
+      <Filter>Quellcodedateien</Filter>
+    </ClCompile>
+    <ClCompile Include="src\zart_gen.c">
+      <Filter>Quellcodedateien</Filter>
+    </ClCompile>
+    <ClCompile Include="src\zplignart.c">
+      <Filter>Quellcodedateien</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\art_prot.h">
+      <Filter>Header-Dateien</Filter>
+    </ClInclude>
+    <ClInclude Include="src\logfile.h">
+      <Filter>Header-Dateien</Filter>
+    </ClInclude>
+    <ClInclude Include="src\nbr_art.h">
+      <Filter>Header-Dateien</Filter>
+    </ClInclude>
+    <ClInclude Include="src\wr_prot.h">
+      <Filter>Header-Dateien</Filter>
+    </ClInclude>
+    <ClInclude Include="src\zart_gen.h">
+      <Filter>Header-Dateien</Filter>
+    </ClInclude>
+    <ClInclude Include="src\znb_gen_li.h">
+      <Filter>Header-Dateien</Filter>
+    </ClInclude>
+    <ClInclude Include="src\zplignart.h">
+      <Filter>Header-Dateien</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="makefile">
+      <Filter>unix</Filter>
+    </None>
+  </ItemGroup>
+</Project>

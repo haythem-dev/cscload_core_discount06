@@ -1,0 +1,1748 @@
+#ifndef __PP_CSTPAYMENTLIST_H_
+#define __PP_CSTPAYMENTLIST_H_
+
+/******************************************************************************/
+/* d:\prj\DF\UNIX\loaddkopo\cstpaymentlist ************************************/
+/******************************************************************************/
+
+/* Length-Define of CSTPAYMENTLIST ********************************************/
+
+  #define L_CSTPAYMENTLIST_BRANCHNO 6
+  #define L_CSTPAYMENTLIST_CUSTOMERNO 11
+  #define L_CSTPAYMENTLIST_INVOICENUMBER 15
+  #define L_CSTPAYMENTLIST_SEQUENCENO 6
+  #define L_CSTPAYMENTLIST_INVOICESTATE 6
+  #define L_CSTPAYMENTLIST_STATETIME 11
+  #define L_CSTPAYMENTLIST_TOTALINVOICEAMOUNT 11
+  #define N_CSTPAYMENTLIST_TOTALINVOICEAMOUNT 2
+  #define L_CSTPAYMENTLIST_OPENINVOICEAMOUNT 11
+  #define N_CSTPAYMENTLIST_OPENINVOICEAMOUNT 2
+  #define L_CSTPAYMENTLIST_PAIDINVOICEAMOUNT 11
+  #define N_CSTPAYMENTLIST_PAIDINVOICEAMOUNT 2
+  #define L_CSTPAYMENTLIST_DRIVERID 11
+  #define L_CSTPAYMENTLIST_KINDOFPAYMENT 1
+  #define L_CSTPAYMENTLIST_PAYMENTDATE 11
+  #define L_CSTPAYMENTLIST_DOCUMENTDESCRIPT 30
+  #define L_CSTPAYMENTLIST_USERIDENT 4
+  #define L_CSTPAYMENTLIST_INVOICEDATE 11
+  #define L_CSTPAYMENTLIST_TOURDATE 11
+  #define L_CSTPAYMENTLIST_TOURID 6
+  #define L_CSTPAYMENTLIST_CREDITNUMBER 15
+  #define L_CSTPAYMENTLIST_PAYMENTSPEC 1
+  #define L_CSTPAYMENTLIST_DAYSOFPAYMENT 6
+  #define L_CSTPAYMENTLIST_PAYMENTRECEIPT 11
+  #define L_CSTPAYMENTLIST_DOCTYPE 2
+  #define L_CSTPAYMENTLIST_OVERFLOWNO 6
+  #define L_CSTPAYMENTLIST_DOCNO 11
+  #define L_CSTPAYMENTLIST_SEQUENCE 6
+  #define L_CSTPAYMENTLIST_SENDTOSAP 1
+  #define L_CSTPAYMENTLIST_SAPDATE 11
+  #define L_CSTPAYMENTLIST_CSTORDERNO 11
+  #define L_CSTPAYMENTLIST_PAYMENTDOCNO 6
+  #define L_CSTPAYMENTLIST_DISCOUNTFLAG 1
+  #define L_CSTPAYMENTLIST_DISCOUNTAMOUNT 11
+  #define N_CSTPAYMENTLIST_DISCOUNTAMOUNT 2
+  #define L_CSTPAYMENTLIST_DISTRIBUTORNO 11
+  #define L_CSTPAYMENTLIST_DISTRIBSCANTIME 11
+  #define L_CSTPAYMENTLIST_DRIVERLISTTIME 11
+  #define L_CSTPAYMENTLIST_INVOICECOMPSAP 1
+  #define L_CSTPAYMENTLIST_PRICETYPE 6
+  #define L_CSTPAYMENTLIST_COMPLAINTSCANFLAG 1
+  #define L_CSTPAYMENTLIST_LIBRADATEFLAG 1
+  #define L_CSTPAYMENTLIST_QTYCARTON 11
+  #define L_CSTPAYMENTLIST_QTYPACKET 11
+  #define L_CSTPAYMENTLIST_QTYBAG 11
+  #define L_CSTPAYMENTLIST_QTYENCLOSEDLABEL 11
+  #define L_CSTPAYMENTLIST_KINDOFORDER 2
+  #define L_CSTPAYMENTLIST_FINALCHECKUSERNO 11
+  #define L_CSTPAYMENTLIST_FINALCHECKTIME 11
+  #define L_CSTPAYMENTLIST_CUSTOMERGRP 2
+  #define L_CSTPAYMENTLIST_NARCOTICFLAG 1
+  #define L_CSTPAYMENTLIST_INVOICEREBATEFLAG 1
+  #define L_CSTPAYMENTLIST_UPD_FLAG 1
+
+/* Length/Count-Define of CSTPAYMENTLIST **************************************/
+
+  #define LS_CSTPAYMENTLIST_BRANCHNO 5 + 1
+  #define LS_CSTPAYMENTLIST_CUSTOMERNO 10 + 1
+  #define LS_CSTPAYMENTLIST_INVOICENUMBER 15 + 1
+  #define LS_CSTPAYMENTLIST_SEQUENCENO 5 + 1
+  #define LS_CSTPAYMENTLIST_INVOICESTATE 5 + 1
+  #define LS_CSTPAYMENTLIST_STATETIME 10 + 1
+  #define LS_CSTPAYMENTLIST_TOTALINVOICEAMOUNT 11 + 2
+  #define LS_CSTPAYMENTLIST_OPENINVOICEAMOUNT 11 + 2
+  #define LS_CSTPAYMENTLIST_PAIDINVOICEAMOUNT 11 + 2
+  #define LS_CSTPAYMENTLIST_DRIVERID 10 + 1
+  #define LS_CSTPAYMENTLIST_KINDOFPAYMENT 1 + 1
+  #define LS_CSTPAYMENTLIST_PAYMENTDATE 10 + 1
+  #define LS_CSTPAYMENTLIST_DOCUMENTDESCRIPT 30 + 1
+  #define LS_CSTPAYMENTLIST_USERIDENT 4 + 1
+  #define LS_CSTPAYMENTLIST_INVOICEDATE 10 + 1
+  #define LS_CSTPAYMENTLIST_TOURDATE 10 + 1
+  #define LS_CSTPAYMENTLIST_TOURID 6 + 1
+  #define LS_CSTPAYMENTLIST_CREDITNUMBER 15 + 1
+  #define LS_CSTPAYMENTLIST_PAYMENTSPEC 1 + 1
+  #define LS_CSTPAYMENTLIST_DAYSOFPAYMENT 5 + 1
+  #define LS_CSTPAYMENTLIST_PAYMENTRECEIPT 10 + 1
+  #define LS_CSTPAYMENTLIST_DOCTYPE 2 + 1
+  #define LS_CSTPAYMENTLIST_OVERFLOWNO 5 + 1
+  #define LS_CSTPAYMENTLIST_DOCNO 10 + 1
+  #define LS_CSTPAYMENTLIST_SEQUENCE 5 + 1
+  #define LS_CSTPAYMENTLIST_SENDTOSAP 1 + 1
+  #define LS_CSTPAYMENTLIST_SAPDATE 10 + 1
+  #define LS_CSTPAYMENTLIST_CSTORDERNO 10 + 1
+  #define LS_CSTPAYMENTLIST_PAYMENTDOCNO 5 + 1
+  #define LS_CSTPAYMENTLIST_DISCOUNTFLAG 1 + 1
+  #define LS_CSTPAYMENTLIST_DISCOUNTAMOUNT 11 + 2
+  #define LS_CSTPAYMENTLIST_DISTRIBUTORNO 10 + 1
+  #define LS_CSTPAYMENTLIST_DISTRIBSCANTIME 10 + 1
+  #define LS_CSTPAYMENTLIST_DRIVERLISTTIME 10 + 1
+  #define LS_CSTPAYMENTLIST_INVOICECOMPSAP 1 + 1
+  #define LS_CSTPAYMENTLIST_PRICETYPE 5 + 1
+  #define LS_CSTPAYMENTLIST_COMPLAINTSCANFLAG 1 + 1
+  #define LS_CSTPAYMENTLIST_LIBRADATEFLAG 1 + 1
+  #define LS_CSTPAYMENTLIST_QTYCARTON 10 + 1
+  #define LS_CSTPAYMENTLIST_QTYPACKET 10 + 1
+  #define LS_CSTPAYMENTLIST_QTYBAG 10 + 1
+  #define LS_CSTPAYMENTLIST_QTYENCLOSEDLABEL 10 + 1
+  #define LS_CSTPAYMENTLIST_KINDOFORDER 2 + 1
+  #define LS_CSTPAYMENTLIST_FINALCHECKUSERNO 10 + 1
+  #define LS_CSTPAYMENTLIST_FINALCHECKTIME 10 + 1
+  #define LS_CSTPAYMENTLIST_CUSTOMERGRP 2 + 1
+  #define LS_CSTPAYMENTLIST_NARCOTICFLAG 1 + 1
+  #define LS_CSTPAYMENTLIST_INVOICEREBATEFLAG 1 + 1
+  #define LS_CSTPAYMENTLIST_UPD_FLAG 1 + 1
+
+  #define CSTPAYMENTLISTBRANCHNO 0
+  #define CSTPAYMENTLISTCUSTOMERNO 1
+  #define CSTPAYMENTLISTINVOICENUMBER 2
+  #define CSTPAYMENTLISTSEQUENCENO 3
+  #define CSTPAYMENTLISTINVOICESTATE 4
+  #define CSTPAYMENTLISTSTATETIME 5
+  #define CSTPAYMENTLISTTOTALINVOICEAMOUNT 6
+  #define CSTPAYMENTLISTOPENINVOICEAMOUNT 7
+  #define CSTPAYMENTLISTPAIDINVOICEAMOUNT 8
+  #define CSTPAYMENTLISTDRIVERID 9
+  #define CSTPAYMENTLISTKINDOFPAYMENT 10
+  #define CSTPAYMENTLISTPAYMENTDATE 11
+  #define CSTPAYMENTLISTDOCUMENTDESCRIPT 12
+  #define CSTPAYMENTLISTUSERIDENT 13
+  #define CSTPAYMENTLISTINVOICEDATE 14
+  #define CSTPAYMENTLISTTOURDATE 15
+  #define CSTPAYMENTLISTTOURID 16
+  #define CSTPAYMENTLISTCREDITNUMBER 17
+  #define CSTPAYMENTLISTPAYMENTSPEC 18
+  #define CSTPAYMENTLISTDAYSOFPAYMENT 19
+  #define CSTPAYMENTLISTPAYMENTRECEIPT 20
+  #define CSTPAYMENTLISTDOCTYPE 21
+  #define CSTPAYMENTLISTOVERFLOWNO 22
+  #define CSTPAYMENTLISTDOCNO 23
+  #define CSTPAYMENTLISTSEQUENCE 24
+  #define CSTPAYMENTLISTSENDTOSAP 25
+  #define CSTPAYMENTLISTSAPDATE 26
+  #define CSTPAYMENTLISTCSTORDERNO 27
+  #define CSTPAYMENTLISTPAYMENTDOCNO 28
+  #define CSTPAYMENTLISTDISCOUNTFLAG 29
+  #define CSTPAYMENTLISTDISCOUNTAMOUNT 30
+  #define CSTPAYMENTLISTDISTRIBUTORNO 31
+  #define CSTPAYMENTLISTDISTRIBSCANTIME 32
+  #define CSTPAYMENTLISTDRIVERLISTTIME 33
+  #define CSTPAYMENTLISTINVOICECOMPSAP 34
+  #define CSTPAYMENTLISTPRICETYPE 35
+  #define CSTPAYMENTLISTCOMPLAINTSCANFLAG 36
+  #define CSTPAYMENTLISTLIBRADATEFLAG 37
+  #define CSTPAYMENTLISTQTYCARTON 38
+  #define CSTPAYMENTLISTQTYPACKET 39
+  #define CSTPAYMENTLISTQTYBAG 40
+  #define CSTPAYMENTLISTQTYENCLOSEDLABEL 41
+  #define CSTPAYMENTLISTKINDOFORDER 42
+  #define CSTPAYMENTLISTFINALCHECKUSERNO 43
+  #define CSTPAYMENTLISTFINALCHECKTIME 44
+  #define CSTPAYMENTLISTCUSTOMERGRP 45
+  #define CSTPAYMENTLISTNARCOTICFLAG 46
+  #define CSTPAYMENTLISTINVOICEREBATEFLAG 47
+  #define CSTPAYMENTLISTUPD_FLAG 48
+
+/* define of Buf_Desc *********************************************************/
+
+#if defined (BUF_DESC) || defined (C_BUF_DESC)
+ #define CSTPAYMENTLIST_H
+ #define CSTPAYMENTLIST_ANZ ( sizeof(CSTPAYMENTLIST_BES) / sizeof(struct buf_desc) )
+#endif
+
+/* SqlDefine of CSTPAYMENTLIST ************************************************/
+
+ #define CSTPAYMENTLIST_LISTE \
+         CSTPAYMENTLIST.BRANCHNO,\
+         CSTPAYMENTLIST.CUSTOMERNO,\
+         CSTPAYMENTLIST.INVOICENUMBER,\
+         CSTPAYMENTLIST.SEQUENCENO,\
+         CSTPAYMENTLIST.INVOICESTATE,\
+         CSTPAYMENTLIST.STATETIME,\
+         CSTPAYMENTLIST.TOTALINVOICEAMOUNT,\
+         CSTPAYMENTLIST.OPENINVOICEAMOUNT,\
+         CSTPAYMENTLIST.PAIDINVOICEAMOUNT,\
+         CSTPAYMENTLIST.DRIVERID,\
+         CSTPAYMENTLIST.KINDOFPAYMENT,\
+         CSTPAYMENTLIST.PAYMENTDATE,\
+         CSTPAYMENTLIST.DOCUMENTDESCRIPT,\
+         CSTPAYMENTLIST.USERIDENT,\
+         CSTPAYMENTLIST.INVOICEDATE,\
+         CSTPAYMENTLIST.TOURDATE,\
+         CSTPAYMENTLIST.TOURID,\
+         CSTPAYMENTLIST.CREDITNUMBER,\
+         CSTPAYMENTLIST.PAYMENTSPEC,\
+         CSTPAYMENTLIST.DAYSOFPAYMENT,\
+         CSTPAYMENTLIST.PAYMENTRECEIPT,\
+         CSTPAYMENTLIST.DOCTYPE,\
+         CSTPAYMENTLIST.OVERFLOWNO,\
+         CSTPAYMENTLIST.DOCNO,\
+         CSTPAYMENTLIST.SEQUENCE,\
+         CSTPAYMENTLIST.SENDTOSAP,\
+         CSTPAYMENTLIST.SAPDATE,\
+         CSTPAYMENTLIST.CSTORDERNO,\
+         CSTPAYMENTLIST.PAYMENTDOCNO,\
+         CSTPAYMENTLIST.DISCOUNTFLAG,\
+         CSTPAYMENTLIST.DISCOUNTAMOUNT,\
+         CSTPAYMENTLIST.DISTRIBUTORNO,\
+         CSTPAYMENTLIST.DISTRIBSCANTIME,\
+         CSTPAYMENTLIST.DRIVERLISTTIME,\
+         CSTPAYMENTLIST.INVOICECOMPSAP,\
+         CSTPAYMENTLIST.PRICETYPE,\
+         CSTPAYMENTLIST.COMPLAINTSCANFLAG,\
+         CSTPAYMENTLIST.LIBRADATEFLAG,\
+         CSTPAYMENTLIST.QTYCARTON,\
+         CSTPAYMENTLIST.QTYPACKET,\
+         CSTPAYMENTLIST.QTYBAG,\
+         CSTPAYMENTLIST.QTYENCLOSEDLABEL,\
+         CSTPAYMENTLIST.KINDOFORDER,\
+         CSTPAYMENTLIST.FINALCHECKUSERNO,\
+         CSTPAYMENTLIST.FINALCHECKTIME,\
+         CSTPAYMENTLIST.CUSTOMERGRP,\
+         CSTPAYMENTLIST.NARCOTICFLAG,\
+         CSTPAYMENTLIST.INVOICEREBATEFLAG,\
+         CSTPAYMENTLIST.UPD_FLAG
+
+ #define CSTPAYMENTLIST_LISTE_390 \
+         BRANCHNO,\
+         CUSTOMERNO,\
+         INVOICENUMBER,\
+         SEQUENCENO,\
+         INVOICESTATE,\
+         STATETIME,\
+         TOTALINVOICEAMOUNT,\
+         OPENINVOICEAMOUNT,\
+         PAIDINVOICEAMOUNT,\
+         DRIVERID,\
+         KINDOFPAYMENT,\
+         PAYMENTDATE,\
+         DOCUMENTDESCRIPT,\
+         USERIDENT,\
+         INVOICEDATE,\
+         TOURDATE,\
+         TOURID,\
+         CREDITNUMBER,\
+         PAYMENTSPEC,\
+         DAYSOFPAYMENT,\
+         PAYMENTRECEIPT,\
+         DOCTYPE,\
+         OVERFLOWNO,\
+         DOCNO,\
+         SEQUENCE,\
+         SENDTOSAP,\
+         SAPDATE,\
+         CSTORDERNO,\
+         PAYMENTDOCNO,\
+         DISCOUNTFLAG,\
+         DISCOUNTAMOUNT,\
+         DISTRIBUTORNO,\
+         DISTRIBSCANTIME,\
+         DRIVERLISTTIME,\
+         INVOICECOMPSAP,\
+         PRICETYPE,\
+         COMPLAINTSCANFLAG,\
+         LIBRADATEFLAG,\
+         QTYCARTON,\
+         QTYPACKET,\
+         QTYBAG,\
+         QTYENCLOSEDLABEL,\
+         KINDOFORDER,\
+         FINALCHECKUSERNO,\
+         FINALCHECKTIME,\
+         CUSTOMERGRP,\
+         NARCOTICFLAG,\
+         INVOICEREBATEFLAG,\
+         UPD_FLAG
+
+ #define CSTPAYMENTLIST_PLISTE \
+         "CSTPAYMENTLIST.BRANCHNO,"\
+         "CSTPAYMENTLIST.CUSTOMERNO,"\
+         "CSTPAYMENTLIST.INVOICENUMBER,"\
+         "CSTPAYMENTLIST.SEQUENCENO,"\
+         "CSTPAYMENTLIST.INVOICESTATE,"\
+         "CSTPAYMENTLIST.STATETIME,"\
+         "CSTPAYMENTLIST.TOTALINVOICEAMOUNT,"\
+         "CSTPAYMENTLIST.OPENINVOICEAMOUNT,"\
+         "CSTPAYMENTLIST.PAIDINVOICEAMOUNT,"\
+         "CSTPAYMENTLIST.DRIVERID,"\
+         "CSTPAYMENTLIST.KINDOFPAYMENT,"\
+         "CSTPAYMENTLIST.PAYMENTDATE,"\
+         "CSTPAYMENTLIST.DOCUMENTDESCRIPT,"\
+         "CSTPAYMENTLIST.USERIDENT,"\
+         "CSTPAYMENTLIST.INVOICEDATE,"\
+         "CSTPAYMENTLIST.TOURDATE,"\
+         "CSTPAYMENTLIST.TOURID,"\
+         "CSTPAYMENTLIST.CREDITNUMBER,"\
+         "CSTPAYMENTLIST.PAYMENTSPEC,"\
+         "CSTPAYMENTLIST.DAYSOFPAYMENT,"\
+         "CSTPAYMENTLIST.PAYMENTRECEIPT,"\
+         "CSTPAYMENTLIST.DOCTYPE,"\
+         "CSTPAYMENTLIST.OVERFLOWNO,"\
+         "CSTPAYMENTLIST.DOCNO,"\
+         "CSTPAYMENTLIST.SEQUENCE,"\
+         "CSTPAYMENTLIST.SENDTOSAP,"\
+         "CSTPAYMENTLIST.SAPDATE,"\
+         "CSTPAYMENTLIST.CSTORDERNO,"\
+         "CSTPAYMENTLIST.PAYMENTDOCNO,"\
+         "CSTPAYMENTLIST.DISCOUNTFLAG,"\
+         "CSTPAYMENTLIST.DISCOUNTAMOUNT,"\
+         "CSTPAYMENTLIST.DISTRIBUTORNO,"\
+         "CSTPAYMENTLIST.DISTRIBSCANTIME,"\
+         "CSTPAYMENTLIST.DRIVERLISTTIME,"\
+         "CSTPAYMENTLIST.INVOICECOMPSAP,"\
+         "CSTPAYMENTLIST.PRICETYPE,"\
+         "CSTPAYMENTLIST.COMPLAINTSCANFLAG,"\
+         "CSTPAYMENTLIST.LIBRADATEFLAG,"\
+         "CSTPAYMENTLIST.QTYCARTON,"\
+         "CSTPAYMENTLIST.QTYPACKET,"\
+         "CSTPAYMENTLIST.QTYBAG,"\
+         "CSTPAYMENTLIST.QTYENCLOSEDLABEL,"\
+         "CSTPAYMENTLIST.KINDOFORDER,"\
+         "CSTPAYMENTLIST.FINALCHECKUSERNO,"\
+         "CSTPAYMENTLIST.FINALCHECKTIME,"\
+         "CSTPAYMENTLIST.CUSTOMERGRP,"\
+         "CSTPAYMENTLIST.NARCOTICFLAG,"\
+         "CSTPAYMENTLIST.INVOICEREBATEFLAG,"\
+         "CSTPAYMENTLIST.UPD_FLAG"
+
+ #define CSTPAYMENTLIST_PELISTE \
+         "BRANCHNO,"\
+         "CUSTOMERNO,"\
+         "INVOICENUMBER,"\
+         "SEQUENCENO,"\
+         "INVOICESTATE,"\
+         "STATETIME,"\
+         "TOTALINVOICEAMOUNT,"\
+         "OPENINVOICEAMOUNT,"\
+         "PAIDINVOICEAMOUNT,"\
+         "DRIVERID,"\
+         "KINDOFPAYMENT,"\
+         "PAYMENTDATE,"\
+         "DOCUMENTDESCRIPT,"\
+         "USERIDENT,"\
+         "INVOICEDATE,"\
+         "TOURDATE,"\
+         "TOURID,"\
+         "CREDITNUMBER,"\
+         "PAYMENTSPEC,"\
+         "DAYSOFPAYMENT,"\
+         "PAYMENTRECEIPT,"\
+         "DOCTYPE,"\
+         "OVERFLOWNO,"\
+         "DOCNO,"\
+         "SEQUENCE,"\
+         "SENDTOSAP,"\
+         "SAPDATE,"\
+         "CSTORDERNO,"\
+         "PAYMENTDOCNO,"\
+         "DISCOUNTFLAG,"\
+         "DISCOUNTAMOUNT,"\
+         "DISTRIBUTORNO,"\
+         "DISTRIBSCANTIME,"\
+         "DRIVERLISTTIME,"\
+         "INVOICECOMPSAP,"\
+         "PRICETYPE,"\
+         "COMPLAINTSCANFLAG,"\
+         "LIBRADATEFLAG,"\
+         "QTYCARTON,"\
+         "QTYPACKET,"\
+         "QTYBAG,"\
+         "QTYENCLOSEDLABEL,"\
+         "KINDOFORDER,"\
+         "FINALCHECKUSERNO,"\
+         "FINALCHECKTIME,"\
+         "CUSTOMERGRP,"\
+         "NARCOTICFLAG,"\
+         "INVOICEREBATEFLAG,"\
+         "UPD_FLAG"
+
+ #define CSTPAYMENTLIST_UPDLISTE \
+         "BRANCHNO=?,"\
+         "CUSTOMERNO=?,"\
+         "INVOICENUMBER=?,"\
+         "SEQUENCENO=?,"\
+         "INVOICESTATE=?,"\
+         "STATETIME=?,"\
+         "TOTALINVOICEAMOUNT=?,"\
+         "OPENINVOICEAMOUNT=?,"\
+         "PAIDINVOICEAMOUNT=?,"\
+         "DRIVERID=?,"\
+         "KINDOFPAYMENT=?,"\
+         "PAYMENTDATE=?,"\
+         "DOCUMENTDESCRIPT=?,"\
+         "USERIDENT=?,"\
+         "INVOICEDATE=?,"\
+         "TOURDATE=?,"\
+         "TOURID=?,"\
+         "CREDITNUMBER=?,"\
+         "PAYMENTSPEC=?,"\
+         "DAYSOFPAYMENT=?,"\
+         "PAYMENTRECEIPT=?,"\
+         "DOCTYPE=?,"\
+         "OVERFLOWNO=?,"\
+         "DOCNO=?,"\
+         "SEQUENCE=?,"\
+         "SENDTOSAP=?,"\
+         "SAPDATE=?,"\
+         "CSTORDERNO=?,"\
+         "PAYMENTDOCNO=?,"\
+         "DISCOUNTFLAG=?,"\
+         "DISCOUNTAMOUNT=?,"\
+         "DISTRIBUTORNO=?,"\
+         "DISTRIBSCANTIME=?,"\
+         "DRIVERLISTTIME=?,"\
+         "INVOICECOMPSAP=?,"\
+         "PRICETYPE=?,"\
+         "COMPLAINTSCANFLAG=?,"\
+         "LIBRADATEFLAG=?,"\
+         "QTYCARTON=?,"\
+         "QTYPACKET=?,"\
+         "QTYBAG=?,"\
+         "QTYENCLOSEDLABEL=?,"\
+         "KINDOFORDER=?,"\
+         "FINALCHECKUSERNO=?,"\
+         "FINALCHECKTIME=?,"\
+         "CUSTOMERGRP=?,"\
+         "NARCOTICFLAG=?,"\
+         "INVOICEREBATEFLAG=?,"\
+         "UPD_FLAG=?"
+
+/* SqlMacros-Define of CSTPAYMENTLIST *****************************************/
+
+ #define CSTPAYMENTLIST_ZEIGER(x) \
+         :x->BRANCHNO,\
+         :x->CUSTOMERNO,\
+         :x->INVOICENUMBER,\
+         :x->SEQUENCENO,\
+         :x->INVOICESTATE,\
+         :x->STATETIME,\
+         :x->TOTALINVOICEAMOUNT,\
+         :x->OPENINVOICEAMOUNT,\
+         :x->PAIDINVOICEAMOUNT,\
+         :x->DRIVERID,\
+         :x->KINDOFPAYMENT,\
+         :x->PAYMENTDATE,\
+         :x->DOCUMENTDESCRIPT,\
+         :x->USERIDENT,\
+         :x->INVOICEDATE,\
+         :x->TOURDATE,\
+         :x->TOURID,\
+         :x->CREDITNUMBER,\
+         :x->PAYMENTSPEC,\
+         :x->DAYSOFPAYMENT,\
+         :x->PAYMENTRECEIPT,\
+         :x->DOCTYPE,\
+         :x->OVERFLOWNO,\
+         :x->DOCNO,\
+         :x->SEQUENCE,\
+         :x->SENDTOSAP,\
+         :x->SAPDATE,\
+         :x->CSTORDERNO,\
+         :x->PAYMENTDOCNO,\
+         :x->DISCOUNTFLAG,\
+         :x->DISCOUNTAMOUNT,\
+         :x->DISTRIBUTORNO,\
+         :x->DISTRIBSCANTIME,\
+         :x->DRIVERLISTTIME,\
+         :x->INVOICECOMPSAP,\
+         :x->PRICETYPE,\
+         :x->COMPLAINTSCANFLAG,\
+         :x->LIBRADATEFLAG,\
+         :x->QTYCARTON,\
+         :x->QTYPACKET,\
+         :x->QTYBAG,\
+         :x->QTYENCLOSEDLABEL,\
+         :x->KINDOFORDER,\
+         :x->FINALCHECKUSERNO,\
+         :x->FINALCHECKTIME,\
+         :x->CUSTOMERGRP,\
+         :x->NARCOTICFLAG,\
+         :x->INVOICEREBATEFLAG,\
+         :x->UPD_FLAG
+
+ #define CSTPAYMENTLIST_ZEIGERSEL(x) \
+         :x->BRANCHNO,\
+         :x->CUSTOMERNO,\
+         :x->INVOICENUMBER,\
+         :x->SEQUENCENO,\
+         :x->INVOICESTATE,\
+         :x->STATETIME,\
+         :x->TOTALINVOICEAMOUNT,\
+         :x->OPENINVOICEAMOUNT,\
+         :x->PAIDINVOICEAMOUNT,\
+         :x->DRIVERID,\
+         :x->KINDOFPAYMENT,\
+         :x->PAYMENTDATE,\
+         :x->DOCUMENTDESCRIPT,\
+         :x->USERIDENT,\
+         :x->INVOICEDATE,\
+         :x->TOURDATE,\
+         :x->TOURID,\
+         :x->CREDITNUMBER,\
+         :x->PAYMENTSPEC,\
+         :x->DAYSOFPAYMENT,\
+         :x->PAYMENTRECEIPT,\
+         :x->DOCTYPE,\
+         :x->OVERFLOWNO,\
+         :x->DOCNO,\
+         :x->SEQUENCE,\
+         :x->SENDTOSAP,\
+         :x->SAPDATE,\
+         :x->CSTORDERNO,\
+         :x->PAYMENTDOCNO,\
+         :x->DISCOUNTFLAG,\
+         :x->DISCOUNTAMOUNT,\
+         :x->DISTRIBUTORNO,\
+         :x->DISTRIBSCANTIME,\
+         :x->DRIVERLISTTIME,\
+         :x->INVOICECOMPSAP,\
+         :x->PRICETYPE,\
+         :x->COMPLAINTSCANFLAG,\
+         :x->LIBRADATEFLAG,\
+         :x->QTYCARTON,\
+         :x->QTYPACKET,\
+         :x->QTYBAG,\
+         :x->QTYENCLOSEDLABEL,\
+         :x->KINDOFORDER,\
+         :x->FINALCHECKUSERNO,\
+         :x->FINALCHECKTIME,\
+         :x->CUSTOMERGRP,\
+         :x->NARCOTICFLAG,\
+         :x->INVOICEREBATEFLAG,\
+         :x->UPD_FLAG
+
+ #define CSTPAYMENTLIST_UPDATE(x) \
+         CSTPAYMENTLIST.BRANCHNO=:x->BRANCHNO,\
+         CSTPAYMENTLIST.CUSTOMERNO=:x->CUSTOMERNO,\
+         CSTPAYMENTLIST.INVOICENUMBER=:x->INVOICENUMBER,\
+         CSTPAYMENTLIST.SEQUENCENO=:x->SEQUENCENO,\
+         CSTPAYMENTLIST.INVOICESTATE=:x->INVOICESTATE,\
+         CSTPAYMENTLIST.STATETIME=:x->STATETIME,\
+         CSTPAYMENTLIST.TOTALINVOICEAMOUNT=:x->TOTALINVOICEAMOUNT,\
+         CSTPAYMENTLIST.OPENINVOICEAMOUNT=:x->OPENINVOICEAMOUNT,\
+         CSTPAYMENTLIST.PAIDINVOICEAMOUNT=:x->PAIDINVOICEAMOUNT,\
+         CSTPAYMENTLIST.DRIVERID=:x->DRIVERID,\
+         CSTPAYMENTLIST.KINDOFPAYMENT=:x->KINDOFPAYMENT,\
+         CSTPAYMENTLIST.PAYMENTDATE=:x->PAYMENTDATE,\
+         CSTPAYMENTLIST.DOCUMENTDESCRIPT=:x->DOCUMENTDESCRIPT,\
+         CSTPAYMENTLIST.USERIDENT=:x->USERIDENT,\
+         CSTPAYMENTLIST.INVOICEDATE=:x->INVOICEDATE,\
+         CSTPAYMENTLIST.TOURDATE=:x->TOURDATE,\
+         CSTPAYMENTLIST.TOURID=:x->TOURID,\
+         CSTPAYMENTLIST.CREDITNUMBER=:x->CREDITNUMBER,\
+         CSTPAYMENTLIST.PAYMENTSPEC=:x->PAYMENTSPEC,\
+         CSTPAYMENTLIST.DAYSOFPAYMENT=:x->DAYSOFPAYMENT,\
+         CSTPAYMENTLIST.PAYMENTRECEIPT=:x->PAYMENTRECEIPT,\
+         CSTPAYMENTLIST.DOCTYPE=:x->DOCTYPE,\
+         CSTPAYMENTLIST.OVERFLOWNO=:x->OVERFLOWNO,\
+         CSTPAYMENTLIST.DOCNO=:x->DOCNO,\
+         CSTPAYMENTLIST.SEQUENCE=:x->SEQUENCE,\
+         CSTPAYMENTLIST.SENDTOSAP=:x->SENDTOSAP,\
+         CSTPAYMENTLIST.SAPDATE=:x->SAPDATE,\
+         CSTPAYMENTLIST.CSTORDERNO=:x->CSTORDERNO,\
+         CSTPAYMENTLIST.PAYMENTDOCNO=:x->PAYMENTDOCNO,\
+         CSTPAYMENTLIST.DISCOUNTFLAG=:x->DISCOUNTFLAG,\
+         CSTPAYMENTLIST.DISCOUNTAMOUNT=:x->DISCOUNTAMOUNT,\
+         CSTPAYMENTLIST.DISTRIBUTORNO=:x->DISTRIBUTORNO,\
+         CSTPAYMENTLIST.DISTRIBSCANTIME=:x->DISTRIBSCANTIME,\
+         CSTPAYMENTLIST.DRIVERLISTTIME=:x->DRIVERLISTTIME,\
+         CSTPAYMENTLIST.INVOICECOMPSAP=:x->INVOICECOMPSAP,\
+         CSTPAYMENTLIST.PRICETYPE=:x->PRICETYPE,\
+         CSTPAYMENTLIST.COMPLAINTSCANFLAG=:x->COMPLAINTSCANFLAG,\
+         CSTPAYMENTLIST.LIBRADATEFLAG=:x->LIBRADATEFLAG,\
+         CSTPAYMENTLIST.QTYCARTON=:x->QTYCARTON,\
+         CSTPAYMENTLIST.QTYPACKET=:x->QTYPACKET,\
+         CSTPAYMENTLIST.QTYBAG=:x->QTYBAG,\
+         CSTPAYMENTLIST.QTYENCLOSEDLABEL=:x->QTYENCLOSEDLABEL,\
+         CSTPAYMENTLIST.KINDOFORDER=:x->KINDOFORDER,\
+         CSTPAYMENTLIST.FINALCHECKUSERNO=:x->FINALCHECKUSERNO,\
+         CSTPAYMENTLIST.FINALCHECKTIME=:x->FINALCHECKTIME,\
+         CSTPAYMENTLIST.CUSTOMERGRP=:x->CUSTOMERGRP,\
+         CSTPAYMENTLIST.NARCOTICFLAG=:x->NARCOTICFLAG,\
+         CSTPAYMENTLIST.INVOICEREBATEFLAG=:x->INVOICEREBATEFLAG,\
+         CSTPAYMENTLIST.UPD_FLAG=:x->UPD_FLAG
+
+/* SqlMacros390-Define of CSTPAYMENTLIST **************************************/
+
+ #define CSTPAYMENTLIST_ZEIGER_390 \
+         :BRANCHNO,\
+         :CUSTOMERNO,\
+         :INVOICENUMBER,\
+         :SEQUENCENO,\
+         :INVOICESTATE,\
+         :STATETIME,\
+         :TOTALINVOICEAMOUNT,\
+         :OPENINVOICEAMOUNT,\
+         :PAIDINVOICEAMOUNT,\
+         :DRIVERID,\
+         :KINDOFPAYMENT,\
+         :PAYMENTDATE,\
+         :DOCUMENTDESCRIPT,\
+         :USERIDENT,\
+         :INVOICEDATE,\
+         :TOURDATE,\
+         :TOURID,\
+         :CREDITNUMBER,\
+         :PAYMENTSPEC,\
+         :DAYSOFPAYMENT,\
+         :PAYMENTRECEIPT,\
+         :DOCTYPE,\
+         :OVERFLOWNO,\
+         :DOCNO,\
+         :SEQUENCE,\
+         :SENDTOSAP,\
+         :SAPDATE,\
+         :CSTORDERNO,\
+         :PAYMENTDOCNO,\
+         :DISCOUNTFLAG,\
+         :DISCOUNTAMOUNT,\
+         :DISTRIBUTORNO,\
+         :DISTRIBSCANTIME,\
+         :DRIVERLISTTIME,\
+         :INVOICECOMPSAP,\
+         :PRICETYPE,\
+         :COMPLAINTSCANFLAG,\
+         :LIBRADATEFLAG,\
+         :QTYCARTON,\
+         :QTYPACKET,\
+         :QTYBAG,\
+         :QTYENCLOSEDLABEL,\
+         :KINDOFORDER,\
+         :FINALCHECKUSERNO,\
+         :FINALCHECKTIME,\
+         :CUSTOMERGRP,\
+         :NARCOTICFLAG,\
+         :INVOICEREBATEFLAG,\
+         :UPD_FLAG
+
+ #define CSTPAYMENTLIST_UPDATE_390 \
+         BRANCHNO=:BRANCHNO,\
+         CUSTOMERNO=:CUSTOMERNO,\
+         INVOICENUMBER=:INVOICENUMBER,\
+         SEQUENCENO=:SEQUENCENO,\
+         INVOICESTATE=:INVOICESTATE,\
+         STATETIME=:STATETIME,\
+         TOTALINVOICEAMOUNT=:TOTALINVOICEAMOUNT,\
+         OPENINVOICEAMOUNT=:OPENINVOICEAMOUNT,\
+         PAIDINVOICEAMOUNT=:PAIDINVOICEAMOUNT,\
+         DRIVERID=:DRIVERID,\
+         KINDOFPAYMENT=:KINDOFPAYMENT,\
+         PAYMENTDATE=:PAYMENTDATE,\
+         DOCUMENTDESCRIPT=:DOCUMENTDESCRIPT,\
+         USERIDENT=:USERIDENT,\
+         INVOICEDATE=:INVOICEDATE,\
+         TOURDATE=:TOURDATE,\
+         TOURID=:TOURID,\
+         CREDITNUMBER=:CREDITNUMBER,\
+         PAYMENTSPEC=:PAYMENTSPEC,\
+         DAYSOFPAYMENT=:DAYSOFPAYMENT,\
+         PAYMENTRECEIPT=:PAYMENTRECEIPT,\
+         DOCTYPE=:DOCTYPE,\
+         OVERFLOWNO=:OVERFLOWNO,\
+         DOCNO=:DOCNO,\
+         SEQUENCE=:SEQUENCE,\
+         SENDTOSAP=:SENDTOSAP,\
+         SAPDATE=:SAPDATE,\
+         CSTORDERNO=:CSTORDERNO,\
+         PAYMENTDOCNO=:PAYMENTDOCNO,\
+         DISCOUNTFLAG=:DISCOUNTFLAG,\
+         DISCOUNTAMOUNT=:DISCOUNTAMOUNT,\
+         DISTRIBUTORNO=:DISTRIBUTORNO,\
+         DISTRIBSCANTIME=:DISTRIBSCANTIME,\
+         DRIVERLISTTIME=:DRIVERLISTTIME,\
+         INVOICECOMPSAP=:INVOICECOMPSAP,\
+         PRICETYPE=:PRICETYPE,\
+         COMPLAINTSCANFLAG=:COMPLAINTSCANFLAG,\
+         LIBRADATEFLAG=:LIBRADATEFLAG,\
+         QTYCARTON=:QTYCARTON,\
+         QTYPACKET=:QTYPACKET,\
+         QTYBAG=:QTYBAG,\
+         QTYENCLOSEDLABEL=:QTYENCLOSEDLABEL,\
+         KINDOFORDER=:KINDOFORDER,\
+         FINALCHECKUSERNO=:FINALCHECKUSERNO,\
+         FINALCHECKTIME=:FINALCHECKTIME,\
+         CUSTOMERGRP=:CUSTOMERGRP,\
+         NARCOTICFLAG=:NARCOTICFLAG,\
+         INVOICEREBATEFLAG=:INVOICEREBATEFLAG,\
+         UPD_FLAG=:UPD_FLAG
+
+#ifdef ESQL_C
+ EXEC SQL BEGIN DECLARE SECTION;
+#endif
+
+/* original Strucur of CSTPAYMENTLIST *****************************************/
+
+ #ifndef TRANSCLASS
+ typedef struct N_CSTPAYMENTLIST {
+         short BRANCHNO;
+         long CUSTOMERNO;
+         char INVOICENUMBER[16];
+         short SEQUENCENO;
+         short INVOICESTATE;
+         long STATETIME;
+         double TOTALINVOICEAMOUNT;
+         double OPENINVOICEAMOUNT;
+         double PAIDINVOICEAMOUNT;
+         long DRIVERID;
+         char KINDOFPAYMENT[2];
+         long PAYMENTDATE;
+         char DOCUMENTDESCRIPT[31];
+         char USERIDENT[5];
+         long INVOICEDATE;
+         long TOURDATE;
+         char TOURID[7];
+         char CREDITNUMBER[16];
+         char PAYMENTSPEC[2];
+         short DAYSOFPAYMENT;
+         long PAYMENTRECEIPT;
+         char DOCTYPE[3];
+         short OVERFLOWNO;
+         long DOCNO;
+         short SEQUENCE;
+         char SENDTOSAP[2];
+         long SAPDATE;
+         long CSTORDERNO;
+         short PAYMENTDOCNO;
+         char DISCOUNTFLAG[2];
+         double DISCOUNTAMOUNT;
+         long DISTRIBUTORNO;
+         long DISTRIBSCANTIME;
+         long DRIVERLISTTIME;
+         char INVOICECOMPSAP[2];
+         short PRICETYPE;
+         char COMPLAINTSCANFLAG[2];
+         char LIBRADATEFLAG[2];
+         long QTYCARTON;
+         long QTYPACKET;
+         long QTYBAG;
+         long QTYENCLOSEDLABEL;
+         char KINDOFORDER[3];
+         long FINALCHECKUSERNO;
+         long FINALCHECKTIME;
+         char CUSTOMERGRP[3];
+         char NARCOTICFLAG[2];
+         char INVOICEREBATEFLAG[2];
+         char UPD_FLAG[2];
+        } cstpaymentlistS;
+ #else /*TRANSCLASS*/
+ typedef struct N_CSTPAYMENTLIST {
+         short BRANCHNO;
+         long CUSTOMERNO;
+         char INVOICENUMBER[16];
+         short SEQUENCENO;
+         short INVOICESTATE;
+         long STATETIME;
+         double TOTALINVOICEAMOUNT;
+         double OPENINVOICEAMOUNT;
+         double PAIDINVOICEAMOUNT;
+         long DRIVERID;
+         char KINDOFPAYMENT[2];
+         long PAYMENTDATE;
+         char DOCUMENTDESCRIPT[31];
+         char USERIDENT[5];
+         long INVOICEDATE;
+         long TOURDATE;
+         char TOURID[7];
+         char CREDITNUMBER[16];
+         char PAYMENTSPEC[2];
+         short DAYSOFPAYMENT;
+         long PAYMENTRECEIPT;
+         char DOCTYPE[3];
+         short OVERFLOWNO;
+         long DOCNO;
+         short SEQUENCE;
+         char SENDTOSAP[2];
+         long SAPDATE;
+         long CSTORDERNO;
+         short PAYMENTDOCNO;
+         char DISCOUNTFLAG[2];
+         double DISCOUNTAMOUNT;
+         long DISTRIBUTORNO;
+         long DISTRIBSCANTIME;
+         long DRIVERLISTTIME;
+         char INVOICECOMPSAP[2];
+         short PRICETYPE;
+         char COMPLAINTSCANFLAG[2];
+         char LIBRADATEFLAG[2];
+         long QTYCARTON;
+         long QTYPACKET;
+         long QTYBAG;
+         long QTYENCLOSEDLABEL;
+         char KINDOFORDER[3];
+         long FINALCHECKUSERNO;
+         long FINALCHECKTIME;
+         char CUSTOMERGRP[3];
+         char NARCOTICFLAG[2];
+         char INVOICEREBATEFLAG[2];
+         char UPD_FLAG[2];
+
+			bool operator==(const N_CSTPAYMENTLIST& right) const {
+			return(
+				BRANCHNO == right.BRANCHNO &&
+				CUSTOMERNO == right.CUSTOMERNO &&
+				!strcmp(INVOICENUMBER, right.INVOICENUMBER) &&
+				SEQUENCENO == right.SEQUENCENO &&
+				INVOICESTATE == right.INVOICESTATE &&
+				STATETIME == right.STATETIME &&
+				TOTALINVOICEAMOUNT == right.TOTALINVOICEAMOUNT &&
+				OPENINVOICEAMOUNT == right.OPENINVOICEAMOUNT &&
+				PAIDINVOICEAMOUNT == right.PAIDINVOICEAMOUNT &&
+				DRIVERID == right.DRIVERID &&
+				!strcmp(KINDOFPAYMENT, right.KINDOFPAYMENT) &&
+				PAYMENTDATE == right.PAYMENTDATE &&
+				!strcmp(DOCUMENTDESCRIPT, right.DOCUMENTDESCRIPT) &&
+				!strcmp(USERIDENT, right.USERIDENT) &&
+				INVOICEDATE == right.INVOICEDATE &&
+				TOURDATE == right.TOURDATE &&
+				!strcmp(TOURID, right.TOURID) &&
+				!strcmp(CREDITNUMBER, right.CREDITNUMBER) &&
+				!strcmp(PAYMENTSPEC, right.PAYMENTSPEC) &&
+				DAYSOFPAYMENT == right.DAYSOFPAYMENT &&
+				PAYMENTRECEIPT == right.PAYMENTRECEIPT &&
+				!strcmp(DOCTYPE, right.DOCTYPE) &&
+				OVERFLOWNO == right.OVERFLOWNO &&
+				DOCNO == right.DOCNO &&
+				SEQUENCE == right.SEQUENCE &&
+				!strcmp(SENDTOSAP, right.SENDTOSAP) &&
+				SAPDATE == right.SAPDATE &&
+				CSTORDERNO == right.CSTORDERNO &&
+				PAYMENTDOCNO == right.PAYMENTDOCNO &&
+				!strcmp(DISCOUNTFLAG, right.DISCOUNTFLAG) &&
+				DISCOUNTAMOUNT == right.DISCOUNTAMOUNT &&
+				DISTRIBUTORNO == right.DISTRIBUTORNO &&
+				DISTRIBSCANTIME == right.DISTRIBSCANTIME &&
+				DRIVERLISTTIME == right.DRIVERLISTTIME &&
+				!strcmp(INVOICECOMPSAP, right.INVOICECOMPSAP) &&
+				PRICETYPE == right.PRICETYPE &&
+				!strcmp(COMPLAINTSCANFLAG, right.COMPLAINTSCANFLAG) &&
+				!strcmp(LIBRADATEFLAG, right.LIBRADATEFLAG) &&
+				QTYCARTON == right.QTYCARTON &&
+				QTYPACKET == right.QTYPACKET &&
+				QTYBAG == right.QTYBAG &&
+				QTYENCLOSEDLABEL == right.QTYENCLOSEDLABEL &&
+				!strcmp(KINDOFORDER, right.KINDOFORDER) &&
+				FINALCHECKUSERNO == right.FINALCHECKUSERNO &&
+				FINALCHECKTIME == right.FINALCHECKTIME &&
+				!strcmp(CUSTOMERGRP, right.CUSTOMERGRP) &&
+				!strcmp(NARCOTICFLAG, right.NARCOTICFLAG) &&
+				!strcmp(INVOICEREBATEFLAG, right.INVOICEREBATEFLAG) &&
+				!strcmp(UPD_FLAG, right.UPD_FLAG)
+				);
+			}
+			void clear() {
+#ifdef WIN32
+			memset((char*)this,0,sizeof(*this));
+#else
+				BRANCHNO = 0;
+				CUSTOMERNO = 0;
+				strcpy(INVOICENUMBER, " " );
+				SEQUENCENO = 0;
+				INVOICESTATE = 0;
+				STATETIME = 0;
+				TOTALINVOICEAMOUNT = 0;
+				OPENINVOICEAMOUNT = 0;
+				PAIDINVOICEAMOUNT = 0;
+				DRIVERID = 0;
+				strcpy(KINDOFPAYMENT, " " );
+				PAYMENTDATE = 0;
+				strcpy(DOCUMENTDESCRIPT, " " );
+				strcpy(USERIDENT, " " );
+				INVOICEDATE = 0;
+				TOURDATE = 0;
+				strcpy(TOURID, " " );
+				strcpy(CREDITNUMBER, " " );
+				strcpy(PAYMENTSPEC, " " );
+				DAYSOFPAYMENT = 0;
+				PAYMENTRECEIPT = 0;
+				strcpy(DOCTYPE, " " );
+				OVERFLOWNO = 0;
+				DOCNO = 0;
+				SEQUENCE = 0;
+				strcpy(SENDTOSAP, " " );
+				SAPDATE = 0;
+				CSTORDERNO = 0;
+				PAYMENTDOCNO = 0;
+				strcpy(DISCOUNTFLAG, " " );
+				DISCOUNTAMOUNT = 0;
+				DISTRIBUTORNO = 0;
+				DISTRIBSCANTIME = 0;
+				DRIVERLISTTIME = 0;
+				strcpy(INVOICECOMPSAP, " " );
+				PRICETYPE = 0;
+				strcpy(COMPLAINTSCANFLAG, " " );
+				strcpy(LIBRADATEFLAG, " " );
+				QTYCARTON = 0;
+				QTYPACKET = 0;
+				QTYBAG = 0;
+				QTYENCLOSEDLABEL = 0;
+				strcpy(KINDOFORDER, " " );
+				FINALCHECKUSERNO = 0;
+				FINALCHECKTIME = 0;
+				strcpy(CUSTOMERGRP, " " );
+				strcpy(NARCOTICFLAG, " " );
+				strcpy(INVOICEREBATEFLAG, " " );
+				strcpy(UPD_FLAG, " " );
+#endif
+			}
+         } cstpaymentlistS;
+         #endif /*TRANSCLASS*/
+
+
+#ifdef ESQL_C
+ EXEC SQL END DECLARE SECTION;
+#endif
+
+#ifdef ESQL_C
+ EXEC SQL BEGIN DECLARE SECTION;
+#endif
+
+/* Stringbuffer Structur of CSTPAYMENTLIST ************************************/
+
+ struct S_CSTPAYMENTLIST {
+         char BRANCHNO[7];
+         char CUSTOMERNO[11];
+         char INVOICENUMBER[15 + 1];
+         char SEQUENCENO[7];
+         char INVOICESTATE[7];
+         char STATETIME[11];
+         char TOTALINVOICEAMOUNT[11 + 2];
+         char OPENINVOICEAMOUNT[11 + 2];
+         char PAIDINVOICEAMOUNT[11 + 2];
+         char DRIVERID[11];
+         char KINDOFPAYMENT[1 + 1];
+         char PAYMENTDATE[11];
+         char DOCUMENTDESCRIPT[30 + 1];
+         char USERIDENT[4 + 1];
+         char INVOICEDATE[11];
+         char TOURDATE[11];
+         char TOURID[6 + 1];
+         char CREDITNUMBER[15 + 1];
+         char PAYMENTSPEC[1 + 1];
+         char DAYSOFPAYMENT[7];
+         char PAYMENTRECEIPT[11];
+         char DOCTYPE[2 + 1];
+         char OVERFLOWNO[7];
+         char DOCNO[11];
+         char SEQUENCE[7];
+         char SENDTOSAP[1 + 1];
+         char SAPDATE[11];
+         char CSTORDERNO[11];
+         char PAYMENTDOCNO[7];
+         char DISCOUNTFLAG[1 + 1];
+         char DISCOUNTAMOUNT[11 + 2];
+         char DISTRIBUTORNO[11];
+         char DISTRIBSCANTIME[11];
+         char DRIVERLISTTIME[11];
+         char INVOICECOMPSAP[1 + 1];
+         char PRICETYPE[7];
+         char COMPLAINTSCANFLAG[1 + 1];
+         char LIBRADATEFLAG[1 + 1];
+         char QTYCARTON[11];
+         char QTYPACKET[11];
+         char QTYBAG[11];
+         char QTYENCLOSEDLABEL[11];
+         char KINDOFORDER[2 + 1];
+         char FINALCHECKUSERNO[11];
+         char FINALCHECKTIME[11];
+         char CUSTOMERGRP[2 + 1];
+         char NARCOTICFLAG[1 + 1];
+         char INVOICEREBATEFLAG[1 + 1];
+         char UPD_FLAG[1 + 1];
+         };
+
+#ifdef ESQL_C
+ EXEC SQL END DECLARE SECTION;
+#endif
+
+#ifdef ESQL_C
+ EXEC SQL BEGIN DECLARE SECTION;
+#endif
+
+/* Stringbuffer (without strend) Structur of CSTPAYMENTLIST *******************/
+
+ struct O_CSTPAYMENTLIST {
+         char BRANCHNO[7];
+         char CUSTOMERNO[11];
+         char INVOICENUMBER[15];
+         char SEQUENCENO[7];
+         char INVOICESTATE[7];
+         char STATETIME[11];
+         char TOTALINVOICEAMOUNT[11];
+         char OPENINVOICEAMOUNT[11];
+         char PAIDINVOICEAMOUNT[11];
+         char DRIVERID[11];
+         char KINDOFPAYMENT[1];
+         char PAYMENTDATE[11];
+         char DOCUMENTDESCRIPT[30];
+         char USERIDENT[4];
+         char INVOICEDATE[11];
+         char TOURDATE[11];
+         char TOURID[6];
+         char CREDITNUMBER[15];
+         char PAYMENTSPEC[1];
+         char DAYSOFPAYMENT[7];
+         char PAYMENTRECEIPT[11];
+         char DOCTYPE[2];
+         char OVERFLOWNO[7];
+         char DOCNO[11];
+         char SEQUENCE[7];
+         char SENDTOSAP[1];
+         char SAPDATE[11];
+         char CSTORDERNO[11];
+         char PAYMENTDOCNO[7];
+         char DISCOUNTFLAG[1];
+         char DISCOUNTAMOUNT[11];
+         char DISTRIBUTORNO[11];
+         char DISTRIBSCANTIME[11];
+         char DRIVERLISTTIME[11];
+         char INVOICECOMPSAP[1];
+         char PRICETYPE[7];
+         char COMPLAINTSCANFLAG[1];
+         char LIBRADATEFLAG[1];
+         char QTYCARTON[11];
+         char QTYPACKET[11];
+         char QTYBAG[11];
+         char QTYENCLOSEDLABEL[11];
+         char KINDOFORDER[2];
+         char FINALCHECKUSERNO[11];
+         char FINALCHECKTIME[11];
+         char CUSTOMERGRP[2];
+         char NARCOTICFLAG[1];
+         char INVOICEREBATEFLAG[1];
+         char UPD_FLAG[1];
+         };
+
+#ifdef ESQL_C
+ EXEC SQL END DECLARE SECTION;
+#endif
+
+#ifdef ESQL_C
+ EXEC SQL BEGIN DECLARE SECTION;
+#endif
+
+/* Structur with real chartype of CSTPAYMENTLIST ******************************/
+
+ struct C_CSTPAYMENTLIST {
+         short BRANCHNO;
+         long CUSTOMERNO;
+         char INVOICENUMBER[16];
+         short SEQUENCENO;
+         short INVOICESTATE;
+         long STATETIME;
+         double TOTALINVOICEAMOUNT;
+         double OPENINVOICEAMOUNT;
+         double PAIDINVOICEAMOUNT;
+         long DRIVERID;
+         char KINDOFPAYMENT;
+         long PAYMENTDATE;
+         char DOCUMENTDESCRIPT[31];
+         char USERIDENT[5];
+         long INVOICEDATE;
+         long TOURDATE;
+         char TOURID[7];
+         char CREDITNUMBER[16];
+         char PAYMENTSPEC;
+         short DAYSOFPAYMENT;
+         long PAYMENTRECEIPT;
+         char DOCTYPE[3];
+         short OVERFLOWNO;
+         long DOCNO;
+         short SEQUENCE;
+         char SENDTOSAP;
+         long SAPDATE;
+         long CSTORDERNO;
+         short PAYMENTDOCNO;
+         char DISCOUNTFLAG;
+         double DISCOUNTAMOUNT;
+         long DISTRIBUTORNO;
+         long DISTRIBSCANTIME;
+         long DRIVERLISTTIME;
+         char INVOICECOMPSAP;
+         short PRICETYPE;
+         char COMPLAINTSCANFLAG;
+         char LIBRADATEFLAG;
+         long QTYCARTON;
+         long QTYPACKET;
+         long QTYBAG;
+         long QTYENCLOSEDLABEL;
+         char KINDOFORDER[3];
+         long FINALCHECKUSERNO;
+         long FINALCHECKTIME;
+         char CUSTOMERGRP[3];
+         char NARCOTICFLAG;
+         char INVOICEREBATEFLAG;
+         char UPD_FLAG;
+         };
+
+#ifdef ESQL_C
+ EXEC SQL END DECLARE SECTION;
+#endif
+
+#ifdef ESQL_C
+ EXEC SQL BEGIN DECLARE SECTION;
+#endif
+
+/* Sizetype  Structur (buf_desc) of CSTPAYMENTLIST ****************************/
+
+ struct I_CSTPAYMENTLIST {
+         short BRANCHNO;
+         short CUSTOMERNO;
+         short INVOICENUMBER;
+         short SEQUENCENO;
+         short INVOICESTATE;
+         short STATETIME;
+         short TOTALINVOICEAMOUNT;
+         short OPENINVOICEAMOUNT;
+         short PAIDINVOICEAMOUNT;
+         short DRIVERID;
+         short KINDOFPAYMENT;
+         short PAYMENTDATE;
+         short DOCUMENTDESCRIPT;
+         short USERIDENT;
+         short INVOICEDATE;
+         short TOURDATE;
+         short TOURID;
+         short CREDITNUMBER;
+         short PAYMENTSPEC;
+         short DAYSOFPAYMENT;
+         short PAYMENTRECEIPT;
+         short DOCTYPE;
+         short OVERFLOWNO;
+         short DOCNO;
+         short SEQUENCE;
+         short SENDTOSAP;
+         short SAPDATE;
+         short CSTORDERNO;
+         short PAYMENTDOCNO;
+         short DISCOUNTFLAG;
+         short DISCOUNTAMOUNT;
+         short DISTRIBUTORNO;
+         short DISTRIBSCANTIME;
+         short DRIVERLISTTIME;
+         short INVOICECOMPSAP;
+         short PRICETYPE;
+         short COMPLAINTSCANFLAG;
+         short LIBRADATEFLAG;
+         short QTYCARTON;
+         short QTYPACKET;
+         short QTYBAG;
+         short QTYENCLOSEDLABEL;
+         short KINDOFORDER;
+         short FINALCHECKUSERNO;
+         short FINALCHECKTIME;
+         short CUSTOMERGRP;
+         short NARCOTICFLAG;
+         short INVOICEREBATEFLAG;
+         short UPD_FLAG;
+         };
+
+#ifdef ESQL_C
+ EXEC SQL END DECLARE SECTION;
+#endif
+
+/* structures of Buf_Desc *****************************************************/
+
+/* Structur (buf_desc) of CSTPAYMENTLIST **************************************/
+
+#if defined (BUF_DESC)
+ static struct buf_desc CSTPAYMENTLIST_BES [] =
+ {
+   { TYP_S ,  6, 0 },
+   { TYP_L , 11, 0 },
+   { TYP_C, 15, 0 },
+   { TYP_S ,  6, 0 },
+   { TYP_S ,  6, 0 },
+   { TYP_L , 11, 0 },
+   { TYP_D, 11, 2 },
+   { TYP_D, 11, 2 },
+   { TYP_D, 11, 2 },
+   { TYP_L , 11, 0 },
+   { TYP_C, 1, 0 },
+   { TYP_L , 11, 0 },
+   { TYP_C, 30, 0 },
+   { TYP_C, 4, 0 },
+   { TYP_L , 11, 0 },
+   { TYP_L , 11, 0 },
+   { TYP_C, 6, 0 },
+   { TYP_C, 15, 0 },
+   { TYP_C, 1, 0 },
+   { TYP_S ,  6, 0 },
+   { TYP_L , 11, 0 },
+   { TYP_C, 2, 0 },
+   { TYP_S ,  6, 0 },
+   { TYP_L , 11, 0 },
+   { TYP_S ,  6, 0 },
+   { TYP_C, 1, 0 },
+   { TYP_L , 11, 0 },
+   { TYP_L , 11, 0 },
+   { TYP_S ,  6, 0 },
+   { TYP_C, 1, 0 },
+   { TYP_D, 11, 2 },
+   { TYP_L , 11, 0 },
+   { TYP_L , 11, 0 },
+   { TYP_L , 11, 0 },
+   { TYP_C, 1, 0 },
+   { TYP_S ,  6, 0 },
+   { TYP_C, 1, 0 },
+   { TYP_C, 1, 0 },
+   { TYP_L , 11, 0 },
+   { TYP_L , 11, 0 },
+   { TYP_L , 11, 0 },
+   { TYP_L , 11, 0 },
+   { TYP_C, 2, 0 },
+   { TYP_L , 11, 0 },
+   { TYP_L , 11, 0 },
+   { TYP_C, 2, 0 },
+   { TYP_C, 1, 0 },
+   { TYP_C, 1, 0 },
+   { TYP_C, 1, 0 },
+ };
+#elif defined (C_BUF_DESC)
+ static struct buf_desc CSTPAYMENTLIST_BES [] =
+ {
+   { TYP_S ,  6, 0 },
+   { TYP_L , 11, 0 },
+   { TYP_C, 15, 0 },
+   { TYP_S ,  6, 0 },
+   { TYP_S ,  6, 0 },
+   { TYP_L , 11, 0 },
+   { TYP_D, 11, 2 },
+   { TYP_D, 11, 2 },
+   { TYP_D, 11, 2 },
+   { TYP_L , 11, 0 },
+   { TYP_C, 1, 0 },
+   { TYP_L , 11, 0 },
+   { TYP_C, 30, 0 },
+   { TYP_C, 4, 0 },
+   { TYP_L , 11, 0 },
+   { TYP_L , 11, 0 },
+   { TYP_C, 6, 0 },
+   { TYP_C, 15, 0 },
+   { TYP_C, 1, 0 },
+   { TYP_S ,  6, 0 },
+   { TYP_L , 11, 0 },
+   { TYP_C, 2, 0 },
+   { TYP_S ,  6, 0 },
+   { TYP_L , 11, 0 },
+   { TYP_S ,  6, 0 },
+   { TYP_C, 1, 0 },
+   { TYP_L , 11, 0 },
+   { TYP_L , 11, 0 },
+   { TYP_S ,  6, 0 },
+   { TYP_C, 1, 0 },
+   { TYP_D, 11, 2 },
+   { TYP_L , 11, 0 },
+   { TYP_L , 11, 0 },
+   { TYP_L , 11, 0 },
+   { TYP_C, 1, 0 },
+   { TYP_S ,  6, 0 },
+   { TYP_C, 1, 0 },
+   { TYP_C, 1, 0 },
+   { TYP_L , 11, 0 },
+   { TYP_L , 11, 0 },
+   { TYP_L , 11, 0 },
+   { TYP_L , 11, 0 },
+   { TYP_C, 2, 0 },
+   { TYP_L , 11, 0 },
+   { TYP_L , 11, 0 },
+   { TYP_C, 2, 0 },
+   { TYP_C, 1, 0 },
+   { TYP_C, 1, 0 },
+   { TYP_C, 1, 0 },
+ };
+#endif
+
+/* description for datatypes of CSTPAYMENTLIST ********************************/
+
+ #define CSTPAYMENTLIST_S390 \
+         short BRANCHNO; \
+         long CUSTOMERNO; \
+         char INVOICENUMBER[16]; \
+         short SEQUENCENO; \
+         short INVOICESTATE; \
+         long STATETIME; \
+         double TOTALINVOICEAMOUNT; \
+         double OPENINVOICEAMOUNT; \
+         double PAIDINVOICEAMOUNT; \
+         long DRIVERID; \
+         char KINDOFPAYMENT; \
+         long PAYMENTDATE; \
+         char DOCUMENTDESCRIPT[31]; \
+         char USERIDENT[5]; \
+         long INVOICEDATE; \
+         long TOURDATE; \
+         char TOURID[7]; \
+         char CREDITNUMBER[16]; \
+         char PAYMENTSPEC; \
+         short DAYSOFPAYMENT; \
+         long PAYMENTRECEIPT; \
+         char DOCTYPE[3]; \
+         short OVERFLOWNO; \
+         long DOCNO; \
+         short SEQUENCE; \
+         char SENDTOSAP; \
+         long SAPDATE; \
+         long CSTORDERNO; \
+         short PAYMENTDOCNO; \
+         char DISCOUNTFLAG; \
+         double DISCOUNTAMOUNT; \
+         long DISTRIBUTORNO; \
+         long DISTRIBSCANTIME; \
+         long DRIVERLISTTIME; \
+         char INVOICECOMPSAP; \
+         short PRICETYPE; \
+         char COMPLAINTSCANFLAG; \
+         char LIBRADATEFLAG; \
+         long QTYCARTON; \
+         long QTYPACKET; \
+         long QTYBAG; \
+         long QTYENCLOSEDLABEL; \
+         char KINDOFORDER[3]; \
+         long FINALCHECKUSERNO; \
+         long FINALCHECKTIME; \
+         char CUSTOMERGRP[3]; \
+         char NARCOTICFLAG; \
+         char INVOICEREBATEFLAG; \
+         char UPD_FLAG; \
+
+
+
+/* Copy-Function Struct to single Data CSTPAYMENTLIST *************************/
+
+ #define CSTPAYMENTLIST_S390_COPY_TO_SINGLE(_x_) \
+         BRANCHNO=_x_->BRANCHNO;\
+         CUSTOMERNO=_x_->CUSTOMERNO;\
+          strcpy(INVOICENUMBER,_x_->INVOICENUMBER);\
+         SEQUENCENO=_x_->SEQUENCENO;\
+         INVOICESTATE=_x_->INVOICESTATE;\
+         STATETIME=_x_->STATETIME;\
+         TOTALINVOICEAMOUNT=_x_->TOTALINVOICEAMOUNT;\
+         OPENINVOICEAMOUNT=_x_->OPENINVOICEAMOUNT;\
+         PAIDINVOICEAMOUNT=_x_->PAIDINVOICEAMOUNT;\
+         DRIVERID=_x_->DRIVERID;\
+         KINDOFPAYMENT=_x_->KINDOFPAYMENT;\
+         PAYMENTDATE=_x_->PAYMENTDATE;\
+          strcpy(DOCUMENTDESCRIPT,_x_->DOCUMENTDESCRIPT);\
+          strcpy(USERIDENT,_x_->USERIDENT);\
+         INVOICEDATE=_x_->INVOICEDATE;\
+         TOURDATE=_x_->TOURDATE;\
+          strcpy(TOURID,_x_->TOURID);\
+          strcpy(CREDITNUMBER,_x_->CREDITNUMBER);\
+         PAYMENTSPEC=_x_->PAYMENTSPEC;\
+         DAYSOFPAYMENT=_x_->DAYSOFPAYMENT;\
+         PAYMENTRECEIPT=_x_->PAYMENTRECEIPT;\
+          strcpy(DOCTYPE,_x_->DOCTYPE);\
+         OVERFLOWNO=_x_->OVERFLOWNO;\
+         DOCNO=_x_->DOCNO;\
+         SEQUENCE=_x_->SEQUENCE;\
+         SENDTOSAP=_x_->SENDTOSAP;\
+         SAPDATE=_x_->SAPDATE;\
+         CSTORDERNO=_x_->CSTORDERNO;\
+         PAYMENTDOCNO=_x_->PAYMENTDOCNO;\
+         DISCOUNTFLAG=_x_->DISCOUNTFLAG;\
+         DISCOUNTAMOUNT=_x_->DISCOUNTAMOUNT;\
+         DISTRIBUTORNO=_x_->DISTRIBUTORNO;\
+         DISTRIBSCANTIME=_x_->DISTRIBSCANTIME;\
+         DRIVERLISTTIME=_x_->DRIVERLISTTIME;\
+         INVOICECOMPSAP=_x_->INVOICECOMPSAP;\
+         PRICETYPE=_x_->PRICETYPE;\
+         COMPLAINTSCANFLAG=_x_->COMPLAINTSCANFLAG;\
+         LIBRADATEFLAG=_x_->LIBRADATEFLAG;\
+         QTYCARTON=_x_->QTYCARTON;\
+         QTYPACKET=_x_->QTYPACKET;\
+         QTYBAG=_x_->QTYBAG;\
+         QTYENCLOSEDLABEL=_x_->QTYENCLOSEDLABEL;\
+          strcpy(KINDOFORDER,_x_->KINDOFORDER);\
+         FINALCHECKUSERNO=_x_->FINALCHECKUSERNO;\
+         FINALCHECKTIME=_x_->FINALCHECKTIME;\
+          strcpy(CUSTOMERGRP,_x_->CUSTOMERGRP);\
+         NARCOTICFLAG=_x_->NARCOTICFLAG;\
+         INVOICEREBATEFLAG=_x_->INVOICEREBATEFLAG;\
+         UPD_FLAG=_x_->UPD_FLAG;\
+
+ #define CSTPAYMENTLIST_S390_COPY_TO_STRUCT(_x_) \
+          _x_->BRANCHNO=BRANCHNO;\
+          _x_->CUSTOMERNO=CUSTOMERNO;\
+          strcpy(_x_->INVOICENUMBER,INVOICENUMBER);\
+          _x_->SEQUENCENO=SEQUENCENO;\
+          _x_->INVOICESTATE=INVOICESTATE;\
+          _x_->STATETIME=STATETIME;\
+          _x_->TOTALINVOICEAMOUNT=TOTALINVOICEAMOUNT;\
+          _x_->OPENINVOICEAMOUNT=OPENINVOICEAMOUNT;\
+          _x_->PAIDINVOICEAMOUNT=PAIDINVOICEAMOUNT;\
+          _x_->DRIVERID=DRIVERID;\
+          _x_->KINDOFPAYMENT=KINDOFPAYMENT;\
+          _x_->PAYMENTDATE=PAYMENTDATE;\
+          strcpy(_x_->DOCUMENTDESCRIPT,DOCUMENTDESCRIPT);\
+          strcpy(_x_->USERIDENT,USERIDENT);\
+          _x_->INVOICEDATE=INVOICEDATE;\
+          _x_->TOURDATE=TOURDATE;\
+          strcpy(_x_->TOURID,TOURID);\
+          strcpy(_x_->CREDITNUMBER,CREDITNUMBER);\
+          _x_->PAYMENTSPEC=PAYMENTSPEC;\
+          _x_->DAYSOFPAYMENT=DAYSOFPAYMENT;\
+          _x_->PAYMENTRECEIPT=PAYMENTRECEIPT;\
+          strcpy(_x_->DOCTYPE,DOCTYPE);\
+          _x_->OVERFLOWNO=OVERFLOWNO;\
+          _x_->DOCNO=DOCNO;\
+          _x_->SEQUENCE=SEQUENCE;\
+          _x_->SENDTOSAP=SENDTOSAP;\
+          _x_->SAPDATE=SAPDATE;\
+          _x_->CSTORDERNO=CSTORDERNO;\
+          _x_->PAYMENTDOCNO=PAYMENTDOCNO;\
+          _x_->DISCOUNTFLAG=DISCOUNTFLAG;\
+          _x_->DISCOUNTAMOUNT=DISCOUNTAMOUNT;\
+          _x_->DISTRIBUTORNO=DISTRIBUTORNO;\
+          _x_->DISTRIBSCANTIME=DISTRIBSCANTIME;\
+          _x_->DRIVERLISTTIME=DRIVERLISTTIME;\
+          _x_->INVOICECOMPSAP=INVOICECOMPSAP;\
+          _x_->PRICETYPE=PRICETYPE;\
+          _x_->COMPLAINTSCANFLAG=COMPLAINTSCANFLAG;\
+          _x_->LIBRADATEFLAG=LIBRADATEFLAG;\
+          _x_->QTYCARTON=QTYCARTON;\
+          _x_->QTYPACKET=QTYPACKET;\
+          _x_->QTYBAG=QTYBAG;\
+          _x_->QTYENCLOSEDLABEL=QTYENCLOSEDLABEL;\
+          strcpy(_x_->KINDOFORDER,KINDOFORDER);\
+          _x_->FINALCHECKUSERNO=FINALCHECKUSERNO;\
+          _x_->FINALCHECKTIME=FINALCHECKTIME;\
+          strcpy(_x_->CUSTOMERGRP,CUSTOMERGRP);\
+          _x_->NARCOTICFLAG=NARCOTICFLAG;\
+          _x_->INVOICEREBATEFLAG=INVOICEREBATEFLAG;\
+          _x_->UPD_FLAG=UPD_FLAG;\
+
+
+
+/* FunctionNumber-Define of cstpaymentlist ************************************/
+
+
+#ifdef PRZ_OLD_FUNCTION
+/* Old-FunctionNumber-Define of cstpaymentlist ********************************/
+
+
+#endif
+
+/* C++ Class ******************************************************************/
+
+#ifdef TRANSCLASS
+#include<vector>
+using namespace std;
+
+#ifndef __VIRTUAL_DADE_CLASS__
+#define __VIRTUAL_DADE_CLASS__
+
+class ppDadeVirtual
+{
+	public:
+		virtual    ~ppDadeVirtual() {};
+		virtual int SelList      (int FetchRel = 1, int pos = 0) = 0;
+		virtual int SelListHist  (int FetchRel = 1, int pos = 0) = 0;
+		virtual int SelListFuture(int FetchRel = 1, int pos = 0) = 0;
+		virtual int Load         (int pos = 0                  ) = 0;
+ 		virtual int Delete       (int pos = 0                  ) = 0;
+		virtual int Save         (int pos = 0                  ) = 0;
+};
+#endif
+
+class CCSTPAYMENTLIST : public ppDadeVirtual
+{
+	//data members
+	public:
+		cstpaymentlistS s;
+		int  rc;
+		char error_msg[81];
+	private:
+		bool bOpenCursor;
+		bool bEndOfSelect;
+		int  FncNumber;
+		int  CursorPos;
+		int  AnzPos;
+		vector<cstpaymentlistS> *pl; // pointer to class list
+
+	//functions
+	public:
+
+		unsigned int	GetSize() const { return pl ? pl->size() : 0; }
+		void 		ClearStruct() { s.clear(); }
+		bool 		SetData(const unsigned int i) { if (GetSize() <= i) return false; s = pl->at(i); return true;}
+		bool 		SetList(const unsigned int i) { if (GetSize() <= i) return false; vector<cstpaymentlistS>::iterator itPtr = pl->begin() + i; *itPtr = s; return true; }
+		bool 		InsList() { if ( !pl ) pl = new vector<cstpaymentlistS>; Strip(s); cstpaymentlistS c = s; pl->insert(pl->end(),c); AnzPos++; return true; }
+		bool 		DelList(const unsigned int i) { if (GetSize() <= i) return false; vector<cstpaymentlistS>::iterator itPtr = pl->begin() + i; if ( itPtr < pl->end() ) pl->erase(itPtr); if ( --AnzPos < 0 ) AnzPos = 0; return true; }
+		vector<cstpaymentlistS>::iterator begin(){ if (pl) return pl->begin(); else return NULL; };
+		vector<cstpaymentlistS>::iterator end(){ if (pl) return pl->end(); else return NULL; };
+		short		GetBranchno() const	{ return s.BRANCHNO; }
+		long		GetCustomerno() const	{ return s.CUSTOMERNO; }
+		const char*	GetInvoicenumber(ppString& t) const 	{ t = s.INVOICENUMBER; t.erasespace(ppString::END); return t.c_str(); }
+		short		GetSequenceno() const	{ return s.SEQUENCENO; }
+		short		GetInvoicestate() const	{ return s.INVOICESTATE; }
+		long		GetStatetime() const	{ return s.STATETIME; }
+		double		GetTotalinvoiceamount() const	{ return s.TOTALINVOICEAMOUNT; }
+		double		GetOpeninvoiceamount() const	{ return s.OPENINVOICEAMOUNT; }
+		double		GetPaidinvoiceamount() const	{ return s.PAIDINVOICEAMOUNT; }
+		long		GetDriverid() const	{ return s.DRIVERID; }
+		char		GetKindofpayment() const	{ return s.KINDOFPAYMENT[0]; }
+		long		GetPaymentdate() const	{ return s.PAYMENTDATE; }
+		const char*	GetDocumentdescript(ppString& t) const 	{ t = s.DOCUMENTDESCRIPT; t.erasespace(ppString::END); return t.c_str(); }
+		const char*	GetUserident(ppString& t) const 	{ t = s.USERIDENT; t.erasespace(ppString::END); return t.c_str(); }
+		long		GetInvoicedate() const	{ return s.INVOICEDATE; }
+		long		GetTourdate() const	{ return s.TOURDATE; }
+		const char*	GetTourid(ppString& t) const 	{ t = s.TOURID; t.erasespace(ppString::END); return t.c_str(); }
+		const char*	GetCreditnumber(ppString& t) const 	{ t = s.CREDITNUMBER; t.erasespace(ppString::END); return t.c_str(); }
+		char		GetPaymentspec() const	{ return s.PAYMENTSPEC[0]; }
+		short		GetDaysofpayment() const	{ return s.DAYSOFPAYMENT; }
+		long		GetPaymentreceipt() const	{ return s.PAYMENTRECEIPT; }
+		const char*	GetDoctype(ppString& t) const 	{ t = s.DOCTYPE; t.erasespace(ppString::END); return t.c_str(); }
+		short		GetOverflowno() const	{ return s.OVERFLOWNO; }
+		long		GetDocno() const	{ return s.DOCNO; }
+		short		GetSequence() const	{ return s.SEQUENCE; }
+		char		GetSendtosap() const	{ return s.SENDTOSAP[0]; }
+		long		GetSapdate() const	{ return s.SAPDATE; }
+		long		GetCstorderno() const	{ return s.CSTORDERNO; }
+		short		GetPaymentdocno() const	{ return s.PAYMENTDOCNO; }
+		char		GetDiscountflag() const	{ return s.DISCOUNTFLAG[0]; }
+		double		GetDiscountamount() const	{ return s.DISCOUNTAMOUNT; }
+		long		GetDistributorno() const	{ return s.DISTRIBUTORNO; }
+		long		GetDistribscantime() const	{ return s.DISTRIBSCANTIME; }
+		long		GetDriverlisttime() const	{ return s.DRIVERLISTTIME; }
+		char		GetInvoicecompsap() const	{ return s.INVOICECOMPSAP[0]; }
+		short		GetPricetype() const	{ return s.PRICETYPE; }
+		char		GetComplaintscanflag() const	{ return s.COMPLAINTSCANFLAG[0]; }
+		char		GetLibradateflag() const	{ return s.LIBRADATEFLAG[0]; }
+		long		GetQtycarton() const	{ return s.QTYCARTON; }
+		long		GetQtypacket() const	{ return s.QTYPACKET; }
+		long		GetQtybag() const	{ return s.QTYBAG; }
+		long		GetQtyenclosedlabel() const	{ return s.QTYENCLOSEDLABEL; }
+		const char*	GetKindoforder(ppString& t) const 	{ t = s.KINDOFORDER; t.erasespace(ppString::END); return t.c_str(); }
+		long		GetFinalcheckuserno() const	{ return s.FINALCHECKUSERNO; }
+		long		GetFinalchecktime() const	{ return s.FINALCHECKTIME; }
+		const char*	GetCustomergrp(ppString& t) const 	{ t = s.CUSTOMERGRP; t.erasespace(ppString::END); return t.c_str(); }
+		char		GetNarcoticflag() const	{ return s.NARCOTICFLAG[0]; }
+		char		GetInvoicerebateflag() const	{ return s.INVOICEREBATEFLAG[0]; }
+		char		GetUpd_flag() const	{ return s.UPD_FLAG[0]; }
+		const cstpaymentlistS& GetStruct() const { return s; }
+		void 		SetBranchno(short t) { s.BRANCHNO = t; }
+		void 		SetCustomerno(long t) { s.CUSTOMERNO = t; }
+		void 		SetInvoicenumber(const ppString& t) { ppGStrCopy(s.INVOICENUMBER,t.c_str() ,L_CSTPAYMENTLIST_INVOICENUMBER); }
+		void 		SetSequenceno(short t) { s.SEQUENCENO = t; }
+		void 		SetInvoicestate(short t) { s.INVOICESTATE = t; }
+		void 		SetStatetime(long t) { s.STATETIME = t; }
+		void 		SetTotalinvoiceamount(double t) { s.TOTALINVOICEAMOUNT = t; }
+		void 		SetOpeninvoiceamount(double t) { s.OPENINVOICEAMOUNT = t; }
+		void 		SetPaidinvoiceamount(double t) { s.PAIDINVOICEAMOUNT = t; }
+		void 		SetDriverid(long t) { s.DRIVERID = t; }
+		void 		SetKindofpayment(char t) { s.KINDOFPAYMENT[0] = t; s.KINDOFPAYMENT[1] = '\0';}
+		void 		SetPaymentdate(long t) { s.PAYMENTDATE = t; }
+		void 		SetDocumentdescript(const ppString& t) { ppGStrCopy(s.DOCUMENTDESCRIPT,t.c_str() ,L_CSTPAYMENTLIST_DOCUMENTDESCRIPT); }
+		void 		SetUserident(const ppString& t) { ppGStrCopy(s.USERIDENT,t.c_str() ,L_CSTPAYMENTLIST_USERIDENT); }
+		void 		SetInvoicedate(long t) { s.INVOICEDATE = t; }
+		void 		SetTourdate(long t) { s.TOURDATE = t; }
+		void 		SetTourid(const ppString& t) { ppGStrCopy(s.TOURID,t.c_str() ,L_CSTPAYMENTLIST_TOURID); }
+		void 		SetCreditnumber(const ppString& t) { ppGStrCopy(s.CREDITNUMBER,t.c_str() ,L_CSTPAYMENTLIST_CREDITNUMBER); }
+		void 		SetPaymentspec(char t) { s.PAYMENTSPEC[0] = t; s.PAYMENTSPEC[1] = '\0';}
+		void 		SetDaysofpayment(short t) { s.DAYSOFPAYMENT = t; }
+		void 		SetPaymentreceipt(long t) { s.PAYMENTRECEIPT = t; }
+		void 		SetDoctype(const ppString& t) { ppGStrCopy(s.DOCTYPE,t.c_str() ,L_CSTPAYMENTLIST_DOCTYPE); }
+		void 		SetOverflowno(short t) { s.OVERFLOWNO = t; }
+		void 		SetDocno(long t) { s.DOCNO = t; }
+		void 		SetSequence(short t) { s.SEQUENCE = t; }
+		void 		SetSendtosap(char t) { s.SENDTOSAP[0] = t; s.SENDTOSAP[1] = '\0';}
+		void 		SetSapdate(long t) { s.SAPDATE = t; }
+		void 		SetCstorderno(long t) { s.CSTORDERNO = t; }
+		void 		SetPaymentdocno(short t) { s.PAYMENTDOCNO = t; }
+		void 		SetDiscountflag(char t) { s.DISCOUNTFLAG[0] = t; s.DISCOUNTFLAG[1] = '\0';}
+		void 		SetDiscountamount(double t) { s.DISCOUNTAMOUNT = t; }
+		void 		SetDistributorno(long t) { s.DISTRIBUTORNO = t; }
+		void 		SetDistribscantime(long t) { s.DISTRIBSCANTIME = t; }
+		void 		SetDriverlisttime(long t) { s.DRIVERLISTTIME = t; }
+		void 		SetInvoicecompsap(char t) { s.INVOICECOMPSAP[0] = t; s.INVOICECOMPSAP[1] = '\0';}
+		void 		SetPricetype(short t) { s.PRICETYPE = t; }
+		void 		SetComplaintscanflag(char t) { s.COMPLAINTSCANFLAG[0] = t; s.COMPLAINTSCANFLAG[1] = '\0';}
+		void 		SetLibradateflag(char t) { s.LIBRADATEFLAG[0] = t; s.LIBRADATEFLAG[1] = '\0';}
+		void 		SetQtycarton(long t) { s.QTYCARTON = t; }
+		void 		SetQtypacket(long t) { s.QTYPACKET = t; }
+		void 		SetQtybag(long t) { s.QTYBAG = t; }
+		void 		SetQtyenclosedlabel(long t) { s.QTYENCLOSEDLABEL = t; }
+		void 		SetKindoforder(const ppString& t) { ppGStrCopy(s.KINDOFORDER,t.c_str() ,L_CSTPAYMENTLIST_KINDOFORDER); }
+		void 		SetFinalcheckuserno(long t) { s.FINALCHECKUSERNO = t; }
+		void 		SetFinalchecktime(long t) { s.FINALCHECKTIME = t; }
+		void 		SetCustomergrp(const ppString& t) { ppGStrCopy(s.CUSTOMERGRP,t.c_str() ,L_CSTPAYMENTLIST_CUSTOMERGRP); }
+		void 		SetNarcoticflag(char t) { s.NARCOTICFLAG[0] = t; s.NARCOTICFLAG[1] = '\0';}
+		void 		SetInvoicerebateflag(char t) { s.INVOICEREBATEFLAG[0] = t; s.INVOICEREBATEFLAG[1] = '\0';}
+		void 		SetUpd_flag(char t) { s.UPD_FLAG[0] = t; s.UPD_FLAG[1] = '\0';}
+		void 		SetStruct(const cstpaymentlistS& t) { s = t; }
+
+	//virtual functions
+	public:
+
+		int	Load(int pos=0) { return 1; }
+		int	Save(int pos=0) { return 1; }
+		int	Delete(int pos=0) { return 1; }
+		int	SelList(int FetchRel = 1,int pos=0) { return 1; }
+		int	SelListHist(int FetchRel = 1,int pos=0) { return 1; }
+		int	SelListFuture(int FetchRel = 1,int pos=0) { return 1; }
+		CCSTPAYMENTLIST()  //constructor
+		{
+			::buf_default((void *)&s, CSTPAYMENTLIST_BES, CSTPAYMENTLIST_ANZ);
+			bOpenCursor		= false;
+			bEndOfSelect	= false;
+			FncNumber		= 0;
+			CursorPos		= 0;
+			AnzPos			= 0;
+			rc  			= 0;
+			pl = NULL;
+			s.clear();
+		}
+
+		virtual ~CCSTPAYMENTLIST()  //destructor
+		{
+			if(pl) {
+				delete pl;
+				pl = NULL;
+			}
+		}
+
+		void buf_default()  //buffer init
+		{
+			::buf_default((void *)&s, CSTPAYMENTLIST_BES, CSTPAYMENTLIST_ANZ);
+		}
+
+		int Server(int fkt_nr,int pos=0) // socket server call
+		{
+			#ifdef WIN32
+			rc = ::ServerNr(pos, fkt_nr, (void *)&s, CSTPAYMENTLIST_BES, CSTPAYMENTLIST_ANZ, error_msg);
+			#else
+			rc = ::Server(fkt_nr, (void *)&s, CSTPAYMENTLIST_BES, CSTPAYMENTLIST_ANZ, error_msg);
+			#endif
+			if (rc<0) FehlerBehandlung( rc, error_msg );
+			return rc;
+		}
+
+	private:
+
+		void Strip(N_CSTPAYMENTLIST& d)
+		{
+#ifdef WIN32
+			ppGStripLast(d.INVOICENUMBER);
+			ppGStripLast(d.DOCUMENTDESCRIPT);
+			ppGStripLast(d.USERIDENT);
+			ppGStripLast(d.TOURID);
+			ppGStripLast(d.CREDITNUMBER);
+			ppGStripLast(d.DOCTYPE);
+			ppGStripLast(d.KINDOFORDER);
+			ppGStripLast(d.CUSTOMERGRP);
+#endif
+		}
+
+
+		int UniqueServerCall(int FncNr,int pos=0)
+		{
+			#ifndef __DADE_LOAD__
+			rc = ::ServerNr(pos, FncNr, (void *)&s, CSTPAYMENTLIST_BES, CSTPAYMENTLIST_ANZ, error_msg);
+			#else
+			rc = DistributorFunSelect(FncNr, (void *)&s, error_msg, &rc);
+			#endif
+			if (rc<0) FehlerBehandlung( rc, error_msg );
+			return rc;
+		}
+
+};
+
+#endif
+
+/* CreateSqlStatement of CSTPAYMENTLIST ***************************************/
+
+ #define CSTPAYMENTLIST_CREATE(x) exec sql create table x (\
+         BRANCHNO smallint default 0 not null,\
+         CUSTOMERNO integer default 0 not null,\
+         INVOICENUMBER char(15) default " " not null,\
+         SEQUENCENO smallint default 0 not null,\
+         INVOICESTATE smallint default 0 not null,\
+         STATETIME integer default 0 not null,\
+         TOTALINVOICEAMOUNT decimal(11,2) default 0 not null,\
+         OPENINVOICEAMOUNT decimal(11,2) default 0 not null,\
+         PAIDINVOICEAMOUNT decimal(11,2) default 0 not null,\
+         DRIVERID integer default 0 not null,\
+         KINDOFPAYMENT char(1) default " " not null,\
+         PAYMENTDATE integer default 0 not null,\
+         DOCUMENTDESCRIPT char(30) default " " not null,\
+         USERIDENT char(4) default " " not null,\
+         INVOICEDATE integer default 0 not null,\
+         TOURDATE integer default 0 not null,\
+         TOURID char(6) default " " not null,\
+         CREDITNUMBER char(15) default " " not null,\
+         PAYMENTSPEC char(1) default " " not null,\
+         DAYSOFPAYMENT smallint default 0 not null,\
+         PAYMENTRECEIPT integer default 0 not null,\
+         DOCTYPE char(2) default " " not null,\
+         OVERFLOWNO smallint default 0 not null,\
+         DOCNO integer default 0 not null,\
+         SEQUENCE smallint default 0 not null,\
+         SENDTOSAP char(1) default " " not null,\
+         SAPDATE integer default 0 not null,\
+         CSTORDERNO integer default 0 not null,\
+         PAYMENTDOCNO smallint default 0 not null,\
+         DISCOUNTFLAG char(1) default " " not null,\
+         DISCOUNTAMOUNT decimal(11,2) default 0 not null,\
+         DISTRIBUTORNO integer default 0 not null,\
+         DISTRIBSCANTIME integer default 0 not null,\
+         DRIVERLISTTIME integer default 0 not null,\
+         INVOICECOMPSAP char(1) default " " not null,\
+         PRICETYPE smallint default 0 not null,\
+         COMPLAINTSCANFLAG char(1) default " " not null,\
+         LIBRADATEFLAG char(1) default " " not null,\
+         QTYCARTON integer default 0 not null,\
+         QTYPACKET integer default 0 not null,\
+         QTYBAG integer default 0 not null,\
+         QTYENCLOSEDLABEL integer default 0 not null,\
+         KINDOFORDER char(2) default " " not null,\
+         FINALCHECKUSERNO integer default 0 not null,\
+         FINALCHECKTIME integer default 0 not null,\
+         CUSTOMERGRP char(2) default " " not null,\
+         NARCOTICFLAG char(1) default " " not null,\
+         INVOICEREBATEFLAG char(1) default " " not null,\
+         UPD_FLAG char(1) default " " not null) in ksc extent size 6276 next size 628 lock mode row;
+
+
+
+/* CreateIndexStatement of CSTPAYMENTLIST *************************************/
+
+ #define CSTPAYMENTLIST_CREATE_INDEX(_X_,_Y_)\
+              _Y_ = 0;\
+         exec sql create unique index i_cstpaylist_1 on _X_(\
+              BranchNo,\
+              CustomerNo,\
+              InvoiceNumber,\
+              SequenceNo ) in kscidx;\
+         if ( sqlca.sqlcode != 0 ) _Y_ = sqlca.sqlcode;\
+
+
+/* DeleteIndexStatement of CSTPAYMENTLIST *************************************/
+
+ #define CSTPAYMENTLIST_DELETE_INDEX(_X_)\
+              _X_ = 0;\
+         exec sql drop index i_cstpaylist_1;\
+         if ( sqlca.sqlcode != 0 ) _X_ = sqlca.sqlcode;\
+
+
+
+#endif

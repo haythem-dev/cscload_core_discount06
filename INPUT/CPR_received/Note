@@ -1,0 +1,12 @@
+ZDP:
+----
+ZDP stands for Central Data Maintenance.
+It is a system designed to manage data relevant across various branches and countries, including currencies, prices, manufacturers, and purchasing groups.
+Each country maintains its own data basis, while customer-specific data is handled separately within the customer master data under Pharmos.
+ZDP facilitates the maintenance of article attributes and supports the import and processing of data from external files.
+
+KSC:
+----
+KSC refers to a backend server used for various applications within a system, particularly in the context of order processing and logistics.
+It facilitates the transfer of data, including narcotics orders, to other applications like the Narcotics App.
+KSC also supports batch programs that manage order entries, reservations, and data transfers between systems, ensuring efficient operations across distribution centers.

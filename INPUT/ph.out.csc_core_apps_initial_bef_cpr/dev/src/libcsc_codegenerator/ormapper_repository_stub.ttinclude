@@ -1,0 +1,85 @@
+﻿<#
+// #############################################################
+// Repository STUB
+// #############################################################
+#>
+
+<#
+string _repositoryMethodName = $"find{TypeName}";
+string _repositoryMethodInput = string.Join(", ", RequestInput.Select(x => $"const {GetFullBasarType(x.Value)}& {FirstLetterToLower(x.Key)}"));
+string additionalNamespace_repo = string.IsNullOrEmpty(AdditionalNamespace) ? "" : $"{AdditionalNamespaceLower}::";
+string _repositoryMethodOutType = $"{TypeName}{(RequestOutputAsList ? $"Collection" : "")}";
+#>
+
+
+
+// INTERFACE ******************
+
+<# WriteInclude($"{_repositoryMethodOutType}ptr"); #>
+
+virtual <#= additionalNamespace_repo #><#= _repositoryMethodOutType #>Ptr <#= _repositoryMethodName #>(
+    <#= _repositoryMethodInput #>) = 0;
+
+
+
+// HEADER ******************
+
+virtual <#= additionalNamespace_repo #><#= _repositoryMethodOutType #>Ptr <#= _repositoryMethodName #>(
+    <#= _repositoryMethodInput #>);
+
+
+
+// SOURCE ******************
+
+<# WriteInclude($"{TypeName}sqlmapper"); #>
+<# WriteInclude($"{TypeName}sql"); #>
+<# WriteInclude($"{TypeName}"); #>
+
+<#= additionalNamespace_repo #><#= _repositoryMethodOutType #>Ptr <#= ComponentName #>Repository::<#= _repositoryMethodName #>(
+    <#= _repositoryMethodInput #>)
+{
+    try
+    {
+<#
+if (RequestOutputAsList)
+{
+#>
+        <#= additionalNamespace_repo #><#= TypeName #>CollectionPtr result = <#= additionalNamespace_repo #><#= TypeName #>CollectionPtr(new <#= additionalNamespace_repo #><#= TypeName #>Collection());
+<#
+}
+#>
+        basar::db::sql::ResultsetRef resultset = m_FindAccessor->select(
+            <#= TypeName #>Sql::Get<#= TypeName #>Query(<#= string.Join(", ", RequestInput.Select(x => $"{FirstLetterToLower(x.Key)}{GetBasarToSqlTypeConverter(x.Value)}")) #>));
+        <#= (RequestOutputAsList ? "while" : "if") #> (resultset.next())
+        {
+            <#= additionalNamespace_repo #><#= TypeName #>Ptr <#= TypeNameFirstLower #> = <#= additionalNamespace_repo #><#= TypeName #>Ptr(new <#= additionalNamespace_repo #><#= TypeName #>());
+            <#= additionalNamespace_repo #><#= TypeName #>SqlMapper mapper(<#= TypeNameFirstLower #>, resultset);
+            mapper.map();
+            <#= (RequestOutputAsList ? $"result->push_back({TypeNameFirstLower})" : $"return {TypeNameFirstLower}") #>;
+        }
+
+<#
+if (RequestOutputAsList)
+{
+#>
+        return result;
+<#
+}
+else
+{
+#>
+        return <#= additionalNamespace_repo #><#= TypeName #>Ptr();
+<#
+}
+#>
+    }
+    catch (basar::Exception& e)
+    {
+        std::stringstream s;
+        s << "find<#= TypeName #>: " << e.what();
+        BLOG_ERROR(LoggerPool::getLoggerSession(), s.str());
+        throw;
+    }
+}
+
+<# SaveStub($"{TypeName}_Repository.stub"); #>

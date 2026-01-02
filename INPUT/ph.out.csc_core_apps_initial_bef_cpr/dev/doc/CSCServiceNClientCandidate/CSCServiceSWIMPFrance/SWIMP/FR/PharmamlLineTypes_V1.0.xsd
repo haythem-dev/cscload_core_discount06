@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- J.F Brunot (PHOENIX Pharmahandel AG & Co. KG) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<!--Définition des groupes d'attribut 	<xs:attributeGroup name="attgPmlLine_Produit" type="attgPmlLine_Produit"/> -->
+	<xs:attributeGroup name="attgPmlLine_Produit">
+		<xs:attribute name="Type_Codification" type="stPmlLine_CodificationProduit" use="optional"/>
+		<xs:attribute name="Code_Produit" type="stPmlLine_Reference20" use="optional"/>
+		<xs:attribute name="Designation" type="stPmlLine_Text50" use="optional"/>
+	</xs:attributeGroup>
+    <!--Définition des types simpleType ATTRIBUTE Pharmaml-->
+	<xs:simpleType name="stPmlLine_CodificationProduit">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="CIP/ACL7"/>
+			<xs:enumeration value="CIP/ACL13"/>
+			<xs:enumeration value="GTIN13"/>
+			<xs:enumeration value="SPECIALE"/>
+			<xs:enumeration value="CLAIR"/>
+			<xs:enumeration value="EAN13"/>
+			<xs:enumeration value="CIP39"/>
+		</xs:restriction>
+	</xs:simpleType>
+    <xs:simpleType name="stPmlLine_Reference20">
+		<xs:restriction base="xs:NMTOKEN">
+			<xs:minLength value="1"/>
+			<xs:maxLength value="20"/>
+		</xs:restriction>
+	</xs:simpleType>
+    <xs:simpleType name="stPmlLine_Text50">
+		<xs:restriction base="xs:normalizedString">
+			<xs:minLength value="1"/>
+			<xs:maxLength value="50"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

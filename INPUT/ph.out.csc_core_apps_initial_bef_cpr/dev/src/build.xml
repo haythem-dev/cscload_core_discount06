@@ -1,0 +1,163 @@
+<?xml version="1.0"?>
+
+<project name="csc_core_applications" default="help" basedir="." xmlns:contrib="antlib:net.sf.antcontrib">
+  <taskdef name="xmltask" classname="com.oopsconsultancy.xmltask.ant.XmlTask"/>
+
+  <!-- ====================================================== -->
+
+  <property name="settings_server" value="tfs-nexus"/>
+  <property name="settings_version" value="3.0.0"/>
+
+  <include>
+    <url url="http://${settings_server}:8081/repository/genesis/eu/phoenixgroup/buildenv_ivy/${settings_version}/macro.ant-${settings_version}.xml"/>
+  </include>
+
+  <property name="projdir"      value="."/>
+  <property name="solutionfile" value="${projdir}/csc_core_applications.sln"/>
+
+  <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+  <macrodef name="ant-ae">
+    <attribute name="target"/>
+    <sequential>
+      <contrib:if>
+        <os family="windows"/>
+        <then>
+          <!-- This is stupid ... ant will always inherit down commandline parameters and we can't override them here...
+          <ant inheritAll="false" inheritRefs="false" dir="ae/src" antfile="build.xml" target="@{target}">
+            <property name="useConfig" value="win32"/>
+          </ant>
+
+          TODO: FORCE win32 for AE at the moment
+          -->
+          <exec dir="ae/src" executable="cmd" failonerror="yes">
+            <arg value="/C"/>
+            <arg value="ant"/>
+            <arg value="-Dsettings_server=${settings_server}"/>
+            <arg value="-DuseConfig=win32"/>
+            <arg value="@{target}"/>
+          </exec>
+        </then>
+      </contrib:if>
+    </sequential>
+  </macrodef>
+
+  <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+  <target name="help">
+    <displayHelp/>
+  </target>
+
+  <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+  <target name="full" description="clean rebuild">
+    <ant-ae target="full"/>
+
+    <!--buildVS solution="${solutionfile}" mode="rebuild" config="Debug"/>
+    <buildVS solution="${solutionfile}" mode="rebuild" config="Release"/-->
+
+    <buildMake path="${projdir}" mode="cleanall"/>
+    <buildMake path="${projdir}" mode="dbg"/>
+    <buildMake path="${projdir}" mode="rel"/>
+  </target>
+
+  <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+  <target name="incremental" description="only changed sources are built">
+    <ant-ae target="incremental"/>
+
+    <!--buildVS solution="${solutionfile}" mode="build" config="Debug"/>
+    <buildVS solution="${solutionfile}" mode="build" config="Release"/-->
+
+    <buildMake path="${projdir}" mode="dbg"/>
+    <buildMake path="${projdir}" mode="rel"/>
+  </target>
+
+  <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+  <target name="export" description="exporting and compressing created artifacts">
+    <!-- export nuget only on windows -->
+    <contrib:if>
+      <os family="windows"/>
+    <then>
+      <!-- remove and recreate export dir -->
+      <property name="export_dir" value="../../export/nuget"/>
+      <delete dir="${export_dir}" verbose="true"/>
+      <mkdir dir="${export_dir}"/>
+
+      <!-- extract version number from ivy and place into nuspec -->
+      <xmltask source="ivy.xml">
+      <!--	<copy path="/ivy-module/info/@revision" property="fullversion" attrValue="true"/> -->
+        <!-- Use only version information before -${platform} - cannot escape {}, so search only for -$ ! -->
+        <copy path="substring-before(/ivy-module/info/@revision,'-$')" property="version" attrValue="true"/>
+      </xmltask>
+
+      <!-- strip -${platform} from version -->
+      <!-- <echo message="Extracted fullversion: ${fullversion}" /> -->
+      <!-- <contrib:propertyregex property="version" input="${fullversion}" regexp="-\$\{platform\}" replace="" casesensitive="false" /> -->
+
+      <echo message="Extracted Package Version: ${version}" />
+      <xmltask source="cscservice_idl.nuspec" dest="${export_dir}/cscservice_idl.nuspec" encoding="UTF-8">
+        <replace path="/package/metadata/version/text()" withText="${version}"/>
+      </xmltask>
+    </then>
+    </contrib:if>
+
+    <!-- call export scripts -->
+    <buildScriptWin  path="." script="proc\export.bat"/>
+    <buildScriptUnix path="." script="proc/export.sh" />
+
+    <!-- ant-ae target="export" -->
+  </target>
+
+  <target name="export64" description="exporting and compressing created artifacts">
+    <!-- export nuget only on windows -->
+    <contrib:if>
+      <os family="windows"/>
+      <then>
+        <!-- remove and recreate export dir -->
+        <property name="export_dir" value="../../export/nuget"/>
+        <delete dir="${export_dir}" verbose="true"/>
+        <mkdir dir="${export_dir}"/>
+
+        <!-- extract version number from ivy and place into nuspec -->
+        <xmltask source="ivy.xml">
+          <!--	<copy path="/ivy-module/info/@revision" property="fullversion" attrValue="true"/> -->
+          <!-- Use only version information before -${platform} - cannot escape {}, so search only for -$ ! -->
+          <copy path="substring-before(/ivy-module/info/@revision,'-$')" property="version" attrValue="true"/>
+        </xmltask>
+
+        <!-- strip -${platform} from version -->
+        <!-- <echo message="Extracted fullversion: ${fullversion}" /> -->
+        <!-- <contrib:propertyregex property="version" input="${fullversion}" regexp="-\$\{platform\}" replace="" casesensitive="false" /> -->
+
+        <echo message="Extracted Package Version: ${version}" />
+        <xmltask source="cscservice_idl.nuspec" dest="${export_dir}/cscservice_idl.nuspec" encoding="UTF-8">
+          <replace path="/package/metadata/version/text()" withText="${version}"/>
+        </xmltask>
+      </then>
+    </contrib:if>
+
+    <!-- call export scripts -->
+    <buildScriptWin path="." script="proc\export64.bat"/>
+  </target>
+
+  <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+  <target name="retrieve">
+    <retrieve additional-config="compile"/>
+    <ant-ae target="retrieve"/>
+  </target>
+
+  <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+  <target name="publish">
+    <publish additional-config="thrift_idl,legacy_idl"/>
+    <!-- ant-ae target="publish" -->
+  </target>
+
+  <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+  <target name="doc" description="make doc and upload">
+    <buildMake path="${projdir}" mode="doc"/>
+  </target>
+
+  <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+  <target name="unittest" description="build and run unittests">
+    <buildMake path="${projdir}" mode="test DBSERVER=${dbServer}"/>
+  </target>
+
+  <!-- ====================================================== -->
+</project>

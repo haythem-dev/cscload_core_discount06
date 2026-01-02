@@ -1,0 +1,32 @@
+# Druckprozedur fuer Druckdateien der Zentralen Datenpflege
+# usage: zpdruck datei drucker [-optionen]
+
+
+if test "$1" = ""
+then
+   echo usage: zpdruck datei -drucker [-optionen]
+   exit 1
+fi
+
+if test "$2" = ""
+then
+   echo usage: zpdruck datei -drucker [-optionen]
+   exit 1
+fi
+
+#LAND=$(basename $(dirname $(dirname $(dirname $0) ) ) )
+LOG=/tmp/zpdruck.log
+
+touch $LOG
+chmod 777 $LOG
+
+# Aufruf Prozedur cx in /software/rz/program  ( rmfuze1 )
+# Aufruf Prozedur cx in $WWSz/proz            ( rmmapr3 )
+
+# cx -ax25 $1 > $LOG
+
+cx $2 $1 > $LOG
+
+cat $LOG
+
+exit $?

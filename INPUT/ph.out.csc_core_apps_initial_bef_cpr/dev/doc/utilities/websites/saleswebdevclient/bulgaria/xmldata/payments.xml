@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PaymentsRequest>
+  <Client BranchNo="23" CustomerNo="3000035" />
+  <RequestPeriod DateFrom="2011-01-01" DateTo="2011-09-01" Filter="OverdueDocuments" />
+</PaymentsRequest>

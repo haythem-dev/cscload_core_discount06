@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ArgeItemInfoRequest Version="#ARGEITEMVERSION#">
+	<General RequestId="#REQUESTID#" TimeStamp="#TIMESTAMP#" RequestItemDetails="#RID#">
+		<Customer Id="#CUSTOMERNUMBER#" SoftwareId="#SWID#"/>
+		<Supplier Id="#SUPPLIERID#" Branch="#BRANCH#"/>
+	</General>
+#INFOITEM#
+</ArgeItemInfoRequest>

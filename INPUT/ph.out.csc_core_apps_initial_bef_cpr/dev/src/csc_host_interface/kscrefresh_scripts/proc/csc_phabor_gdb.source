@@ -1,0 +1,19 @@
+# set directories with source
+
+dir /software/home/s.heinle/marathon/orderentry/csc/csc_phabor/csc_phabor
+dir /software/home/s.heinle/marathon/orderentry/csc/csc_phabor/libbatch
+dir /software/home/s.heinle/marathon/orderentry/csc/csc_phabor/libcsc_utils
+
+dir /software/home/s.heinle/marathon/orderentry/cxxtools/libsrc
+dir /software/home/s.heinle/marathon/orderentry/cxxtools/include
+
+dir /software/home/s.heinle/marathon/orderentry/pxdb/libsrc
+dir /software/home/s.heinle/marathon/orderentry/pxdb/include
+
+dir /software/home/s.heinle/marathon/orderentry/pxverbund/libsrc
+dir /software/home/s.heinle/marathon/orderentry/pxverbund/include
+
+# fix breakpoint
+b main
+
+

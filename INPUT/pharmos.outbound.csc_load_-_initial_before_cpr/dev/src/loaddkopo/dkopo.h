@@ -1,0 +1,109 @@
+/******************************************************************************/
+/* INCLUDE DATEI FUER CLIENT/SERVER-PIPE ANWENDUNG                            */
+/******************************************************************************/
+
+ #define L_DKOPO_OPOFIL               2
+ #define L_DKOPO_OPOKDNR              7
+ #define L_DKOPO_OPORECHNR            10
+ #define L_DKOPO_OPOLFD_NR            3
+ #define L_DKOPO_OPOSTATUS            1
+ #define L_DKOPO_OPOZEIT              6
+ #define L_DKOPO_OPOGESBETR           11
+ #define L_DKOPO_OPOOFFBETR           11
+ #define L_DKOPO_OPOBEZBETR           11
+ #define L_DKOPO_OPOKURIDF            7
+ #define L_DKOPO_OPOZART              1
+ #define L_DKOPO_OPOFAELLIGKEIT       8
+ #define L_DKOPO_OPODOKUART           30
+ #define L_DKOPO_OPOPERSID	          4
+ #define L_DKOPO_OPOREDAT             8
+ #define L_DKOPO_OPOTDATE             6
+ #define L_DKOPO_OPOTOUR              6
+ #define L_DKOPO_OPOGUTSNR            10
+ #define L_DKOPO_OPOZZIEL             1
+ #define L_DKOPO_OPOTGZIEL            3
+ #define L_DKOPO_OPOZEDAT             8
+ #define L_DKOPO_OPOBTYP              2
+ #define L_DKOPO_OPOUELNR             1
+ #define L_DKOPO_OPOBELNR             7
+ #define L_DKOPO_OPOLFDNR             3
+ #define L_DKOPO_OPOFISAP             1
+ #define L_DKOPO_OPOFIDAT             6
+ #define L_DKOPO_OPOKANR              5
+ #define L_DKOPO_OPOBELDR             2
+ #define L_DKOPO_OPOSKOKZ             1
+ #define L_DKOPO_OPOSKOBETR           11
+ #define L_DKOPO_OPOVERTEILER         4
+ #define L_DKOPO_OPOVTZEIT            6
+ #define L_DKOPO_OPOKURZEIT           6
+ #define L_DKOPO_OPOREAUSGL           1
+ #define L_DKOPO_OPOABRTYP            1
+ #define L_DKOPO_OPOREKSCAN           1
+ #define L_DKOPO_OPOVLKZ              1
+ #define L_DKOPO_OPOANZKART           4
+ #define L_DKOPO_OPOANZPAK            4
+ #define L_DKOPO_OPOANZTUE            4
+ #define L_DKOPO_OPOANZBEIP           4
+ #define L_DKOPO_OPOAART              2
+ #define L_DKOPO_OPOENDKONTR          4
+ #define L_DKOPO_OPOEKZEIT            4
+ #define L_DKOPO_OPOKGR               2
+ #define L_DKOPO_OPOBTM               1
+ #define L_DKOPO_OPORRABAT            1
+ #define L_DKOPO_OPOFILL              20
+
+EXEC SQL BEGIN DECLARE SECTION;
+struct O_DKOPO {
+         char    OPOFIL               [2];
+         char    OPOKDNR              [7];
+         char    OPORECHNR            [10];
+         char    OPOLFD_NR            [3];
+         char    OPOSTATUS            [1];
+         char    OPOZEIT              [6];
+         char    OPOGESBETR           [11];
+         char    OPOOFFBETR           [11];
+         char    OPOBEZBETR           [11];
+         char    OPOKURIDF            [7];
+         char    OPOZART              [1];
+         char    OPOFAELLIGKEIT       [8];
+         char    OPODOKUART           [30];
+         char    OPOPERSID	          [4];
+         char    OPOREDAT             [8];
+         char    OPOTDATE             [6];
+         char    OPOTOUR              [6];
+         char    OPOGUTSNR            [10];
+         char    OPOZZIEL             [1];
+         char    OPOTGZIEL            [3];
+         char    OPOZEDAT             [8];
+         char    OPOBTYP              [2];
+         char    OPOUELNR             [1];
+         char    OPOBELNR             [7];
+         char    OPOLFDNR             [3];
+         char    OPOFISAP             [1];
+         char    OPOFIDAT             [6];
+         char    OPOKANR              [5];
+         char    OPOBELDR             [2];
+         char    OPOSKOKZ             [1];
+         char    OPOSKOBETR           [11];
+         char    OPOVERTEILER         [4];
+         char    OPOVTZEIT            [6];
+         char    OPOKURZEIT           [6];
+         char    OPOREAUSGL           [1];
+         char    OPOABRTYP            [1];
+         char    OPOREKSCAN           [1];
+         char    OPOVLKZ              [1];
+         char    OPOANZKART           [4];
+         char    OPOANZPAK            [4];
+         char    OPOANZTUE            [4];
+         char    OPOANZBEIP           [4];
+         char    OPOAART              [2];
+         char    OPOENDKONTR          [4];
+         char    OPOEKZEIT            [4];
+         char    OPOKGR               [2];
+         char    OPOBTM               [1];
+         char    OPORRABAT            [1];
+         char    OPOFILL              [20];
+       };
+EXEC SQL END DECLARE SECTION;
+
+

@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Use Cases">
+      <UniqueIdentifier>{43d8ea35-23c8-462f-a385-8670f20cc6ad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Domain Modules">
+      <UniqueIdentifier>{e28219f3-e436-463b-aad9-bede265803b4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Domain Modules\Acc">
+      <UniqueIdentifier>{f49bdf06-195b-4765-923e-aead5facb309}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="main">
+      <UniqueIdentifier>{3a20b9b4-9570-4532-b411-576f3a84f585}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="loadcustomeruc.cpp">
+      <Filter>Use Cases</Filter>
+    </ClCompile>
+    <ClCompile Include="cicscustomerdm.cpp">
+      <Filter>Domain Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="customerdm.cpp">
+      <Filter>Domain Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="generalbranchparameterdm.cpp">
+      <Filter>Domain Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="customeracc.cpp">
+      <Filter>Domain Modules\Acc</Filter>
+    </ClCompile>
+    <ClCompile Include="dkkulacc.cpp">
+      <Filter>Domain Modules\Acc</Filter>
+    </ClCompile>
+    <ClCompile Include="publicholidayacc.cpp">
+      <Filter>Domain Modules\Acc</Filter>
+    </ClCompile>
+    <ClCompile Include="connection.cpp">
+      <Filter>main</Filter>
+    </ClCompile>
+    <ClCompile Include="loadcustomerappl.cpp">
+      <Filter>main</Filter>
+    </ClCompile>
+    <ClCompile Include="loggerpool.cpp">
+      <Filter>main</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>main</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="loadcustomeruc.h">
+      <Filter>Use Cases</Filter>
+    </ClInclude>
+    <ClInclude Include="cicscustomerdm.h">
+      <Filter>Domain Modules</Filter>
+    </ClInclude>
+    <ClInclude Include="customerdm.h">
+      <Filter>Domain Modules</Filter>
+    </ClInclude>
+    <ClInclude Include="generalbranchparameterdm.h">
+      <Filter>Domain Modules</Filter>
+    </ClInclude>
+    <ClInclude Include="generalbranchparameterdm_definitions.h">
+      <Filter>Domain Modules</Filter>
+    </ClInclude>
+    <ClInclude Include="customeracc.h">
+      <Filter>Domain Modules\Acc</Filter>
+    </ClInclude>
+    <ClInclude Include="dkkulacc.h">
+      <Filter>Domain Modules\Acc</Filter>
+    </ClInclude>
+    <ClInclude Include="publicholidayacc.h">
+      <Filter>Domain Modules\Acc</Filter>
+    </ClInclude>
+    <ClInclude Include="commonheader.h">
+      <Filter>main</Filter>
+    </ClInclude>
+    <ClInclude Include="connection.h">
+      <Filter>main</Filter>
+    </ClInclude>
+    <ClInclude Include="loadcustomerappl.h">
+      <Filter>main</Filter>
+    </ClInclude>
+    <ClInclude Include="loggerpool.h">
+      <Filter>main</Filter>
+    </ClInclude>
+    <ClInclude Include="version.h">
+      <Filter>main</Filter>
+    </ClInclude>
+    <ClInclude Include="zpldcust_definitions.h">
+      <Filter>main</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="makefile" />
+    <None Include="zpldcust.option" />
+    <None Include="zpldcust.sh" />
+    <None Include="..\makefile" />
+    <None Include="..\makefile.inc" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="zpldcust.cfg">
+      <Filter>main</Filter>
+    </CustomBuild>
+  </ItemGroup>
+</Project>

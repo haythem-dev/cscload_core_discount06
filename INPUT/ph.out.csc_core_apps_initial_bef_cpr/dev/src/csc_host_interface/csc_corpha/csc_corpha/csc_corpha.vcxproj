@@ -1,0 +1,360 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{07DD608F-EBE1-4A05-B201-EEBC17037B84}</ProjectGuid>
+    <RootNamespace>csc_corpha</RootNamespace>
+	<QTDIR>$(SolutionDir)..\ext\qt5</QTDIR>
+    <Keyword>Qt4VSv1.0</Keyword>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <EmbedManifest>false</EmbedManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <EmbedManifest>false</EmbedManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.;$(QTDIR)\include;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtXml;$(QTDIR)\include\QtXmlPatterns;..\..\libcsc_utils;..\..\libbatch;..\..\..\pxdb\include;..\..\..\pxverbund\include;..\..\..\libcsc;..\..\..\..\ext\ssuk\basar\include;..\..\..\..\ext\log4cplus\include;..\..\..\..\ext\boost\include;..\..\..\cxxtools\include;$(SolutionDir)..\ext\liblockmanager\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <ProgramDataBaseFileName>$(TargetDir)$(TargetName).pdb</ProgramDataBaseFileName>
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>ws2_32.lib;Rpcrt4.lib;liblockmanager.lib;tcaapi.lib;tca.lib;libbasarcmnutil.lib;libbasardbaspect.lib;libbasarproperty.lib;libbasardbsql.lib;log4cplus.lib;libbasarlogin.lib;libbasarappl.lib;libbatch.lib;Qt5Core.lib;Qt5Xml.lib;Qt5XmlPatterns.lib;libcsc_utils.lib;libcsc.lib;pxdb.lib;pxverbund.lib;cxxtools.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(QTDIR)\lib;$(SolutionDir)$(Configuration);$(SolutionDir)..\ext\ssuk\basar\lib\$(Configuration);$(SolutionDir)..\ext\log4cplus\lib\$(Configuration);$(SolutionDir)..\ext\boost\lib;$(SolutionDir)..\ext\liblockmanager\lib\$(Configuration);$(SolutionDir)..\ext\tcaccess_libraries\lib\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <SubSystem>Console</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.;$(QTDIR)\include;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtXml;$(QTDIR)\include\QtXmlPatterns;..\..\libcsc_utils;..\..\libbatch;..\..\..\pxdb\include;..\..\..\pxverbund\include;..\..\..\libcsc;..\..\..\..\ext\ssuk\basar\include;..\..\..\..\ext\log4cplus\include;..\..\..\..\ext\boost\include;..\..\..\cxxtools\include;$(SolutionDir)..\ext\liblockmanager\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <ProgramDataBaseFileName>$(TargetDir)$(TargetName).pdb</ProgramDataBaseFileName>
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>ws2_32.lib;Rpcrt4.lib;liblockmanager.lib;tcaapi.lib;tca.lib;libbasarcmnutil.lib;libbasardbaspect.lib;libbasarproperty.lib;libbasardbsql.lib;log4cplus.lib;libbasarlogin.lib;libbasarappl.lib;libbatch.lib;Qt5Core.lib;Qt5Xml.lib;libcsc_utils.lib;libcsc.lib;pxdb.lib;pxverbund.lib;cxxtools.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(QTDIR)\lib;$(SolutionDir)$(Platform)\$(Configuration);$(SolutionDir)..\ext\ssuk\basar\lib\$(Configuration);$(SolutionDir)..\ext\log4cplus\lib\$(Configuration);$(SolutionDir)..\ext\boost\lib;$(SolutionDir)..\ext\liblockmanager\lib\$(Configuration);$(SolutionDir)..\ext\tcaccess_libraries\lib\$(Platform);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <SubSystem>Console</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>.;$(QTDIR)\include;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtXml;$(QTDIR)\include\QtXmlPatterns;..\..\libcsc_utils;..\..\libbatch;..\..\..\pxdb\include;..\..\..\pxverbund\include;..\..\..\libcsc;..\..\..\..\ext\ssuk\basar\include;..\..\..\..\ext\log4cplus\include;..\..\..\..\ext\boost\include;..\..\..\cxxtools\include;$(SolutionDir)..\ext\liblockmanager\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_WIN32;WIN32;_DEBUG;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <WarningLevel>Level4</WarningLevel>
+      <TreatWarningAsError>false</TreatWarningAsError>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+      <ProgramDataBaseFileName>$(TargetDir)$(TargetName).pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>ws2_32.lib;Rpcrt4.lib;liblockmanager.lib;tcaapi.lib;tca.lib;libbasarcmnutil.lib;libbasardbaspect.lib;libbasarproperty.lib;libbasardbsql.lib;log4cplusd.lib;libbasarlogin.lib;libbasarappl.lib;libbatch.lib;Qt5Cored.lib;Qt5Xmld.lib;Qt5XmlPatternsd.lib;libcsc_utils.lib;libcsc.lib;pxdb.lib;pxverbund.lib;cxxtools.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(QTDIR)\lib;$(SolutionDir)$(Configuration);$(SolutionDir)..\ext\ssuk\basar\lib\$(Configuration);$(SolutionDir)..\ext\log4cplus\lib\$(Configuration);$(SolutionDir)..\ext\boost\lib;$(SolutionDir)..\ext\liblockmanager\lib\$(Configuration);$(SolutionDir)..\ext\tcaccess_libraries\lib\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>MSVCRT</IgnoreSpecificDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <IgnoreAllDefaultLibraries>
+      </IgnoreAllDefaultLibraries>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>.;$(QTDIR)\include;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtXml;$(QTDIR)\include\QtXmlPatterns;..\..\libcsc_utils;..\..\libbatch;..\..\..\pxdb\include;..\..\..\pxverbund\include;..\..\..\libcsc;..\..\..\..\ext\ssuk\basar\include;..\..\..\..\ext\log4cplus\include;..\..\..\..\ext\boost\include;..\..\..\cxxtools\include;$(SolutionDir)..\ext\liblockmanager\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_WIN32;WIN32;_DEBUG;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <WarningLevel>Level4</WarningLevel>
+      <TreatWarningAsError>false</TreatWarningAsError>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+      <ProgramDataBaseFileName>$(TargetDir)$(TargetName).pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>ws2_32.lib;Rpcrt4.lib;liblockmanager.lib;tcaapi.lib;tca.lib;libbasarcmnutil.lib;libbasardbaspect.lib;libbasarproperty.lib;libbasardbsql.lib;log4cplusd.lib;libbasarlogin.lib;libbasarappl.lib;libbatch.lib;Qt5Cored.lib;Qt5Xmld.lib;libcsc_utils.lib;libcsc.lib;pxdb.lib;pxverbund.lib;cxxtools.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(QTDIR)\lib;$(SolutionDir)$(Platform)\$(Configuration);$(SolutionDir)..\ext\ssuk\basar\lib\$(Configuration);$(SolutionDir)..\ext\log4cplus\lib\$(Configuration);$(SolutionDir)..\ext\boost\lib;$(SolutionDir)..\ext\liblockmanager\lib\$(Configuration);$(SolutionDir)..\ext\tcaccess_libraries\lib\$(Platform);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>MSVCRT</IgnoreSpecificDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <IgnoreAllDefaultLibraries>
+      </IgnoreAllDefaultLibraries>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="pdx040remoteprocedure.h" />
+    <ClInclude Include="pdx040remoteprocedure_definitions.h" />
+    <ClInclude Include="pxordervalidtransptr.h" />
+    <ClInclude Include="recordtypediscount.h" />
+    <ClInclude Include="recordtypediscountptr.h" />
+    <ClInclude Include="recordtypediscount_definitions.h" />
+    <ClInclude Include="recordtypeibtpickingdata.h" />
+    <ClInclude Include="recordtypeibtpickingdataptr.h" />
+    <ClInclude Include="recordtypeibtpickingdata_definitions.h" />
+    <ClInclude Include="recordtypeinterbranchinfo.h" />
+    <ClInclude Include="recordtypeinterbranchinfo_definitions.h" />
+    <ClInclude Include="recordtypeinterbranchinfoptr.h" />
+    <ClInclude Include="recordtypeorderline.h" />
+    <ClInclude Include="recordtypeorderline_definitions.h" />
+    <ClInclude Include="recordtypeorderlineptr.h" />
+    <ClInclude Include="recordtypeorderresponse.h" />
+    <ClInclude Include="recordtypeorderresponse_definitions.h" />
+    <ClInclude Include="recordtypeorderresponseptr.h" />
+    <ClInclude Include="recordtypeformatter.h" />
+    <ClInclude Include="recordtypeordertext.h" />
+    <ClInclude Include="recordtypeordertext_definitions.h" />
+    <ClInclude Include="recordtypeordertextptr.h" />
+    <ClInclude Include="recordtypeorderheader.h" />
+    <ClInclude Include="recordtypeorderheader_definitions.h" />
+    <ClInclude Include="recordtypeorderheaderptr.h" />
+    <ClInclude Include="recordtypebase.h" />
+    <ClInclude Include="recordtypebase_definitions.h" />
+    <ClInclude Include="recordtypebaseptr.h" />
+    <ClInclude Include="recordtypeorderinfo.h" />
+    <ClInclude Include="recordtypeorderinfo_definitions.h" />
+    <ClInclude Include="recordtypeorderinfoptr.h" />
+    <ClInclude Include="recordtypecollection.h" />
+    <ClInclude Include="recordtypecollectionptr.h" />
+    <ClInclude Include="recordtypemsv3info.h" />
+    <ClInclude Include="recordtypemsv3info_definitions.h" />
+    <ClInclude Include="recordtypemsv3infoptr.h" />
+    <ClInclude Include="recordtyperemark.h" />
+    <ClInclude Include="recordtyperemark_definitions.h" />
+    <ClInclude Include="recordtyperemarkptr.h" />
+    <ClInclude Include="cicsorderdm.h" />
+    <ClInclude Include="cicsorderdmptr.h" />
+    <ClInclude Include="cicsrecord.h" />
+    <ClInclude Include="icicsorderdm.h" />
+    <ClInclude Include="icicsorderdmptr.h" />
+    <ClInclude Include="cicsorderaccessormanager.h" />
+    <ClInclude Include="cicsorderaccessorbase.h" />
+    <ClInclude Include="cicsorderaccessorbaseptr.h" />
+    <ClInclude Include="cicsorderaccessorodd.h" />
+    <ClInclude Include="cicsorderaccessoroddptr.h" />
+    <ClInclude Include="dkotoacc.h" />
+    <ClInclude Include="dkotoacc_definitions.h" />
+    <ClInclude Include="cicsorderaccessoreven.h" />
+    <ClInclude Include="cicsorderaccessorevenptr.h" />
+    <ClInclude Include="dkoteacc.h" />
+    <ClInclude Include="dkoteacc_definitions.h" />
+    <ClInclude Include="cicsorderaccessorresponse.h" />
+    <ClInclude Include="cicsorderaccessorresponseptr.h" />
+    <ClInclude Include="cicsresponseacc.h" />
+    <ClInclude Include="cicsresponseacc_definitions.h" />
+    <ClInclude Include="ordertransformer.h" />
+    <ClInclude Include="pvhx04_includes.h" />
+    <ClInclude Include="ipxvbservicelocator.h" />
+    <ClInclude Include="ipxvbservicelocatorptr.h" />
+    <ClInclude Include="pxvbcomponentmanager.h" />
+    <ClInclude Include="pxvbcomponentmanagerptr.h" />
+    <ClInclude Include="ipxvbsession.h" />
+    <ClInclude Include="ipxvbsessionptr.h" />
+    <ClInclude Include="pxvbsession.h" />
+    <ClInclude Include="pxvbsessionptr.h" />
+    <ClInclude Include="ipxvbinitialization.h" />
+    <ClInclude Include="ipxvbinitializationptr.h" />
+    <ClInclude Include="pxvbinitialization.h" />
+    <ClInclude Include="pxvbinitializationptr.h" />
+    <ClInclude Include="ipxvbdbconnection.h" />
+    <ClInclude Include="ipxvbdbconnectionptr.h" />
+    <ClInclude Include="pxvbdbconnection.h" />
+    <ClInclude Include="pxvbdbconnection_definitions.h" />
+    <ClInclude Include="pxvbdbconnectionptr.h" />
+    <ClInclude Include="pxvbdbtransactionlevelmapper.h" />
+    <ClInclude Include="ipxvbtaskcontrol.h" />
+    <ClInclude Include="ipxvbtaskcontrolptr.h" />
+    <ClInclude Include="pxtaskcontrolptr.h" />
+    <ClInclude Include="pxvbtaskcontrol.h" />
+    <ClInclude Include="pxvbtaskcontrolptr.h" />
+    <ClInclude Include="pxvborderdm.h" />
+    <ClInclude Include="pxvborderdm_definitions.h" />
+    <ClInclude Include="pxvborderdmptr.h" />
+    <ClInclude Include="pxartbaseptr.h" />
+    <ClInclude Include="pxcustorderinfoptr.h" />
+    <ClInclude Include="pxdeliveryposlistptr.h" />
+    <ClInclude Include="pxdeliveryposptr.h" />
+    <ClInclude Include="pxitemdiscountlistptr.h" />
+    <ClInclude Include="pxnarccollectlistptr.h" />
+    <ClInclude Include="pxordercalcmodeptr.h" />
+    <ClInclude Include="pxorderdiscaccptr.h" />
+    <ClInclude Include="pxorderitemlistptr.h" />
+    <ClInclude Include="pxorderposcalcmodeptr.h" />
+    <ClInclude Include="pxorderprolinkptr.h" />
+    <ClInclude Include="pxorderptr.h" />
+    <ClInclude Include="pxtextdocptr.h" />
+    <ClInclude Include="pxvborderheader.h" />
+    <ClInclude Include="pxvborderheaderptr.h" />
+    <ClInclude Include="pxvborderitem.h" />
+    <ClInclude Include="pxvborderitemptr.h" />
+    <ClInclude Include="packagelabelcollection.h" />
+    <ClInclude Include="ipxvbordercollection.h" />
+    <ClInclude Include="ipxvbordercollectionptr.h" />
+    <ClInclude Include="pxvbordercollectiondm.h" />
+    <ClInclude Include="pxvbordercollectiondm_definitions.h" />
+    <ClInclude Include="ipxvborderentryparamchecker.h" />
+    <ClInclude Include="ipxvborderentryparamcheckerptr.h" />
+    <ClInclude Include="pxvborderentryparamchecker.h" />
+    <ClInclude Include="pxvborderentryparamcheckerptr.h" />
+    <ClInclude Include="iremoteprocedureservicelocator.h" />
+    <ClInclude Include="iremoteprocedureservicelocatorptr.h" />
+    <ClInclude Include="remoteprocedurecomponentmanager.h" />
+    <ClInclude Include="remoteprocedurecomponentmanagerptr.h" />
+    <ClInclude Include="appargs.h" />
+    <ClInclude Include="csc_corphaappinitializer.h" />
+    <ClInclude Include="csc_corphaappinitializerptr.h" />
+    <ClInclude Include="csc_corphacmdlineevaluator.h" />
+    <ClInclude Include="csc_corphacmdlineevaluatorptr.h" />
+    <ClInclude Include="csc_corphacmdlineoption_definitions.h" />
+    <ClInclude Include="appsession.h" />
+    <ClInclude Include="appsessionptr.h" />
+    <ClInclude Include="csc_corphauc.h" />
+    <ClInclude Include="csc_corphaappl.h" />
+    <ClInclude Include="columnname_definitions.h" />
+    <ClInclude Include="csc_corpha_definitions.h" />
+    <ClInclude Include="csc_corpha_table_definitions.h" />
+    <ClInclude Include="property_definitions.h" />
+    <ClInclude Include="stringtransformer.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="pdx040remoteprocedure.cpp" />
+    <ClCompile Include="recordtypediscount.cpp" />
+    <ClCompile Include="recordtypeibtpickingdata.cpp" />
+    <ClCompile Include="recordtypeinterbranchinfo.cpp" />
+    <ClCompile Include="recordtypeorderline.cpp" />
+    <ClCompile Include="recordtypeorderresponse.cpp" />
+    <ClCompile Include="recordtypeformatter.cpp" />
+    <ClCompile Include="recordtypeordertext.cpp" />
+    <ClCompile Include="recordtypeorderheader.cpp" />
+    <ClCompile Include="recordtypebase.cpp" />
+    <ClCompile Include="recordtypeorderinfo.cpp" />
+    <ClCompile Include="recordtypecollection.cpp" />
+    <ClCompile Include="recordtypemsv3info.cpp" />
+    <ClCompile Include="recordtyperemark.cpp" />
+    <ClCompile Include="cicsorderdm.cpp" />
+    <ClCompile Include="cicsorderaccesormanager.cpp" />
+    <ClCompile Include="cicsorderaccessorbase.cpp" />
+    <ClCompile Include="cicsorderaccessorodd.cpp" />
+    <ClCompile Include="dkotoacc.cpp" />
+    <ClCompile Include="cicsorderaccessoreven.cpp" />
+    <ClCompile Include="dkoteacc.cpp" />
+    <ClCompile Include="cicsorderaccessorresponse.cpp" />
+    <ClCompile Include="cicsresponseacc.cpp" />
+    <ClCompile Include="ordertransformer.cpp" />
+    <ClCompile Include="pxvbcomponentmanager.cpp" />
+    <ClCompile Include="pxvbsession.cpp" />
+    <ClCompile Include="pxvbinitialization.cpp" />
+    <ClCompile Include="pxvbdbconnection.cpp" />
+    <ClCompile Include="pxvbdbtransactionlevelmapper.cpp" />
+    <ClCompile Include="pxvbtaskcontrol.cpp" />
+    <ClCompile Include="pxvborderdm.cpp" />
+    <ClCompile Include="pxvborderheader.cpp" />
+    <ClCompile Include="pxvborderitem.cpp" />
+    <ClCompile Include="packagelabelcollection.cpp" />
+    <ClCompile Include="pxvbordercollectiondm.cpp" />
+    <ClCompile Include="pxvborderentryparamchecker.cpp" />
+    <ClCompile Include="remoteprocedurecomponentmanager.cpp" />
+    <ClCompile Include="csc_corphaappinitializer.cpp" />
+    <ClCompile Include="csc_corphacmdlineevaluator.cpp" />
+    <ClCompile Include="appsession.cpp" />
+    <ClCompile Include="csc_corphauc.cpp" />
+    <ClCompile Include="csc_corphaappl.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="stringtransformer.cpp" />
+    <ClCompile Include="version.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="appargs.inl" />
+    <None Include="appsession.inl" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties MocDir=".\GeneratedFiles\$(ConfigurationName)" QtVersion="5.2.0" RccDir=".\GeneratedFiles" UicDir=".\GeneratedFiles" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

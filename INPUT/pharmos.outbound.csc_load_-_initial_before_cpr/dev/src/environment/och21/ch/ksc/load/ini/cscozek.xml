@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<KSCRefreshSettings xsi:noNamespaceSchemaLocation="KSCRefreshSettings.xsd" xmlns:xsi="http:/www.w3.org/2001/XMLSchema-instance" >
+	<Country Country="CH" >
+		<Settings>
+			<General PollInterval="600000" LogLevel="Errors" Test="false"/>
+			<pxVerbund DeviceType="7" DeviceName="OZEK" Computer="" LogMode="1" DataSource="och21@och21_tcp" MessageFile="/software/wss/ch/ksc/batch/ini/message.txt" /> 
+			<Informix ConnectionRetries="10" ConnectionWaitBeforeRetry="10000" IfxServiceName="53004" IfxHost="zqas21_tcp" IfxDataBase="och21" IfxServiceNamePurchase="53004" IfxHostPurchase="zqas21_tcp" IfxDataBasePurchase="ich21" />
+		</Settings>
+	<Branches>
+		<Branch BranchNo="11">
+			<Settings>
+				<Informix ConnectionRetries="10" ConnectionWaitBeforeRetry="10000" IfxServiceName="53004" IfxHost="zqas21_tcp" IfxDataBase="och21" IfxServiceNamePurchase="53001" IfxHostPurchase="zqas21_tcp" IfxDataBasePurchase="ich21" />
+			</Settings>
+		</Branch>
+		<Branch BranchNo="12">
+			<Settings>
+				<Informix ConnectionRetries="10" ConnectionWaitBeforeRetry="10000" IfxServiceName="53004" IfxHost="zqas21_tcp" IfxDataBase="och21" IfxServiceNamePurchase="53002" IfxHostPurchase="zqas21_tcp" IfxDataBasePurchase="ich21" />
+			</Settings>
+		</Branch>
+		<Branch BranchNo="13">
+			<Settings>
+				<Informix ConnectionRetries="10" ConnectionWaitBeforeRetry="10000" IfxServiceName="53004" IfxHost="zqas21_tcp" IfxDataBase="och21" IfxServiceNamePurchase="53003" IfxHostPurchase="zqas21_tcp" IfxDataBasePurchase="ich21" />
+			</Settings>
+		</Branch>
+	</Branches>
+	</Country>
+</KSCRefreshSettings>

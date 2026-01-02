@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<salesweblog>
+	<logservice user="salesweblog" password="ST49fiUt" uri="urn:SalesWebLogServer"/>
+	<serverlist>
+		<server name="SalesTest" location="http://10.100.121.110:81/SalesWebLogService/SalesWebLogService.php"/>		
+	</serverlist>
+	<logdatabases>
+		<logdb name="ArticleCatalogue" dbname="swlog_hr_articlecatalogue_#DATE#_.db" dbnameerrors="swlog_hr_articlecatalogue_errors_#DATE#_.db"/>
+		<logdb name="CheckOrderBuffer" dbname="swlog_hr_checkorderbuffer_#DATE#_.db" dbnameerrors="swlog_hr_checkorderbuffer_errors_#DATE#_.db"/>
+		<logdb name="Invoices" dbname="swlog_hr_invoice_#DATE#_.db" dbnameerrors="swlog_hr_invoice_errors_#DATE#_.db"/>		
+		<logdb name="Orders" dbname="swlog_hr_order_#DATE#_.db" dbnameerrors="swlog_hr_order_errors_#DATE#_.db"/>
+	</logdatabases>
+	<branchlist>
+		<branch no="" name="All Branches"/>
+		<branch no="71" name="Zagreb"/>
+		<branch no="72" name="Osijek"/>
+		<branch no="73" name="Split"/>
+		<branch no="74" name="Rijeka"/>
+		<branch no="77" name="Velika Gorica"/>
+	</branchlist>
+</salesweblog>

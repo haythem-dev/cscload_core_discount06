@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MailConfiguration Subject="Covid-19 Orders (No new orders found!)" Sender="s.heinlein@phoenixgroup.eu" SMTPServer="denu00smtpint.phoenix.loc" xsi:noNamespaceSchemaLocation="MailConfiguration.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Body>
+Hallo zusammen,
+
+es wurden keine neuen Covid-19-Auftragsdaten gefunden.
+
+Viele Grüße	
+	</Body>
+	<Recipients>
+		<Recipient>b.bischof@phoenixgroup.eu</Recipient>		
+		<Recipient>p.kalogeras@phoenixgroup.eu</Recipient>		
+		<Recipient>d.zdjelar@phoenixgroup.eu</Recipient>		
+		<Recipient>s.heinlein@phoenixgroup.eu</Recipient>		
+		<Recipient>i.einig@myphoenix.at</Recipient>		
+		<Recipient>cid.bestellung@myphoenix.at</Recipient>		
+		<!--<Recipient>g.strouhal@myphoenix.at</Recipient>		
+		<Recipient>m.volk@myphoenix.at</Recipient>
+		<Recipient>b.bergmann-necker@myphoenix.at</Recipient>-->
+	</Recipients>
+</MailConfiguration>

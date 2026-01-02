@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Mit XMLSpy v2007 sp1 bearbeitet (http://www.altova.com) von C. Merkl (PHOENIX Pharmahandel AG & Co. KG) -->
+<!-- Mit XMLSpy v2007 sp1 bearbeitet (http://www.altova.com) von C. Merkl (PHOENIX Pharmahandel AG & Co. KG) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="MailConfiguration">
+		<xs:annotation>
+			<xs:documentation>Comment describing your root element</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Body" type="xs:string"/>
+				<xs:element name="Recipients">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Recipient" type="xs:string" maxOccurs="unbounded"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="SMTPServer" type="xs:string" use="required"/>
+			<xs:attribute name="Sender" type="xs:string" use="required"/>
+			<xs:attribute name="Subject" type="xs:string" use="required"/>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

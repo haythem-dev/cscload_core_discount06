@@ -1,0 +1,251 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Importpricelist">
+      <UniqueIdentifier>{aa77922f-28dd-4a34-b337-01903a45c6cd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Importpricelist\ApplController">
+      <UniqueIdentifier>{78bfd66b-d781-4ef1-b347-5fc53146e117}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Loggerpool">
+      <UniqueIdentifier>{dc064cc6-f9c3-46e5-a91d-85f246923a1f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ComponentManager">
+      <UniqueIdentifier>{e5d63121-7964-4320-a402-08a018fcbffd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ComponentManager\ApplCompMgr">
+      <UniqueIdentifier>{92282ee8-51de-4c91-ba36-3e71798dffc5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ComponentManager\InfrastructureCompMgr">
+      <UniqueIdentifier>{0730cdd8-06f2-4470-82b8-e3966ca65337}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ComponentManager\ApplCompMgr\Impl">
+      <UniqueIdentifier>{359bf9ca-6cfb-451e-8b30-9e8c939dd55e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ComponentManager\ApplCompMgr\Interface">
+      <UniqueIdentifier>{c1339510-a2f4-43d1-8777-73329b97c496}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure">
+      <UniqueIdentifier>{9160049a-bb10-417d-b087-f9172da2e1f9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\Accessor">
+      <UniqueIdentifier>{cb2bdc63-ef1b-407a-9b40-137baf0a8ca8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\Setup">
+      <UniqueIdentifier>{3bf12db1-f220-4a40-bb1f-17ea7a703189}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\CommandLine">
+      <UniqueIdentifier>{16671422-5c8d-4010-b679-7ecdeea180f2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\CommandLine\CmdLineEvaluator">
+      <UniqueIdentifier>{2b4b6379-4392-4e66-8bcb-2a42509a240c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\Setup\impl">
+      <UniqueIdentifier>{d1257391-647e-4f81-bd97-72791b59fab3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\Setup\Interface">
+      <UniqueIdentifier>{c971c909-ed96-40cc-b84c-1bc4f373c1b8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ComponentManager\ApplCompMgr\Interface\UseCaseGetter">
+      <UniqueIdentifier>{b1280756-0909-47b7-a917-a5f47fae02b8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UseCase">
+      <UniqueIdentifier>{8cba41cc-16f0-4ed8-b306-80e8b73eb4f4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UseCase\MainUC">
+      <UniqueIdentifier>{281f388f-7f73-4c75-861e-bb82cd2c8969}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\Login">
+      <UniqueIdentifier>{46da921b-875f-4384-aa20-34dbfab04a16}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\Accessor\PriceData">
+      <UniqueIdentifier>{7a9f2505-84d7-4faa-aa8a-31109c435a43}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModule">
+      <UniqueIdentifier>{8936749c-f3ac-4e65-95e4-fef34c6c7b85}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModule\PriceData">
+      <UniqueIdentifier>{a2945a75-c717-4dbe-bf9a-c2914433aab3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\CsvReader">
+      <UniqueIdentifier>{92c67fb7-3471-4779-badb-5c2209c7c1fd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Test">
+      <UniqueIdentifier>{e4755970-da95-48c8-95bb-6ce3e44ae45e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModule\PriceList">
+      <UniqueIdentifier>{102ebf10-6fe4-4734-a44a-870673fcf49f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\Accessor\PriceList2PharmacyGroup">
+      <UniqueIdentifier>{ba97a11b-f81b-47c8-bcae-2503556d4a10}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModule\PriceList2PharmacyGroup">
+      <UniqueIdentifier>{c425f34c-073f-47ad-8c59-48ceacca7fd6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\Accessor\PriceListProc">
+      <UniqueIdentifier>{dd3f1404-275f-4cfd-9ee6-2b97109eff8b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModule\PriceListProc">
+      <UniqueIdentifier>{cb6af2c3-3c80-48ee-97ab-96011e902427}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="unix">
+      <UniqueIdentifier>{21cce434-2c59-463b-b58c-3dec811a0ad9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\Accessor\ArticleCodes">
+      <UniqueIdentifier>{fc446137-cfd1-472f-a349-1ee30d01ebdf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModule\ArticleCodes">
+      <UniqueIdentifier>{b404b5d5-ce6a-4f61-8a53-e6aa140a8d0a}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="importpricelist\main.cpp">
+      <Filter>Importpricelist</Filter>
+    </ClCompile>
+    <ClCompile Include="importpricelist\importpricelistapplctrl.cpp">
+      <Filter>Importpricelist\ApplController</Filter>
+    </ClCompile>
+    <ClCompile Include="loggerpool\importpricelist_loggerpool.cpp">
+      <Filter>Loggerpool</Filter>
+    </ClCompile>
+    <ClCompile Include="componentmanager\importpricelistinfrastructurecompmgr.cpp">
+      <Filter>ComponentManager\InfrastructureCompMgr</Filter>
+    </ClCompile>
+    <ClCompile Include="infrastructure\cmdline\importpricelistcmdlineevaluator.cpp">
+      <Filter>Infrastructure\CommandLine\CmdLineEvaluator</Filter>
+    </ClCompile>
+    <ClCompile Include="infrastructure\setup\importpricelistinfrastructuresetup.cpp">
+      <Filter>Infrastructure\Setup\impl</Filter>
+    </ClCompile>
+    <ClCompile Include="componentmanager\importpricelistapplcompmgr.cpp">
+      <Filter>ComponentManager\ApplCompMgr\Impl</Filter>
+    </ClCompile>
+    <ClCompile Include="usecase\mainuc.cpp">
+      <Filter>UseCase\MainUC</Filter>
+    </ClCompile>
+    <ClCompile Include="infrastructure\accessor\pricedata\pricedataacc.cpp">
+      <Filter>Infrastructure\Accessor\PriceData</Filter>
+    </ClCompile>
+    <ClCompile Include="domainmodule\pricedata\pricedatadm.cpp">
+      <Filter>DomainModule\PriceData</Filter>
+    </ClCompile>
+    <ClCompile Include="infrastructure\csvreader\csvreader.cpp">
+      <Filter>Infrastructure\CsvReader</Filter>
+    </ClCompile>
+    <ClCompile Include="domainmodule\pricelist\pricelistvalidator.cpp">
+      <Filter>DomainModule\PriceList</Filter>
+    </ClCompile>
+    <ClCompile Include="infrastructure\accessor\pricelist2pharmacygroup\pricelist2pharmacygroupacc.cpp">
+      <Filter>Infrastructure\Accessor\PriceList2PharmacyGroup</Filter>
+    </ClCompile>
+    <ClCompile Include="domainmodule\pricelist2pharmacygroup\pricelist2pharmacygroupdm.cpp">
+      <Filter>DomainModule\PriceList2PharmacyGroup</Filter>
+    </ClCompile>
+    <ClCompile Include="infrastructure\accessor\pricelistproc\pricelistprocacc.cpp">
+      <Filter>Infrastructure\Accessor\PriceListProc</Filter>
+    </ClCompile>
+    <ClCompile Include="domainmodule\pricelistproc\pricelistprocdm.cpp">
+      <Filter>DomainModule\PriceListProc</Filter>
+    </ClCompile>
+    <ClCompile Include="infrastructure\accessor\articlecodes\articlecodesacc.cpp">
+      <Filter>Infrastructure\Accessor\ArticleCodes</Filter>
+    </ClCompile>
+    <ClCompile Include="domainmodule\articlecodes\articlecodesdm.cpp">
+      <Filter>DomainModule\ArticleCodes</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="importpricelist\importpricelistapplctrl.h">
+      <Filter>Importpricelist\ApplController</Filter>
+    </ClInclude>
+    <ClInclude Include="version.h">
+      <Filter>Importpricelist</Filter>
+    </ClInclude>
+    <ClInclude Include="loggerpool\importpricelist_loggerpool.h">
+      <Filter>Loggerpool</Filter>
+    </ClInclude>
+    <ClInclude Include="componentmanager\importpricelistinfrastructurecompmgr.h">
+      <Filter>ComponentManager\InfrastructureCompMgr</Filter>
+    </ClInclude>
+    <ClInclude Include="componentmanager\importpricelistinfrastructurecompmgrptr.h">
+      <Filter>ComponentManager\InfrastructureCompMgr</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\cmdline\importpricelistcmdlineevaluator.h">
+      <Filter>Infrastructure\CommandLine\CmdLineEvaluator</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\cmdline\importpricelistcmdlineevaluatorptr.h">
+      <Filter>Infrastructure\CommandLine\CmdLineEvaluator</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\setup\importpricelistinfrastructuresetup.h">
+      <Filter>Infrastructure\Setup\impl</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\setup\importpricelistinfrastructuresetupptr.h">
+      <Filter>Infrastructure\Setup\impl</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\setup\iimportpricelistlogingetter.h">
+      <Filter>Infrastructure\Setup\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\setup\iimportpricelistlogingetterptr.h">
+      <Filter>Infrastructure\Setup\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="componentmanager\importpricelistapplcompmgr.h">
+      <Filter>ComponentManager\ApplCompMgr\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="componentmanager\importpricelistapplcompmgrptr.h">
+      <Filter>ComponentManager\ApplCompMgr\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="componentmanager\iusecasegetter.h">
+      <Filter>ComponentManager\ApplCompMgr\Interface\UseCaseGetter</Filter>
+    </ClInclude>
+    <ClInclude Include="componentmanager\iusecasegetterptr.h">
+      <Filter>ComponentManager\ApplCompMgr\Interface\UseCaseGetter</Filter>
+    </ClInclude>
+    <ClInclude Include="usecase\mainuc.h">
+      <Filter>UseCase\MainUC</Filter>
+    </ClInclude>
+    <ClInclude Include="usecase\mainucptr.h">
+      <Filter>UseCase\MainUC</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\login\login_definitions.h">
+      <Filter>Infrastructure\Login</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\accessor\pricedata\pricedataacc.h">
+      <Filter>Infrastructure\Accessor\PriceData</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\pricedata\pricedatadm.h">
+      <Filter>DomainModule\PriceData</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\csvreader\csvreader.h">
+      <Filter>Infrastructure\CsvReader</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\pricelist\pricelistvalidator.h">
+      <Filter>DomainModule\PriceList</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\accessor\pricelist2pharmacygroup\pricelist2pharmacygroupacc.h">
+      <Filter>Infrastructure\Accessor\PriceList2PharmacyGroup</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\pricelist2pharmacygroup\pricelist2pharmacygroupdm.h">
+      <Filter>DomainModule\PriceList2PharmacyGroup</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\accessor\pricelistproc\pricelistprocacc.h">
+      <Filter>Infrastructure\Accessor\PriceListProc</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\pricelistproc\pricelistprocdm.h">
+      <Filter>DomainModule\PriceListProc</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\accessor\articlecodes\articlecodesacc.h">
+      <Filter>Infrastructure\Accessor\ArticleCodes</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\articlecodes\articlecodesdm.h">
+      <Filter>DomainModule\ArticleCodes</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="makefile">
+      <Filter>unix</Filter>
+    </None>
+    <None Include="makevars.inc">
+      <Filter>unix</Filter>
+    </None>
+  </ItemGroup>
+</Project>

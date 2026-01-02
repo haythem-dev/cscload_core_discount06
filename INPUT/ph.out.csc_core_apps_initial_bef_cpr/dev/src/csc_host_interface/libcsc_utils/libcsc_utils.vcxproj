@@ -1,0 +1,241 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{170857A8-3DFA-4EAD-98CF-51D64C16E558}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+    <RunCodeAnalysis Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</RunCodeAnalysis>
+    <RunCodeAnalysis Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</RunCodeAnalysis>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(QTDIR)\include;$(SolutionDir)..\ext\ssuk\basar\include;$(SolutionDir)..\ext\log4cplus\include;$(SolutionDir)..\ext\boost\include;$(SolutionDir)..\ext\qt5\include;..\libbatch;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_WIN32;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <PrecompiledHeaderFile>cmnmain.h</PrecompiledHeaderFile>
+      <WarningLevel>Level4</WarningLevel>
+      <TreatWarningAsError>false</TreatWarningAsError>
+      <ProgramDataBaseFileName>$(TargetDir)$(TargetName).pdb</ProgramDataBaseFileName>
+      <EnablePREfast>false</EnablePREfast>
+    </ClCompile>
+    <Lib>
+      <SubSystem>Console</SubSystem>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(QTDIR)\include;$(SolutionDir)..\ext\ssuk\basar\include;$(SolutionDir)..\ext\log4cplus\include;$(SolutionDir)..\ext\boost\include;$(SolutionDir)..\ext\qt5\include;..\libbatch;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_WIN32;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <PrecompiledHeaderFile>cmnmain.h</PrecompiledHeaderFile>
+      <WarningLevel>Level4</WarningLevel>
+      <TreatWarningAsError>false</TreatWarningAsError>
+      <ProgramDataBaseFileName>$(TargetDir)$(TargetName).pdb</ProgramDataBaseFileName>
+      <EnablePREfast>false</EnablePREfast>
+    </ClCompile>
+    <Lib>
+      <SubSystem>Console</SubSystem>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(QTDIR)\include;$(SolutionDir)..\ext\ssuk\basar\include;$(SolutionDir)..\ext\log4cplus\include;$(SolutionDir)..\ext\boost\include;..\libbatch;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <ProgramDataBaseFileName>$(TargetDir)$(TargetName).pdb</ProgramDataBaseFileName>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(QTDIR)\include;$(SolutionDir)..\ext\ssuk\basar\include;$(SolutionDir)..\ext\log4cplus\include;$(SolutionDir)..\ext\boost\include;..\libbatch;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <ProgramDataBaseFileName>$(TargetDir)$(TargetName).pdb</ProgramDataBaseFileName>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="formattingexception.cpp" />
+    <ClCompile Include="loggerpool.cpp" />
+    <ClCompile Include="ifxconnection.cpp" />
+    <ClCompile Include="tcaconnection.cpp" />
+    <ClCompile Include="general.cpp" />
+    <ClCompile Include="informix.cpp" />
+    <ClCompile Include="kscserver.cpp" />
+    <ClCompile Include="pxverbund.cpp" />
+    <ClCompile Include="settings.cpp" />
+    <ClCompile Include="smtp.cpp" />
+    <ClCompile Include="tcaccess.cpp" />
+    <ClCompile Include="configException.cpp" />
+    <ClCompile Include="mail.cpp" />
+    <ClCompile Include="xmlconfigreader.cpp" />
+    <ClCompile Include="csc_logger.cpp" />
+    <ClCompile Include="appinitializerexception.cpp" />
+    <ClCompile Include="configdatainconsistantexception.cpp" />
+    <ClCompile Include="invalidstatuschangeexception.cpp" />
+    <ClCompile Include="mailexception.cpp" />
+    <ClCompile Include="methodcallnotsupportedexception.cpp" />
+    <ClCompile Include="missingdependencyinjectionexception.cpp" />
+    <ClCompile Include="notimplementedexception.cpp" />
+    <ClCompile Include="putenvfailedexception.cpp" />
+    <ClCompile Include="pxvbcomponentbadstateexception.cpp" />
+    <ClCompile Include="setupsignalhandlingexception.cpp" />
+    <ClCompile Include="softkillexception.cpp" />
+    <ClCompile Include="xmlreaderexception.cpp" />
+    <ClCompile Include="remoteprocedurecaller.cpp" />
+    <ClCompile Include="remoteprocedureacc.cpp" />
+    <ClCompile Include="convhelper.cpp" />
+    <ClCompile Include="applxmlconfigwrapper.cpp" />
+    <ClCompile Include="csc_signalhandler.cpp" />
+    <ClCompile Include="signalhandlerbase.cpp">
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">4503</DisableSpecificWarnings>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4503</DisableSpecificWarnings>
+    </ClCompile>
+    <ClCompile Include="bulkinserter.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="formattingexception.h" />
+    <ClInclude Include="loggerpool.h" />
+    <ClInclude Include="ifxconnection.h" />
+    <ClInclude Include="tcaconnection.h" />
+    <ClInclude Include="config_definitions.h" />
+    <ClInclude Include="general.h" />
+    <ClInclude Include="informix.h" />
+    <ClInclude Include="kscserver.h" />
+    <ClInclude Include="pxverbund.h" />
+    <ClInclude Include="settings.h" />
+    <ClInclude Include="smtp.h" />
+    <ClInclude Include="tcaccess.h" />
+    <ClInclude Include="configException.h" />
+    <ClInclude Include="imail.h" />
+    <ClInclude Include="imailptr.h" />
+    <ClInclude Include="mail.h" />
+    <ClInclude Include="xmlconfigreader.h" />
+    <ClInclude Include="xmlconfigreaderptr.h" />
+    <ClInclude Include="csc_logger.h" />
+    <ClInclude Include="icsc_logger.h" />
+    <ClInclude Include="icsc_loggerptr.h" />
+    <ClInclude Include="iloggable.h" />
+    <ClInclude Include="iloggableptr.h" />
+    <ClInclude Include="appinitializerexception.h" />
+    <ClInclude Include="configdatainconsistantexception.h" />
+    <ClInclude Include="invalidstatuschangeexception.h" />
+    <ClInclude Include="mailexception.h" />
+    <ClInclude Include="methodcallnotsupportedexception.h" />
+    <ClInclude Include="missingdependencyinjectionexception.h" />
+    <ClInclude Include="notimplementedexception.h" />
+    <ClInclude Include="putenvfailedexception.h" />
+    <ClInclude Include="pxvbcomponentbadstateexception.h" />
+    <ClInclude Include="setupsignalhandlingexception.h" />
+    <ClInclude Include="softkillexception.h" />
+    <ClInclude Include="xmlreaderexception.h" />
+    <ClInclude Include="iremoteprocedure.h" />
+    <ClInclude Include="iremoteprocedureptr.h" />
+    <ClInclude Include="iremoteprocedurecaller.h" />
+    <ClInclude Include="iremoteprocedurecallerptr.h" />
+    <ClInclude Include="remoteprocedurecaller.h" />
+    <ClInclude Include="remoteprocedureresult.h" />
+    <ClInclude Include="remoteprocedureacc.h" />
+    <ClInclude Include="remoteprocedureacc_definitions.h" />
+    <ClInclude Include="convhelper.h" />
+    <ClInclude Include="appinitializer.h" />
+    <ClInclude Include="icsc_cmdlineoption.h" />
+    <ClInclude Include="icsc_cmdlineoptionptr.h" />
+    <ClInclude Include="applxmlconfigwrapper.h" />
+    <ClInclude Include="iapplconfiguration.h" />
+    <ClInclude Include="iapplconfigurationptr.h" />
+    <ClInclude Include="csc_signalhandler.h" />
+    <ClInclude Include="externdef.h" />
+    <ClInclude Include="isignalreceiver.h" />
+    <ClInclude Include="signalhandlerbase.h" />
+    <ClInclude Include="bulkinserter.h" />
+    <ClInclude Include="ibulkinserter.h" />
+    <ClInclude Include="ibulkinserterptr.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

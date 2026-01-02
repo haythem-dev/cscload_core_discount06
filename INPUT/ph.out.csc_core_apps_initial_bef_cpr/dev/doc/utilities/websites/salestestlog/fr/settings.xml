@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<salesweblog>
+	<logservice user="salesweblog" password="ST49fiUt" uri="urn:SalesWebLogServer"/>
+	<serverlist>
+		<server name="SalesTest" location="http://10.100.121.110:81/SalesWebLogService/SalesWebLogService.php"/>		
+	</serverlist>
+	<logdatabases>
+		<logdb name="ArticleCatalogue" dbname="swlog_fr_articlecatalogue_#DATE#_.db" dbnameerrors="swlog_fr_articlecatalogue_errors_#DATE#_.db"/>				
+		<logdb name="Orders" dbname="swlog_fr_order_#DATE#_.db" dbnameerrors="swlog_fr_order_errors_#DATE#_.db"/>
+	</logdatabases>
+	<branchlist>
+		<branch no="" name="All Branches"/>
+		<branch no="17" name="Troyes Veto"/>
+		<branch no="18" name="Blois"/>
+		<branch no="30" name="Creteil"/>								
+		<branch no="32" name="Les Mureaux"/>								
+		<branch no="34" name="St. Aignon"/>								
+		<branch no="35" name="La Roche"/>								
+		<branch no="36" name="Toulon"/>
+		<branch no="37" name="Puget"/>
+		<branch no="38" name="Lille"/>
+		<branch no="39" name="Lyon"/>
+		<branch no="41" name="St. Etienne"/>
+		<branch no="43" name="Ivrylab - COMB"/>
+		<branch no="45" name="Chatellerault"/>
+		<branch no="48" name="Ivrylab - RIS"/>
+		<branch no="50" name="Nancy"/>
+		<branch no="53" name="Metz"/>
+		<branch no="55" name="Bayonne"/>
+		<branch no="60" name="Pau"/>
+		<branch no="65" name="Tarbes"/>
+		<branch no="66" name="Reims"/>
+		<branch no="67" name="St. Dizier"/>
+		<branch no="68" name="Troyes"/>
+		<branch no="75" name="Moulins"/>
+		<branch no="76" name="Clermt. Ferrand"/>
+		<branch no="80" name="Auxerre"/>
+	</branchlist>
+</salesweblog>

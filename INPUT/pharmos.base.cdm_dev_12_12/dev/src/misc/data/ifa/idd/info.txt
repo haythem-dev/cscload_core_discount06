@@ -1,0 +1,3 @@
+Die Datei definifa.idd wird von der IFA geliefert und muss bei Aenderung eines Produkts
+in diesem Verzeichnis aktualisiert werden (Hr. Peetz muss die neue Version haben). Die Datei 
+defprod.ifa ist hajo-handgemacht und muss manuell angepasst werden.

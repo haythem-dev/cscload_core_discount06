@@ -1,0 +1,53 @@
+OPEN groupapps.phoenix.loc
+ftp.outbound
+stepRU7e
+CD cdm
+PUT codedocu\internal\html\index.html
+PUT codedocu\internal\html\page1.html
+PUT codedocu\internal\html\page2.html
+PUT codedocu\internal\html\page3.html
+PUT codedocu\internal\html\page4.html
+PUT codedocu\internal\html\page5.html
+PUT codedocu\internal\html\page6.html
+PUT codedocu\internal\html\page7.html
+PUT codedocu\internal\html\page8.html
+PUT codedocu\internal\html\page9.html
+PUT codedocu\internal\html\page10.html
+PUT codedocu\internal\html\page11.html
+PUT codedocu\internal\html\page12.html
+PUT codedocu\internal\html\page13.html
+PUT codedocu\internal\html\page14.html
+PUT codedocu\internal\html\page15.html
+PUT codedocu\internal\html\page16.html
+PUT codedocu\internal\html\page17.html
+PUT codedocu\internal\html\page18.html
+PUT codedocu\internal\html\page19.html
+PUT codedocu\internal\html\page20.html
+PUT codedocu\internal\html\page21.html
+PUT codedocu\internal\html\page22.html
+PUT codedocu\internal\html\page23.html
+PUT codedocu\internal\html\page24.html
+PUT codedocu\internal\html\page25.html
+PUT codedocu\internal\html\page26.html
+PUT codedocu\internal\html\page27.html
+PUT codedocu\internal\html\page28.html
+PUT codedocu\internal\html\page29.html
+PUT codedocu\internal\html\page30.html
+PUT codedocu\internal\html\page31.html
+PUT codedocu\internal\html\page32.html
+PUT codedocu\internal\html\page33.html
+PUT codedocu\internal\html\page34.html
+PUT codedocu\internal\html\page35.html
+PUT codedocu\internal\html\page36.html
+PUT codedocu\internal\html\page37.html
+PUT codedocu\internal\html\page38.html
+PUT codedocu\internal\html\page39.html
+PUT codedocu\internal\html\page40.html
+PUT codedocu\internal\html\page41.html
+PUT codedocu\internal\html\page42.html
+cd customer
+PUT codedocu\customer\html\index.html
+PUT codedocu\customer\html\page1.html
+PUT codedocu\customer\html\page2.html
+DISCONNECT
+QUIT

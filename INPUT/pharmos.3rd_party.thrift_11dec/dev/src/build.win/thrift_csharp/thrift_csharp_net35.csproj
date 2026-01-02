@@ -1,0 +1,249 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{834F962A-A98B-48FB-8147-927FC6BEAAE6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Thrift</RootNamespace>
+    <AssemblyName>Thrift</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <BaseIntermediateOutputPath>obj\net35\</BaseIntermediateOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\net35\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\net35\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\net35\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\net35\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\net35\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <OutputPath>bin\Release\net35\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\thrift-0.12.0\lib\csharp\src\Collections\TCollections.cs">
+      <Link>Collections\TCollections.cs</Link>
+    </Compile>
+    <Compile Include="..\..\thrift-0.12.0\lib\csharp\src\Collections\THashSet.cs">
+      <Link>Collections\THashSet.cs</Link>
+    </Compile>
+	<Compile Include="..\..\thrift-0.12.0\lib\csharp\src\Net35\ExtensionsNet35.cs">
+      <Link>Net35\ExtensionsNet35.cs</Link>
+    </Compile>
+    <Compile Include="..\..\thrift-0.12.0\lib\csharp\src\Protocol\TAbstractBase.cs">
+      <Link>Protocol\TAbstractBase.cs</Link>
+    </Compile>
+    <Compile Include="..\..\thrift-0.12.0\lib\csharp\src\Protocol\TBase.cs">
+      <Link>Protocol\TBase.cs</Link>
+    </Compile>
+    <Compile Include="..\..\thrift-0.12.0\lib\csharp\src\Protocol\TBase64Utils.cs">
+      <Link>Protocol\TBase64Utils.cs</Link>
+    </Compile>
+    <Compile Include="..\..\thrift-0.12.0\lib\csharp\src\Protocol\TBinaryProtocol.cs">
+      <Link>Protocol\TBinaryProtocol.cs</Link>
+    </Compile>
+    <Compile Include="..\..\thrift-0.12.0\lib\csharp\src\Protocol\TCompactProtocol.cs">
+      <Link>Protocol\TCompactProtocol.cs</Link>
+    </Compile>
+    <Compile Include="..\..\thrift-0.12.0\lib\csharp\src\Protocol\TField.cs">
+      <Link>Protocol\TField.cs</Link>
+    </Compile>
+    <Compile Include="..\..\thrift-0.12.0\lib\csharp\src\Protocol\TJSONProtocol.cs">
+      <Link>Protocol\TJSONProtocol.cs</Link>
+    </Compile>
+    <Compile Include="..\..\thrift-0.12.0\lib\csharp\src\Protocol\TList.cs">
+      <Link>Protocol\TList.cs</Link>
+    </Compile>
+    <Compile Include="..\..\thrift-0.12.0\lib\csharp\src\Protocol\TMap.cs">
+      <Link>Protocol\TMap.cs</Link>
+    </Compile>
+    <Compile Include="..\..\thrift-0.12.0\lib\csharp\src\Protocol\TMessage.cs">
+      <Link>Protocol\TMessage.cs</Link>
+    </Compile>
+    <Compile Include="..\..\thrift-0.12.0\lib\csharp\src\Protocol\TMessageType.cs">
+      <Link>Protocol\TMessageType.cs</Link>
+    </Compile>
+    <Compile Include="..\..\thrift-0.12.0\lib\csharp\src\Protocol\TMultiplexedProcessor.cs">
+      <Link>Protocol\TMultiplexedProcessor.cs</Link>
+    </Compile>
+    <Compile Include="..\..\thrift-0.12.0\lib\csharp\src\Protocol\TMultiplexedProtocol.cs">
+      <Link>Protocol\TMultiplexedProtocol.cs</Link>
+    </Compile>
+    <Compile Include="..\..\thrift-0.12.0\lib\csharp\src\Protocol\TProtocol.cs">
+      <Link>Protocol\TProtocol.cs</Link>
+    </Compile>
+    <Compile Include="..\..\thrift-0.12.0\lib\csharp\src\Protocol\TProtocolDecorator.cs">
+      <Link>Protocol\TProtocolDecorator.cs</Link>
+    </Compile>
+    <Compile Include="..\..\thrift-0.12.0\lib\csharp\src\Protocol\TProtocolException.cs">
+      <Link>Protocol\TProtocolException.cs</Link>
+    </Compile>
+    <Compile Include="..\..\thrift-0.12.0\lib\csharp\src\Protocol\TProtocolFactory.cs">
+      <Link>Protocol\TProtocolFactory.cs</Link>
+    </Compile>
+    <Compile Include="..\..\thrift-0.12.0\lib\csharp\src\Protocol\TProtocolUtil.cs">
+      <Link>Protocol\TProtocolUtil.cs</Link>
+    </Compile>
+    <Compile Include="..\..\thrift-0.12.0\lib\csharp\src\Protocol\TSet.cs">
+      <Link>Protocol\TSet.cs</Link>
+    </Compile>
+    <Compile Include="..\..\thrift-0.12.0\lib\csharp\src\Protocol\TStruct.cs">
+      <Link>Protocol\TStruct.cs</Link>
+    </Compile>
+    <Compile Include="..\..\thrift-0.12.0\lib\csharp\src\Protocol\TType.cs">
+      <Link>Protocol\TType.cs</Link>
+    </Compile>
+    <Compile Include="..\..\thrift-0.12.0\lib\csharp\src\Server\TServer.cs">
+      <Link>Server\TServer.cs</Link>
+    </Compile>
+    <Compile Include="..\..\thrift-0.12.0\lib\csharp\src\Server\TServerEventHandler.cs">
+      <Link>Server\TServerEventHandler.cs</Link>
+    </Compile>
+    <Compile Include="..\..\thrift-0.12.0\lib\csharp\src\Server\TSimpleServer.cs">
+      <Link>Server\TSimpleServer.cs</Link>
+    </Compile>
+    <Compile Include="..\..\thrift-0.12.0\lib\csharp\src\Server\TThreadedServer.cs">
+      <Link>Server\TThreadedServer.cs</Link>
+    </Compile>
+    <Compile Include="..\..\thrift-0.12.0\lib\csharp\src\Server\TThreadPoolServer.cs">
+      <Link>Server\TThreadPoolServer.cs</Link>
+    </Compile>
+    <Compile Include="..\..\thrift-0.12.0\lib\csharp\src\TApplicationException.cs">
+      <Link>TApplicationException.cs</Link>
+    </Compile>
+	<Compile Include="..\..\thrift-0.12.0\lib\csharp\src\TControllingHandler.cs">
+      <Link>TControllingHandler.cs</Link>
+    </Compile>
+    <Compile Include="..\..\thrift-0.12.0\lib\csharp\src\TException.cs">
+      <Link>TException.cs</Link>
+    </Compile>
+    <Compile Include="..\..\thrift-0.12.0\lib\csharp\src\TProcessor.cs">
+      <Link>TProcessor.cs</Link>
+    </Compile>
+	<Compile Include="..\..\thrift-0.12.0\lib\csharp\src\TProcessorFactory.cs">
+      <Link>TProcessorFactory.cs</Link>
+    </Compile>
+	<Compile Include="..\..\thrift-0.12.0\lib\csharp\src\TPrototypeProcessorFactory.cs">
+      <Link>TPrototypeProcessorFactory.cs</Link>
+    </Compile>
+	<Compile Include="..\..\thrift-0.12.0\lib\csharp\src\TSingletonProcessorFactory.cs">
+      <Link>TSingletonProcessorFactory.cs</Link>
+    </Compile>
+    <Compile Include="..\..\thrift-0.12.0\lib\csharp\src\Transport\TBufferedTransport.cs">
+      <Link>Transport\TBufferedTransport.cs</Link>
+    </Compile>
+    <Compile Include="..\..\thrift-0.12.0\lib\csharp\src\Transport\TFramedTransport.cs">
+      <Link>Transport\TFramedTransport.cs</Link>
+    </Compile>
+    <Compile Include="..\..\thrift-0.12.0\lib\csharp\src\Transport\THttpClient.cs">
+      <Link>Transport\THttpClient.cs</Link>
+    </Compile>
+    <Compile Include="..\..\thrift-0.12.0\lib\csharp\src\Transport\THttpHandler.cs">
+      <Link>Transport\THttpHandler.cs</Link>
+    </Compile>
+    <Compile Include="..\..\thrift-0.12.0\lib\csharp\src\Transport\TMemoryBuffer.cs">
+      <Link>Transport\TMemoryBuffer.cs</Link>
+    </Compile>
+    <Compile Include="..\..\thrift-0.12.0\lib\csharp\src\Transport\TNamedPipeClientTransport.cs">
+      <Link>Transport\TNamedPipeClientTransport.cs</Link>
+    </Compile>
+    <Compile Include="..\..\thrift-0.12.0\lib\csharp\src\Transport\TNamedPipeServerTransport.cs">
+      <Link>Transport\TNamedPipeServerTransport.cs</Link>
+    </Compile>
+    <Compile Include="..\..\thrift-0.12.0\lib\csharp\src\Transport\TServerSocket.cs">
+      <Link>Transport\TServerSocket.cs</Link>
+    </Compile>
+    <Compile Include="..\..\thrift-0.12.0\lib\csharp\src\Transport\TServerTransport.cs">
+      <Link>Transport\TServerTransport.cs</Link>
+    </Compile>
+    <Compile Include="..\..\thrift-0.12.0\lib\csharp\src\Transport\TSilverlightSocket.cs">
+      <Link>Transport\TSilverlightSocket.cs</Link>
+    </Compile>
+    <Compile Include="..\..\thrift-0.12.0\lib\csharp\src\Transport\TSocket.cs">
+      <Link>Transport\TSocket.cs</Link>
+    </Compile>
+	<Compile Include="..\..\thrift-0.12.0\lib\csharp\src\Transport\TSocketVersionizer.cs">
+      <Link>Transport\TSocketVersionizer.cs</Link>
+    </Compile>
+    <Compile Include="..\..\thrift-0.12.0\lib\csharp\src\Transport\TStreamTransport.cs">
+      <Link>Transport\TStreamTransport.cs</Link>
+    </Compile>
+    <Compile Include="..\..\thrift-0.12.0\lib\csharp\src\Transport\TTLSServerSocket.cs">
+      <Link>Transport\TTLSServerSocket.cs</Link>
+    </Compile>
+    <Compile Include="..\..\thrift-0.12.0\lib\csharp\src\Transport\TTLSSocket.cs">
+      <Link>Transport\TTLSSocket.cs</Link>
+    </Compile>
+    <Compile Include="..\..\thrift-0.12.0\lib\csharp\src\Transport\TTransport.cs">
+      <Link>Transport\TTransport.cs</Link>
+    </Compile>
+    <Compile Include="..\..\thrift-0.12.0\lib\csharp\src\Transport\TTransportException.cs">
+      <Link>Transport\TTransportException.cs</Link>
+    </Compile>
+    <Compile Include="..\..\thrift-0.12.0\lib\csharp\src\Transport\TTransportFactory.cs">
+      <Link>Transport\TTransportFactory.cs</Link>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

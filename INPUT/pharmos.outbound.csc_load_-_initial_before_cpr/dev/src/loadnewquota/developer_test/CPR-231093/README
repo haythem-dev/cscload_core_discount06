@@ -1,0 +1,13 @@
+To execute the developer tests, you have
+to be in the source directory, just above
+the build/ directory.
+
+Make sure you have the release build for
+loadnewquota.bin compiled.
+
+Start the automated tests like so:
+./developer_test/CPR-231093/devtest.ksh
+
+(you may want to customize the variables
+at the beginning of that script for e.g.
+bigger, more realistic test datasets)

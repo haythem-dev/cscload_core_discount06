@@ -1,0 +1,12 @@
+.vs/
+build/
+Debug/
+Release/
+/export/
+/dev/ext
+/dev/src/common/gitversioninfo.cpp
+/dev/src/common/gitversioninfo.h
+*.db
+*.opendb
+*.suo
+*.user

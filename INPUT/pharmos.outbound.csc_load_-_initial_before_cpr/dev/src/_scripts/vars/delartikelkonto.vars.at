@@ -1,0 +1,16 @@
+###############################################################################################
+# HEADER-DATA
+###############################################################################################
+#Author:            f.nauman                                                                                  
+#Creation-Date:     07.08.2023                                                                                
+#Creation-Time:     11:52                                                                                     
+#Creator:           generate_additional_vars_file - Version: 02.01.00.00                                      
+#Creation-Type:     ONLINE_SERVER_PROCEDURE                                                                   
+#Purpose:           Declares additional procedure specific variables read in from the procedure file          
+###############################################################################################
+
+#========================================================================================#
+# DECLARATION SECTION FOR ADDITIONAL VARIABLES
+#========================================================================================#
+ADDITIONAL_PARA="-db oat21@oat21_shm -days 40 -new"
+

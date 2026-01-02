@@ -1,0 +1,2372 @@
+#ifndef __PP_KUNDE_H_
+#define __PP_KUNDE_H_
+
+/******************************************************************************/
+/* c:\git\pharmos.outbound.csc_core_applications\dev\src\pxdb\include\kunde ***/
+/* produced by DADE 6.22.3 ****************************************************/
+/******************************************************************************/
+
+/* ppunixc */
+#if defined (BUF_DESC) || defined (C_BUF_DESC)
+#include <bufkon.h>
+#endif
+
+/* Length-Define of KUNDE *****************************************************/
+
+#define L_KUNDE_IDFNR 11
+#define L_KUNDE_MATCHCODE 12
+#define L_KUNDE_FILIALNR 6
+#define L_KUNDE_KDNR 11
+#define L_KUNDE_ETARTKLASSE1 5
+#define L_KUNDE_ETARTKLASSE2 5
+#define L_KUNDE_ETKDMERKMAL1 5
+#define L_KUNDE_ETKDMERKMAL2 5
+#define L_KUNDE_ANREDEKZ 6
+#define L_KUNDE_NAMEAPO 40
+#define L_KUNDE_NAMEINHABER 30
+#define L_KUNDE_STRASSE 30
+#define L_KUNDE_ORT 30
+#define L_KUNDE_POSTLEITZAHL 10
+#define L_KUNDE_TELNR 20
+#define L_KUNDE_TELNRDAFUE 20
+#define L_KUNDE_FAXNR 25
+#define L_KUNDE_TELKURZWAHL 4
+#define L_KUNDE_IMSBEZIRKNR 11
+#define L_KUNDE_KDGRUPPE 2
+#define L_KUNDE_PERSONALNRVERTR 11
+#define L_KUNDE_DAFUESYSTEM 2
+#define L_KUNDE_KZKDDOPPELKONTR 1
+#define L_KUNDE_LAGERFACHNRRGBEI 4
+#define L_KUNDE_ANZPOSLS_RG 6
+#define L_KUNDE_ANZPOSSORTBEHAELT 6
+#define L_KUNDE_KZKDKLASSE 3
+#define L_KUNDE_ORIGINALFILIALNR 6
+#define L_KUNDE_NOTFILIALNR 6
+#define L_KUNDE_BEMERKUNGEN 240
+#define L_KUNDE_KUNDETEXT 240
+#define L_KUNDE_VERBUNDKUNDE 1
+#define L_KUNDE_STDAUFKOBUART 4
+#define L_KUNDE_PASSWORD 8
+#define L_KUNDE_KUEHLBOX 1
+#define L_KUNDE_TOURENKIPPZEIT 11
+#define L_KUNDE_VZKK1 1
+#define L_KUNDE_LAND 3
+#define L_KUNDE_VERTRIEBSZENTRUMNR 6
+#define L_KUNDE_KUNDENNR 11
+#define L_KUNDE_EMAILADRESSE 60
+#define L_KUNDE_NACHLIEFERTYP 1
+#define L_KUNDE_PARTNERNR 11
+#define L_KUNDE_KZSPRACHE 2
+#define L_KUNDE_KZPSYCHOSTOFFE 1
+#define L_KUNDE_XMLPREISLEVEL 1
+#define L_KUNDE_PREWHOLETYP 1
+#define L_KUNDE_XMLINFOLEVEL 1
+#define L_KUNDE_NATIONALCUSTOMERNO 18
+#define L_KUNDE_RATIOCUSTOMERNO 12
+#define L_KUNDE_ANZAUFCLOSE 6
+#define L_KUNDE_KRANKENKASSENNR 6
+#define L_KUNDE_CALCULATIONTYPE 1
+#define L_KUNDE_SURCHARGE_BASIC 6
+#define L_KUNDE_DEDUCTION_BASIC 6
+#define L_KUNDE_SURCHARGEPCT 5
+#define N_KUNDE_SURCHARGEPCT 2
+#define L_KUNDE_DEDUCTIONPCT 5
+#define N_KUNDE_DEDUCTIONPCT 2
+#define L_KUNDE_VATREGISTERED 6
+#define L_KUNDE_REBATEMETHFREESALE 6
+#define L_KUNDE_REBATEMETHHEALTHF 6
+#define L_KUNDE_MAINCSTNO 11
+#define L_KUNDE_SURCHARGE_BASIC_KK 6
+#define L_KUNDE_DEDUCTION_BASIC_KK 6
+#define L_KUNDE_SURCHARGEPCTKK 5
+#define N_KUNDE_SURCHARGEPCTKK 2
+#define L_KUNDE_DEDUCTIONPCTKK 5
+#define N_KUNDE_DEDUCTIONPCTKK 2
+#define L_KUNDE_LIEFERMELDUNG 6
+#define L_KUNDE_MANUFACTURERNO 11
+#define L_KUNDE_MSV3CFGCHANGEDATE 11
+
+/* Length/Count-Define of KUNDE ***********************************************/
+
+#define LS_KUNDE_IDFNR 10 + 1
+#define LS_KUNDE_MATCHCODE 12 + 1
+#define LS_KUNDE_FILIALNR 5 + 1
+#define LS_KUNDE_KDNR 10 + 1
+#define LS_KUNDE_ETARTKLASSE1 5 + 1
+#define LS_KUNDE_ETARTKLASSE2 5 + 1
+#define LS_KUNDE_ETKDMERKMAL1 5 + 1
+#define LS_KUNDE_ETKDMERKMAL2 5 + 1
+#define LS_KUNDE_ANREDEKZ 5 + 1
+#define LS_KUNDE_NAMEAPO 40 + 1
+#define LS_KUNDE_NAMEINHABER 30 + 1
+#define LS_KUNDE_STRASSE 30 + 1
+#define LS_KUNDE_ORT 30 + 1
+#define LS_KUNDE_POSTLEITZAHL 10 + 1
+#define LS_KUNDE_TELNR 20 + 1
+#define LS_KUNDE_TELNRDAFUE 20 + 1
+#define LS_KUNDE_FAXNR 25 + 1
+#define LS_KUNDE_TELKURZWAHL 4 + 1
+#define LS_KUNDE_IMSBEZIRKNR 10 + 1
+#define LS_KUNDE_KDGRUPPE 2 + 1
+#define LS_KUNDE_PERSONALNRVERTR 10 + 1
+#define LS_KUNDE_DAFUESYSTEM 2 + 1
+#define LS_KUNDE_KZKDDOPPELKONTR 1 + 1
+#define LS_KUNDE_LAGERFACHNRRGBEI 4 + 1
+#define LS_KUNDE_ANZPOSLS_RG 5 + 1
+#define LS_KUNDE_ANZPOSSORTBEHAELT 5 + 1
+#define LS_KUNDE_KZKDKLASSE 3 + 1
+#define LS_KUNDE_ORIGINALFILIALNR 5 + 1
+#define LS_KUNDE_NOTFILIALNR 5 + 1
+#define LS_KUNDE_BEMERKUNGEN 240 + 1
+#define LS_KUNDE_KUNDETEXT 240 + 1
+#define LS_KUNDE_VERBUNDKUNDE 1 + 1
+#define LS_KUNDE_STDAUFKOBUART 4 + 1
+#define LS_KUNDE_PASSWORD 8 + 1
+#define LS_KUNDE_KUEHLBOX 1 + 1
+#define LS_KUNDE_TOURENKIPPZEIT 10 + 1
+#define LS_KUNDE_VZKK1 1 + 1
+#define LS_KUNDE_LAND 3 + 1
+#define LS_KUNDE_VERTRIEBSZENTRUMNR 5 + 1
+#define LS_KUNDE_KUNDENNR 10 + 1
+#define LS_KUNDE_EMAILADRESSE 60 + 1
+#define LS_KUNDE_NACHLIEFERTYP 1 + 1
+#define LS_KUNDE_PARTNERNR 10 + 1
+#define LS_KUNDE_KZSPRACHE 2 + 1
+#define LS_KUNDE_KZPSYCHOSTOFFE 1 + 1
+#define LS_KUNDE_XMLPREISLEVEL 1 + 1
+#define LS_KUNDE_PREWHOLETYP 1 + 1
+#define LS_KUNDE_XMLINFOLEVEL 1 + 1
+#define LS_KUNDE_NATIONALCUSTOMERNO 18 + 1
+#define LS_KUNDE_RATIOCUSTOMERNO 12 + 1
+#define LS_KUNDE_ANZAUFCLOSE 5 + 1
+#define LS_KUNDE_KRANKENKASSENNR 6 + 1
+#define LS_KUNDE_CALCULATIONTYPE 1 + 1
+#define LS_KUNDE_SURCHARGE_BASIC 5 + 1
+#define LS_KUNDE_DEDUCTION_BASIC 5 + 1
+#define LS_KUNDE_SURCHARGEPCT 5 + 2
+#define LS_KUNDE_DEDUCTIONPCT 5 + 2
+#define LS_KUNDE_VATREGISTERED 5 + 1
+#define LS_KUNDE_REBATEMETHFREESALE 5 + 1
+#define LS_KUNDE_REBATEMETHHEALTHF 5 + 1
+#define LS_KUNDE_MAINCSTNO 10 + 1
+#define LS_KUNDE_SURCHARGE_BASIC_KK 5 + 1
+#define LS_KUNDE_DEDUCTION_BASIC_KK 5 + 1
+#define LS_KUNDE_SURCHARGEPCTKK 5 + 2
+#define LS_KUNDE_DEDUCTIONPCTKK 5 + 2
+#define LS_KUNDE_LIEFERMELDUNG 5 + 1
+#define LS_KUNDE_MANUFACTURERNO 10 + 1
+#define LS_KUNDE_MSV3CFGCHANGEDATE 10 + 1
+
+#define KUNDEIDFNR 0
+#define KUNDEMATCHCODE 1
+#define KUNDEFILIALNR 2
+#define KUNDEKDNR 3
+#define KUNDEETARTKLASSE1 4
+#define KUNDEETARTKLASSE2 5
+#define KUNDEETKDMERKMAL1 6
+#define KUNDEETKDMERKMAL2 7
+#define KUNDEANREDEKZ 8
+#define KUNDENAMEAPO 9
+#define KUNDENAMEINHABER 10
+#define KUNDESTRASSE 11
+#define KUNDEORT 12
+#define KUNDEPOSTLEITZAHL 13
+#define KUNDETELNR 14
+#define KUNDETELNRDAFUE 15
+#define KUNDEFAXNR 16
+#define KUNDETELKURZWAHL 17
+#define KUNDEIMSBEZIRKNR 18
+#define KUNDEKDGRUPPE 19
+#define KUNDEPERSONALNRVERTR 20
+#define KUNDEDAFUESYSTEM 21
+#define KUNDEKZKDDOPPELKONTR 22
+#define KUNDELAGERFACHNRRGBEI 23
+#define KUNDEANZPOSLS_RG 24
+#define KUNDEANZPOSSORTBEHAELT 25
+#define KUNDEKZKDKLASSE 26
+#define KUNDEORIGINALFILIALNR 27
+#define KUNDENOTFILIALNR 28
+#define KUNDEBEMERKUNGEN 29
+#define KUNDEKUNDETEXT 30
+#define KUNDEVERBUNDKUNDE 31
+#define KUNDESTDAUFKOBUART 32
+#define KUNDEPASSWORD 33
+#define KUNDEKUEHLBOX 34
+#define KUNDETOURENKIPPZEIT 35
+#define KUNDEVZKK1 36
+#define KUNDELAND 37
+#define KUNDEVERTRIEBSZENTRUMNR 38
+#define KUNDEKUNDENNR 39
+#define KUNDEEMAILADRESSE 40
+#define KUNDENACHLIEFERTYP 41
+#define KUNDEPARTNERNR 42
+#define KUNDEKZSPRACHE 43
+#define KUNDEKZPSYCHOSTOFFE 44
+#define KUNDEXMLPREISLEVEL 45
+#define KUNDEPREWHOLETYP 46
+#define KUNDEXMLINFOLEVEL 47
+#define KUNDENATIONALCUSTOMERNO 48
+#define KUNDERATIOCUSTOMERNO 49
+#define KUNDEANZAUFCLOSE 50
+#define KUNDEKRANKENKASSENNR 51
+#define KUNDECALCULATIONTYPE 52
+#define KUNDESURCHARGE_BASIC 53
+#define KUNDEDEDUCTION_BASIC 54
+#define KUNDESURCHARGEPCT 55
+#define KUNDEDEDUCTIONPCT 56
+#define KUNDEVATREGISTERED 57
+#define KUNDEREBATEMETHFREESALE 58
+#define KUNDEREBATEMETHHEALTHF 59
+#define KUNDEMAINCSTNO 60
+#define KUNDESURCHARGE_BASIC_KK 61
+#define KUNDEDEDUCTION_BASIC_KK 62
+#define KUNDESURCHARGEPCTKK 63
+#define KUNDEDEDUCTIONPCTKK 64
+#define KUNDELIEFERMELDUNG 65
+#define KUNDEMANUFACTURERNO 66
+#define KUNDEMSV3CFGCHANGEDATE 67
+
+/* define of Buf_Desc *********************************************************/
+
+#if defined (BUF_DESC) || defined (C_BUF_DESC)
+#define KUNDE_H
+#define KUNDE_ANZ ( sizeof(KUNDE_BES) / sizeof(struct buf_desc) )
+#endif
+
+/* SqlDefine of KUNDE *********************************************************/
+
+#define KUNDE_LISTE \
+        KUNDE.IDFNR,\
+        KUNDE.MATCHCODE,\
+        KUNDE.FILIALNR,\
+        KUNDE.KDNR,\
+        KUNDE.ETARTKLASSE1,\
+        KUNDE.ETARTKLASSE2,\
+        KUNDE.ETKDMERKMAL1,\
+        KUNDE.ETKDMERKMAL2,\
+        KUNDE.ANREDEKZ,\
+        KUNDE.NAMEAPO,\
+        KUNDE.NAMEINHABER,\
+        KUNDE.STRASSE,\
+        KUNDE.ORT,\
+        KUNDE.POSTLEITZAHL,\
+        KUNDE.TELNR,\
+        KUNDE.TELNRDAFUE,\
+        KUNDE.FAXNR,\
+        KUNDE.TELKURZWAHL,\
+        KUNDE.IMSBEZIRKNR,\
+        KUNDE.KDGRUPPE,\
+        KUNDE.PERSONALNRVERTR,\
+        KUNDE.DAFUESYSTEM,\
+        KUNDE.KZKDDOPPELKONTR,\
+        KUNDE.LAGERFACHNRRGBEI,\
+        KUNDE.ANZPOSLS_RG,\
+        KUNDE.ANZPOSSORTBEHAELT,\
+        KUNDE.KZKDKLASSE,\
+        KUNDE.ORIGINALFILIALNR,\
+        KUNDE.NOTFILIALNR,\
+        KUNDE.BEMERKUNGEN,\
+        KUNDE.KUNDETEXT,\
+        KUNDE.VERBUNDKUNDE,\
+        KUNDE.STDAUFKOBUART,\
+        KUNDE.PASSWORD,\
+        KUNDE.KUEHLBOX,\
+        KUNDE.TOURENKIPPZEIT,\
+        KUNDE.VZKK1,\
+        KUNDE.LAND,\
+        KUNDE.VERTRIEBSZENTRUMNR,\
+        KUNDE.KUNDENNR,\
+        KUNDE.EMAILADRESSE,\
+        KUNDE.NACHLIEFERTYP,\
+        KUNDE.PARTNERNR,\
+        KUNDE.KZSPRACHE,\
+        KUNDE.KZPSYCHOSTOFFE,\
+        KUNDE.XMLPREISLEVEL,\
+        KUNDE.PREWHOLETYP,\
+        KUNDE.XMLINFOLEVEL,\
+        KUNDE.NATIONALCUSTOMERNO,\
+        KUNDE.RATIOCUSTOMERNO,\
+        KUNDE.ANZAUFCLOSE,\
+        KUNDE.KRANKENKASSENNR,\
+        KUNDE.CALCULATIONTYPE,\
+        KUNDE.SURCHARGE_BASIC,\
+        KUNDE.DEDUCTION_BASIC,\
+        KUNDE.SURCHARGEPCT,\
+        KUNDE.DEDUCTIONPCT,\
+        KUNDE.VATREGISTERED,\
+        KUNDE.REBATEMETHFREESALE,\
+        KUNDE.REBATEMETHHEALTHF,\
+        KUNDE.MAINCSTNO,\
+        KUNDE.SURCHARGE_BASIC_KK,\
+        KUNDE.DEDUCTION_BASIC_KK,\
+        KUNDE.SURCHARGEPCTKK,\
+        KUNDE.DEDUCTIONPCTKK,\
+        KUNDE.LIEFERMELDUNG,\
+        KUNDE.MANUFACTURERNO,\
+        KUNDE.MSV3CFGCHANGEDATE
+#define KUNDE_LISTE_390 \
+        IDFNR,\
+        MATCHCODE,\
+        FILIALNR,\
+        KDNR,\
+        ETARTKLASSE1,\
+        ETARTKLASSE2,\
+        ETKDMERKMAL1,\
+        ETKDMERKMAL2,\
+        ANREDEKZ,\
+        NAMEAPO,\
+        NAMEINHABER,\
+        STRASSE,\
+        ORT,\
+        POSTLEITZAHL,\
+        TELNR,\
+        TELNRDAFUE,\
+        FAXNR,\
+        TELKURZWAHL,\
+        IMSBEZIRKNR,\
+        KDGRUPPE,\
+        PERSONALNRVERTR,\
+        DAFUESYSTEM,\
+        KZKDDOPPELKONTR,\
+        LAGERFACHNRRGBEI,\
+        ANZPOSLS_RG,\
+        ANZPOSSORTBEHAELT,\
+        KZKDKLASSE,\
+        ORIGINALFILIALNR,\
+        NOTFILIALNR,\
+        BEMERKUNGEN,\
+        KUNDETEXT,\
+        VERBUNDKUNDE,\
+        STDAUFKOBUART,\
+        PASSWORD,\
+        KUEHLBOX,\
+        TOURENKIPPZEIT,\
+        VZKK1,\
+        LAND,\
+        VERTRIEBSZENTRUMNR,\
+        KUNDENNR,\
+        EMAILADRESSE,\
+        NACHLIEFERTYP,\
+        PARTNERNR,\
+        KZSPRACHE,\
+        KZPSYCHOSTOFFE,\
+        XMLPREISLEVEL,\
+        PREWHOLETYP,\
+        XMLINFOLEVEL,\
+        NATIONALCUSTOMERNO,\
+        RATIOCUSTOMERNO,\
+        ANZAUFCLOSE,\
+        KRANKENKASSENNR,\
+        CALCULATIONTYPE,\
+        SURCHARGE_BASIC,\
+        DEDUCTION_BASIC,\
+        SURCHARGEPCT,\
+        DEDUCTIONPCT,\
+        VATREGISTERED,\
+        REBATEMETHFREESALE,\
+        REBATEMETHHEALTHF,\
+        MAINCSTNO,\
+        SURCHARGE_BASIC_KK,\
+        DEDUCTION_BASIC_KK,\
+        SURCHARGEPCTKK,\
+        DEDUCTIONPCTKK,\
+        LIEFERMELDUNG,\
+        MANUFACTURERNO,\
+        MSV3CFGCHANGEDATE
+#define KUNDE_PLISTE \
+        "KUNDE.IDFNR,"\
+        "KUNDE.MATCHCODE,"\
+        "KUNDE.FILIALNR,"\
+        "KUNDE.KDNR,"\
+        "KUNDE.ETARTKLASSE1,"\
+        "KUNDE.ETARTKLASSE2,"\
+        "KUNDE.ETKDMERKMAL1,"\
+        "KUNDE.ETKDMERKMAL2,"\
+        "KUNDE.ANREDEKZ,"\
+        "KUNDE.NAMEAPO,"\
+        "KUNDE.NAMEINHABER,"\
+        "KUNDE.STRASSE,"\
+        "KUNDE.ORT,"\
+        "KUNDE.POSTLEITZAHL,"\
+        "KUNDE.TELNR,"\
+        "KUNDE.TELNRDAFUE,"\
+        "KUNDE.FAXNR,"\
+        "KUNDE.TELKURZWAHL,"\
+        "KUNDE.IMSBEZIRKNR,"\
+        "KUNDE.KDGRUPPE,"\
+        "KUNDE.PERSONALNRVERTR,"\
+        "KUNDE.DAFUESYSTEM,"\
+        "KUNDE.KZKDDOPPELKONTR,"\
+        "KUNDE.LAGERFACHNRRGBEI,"\
+        "KUNDE.ANZPOSLS_RG,"\
+        "KUNDE.ANZPOSSORTBEHAELT,"\
+        "KUNDE.KZKDKLASSE,"\
+        "KUNDE.ORIGINALFILIALNR,"\
+        "KUNDE.NOTFILIALNR,"\
+        "KUNDE.BEMERKUNGEN,"\
+        "KUNDE.KUNDETEXT,"\
+        "KUNDE.VERBUNDKUNDE,"\
+        "KUNDE.STDAUFKOBUART,"\
+        "KUNDE.PASSWORD,"\
+        "KUNDE.KUEHLBOX,"\
+        "KUNDE.TOURENKIPPZEIT,"\
+        "KUNDE.VZKK1,"\
+        "KUNDE.LAND,"\
+        "KUNDE.VERTRIEBSZENTRUMNR,"\
+        "KUNDE.KUNDENNR,"\
+        "KUNDE.EMAILADRESSE,"\
+        "KUNDE.NACHLIEFERTYP,"\
+        "KUNDE.PARTNERNR,"\
+        "KUNDE.KZSPRACHE,"\
+        "KUNDE.KZPSYCHOSTOFFE,"\
+        "KUNDE.XMLPREISLEVEL,"\
+        "KUNDE.PREWHOLETYP,"\
+        "KUNDE.XMLINFOLEVEL,"\
+        "KUNDE.NATIONALCUSTOMERNO,"\
+        "KUNDE.RATIOCUSTOMERNO,"\
+        "KUNDE.ANZAUFCLOSE,"\
+        "KUNDE.KRANKENKASSENNR,"\
+        "KUNDE.CALCULATIONTYPE,"\
+        "KUNDE.SURCHARGE_BASIC,"\
+        "KUNDE.DEDUCTION_BASIC,"\
+        "KUNDE.SURCHARGEPCT,"\
+        "KUNDE.DEDUCTIONPCT,"\
+        "KUNDE.VATREGISTERED,"\
+        "KUNDE.REBATEMETHFREESALE,"\
+        "KUNDE.REBATEMETHHEALTHF,"\
+        "KUNDE.MAINCSTNO,"\
+        "KUNDE.SURCHARGE_BASIC_KK,"\
+        "KUNDE.DEDUCTION_BASIC_KK,"\
+        "KUNDE.SURCHARGEPCTKK,"\
+        "KUNDE.DEDUCTIONPCTKK,"\
+        "KUNDE.LIEFERMELDUNG,"\
+        "KUNDE.MANUFACTURERNO,"\
+        "KUNDE.MSV3CFGCHANGEDATE"
+#define KUNDE_PELISTE \
+        "IDFNR,"\
+        "MATCHCODE,"\
+        "FILIALNR,"\
+        "KDNR,"\
+        "ETARTKLASSE1,"\
+        "ETARTKLASSE2,"\
+        "ETKDMERKMAL1,"\
+        "ETKDMERKMAL2,"\
+        "ANREDEKZ,"\
+        "NAMEAPO,"\
+        "NAMEINHABER,"\
+        "STRASSE,"\
+        "ORT,"\
+        "POSTLEITZAHL,"\
+        "TELNR,"\
+        "TELNRDAFUE,"\
+        "FAXNR,"\
+        "TELKURZWAHL,"\
+        "IMSBEZIRKNR,"\
+        "KDGRUPPE,"\
+        "PERSONALNRVERTR,"\
+        "DAFUESYSTEM,"\
+        "KZKDDOPPELKONTR,"\
+        "LAGERFACHNRRGBEI,"\
+        "ANZPOSLS_RG,"\
+        "ANZPOSSORTBEHAELT,"\
+        "KZKDKLASSE,"\
+        "ORIGINALFILIALNR,"\
+        "NOTFILIALNR,"\
+        "BEMERKUNGEN,"\
+        "KUNDETEXT,"\
+        "VERBUNDKUNDE,"\
+        "STDAUFKOBUART,"\
+        "PASSWORD,"\
+        "KUEHLBOX,"\
+        "TOURENKIPPZEIT,"\
+        "VZKK1,"\
+        "LAND,"\
+        "VERTRIEBSZENTRUMNR,"\
+        "KUNDENNR,"\
+        "EMAILADRESSE,"\
+        "NACHLIEFERTYP,"\
+        "PARTNERNR,"\
+        "KZSPRACHE,"\
+        "KZPSYCHOSTOFFE,"\
+        "XMLPREISLEVEL,"\
+        "PREWHOLETYP,"\
+        "XMLINFOLEVEL,"\
+        "NATIONALCUSTOMERNO,"\
+        "RATIOCUSTOMERNO,"\
+        "ANZAUFCLOSE,"\
+        "KRANKENKASSENNR,"\
+        "CALCULATIONTYPE,"\
+        "SURCHARGE_BASIC,"\
+        "DEDUCTION_BASIC,"\
+        "SURCHARGEPCT,"\
+        "DEDUCTIONPCT,"\
+        "VATREGISTERED,"\
+        "REBATEMETHFREESALE,"\
+        "REBATEMETHHEALTHF,"\
+        "MAINCSTNO,"\
+        "SURCHARGE_BASIC_KK,"\
+        "DEDUCTION_BASIC_KK,"\
+        "SURCHARGEPCTKK,"\
+        "DEDUCTIONPCTKK,"\
+        "LIEFERMELDUNG,"\
+        "MANUFACTURERNO,"\
+        "MSV3CFGCHANGEDATE"
+#define KUNDE_UPDLISTE \
+        "IDFNR=?,"\
+        "MATCHCODE=?,"\
+        "FILIALNR=?,"\
+        "KDNR=?,"\
+        "ETARTKLASSE1=?,"\
+        "ETARTKLASSE2=?,"\
+        "ETKDMERKMAL1=?,"\
+        "ETKDMERKMAL2=?,"\
+        "ANREDEKZ=?,"\
+        "NAMEAPO=?,"\
+        "NAMEINHABER=?,"\
+        "STRASSE=?,"\
+        "ORT=?,"\
+        "POSTLEITZAHL=?,"\
+        "TELNR=?,"\
+        "TELNRDAFUE=?,"\
+        "FAXNR=?,"\
+        "TELKURZWAHL=?,"\
+        "IMSBEZIRKNR=?,"\
+        "KDGRUPPE=?,"\
+        "PERSONALNRVERTR=?,"\
+        "DAFUESYSTEM=?,"\
+        "KZKDDOPPELKONTR=?,"\
+        "LAGERFACHNRRGBEI=?,"\
+        "ANZPOSLS_RG=?,"\
+        "ANZPOSSORTBEHAELT=?,"\
+        "KZKDKLASSE=?,"\
+        "ORIGINALFILIALNR=?,"\
+        "NOTFILIALNR=?,"\
+        "BEMERKUNGEN=?,"\
+        "KUNDETEXT=?,"\
+        "VERBUNDKUNDE=?,"\
+        "STDAUFKOBUART=?,"\
+        "PASSWORD=?,"\
+        "KUEHLBOX=?,"\
+        "TOURENKIPPZEIT=?,"\
+        "VZKK1=?,"\
+        "LAND=?,"\
+        "VERTRIEBSZENTRUMNR=?,"\
+        "KUNDENNR=?,"\
+        "EMAILADRESSE=?,"\
+        "NACHLIEFERTYP=?,"\
+        "PARTNERNR=?,"\
+        "KZSPRACHE=?,"\
+        "KZPSYCHOSTOFFE=?,"\
+        "XMLPREISLEVEL=?,"\
+        "PREWHOLETYP=?,"\
+        "XMLINFOLEVEL=?,"\
+        "NATIONALCUSTOMERNO=?,"\
+        "RATIOCUSTOMERNO=?,"\
+        "ANZAUFCLOSE=?,"\
+        "KRANKENKASSENNR=?,"\
+        "CALCULATIONTYPE=?,"\
+        "SURCHARGE_BASIC=?,"\
+        "DEDUCTION_BASIC=?,"\
+        "SURCHARGEPCT=?,"\
+        "DEDUCTIONPCT=?,"\
+        "VATREGISTERED=?,"\
+        "REBATEMETHFREESALE=?,"\
+        "REBATEMETHHEALTHF=?,"\
+        "MAINCSTNO=?,"\
+        "SURCHARGE_BASIC_KK=?,"\
+        "DEDUCTION_BASIC_KK=?,"\
+        "SURCHARGEPCTKK=?,"\
+        "DEDUCTIONPCTKK=?,"\
+        "LIEFERMELDUNG=?,"\
+        "MANUFACTURERNO=?,"\
+        "MSV3CFGCHANGEDATE=?"
+/* SqlMacros-Define of KUNDE **************************************************/
+
+#define KUNDE_ZEIGER(x) \
+        :x->IDFNR,\
+        :x->MATCHCODE,\
+        :x->FILIALNR,\
+        :x->KDNR,\
+        :x->ETARTKLASSE1,\
+        :x->ETARTKLASSE2,\
+        :x->ETKDMERKMAL1,\
+        :x->ETKDMERKMAL2,\
+        :x->ANREDEKZ,\
+        :x->NAMEAPO,\
+        :x->NAMEINHABER,\
+        :x->STRASSE,\
+        :x->ORT,\
+        :x->POSTLEITZAHL,\
+        :x->TELNR,\
+        :x->TELNRDAFUE,\
+        :x->FAXNR,\
+        :x->TELKURZWAHL,\
+        :x->IMSBEZIRKNR,\
+        :x->KDGRUPPE,\
+        :x->PERSONALNRVERTR,\
+        :x->DAFUESYSTEM,\
+        :x->KZKDDOPPELKONTR,\
+        :x->LAGERFACHNRRGBEI,\
+        :x->ANZPOSLS_RG,\
+        :x->ANZPOSSORTBEHAELT,\
+        :x->KZKDKLASSE,\
+        :x->ORIGINALFILIALNR,\
+        :x->NOTFILIALNR,\
+        :x->BEMERKUNGEN,\
+        :x->KUNDETEXT,\
+        :x->VERBUNDKUNDE,\
+        :x->STDAUFKOBUART,\
+        :x->PASSWORD,\
+        :x->KUEHLBOX,\
+        :x->TOURENKIPPZEIT,\
+        :x->VZKK1,\
+        :x->LAND,\
+        :x->VERTRIEBSZENTRUMNR,\
+        :x->KUNDENNR,\
+        :x->EMAILADRESSE,\
+        :x->NACHLIEFERTYP,\
+        :x->PARTNERNR,\
+        :x->KZSPRACHE,\
+        :x->KZPSYCHOSTOFFE,\
+        :x->XMLPREISLEVEL,\
+        :x->PREWHOLETYP,\
+        :x->XMLINFOLEVEL,\
+        :x->NATIONALCUSTOMERNO,\
+        :x->RATIOCUSTOMERNO,\
+        :x->ANZAUFCLOSE,\
+        :x->KRANKENKASSENNR,\
+        :x->CALCULATIONTYPE,\
+        :x->SURCHARGE_BASIC,\
+        :x->DEDUCTION_BASIC,\
+        :x->SURCHARGEPCT,\
+        :x->DEDUCTIONPCT,\
+        :x->VATREGISTERED,\
+        :x->REBATEMETHFREESALE,\
+        :x->REBATEMETHHEALTHF,\
+        :x->MAINCSTNO,\
+        :x->SURCHARGE_BASIC_KK,\
+        :x->DEDUCTION_BASIC_KK,\
+        :x->SURCHARGEPCTKK,\
+        :x->DEDUCTIONPCTKK,\
+        :x->LIEFERMELDUNG,\
+        :x->MANUFACTURERNO,\
+        :x->MSV3CFGCHANGEDATE
+#define KUNDE_ZEIGERSEL(x) \
+        :x->IDFNR,\
+        :x->MATCHCODE,\
+        :x->FILIALNR,\
+        :x->KDNR,\
+        :x->ETARTKLASSE1,\
+        :x->ETARTKLASSE2,\
+        :x->ETKDMERKMAL1,\
+        :x->ETKDMERKMAL2,\
+        :x->ANREDEKZ,\
+        :x->NAMEAPO,\
+        :x->NAMEINHABER,\
+        :x->STRASSE,\
+        :x->ORT,\
+        :x->POSTLEITZAHL,\
+        :x->TELNR,\
+        :x->TELNRDAFUE,\
+        :x->FAXNR,\
+        :x->TELKURZWAHL,\
+        :x->IMSBEZIRKNR,\
+        :x->KDGRUPPE,\
+        :x->PERSONALNRVERTR,\
+        :x->DAFUESYSTEM,\
+        :x->KZKDDOPPELKONTR,\
+        :x->LAGERFACHNRRGBEI,\
+        :x->ANZPOSLS_RG,\
+        :x->ANZPOSSORTBEHAELT,\
+        :x->KZKDKLASSE,\
+        :x->ORIGINALFILIALNR,\
+        :x->NOTFILIALNR,\
+        :x->BEMERKUNGEN,\
+        :x->KUNDETEXT,\
+        :x->VERBUNDKUNDE,\
+        :x->STDAUFKOBUART,\
+        :x->PASSWORD,\
+        :x->KUEHLBOX,\
+        :x->TOURENKIPPZEIT,\
+        :x->VZKK1,\
+        :x->LAND,\
+        :x->VERTRIEBSZENTRUMNR,\
+        :x->KUNDENNR,\
+        :x->EMAILADRESSE,\
+        :x->NACHLIEFERTYP,\
+        :x->PARTNERNR,\
+        :x->KZSPRACHE,\
+        :x->KZPSYCHOSTOFFE,\
+        :x->XMLPREISLEVEL,\
+        :x->PREWHOLETYP,\
+        :x->XMLINFOLEVEL,\
+        :x->NATIONALCUSTOMERNO,\
+        :x->RATIOCUSTOMERNO,\
+        :x->ANZAUFCLOSE,\
+        :x->KRANKENKASSENNR,\
+        :x->CALCULATIONTYPE,\
+        :x->SURCHARGE_BASIC,\
+        :x->DEDUCTION_BASIC,\
+        :x->SURCHARGEPCT,\
+        :x->DEDUCTIONPCT,\
+        :x->VATREGISTERED,\
+        :x->REBATEMETHFREESALE,\
+        :x->REBATEMETHHEALTHF,\
+        :x->MAINCSTNO,\
+        :x->SURCHARGE_BASIC_KK,\
+        :x->DEDUCTION_BASIC_KK,\
+        :x->SURCHARGEPCTKK,\
+        :x->DEDUCTIONPCTKK,\
+        :x->LIEFERMELDUNG,\
+        :x->MANUFACTURERNO,\
+        :x->MSV3CFGCHANGEDATE
+#define KUNDE_UPDATE(x) \
+        KUNDE.IDFNR=:x->IDFNR,\
+        KUNDE.MATCHCODE=:x->MATCHCODE,\
+        KUNDE.FILIALNR=:x->FILIALNR,\
+        KUNDE.KDNR=:x->KDNR,\
+        KUNDE.ETARTKLASSE1=:x->ETARTKLASSE1,\
+        KUNDE.ETARTKLASSE2=:x->ETARTKLASSE2,\
+        KUNDE.ETKDMERKMAL1=:x->ETKDMERKMAL1,\
+        KUNDE.ETKDMERKMAL2=:x->ETKDMERKMAL2,\
+        KUNDE.ANREDEKZ=:x->ANREDEKZ,\
+        KUNDE.NAMEAPO=:x->NAMEAPO,\
+        KUNDE.NAMEINHABER=:x->NAMEINHABER,\
+        KUNDE.STRASSE=:x->STRASSE,\
+        KUNDE.ORT=:x->ORT,\
+        KUNDE.POSTLEITZAHL=:x->POSTLEITZAHL,\
+        KUNDE.TELNR=:x->TELNR,\
+        KUNDE.TELNRDAFUE=:x->TELNRDAFUE,\
+        KUNDE.FAXNR=:x->FAXNR,\
+        KUNDE.TELKURZWAHL=:x->TELKURZWAHL,\
+        KUNDE.IMSBEZIRKNR=:x->IMSBEZIRKNR,\
+        KUNDE.KDGRUPPE=:x->KDGRUPPE,\
+        KUNDE.PERSONALNRVERTR=:x->PERSONALNRVERTR,\
+        KUNDE.DAFUESYSTEM=:x->DAFUESYSTEM,\
+        KUNDE.KZKDDOPPELKONTR=:x->KZKDDOPPELKONTR,\
+        KUNDE.LAGERFACHNRRGBEI=:x->LAGERFACHNRRGBEI,\
+        KUNDE.ANZPOSLS_RG=:x->ANZPOSLS_RG,\
+        KUNDE.ANZPOSSORTBEHAELT=:x->ANZPOSSORTBEHAELT,\
+        KUNDE.KZKDKLASSE=:x->KZKDKLASSE,\
+        KUNDE.ORIGINALFILIALNR=:x->ORIGINALFILIALNR,\
+        KUNDE.NOTFILIALNR=:x->NOTFILIALNR,\
+        KUNDE.BEMERKUNGEN=:x->BEMERKUNGEN,\
+        KUNDE.KUNDETEXT=:x->KUNDETEXT,\
+        KUNDE.VERBUNDKUNDE=:x->VERBUNDKUNDE,\
+        KUNDE.STDAUFKOBUART=:x->STDAUFKOBUART,\
+        KUNDE.PASSWORD=:x->PASSWORD,\
+        KUNDE.KUEHLBOX=:x->KUEHLBOX,\
+        KUNDE.TOURENKIPPZEIT=:x->TOURENKIPPZEIT,\
+        KUNDE.VZKK1=:x->VZKK1,\
+        KUNDE.LAND=:x->LAND,\
+        KUNDE.VERTRIEBSZENTRUMNR=:x->VERTRIEBSZENTRUMNR,\
+        KUNDE.KUNDENNR=:x->KUNDENNR,\
+        KUNDE.EMAILADRESSE=:x->EMAILADRESSE,\
+        KUNDE.NACHLIEFERTYP=:x->NACHLIEFERTYP,\
+        KUNDE.PARTNERNR=:x->PARTNERNR,\
+        KUNDE.KZSPRACHE=:x->KZSPRACHE,\
+        KUNDE.KZPSYCHOSTOFFE=:x->KZPSYCHOSTOFFE,\
+        KUNDE.XMLPREISLEVEL=:x->XMLPREISLEVEL,\
+        KUNDE.PREWHOLETYP=:x->PREWHOLETYP,\
+        KUNDE.XMLINFOLEVEL=:x->XMLINFOLEVEL,\
+        KUNDE.NATIONALCUSTOMERNO=:x->NATIONALCUSTOMERNO,\
+        KUNDE.RATIOCUSTOMERNO=:x->RATIOCUSTOMERNO,\
+        KUNDE.ANZAUFCLOSE=:x->ANZAUFCLOSE,\
+        KUNDE.KRANKENKASSENNR=:x->KRANKENKASSENNR,\
+        KUNDE.CALCULATIONTYPE=:x->CALCULATIONTYPE,\
+        KUNDE.SURCHARGE_BASIC=:x->SURCHARGE_BASIC,\
+        KUNDE.DEDUCTION_BASIC=:x->DEDUCTION_BASIC,\
+        KUNDE.SURCHARGEPCT=:x->SURCHARGEPCT,\
+        KUNDE.DEDUCTIONPCT=:x->DEDUCTIONPCT,\
+        KUNDE.VATREGISTERED=:x->VATREGISTERED,\
+        KUNDE.REBATEMETHFREESALE=:x->REBATEMETHFREESALE,\
+        KUNDE.REBATEMETHHEALTHF=:x->REBATEMETHHEALTHF,\
+        KUNDE.MAINCSTNO=:x->MAINCSTNO,\
+        KUNDE.SURCHARGE_BASIC_KK=:x->SURCHARGE_BASIC_KK,\
+        KUNDE.DEDUCTION_BASIC_KK=:x->DEDUCTION_BASIC_KK,\
+        KUNDE.SURCHARGEPCTKK=:x->SURCHARGEPCTKK,\
+        KUNDE.DEDUCTIONPCTKK=:x->DEDUCTIONPCTKK,\
+        KUNDE.LIEFERMELDUNG=:x->LIEFERMELDUNG,\
+        KUNDE.MANUFACTURERNO=:x->MANUFACTURERNO,\
+        KUNDE.MSV3CFGCHANGEDATE=:x->MSV3CFGCHANGEDATE
+/* SqlMacros390-Define of KUNDE ***********************************************/
+
+#define KUNDE_ZEIGER_390 \
+        :IDFNR,\
+        :MATCHCODE,\
+        :FILIALNR,\
+        :KDNR,\
+        :ETARTKLASSE1,\
+        :ETARTKLASSE2,\
+        :ETKDMERKMAL1,\
+        :ETKDMERKMAL2,\
+        :ANREDEKZ,\
+        :NAMEAPO,\
+        :NAMEINHABER,\
+        :STRASSE,\
+        :ORT,\
+        :POSTLEITZAHL,\
+        :TELNR,\
+        :TELNRDAFUE,\
+        :FAXNR,\
+        :TELKURZWAHL,\
+        :IMSBEZIRKNR,\
+        :KDGRUPPE,\
+        :PERSONALNRVERTR,\
+        :DAFUESYSTEM,\
+        :KZKDDOPPELKONTR,\
+        :LAGERFACHNRRGBEI,\
+        :ANZPOSLS_RG,\
+        :ANZPOSSORTBEHAELT,\
+        :KZKDKLASSE,\
+        :ORIGINALFILIALNR,\
+        :NOTFILIALNR,\
+        :BEMERKUNGEN,\
+        :KUNDETEXT,\
+        :VERBUNDKUNDE,\
+        :STDAUFKOBUART,\
+        :PASSWORD,\
+        :KUEHLBOX,\
+        :TOURENKIPPZEIT,\
+        :VZKK1,\
+        :LAND,\
+        :VERTRIEBSZENTRUMNR,\
+        :KUNDENNR,\
+        :EMAILADRESSE,\
+        :NACHLIEFERTYP,\
+        :PARTNERNR,\
+        :KZSPRACHE,\
+        :KZPSYCHOSTOFFE,\
+        :XMLPREISLEVEL,\
+        :PREWHOLETYP,\
+        :XMLINFOLEVEL,\
+        :NATIONALCUSTOMERNO,\
+        :RATIOCUSTOMERNO,\
+        :ANZAUFCLOSE,\
+        :KRANKENKASSENNR,\
+        :CALCULATIONTYPE,\
+        :SURCHARGE_BASIC,\
+        :DEDUCTION_BASIC,\
+        :SURCHARGEPCT,\
+        :DEDUCTIONPCT,\
+        :VATREGISTERED,\
+        :REBATEMETHFREESALE,\
+        :REBATEMETHHEALTHF,\
+        :MAINCSTNO,\
+        :SURCHARGE_BASIC_KK,\
+        :DEDUCTION_BASIC_KK,\
+        :SURCHARGEPCTKK,\
+        :DEDUCTIONPCTKK,\
+        :LIEFERMELDUNG,\
+        :MANUFACTURERNO,\
+        :MSV3CFGCHANGEDATE
+#define KUNDE_UPDATE_390 \
+        IDFNR=:IDFNR,\
+        MATCHCODE=:MATCHCODE,\
+        FILIALNR=:FILIALNR,\
+        KDNR=:KDNR,\
+        ETARTKLASSE1=:ETARTKLASSE1,\
+        ETARTKLASSE2=:ETARTKLASSE2,\
+        ETKDMERKMAL1=:ETKDMERKMAL1,\
+        ETKDMERKMAL2=:ETKDMERKMAL2,\
+        ANREDEKZ=:ANREDEKZ,\
+        NAMEAPO=:NAMEAPO,\
+        NAMEINHABER=:NAMEINHABER,\
+        STRASSE=:STRASSE,\
+        ORT=:ORT,\
+        POSTLEITZAHL=:POSTLEITZAHL,\
+        TELNR=:TELNR,\
+        TELNRDAFUE=:TELNRDAFUE,\
+        FAXNR=:FAXNR,\
+        TELKURZWAHL=:TELKURZWAHL,\
+        IMSBEZIRKNR=:IMSBEZIRKNR,\
+        KDGRUPPE=:KDGRUPPE,\
+        PERSONALNRVERTR=:PERSONALNRVERTR,\
+        DAFUESYSTEM=:DAFUESYSTEM,\
+        KZKDDOPPELKONTR=:KZKDDOPPELKONTR,\
+        LAGERFACHNRRGBEI=:LAGERFACHNRRGBEI,\
+        ANZPOSLS_RG=:ANZPOSLS_RG,\
+        ANZPOSSORTBEHAELT=:ANZPOSSORTBEHAELT,\
+        KZKDKLASSE=:KZKDKLASSE,\
+        ORIGINALFILIALNR=:ORIGINALFILIALNR,\
+        NOTFILIALNR=:NOTFILIALNR,\
+        BEMERKUNGEN=:BEMERKUNGEN,\
+        KUNDETEXT=:KUNDETEXT,\
+        VERBUNDKUNDE=:VERBUNDKUNDE,\
+        STDAUFKOBUART=:STDAUFKOBUART,\
+        PASSWORD=:PASSWORD,\
+        KUEHLBOX=:KUEHLBOX,\
+        TOURENKIPPZEIT=:TOURENKIPPZEIT,\
+        VZKK1=:VZKK1,\
+        LAND=:LAND,\
+        VERTRIEBSZENTRUMNR=:VERTRIEBSZENTRUMNR,\
+        KUNDENNR=:KUNDENNR,\
+        EMAILADRESSE=:EMAILADRESSE,\
+        NACHLIEFERTYP=:NACHLIEFERTYP,\
+        PARTNERNR=:PARTNERNR,\
+        KZSPRACHE=:KZSPRACHE,\
+        KZPSYCHOSTOFFE=:KZPSYCHOSTOFFE,\
+        XMLPREISLEVEL=:XMLPREISLEVEL,\
+        PREWHOLETYP=:PREWHOLETYP,\
+        XMLINFOLEVEL=:XMLINFOLEVEL,\
+        NATIONALCUSTOMERNO=:NATIONALCUSTOMERNO,\
+        RATIOCUSTOMERNO=:RATIOCUSTOMERNO,\
+        ANZAUFCLOSE=:ANZAUFCLOSE,\
+        KRANKENKASSENNR=:KRANKENKASSENNR,\
+        CALCULATIONTYPE=:CALCULATIONTYPE,\
+        SURCHARGE_BASIC=:SURCHARGE_BASIC,\
+        DEDUCTION_BASIC=:DEDUCTION_BASIC,\
+        SURCHARGEPCT=:SURCHARGEPCT,\
+        DEDUCTIONPCT=:DEDUCTIONPCT,\
+        VATREGISTERED=:VATREGISTERED,\
+        REBATEMETHFREESALE=:REBATEMETHFREESALE,\
+        REBATEMETHHEALTHF=:REBATEMETHHEALTHF,\
+        MAINCSTNO=:MAINCSTNO,\
+        SURCHARGE_BASIC_KK=:SURCHARGE_BASIC_KK,\
+        DEDUCTION_BASIC_KK=:DEDUCTION_BASIC_KK,\
+        SURCHARGEPCTKK=:SURCHARGEPCTKK,\
+        DEDUCTIONPCTKK=:DEDUCTIONPCTKK,\
+        LIEFERMELDUNG=:LIEFERMELDUNG,\
+        MANUFACTURERNO=:MANUFACTURERNO,\
+        MSV3CFGCHANGEDATE=:MSV3CFGCHANGEDATE
+#ifdef TRANSCLASS
+#include <string.h>
+#endif
+
+#ifdef ESQL_C
+EXEC SQL BEGIN DECLARE SECTION;
+#endif
+
+/* original struct of KUNDE ***************************************************/
+
+#ifndef TRANSCLASS
+typedef struct N_KUNDE {
+    long IDFNR;
+    char MATCHCODE[13];
+    short FILIALNR;
+    long KDNR;
+    long ETARTKLASSE1;
+    long ETARTKLASSE2;
+    long ETKDMERKMAL1;
+    long ETKDMERKMAL2;
+    short ANREDEKZ;
+    char NAMEAPO[41];
+    char NAMEINHABER[31];
+    char STRASSE[31];
+    char ORT[31];
+    char POSTLEITZAHL[11];
+    char TELNR[21];
+    char TELNRDAFUE[21];
+    char FAXNR[26];
+    char TELKURZWAHL[5];
+    long IMSBEZIRKNR;
+    char KDGRUPPE[3];
+    long PERSONALNRVERTR;
+    char DAFUESYSTEM[3];
+    char KZKDDOPPELKONTR[2];
+    char LAGERFACHNRRGBEI[5];
+    short ANZPOSLS_RG;
+    short ANZPOSSORTBEHAELT;
+    char KZKDKLASSE[4];
+    short ORIGINALFILIALNR;
+    short NOTFILIALNR;
+    char BEMERKUNGEN[241];
+    char KUNDETEXT[241];
+    char VERBUNDKUNDE[2];
+    char STDAUFKOBUART[5];
+    char PASSWORD[9];
+    char KUEHLBOX[2];
+    long TOURENKIPPZEIT;
+    char VZKK1[2];
+    char LAND[4];
+    short VERTRIEBSZENTRUMNR;
+    long KUNDENNR;
+    char EMAILADRESSE[61];
+    char NACHLIEFERTYP[2];
+    long PARTNERNR;
+    char KZSPRACHE[3];
+    char KZPSYCHOSTOFFE[2];
+    char XMLPREISLEVEL[2];
+    char PREWHOLETYP[2];
+    char XMLINFOLEVEL[2];
+    char NATIONALCUSTOMERNO[19];
+    char RATIOCUSTOMERNO[13];
+    short ANZAUFCLOSE;
+    char KRANKENKASSENNR[7];
+    char CALCULATIONTYPE[2];
+    short SURCHARGE_BASIC;
+    short DEDUCTION_BASIC;
+    double SURCHARGEPCT;
+    double DEDUCTIONPCT;
+    short VATREGISTERED;
+    short REBATEMETHFREESALE;
+    short REBATEMETHHEALTHF;
+    long MAINCSTNO;
+    short SURCHARGE_BASIC_KK;
+    short DEDUCTION_BASIC_KK;
+    double SURCHARGEPCTKK;
+    double DEDUCTIONPCTKK;
+    short LIEFERMELDUNG;
+    long MANUFACTURERNO;
+    long MSV3CFGCHANGEDATE;
+} kundeS;
+#else /* TRANSCLASS */
+typedef struct N_KUNDE {
+    long IDFNR;
+    char MATCHCODE[13];
+    short FILIALNR;
+    long KDNR;
+    long ETARTKLASSE1;
+    long ETARTKLASSE2;
+    long ETKDMERKMAL1;
+    long ETKDMERKMAL2;
+    short ANREDEKZ;
+    char NAMEAPO[41];
+    char NAMEINHABER[31];
+    char STRASSE[31];
+    char ORT[31];
+    char POSTLEITZAHL[11];
+    char TELNR[21];
+    char TELNRDAFUE[21];
+    char FAXNR[26];
+    char TELKURZWAHL[5];
+    long IMSBEZIRKNR;
+    char KDGRUPPE[3];
+    long PERSONALNRVERTR;
+    char DAFUESYSTEM[3];
+    char KZKDDOPPELKONTR[2];
+    char LAGERFACHNRRGBEI[5];
+    short ANZPOSLS_RG;
+    short ANZPOSSORTBEHAELT;
+    char KZKDKLASSE[4];
+    short ORIGINALFILIALNR;
+    short NOTFILIALNR;
+    char BEMERKUNGEN[241];
+    char KUNDETEXT[241];
+    char VERBUNDKUNDE[2];
+    char STDAUFKOBUART[5];
+    char PASSWORD[9];
+    char KUEHLBOX[2];
+    long TOURENKIPPZEIT;
+    char VZKK1[2];
+    char LAND[4];
+    short VERTRIEBSZENTRUMNR;
+    long KUNDENNR;
+    char EMAILADRESSE[61];
+    char NACHLIEFERTYP[2];
+    long PARTNERNR;
+    char KZSPRACHE[3];
+    char KZPSYCHOSTOFFE[2];
+    char XMLPREISLEVEL[2];
+    char PREWHOLETYP[2];
+    char XMLINFOLEVEL[2];
+    char NATIONALCUSTOMERNO[19];
+    char RATIOCUSTOMERNO[13];
+    short ANZAUFCLOSE;
+    char KRANKENKASSENNR[7];
+    char CALCULATIONTYPE[2];
+    short SURCHARGE_BASIC;
+    short DEDUCTION_BASIC;
+    double SURCHARGEPCT;
+    double DEDUCTIONPCT;
+    short VATREGISTERED;
+    short REBATEMETHFREESALE;
+    short REBATEMETHHEALTHF;
+    long MAINCSTNO;
+    short SURCHARGE_BASIC_KK;
+    short DEDUCTION_BASIC_KK;
+    double SURCHARGEPCTKK;
+    double DEDUCTIONPCTKK;
+    short LIEFERMELDUNG;
+    long MANUFACTURERNO;
+    long MSV3CFGCHANGEDATE;
+
+    bool operator == (const N_KUNDE& right) const {
+        return (
+            IDFNR == right.IDFNR &&
+            !strcmp(MATCHCODE, right.MATCHCODE) &&
+            FILIALNR == right.FILIALNR &&
+            KDNR == right.KDNR &&
+            ETARTKLASSE1 == right.ETARTKLASSE1 &&
+            ETARTKLASSE2 == right.ETARTKLASSE2 &&
+            ETKDMERKMAL1 == right.ETKDMERKMAL1 &&
+            ETKDMERKMAL2 == right.ETKDMERKMAL2 &&
+            ANREDEKZ == right.ANREDEKZ &&
+            !strcmp(NAMEAPO, right.NAMEAPO) &&
+            !strcmp(NAMEINHABER, right.NAMEINHABER) &&
+            !strcmp(STRASSE, right.STRASSE) &&
+            !strcmp(ORT, right.ORT) &&
+            !strcmp(POSTLEITZAHL, right.POSTLEITZAHL) &&
+            !strcmp(TELNR, right.TELNR) &&
+            !strcmp(TELNRDAFUE, right.TELNRDAFUE) &&
+            !strcmp(FAXNR, right.FAXNR) &&
+            !strcmp(TELKURZWAHL, right.TELKURZWAHL) &&
+            IMSBEZIRKNR == right.IMSBEZIRKNR &&
+            !strcmp(KDGRUPPE, right.KDGRUPPE) &&
+            PERSONALNRVERTR == right.PERSONALNRVERTR &&
+            !strcmp(DAFUESYSTEM, right.DAFUESYSTEM) &&
+            !strcmp(KZKDDOPPELKONTR, right.KZKDDOPPELKONTR) &&
+            !strcmp(LAGERFACHNRRGBEI, right.LAGERFACHNRRGBEI) &&
+            ANZPOSLS_RG == right.ANZPOSLS_RG &&
+            ANZPOSSORTBEHAELT == right.ANZPOSSORTBEHAELT &&
+            !strcmp(KZKDKLASSE, right.KZKDKLASSE) &&
+            ORIGINALFILIALNR == right.ORIGINALFILIALNR &&
+            NOTFILIALNR == right.NOTFILIALNR &&
+            !strcmp(BEMERKUNGEN, right.BEMERKUNGEN) &&
+            !strcmp(KUNDETEXT, right.KUNDETEXT) &&
+            !strcmp(VERBUNDKUNDE, right.VERBUNDKUNDE) &&
+            !strcmp(STDAUFKOBUART, right.STDAUFKOBUART) &&
+            !strcmp(PASSWORD, right.PASSWORD) &&
+            !strcmp(KUEHLBOX, right.KUEHLBOX) &&
+            TOURENKIPPZEIT == right.TOURENKIPPZEIT &&
+            !strcmp(VZKK1, right.VZKK1) &&
+            !strcmp(LAND, right.LAND) &&
+            VERTRIEBSZENTRUMNR == right.VERTRIEBSZENTRUMNR &&
+            KUNDENNR == right.KUNDENNR &&
+            !strcmp(EMAILADRESSE, right.EMAILADRESSE) &&
+            !strcmp(NACHLIEFERTYP, right.NACHLIEFERTYP) &&
+            PARTNERNR == right.PARTNERNR &&
+            !strcmp(KZSPRACHE, right.KZSPRACHE) &&
+            !strcmp(KZPSYCHOSTOFFE, right.KZPSYCHOSTOFFE) &&
+            !strcmp(XMLPREISLEVEL, right.XMLPREISLEVEL) &&
+            !strcmp(PREWHOLETYP, right.PREWHOLETYP) &&
+            !strcmp(XMLINFOLEVEL, right.XMLINFOLEVEL) &&
+            !strcmp(NATIONALCUSTOMERNO, right.NATIONALCUSTOMERNO) &&
+            !strcmp(RATIOCUSTOMERNO, right.RATIOCUSTOMERNO) &&
+            ANZAUFCLOSE == right.ANZAUFCLOSE &&
+            !strcmp(KRANKENKASSENNR, right.KRANKENKASSENNR) &&
+            !strcmp(CALCULATIONTYPE, right.CALCULATIONTYPE) &&
+            SURCHARGE_BASIC == right.SURCHARGE_BASIC &&
+            DEDUCTION_BASIC == right.DEDUCTION_BASIC &&
+            SURCHARGEPCT == right.SURCHARGEPCT &&
+            DEDUCTIONPCT == right.DEDUCTIONPCT &&
+            VATREGISTERED == right.VATREGISTERED &&
+            REBATEMETHFREESALE == right.REBATEMETHFREESALE &&
+            REBATEMETHHEALTHF == right.REBATEMETHHEALTHF &&
+            MAINCSTNO == right.MAINCSTNO &&
+            SURCHARGE_BASIC_KK == right.SURCHARGE_BASIC_KK &&
+            DEDUCTION_BASIC_KK == right.DEDUCTION_BASIC_KK &&
+            SURCHARGEPCTKK == right.SURCHARGEPCTKK &&
+            DEDUCTIONPCTKK == right.DEDUCTIONPCTKK &&
+            LIEFERMELDUNG == right.LIEFERMELDUNG &&
+            MANUFACTURERNO == right.MANUFACTURERNO &&
+            MSV3CFGCHANGEDATE == right.MSV3CFGCHANGEDATE
+        );
+    }
+    void clear() {
+#ifdef WIN32
+        memset((char*)this, 0, sizeof(*this));
+#else
+        IDFNR = 0;
+        strcpy(MATCHCODE, " " );
+        FILIALNR = 0;
+        KDNR = 0;
+        ETARTKLASSE1 = 0;
+        ETARTKLASSE2 = 0;
+        ETKDMERKMAL1 = 0;
+        ETKDMERKMAL2 = 0;
+        ANREDEKZ = 0;
+        strcpy(NAMEAPO, " " );
+        strcpy(NAMEINHABER, " " );
+        strcpy(STRASSE, " " );
+        strcpy(ORT, " " );
+        strcpy(POSTLEITZAHL, " " );
+        strcpy(TELNR, " " );
+        strcpy(TELNRDAFUE, " " );
+        strcpy(FAXNR, " " );
+        strcpy(TELKURZWAHL, " " );
+        IMSBEZIRKNR = 0;
+        strcpy(KDGRUPPE, " " );
+        PERSONALNRVERTR = 0;
+        strcpy(DAFUESYSTEM, " " );
+        strcpy(KZKDDOPPELKONTR, " " );
+        strcpy(LAGERFACHNRRGBEI, " " );
+        ANZPOSLS_RG = 0;
+        ANZPOSSORTBEHAELT = 0;
+        strcpy(KZKDKLASSE, " " );
+        ORIGINALFILIALNR = 0;
+        NOTFILIALNR = 0;
+        strcpy(BEMERKUNGEN, " " );
+        strcpy(KUNDETEXT, " " );
+        strcpy(VERBUNDKUNDE, " " );
+        strcpy(STDAUFKOBUART, " " );
+        strcpy(PASSWORD, " " );
+        strcpy(KUEHLBOX, " " );
+        TOURENKIPPZEIT = 0;
+        strcpy(VZKK1, " " );
+        strcpy(LAND, " " );
+        VERTRIEBSZENTRUMNR = 0;
+        KUNDENNR = 0;
+        strcpy(EMAILADRESSE, " " );
+        strcpy(NACHLIEFERTYP, " " );
+        PARTNERNR = 0;
+        strcpy(KZSPRACHE, " " );
+        strcpy(KZPSYCHOSTOFFE, " " );
+        strcpy(XMLPREISLEVEL, " " );
+        strcpy(PREWHOLETYP, " " );
+        strcpy(XMLINFOLEVEL, " " );
+        strcpy(NATIONALCUSTOMERNO, " " );
+        strcpy(RATIOCUSTOMERNO, " " );
+        ANZAUFCLOSE = 0;
+        strcpy(KRANKENKASSENNR, " " );
+        strcpy(CALCULATIONTYPE, " " );
+        SURCHARGE_BASIC = 0;
+        DEDUCTION_BASIC = 0;
+        SURCHARGEPCT = 0;
+        DEDUCTIONPCT = 0;
+        VATREGISTERED = 0;
+        REBATEMETHFREESALE = 0;
+        REBATEMETHHEALTHF = 0;
+        MAINCSTNO = 0;
+        SURCHARGE_BASIC_KK = 0;
+        DEDUCTION_BASIC_KK = 0;
+        SURCHARGEPCTKK = 0;
+        DEDUCTIONPCTKK = 0;
+        LIEFERMELDUNG = 0;
+        MANUFACTURERNO = 0;
+        MSV3CFGCHANGEDATE = 0;
+#endif
+    }
+} kundeS;
+#endif /* TRANSCLASS */
+
+#ifdef ESQL_C
+EXEC SQL END DECLARE SECTION;
+#endif
+
+#ifdef ESQL_C
+EXEC SQL BEGIN DECLARE SECTION;
+#endif
+
+/* Stringbuffer Structur of KUNDE *********************************************/
+
+struct S_KUNDE {
+    char IDFNR[11];
+    char MATCHCODE[12 + 1];
+    char FILIALNR[7];
+    char KDNR[11];
+    char ETARTKLASSE1[5 + 1];
+    char ETARTKLASSE2[5 + 1];
+    char ETKDMERKMAL1[5 + 1];
+    char ETKDMERKMAL2[5 + 1];
+    char ANREDEKZ[7];
+    char NAMEAPO[40 + 1];
+    char NAMEINHABER[30 + 1];
+    char STRASSE[30 + 1];
+    char ORT[30 + 1];
+    char POSTLEITZAHL[10 + 1];
+    char TELNR[20 + 1];
+    char TELNRDAFUE[20 + 1];
+    char FAXNR[25 + 1];
+    char TELKURZWAHL[4 + 1];
+    char IMSBEZIRKNR[11];
+    char KDGRUPPE[2 + 1];
+    char PERSONALNRVERTR[11];
+    char DAFUESYSTEM[2 + 1];
+    char KZKDDOPPELKONTR[1 + 1];
+    char LAGERFACHNRRGBEI[4 + 1];
+    char ANZPOSLS_RG[7];
+    char ANZPOSSORTBEHAELT[7];
+    char KZKDKLASSE[3 + 1];
+    char ORIGINALFILIALNR[7];
+    char NOTFILIALNR[7];
+    char BEMERKUNGEN[240 + 1];
+    char KUNDETEXT[240 + 1];
+    char VERBUNDKUNDE[1 + 1];
+    char STDAUFKOBUART[4 + 1];
+    char PASSWORD[8 + 1];
+    char KUEHLBOX[1 + 1];
+    char TOURENKIPPZEIT[11];
+    char VZKK1[1 + 1];
+    char LAND[3 + 1];
+    char VERTRIEBSZENTRUMNR[7];
+    char KUNDENNR[11];
+    char EMAILADRESSE[60 + 1];
+    char NACHLIEFERTYP[1 + 1];
+    char PARTNERNR[11];
+    char KZSPRACHE[2 + 1];
+    char KZPSYCHOSTOFFE[1 + 1];
+    char XMLPREISLEVEL[1 + 1];
+    char PREWHOLETYP[1 + 1];
+    char XMLINFOLEVEL[1 + 1];
+    char NATIONALCUSTOMERNO[18 + 1];
+    char RATIOCUSTOMERNO[12 + 1];
+    char ANZAUFCLOSE[7];
+    char KRANKENKASSENNR[6 + 1];
+    char CALCULATIONTYPE[1 + 1];
+    char SURCHARGE_BASIC[7];
+    char DEDUCTION_BASIC[7];
+    char SURCHARGEPCT[5 + 2];
+    char DEDUCTIONPCT[5 + 2];
+    char VATREGISTERED[7];
+    char REBATEMETHFREESALE[7];
+    char REBATEMETHHEALTHF[7];
+    char MAINCSTNO[11];
+    char SURCHARGE_BASIC_KK[7];
+    char DEDUCTION_BASIC_KK[7];
+    char SURCHARGEPCTKK[5 + 2];
+    char DEDUCTIONPCTKK[5 + 2];
+    char LIEFERMELDUNG[7];
+    char MANUFACTURERNO[11];
+    char MSV3CFGCHANGEDATE[11];
+};
+#ifdef ESQL_C
+EXEC SQL END DECLARE SECTION;
+#endif
+
+#ifdef ESQL_C
+EXEC SQL BEGIN DECLARE SECTION;
+#endif
+
+/* Stringbuffer (without strend) Structur of KUNDE ****************************/
+
+struct O_KUNDE {
+    char IDFNR[11];
+    char MATCHCODE[12];
+    char FILIALNR[7];
+    char KDNR[11];
+    char ETARTKLASSE1[5];
+    char ETARTKLASSE2[5];
+    char ETKDMERKMAL1[5];
+    char ETKDMERKMAL2[5];
+    char ANREDEKZ[7];
+    char NAMEAPO[40];
+    char NAMEINHABER[30];
+    char STRASSE[30];
+    char ORT[30];
+    char POSTLEITZAHL[10];
+    char TELNR[20];
+    char TELNRDAFUE[20];
+    char FAXNR[25];
+    char TELKURZWAHL[4];
+    char IMSBEZIRKNR[11];
+    char KDGRUPPE[2];
+    char PERSONALNRVERTR[11];
+    char DAFUESYSTEM[2];
+    char KZKDDOPPELKONTR[1];
+    char LAGERFACHNRRGBEI[4];
+    char ANZPOSLS_RG[7];
+    char ANZPOSSORTBEHAELT[7];
+    char KZKDKLASSE[3];
+    char ORIGINALFILIALNR[7];
+    char NOTFILIALNR[7];
+    char BEMERKUNGEN[240];
+    char KUNDETEXT[240];
+    char VERBUNDKUNDE[1];
+    char STDAUFKOBUART[4];
+    char PASSWORD[8];
+    char KUEHLBOX[1];
+    char TOURENKIPPZEIT[11];
+    char VZKK1[1];
+    char LAND[3];
+    char VERTRIEBSZENTRUMNR[7];
+    char KUNDENNR[11];
+    char EMAILADRESSE[60];
+    char NACHLIEFERTYP[1];
+    char PARTNERNR[11];
+    char KZSPRACHE[2];
+    char KZPSYCHOSTOFFE[1];
+    char XMLPREISLEVEL[1];
+    char PREWHOLETYP[1];
+    char XMLINFOLEVEL[1];
+    char NATIONALCUSTOMERNO[18];
+    char RATIOCUSTOMERNO[12];
+    char ANZAUFCLOSE[7];
+    char KRANKENKASSENNR[6];
+    char CALCULATIONTYPE[1];
+    char SURCHARGE_BASIC[7];
+    char DEDUCTION_BASIC[7];
+    char SURCHARGEPCT[5];
+    char DEDUCTIONPCT[5];
+    char VATREGISTERED[7];
+    char REBATEMETHFREESALE[7];
+    char REBATEMETHHEALTHF[7];
+    char MAINCSTNO[11];
+    char SURCHARGE_BASIC_KK[7];
+    char DEDUCTION_BASIC_KK[7];
+    char SURCHARGEPCTKK[5];
+    char DEDUCTIONPCTKK[5];
+    char LIEFERMELDUNG[7];
+    char MANUFACTURERNO[11];
+    char MSV3CFGCHANGEDATE[11];
+};
+#ifdef ESQL_C
+EXEC SQL END DECLARE SECTION;
+#endif
+
+#ifdef ESQL_C
+EXEC SQL BEGIN DECLARE SECTION;
+#endif
+
+/* Structur with real chartype of KUNDE ***************************************/
+
+struct C_KUNDE {
+    long IDFNR;
+    char MATCHCODE[13];
+    short FILIALNR;
+    long KDNR;
+    long ETARTKLASSE1;
+    long ETARTKLASSE2;
+    long ETKDMERKMAL1;
+    long ETKDMERKMAL2;
+    short ANREDEKZ;
+    char NAMEAPO[41];
+    char NAMEINHABER[31];
+    char STRASSE[31];
+    char ORT[31];
+    char POSTLEITZAHL[11];
+    char TELNR[21];
+    char TELNRDAFUE[21];
+    char FAXNR[26];
+    char TELKURZWAHL[5];
+    long IMSBEZIRKNR;
+    char KDGRUPPE[3];
+    long PERSONALNRVERTR;
+    char DAFUESYSTEM[3];
+    char KZKDDOPPELKONTR;
+    char LAGERFACHNRRGBEI[5];
+    short ANZPOSLS_RG;
+    short ANZPOSSORTBEHAELT;
+    char KZKDKLASSE[4];
+    short ORIGINALFILIALNR;
+    short NOTFILIALNR;
+    char BEMERKUNGEN[241];
+    char KUNDETEXT[241];
+    char VERBUNDKUNDE;
+    char STDAUFKOBUART[5];
+    char PASSWORD[9];
+    char KUEHLBOX;
+    long TOURENKIPPZEIT;
+    char VZKK1;
+    char LAND[4];
+    short VERTRIEBSZENTRUMNR;
+    long KUNDENNR;
+    char EMAILADRESSE[61];
+    char NACHLIEFERTYP;
+    long PARTNERNR;
+    char KZSPRACHE[3];
+    char KZPSYCHOSTOFFE;
+    char XMLPREISLEVEL;
+    char PREWHOLETYP;
+    char XMLINFOLEVEL;
+    char NATIONALCUSTOMERNO[19];
+    char RATIOCUSTOMERNO[13];
+    short ANZAUFCLOSE;
+    char KRANKENKASSENNR[7];
+    char CALCULATIONTYPE;
+    short SURCHARGE_BASIC;
+    short DEDUCTION_BASIC;
+    double SURCHARGEPCT;
+    double DEDUCTIONPCT;
+    short VATREGISTERED;
+    short REBATEMETHFREESALE;
+    short REBATEMETHHEALTHF;
+    long MAINCSTNO;
+    short SURCHARGE_BASIC_KK;
+    short DEDUCTION_BASIC_KK;
+    double SURCHARGEPCTKK;
+    double DEDUCTIONPCTKK;
+    short LIEFERMELDUNG;
+    long MANUFACTURERNO;
+    long MSV3CFGCHANGEDATE;
+};
+#ifdef ESQL_C
+EXEC SQL END DECLARE SECTION;
+#endif
+
+#ifdef ESQL_C
+EXEC SQL BEGIN DECLARE SECTION;
+#endif
+
+/* Sizetype  Structur (buf_desc) of KUNDE *************************************/
+
+struct I_KUNDE {
+    short IDFNR;
+    short MATCHCODE;
+    short FILIALNR;
+    short KDNR;
+    short ETARTKLASSE1;
+    short ETARTKLASSE2;
+    short ETKDMERKMAL1;
+    short ETKDMERKMAL2;
+    short ANREDEKZ;
+    short NAMEAPO;
+    short NAMEINHABER;
+    short STRASSE;
+    short ORT;
+    short POSTLEITZAHL;
+    short TELNR;
+    short TELNRDAFUE;
+    short FAXNR;
+    short TELKURZWAHL;
+    short IMSBEZIRKNR;
+    short KDGRUPPE;
+    short PERSONALNRVERTR;
+    short DAFUESYSTEM;
+    short KZKDDOPPELKONTR;
+    short LAGERFACHNRRGBEI;
+    short ANZPOSLS_RG;
+    short ANZPOSSORTBEHAELT;
+    short KZKDKLASSE;
+    short ORIGINALFILIALNR;
+    short NOTFILIALNR;
+    short BEMERKUNGEN;
+    short KUNDETEXT;
+    short VERBUNDKUNDE;
+    short STDAUFKOBUART;
+    short PASSWORD;
+    short KUEHLBOX;
+    short TOURENKIPPZEIT;
+    short VZKK1;
+    short LAND;
+    short VERTRIEBSZENTRUMNR;
+    short KUNDENNR;
+    short EMAILADRESSE;
+    short NACHLIEFERTYP;
+    short PARTNERNR;
+    short KZSPRACHE;
+    short KZPSYCHOSTOFFE;
+    short XMLPREISLEVEL;
+    short PREWHOLETYP;
+    short XMLINFOLEVEL;
+    short NATIONALCUSTOMERNO;
+    short RATIOCUSTOMERNO;
+    short ANZAUFCLOSE;
+    short KRANKENKASSENNR;
+    short CALCULATIONTYPE;
+    short SURCHARGE_BASIC;
+    short DEDUCTION_BASIC;
+    short SURCHARGEPCT;
+    short DEDUCTIONPCT;
+    short VATREGISTERED;
+    short REBATEMETHFREESALE;
+    short REBATEMETHHEALTHF;
+    short MAINCSTNO;
+    short SURCHARGE_BASIC_KK;
+    short DEDUCTION_BASIC_KK;
+    short SURCHARGEPCTKK;
+    short DEDUCTIONPCTKK;
+    short LIEFERMELDUNG;
+    short MANUFACTURERNO;
+    short MSV3CFGCHANGEDATE;
+};
+#ifdef ESQL_C
+EXEC SQL END DECLARE SECTION;
+#endif
+
+/* structures of Buf_Desc *****************************************************/
+
+/* Structur (buf_desc) of KUNDE ***********************************************/
+
+#if defined (BUF_DESC)
+static struct buf_desc KUNDE_BES [] = {
+   { TYP_L , 11, 0 },
+   { TYP_C, 12, 0 },
+   { TYP_S ,  6, 0 },
+   { TYP_L , 11, 0 },
+   { TYP_L ,  11, 0 },
+   { TYP_L ,  11, 0 },
+   { TYP_L ,  11, 0 },
+   { TYP_L ,  11, 0 },
+   { TYP_S ,  6, 0 },
+   { TYP_C, 40, 0 },
+   { TYP_C, 30, 0 },
+   { TYP_C, 30, 0 },
+   { TYP_C, 30, 0 },
+   { TYP_C, 10, 0 },
+   { TYP_C, 20, 0 },
+   { TYP_C, 20, 0 },
+   { TYP_C, 25, 0 },
+   { TYP_C, 4, 0 },
+   { TYP_L , 11, 0 },
+   { TYP_C, 2, 0 },
+   { TYP_L , 11, 0 },
+   { TYP_C, 2, 0 },
+   { TYP_C, 1, 0 },
+   { TYP_C, 4, 0 },
+   { TYP_S ,  6, 0 },
+   { TYP_S ,  6, 0 },
+   { TYP_C, 3, 0 },
+   { TYP_S ,  6, 0 },
+   { TYP_S ,  6, 0 },
+   { TYP_C, 240, 0 },
+   { TYP_C, 240, 0 },
+   { TYP_C, 1, 0 },
+   { TYP_C, 4, 0 },
+   { TYP_C, 8, 0 },
+   { TYP_C, 1, 0 },
+   { TYP_L , 11, 0 },
+   { TYP_C, 1, 0 },
+   { TYP_C, 3, 0 },
+   { TYP_S ,  6, 0 },
+   { TYP_L , 11, 0 },
+   { TYP_C, 60, 0 },
+   { TYP_C, 1, 0 },
+   { TYP_L , 11, 0 },
+   { TYP_C, 2, 0 },
+   { TYP_C, 1, 0 },
+   { TYP_C, 1, 0 },
+   { TYP_C, 1, 0 },
+   { TYP_C, 1, 0 },
+   { TYP_C, 18, 0 },
+   { TYP_C, 12, 0 },
+   { TYP_S ,  6, 0 },
+   { TYP_C, 6, 0 },
+   { TYP_C, 1, 0 },
+   { TYP_S ,  6, 0 },
+   { TYP_S ,  6, 0 },
+   { TYP_D, 5, 2 },
+   { TYP_D, 5, 2 },
+   { TYP_S ,  6, 0 },
+   { TYP_S ,  6, 0 },
+   { TYP_S ,  6, 0 },
+   { TYP_L , 11, 0 },
+   { TYP_S ,  6, 0 },
+   { TYP_S ,  6, 0 },
+   { TYP_D, 5, 2 },
+   { TYP_D, 5, 2 },
+   { TYP_S ,  6, 0 },
+   { TYP_L , 11, 0 },
+   { TYP_L , 11, 0 },
+};
+#elif defined (C_BUF_DESC)
+static struct buf_desc KUNDE_BES [] = {
+   { TYP_L , 11, 0 },
+   { TYP_C, 12, 0 },
+   { TYP_S ,  6, 0 },
+   { TYP_L , 11, 0 },
+   { TYP_L ,  11, 0 },
+   { TYP_L ,  11, 0 },
+   { TYP_L ,  11, 0 },
+   { TYP_L ,  11, 0 },
+   { TYP_S ,  6, 0 },
+   { TYP_C, 40, 0 },
+   { TYP_C, 30, 0 },
+   { TYP_C, 30, 0 },
+   { TYP_C, 30, 0 },
+   { TYP_C, 10, 0 },
+   { TYP_C, 20, 0 },
+   { TYP_C, 20, 0 },
+   { TYP_C, 25, 0 },
+   { TYP_C, 4, 0 },
+   { TYP_L , 11, 0 },
+   { TYP_C, 2, 0 },
+   { TYP_L , 11, 0 },
+   { TYP_C, 2, 0 },
+   { TYP_C, 1, 0 },
+   { TYP_C, 4, 0 },
+   { TYP_S ,  6, 0 },
+   { TYP_S ,  6, 0 },
+   { TYP_C, 3, 0 },
+   { TYP_S ,  6, 0 },
+   { TYP_S ,  6, 0 },
+   { TYP_C, 240, 0 },
+   { TYP_C, 240, 0 },
+   { TYP_C, 1, 0 },
+   { TYP_C, 4, 0 },
+   { TYP_C, 8, 0 },
+   { TYP_C, 1, 0 },
+   { TYP_L , 11, 0 },
+   { TYP_C, 1, 0 },
+   { TYP_C, 3, 0 },
+   { TYP_S ,  6, 0 },
+   { TYP_L , 11, 0 },
+   { TYP_C, 60, 0 },
+   { TYP_C, 1, 0 },
+   { TYP_L , 11, 0 },
+   { TYP_C, 2, 0 },
+   { TYP_C, 1, 0 },
+   { TYP_C, 1, 0 },
+   { TYP_C, 1, 0 },
+   { TYP_C, 1, 0 },
+   { TYP_C, 18, 0 },
+   { TYP_C, 12, 0 },
+   { TYP_S ,  6, 0 },
+   { TYP_C, 6, 0 },
+   { TYP_C, 1, 0 },
+   { TYP_S ,  6, 0 },
+   { TYP_S ,  6, 0 },
+   { TYP_D, 5, 2 },
+   { TYP_D, 5, 2 },
+   { TYP_S ,  6, 0 },
+   { TYP_S ,  6, 0 },
+   { TYP_S ,  6, 0 },
+   { TYP_L , 11, 0 },
+   { TYP_S ,  6, 0 },
+   { TYP_S ,  6, 0 },
+   { TYP_D, 5, 2 },
+   { TYP_D, 5, 2 },
+   { TYP_S ,  6, 0 },
+   { TYP_L , 11, 0 },
+   { TYP_L , 11, 0 },
+};
+#endif
+
+/* description for datatypes of KUNDE *****************************************/
+
+ #define KUNDE_S390 \
+         long IDFNR; \
+         char MATCHCODE[13]; \
+         short FILIALNR; \
+         long KDNR; \
+         long ETARTKLASSE1; \
+         long ETARTKLASSE2; \
+         long ETKDMERKMAL1; \
+         long ETKDMERKMAL2; \
+         short ANREDEKZ; \
+         char NAMEAPO[41]; \
+         char NAMEINHABER[31]; \
+         char STRASSE[31]; \
+         char ORT[31]; \
+         char POSTLEITZAHL[11]; \
+         char TELNR[21]; \
+         char TELNRDAFUE[21]; \
+         char FAXNR[26]; \
+         char TELKURZWAHL[5]; \
+         long IMSBEZIRKNR; \
+         char KDGRUPPE[3]; \
+         long PERSONALNRVERTR; \
+         char DAFUESYSTEM[3]; \
+         char KZKDDOPPELKONTR; \
+         char LAGERFACHNRRGBEI[5]; \
+         short ANZPOSLS_RG; \
+         short ANZPOSSORTBEHAELT; \
+         char KZKDKLASSE[4]; \
+         short ORIGINALFILIALNR; \
+         short NOTFILIALNR; \
+         char BEMERKUNGEN[241]; \
+         char KUNDETEXT[241]; \
+         char VERBUNDKUNDE; \
+         char STDAUFKOBUART[5]; \
+         char PASSWORD[9]; \
+         char KUEHLBOX; \
+         long TOURENKIPPZEIT; \
+         char VZKK1; \
+         char LAND[4]; \
+         short VERTRIEBSZENTRUMNR; \
+         long KUNDENNR; \
+         char EMAILADRESSE[61]; \
+         char NACHLIEFERTYP; \
+         long PARTNERNR; \
+         char KZSPRACHE[3]; \
+         char KZPSYCHOSTOFFE; \
+         char XMLPREISLEVEL; \
+         char PREWHOLETYP; \
+         char XMLINFOLEVEL; \
+         char NATIONALCUSTOMERNO[19]; \
+         char RATIOCUSTOMERNO[13]; \
+         short ANZAUFCLOSE; \
+         char KRANKENKASSENNR[7]; \
+         char CALCULATIONTYPE; \
+         short SURCHARGE_BASIC; \
+         short DEDUCTION_BASIC; \
+         double SURCHARGEPCT; \
+         double DEDUCTIONPCT; \
+         short VATREGISTERED; \
+         short REBATEMETHFREESALE; \
+         short REBATEMETHHEALTHF; \
+         long MAINCSTNO; \
+         short SURCHARGE_BASIC_KK; \
+         short DEDUCTION_BASIC_KK; \
+         double SURCHARGEPCTKK; \
+         double DEDUCTIONPCTKK; \
+         short LIEFERMELDUNG; \
+         long MANUFACTURERNO; \
+         long MSV3CFGCHANGEDATE; \
+
+
+
+/* Copy-Function Struct to single Data KUNDE **********************************/
+
+ #define KUNDE_S390_COPY_TO_SINGLE(_x_) \
+         IDFNR=_x_->IDFNR;\
+          strcpy(MATCHCODE,_x_->MATCHCODE);\
+         FILIALNR=_x_->FILIALNR;\
+         KDNR=_x_->KDNR;\
+         ETARTKLASSE1=_x_->ETARTKLASSE1;\
+         ETARTKLASSE2=_x_->ETARTKLASSE2;\
+         ETKDMERKMAL1=_x_->ETKDMERKMAL1;\
+         ETKDMERKMAL2=_x_->ETKDMERKMAL2;\
+         ANREDEKZ=_x_->ANREDEKZ;\
+          strcpy(NAMEAPO,_x_->NAMEAPO);\
+          strcpy(NAMEINHABER,_x_->NAMEINHABER);\
+          strcpy(STRASSE,_x_->STRASSE);\
+          strcpy(ORT,_x_->ORT);\
+          strcpy(POSTLEITZAHL,_x_->POSTLEITZAHL);\
+          strcpy(TELNR,_x_->TELNR);\
+          strcpy(TELNRDAFUE,_x_->TELNRDAFUE);\
+          strcpy(FAXNR,_x_->FAXNR);\
+          strcpy(TELKURZWAHL,_x_->TELKURZWAHL);\
+         IMSBEZIRKNR=_x_->IMSBEZIRKNR;\
+          strcpy(KDGRUPPE,_x_->KDGRUPPE);\
+         PERSONALNRVERTR=_x_->PERSONALNRVERTR;\
+          strcpy(DAFUESYSTEM,_x_->DAFUESYSTEM);\
+         KZKDDOPPELKONTR=_x_->KZKDDOPPELKONTR;\
+          strcpy(LAGERFACHNRRGBEI,_x_->LAGERFACHNRRGBEI);\
+         ANZPOSLS_RG=_x_->ANZPOSLS_RG;\
+         ANZPOSSORTBEHAELT=_x_->ANZPOSSORTBEHAELT;\
+          strcpy(KZKDKLASSE,_x_->KZKDKLASSE);\
+         ORIGINALFILIALNR=_x_->ORIGINALFILIALNR;\
+         NOTFILIALNR=_x_->NOTFILIALNR;\
+          strcpy(BEMERKUNGEN,_x_->BEMERKUNGEN);\
+          strcpy(KUNDETEXT,_x_->KUNDETEXT);\
+         VERBUNDKUNDE=_x_->VERBUNDKUNDE;\
+          strcpy(STDAUFKOBUART,_x_->STDAUFKOBUART);\
+          strcpy(PASSWORD,_x_->PASSWORD);\
+         KUEHLBOX=_x_->KUEHLBOX;\
+         TOURENKIPPZEIT=_x_->TOURENKIPPZEIT;\
+         VZKK1=_x_->VZKK1;\
+          strcpy(LAND,_x_->LAND);\
+         VERTRIEBSZENTRUMNR=_x_->VERTRIEBSZENTRUMNR;\
+         KUNDENNR=_x_->KUNDENNR;\
+          strcpy(EMAILADRESSE,_x_->EMAILADRESSE);\
+         NACHLIEFERTYP=_x_->NACHLIEFERTYP;\
+         PARTNERNR=_x_->PARTNERNR;\
+          strcpy(KZSPRACHE,_x_->KZSPRACHE);\
+         KZPSYCHOSTOFFE=_x_->KZPSYCHOSTOFFE;\
+         XMLPREISLEVEL=_x_->XMLPREISLEVEL;\
+         PREWHOLETYP=_x_->PREWHOLETYP;\
+         XMLINFOLEVEL=_x_->XMLINFOLEVEL;\
+          strcpy(NATIONALCUSTOMERNO,_x_->NATIONALCUSTOMERNO);\
+          strcpy(RATIOCUSTOMERNO,_x_->RATIOCUSTOMERNO);\
+         ANZAUFCLOSE=_x_->ANZAUFCLOSE;\
+          strcpy(KRANKENKASSENNR,_x_->KRANKENKASSENNR);\
+         CALCULATIONTYPE=_x_->CALCULATIONTYPE;\
+         SURCHARGE_BASIC=_x_->SURCHARGE_BASIC;\
+         DEDUCTION_BASIC=_x_->DEDUCTION_BASIC;\
+         SURCHARGEPCT=_x_->SURCHARGEPCT;\
+         DEDUCTIONPCT=_x_->DEDUCTIONPCT;\
+         VATREGISTERED=_x_->VATREGISTERED;\
+         REBATEMETHFREESALE=_x_->REBATEMETHFREESALE;\
+         REBATEMETHHEALTHF=_x_->REBATEMETHHEALTHF;\
+         MAINCSTNO=_x_->MAINCSTNO;\
+         SURCHARGE_BASIC_KK=_x_->SURCHARGE_BASIC_KK;\
+         DEDUCTION_BASIC_KK=_x_->DEDUCTION_BASIC_KK;\
+         SURCHARGEPCTKK=_x_->SURCHARGEPCTKK;\
+         DEDUCTIONPCTKK=_x_->DEDUCTIONPCTKK;\
+         LIEFERMELDUNG=_x_->LIEFERMELDUNG;\
+         MANUFACTURERNO=_x_->MANUFACTURERNO;\
+         MSV3CFGCHANGEDATE=_x_->MSV3CFGCHANGEDATE;\
+
+ #define KUNDE_S390_COPY_TO_STRUCT(_x_) \
+          _x_->IDFNR=IDFNR;\
+          strcpy(_x_->MATCHCODE,MATCHCODE);\
+          _x_->FILIALNR=FILIALNR;\
+          _x_->KDNR=KDNR;\
+          _x_->ETARTKLASSE1=ETARTKLASSE1;\
+          _x_->ETARTKLASSE2=ETARTKLASSE2;\
+          _x_->ETKDMERKMAL1=ETKDMERKMAL1;\
+          _x_->ETKDMERKMAL2=ETKDMERKMAL2;\
+          _x_->ANREDEKZ=ANREDEKZ;\
+          strcpy(_x_->NAMEAPO,NAMEAPO);\
+          strcpy(_x_->NAMEINHABER,NAMEINHABER);\
+          strcpy(_x_->STRASSE,STRASSE);\
+          strcpy(_x_->ORT,ORT);\
+          strcpy(_x_->POSTLEITZAHL,POSTLEITZAHL);\
+          strcpy(_x_->TELNR,TELNR);\
+          strcpy(_x_->TELNRDAFUE,TELNRDAFUE);\
+          strcpy(_x_->FAXNR,FAXNR);\
+          strcpy(_x_->TELKURZWAHL,TELKURZWAHL);\
+          _x_->IMSBEZIRKNR=IMSBEZIRKNR;\
+          strcpy(_x_->KDGRUPPE,KDGRUPPE);\
+          _x_->PERSONALNRVERTR=PERSONALNRVERTR;\
+          strcpy(_x_->DAFUESYSTEM,DAFUESYSTEM);\
+          _x_->KZKDDOPPELKONTR=KZKDDOPPELKONTR;\
+          strcpy(_x_->LAGERFACHNRRGBEI,LAGERFACHNRRGBEI);\
+          _x_->ANZPOSLS_RG=ANZPOSLS_RG;\
+          _x_->ANZPOSSORTBEHAELT=ANZPOSSORTBEHAELT;\
+          strcpy(_x_->KZKDKLASSE,KZKDKLASSE);\
+          _x_->ORIGINALFILIALNR=ORIGINALFILIALNR;\
+          _x_->NOTFILIALNR=NOTFILIALNR;\
+          strcpy(_x_->BEMERKUNGEN,BEMERKUNGEN);\
+          strcpy(_x_->KUNDETEXT,KUNDETEXT);\
+          _x_->VERBUNDKUNDE=VERBUNDKUNDE;\
+          strcpy(_x_->STDAUFKOBUART,STDAUFKOBUART);\
+          strcpy(_x_->PASSWORD,PASSWORD);\
+          _x_->KUEHLBOX=KUEHLBOX;\
+          _x_->TOURENKIPPZEIT=TOURENKIPPZEIT;\
+          _x_->VZKK1=VZKK1;\
+          strcpy(_x_->LAND,LAND);\
+          _x_->VERTRIEBSZENTRUMNR=VERTRIEBSZENTRUMNR;\
+          _x_->KUNDENNR=KUNDENNR;\
+          strcpy(_x_->EMAILADRESSE,EMAILADRESSE);\
+          _x_->NACHLIEFERTYP=NACHLIEFERTYP;\
+          _x_->PARTNERNR=PARTNERNR;\
+          strcpy(_x_->KZSPRACHE,KZSPRACHE);\
+          _x_->KZPSYCHOSTOFFE=KZPSYCHOSTOFFE;\
+          _x_->XMLPREISLEVEL=XMLPREISLEVEL;\
+          _x_->PREWHOLETYP=PREWHOLETYP;\
+          _x_->XMLINFOLEVEL=XMLINFOLEVEL;\
+          strcpy(_x_->NATIONALCUSTOMERNO,NATIONALCUSTOMERNO);\
+          strcpy(_x_->RATIOCUSTOMERNO,RATIOCUSTOMERNO);\
+          _x_->ANZAUFCLOSE=ANZAUFCLOSE;\
+          strcpy(_x_->KRANKENKASSENNR,KRANKENKASSENNR);\
+          _x_->CALCULATIONTYPE=CALCULATIONTYPE;\
+          _x_->SURCHARGE_BASIC=SURCHARGE_BASIC;\
+          _x_->DEDUCTION_BASIC=DEDUCTION_BASIC;\
+          _x_->SURCHARGEPCT=SURCHARGEPCT;\
+          _x_->DEDUCTIONPCT=DEDUCTIONPCT;\
+          _x_->VATREGISTERED=VATREGISTERED;\
+          _x_->REBATEMETHFREESALE=REBATEMETHFREESALE;\
+          _x_->REBATEMETHHEALTHF=REBATEMETHHEALTHF;\
+          _x_->MAINCSTNO=MAINCSTNO;\
+          _x_->SURCHARGE_BASIC_KK=SURCHARGE_BASIC_KK;\
+          _x_->DEDUCTION_BASIC_KK=DEDUCTION_BASIC_KK;\
+          _x_->SURCHARGEPCTKK=SURCHARGEPCTKK;\
+          _x_->DEDUCTIONPCTKK=DEDUCTIONPCTKK;\
+          _x_->LIEFERMELDUNG=LIEFERMELDUNG;\
+          _x_->MANUFACTURERNO=MANUFACTURERNO;\
+          _x_->MSV3CFGCHANGEDATE=MSV3CFGCHANGEDATE;\
+
+
+
+/* FunctionNumber-Define of kunde *********************************************/
+
+
+#ifdef PRZ_OLD_FUNCTION
+/* Old-FunctionNumber-Define of kunde *****************************************/
+
+
+#endif
+
+/* C++ Class ******************************************************************/
+
+#ifdef TRANSCLASS
+
+#include<vector>
+using namespace std;
+
+/* ppunixc */
+#include <sockclient.h>
+#include <ppstring.h>
+#include <ppgeneric.h>
+
+/* must be implemented */
+void FehlerBehandlung(int rc, const char * const error_msg);
+
+#ifndef __VIRTUAL_DADE_CLASS__
+#define __VIRTUAL_DADE_CLASS__
+
+class ppDadeVirtual {
+public:
+    virtual    ~ppDadeVirtual() {};
+    virtual int SelList      (int FetchRel = 1, int pos = 0) = 0;
+    virtual int SelListHist  (int FetchRel = 1, int pos = 0) = 0;
+    virtual int SelListFuture(int FetchRel = 1, int pos = 0) = 0;
+    virtual int Load         (int pos = 0                  ) = 0;
+    virtual int Delete       (int pos = 0                  ) = 0;
+    virtual int Save         (int pos = 0                  ) = 0;
+};
+#endif
+
+class CKUNDE : public ppDadeVirtual {
+public:
+    kundeS s;
+    int  rc;
+    char error_msg[81];
+private:
+    bool bOpenCursor;
+    bool bEndOfSelect;
+    int  FncNumber;
+    int  CursorPos;
+    int  AnzPos;
+    vector<kundeS> lst; // class list
+
+public:
+    unsigned int GetSize() const { return static_cast<unsigned int>(lst.size()); };
+    void         ClearStruct() { s.clear(); }
+    bool         SetData(unsigned int i) {
+                     if (GetSize() <= i)
+                         return false;
+                     s = lst.at(i);
+                     return true;
+                 }
+    bool         SetList(const unsigned int i) {
+                     if (GetSize() <= i)
+                         return false;
+                     vector< kundeS >::iterator it = lst.begin() + i;
+                     *it = s;
+                     return true;
+                 }
+    bool         InsList() {
+                     Strip(s);
+                     kundeS c = s;
+                     lst.insert(lst.end(), c);
+                     AnzPos++;
+                     return true;
+                 }
+    bool         DelList(const unsigned int i) {
+                     if (GetSize() <= i)
+                         return false;
+                     vector< kundeS >::iterator it = lst.begin() + i;
+                     if (it != lst.end())
+                         lst.erase(it);
+                     if (--AnzPos < 0)
+                         AnzPos = 0;
+                     return true;
+                 }
+
+    vector<kundeS>::iterator
+                 beginList() { return lst.begin(); }
+    vector<kundeS>::iterator
+                 endList  () { return lst.end  (); }
+
+    long         GetIdfnr() const { return s.IDFNR; }
+    const char*  GetMatchcode(ppString & t) const { t = s.MATCHCODE; t.erasespace(ppString::END); return t.c_str(); }
+    short        GetFilialnr() const { return s.FILIALNR; }
+    long         GetKdnr() const { return s.KDNR; }
+    long         GetEtartklasse1() const { return s.ETARTKLASSE1; }
+    long         GetEtartklasse2() const { return s.ETARTKLASSE2; }
+    long         GetEtkdmerkmal1() const { return s.ETKDMERKMAL1; }
+    long         GetEtkdmerkmal2() const { return s.ETKDMERKMAL2; }
+    short        GetAnredekz() const { return s.ANREDEKZ; }
+    const char*  GetNameapo(ppString & t) const { t = s.NAMEAPO; t.erasespace(ppString::END); return t.c_str(); }
+    const char*  GetNameinhaber(ppString & t) const { t = s.NAMEINHABER; t.erasespace(ppString::END); return t.c_str(); }
+    const char*  GetStrasse(ppString & t) const { t = s.STRASSE; t.erasespace(ppString::END); return t.c_str(); }
+    const char*  GetOrt(ppString & t) const { t = s.ORT; t.erasespace(ppString::END); return t.c_str(); }
+    const char*  GetPostleitzahl(ppString & t) const { t = s.POSTLEITZAHL; t.erasespace(ppString::END); return t.c_str(); }
+    const char*  GetTelnr(ppString & t) const { t = s.TELNR; t.erasespace(ppString::END); return t.c_str(); }
+    const char*  GetTelnrdafue(ppString & t) const { t = s.TELNRDAFUE; t.erasespace(ppString::END); return t.c_str(); }
+    const char*  GetFaxnr(ppString & t) const { t = s.FAXNR; t.erasespace(ppString::END); return t.c_str(); }
+    const char*  GetTelkurzwahl(ppString & t) const { t = s.TELKURZWAHL; t.erasespace(ppString::END); return t.c_str(); }
+    long         GetImsbezirknr() const { return s.IMSBEZIRKNR; }
+    const char*  GetKdgruppe(ppString & t) const { t = s.KDGRUPPE; t.erasespace(ppString::END); return t.c_str(); }
+    long         GetPersonalnrvertr() const { return s.PERSONALNRVERTR; }
+    const char*  GetDafuesystem(ppString & t) const { t = s.DAFUESYSTEM; t.erasespace(ppString::END); return t.c_str(); }
+    char         GetKzkddoppelkontr() const { return s.KZKDDOPPELKONTR[0]; }
+    const char*  GetLagerfachnrrgbei(ppString & t) const { t = s.LAGERFACHNRRGBEI; t.erasespace(ppString::END); return t.c_str(); }
+    short        GetAnzposls_rg() const { return s.ANZPOSLS_RG; }
+    short        GetAnzpossortbehaelt() const { return s.ANZPOSSORTBEHAELT; }
+    const char*  GetKzkdklasse(ppString & t) const { t = s.KZKDKLASSE; t.erasespace(ppString::END); return t.c_str(); }
+    short        GetOriginalfilialnr() const { return s.ORIGINALFILIALNR; }
+    short        GetNotfilialnr() const { return s.NOTFILIALNR; }
+    const char*  GetBemerkungen(ppString & t) const { t = s.BEMERKUNGEN; t.erasespace(ppString::END); return t.c_str(); }
+    const char*  GetKundetext(ppString & t) const { t = s.KUNDETEXT; t.erasespace(ppString::END); return t.c_str(); }
+    char         GetVerbundkunde() const { return s.VERBUNDKUNDE[0]; }
+    const char*  GetStdaufkobuart(ppString & t) const { t = s.STDAUFKOBUART; t.erasespace(ppString::END); return t.c_str(); }
+    const char*  GetPassword(ppString & t) const { t = s.PASSWORD; t.erasespace(ppString::END); return t.c_str(); }
+    char         GetKuehlbox() const { return s.KUEHLBOX[0]; }
+    long         GetTourenkippzeit() const { return s.TOURENKIPPZEIT; }
+    char         GetVzkk1() const { return s.VZKK1[0]; }
+    const char*  GetLand(ppString & t) const { t = s.LAND; t.erasespace(ppString::END); return t.c_str(); }
+    short        GetVertriebszentrumnr() const { return s.VERTRIEBSZENTRUMNR; }
+    long         GetKundennr() const { return s.KUNDENNR; }
+    const char*  GetEmailadresse(ppString & t) const { t = s.EMAILADRESSE; t.erasespace(ppString::END); return t.c_str(); }
+    char         GetNachliefertyp() const { return s.NACHLIEFERTYP[0]; }
+    long         GetPartnernr() const { return s.PARTNERNR; }
+    const char*  GetKzsprache(ppString & t) const { t = s.KZSPRACHE; t.erasespace(ppString::END); return t.c_str(); }
+    char         GetKzpsychostoffe() const { return s.KZPSYCHOSTOFFE[0]; }
+    char         GetXmlpreislevel() const { return s.XMLPREISLEVEL[0]; }
+    char         GetPrewholetyp() const { return s.PREWHOLETYP[0]; }
+    char         GetXmlinfolevel() const { return s.XMLINFOLEVEL[0]; }
+    const char*  GetNationalcustomerno(ppString & t) const { t = s.NATIONALCUSTOMERNO; t.erasespace(ppString::END); return t.c_str(); }
+    const char*  GetRatiocustomerno(ppString & t) const { t = s.RATIOCUSTOMERNO; t.erasespace(ppString::END); return t.c_str(); }
+    short        GetAnzaufclose() const { return s.ANZAUFCLOSE; }
+    const char*  GetKrankenkassennr(ppString & t) const { t = s.KRANKENKASSENNR; t.erasespace(ppString::END); return t.c_str(); }
+    char         GetCalculationtype() const { return s.CALCULATIONTYPE[0]; }
+    short        GetSurcharge_basic() const { return s.SURCHARGE_BASIC; }
+    short        GetDeduction_basic() const { return s.DEDUCTION_BASIC; }
+    double       GetSurchargepct() const { return s.SURCHARGEPCT; }
+    double       GetDeductionpct() const { return s.DEDUCTIONPCT; }
+    short        GetVatregistered() const { return s.VATREGISTERED; }
+    short        GetRebatemethfreesale() const { return s.REBATEMETHFREESALE; }
+    short        GetRebatemethhealthf() const { return s.REBATEMETHHEALTHF; }
+    long         GetMaincstno() const { return s.MAINCSTNO; }
+    short        GetSurcharge_basic_kk() const { return s.SURCHARGE_BASIC_KK; }
+    short        GetDeduction_basic_kk() const { return s.DEDUCTION_BASIC_KK; }
+    double       GetSurchargepctkk() const { return s.SURCHARGEPCTKK; }
+    double       GetDeductionpctkk() const { return s.DEDUCTIONPCTKK; }
+    short        GetLiefermeldung() const { return s.LIEFERMELDUNG; }
+    long         GetManufacturerno() const { return s.MANUFACTURERNO; }
+    long         GetMsv3cfgchangedate() const { return s.MSV3CFGCHANGEDATE; }
+
+    const kundeS &
+                 GetStruct() const { return s; }
+    void         SetIdfnr(long t) { s.IDFNR = t; }
+    void         SetMatchcode(const ppString & t) { ppGStrCopy(s.MATCHCODE, t.c_str(), L_KUNDE_MATCHCODE); }
+    void         SetFilialnr(short t) { s.FILIALNR = t; }
+    void         SetKdnr(long t) { s.KDNR = t; }
+    void         SetEtartklasse1(long t) { s.ETARTKLASSE1 = t; }
+    void         SetEtartklasse2(long t) { s.ETARTKLASSE2 = t; }
+    void         SetEtkdmerkmal1(long t) { s.ETKDMERKMAL1 = t; }
+    void         SetEtkdmerkmal2(long t) { s.ETKDMERKMAL2 = t; }
+    void         SetAnredekz(short t) { s.ANREDEKZ = t; }
+    void         SetNameapo(const ppString & t) { ppGStrCopy(s.NAMEAPO, t.c_str(), L_KUNDE_NAMEAPO); }
+    void         SetNameinhaber(const ppString & t) { ppGStrCopy(s.NAMEINHABER, t.c_str(), L_KUNDE_NAMEINHABER); }
+    void         SetStrasse(const ppString & t) { ppGStrCopy(s.STRASSE, t.c_str(), L_KUNDE_STRASSE); }
+    void         SetOrt(const ppString & t) { ppGStrCopy(s.ORT, t.c_str(), L_KUNDE_ORT); }
+    void         SetPostleitzahl(const ppString & t) { ppGStrCopy(s.POSTLEITZAHL, t.c_str(), L_KUNDE_POSTLEITZAHL); }
+    void         SetTelnr(const ppString & t) { ppGStrCopy(s.TELNR, t.c_str(), L_KUNDE_TELNR); }
+    void         SetTelnrdafue(const ppString & t) { ppGStrCopy(s.TELNRDAFUE, t.c_str(), L_KUNDE_TELNRDAFUE); }
+    void         SetFaxnr(const ppString & t) { ppGStrCopy(s.FAXNR, t.c_str(), L_KUNDE_FAXNR); }
+    void         SetTelkurzwahl(const ppString & t) { ppGStrCopy(s.TELKURZWAHL, t.c_str(), L_KUNDE_TELKURZWAHL); }
+    void         SetImsbezirknr(long t) { s.IMSBEZIRKNR = t; }
+    void         SetKdgruppe(const ppString & t) { ppGStrCopy(s.KDGRUPPE, t.c_str(), L_KUNDE_KDGRUPPE); }
+    void         SetPersonalnrvertr(long t) { s.PERSONALNRVERTR = t; }
+    void         SetDafuesystem(const ppString & t) { ppGStrCopy(s.DAFUESYSTEM, t.c_str(), L_KUNDE_DAFUESYSTEM); }
+    void         SetKzkddoppelkontr(char t) { s.KZKDDOPPELKONTR[0] = t; s.KZKDDOPPELKONTR[1] = '\0';}
+    void         SetLagerfachnrrgbei(const ppString & t) { ppGStrCopy(s.LAGERFACHNRRGBEI, t.c_str(), L_KUNDE_LAGERFACHNRRGBEI); }
+    void         SetAnzposls_rg(short t) { s.ANZPOSLS_RG = t; }
+    void         SetAnzpossortbehaelt(short t) { s.ANZPOSSORTBEHAELT = t; }
+    void         SetKzkdklasse(const ppString & t) { ppGStrCopy(s.KZKDKLASSE, t.c_str(), L_KUNDE_KZKDKLASSE); }
+    void         SetOriginalfilialnr(short t) { s.ORIGINALFILIALNR = t; }
+    void         SetNotfilialnr(short t) { s.NOTFILIALNR = t; }
+    void         SetBemerkungen(const ppString & t) { ppGStrCopy(s.BEMERKUNGEN, t.c_str(), L_KUNDE_BEMERKUNGEN); }
+    void         SetKundetext(const ppString & t) { ppGStrCopy(s.KUNDETEXT, t.c_str(), L_KUNDE_KUNDETEXT); }
+    void         SetVerbundkunde(char t) { s.VERBUNDKUNDE[0] = t; s.VERBUNDKUNDE[1] = '\0';}
+    void         SetStdaufkobuart(const ppString & t) { ppGStrCopy(s.STDAUFKOBUART, t.c_str(), L_KUNDE_STDAUFKOBUART); }
+    void         SetPassword(const ppString & t) { ppGStrCopy(s.PASSWORD, t.c_str(), L_KUNDE_PASSWORD); }
+    void         SetKuehlbox(char t) { s.KUEHLBOX[0] = t; s.KUEHLBOX[1] = '\0';}
+    void         SetTourenkippzeit(long t) { s.TOURENKIPPZEIT = t; }
+    void         SetVzkk1(char t) { s.VZKK1[0] = t; s.VZKK1[1] = '\0';}
+    void         SetLand(const ppString & t) { ppGStrCopy(s.LAND, t.c_str(), L_KUNDE_LAND); }
+    void         SetVertriebszentrumnr(short t) { s.VERTRIEBSZENTRUMNR = t; }
+    void         SetKundennr(long t) { s.KUNDENNR = t; }
+    void         SetEmailadresse(const ppString & t) { ppGStrCopy(s.EMAILADRESSE, t.c_str(), L_KUNDE_EMAILADRESSE); }
+    void         SetNachliefertyp(char t) { s.NACHLIEFERTYP[0] = t; s.NACHLIEFERTYP[1] = '\0';}
+    void         SetPartnernr(long t) { s.PARTNERNR = t; }
+    void         SetKzsprache(const ppString & t) { ppGStrCopy(s.KZSPRACHE, t.c_str(), L_KUNDE_KZSPRACHE); }
+    void         SetKzpsychostoffe(char t) { s.KZPSYCHOSTOFFE[0] = t; s.KZPSYCHOSTOFFE[1] = '\0';}
+    void         SetXmlpreislevel(char t) { s.XMLPREISLEVEL[0] = t; s.XMLPREISLEVEL[1] = '\0';}
+    void         SetPrewholetyp(char t) { s.PREWHOLETYP[0] = t; s.PREWHOLETYP[1] = '\0';}
+    void         SetXmlinfolevel(char t) { s.XMLINFOLEVEL[0] = t; s.XMLINFOLEVEL[1] = '\0';}
+    void         SetNationalcustomerno(const ppString & t) { ppGStrCopy(s.NATIONALCUSTOMERNO, t.c_str(), L_KUNDE_NATIONALCUSTOMERNO); }
+    void         SetRatiocustomerno(const ppString & t) { ppGStrCopy(s.RATIOCUSTOMERNO, t.c_str(), L_KUNDE_RATIOCUSTOMERNO); }
+    void         SetAnzaufclose(short t) { s.ANZAUFCLOSE = t; }
+    void         SetKrankenkassennr(const ppString & t) { ppGStrCopy(s.KRANKENKASSENNR, t.c_str(), L_KUNDE_KRANKENKASSENNR); }
+    void         SetCalculationtype(char t) { s.CALCULATIONTYPE[0] = t; s.CALCULATIONTYPE[1] = '\0';}
+    void         SetSurcharge_basic(short t) { s.SURCHARGE_BASIC = t; }
+    void         SetDeduction_basic(short t) { s.DEDUCTION_BASIC = t; }
+    void         SetSurchargepct(double t) { s.SURCHARGEPCT = t; }
+    void         SetDeductionpct(double t) { s.DEDUCTIONPCT = t; }
+    void         SetVatregistered(short t) { s.VATREGISTERED = t; }
+    void         SetRebatemethfreesale(short t) { s.REBATEMETHFREESALE = t; }
+    void         SetRebatemethhealthf(short t) { s.REBATEMETHHEALTHF = t; }
+    void         SetMaincstno(long t) { s.MAINCSTNO = t; }
+    void         SetSurcharge_basic_kk(short t) { s.SURCHARGE_BASIC_KK = t; }
+    void         SetDeduction_basic_kk(short t) { s.DEDUCTION_BASIC_KK = t; }
+    void         SetSurchargepctkk(double t) { s.SURCHARGEPCTKK = t; }
+    void         SetDeductionpctkk(double t) { s.DEDUCTIONPCTKK = t; }
+    void         SetLiefermeldung(short t) { s.LIEFERMELDUNG = t; }
+    void         SetManufacturerno(long t) { s.MANUFACTURERNO = t; }
+    void         SetMsv3cfgchangedate(long t) { s.MSV3CFGCHANGEDATE = t; }
+
+    void         SetStruct(const kundeS & t) { s = t; }
+
+
+    // virtual functions
+public:
+    int          Load(int pos = 0) { pos = pos; return 1; }
+    int          Save(int pos = 0) { pos = pos; return 1; }
+    int          Delete(int pos = 0) { pos = pos; return 1; }
+    int          SelList(int FetchRel = 1, int pos = 0) { FetchRel = FetchRel; pos = pos; return 1; }
+    int          SelListHist(int FetchRel = 1, int pos = 0) { FetchRel = FetchRel; pos = pos; return 1; }
+    int          SelListFuture(int FetchRel = 1, int pos = 0) { FetchRel = FetchRel; pos = pos; return 1; }
+
+    // constructor
+    CKUNDE() {
+        ::buf_default((void *)&s, KUNDE_BES, KUNDE_ANZ);
+        bOpenCursor   = false;
+        bEndOfSelect  = false;
+        FncNumber     = 0;
+        CursorPos     = 0;
+        AnzPos        = 0;
+        rc            = 0;
+        s.clear();
+    }
+
+    // destructor
+    virtual ~CKUNDE() {
+    }
+
+    // buffer init
+    void buf_default() {
+        ::buf_default((void *)&s, KUNDE_BES, KUNDE_ANZ);
+    }
+
+    // socket server call
+    int Server(int fkt_nr, int pos = 0) {
+    #ifdef WIN32
+        rc = ::ServerNr(pos, fkt_nr, (void *)&s, KUNDE_BES, (int)KUNDE_ANZ, error_msg);
+    #else
+        rc = ::Server(fkt_nr, (void *)&s, KUNDE_BES, (int)KUNDE_ANZ, error_msg);
+    #endif
+        if (rc < 0)
+            FehlerBehandlung( rc, error_msg );
+        return rc;
+    }
+
+private:
+    void Strip(N_KUNDE & d) {
+        d = d;
+    #ifdef WIN32
+        ppGStripLast(d.MATCHCODE);
+        ppGStripLast(d.NAMEAPO);
+        ppGStripLast(d.NAMEINHABER);
+        ppGStripLast(d.STRASSE);
+        ppGStripLast(d.ORT);
+        ppGStripLast(d.POSTLEITZAHL);
+        ppGStripLast(d.TELNR);
+        ppGStripLast(d.TELNRDAFUE);
+        ppGStripLast(d.FAXNR);
+        ppGStripLast(d.TELKURZWAHL);
+        ppGStripLast(d.KDGRUPPE);
+        ppGStripLast(d.DAFUESYSTEM);
+        ppGStripLast(d.LAGERFACHNRRGBEI);
+        ppGStripLast(d.KZKDKLASSE);
+        ppGStripLast(d.BEMERKUNGEN);
+        ppGStripLast(d.KUNDETEXT);
+        ppGStripLast(d.STDAUFKOBUART);
+        ppGStripLast(d.PASSWORD);
+        ppGStripLast(d.LAND);
+        ppGStripLast(d.EMAILADRESSE);
+        ppGStripLast(d.KZSPRACHE);
+        ppGStripLast(d.NATIONALCUSTOMERNO);
+        ppGStripLast(d.RATIOCUSTOMERNO);
+        ppGStripLast(d.KRANKENKASSENNR);
+    #endif
+    }
+
+    int UniqueServerCall(int FncNr, int pos = 0) {
+    #ifndef __DADE_LOAD__
+       rc = ::ServerNr(pos, FncNr, (void *)&s, KUNDE_BES, (int)KUNDE_ANZ, error_msg);
+    #else
+       pos = pos;
+       rc = DistributorFunSelect(FncNr, (void *)&s, error_msg, &rc);
+    #endif
+       if (rc < 0)
+           FehlerBehandlung( rc, error_msg );
+       return rc;
+    }
+};
+#endif    // TRANSCLASS
+/* CreateSqlStatement of KUNDE ************************************************/
+
+ #define KUNDE_CREATE(x) EXEC SQL create table x (\
+         IDFNR integer default 0 not null,\
+         MATCHCODE char(12) default " " not null,\
+         FILIALNR smallint default 0 not null,\
+         KDNR integer default 0 not null,\
+         ETARTKLASSE1 integer default 0 not null,\
+         ETARTKLASSE2 integer default 0 not null,\
+         ETKDMERKMAL1 integer default 0 not null,\
+         ETKDMERKMAL2 integer default 0 not null,\
+         ANREDEKZ smallint default 0 not null,\
+         NAMEAPO char(40) default " " not null,\
+         NAMEINHABER char(30) default " " not null,\
+         STRASSE char(30) default " " not null,\
+         ORT char(30) default " " not null,\
+         POSTLEITZAHL char(10) default " " not null,\
+         TELNR char(20) default " " not null,\
+         TELNRDAFUE char(20) default " " not null,\
+         FAXNR char(25) default " " not null,\
+         TELKURZWAHL char(4) default " " not null,\
+         IMSBEZIRKNR integer default 0 not null,\
+         KDGRUPPE char(2) default " " not null,\
+         PERSONALNRVERTR integer default 0 not null,\
+         DAFUESYSTEM char(2) default " " not null,\
+         KZKDDOPPELKONTR char(1) default " " not null,\
+         LAGERFACHNRRGBEI char(4) default " " not null,\
+         ANZPOSLS_RG smallint default 0 not null,\
+         ANZPOSSORTBEHAELT smallint default 0 not null,\
+         KZKDKLASSE char(3) default " " not null,\
+         ORIGINALFILIALNR smallint default 0 not null,\
+         NOTFILIALNR smallint default 0 not null,\
+         BEMERKUNGEN varchar(240,0) default " " not null,\
+         KUNDETEXT varchar(240,0) default " " not null,\
+         VERBUNDKUNDE char(1) default " " not null,\
+         STDAUFKOBUART char(4) default " " not null,\
+         PASSWORD char(8) default " " not null,\
+         KUEHLBOX char(1) default " " not null,\
+         TOURENKIPPZEIT integer default 0 not null,\
+         VZKK1 char(1) default " " not null,\
+         LAND char(3) default " " not null,\
+         VERTRIEBSZENTRUMNR smallint default 0 not null,\
+         KUNDENNR integer default 0 not null,\
+         EMAILADRESSE varchar(60,0) default " " not null,\
+         NACHLIEFERTYP char(1) default " " not null,\
+         PARTNERNR integer default 0 not null,\
+         KZSPRACHE char(2) default " " not null,\
+         KZPSYCHOSTOFFE char(1) default " " not null,\
+         XMLPREISLEVEL char(1) default " " not null,\
+         PREWHOLETYP char(1) default " " not null,\
+         XMLINFOLEVEL char(1) default " " not null,\
+         NATIONALCUSTOMERNO char(18) default " " not null,\
+         RATIOCUSTOMERNO char(12) default " " not null,\
+         ANZAUFCLOSE smallint default 0 not null,\
+         KRANKENKASSENNR char(6) default " " not null,\
+         CALCULATIONTYPE char(1) default " " not null,\
+         SURCHARGE_BASIC smallint default 0 not null,\
+         DEDUCTION_BASIC smallint default 0 not null,\
+         SURCHARGEPCT decimal(5,2) default 0 not null,\
+         DEDUCTIONPCT decimal(5,2) default 0 not null,\
+         VATREGISTERED smallint default 0 not null,\
+         REBATEMETHFREESALE smallint default 0 not null,\
+         REBATEMETHHEALTHF smallint default 0 not null,\
+         MAINCSTNO integer default 0 not null,\
+         SURCHARGE_BASIC_KK smallint default 0 not null,\
+         DEDUCTION_BASIC_KK smallint default 0 not null,\
+         SURCHARGEPCTKK decimal(5,2) default 0 not null,\
+         DEDUCTIONPCTKK decimal(5,2) default 0 not null,\
+         LIEFERMELDUNG smallint default 0 not null,\
+         MANUFACTURERNO integer default 0 not null,\
+         MSV3CFGCHANGEDATE integer default 0 not null) in ksc extent size 416 next size 44 lock mode row;
+
+
+
+/* CreateIndexStatement of KUNDE **********************************************/
+
+ #define KUNDE_CREATE_INDEX(_X_,_Y_)\
+              _Y_ = 0;\
+         EXEC SQL create unique index i_Kunde_316 on _X_(\
+              VertriebszentrumNr,\
+              KundenNr ) in kscidx;\
+         if ( sqlca.sqlcode != 0 ) _Y_ = sqlca.sqlcode;\
+         EXEC SQL create   index i_kunde_315 on _X_(\
+              kdnr ) in kscidx;\
+         if ( sqlca.sqlcode != 0 ) _Y_ = sqlca.sqlcode;\
+         EXEC SQL create   index i_kunde_ean on _X_(\
+              kundeean ) in kscidx;\
+         if ( sqlca.sqlcode != 0 ) _Y_ = sqlca.sqlcode;\
+         EXEC SQL create   index i_kunde_mastercstno on _X_(\
+              MasterCstNo ) in kscidx;\
+         if ( sqlca.sqlcode != 0 ) _Y_ = sqlca.sqlcode;\
+         EXEC SQL create   index i_kunde_partner on _X_(\
+              partnernr ) in kscidx;\
+         if ( sqlca.sqlcode != 0 ) _Y_ = sqlca.sqlcode;\
+         EXEC SQL create   index i_kundeapo on _X_(\
+              nameapo ) in kscidx;\
+         if ( sqlca.sqlcode != 0 ) _Y_ = sqlca.sqlcode;\
+         EXEC SQL create   index kdmatchcodex on _X_(\
+              matchcode ) in kscidx;\
+         if ( sqlca.sqlcode != 0 ) _Y_ = sqlca.sqlcode;\
+         EXEC SQL create   index kundex on _X_(\
+              idfnr ) in kscidx;\
+         if ( sqlca.sqlcode != 0 ) _Y_ = sqlca.sqlcode;\
+
+
+/* DeleteIndexStatement of KUNDE **********************************************/
+
+ #define KUNDE_DELETE_INDEX(_X_)\
+              _X_ = 0;\
+         EXEC SQL drop index i_Kunde_316;\
+         if ( sqlca.sqlcode != 0 ) _X_ = sqlca.sqlcode;\
+         EXEC SQL drop index i_kunde_315;\
+         if ( sqlca.sqlcode != 0 ) _X_ = sqlca.sqlcode;\
+         EXEC SQL drop index i_kunde_ean;\
+         if ( sqlca.sqlcode != 0 ) _X_ = sqlca.sqlcode;\
+         EXEC SQL drop index i_kunde_mastercstno;\
+         if ( sqlca.sqlcode != 0 ) _X_ = sqlca.sqlcode;\
+         EXEC SQL drop index i_kunde_partner;\
+         if ( sqlca.sqlcode != 0 ) _X_ = sqlca.sqlcode;\
+         EXEC SQL drop index i_kundeapo;\
+         if ( sqlca.sqlcode != 0 ) _X_ = sqlca.sqlcode;\
+         EXEC SQL drop index kdmatchcodex;\
+         if ( sqlca.sqlcode != 0 ) _X_ = sqlca.sqlcode;\
+         EXEC SQL drop index kundex;\
+         if ( sqlca.sqlcode != 0 ) _X_ = sqlca.sqlcode;\
+
+
+
+
+#endif   // GUARD

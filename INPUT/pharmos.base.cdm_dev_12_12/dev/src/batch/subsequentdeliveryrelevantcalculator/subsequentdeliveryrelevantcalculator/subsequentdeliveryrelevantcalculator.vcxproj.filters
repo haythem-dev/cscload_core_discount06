@@ -1,0 +1,210 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Subsequentdeliveryrelevantcalculator">
+      <UniqueIdentifier>{e8f19533-a84b-4e1e-97f0-00217be4ed13}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Subsequentdeliveryrelevantcalculator\ApplController">
+      <UniqueIdentifier>{5112ef3b-e2b8-43fb-9ba7-f320de992771}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Loggerpool">
+      <UniqueIdentifier>{8bc95967-c9c8-42ef-8308-435ae0922b33}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ComponentManager">
+      <UniqueIdentifier>{59f8fa42-cf65-4be8-9d23-a4500d3dd764}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ComponentManager\InfrastructureCompMgr">
+      <UniqueIdentifier>{e443373f-8722-4cbd-b2e4-df13cad4c613}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ComponentManager\ApplCompMgr">
+      <UniqueIdentifier>{f99a2543-fa1f-42f4-bef1-447318f87834}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ComponentManager\ApplCompMgr\Impl">
+      <UniqueIdentifier>{aa1ef50c-793c-4b6f-a859-8173b60721f2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ComponentManager\ApplCompMgr\Interface">
+      <UniqueIdentifier>{2c32c283-5b42-47df-b412-34a0e525edc8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ComponentManager\ApplCompMgr\Interface\UseCaseGetter">
+      <UniqueIdentifier>{74bd1ab4-5c59-433c-af2f-84d6ce300592}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure">
+      <UniqueIdentifier>{dbdffacf-4e44-4022-95ce-64ba678776b9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\CmdLineEvaluator">
+      <UniqueIdentifier>{33577ee3-c044-4d31-827b-3c0ff94fbf22}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\Setup">
+      <UniqueIdentifier>{f5d1358d-1d82-4274-82c7-e9d575fa21aa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\Setup\impl">
+      <UniqueIdentifier>{09bf6f30-8520-4c97-ab60-53fe129777c1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\Setup\Interface">
+      <UniqueIdentifier>{53991eb3-c715-4b3c-9638-ab97c0aa7c5a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\Login">
+      <UniqueIdentifier>{060501d3-c2a7-4ffd-9c7f-5eb2623ce987}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UseCase">
+      <UniqueIdentifier>{a38cffec-e48e-477c-abc9-9c18f3d6c051}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UseCase\MainUC">
+      <UniqueIdentifier>{141bfdeb-c067-4bed-b27e-a21c54d4811f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\Accessor">
+      <UniqueIdentifier>{8208354c-be2b-4fed-8116-afbe05c2e980}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\Accessor\Article">
+      <UniqueIdentifier>{04131c91-e123-4256-9809-17c3f19aad30}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModule">
+      <UniqueIdentifier>{e1276e29-2052-4125-a427-2cdfd02d0059}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModule\Article">
+      <UniqueIdentifier>{61edbe76-cd3f-4930-b2d0-7631a3c26a3e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModule\DeliveryParam">
+      <UniqueIdentifier>{0fb4aed7-d398-487e-b2bc-ad29ffa6015e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\Accessor\DeliveryParam">
+      <UniqueIdentifier>{e8f82d40-e83b-41bd-9495-19f0fbae2521}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\Accessor\SubsequentDeliveryConfig">
+      <UniqueIdentifier>{d2a2c18e-c447-4bc1-b0fe-24c7e7ad0dd2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModule\SubsequentDeliveryConfig">
+      <UniqueIdentifier>{d2ca5399-4d4b-4297-a488-d344cac2d5e0}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="version.h">
+      <Filter>Subsequentdeliveryrelevantcalculator</Filter>
+    </ClInclude>
+    <ClInclude Include="subsequentdeliveryrelevantcalculator\subsequentdeliveryrelevantcalculatorapplctrl.h">
+      <Filter>Subsequentdeliveryrelevantcalculator\ApplController</Filter>
+    </ClInclude>
+    <ClInclude Include="loggerpool\subsequentdeliveryrelevantcalculator_loggerpool.h">
+      <Filter>Loggerpool</Filter>
+    </ClInclude>
+    <ClInclude Include="componentmanager\subsequentdeliveryrelevantcalculatorinfrastructurecompmgr.h">
+      <Filter>ComponentManager\InfrastructureCompMgr</Filter>
+    </ClInclude>
+    <ClInclude Include="componentmanager\subsequentdeliveryrelevantcalculatorinfrastructurecompmgrptr.h">
+      <Filter>ComponentManager\InfrastructureCompMgr</Filter>
+    </ClInclude>
+    <ClInclude Include="componentmanager\subsequentdeliveryrelevantcalculatorapplcompmgr.h">
+      <Filter>ComponentManager\ApplCompMgr\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="componentmanager\subsequentdeliveryrelevantcalculatorapplcompmgrptr.h">
+      <Filter>ComponentManager\ApplCompMgr\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="componentmanager\iusecasegetter.h">
+      <Filter>ComponentManager\ApplCompMgr\Interface\UseCaseGetter</Filter>
+    </ClInclude>
+    <ClInclude Include="componentmanager\iusecasegetterptr.h">
+      <Filter>ComponentManager\ApplCompMgr\Interface\UseCaseGetter</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\cmdline\subsequentdeliveryrelevantcalculatorcmdlineevaluator.h">
+      <Filter>Infrastructure\CmdLineEvaluator</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\cmdline\subsequentdeliveryrelevantcalculatorcmdlineevaluatorptr.h">
+      <Filter>Infrastructure\CmdLineEvaluator</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\setup\isubsequentdeliveryrelevantcalculatorlogingetter.h">
+      <Filter>Infrastructure\Setup\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\setup\isubsequentdeliveryrelevantcalculatorlogingetterptr.h">
+      <Filter>Infrastructure\Setup\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\setup\subsequentdeliveryrelevantcalculatorinfrastructuresetup.h">
+      <Filter>Infrastructure\Setup\impl</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\setup\subsequentdeliveryrelevantcalculatorinfrastructuresetupptr.h">
+      <Filter>Infrastructure\Setup\impl</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\login\login_definitions.h">
+      <Filter>Infrastructure\Login</Filter>
+    </ClInclude>
+    <ClInclude Include="usecase\mainuc.h">
+      <Filter>UseCase\MainUC</Filter>
+    </ClInclude>
+    <ClInclude Include="usecase\mainucptr.h">
+      <Filter>UseCase\MainUC</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\accessor\article\articleacc.h">
+      <Filter>Infrastructure\Accessor\Article</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\article\articledm.h">
+      <Filter>DomainModule\Article</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\accessor\deliveryparam\deliveryparamacc.h">
+      <Filter>Infrastructure\Accessor\DeliveryParam</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\deliveryparam\deliveryparamdm.h">
+      <Filter>DomainModule\DeliveryParam</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\accessor\subsequentdeliveryconfig\subsequentdeliveryconfigacc.h">
+      <Filter>Infrastructure\Accessor\SubsequentDeliveryConfig</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\subsequentdeliveryconfig\subsequentdeliveryconfigdm.h">
+      <Filter>DomainModule\SubsequentDeliveryConfig</Filter>
+    </ClInclude>
+    <ClInclude Include="usecase\CalculationRules.h">
+      <Filter>UseCase\MainUC</Filter>
+    </ClInclude>
+    <ClInclude Include="usecase\Utils.h">
+      <Filter>UseCase\MainUC</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="subsequentdeliveryrelevantcalculator\main.cpp">
+      <Filter>Subsequentdeliveryrelevantcalculator</Filter>
+    </ClCompile>
+    <ClCompile Include="subsequentdeliveryrelevantcalculator\subsequentdeliveryrelevantcalculatorapplctrl.cpp">
+      <Filter>Subsequentdeliveryrelevantcalculator\ApplController</Filter>
+    </ClCompile>
+    <ClCompile Include="loggerpool\subsequentdeliveryrelevantcalculator_loggerpool.cpp">
+      <Filter>Loggerpool</Filter>
+    </ClCompile>
+    <ClCompile Include="componentmanager\subsequentdeliveryrelevantcalculatorinfrastructurecompmgr.cpp">
+      <Filter>ComponentManager\InfrastructureCompMgr</Filter>
+    </ClCompile>
+    <ClCompile Include="componentmanager\subsequentdeliveryrelevantcalculatorapplcompmgr.cpp">
+      <Filter>ComponentManager\ApplCompMgr\Impl</Filter>
+    </ClCompile>
+    <ClCompile Include="infrastructure\cmdline\subsequentdeliveryrelevantcalculatorcmdlineevaluator.cpp">
+      <Filter>Infrastructure\CmdLineEvaluator</Filter>
+    </ClCompile>
+    <ClCompile Include="infrastructure\setup\subsequentdeliveryrelevantcalculatorinfrastructuresetup.cpp">
+      <Filter>Infrastructure\Setup\impl</Filter>
+    </ClCompile>
+    <ClCompile Include="usecase\mainuc.cpp">
+      <Filter>UseCase\MainUC</Filter>
+    </ClCompile>
+    <ClCompile Include="infrastructure\accessor\article\articleacc.cpp">
+      <Filter>Infrastructure\Accessor\Article</Filter>
+    </ClCompile>
+    <ClCompile Include="domainmodule\article\articledm.cpp">
+      <Filter>DomainModule\Article</Filter>
+    </ClCompile>
+    <ClCompile Include="infrastructure\accessor\deliveryparam\deliveryparamacc.cpp">
+      <Filter>Infrastructure\Accessor\DeliveryParam</Filter>
+    </ClCompile>
+    <ClCompile Include="domainmodule\deliveryparam\deliveryparamdm.cpp">
+      <Filter>DomainModule\DeliveryParam</Filter>
+    </ClCompile>
+    <ClCompile Include="infrastructure\accessor\subsequentdeliveryconfig\subsequentdeliveryconfigacc.cpp">
+      <Filter>Infrastructure\Accessor\SubsequentDeliveryConfig</Filter>
+    </ClCompile>
+    <ClCompile Include="domainmodule\subsequentdeliveryconfig\subsequentdeliveryconfigdm.cpp">
+      <Filter>DomainModule\SubsequentDeliveryConfig</Filter>
+    </ClCompile>
+    <ClCompile Include="usecase\CalculationRules.cpp">
+      <Filter>UseCase\MainUC</Filter>
+    </ClCompile>
+    <ClCompile Include="usecase\Utils.cpp">
+      <Filter>UseCase\MainUC</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,79 @@
+﻿<#
+// #############################################################
+// SQL statements HEADER STUB
+// #############################################################
+#>
+
+<# guard = CreateGuard("{0}SQL"); #>
+
+#ifndef <#= guard #>
+#define <#= guard #>
+
+#include <libbasar_definitions.h>
+
+<# SetNamespaceIn(); #>
+
+class <#= TypeName #>Sql
+{
+public:
+    ~<#= TypeName #>Sql();
+
+    // Create your SQL statement getters here ...
+    // e.g.:
+    static const basar::VarString get<#= TypeName #>Query(
+        <#= string.Join(", ", RequestInput.Select(x => $"const {GetFullBasarType(GetSqlType(x.Value))} {FirstLetterToLower(x.Key)}")) #>);
+
+private:
+    <#= TypeName #>Sql();
+    <#= TypeName #>Sql& operator=(const <#= TypeName #>Sql&);
+};
+
+<# SetNamespaceOut(); #>
+
+#endif // <#= guard #>
+
+<# SaveStub($"{TypeName}sql.h"); #>
+
+
+
+
+
+<#
+// #############################################################
+// SQL statements SOURCE STUB
+// #############################################################
+#>
+
+<# WriteInclude($"{TypeName}sql"); #>
+#include "logger/loggerpool.h"
+#include <sstream>
+#include <libbasarcmnutil_bstring.h>
+
+<# SetNamespaceIn(); #>
+
+<#= TypeName #>Sql::<#= TypeName #>Sql()
+{
+}
+
+<#= TypeName #>Sql::~<#= TypeName #>Sql()
+{
+}
+
+// Create your SQL statement getters here ...
+// e.g.:
+const basar::VarString <#= TypeName #>Sql::get<#= TypeName #>Query(
+    <#= string.Join(", ", RequestInput.Select(x => $"const {GetFullBasarType(GetSqlType(x.Value))} {FirstLetterToLower(x.Key)}")) #>)
+{
+    std::stringstream sql;
+    sql << "SELECT ... "
+        << "FROM ... "
+        << "WHERE ... ";
+
+    BLOG_TRACE(LoggerPool::getLoggerParameter(), sql.str());
+
+    return sql.str();
+}
+
+<# SetNamespaceOut(); #>
+
+<# SaveStub($"{TypeName}sql.cpp"); #>

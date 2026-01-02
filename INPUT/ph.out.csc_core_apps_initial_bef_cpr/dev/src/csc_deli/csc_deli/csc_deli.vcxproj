@@ -1,0 +1,724 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Test|Win32">
+      <Configuration>Test</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Test|x64">
+      <Configuration>Test</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="UnitTest_Release|Win32">
+      <Configuration>UnitTest_Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="UnitTest_Release|x64">
+      <Configuration>UnitTest_Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="UnitTest|Win32">
+      <Configuration>UnitTest</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="UnitTest|x64">
+      <Configuration>UnitTest</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{30015DEA-7037-1014-980B-AB4141A31375}</ProjectGuid>
+    <RootNamespace>csc_deli</RootNamespace>
+	<QTDIR>$(SolutionDir)..\ext\qt5</QTDIR>
+    <Keyword>Qt4VS</Keyword>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Test|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Test|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='UnitTest_Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='UnitTest_Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='UnitTest|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='UnitTest|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Test|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Test|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='UnitTest_Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='UnitTest_Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='UnitTest|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='UnitTest|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='UnitTest|Win32'">$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='UnitTest|Win32'">$(Configuration)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='UnitTest_Release|Win32'">$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='UnitTest_Release|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='UnitTest_Release|Win32'">false</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='UnitTest_Release|x64'">false</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Test|Win32'">$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Test|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Test|Win32'">false</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Test|x64'">false</LinkIncremental>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Test|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Test|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Test|Win32'" />
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Test|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Test|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Test|x64'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='UnitTest_Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='UnitTest_Release|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='UnitTest_Release|Win32'" />
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='UnitTest_Release|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='UnitTest_Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='UnitTest_Release|x64'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='UnitTest|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='UnitTest|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='UnitTest|Win32'" />
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='UnitTest|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='UnitTest|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='UnitTest|x64'" />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <EmbedManifest>false</EmbedManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <EmbedManifest>false</EmbedManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(SolutionDir).;$(SolutionDir)csc_deli\libcsc_deli;$(SolutionDir)..\ext\ssuk\basar\include;$(SolutionDir)..\ext\boost\include;$(SolutionDir)..\ext\log4cplus\include;$(SolutionDir)..\ext\libutil\include;$(SolutionDir)..\ext\libutil\include\libutil;$(QTDIR)\include;.;..\..\libcsc;..\..\pxverbund\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_WIN32;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <MultiProcessorCompilation>false</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>libutil.lib;libbasarcmnutil.lib;libbasardbaspect.lib;libbasarproperty.lib;libbasardbsql.lib;log4cplusd.lib;libbasarlogin.lib;libbasarappl.lib;qtmaind.lib;Qt5Cored.lib;Qt5Widgetsd.lib;wsock32.lib;shell32.lib;libcsc_deli.lib;libcsc.lib;libcsc_utils.lib;liblockmanager.lib;tcaapi.lib;tca.lib;cxxtools.lib;pxdb.lib;Rpcrt4.lib;pxverbund.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(ProjectName).exe</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>$(SolutionDir)$(Configuration);$(SolutionDir)..\ext\ssuk\sharedlib\$(Configuration);$(SolutionDir)..\ext\ssuk\basar\lib\$(Configuration);$(SolutionDir)..\ext\log4cplus\lib\$(Configuration);$(SolutionDir)..\ext\Boost\lib\;$(SolutionDir)..\ext\libutil\lib\$(Configuration);$(SolutionDir)..\ext\liblockmanager\lib\$(Configuration);$(SolutionDir)..\ext\tcaccess_libraries\lib\x86;$(QTDIR)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <IgnoreSpecificDefaultLibraries>msvcrt.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)$(ProjectName).pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+    <PostBuildEvent>
+      <Message>Copy language and config file</Message>
+      <Command>xcopy /s /q /y $(ProjectDir)\multilang\*.qm $(TargetDir)\multilang\</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(SolutionDir).;$(SolutionDir)csc_deli\libcsc_deli;$(SolutionDir)..\ext\ssuk\basar\include;$(SolutionDir)..\ext\boost\include;$(SolutionDir)..\ext\log4cplus\include;$(SolutionDir)..\ext\libutil\include;$(SolutionDir)..\ext\libutil\include\libutil;$(QTDIR)\include;.;..\..\libcsc;..\..\pxverbund\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_WIN32;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <MultiProcessorCompilation>false</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>libutil.lib;libbasarcmnutil.lib;libbasardbaspect.lib;libbasarproperty.lib;libbasardbsql.lib;log4cplusd.lib;libbasarlogin.lib;libbasarappl.lib;qtmaind.lib;Qt5Cored.lib;Qt5Widgetsd.lib;wsock32.lib;shell32.lib;libcsc_deli.lib;libcsc.lib;libcsc_utils.lib;liblockmanager.lib;tcaapi.lib;tca.lib;cxxtools.lib;pxdb.lib;Rpcrt4.lib;pxverbund.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(ProjectName).exe</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>$(SolutionDir)$(Platform)\$(Configuration);$(SolutionDir)..\ext\ssuk\sharedlib\$(Configuration);$(SolutionDir)..\ext\ssuk\basar\lib\$(Configuration);$(SolutionDir)..\ext\log4cplus\lib\$(Configuration);$(SolutionDir)..\ext\Boost\lib\;$(SolutionDir)..\ext\libutil\lib\$(Configuration);$(SolutionDir)..\ext\liblockmanager\lib\$(Configuration);$(SolutionDir)..\ext\tcaccess_libraries\lib\$(Platform);$(QTDIR)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <IgnoreSpecificDefaultLibraries>msvcrt.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)$(ProjectName).pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+    <PostBuildEvent>
+      <Message>Copy language and config file</Message>
+      <Command>xcopy /s /q /y $(ProjectDir)\multilang\*.qm $(TargetDir)\multilang\</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(SolutionDir).;$(SolutionDir)csc_deli\libcsc_deli;$(SolutionDir)..\ext\ssuk\basar\include;$(SolutionDir)..\ext\boost\include;$(SolutionDir)..\ext\log4cplus\include;$(SolutionDir)..\ext\libutil\include;$(SolutionDir)..\ext\libutil\include\libutil;$(QTDIR)\include;.;..\..\libcsc;..\..\pxverbund\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_WIN32;WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+      <WarningLevel>Level4</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>libutil.lib;libbasarcmnutil.lib;libbasardbaspect.lib;libbasarproperty.lib;libbasardbsql.lib;log4cplus.lib;libbasarlogin.lib;libbasarappl.lib;qtmain.lib;Qt5Core.lib;Qt5Widgets.lib;wsock32.lib;shell32.lib;libcsc_deli.lib;libcsc.lib;libcsc_utils.lib;liblockmanager.lib;tcaapi.lib;tca.lib;cxxtools.lib;pxdb.lib;Rpcrt4.lib;pxverbund.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(ProjectName).exe</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>$(SolutionDir)$(Configuration);$(SolutionDir)..\ext\ssuk\sharedlib\$(Configuration);$(SolutionDir)..\ext\ssuk\basar\lib\$(Configuration);$(SolutionDir)..\ext\log4cplus\lib\$(Configuration);$(SolutionDir)..\ext\Boost\lib\;$(SolutionDir)..\ext\libutil\lib\$(Configuration);$(SolutionDir)..\ext\liblockmanager\lib\$(Configuration);$(SolutionDir)..\ext\tcaccess_libraries\lib\x86;$(QTDIR)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ModuleDefinitionFile>
+      </ModuleDefinitionFile>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>
+      </OptimizeReferences>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Message>Copy language and config file</Message>
+      <Command>xcopy /s /q /y $(ProjectDir)\multilang\*.qm $(TargetDir)\multilang\</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(SolutionDir).;$(SolutionDir)csc_deli\libcsc_deli;$(SolutionDir)..\ext\ssuk\basar\include;$(SolutionDir)..\ext\boost\include;$(SolutionDir)..\ext\log4cplus\include;$(SolutionDir)..\ext\libutil\include;$(SolutionDir)..\ext\libutil\include\libutil;$(QTDIR)\include;.;..\..\libcsc;..\..\pxverbund\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_WIN32;WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+      <WarningLevel>Level4</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>libutil.lib;libbasarcmnutil.lib;libbasardbaspect.lib;libbasarproperty.lib;libbasardbsql.lib;log4cplus.lib;libbasarlogin.lib;libbasarappl.lib;qtmain.lib;Qt5Core.lib;Qt5Widgets.lib;wsock32.lib;shell32.lib;libcsc_deli.lib;libcsc.lib;libcsc_utils.lib;liblockmanager.lib;tcaapi.lib;tca.lib;cxxtools.lib;pxdb.lib;Rpcrt4.lib;pxverbund.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(ProjectName).exe</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>$(SolutionDir)$(Platform)\$(Configuration);$(SolutionDir)..\ext\ssuk\sharedlib\$(Configuration);$(SolutionDir)..\ext\ssuk\basar\lib\$(Configuration);$(SolutionDir)..\ext\log4cplus\lib\$(Configuration);$(SolutionDir)..\ext\Boost\lib\;$(SolutionDir)..\ext\libutil\lib\$(Configuration);$(SolutionDir)..\ext\liblockmanager\lib\$(Configuration);$(SolutionDir)..\ext\tcaccess_libraries\lib\$(Platform);$(QTDIR)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ModuleDefinitionFile>
+      </ModuleDefinitionFile>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>
+      </OptimizeReferences>
+    </Link>
+    <PostBuildEvent>
+      <Message>Copy language and config file</Message>
+      <Command>xcopy /s /q /y $(ProjectDir)\multilang\*.qm $(TargetDir)\multilang\</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='UnitTest|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(SolutionDir).;$(SolutionDir)..\ext\ssuk\basar\include;$(SolutionDir)..\ext\boost\include;$(SolutionDir)..\ext\log4cplus\include;$(SolutionDir)..\ext\libutil\include;$(QTDIR)\include;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtSql;.;.\viewconn\GeneratedFiles\$(ConfigurationName);.\viewconn\GeneratedFiles;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+      <WarningLevel>Level4</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <PostBuildEvent>
+      <Message>Copy language and config file</Message>
+      <Command>xcopy /s /q /y $(ProjectDir)\multilang\*.qm $(TargetDir)\multilang\</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='UnitTest|x64'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(SolutionDir).;$(SolutionDir)..\ext\ssuk\basar\include;$(SolutionDir)..\ext\boost\include;$(SolutionDir)..\ext\log4cplus\include;$(SolutionDir)..\ext\libutil\include;$(QTDIR)\include;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtSql;.;.\viewconn\GeneratedFiles\$(ConfigurationName);.\viewconn\GeneratedFiles;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+      <WarningLevel>Level4</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <PostBuildEvent>
+      <Message>Copy language and config file</Message>
+      <Command>xcopy /s /q /y $(ProjectDir)\multilang\*.qm $(TargetDir)\multilang\</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='UnitTest_Release|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <OmitFramePointers>true</OmitFramePointers>
+      <AdditionalIncludeDirectories>$(SolutionDir).;$(SolutionDir)..\ext\ssuk\basar\include;$(SolutionDir)..\ext\boost\include;$(SolutionDir)..\ext\log4cplus\include;$(SolutionDir)..\ext\libutil\include;$(QTDIR)\include;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtSql;.;.\viewconn\GeneratedFiles\$(ConfigurationName);.\viewconn\GeneratedFiles;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <MinimalRebuild>false</MinimalRebuild>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <TreatWChar_tAsBuiltInType>false</TreatWChar_tAsBuiltInType>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <PrecompiledHeaderFile>commonheader.h</PrecompiledHeaderFile>
+      <AssemblerListingLocation>.\$(OutDir)</AssemblerListingLocation>
+      <ObjectFileName>.\$(OutDir)</ObjectFileName>
+      <ProgramDataBaseFileName>.\$(OutDir)</ProgramDataBaseFileName>
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>libbasarcmnutil.lib;libbasardbaspect.lib;libbasarproperty.lib;libbasardbsql.lib;log4cplus.lib;libbasarlogin.lib;libbasarappl.lib;libbasarguitie.lib;libbasarguiqt.lib;libbasarqtwidget.lib;qtmain.lib;QtCore4.lib;QtGui4.lib;QtSql4.lib;wsock32.lib;kscclient.lib;articlesupplierdm.lib;supplierdm.lib;utils.lib;lockingDM.lib;moduleDM.lib;changehistoryDM.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(ProjectName).exe</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>$(SolutionDir)$(Configuration);$(SolutionDir)..\ext\ssuk\sharedlib\$(Configuration);$(SolutionDir)..\ext\ssuk\basar\lib\$(Configuration);$(SolutionDir)..\ext\log4cplus\lib\$(Configuration);$(SolutionDir)..\ext\Boost\lib\;$(SolutionDir)..\ext\libutil\lib\$(Configuration);$(SolutionDir)..\ext\liblockmanager\lib\$(Configuration);$(SolutionDir)..\ext\tcaccess_libraries\lib\x86;$(QTDIR)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <ModuleDefinitionFile>
+      </ModuleDefinitionFile>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>
+      </OptimizeReferences>
+      <TargetMachine>NotSet</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Message>Copy language and config file</Message>
+      <Command>xcopy /s /q /y $(ProjectDir)\multilang\*.qm $(TargetDir)\multilang\</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='UnitTest_Release|x64'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <OmitFramePointers>true</OmitFramePointers>
+      <AdditionalIncludeDirectories>$(SolutionDir).;$(SolutionDir)..\ext\ssuk\basar\include;$(SolutionDir)..\ext\boost\include;$(SolutionDir)..\ext\log4cplus\include;$(SolutionDir)..\ext\libutil\include;$(QTDIR)\include;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtSql;.;.\viewconn\GeneratedFiles\$(ConfigurationName);.\viewconn\GeneratedFiles;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <MinimalRebuild>false</MinimalRebuild>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <TreatWChar_tAsBuiltInType>false</TreatWChar_tAsBuiltInType>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <PrecompiledHeaderFile>commonheader.h</PrecompiledHeaderFile>
+      <AssemblerListingLocation>.\$(OutDir)</AssemblerListingLocation>
+      <ObjectFileName>.\$(OutDir)</ObjectFileName>
+      <ProgramDataBaseFileName>.\$(OutDir)</ProgramDataBaseFileName>
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>libbasarcmnutil.lib;libbasardbaspect.lib;libbasarproperty.lib;libbasardbsql.lib;log4cplus.lib;libbasarlogin.lib;libbasarappl.lib;libbasarguitie.lib;libbasarguiqt.lib;libbasarqtwidget.lib;qtmain.lib;QtCore4.lib;QtGui4.lib;QtSql4.lib;wsock32.lib;kscclient.lib;articlesupplierdm.lib;supplierdm.lib;utils.lib;lockingDM.lib;moduleDM.lib;changehistoryDM.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(ProjectName).exe</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>$(SolutionDir)$(Configuration);$(SolutionDir)..\ext\ssuk\sharedlib\$(Configuration);$(SolutionDir)..\ext\ssuk\basar\lib\$(Configuration);$(SolutionDir)..\ext\log4cplus\lib\$(Configuration);$(SolutionDir)..\ext\Boost\lib\;$(SolutionDir)..\ext\libutil\lib\$(Configuration);$(SolutionDir)..\ext\liblockmanager\lib\$(Configuration);$(SolutionDir)..\ext\tcaccess_libraries\lib\x86;$(QTDIR)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <ModuleDefinitionFile>
+      </ModuleDefinitionFile>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>
+      </OptimizeReferences>
+    </Link>
+    <PostBuildEvent>
+      <Message>Copy language and config file</Message>
+      <Command>xcopy /s /q /y $(ProjectDir)\multilang\*.qm $(TargetDir)\multilang\</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Test|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <OmitFramePointers>true</OmitFramePointers>
+      <AdditionalIncludeDirectories>$(SolutionDir).;$(SolutionDir)..\ext\ssuk\basar\include;$(SolutionDir)..\ext\boost\include;$(SolutionDir)..\ext\log4cplus\include;$(SolutionDir)..\ext\libutil\include;$(QTDIR)\include;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtSql;.;.\viewconn\GeneratedFiles\$(ConfigurationName);.\viewconn\GeneratedFiles;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <MinimalRebuild>false</MinimalRebuild>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <TreatWChar_tAsBuiltInType>false</TreatWChar_tAsBuiltInType>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <PrecompiledHeaderFile>commonheader.h</PrecompiledHeaderFile>
+      <AssemblerListingLocation>.\$(OutDir)</AssemblerListingLocation>
+      <ObjectFileName>.\$(OutDir)</ObjectFileName>
+      <ProgramDataBaseFileName>.\$(OutDir)</ProgramDataBaseFileName>
+      <WarningLevel>Level4</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>libbasarcmnutil.lib;libbasardbaspect.lib;libbasarproperty.lib;libbasardbsql.lib;log4cplusd.lib;libbasarlogin.lib;libbasarappl.lib;libbasarguitie.lib;libbasarguiqt.lib;libbasarqtwidget.lib;qtmain.lib;QtCore4.lib;QtGui4.lib;QtSql4.lib;wsock32.lib;kscclient.lib;articlesupplierdm.lib;supplierdm.lib;utils.lib;lockingdm.lib;moduledm.lib;changehistorydm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(ProjectName).exe</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>$(SolutionDir)$(Configuration);$(SolutionDir)..\ext\ssuk\sharedlib\$(Configuration);$(SolutionDir)..\ext\ssuk\basar\lib\$(Configuration);$(SolutionDir)..\ext\log4cplus\lib\$(Configuration);$(SolutionDir)..\ext\Boost\lib\;$(SolutionDir)..\ext\libutil\lib\$(Configuration);$(SolutionDir)..\ext\liblockmanager\lib\$(Configuration);$(SolutionDir)..\ext\tcaccess_libraries\lib\x86;$(QTDIR)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <ModuleDefinitionFile>
+      </ModuleDefinitionFile>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>
+      </OptimizeReferences>
+      <TargetMachine>NotSet</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Message>Copy language and config file</Message>
+      <Command>xcopy /s /q /y $(ProjectDir)\multilang\*.qm $(TargetDir)\multilang\</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Test|x64'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <OmitFramePointers>true</OmitFramePointers>
+      <AdditionalIncludeDirectories>$(SolutionDir).;$(SolutionDir)..\ext\ssuk\basar\include;$(SolutionDir)..\ext\boost\include;$(SolutionDir)..\ext\log4cplus\include;$(SolutionDir)..\ext\libutil\include;$(QTDIR)\include;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtSql;.;.\viewconn\GeneratedFiles\$(ConfigurationName);.\viewconn\GeneratedFiles;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <MinimalRebuild>false</MinimalRebuild>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <TreatWChar_tAsBuiltInType>false</TreatWChar_tAsBuiltInType>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <PrecompiledHeaderFile>commonheader.h</PrecompiledHeaderFile>
+      <AssemblerListingLocation>.\$(OutDir)</AssemblerListingLocation>
+      <ObjectFileName>.\$(OutDir)</ObjectFileName>
+      <ProgramDataBaseFileName>.\$(OutDir)</ProgramDataBaseFileName>
+      <WarningLevel>Level4</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>libbasarcmnutil.lib;libbasardbaspect.lib;libbasarproperty.lib;libbasardbsql.lib;log4cplusd.lib;libbasarlogin.lib;libbasarappl.lib;libbasarguitie.lib;libbasarguiqt.lib;libbasarqtwidget.lib;qtmain.lib;QtCore4.lib;QtGui4.lib;QtSql4.lib;wsock32.lib;kscclient.lib;articlesupplierdm.lib;supplierdm.lib;utils.lib;lockingdm.lib;moduledm.lib;changehistorydm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(ProjectName).exe</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>$(SolutionDir)$(Configuration);$(SolutionDir)..\ext\ssuk\sharedlib\$(Configuration);$(SolutionDir)..\ext\ssuk\basar\lib\$(Configuration);$(SolutionDir)..\ext\log4cplus\lib\$(Configuration);$(SolutionDir)..\ext\Boost\lib\;$(SolutionDir)..\ext\libutil\lib\$(Configuration);$(SolutionDir)..\ext\liblockmanager\lib\$(Configuration);$(SolutionDir)..\ext\tcaccess_libraries\lib\x86;$(QTDIR)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <ModuleDefinitionFile>
+      </ModuleDefinitionFile>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>
+      </OptimizeReferences>
+    </Link>
+    <PostBuildEvent>
+      <Message>Copy language and config file</Message>
+      <Command>xcopy /s /q /y $(ProjectDir)\multilang\*.qm $(TargetDir)\multilang\</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="multilang\csc_deli_de.ts">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\lrelease" -verbose %(FullPath) -qm %(RootDir)%(Directory)\%(Filename).qm</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(QTDIR)\bin\lrelease" -verbose %(FullPath) -qm %(RootDir)%(Directory)\%(Filename).qm</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\lrelease" -verbose %(FullPath) -qm %(RootDir)%(Directory)\%(Filename).qm
+</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(QTDIR)\bin\lrelease" -verbose %(FullPath) -qm %(RootDir)%(Directory)\%(Filename).qm
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(RootDir)%(Directory)\%(Filename).qm;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(RootDir)%(Directory)\%(Filename).qm;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\lrelease" -verbose %(FullPath) -qm %(RootDir)%(Directory)\%(Filename).qm</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\lrelease" -verbose %(FullPath) -qm %(RootDir)%(Directory)\%(Filename).qm</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\lrelease" -verbose %(FullPath) -qm %(RootDir)%(Directory)\%(Filename).qm
+</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\lrelease" -verbose %(FullPath) -qm %(RootDir)%(Directory)\%(Filename).qm
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(RootDir)%(Directory)\%(Filename).qm;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(RootDir)%(Directory)\%(Filename).qm;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Test|Win32'">"$(QTDIR)\bin\lrelease" -verbose %(FullPath) -qm %(RootDir)%(Directory)\%(Filename).qm</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Test|x64'">"$(QTDIR)\bin\lrelease" -verbose %(FullPath) -qm %(RootDir)%(Directory)\%(Filename).qm</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Test|Win32'">"$(QTDIR)\bin\lrelease" -verbose %(FullPath) -qm %(RootDir)%(Directory)\%(Filename).qm
+</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Test|x64'">"$(QTDIR)\bin\lrelease" -verbose %(FullPath) -qm %(RootDir)%(Directory)\%(Filename).qm
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Test|Win32'">%(RootDir)%(Directory)\%(Filename).qm;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Test|x64'">%(RootDir)%(Directory)\%(Filename).qm;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='UnitTest_Release|Win32'">"$(QTDIR)\bin\lrelease" -verbose %(FullPath) -qm %(RootDir)%(Directory)\%(Filename).qm</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='UnitTest_Release|x64'">"$(QTDIR)\bin\lrelease" -verbose %(FullPath) -qm %(RootDir)%(Directory)\%(Filename).qm</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='UnitTest_Release|Win32'">"$(QTDIR)\bin\lrelease" -verbose %(FullPath) -qm %(RootDir)%(Directory)\%(Filename).qm
+</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='UnitTest_Release|x64'">"$(QTDIR)\bin\lrelease" -verbose %(FullPath) -qm %(RootDir)%(Directory)\%(Filename).qm
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='UnitTest_Release|Win32'">%(RootDir)%(Directory)\%(Filename).qm;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='UnitTest_Release|x64'">%(RootDir)%(Directory)\%(Filename).qm;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='UnitTest|Win32'">"$(QTDIR)\bin\lrelease" -verbose %(FullPath) -qm %(RootDir)%(Directory)\%(Filename).qm</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='UnitTest|x64'">"$(QTDIR)\bin\lrelease" -verbose %(FullPath) -qm %(RootDir)%(Directory)\%(Filename).qm</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='UnitTest|Win32'">"$(QTDIR)\bin\lrelease" -verbose %(FullPath) -qm %(RootDir)%(Directory)\%(Filename).qm
+</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='UnitTest|x64'">"$(QTDIR)\bin\lrelease" -verbose %(FullPath) -qm %(RootDir)%(Directory)\%(Filename).qm
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='UnitTest|Win32'">%(RootDir)%(Directory)\%(Filename).qm;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='UnitTest|x64'">%(RootDir)%(Directory)\%(Filename).qm;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Test|Win32'">
+      </AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Test|x64'">
+      </AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='UnitTest_Release|Win32'">
+      </AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='UnitTest_Release|x64'">
+      </AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='UnitTest|Win32'">
+      </AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='UnitTest|x64'">
+      </AdditionalInputs>
+    </CustomBuild>
+    <CustomBuildStep Include="Resources\green_arrow_down.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Test|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Test|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnitTest_Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnitTest_Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnitTest|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnitTest|x64'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="Resources\green_arrow_up.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Test|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Test|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnitTest_Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnitTest_Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnitTest|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnitTest|x64'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="Resources\image1.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Test|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Test|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnitTest_Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnitTest_Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnitTest|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnitTest|x64'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="Resources\image2.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Test|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Test|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnitTest_Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnitTest_Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnitTest|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnitTest|x64'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="componentmanager\csc_deliapplcompmgr.cpp" />
+    <ClCompile Include="componentmanager\csc_deliinfrastructurecompmgr.cpp" />
+    <ClCompile Include="csc_deli\version.c" />
+    <ClCompile Include="infrastructure\cmdline\csc_delicmdlineevaluator.cpp" />
+    <ClCompile Include="infrastructure\cmdline\csc_delicmdlineoptioncollection.cpp" />
+    <ClCompile Include="csc_deliinfo\csc_deli_info.cpp" />
+    <ClCompile Include="csc_deli\main.cpp" />
+    <ClCompile Include="csc_deli\csc_deliapplctrl.cpp" />
+    <ClCompile Include="infrastructure\parameter\dbparametergateway.cpp" />
+    <ClCompile Include="infrastructure\setup\csc_deliinfrastructuresetup.cpp" />
+    <ClCompile Include="usecase\debtlimitbatchuc.cpp" />
+    <ClCompile Include="usecase\mainuc.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="componentmanager\iusecasegetter.h" />
+    <ClInclude Include="componentmanager\iusecasegetterptr.h" />
+    <ClInclude Include="componentmanager\csc_deliapplcompmgr.h" />
+    <ClInclude Include="componentmanager\csc_deliapplcompmgrptr.h" />
+    <ClInclude Include="componentmanager\csc_deliinfrastructurecompmgr.h" />
+    <ClInclude Include="componentmanager\csc_deliinfrastructurecompmgrptr.h" />
+    <ClInclude Include="infrastructure\cmdline\csc_delicmdlineevaluator.h" />
+    <ClInclude Include="infrastructure\cmdline\csc_delicmdlineevaluatorconstptr.h" />
+    <ClInclude Include="infrastructure\cmdline\csc_delicmdlineevaluatorptr.h" />
+    <ClInclude Include="infrastructure\cmdline\csc_delicmdlineoptioncollection.h" />
+    <ClInclude Include="infrastructure\cmdline\csc_delicmdlineoption_definitions.h" />
+    <ClInclude Include="infrastructure\login\login_definitions.h" />
+    <ClInclude Include="csc_deliinfo\csc_deli_info.h" />
+    <ClInclude Include="csc_deli\csc_deliapplctrl.h" />
+    <ClInclude Include="infrastructure\parameter\dbparametergateway.h" />
+    <ClInclude Include="infrastructure\parameter\dbparametergatewayptr.h" />
+    <ClInclude Include="infrastructure\setup\csc_deliinfrastructuresetup.h" />
+    <ClInclude Include="infrastructure\setup\csc_deliinfrastructuresetupptr.h" />
+    <ClInclude Include="infrastructure\setup\icsc_delilogingetter.h" />
+    <ClInclude Include="infrastructure\setup\icsc_delilogingetterptr.h" />
+    <ClInclude Include="usecase\debtlimitbatchuc.h" />
+    <ClInclude Include="usecase\debtlimitbatchucptr.h" />
+    <ClInclude Include="usecase\mainuc.h" />
+    <ClInclude Include="usecase\mainucptr.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\libcsc_deli\libcsc_deli.vcxproj">
+      <Project>{30016D8F-7037-1014-980B-AB4141A31375}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties QtVersion="4.4.3" Qt5Version_x0020_Win32="5.2.0" MocDir=".\viewconn\GeneratedFiles\$(ConfigurationName)" UicDir=".\viewconn\GeneratedFiles" RccDir=".\viewconn\GeneratedFiles" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

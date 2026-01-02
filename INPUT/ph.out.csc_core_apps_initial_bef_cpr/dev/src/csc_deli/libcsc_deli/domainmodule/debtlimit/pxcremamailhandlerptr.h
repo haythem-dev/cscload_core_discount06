@@ -1,0 +1,9 @@
+#ifndef GUARD_LIBCSC_DELI_COMPONENTMANAGER_PXCREMAMAILHANDLERPTR_H
+#define GUARD_LIBCSC_DELI_COMPONENTMANAGER_PXCREMAMAILHANDLERPTR_H
+
+#include <boost/shared_ptr.hpp>
+
+class CremaMailHandler;
+typedef boost::shared_ptr< ::CremaMailHandler > PxCremaMailHandlerPtr;
+
+#endif // GUARD_LIBCSC_DELI_COMPONENTMANAGER_PXCREMAMAILHANDLERPTR_H

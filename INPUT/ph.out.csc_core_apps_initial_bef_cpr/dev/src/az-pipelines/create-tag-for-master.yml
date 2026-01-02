@@ -1,0 +1,58 @@
+# Trigger the pipeline on updates to the master branch
+trigger:
+  branches:
+    include:
+      - master
+
+jobs:
+- job: CreateTag
+  displayName: 'Create Git Tag for Master'
+  pool:
+    name: Default
+  steps:
+  - checkout: self
+    persistCredentials: true
+
+  - script: |
+      git pull
+      git tag -l | xargs git tag -d
+      git fetch --tags
+      git tag -l
+    displayName: 'Delete all local Git tags'
+
+  - script: |
+      git checkout master
+    displayName: 'Checkout Master'
+  
+  - task: PowerShell@2
+    displayName: 'Get Tag and Comment For Master'
+    inputs:
+      filePath: dev/src/proc/getNextTagInfoForMaster.ps1
+      failOnStderr: true
+    continueOnError: false
+    name: GetNextTagInfoForMaster
+   
+  - task: PowerShell@2
+    displayName: 'Parse JSON Output'
+    inputs:
+      targetType: 'inline'
+      script: |
+        $output = '$(TagAndComment)'
+        Write-Output "Raw output: $output"
+        
+        try {
+          $parsedOutput = $output | ConvertFrom-Json
+          Write-Output "##vso[task.setvariable variable=TagName]$($parsedOutput.TagName)"
+          Write-Output "##vso[task.setvariable variable=Comment]$($parsedOutput.Comment)"
+        } catch {
+          Write-Error "Failed to parse JSON: $_"
+          exit 1
+        }
+
+  - script: |
+      git tag -a $(TagName) -m "$(Comment)"
+      git push --tags
+      git checkout -b develop origin/develop
+      git merge master
+      git push
+    displayName: 'Use Tag Name and Comment'

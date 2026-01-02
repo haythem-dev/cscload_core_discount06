@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<orderRequest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" language="de">
+	<order>
+		<orderHeader customerNumber="9999011" branchNumber="71" referenceNumber="SWCl"/>
+		<orderLine orderQuantity="8">
+			<EAN>29387529387512</EAN>
+		</orderLine>
+		<orderLine orderQuantity="1">
+			<articleCode>0000655</articleCode>
+		</orderLine>
+		<orderLine orderQuantity="3">
+			<articleCode>0003990</articleCode>
+		</orderLine>
+		<orderLine orderQuantity="3">
+			<articleCode>0004009</articleCode>			
+		</orderLine>		
+		<orderLine orderQuantity="3">
+			<articleCode>0004015</articleCode>
+		</orderLine>		
+	</order>
+</orderRequest>

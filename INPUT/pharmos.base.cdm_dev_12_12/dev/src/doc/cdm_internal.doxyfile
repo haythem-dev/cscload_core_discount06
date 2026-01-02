@@ -1,0 +1,12 @@
+@INCLUDE               = cdm.doxyfile
+
+PROJECT_NAME           = "CDM Versionshistorie intern"
+CREATE_SUBDIRS         = NO
+OUTPUT_DIRECTORY       = ./codedocu/internal
+OUTPUT_LANGUAGE        = German
+LAYOUT_FILE            = DoxygenLayout.internal.xml
+INTERNAL_DOCS          = YES
+GENERATE_TODOLIST      = NO
+SHOW_FILES             = NO
+SHOW_NAMESPACES        = NO
+ENABLED_SECTIONS       = 

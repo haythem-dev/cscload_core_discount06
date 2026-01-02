@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Mit XMLSpy v2007 sp1 bearbeitet (http://www.altova.com) von C. Merkl (PHOENIX Pharmahandel AG & Co. KG) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="CSCPlatformConsolidationToolConfig">
+		<xs:annotation>
+			<xs:documentation>Comment describing your root element</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Branches2BMoved">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Branch" maxOccurs="5">
+								<xs:simpleType>
+									<xs:restriction base="xs:int">
+										<xs:enumeration value="5"/>
+										<xs:enumeration value="21"/>
+										<xs:enumeration value="44"/>
+										<xs:enumeration value="51"/>
+										<xs:enumeration value="52"/>
+										<xs:enumeration value="54"/>
+										<xs:enumeration value="56"/>
+										<xs:enumeration value="57"/>
+										<xs:enumeration value="58"/>
+										<xs:enumeration value="81"/>
+										<xs:enumeration value="82"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+						</xs:sequence>
+						<xs:attribute name="Direction" use="required">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:enumeration value="North2South"/>
+									<xs:enumeration value="South2North"/>
+									<xs:enumeration value="DeactivateCompletely"/>
+									<xs:enumeration value="ActivateInSouth"/>
+									<xs:enumeration value="ActivateInNorth"/>
+									<xs:enumeration value="DeactivateSouth"/>
+									<xs:enumeration value="DeactivateNorth"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Applications">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Application" maxOccurs="3">
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="xs:string">
+											<xs:attribute name="ApplicationVersion" use="required">
+												<xs:simpleType>
+													<xs:restriction base="xs:string"/>
+												</xs:simpleType>
+											</xs:attribute>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Servers">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Server" type="xs:string" maxOccurs="999"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Interfaces">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="MSV3v1Interfaces">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="MSV3v1Interface" type="xs:string" maxOccurs="999"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="MSV3v2Interfaces">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="MSV3v2Interface" type="xs:string" maxOccurs="999"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="SwimpInterfaces">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="SwimpInterface" type="xs:string" maxOccurs="999"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Paths">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="BackupDir" type="xs:string"/>
+							<xs:element name="TempDir" type="xs:string"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="Modus" use="required">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="Real"/>
+						<xs:enumeration value="Simulation"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="Environment" use="required">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="Test"/>
+						<xs:enumeration value="Prod"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

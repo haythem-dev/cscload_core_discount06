@@ -1,0 +1,20 @@
+#ifndef GUARD_LIBCSC_STOCKBOOKING_I_ORDERTYPE_RESERVATIONCONFIG_PHARMACYGROUP_PTR_H
+#define GUARD_LIBCSC_STOCKBOOKING_I_ORDERTYPE_RESERVATIONCONFIG_PHARMACYGROUP_PTR_H
+
+#include <boost/shared_ptr.hpp>
+#include <vector>
+
+namespace libcsc {
+namespace stockbooking {
+
+class IOrderTypeReservationConfigPharmacyGroup;
+typedef boost::shared_ptr<IOrderTypeReservationConfigPharmacyGroup> IOrderTypeReservationConfigPharmacyGroupPtr;
+
+typedef std::vector<IOrderTypeReservationConfigPharmacyGroupPtr> IOrderTypeReservationConfigPharmacyGroupCollection;
+
+typedef boost::shared_ptr<IOrderTypeReservationConfigPharmacyGroupCollection> IOrderTypeReservationConfigPharmacyGroupCollectionPtr;
+
+} // namespace stockbooking
+} // namespace libcsc
+
+#endif // GUARD_LIBCSC_STOCKBOOKING_I_ORDERTYPE_RESERVATIONCONFIG_PHARMACYGROUP_PTR_H

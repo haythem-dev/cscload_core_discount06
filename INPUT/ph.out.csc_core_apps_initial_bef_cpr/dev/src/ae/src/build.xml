@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+
+<project name="ae" default="help" basedir="." xmlns:contrib="antlib:net.sf.antcontrib">
+  <!-- ====================================================== -->
+
+  <property name="settings_server" value="tfs-nexus"/>
+  <property name="settings_version" value="3.0.0"/>
+
+  <include>
+    <url url="http://${settings_server}:8081/repository/genesis/eu/phoenixgroup/buildenv_ivy/${settings_version}/macro.ant-${settings_version}.xml"/>
+  </include>
+
+  <property name="msbuild_version" value="100"/>
+  <property name="solutionfile" value="Ae.sln"/>
+
+  <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+  <target name="help">
+    <displayHelp/>
+  </target>
+
+  <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+  <target name="full" description="clean rebuild">
+    <buildVS solution="${solutionfile}" mode="rebuild" config="Debug"/>
+    <buildVS solution="${solutionfile}" mode="rebuild" config="Release"/>
+    <buildVS solution="${solutionfile}" mode="rebuild" config="DebugHipathNew"/>
+    <buildVS solution="${solutionfile}" mode="rebuild" config="ReleaseHipathNew"/>
+  </target>
+
+  <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+  <target name="incremental" description="only changed sources are built">
+    <buildVS solution="${solutionfile}" mode="build" config="Debug"/>
+    <buildVS solution="${solutionfile}" mode="build" config="Release"/>
+    <buildVS solution="${solutionfile}" mode="build" config="DebugHipathNew"/>
+    <buildVS solution="${solutionfile}" mode="build" config="ReleaseHipathNew"/>
+  </target>
+
+  <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+  <target name="release" description="complete rebuild for rollout">
+    <buildVS solution="${solutionfile}" mode="rebuild" config="Release"/>
+    <buildVS solution="${solutionfile}" mode="rebuild" config="ReleaseHipathNew"/>
+  </target>
+
+  <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+  <target name="export" description="exporting and compressing created artifacts">
+    <buildScriptWin path="." script="proc\export.bat"/>
+  </target>
+
+  <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+  <target name="retrieve">
+    <retrieve additional-config="compile"/>
+    <buildScriptWin path="." script="proc\prepare.bat"/>
+  </target>
+
+  <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+  <target name="publish">
+    <publish/>
+  </target>
+
+  <!-- ====================================================== -->
+</project>

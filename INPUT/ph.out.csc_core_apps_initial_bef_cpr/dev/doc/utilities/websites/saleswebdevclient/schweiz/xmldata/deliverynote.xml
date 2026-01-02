@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<deliveryNoteRequest version="1.1" sendExpiryDates="true" interfaceVersion="1">
+	<client number="9999011" password="na" />
+	<deliveryNotes>
+		<deliveryNote number="123456"/>
+	</deliveryNotes>
+</deliveryNoteRequest>

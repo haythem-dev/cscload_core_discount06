@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CSCProcesses xsi:noNamespaceSchemaLocation="CSCProcesses.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">	
+	<Country ShortName="at" ServerName="zdev21" UserName="devuser" Password="phosix+">			
+		<Process CommandIdentifier="aaorderclose" />		
+		<Process CommandIdentifier="clearreservation" />
+		<Process CommandIdentifier="corpha" />
+		<Process CommandIdentifier="deli"/>		
+		<Process CommandIdentifier="kscserver" />		
+		<Process CommandIdentifier="phabor" />
+		<Process CommandIdentifier="phadex" />
+		<Process CommandIdentifier="phatra" />
+		<Process CommandIdentifier="ibtorderimport" />
+		<Process CommandIdentifier="zaapunix" />
+		<Process CommandIdentifier="cscservice" />		
+	</Country>		
+	<Country ShortName="bg" ServerName="zdev21" UserName="devuser" Password="phosix+">			
+		<Process CommandIdentifier="aaorderclose" />
+		<Process CommandIdentifier="clearreservation" />
+		<Process CommandIdentifier="corpha" />		
+		<Process CommandIdentifier="kscserver" />	
+		<Process CommandIdentifier="phadex" />		
+		<Process CommandIdentifier="phatra" />		
+		<Process CommandIdentifier="ibtorderimport" />
+		<Process CommandIdentifier="zaapunix" />
+		<Process CommandIdentifier="cscservice" />		
+	</Country>		
+	<Country ShortName="ch" ServerName="zdev21" UserName="devuser" Password="phosix+">			
+		<Process CommandIdentifier="aaorderclose" />		
+		<Process CommandIdentifier="clearreservation" />
+		<Process CommandIdentifier="corpha" />		
+		<Process CommandIdentifier="deli"/>
+		<Process CommandIdentifier="kscserver" />				
+		<Process CommandIdentifier="phabor" />		
+		<Process CommandIdentifier="phadex" />
+		<Process CommandIdentifier="phatra" />		
+		<Process CommandIdentifier="ibtorderimport" />
+		<Process CommandIdentifier="zaapunix" />
+		<Process CommandIdentifier="cscservice" />		
+	</Country>			
+	<Country ShortName="de" ServerName="zdev21" UserName="devuser" Password="phosix+">			
+		<Process CommandIdentifier="aaorderclose"/>		
+		<Process CommandIdentifier="clearreservation" />
+		<Process CommandIdentifier="corpha"/>
+		<Process CommandIdentifier="deli"/>
+		<Process CommandIdentifier="ibtorderimport"/>
+		<Process CommandIdentifier="kscserver" />		
+		<Process CommandIdentifier="phabor"/>
+		<Process CommandIdentifier="phadex" />		
+		<Process CommandIdentifier="phatra"/>
+		<Process CommandIdentifier="umkdrvr"/>		
+		<Process CommandIdentifier="zaapunix" />						
+		<Process CommandIdentifier="cscservice" />		
+	</Country>			
+	<Country ShortName="fr" ServerName="zdev21" UserName="devuser" Password="phosix+">			
+		<Process CommandIdentifier="aaorderclose"/>
+		<Process CommandIdentifier="clearreservation" />
+		<Process CommandIdentifier="corpha"/>		
+		<Process CommandIdentifier="kscserver" />				
+		<Process CommandIdentifier="phadex" />		
+		<Process CommandIdentifier="phatra"/>		
+		<Process CommandIdentifier="vbordimport2"/>
+		<Process CommandIdentifier="zaapunix" />
+		<Process CommandIdentifier="cscservice" />		
+	</Country>			
+	<Country ShortName="hr" ServerName="zdev21" UserName="devuser" Password="phosix+">			
+		<Process CommandIdentifier="aaorderclose" />
+		<Process CommandIdentifier="clearreservation" />
+		<Process CommandIdentifier="corpha" />		
+		<Process CommandIdentifier="kscserver" />				
+		<Process CommandIdentifier="phadex" />		
+		<Process CommandIdentifier="phatra" />
+		<Process CommandIdentifier="ibtorderimport" />		
+		<Process CommandIdentifier="zaapunix" />
+		<Process CommandIdentifier="cscservice" />		
+	</Country>				
+	<Country ShortName="rs" ServerName="zdev21" UserName="devuser" Password="phosix+">			
+		<Process CommandIdentifier="aaorderclose" />
+		<Process CommandIdentifier="clearreservation" />
+		<Process CommandIdentifier="corpha" />		
+		<Process CommandIdentifier="kscserver" />				
+		<Process CommandIdentifier="phadex" />		
+		<Process CommandIdentifier="phatra" />
+		<Process CommandIdentifier="ibtorderimport" />		
+		<Process CommandIdentifier="zaapunix" />
+		<Process CommandIdentifier="cscservice" />		
+	</Country>						
+	<Country ShortName="pat" ServerName="zdev21" UserName="devuser" Password="phosix+">			
+		<Process CommandIdentifier="aaorderclose" />		
+		<Process CommandIdentifier="clearreservation" />
+		<Process CommandIdentifier="corpha" />
+		<Process CommandIdentifier="kscserver" />		
+		<Process CommandIdentifier="phabor" />
+		<Process CommandIdentifier="phadex" />		
+		<Process CommandIdentifier="phatra" />
+		<Process CommandIdentifier="ibtorderimport" />
+		<Process CommandIdentifier="zaapunix" />
+		<Process CommandIdentifier="cscservice" />		
+	</Country>							
+	<Country ShortName="pch" ServerName="zdev21" UserName="devuser" Password="phosix+">			
+		<Process CommandIdentifier="aaorderclose" />
+		<Process CommandIdentifier="clearreservation" />
+		<Process CommandIdentifier="corpha" />		
+		<Process CommandIdentifier="kscserver" />				
+		<Process CommandIdentifier="phabor" />
+		<Process CommandIdentifier="phadex" />
+		<Process CommandIdentifier="phatra" />
+		<Process CommandIdentifier="ibtorderimport" />
+		<Process CommandIdentifier="zaapunix" />
+		<Process CommandIdentifier="cscservice" />		
+	</Country>						
+	<Country ShortName="pfr" ServerName="zdev21" UserName="devuser" Password="phosix+">				
+		<Process CommandIdentifier="aaorderclose"/>				
+		<Process CommandIdentifier="corpha"/>
+		<Process CommandIdentifier="kscserver" />				
+		<Process CommandIdentifier="phabor"/>		
+		<Process CommandIdentifier="phadex" />		
+		<Process CommandIdentifier="phatra"/>		
+		<Process CommandIdentifier="vbordimport2"/>		
+		<Process CommandIdentifier="zaapunix" />
+		<Process CommandIdentifier="cscservice" />		
+	</Country>						
+</CSCProcesses>

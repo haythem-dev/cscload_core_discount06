@@ -1,0 +1,1799 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="CscService_only|Win32">
+      <Configuration>CscService_only</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="CscService_only|x64">
+      <Configuration>CscService_only</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{23068FFE-D708-4B28-91B4-BC6E22E45E16}</ProjectGuid>
+    <RootNamespace>libcsc</RootNamespace>
+    <Keyword>Qt4VS</Keyword>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='CscService_only|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='CscService_only|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='CscService_only|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='CscService_only|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='CscService_only|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='CscService_only|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='CscService_only|Win32'" />
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='CscService_only|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='CscService_only|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='CscService_only|x64'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>.;$(SolutionDir)libcsc;$(SolutionDir)..\ext\ssuk\basar\include;$(SolutionDir)..\ext\boost\include;$(SolutionDir)..\ext\log4cplus\include;$(SolutionDir)..\ext\unittest++\include;$(SolutionDir)pxverbund\include;$(SolutionDir)pxdb\include;$(SolutionDir)\cxxtools\include;$(SolutionDir)..\ext\liblockmanager\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <ProgramDataBaseFileName>$(TargetDir)$(TargetName).pdb</ProgramDataBaseFileName>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <ObjectFileName>$(IntDir)/%(RelativeDir)/</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <ShowProgress>false</ShowProgress>
+      <ResourceOutputFileName>
+      </ResourceOutputFileName>
+    </ResourceCompile>
+    <Lib>
+      <SubSystem>Console</SubSystem>
+      <AdditionalDependencies>libutil.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)..\ext\libutil\lib\$(Configuration)</AdditionalLibraryDirectories>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='CscService_only|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>.;$(SolutionDir)libcsc;$(SolutionDir)..\ext\ssuk\basar\include;$(SolutionDir)..\ext\boost\include;$(SolutionDir)..\ext\log4cplus\include;$(SolutionDir)..\ext\unittest++\include;$(SolutionDir)pxverbund\include;$(SolutionDir)pxdb\include;$(SolutionDir)\cxxtools\include;$(SolutionDir)..\ext\liblockmanager\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <ProgramDataBaseFileName>$(TargetDir)$(TargetName).pdb</ProgramDataBaseFileName>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <ObjectFileName>$(IntDir)/%(RelativeDir)/</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <ShowProgress>false</ShowProgress>
+      <ResourceOutputFileName>
+      </ResourceOutputFileName>
+    </ResourceCompile>
+    <Lib>
+      <SubSystem>Console</SubSystem>
+      <AdditionalDependencies>libutil.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)..\ext\libutil\lib\$(Configuration);$(SolutionDir)..\ext\libutil\lib\debug</AdditionalLibraryDirectories>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>.;$(SolutionDir)libcsc;$(SolutionDir)..\ext\ssuk\basar\include;$(SolutionDir)..\ext\boost\include;$(SolutionDir)..\ext\log4cplus\include;$(SolutionDir)..\ext\unittest++\include;$(SolutionDir)pxverbund\include;$(SolutionDir)pxdb\include;$(SolutionDir)\cxxtools\include;$(SolutionDir)..\ext\liblockmanager\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <ProgramDataBaseFileName>$(TargetDir)$(TargetName).pdb</ProgramDataBaseFileName>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <ObjectFileName>$(IntDir)/%(RelativeDir)/</ObjectFileName>
+      <DisableSpecificWarnings>26429;26440;26447;26455;26814</DisableSpecificWarnings>
+    </ClCompile>
+    <ResourceCompile>
+      <ShowProgress>false</ShowProgress>
+      <ResourceOutputFileName>
+      </ResourceOutputFileName>
+    </ResourceCompile>
+    <Lib>
+      <SubSystem>Console</SubSystem>
+      <AdditionalDependencies>libutil.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)..\ext\libutil\lib\$(Configuration)</AdditionalLibraryDirectories>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='CscService_only|x64'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>.;$(SolutionDir)libcsc;$(SolutionDir)..\ext\ssuk\basar\include;$(SolutionDir)..\ext\ssuk\boost;$(SolutionDir)..\ext\ssuk\log4cplus\include;$(SolutionDir)..\ext\unittest++\include;$(SolutionDir)pxverbund\include;$(SolutionDir)pxdb\include;$(SolutionDir)\cxxtools\include;$(SolutionDir)..\ext\liblockmanager\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <ProgramDataBaseFileName>$(TargetDir)$(TargetName).pdb</ProgramDataBaseFileName>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <ObjectFileName>$(IntDir)/%(RelativeDir)/</ObjectFileName>
+      <DisableSpecificWarnings>26429;26440;26447;26455;26814</DisableSpecificWarnings>
+    </ClCompile>
+    <ResourceCompile>
+      <ShowProgress>false</ShowProgress>
+      <ResourceOutputFileName>
+      </ResourceOutputFileName>
+    </ResourceCompile>
+    <Lib>
+      <SubSystem>Console</SubSystem>
+      <AdditionalDependencies>libutil.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)..\ext\libutil\lib\$(Configuration)</AdditionalLibraryDirectories>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.;$(SolutionDir)libcsc;$(SolutionDir)..\ext\ssuk\basar\include;$(SolutionDir)..\ext\boost\include;$(SolutionDir)..\ext\log4cplus\include;$(SolutionDir)..\ext\unittest++\include;$(SolutionDir)pxverbund\include;$(SolutionDir)pxdb\include;$(SolutionDir)\cxxtools\include;$(SolutionDir)..\ext\liblockmanager\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <AssemblerOutput>
+      </AssemblerOutput>
+      <ProgramDataBaseFileName>$(TargetDir)$(TargetName).pdb</ProgramDataBaseFileName>
+      <WarningLevel>Level4</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <ObjectFileName>$(IntDir)/%(RelativeDir)/</ObjectFileName>
+    </ClCompile>
+    <Lib>
+      <OutputFile>$(OutDir)libcsc.lib</OutputFile>
+      <AdditionalDependencies>libutil.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)..\ext\libutil\lib\$(Configuration)</AdditionalLibraryDirectories>
+    </Lib>
+    <ResourceCompile>
+      <ShowProgress>false</ShowProgress>
+      <ResourceOutputFileName>
+      </ResourceOutputFileName>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.;$(SolutionDir)libcsc;$(SolutionDir)..\ext\ssuk\basar\include;$(SolutionDir)..\ext\boost\include;$(SolutionDir)..\ext\log4cplus\include;$(SolutionDir)..\ext\unittest++\include;$(SolutionDir)pxverbund\include;$(SolutionDir)pxdb\include;$(SolutionDir)\cxxtools\include;$(SolutionDir)..\ext\liblockmanager\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <AssemblerOutput>
+      </AssemblerOutput>
+      <ProgramDataBaseFileName>$(TargetDir)$(TargetName).pdb</ProgramDataBaseFileName>
+      <WarningLevel>Level4</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <ObjectFileName>$(IntDir)/%(RelativeDir)/</ObjectFileName>
+      <DisableSpecificWarnings>26429;26440;26447;26455;26814</DisableSpecificWarnings>
+    </ClCompile>
+    <Lib>
+      <OutputFile>$(OutDir)libcsc.lib</OutputFile>
+      <AdditionalDependencies>libutil.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)..\ext\libutil\lib\$(Configuration)</AdditionalLibraryDirectories>
+    </Lib>
+    <ResourceCompile>
+      <ShowProgress>false</ShowProgress>
+      <ResourceOutputFileName>
+      </ResourceOutputFileName>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="blockedarticles\blockedarticles.cpp" />
+    <ClCompile Include="blockedarticles\blockedarticlesmapperbase.cpp" />
+    <ClCompile Include="blockedarticles\blockedarticlesrepository.cpp" />
+    <ClCompile Include="blockedarticles\blockedarticlessqlmapper.cpp" />
+    <ClCompile Include="blockedarticles\componentmanager\blockedarticlescomponentmanager.cpp" />
+    <ClCompile Include="callback\domainmodule\callbackcustomerdm.cpp" />
+    <ClCompile Include="callback\domainmodule\callbackdivisiondm.cpp" />
+    <ClCompile Include="callback\domainmodule\callbackoverviewitemdm.cpp" />
+    <ClCompile Include="callback\domainmodule\callbackposdm.cpp" />
+    <ClCompile Include="callback\domainmodule\callbackreasondm.cpp" />
+    <ClCompile Include="callback\domainmodule\callbackstatusdm.cpp" />
+    <ClCompile Include="callback\domainmodule\critdm.cpp" />
+    <ClCompile Include="callback\domainmodule\newcallbackcritposdm.cpp" />
+    <ClCompile Include="callback\domainmodule\newcallbackdm.cpp" />
+    <ClCompile Include="callback\exceptions\callbacklockedexception.cpp" />
+    <ClCompile Include="callback\exceptions\callbacknotfoundexception.cpp" />
+    <ClCompile Include="callback\exceptions\customernotfoundexception.cpp" />
+    <ClCompile Include="callback\repository\callbackcustomermapper.cpp" />
+    <ClCompile Include="callback\repository\callbackdivisionmapper.cpp" />
+    <ClCompile Include="callback\repository\callbackitemmapper.cpp" />
+    <ClCompile Include="callback\repository\callbackmapper.cpp" />
+    <ClCompile Include="callback\repository\callbackoverviewitemmapper.cpp" />
+    <ClCompile Include="callback\repository\callbackposmapper.cpp" />
+    <ClCompile Include="callback\repository\callbackreasonmapper.cpp" />
+    <ClCompile Include="callback\repository\callbackstatusmapper.cpp" />
+    <ClCompile Include="callback\repository\findcallbacksrequest.cpp" />
+    <ClCompile Include="callback\repository\findcustomersrequest.cpp" />
+    <ClCompile Include="callback\usecase\writenewcallbackcritposuc.cpp" />
+    <ClCompile Include="callback\usecase\writenewcallbackuc.cpp" />
+    <ClCompile Include="crema\componentmanager\cremacomponentmanager.cpp" />
+    <ClCompile Include="crema\creditlimitdata\creditlimitdata.cpp" />
+    <ClCompile Include="crema\creditlimitdata\creditlimitdatamapperbase.cpp" />
+    <ClCompile Include="crema\creditlimitdata\creditlimitdatasql.cpp" />
+    <ClCompile Include="crema\creditlimitdata\creditlimitdatasqlmapper.cpp" />
+    <ClCompile Include="crema\cremaorder\cremaorder.cpp" />
+    <ClCompile Include="crema\cremaorder\cremaordermapperbase.cpp" />
+    <ClCompile Include="crema\cremaorder\cremaordersql.cpp" />
+    <ClCompile Include="crema\cremaorder\cremaordersqlmapper.cpp" />
+    <ClCompile Include="Crema\GuiData\guidata.cpp" />
+    <ClCompile Include="Crema\GuiData\guidatamapperbase.cpp" />
+    <ClCompile Include="Crema\GuiData\guidatasql.cpp" />
+    <ClCompile Include="Crema\GuiData\guidatasqlmapper.cpp" />
+    <ClCompile Include="crema\maildata\maildata.cpp" />
+    <ClCompile Include="crema\maildata\maildatamapperbase.cpp" />
+    <ClCompile Include="crema\maildata\maildatasql.cpp" />
+    <ClCompile Include="crema\maildata\maildatasqlmapper.cpp" />
+    <ClCompile Include="crema\maildata\recipient.cpp" />
+    <ClCompile Include="crema\orderdata\orderdata.cpp" />
+    <ClCompile Include="crema\orderdata\orderdatamapperbase.cpp" />
+    <ClCompile Include="crema\orderdata\orderdatasql.cpp" />
+    <ClCompile Include="crema\orderdata\orderdatasqlmapper.cpp" />
+    <ClCompile Include="crema\reason\reason.cpp" />
+    <ClCompile Include="crema\reason\reasonmapperbase.cpp" />
+    <ClCompile Include="crema\reason\reasonsql.cpp" />
+    <ClCompile Include="crema\reason\reasonsqlmapper.cpp" />
+    <ClCompile Include="crema\repository\repository.cpp" />
+    <ClCompile Include="crema\usersuggestion\usersuggestion.cpp" />
+    <ClCompile Include="crema\usersuggestion\usersuggestionmapperbase.cpp" />
+    <ClCompile Include="crema\usersuggestion\usersuggestionsql.cpp" />
+    <ClCompile Include="crema\usersuggestion\usersuggestionsqlmapper.cpp" />
+    <ClCompile Include="cscorderpos\componentmanager\cscorderposcomponentmanager.cpp" />
+    <ClCompile Include="cscorderpos\cscorderpossplittinfo\cscorderpossplittinfo.cpp" />
+    <ClCompile Include="cscorderpos\cscorderpossplittinfo\cscorderpossplittinfoinsertsqlparameterbinder.cpp" />
+    <ClCompile Include="cscorderpos\cscorderpossplittinfo\cscorderpossplittinfomapperbase.cpp" />
+    <ClCompile Include="cscorderpos\cscorderpossplittinfo\cscorderpossplittinforepository.cpp" />
+    <ClCompile Include="cscorderpos\cscorderpossplittinfo\cscorderpossplittinfosqlmapper.cpp" />
+    <ClCompile Include="cscordertype\componentmanager\cscordertypecomponentmanager.cpp" />
+    <ClCompile Include="cscordertype\cscordertype.cpp" />
+    <ClCompile Include="cscordertype\cscordertypebatchconfig\cscordertypebatchconfig.cpp" />
+    <ClCompile Include="cscordertype\cscordertypebatchconfig\cscordertypebatchconfigmapperbase.cpp" />
+    <ClCompile Include="cscordertype\cscordertypebatchconfig\cscordertypebatchconfigsqlmapper.cpp" />
+    <ClCompile Include="cscordertype\ordertypeflagtype\ordertypeflagtype.cpp" />
+    <ClCompile Include="cscordertype\ordertypeflagtype\ordertypeflagtypemapperbase.cpp" />
+    <ClCompile Include="cscordertype\ordertypeflagtype\ordertypeflagtypesqlmapper.cpp" />
+    <ClCompile Include="cscordertype\repository\cscordertyperepository.cpp" />
+    <ClCompile Include="cscordertype\sqlmapper\cscordertypemapperbase.cpp" />
+    <ClCompile Include="cscordertype\sqlmapper\cscordertypesqlmapper.cpp" />
+    <ClCompile Include="cscorder\componentmanager\cscordercomponentmanager.cpp" />
+    <ClCompile Include="cscorder\csccallplan\csccallplan.cpp" />
+    <ClCompile Include="cscorder\csccallplan\csccallplaninsertsqlparameterbinder.cpp" />
+    <ClCompile Include="cscorder\csccallplan\csccallplanupdatesqlparameterbinder.cpp" />
+    <ClCompile Include="cscorder\csccallplan\csccallplanmapperbase.cpp" />
+    <ClCompile Include="cscorder\csccallplan\csccallplanrepository.cpp" />
+    <ClCompile Include="cscorder\csccallplan\csccallplansqlmapper.cpp" />
+    <ClCompile Include="cscorder\csccallplan\csccallplanselectsqlparameterbinder.cpp" />
+    <ClCompile Include="cscorder\cscorderflags\cscorderflags.cpp" />
+    <ClCompile Include="cscorder\cscorderflags\cscorderflagsinsertsqlparameterbinder.cpp" />
+    <ClCompile Include="cscorder\cscorderflags\cscorderflagsmapperbase.cpp" />
+    <ClCompile Include="cscorder\cscorderflags\cscorderflagsrepository.cpp" />
+    <ClCompile Include="cscorder\cscorderflags\cscorderflagssqlmapper.cpp" />
+    <ClCompile Include="cscorder\cscorderflags\cscorderflagsupdatesqlparameterbinder.cpp" />
+    <ClCompile Include="cscorder\exceptions\cscorderflagsexception.cpp" />
+    <ClCompile Include="cscorder\usecase\savecsccallplanuc.cpp" />
+    <ClCompile Include="customer\articleinfo\articleinfo.cpp" />
+    <ClCompile Include="customer\articleinfo\articleinfomapperbase.cpp" />
+    <ClCompile Include="customer\articleinfo\articleinfosqlmapper.cpp" />
+    <ClCompile Include="customer\articleinfo\articleorderinfo.cpp" />
+    <ClCompile Include="customer\articleinfo\articleorderinfomapperbase.cpp" />
+    <ClCompile Include="customer\articleinfo\articleorderinfosqlmapper.cpp" />
+    <ClCompile Include="customer\changedquantities\changedquantities.cpp" />
+    <ClCompile Include="customer\changedquantities\changedquantitiesmapperbase.cpp" />
+    <ClCompile Include="customer\changedquantities\changedquantitiessql.cpp" />
+    <ClCompile Include="customer\changedquantities\changedquantitiessqlmapper.cpp" />
+    <ClCompile Include="customer\componentmanager\customercomponentmanager.cpp" />
+    <ClCompile Include="customer\customer.cpp" />
+    <ClCompile Include="customer\customercondition\customercondition.cpp" />
+    <ClCompile Include="customer\customercondition\customerconditionmapperbase.cpp" />
+    <ClCompile Include="customer\customercondition\customerconditionsqlmapper.cpp" />
+    <ClCompile Include="customer\customermapperbase.cpp" />
+    <ClCompile Include="customer\customerrepository.cpp" />
+    <ClCompile Include="customer\customersqlmapper.cpp" />
+    <ClCompile Include="customer\discountaccount\discountaccount.cpp" />
+    <ClCompile Include="customer\discountaccount\discountaccountmapperbase.cpp" />
+    <ClCompile Include="customer\discountaccount\discountaccountsql.cpp" />
+    <ClCompile Include="customer\discountaccount\discountaccountsqlmapper.cpp" />
+    <ClCompile Include="customer\orderinfo\orderinfo.cpp" />
+    <ClCompile Include="customer\orderinfo\orderinfomapperbase.cpp" />
+    <ClCompile Include="customer\orderinfo\orderinfosqlmapper.cpp" />
+    <ClCompile Include="customer\orderstatus\orderstatus.cpp" />
+    <ClCompile Include="customer\orderstatus\orderstatusmapperbase.cpp" />
+    <ClCompile Include="customer\orderstatus\orderstatussql.cpp" />
+    <ClCompile Include="customer\orderstatus\orderstatussqlmapper.cpp" />
+    <ClCompile Include="customer\paymentconditions\paymentconditions.cpp" />
+    <ClCompile Include="customer\paymentconditions\paymentconditionsmapperbase.cpp" />
+    <ClCompile Include="customer\paymentconditions\paymentconditionssql.cpp" />
+    <ClCompile Include="customer\paymentconditions\paymentconditionssqlmapper.cpp" />
+    <ClCompile Include="customer\payments\payments.cpp" />
+    <ClCompile Include="customer\payments\paymentsmapperbase.cpp" />
+    <ClCompile Include="customer\payments\paymentssql.cpp" />
+    <ClCompile Include="customer\payments\paymentssqlmapper.cpp" />
+    <ClCompile Include="customer\pricesanddiscounts\pricesanddiscounts.cpp" />
+    <ClCompile Include="customer\pricesanddiscounts\pricesanddiscountsmapperbase.cpp" />
+    <ClCompile Include="customer\pricesanddiscounts\pricesanddiscountssql.cpp" />
+    <ClCompile Include="customer\pricesanddiscounts\pricesanddiscountssqlmapper.cpp" />
+    <ClCompile Include="customer\promotions\promotions.cpp" />
+    <ClCompile Include="customer\promotions\promotionsmapperbase.cpp" />
+    <ClCompile Include="customer\promotions\promotionssql.cpp" />
+    <ClCompile Include="customer\promotions\promotionssqlmapper.cpp" />
+    <ClCompile Include="customer\routes\routes.cpp" />
+    <ClCompile Include="customer\routes\routesmapperbase.cpp" />
+    <ClCompile Include="customer\routes\routessql.cpp" />
+    <ClCompile Include="customer\routes\routessqlmapper.cpp" />
+    <ClCompile Include="customer\tenderinfo\tenderinfo.cpp" />
+    <ClCompile Include="customer\tenderinfo\tenderinfomapperbase.cpp" />
+    <ClCompile Include="customer\tenderinfo\tenderinfosqlmapper.cpp" />
+    <ClCompile Include="customer\tours\tours.cpp" />
+    <ClCompile Include="customer\tours\toursmapperbase.cpp" />
+    <ClCompile Include="customer\tours\tourssql.cpp" />
+    <ClCompile Include="customer\tours\tourssqlmapper.cpp" />
+    <ClCompile Include="customer\tours\weektours\weektours.cpp" />
+    <ClCompile Include="customer\tours\weektours\weektoursmapperbase.cpp" />
+    <ClCompile Include="customer\tours\weektours\weektourssql.cpp" />
+    <ClCompile Include="customer\tours\weektours\weektourssqlmapper.cpp" />
+    <ClCompile Include="discount\calculator\commands\conditionalfilter.cpp" />
+    <ClCompile Include="customer\turnover\turnover.cpp" />
+    <ClCompile Include="customer\turnover\turnovermapperbase.cpp" />
+    <ClCompile Include="customer\turnover\turnoversql.cpp" />
+    <ClCompile Include="customer\turnover\turnoversqlmapper.cpp" />
+    <ClCompile Include="discount\calculator\commands\dediscountcalculatorcommand.cpp" />
+    <ClCompile Include="discount\calculator\commands\discountbestpricefilter.cpp" />
+    <ClCompile Include="discount\calculator\commands\discountcalculatorchaincommandbase.cpp" />
+    <ClCompile Include="discount\calculator\commands\discountcustomerordertypepermissionfilter.cpp" />
+    <ClCompile Include="discount\calculator\commands\discountcustomerrxafilter.cpp" />
+    <ClCompile Include="discount\calculator\commands\discountordertypefilter.cpp" />
+    <ClCompile Include="discount\calculator\commands\discountpriorityfilter.cpp" />
+    <ClCompile Include="discount\calculator\commands\discounttaxspannencheckfilter.cpp" />
+    <ClCompile Include="discount\calculator\commands\discountvisibilityfilter.cpp" />
+    <ClCompile Include="discount\calculator\commands\unconditionalfilter.cpp" />
+    <ClCompile Include="discount\discountcollectionfinder\discountcollectionfinder.cpp" />
+    <ClCompile Include="discount\orderpositiondiscount\orderpositiondiscountrebateinkindentryselectsqlparameterbinder.cpp" />
+    <ClCompile Include="discount\tender\repository\tenderdiscountrepository.cpp" />
+    <ClCompile Include="discount\tender\sqlmapper\tenderdiscountmapperbase.cpp" />
+    <ClCompile Include="discount\tender\sqlmapper\tenderdiscountsqlmapper.cpp" />
+    <ClCompile Include="discount\tender\tenderdiscount.cpp" />
+    <ClCompile Include="document\componentmanager\documentcomponentmanager.cpp" />
+    <ClCompile Include="document\deliveryadvice\deliveryadvice.cpp" />
+    <ClCompile Include="document\deliveryadvice\deliveryadvicelineibtlink\deliveryadvicelineibtlink.cpp" />
+    <ClCompile Include="document\deliveryadvice\deliveryadvicelineibtlink\deliveryadvicelineibtlinkmapperbase.cpp" />
+    <ClCompile Include="document\deliveryadvice\deliveryadvicelineibtlink\deliveryadvicelineibtlinksqlmapper.cpp" />
+    <ClCompile Include="document\deliveryadvice\deliveryadviceline\deliveryadviceline.cpp" />
+    <ClCompile Include="document\deliveryadvice\deliveryadviceline\deliveryadvicelinedetails.cpp" />
+    <ClCompile Include="document\deliveryadvice\deliveryadviceline\deliveryadvicelinedetailsmapperbase.cpp" />
+    <ClCompile Include="document\deliveryadvice\deliveryadviceline\deliveryadvicelinedetailssqlmapper.cpp" />
+    <ClCompile Include="document\deliveryadvice\deliveryadviceline\deliveryadvicelinediscount.cpp" />
+    <ClCompile Include="document\deliveryadvice\deliveryadviceline\deliveryadvicelinediscountmapperbase.cpp" />
+    <ClCompile Include="document\deliveryadvice\deliveryadviceline\deliveryadvicelinediscountsqlmapper.cpp" />
+    <ClCompile Include="document\deliveryadvice\deliveryadviceline\deliveryadvicelineextrasat.cpp" />
+    <ClCompile Include="document\deliveryadvice\deliveryadviceline\deliveryadvicelineextrasatmapperbase.cpp" />
+    <ClCompile Include="document\deliveryadvice\deliveryadviceline\deliveryadvicelineextrasatsqlmapper.cpp" />
+    <ClCompile Include="document\deliveryadvice\deliveryadviceline\deliveryadvicelinemapperbase.cpp" />
+    <ClCompile Include="document\deliveryadvice\deliveryadviceline\deliveryadvicelinereturn.cpp" />
+    <ClCompile Include="document\deliveryadvice\deliveryadviceline\deliveryadvicelinereturnmapperbase.cpp" />
+    <ClCompile Include="document\deliveryadvice\deliveryadviceline\deliveryadvicelinereturnsqlmapper.cpp" />
+    <ClCompile Include="document\deliveryadvice\deliveryadviceline\deliveryadvicelinesqlmapper.cpp" />
+    <ClCompile Include="document\deliveryadvice\deliveryadvicemapperbase.cpp" />
+    <ClCompile Include="document\deliveryadvice\deliveryadviceremarks.cpp" />
+    <ClCompile Include="document\deliveryadvice\deliveryadviceremarksmapperbase.cpp" />
+    <ClCompile Include="document\deliveryadvice\deliveryadviceremarkssqlmapper.cpp" />
+    <ClCompile Include="document\deliveryadvice\deliveryadvicerepository.cpp" />
+    <ClCompile Include="document\deliveryadvice\deliveryadvicesqlmapper.cpp" />
+    <ClCompile Include="document\deliveryadvice\deliveryadvicevattotals.cpp" />
+    <ClCompile Include="document\deliveryadvice\deliveryadvicevattotalsmapperbase.cpp" />
+    <ClCompile Include="document\deliveryadvice\deliveryadvicevattotalssqlmapper.cpp" />
+    <ClCompile Include="document\documentarchiveinfo\documentarchiveinfo.cpp" />
+    <ClCompile Include="document\documentarchiveinfo\documentarchiveinfoinsertsqlparameterbinder.cpp" />
+    <ClCompile Include="document\documentarchiveinfo\documentarchiveinfomapperbase.cpp" />
+    <ClCompile Include="document\documentarchiveinfo\documentarchiveinforepository.cpp" />
+    <ClCompile Include="document\documentarchiveinfo\documentarchiveinfoselectbyguidsqlparameterbinder.cpp" />
+    <ClCompile Include="document\documentarchiveinfo\documentarchiveinfoselectsqlparameterbinder.cpp" />
+    <ClCompile Include="document\documentarchiveinfo\documentarchiveinfosqlmapper.cpp" />
+    <ClCompile Include="document\documentprintinfo\documentprintinfo.cpp" />
+    <ClCompile Include="document\documentprintinfo\documentprintinfoinsertsqlparameterbinder.cpp" />
+    <ClCompile Include="document\documentprintinfo\documentprintinfomapperbase.cpp" />
+    <ClCompile Include="document\documentprintinfo\documentprintinforepository.cpp" />
+    <ClCompile Include="document\documentprintinfo\documentprintinfoselectsqlparameterbinder.cpp" />
+    <ClCompile Include="document\documentprintinfo\documentprintinfosqlmapper.cpp" />
+    <ClCompile Include="document\narcoticarchive\narcoticarchive.cpp" />
+    <ClCompile Include="document\narcoticarchive\narcoticarchiverepository.cpp" />
+    <ClCompile Include="document\narcoticarchive\narcoticarchivesqlmapper.cpp" />
+    <ClCompile Include="document\narcoticarchive\narcoticarchiveinsertsqlparameterbinder.cpp" />
+    <ClCompile Include="document\narcoticarchive\narcoticarchiveselectbycontributionvouchernosqlparameterbinder.cpp" />
+    <ClCompile Include="document\narcoticarchive\narcoticarchiveselectsqlparameterbinder.cpp" />
+    <ClCompile Include="document\narcoticarchive\narcoticarchivemapperbase.cpp" />
+    <ClCompile Include="document\taxrates\taxrates.cpp" />
+    <ClCompile Include="document\taxrates\taxratesmapperbase.cpp" />
+    <ClCompile Include="document\taxrates\taxratesrepository.cpp" />
+    <ClCompile Include="document\taxrates\taxratessql.cpp" />
+    <ClCompile Include="document\taxrates\taxratessqlmapper.cpp" />
+    <ClCompile Include="exceptions\exceptionhelper.cpp" />
+    <ClCompile Include="exceptions\sqlduplicateexception.cpp" />
+    <ClCompile Include="exceptions\sqlnotfoundexception.cpp" />
+    <ClCompile Include="exceptions\sqltoomanyrowsexception.cpp" />
+    <ClCompile Include="ibt\articlequotachecker\articlequotachecker.cpp" />
+    <ClCompile Include="callback\componentmanager\componentmanager.cpp" />
+    <ClCompile Include="callback\domainmodule\callbackdm.cpp" />
+    <ClCompile Include="callback\domainmodule\callbackitemdm.cpp" />
+    <ClCompile Include="callback\domainmodule\critposdm.cpp" />
+    <ClCompile Include="callback\repository\repository.cpp" />
+    <ClCompile Include="callback\repository\callbacksqlmapper.cpp" />
+    <ClCompile Include="ibt\bookingcompletedchecker\bookingcompletedchecker.cpp" />
+    <ClCompile Include="cscorder\cscorderibtpickingdata\cscorderibtpickingdata.cpp" />
+    <ClCompile Include="cscorder\cscorderibtpickingdata\cscorderibtpickingdatainsertsqlparameterbinder.cpp" />
+    <ClCompile Include="cscorder\cscorderibtpickingdata\cscorderibtpickingdatamapperbase.cpp" />
+    <ClCompile Include="cscorder\cscorderibtpickingdata\cscorderibtpickingdatarepository.cpp" />
+    <ClCompile Include="cscorder\cscorderibtpickingdata\cscorderibtpickingdatasqlmapper.cpp" />
+    <ClCompile Include="ibt\ibtbranch\ibtbranchrepository.cpp" />
+    <ClCompile Include="ibt\ibtbranch\ibtbranchsetting.cpp" />
+    <ClCompile Include="ibt\ibtbranch\ibtbranchsettingcollection.cpp" />
+    <ClCompile Include="ibt\ibtbranch\ibtbranchsettingmapperbase.cpp" />
+    <ClCompile Include="ibt\ibtbranch\ibtbranchsettingsqlmapper.cpp" />
+    <ClCompile Include="ibt\ibtrequest\discount\ibtrequestdiscount.cpp" />
+    <ClCompile Include="ibt\ibtrequest\discount\ibtrequestdiscountmapperbase.cpp" />
+    <ClCompile Include="ibt\ibtrequest\discount\ibtrequestdiscountsqlmapper.cpp" />
+    <ClCompile Include="ibt\ibtrequest\ibtrequest.cpp" />
+    <ClCompile Include="ibt\ibtrequest\ibtrequestmapperbase.cpp" />
+    <ClCompile Include="ibt\ibtrequest\ibtrequestrepository.cpp" />
+    <ClCompile Include="ibt\ibtrequest\ibtrequestsqlmapper.cpp" />
+    <ClCompile Include="ibt\ibtrequest\remark\ibtrequestremark.cpp" />
+    <ClCompile Include="ibt\ibtrequest\remark\ibtrequestremarkmapperbase.cpp" />
+    <ClCompile Include="ibt\ibtrequest\remark\ibtrequestremarksqlmapper.cpp" />
+    <ClCompile Include="ibt\ibtresponse\ibtresponse.cpp" />
+    <ClCompile Include="ibt\ibtresponse\ibtresponsemapperbase.cpp" />
+    <ClCompile Include="ibt\ibtresponse\ibtresponserepository.cpp" />
+    <ClCompile Include="ibt\ibtresponse\ibtresponsesqlmapper.cpp" />
+    <ClCompile Include="ibt\transportexclusionchecker\transportexclusionchecker.cpp" />
+    <ClCompile Include="msv3\componentmanager\msv3componentmanager.cpp" />
+    <ClCompile Include="msv3\customerdata\customerdata.cpp" />
+    <ClCompile Include="msv3\customerdata\customerdatamapperbase.cpp" />
+    <ClCompile Include="msv3\customerdata\customerdatarepository.cpp" />
+    <ClCompile Include="msv3\customerdata\customerdataselectsqlparameterbinder.cpp" />
+    <ClCompile Include="msv3\customerdata\customerdatasqlmapper.cpp" />
+    <ClCompile Include="msv3\orderresponse\orderresponse.cpp" />
+    <ClCompile Include="msv3\orderresponse\orderresponseinsertsqlparameterbinder.cpp" />
+    <ClCompile Include="msv3\orderresponse\orderresponsemapperbase.cpp" />
+    <ClCompile Include="msv3\orderresponse\orderresponserepository.cpp" />
+    <ClCompile Include="msv3\orderresponse\orderresponseselectsqlparameterbinder.cpp" />
+    <ClCompile Include="msv3\orderresponse\orderresponsesqlmapper.cpp" />
+    <ClCompile Include="msv3\orderresponse\orderresponseupdatesqlparameterbinder.cpp" />
+    <ClCompile Include="msv3\transmissionresponse\transmissionresponse.cpp" />
+    <ClCompile Include="msv3\transmissionresponse\transmissionresponseinsertsqlparameterbinder.cpp" />
+    <ClCompile Include="msv3\transmissionresponse\transmissionresponsemapperbase.cpp" />
+    <ClCompile Include="msv3\transmissionresponse\transmissionresponserepository.cpp" />
+    <ClCompile Include="msv3\transmissionresponse\transmissionresponseselectbyintermalhashsqlparameterbinder.cpp" />
+    <ClCompile Include="msv3\transmissionresponse\transmissionresponseselectsqlparameterbinder.cpp" />
+    <ClCompile Include="msv3\transmissionresponse\transmissionresponsesqlmapper.cpp" />
+    <ClCompile Include="msv3\transmissionresponse\transmissionresponseupdatesqlparameterbinder.cpp" />
+    <ClCompile Include="parameter\branchparametergetter.cpp" />
+    <ClCompile Include="parameter\componentmanager\parametercomponentmanager.cpp" />
+    <ClCompile Include="parameter\csvorderimport\cscorderimportcsvcolumns.cpp" />
+    <ClCompile Include="parameter\csvorderimport\cscorderimportcsvcolumnsmapperbase.cpp" />
+    <ClCompile Include="parameter\csvorderimport\cscorderimportcsvcolumnssqlmapper.cpp" />
+    <ClCompile Include="parameter\csvorderimport\cscorderimportcsvformats.cpp" />
+    <ClCompile Include="parameter\csvorderimport\cscorderimportcsvformatsmapperbase.cpp" />
+    <ClCompile Include="parameter\csvorderimport\cscorderimportcsvformatsqlmapper.cpp" />
+    <ClCompile Include="parameter\csvorderimport\cscorderimportfields.cpp" />
+    <ClCompile Include="parameter\csvorderimport\cscorderimportfieldsmapperbase.cpp" />
+    <ClCompile Include="parameter\csvorderimport\cscorderimportfieldssqlmapper.cpp" />
+    <ClCompile Include="parameter\csvorderimport\csvorderimportrepository.cpp" />
+    <ClCompile Include="parameter\orderparametergetter.cpp" />
+    <ClCompile Include="parameter\sessionparametergetter.cpp" />
+    <ClCompile Include="persistence\accessorfactory.cpp" />
+    <ClCompile Include="persistence\nullaccessor.cpp" />
+    <ClCompile Include="procurementpermission\componentmanager\componentmanager.cpp" />
+    <ClCompile Include="procurementpermission\repository\repository.cpp" />
+    <ClCompile Include="discount\basevalues\orderbasevalue\articleclassificationrepository.cpp" />
+    <ClCompile Include="discount\basevalues\orderbasevalue\articleclassificationsqlmapper.cpp" />
+    <ClCompile Include="discount\basevalues\orderbasevalue\orderitembasevalue.cpp" />
+    <ClCompile Include="discount\basevalues\orderbasevalue\orderitembasevaluecollection.cpp" />
+    <ClCompile Include="discount\calculator\commands\bestof4customercombinedcalculatorcommand.cpp" />
+    <ClCompile Include="discount\calculator\commands\retailcalculatorcommand.cpp" />
+    <ClCompile Include="discount\calculator\commands\sumcalculatorcommand.cpp" />
+    <ClCompile Include="discount\calculator\commands\wholesaleallcustomerarticlecalculatorcommand.cpp" />
+    <ClCompile Include="discount\calculator\commands\wholesaleallcustomerarticlegroupcalculatorcommand.cpp" />
+    <ClCompile Include="discount\calculator\commands\wholesaleallcustomermanufacturercalculatorcommand.cpp" />
+    <ClCompile Include="discount\calculator\commands\wholesaleallcustomermanufacturergroupcalculatorcommand.cpp" />
+    <ClCompile Include="discount\calculator\commands\wholesalecustomerarticlecalculatorcommand.cpp" />
+    <ClCompile Include="discount\calculator\commands\wholesalecustomerarticlegroupcalculatorcommand.cpp" />
+    <ClCompile Include="discount\calculator\commands\wholesalecustomergrouparticlecalculatorcommand.cpp" />
+    <ClCompile Include="discount\calculator\commands\wholesalecustomergrouparticlegroupcalculatorcommand.cpp" />
+    <ClCompile Include="discount\calculator\commands\wholesalecustomergroupmanufacturercalculatorcommand.cpp" />
+    <ClCompile Include="discount\calculator\commands\wholesalecustomergroupmanufacturergroupcalculatorcommand.cpp" />
+    <ClCompile Include="discount\calculator\commands\wholesalecustomermanufacturercalculatorcommand.cpp" />
+    <ClCompile Include="discount\calculator\commands\wholesalecustomermanufacturergroupcalculatorcommand.cpp" />
+    <ClCompile Include="discount\calculator\commands\wholesaleindustryallcustomerarticlecalculatorcommand.cpp" />
+    <ClCompile Include="discount\calculator\commands\wholesaleindustryallcustomerarticlegroupcalculatorcommand.cpp" />
+    <ClCompile Include="discount\calculator\commands\wholesaleindustryallcustomermanufacturercalculatorcommand.cpp" />
+    <ClCompile Include="discount\calculator\commands\wholesaleindustryallcustomermanufacturergroupcalculatorcommand.cpp" />
+    <ClCompile Include="discount\calculator\commands\wholesaleindustrycustomerarticlecalculatorcommand.cpp" />
+    <ClCompile Include="discount\calculator\commands\wholesaleindustrycustomerarticlegroupcalculatorcommand.cpp" />
+    <ClCompile Include="discount\calculator\commands\wholesaleindustrycustomergrouparticlecalculatorcommand.cpp" />
+    <ClCompile Include="discount\calculator\commands\wholesaleindustrycustomergrouparticlegroupcalculatorcommand.cpp" />
+    <ClCompile Include="discount\calculator\commands\wholesaleindustrycustomergroupmanufacturercalculatorcommand.cpp" />
+    <ClCompile Include="discount\calculator\commands\wholesaleindustrycustomergroupmanufacturergroupcalculatorcommand.cpp" />
+    <ClCompile Include="discount\calculator\commands\wholesaleindustrycustomermanufacturercalculatorcommand.cpp" />
+    <ClCompile Include="discount\calculator\commands\wholesaleindustrycustomermanufacturergroupcalculatorcommand.cpp" />
+    <ClCompile Include="discount\calculator\discountcalculatortypemapper.cpp" />
+    <ClCompile Include="discount\componentmanager\discountcomponentmanager.cpp" />
+    <ClCompile Include="discount\componentmanager\hrdiscountcalculatorcomponentmanagerbase.cpp" />
+    <ClCompile Include="discount\componentmanager\hrorderdiscountcalculatorcomponentmanager.cpp" />
+    <ClCompile Include="discount\componentmanager\hrpositiondiscountcalculatorcomponentmanager.cpp" />
+    <ClCompile Include="discount\logger\discountlogger\discountlogposition.cpp" />
+    <ClCompile Include="discount\logger\discountlogger\discountlogpositioninsertsqlparameterbinder.cpp" />
+    <ClCompile Include="discount\logger\discountlogger\discountlogpositionmapperbase.cpp" />
+    <ClCompile Include="discount\logger\discountlogger\discountlogpositionrepository.cpp" />
+    <ClCompile Include="discount\logger\discountlogger\discountlogpositionsqlmapper.cpp" />
+    <ClCompile Include="discount\logger\discountlogger\log4cplusdiscountlogger.cpp" />
+    <ClCompile Include="discount\logger\discountlogger\repositorydiscountlogger.cpp" />
+    <ClCompile Include="discount\logger\hierarchylogger\nullhierarchylogger.cpp" />
+    <ClCompile Include="discount\logger\hierarchylogger\shellhierarchylogger.cpp" />
+    <ClCompile Include="discount\orderpositiondiscountprocessed\orderpositiondiscountprocessed.cpp" />
+    <ClCompile Include="discount\orderpositiondiscountprocessed\orderpositiondiscountprocessedcollection.cpp" />
+    <ClCompile Include="discount\orderpositiondiscountprocessed\orderpositiondiscountprocessedinsertsqlparameterbinder.cpp" />
+    <ClCompile Include="discount\orderpositiondiscountprocessed\orderpositiondiscountprocessedmapperbase.cpp" />
+    <ClCompile Include="discount\orderpositiondiscountprocessed\orderpositiondiscountprocessedrepository.cpp" />
+    <ClCompile Include="discount\orderpositiondiscountprocessed\orderpositiondiscountprocessedselectsqlparameterbinder.cpp" />
+    <ClCompile Include="discount\orderpositiondiscountprocessed\orderpositiondiscountprocessedsqlmapper.cpp" />
+    <ClCompile Include="discount\orderpositiondiscount\orderpositiondiscount.cpp" />
+    <ClCompile Include="discount\orderpositiondiscount\orderpositiondiscountdeletesqlparameterbinder.cpp" />
+    <ClCompile Include="discount\orderpositiondiscount\orderpositiondiscountinsertsqlparameterbinder.cpp" />
+    <ClCompile Include="discount\orderpositiondiscount\orderpositiondiscountmapperbase.cpp" />
+    <ClCompile Include="discount\orderpositiondiscount\orderpositiondiscountmodemapper.cpp" />
+    <ClCompile Include="discount\orderpositiondiscount\orderpositiondiscountordercompletionselectsqlparameterbinder.cpp" />
+    <ClCompile Include="discount\orderpositiondiscount\orderpositiondiscountrepository.cpp" />
+    <ClCompile Include="discount\orderpositiondiscount\orderpositiondiscountsinglearticleselectsqlparameterbinder.cpp" />
+    <ClCompile Include="discount\orderpositiondiscount\orderpositiondiscountsqlmapper.cpp" />
+    <ClCompile Include="discount\orderpositiondiscount\orderpositiondiscountupdatesqlparameterbinder.cpp" />
+    <ClCompile Include="discount\resultprocessor\compositeresultprocessor.cpp" />
+    <ClCompile Include="discount\resultprocessor\nullresultprocessor.cpp" />
+    <ClCompile Include="discount\resultprocessor\rebateinkindresultprocessor.cpp" />
+    <ClCompile Include="discount\resultprocessor\repositoryresultprocessor.cpp" />
+    <ClCompile Include="discount\resultprocessor\repositoryresultprocessorbase.cpp" />
+    <ClCompile Include="discount\resultprocessor\shellresultprocessor.cpp" />
+    <ClCompile Include="discount\usecase\orderdiscountcalcuc.cpp" />
+    <ClCompile Include="discount\usecase\positiondiscountcalcuc.cpp" />
+    <ClCompile Include="exceptions\cscexceptionbase.cpp" />
+    <ClCompile Include="exceptions\emptycollectionexception.cpp" />
+    <ClCompile Include="exceptions\emptycompositeexception.cpp" />
+    <ClCompile Include="exceptions\invaliddataexception.cpp" />
+    <ClCompile Include="exceptions\invalidparameterexception.cpp" />
+    <ClCompile Include="exceptions\persistenceexception.cpp" />
+    <ClCompile Include="exceptions\propertyunsetexception.cpp" />
+    <ClCompile Include="ibt\componentmanager\ibtcomponentmanager.cpp" />
+    <ClCompile Include="ibt\environmentchecker\environmentchecker.cpp" />
+    <ClCompile Include="ibt\exceptions\ibtrequestexception.cpp" />
+    <ClCompile Include="logger\loggerconfig.cpp">
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">WIN32;_CRT_SECURE_NO_WARNINGS;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='CscService_only|Win32'">WIN32;_CRT_SECURE_NO_WARNINGS;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">WIN32;_CRT_SECURE_NO_WARNINGS;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='CscService_only|x64'">WIN32;_CRT_SECURE_NO_WARNINGS;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">WIN32;_CRT_SECURE_NO_WARNINGS;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">WIN32;_CRT_SECURE_NO_WARNINGS;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="logger\loggerpool.cpp" />
+    <ClCompile Include="discount\calculator\discountcalculatorresult.cpp" />
+    <ClCompile Include="discount\calculator\commands\discountcalculatorcommandbase.cpp" />
+    <ClCompile Include="discount\calculator\commands\discountcalculatorcompositecommandbase.cpp" />
+    <ClCompile Include="discount\calculator\commands\fixedpricecalculatorcommand.cpp" />
+    <ClCompile Include="discount\calculator\commands\firstwinscalculatorcommand.cpp" />
+    <ClCompile Include="discount\logger\discountlogger\nulldiscountlogger.cpp" />
+    <ClCompile Include="discount\logger\discountlogger\shelldiscountlogger.cpp" />
+    <ClCompile Include="discount\basevalues\discountbasevalue\discountbasevalue.cpp" />
+    <ClCompile Include="discount\basevalues\discountbasevalue\discountbasevaluemapperbase.cpp" />
+    <ClCompile Include="discount\basevalues\discountbasevalue\discountbasevaluesqlmapper.cpp">
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">WIN32;_CRT_SECURE_NO_WARNINGS;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='CscService_only|Win32'">WIN32;_CRT_SECURE_NO_WARNINGS;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">WIN32;_CRT_SECURE_NO_WARNINGS;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='CscService_only|x64'">WIN32;_CRT_SECURE_NO_WARNINGS;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">WIN32;_CRT_SECURE_NO_WARNINGS;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">WIN32;_CRT_SECURE_NO_WARNINGS;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="discount\basevalues\discountbasevalue\discountbasevaluesinglearticlesqlparameterbinder.cpp" />
+    <ClCompile Include="discount\basevalues\discountbasevalue\discountbasevaluecollection.cpp" />
+    <ClCompile Include="discount\basevalues\discountbasevalue\discountbasevaluerepository.cpp" />
+    <ClCompile Include="datatypes\decimal.cpp" />
+    <ClCompile Include="datatypes\propertycollection.cpp" />
+    <ClCompile Include="datatypes\propertystate.cpp" />
+    <ClCompile Include="datatypes\int32.cpp" />
+    <ClCompile Include="datatypes\varstring.cpp" />
+    <ClCompile Include="datatypes\datetime.cpp" />
+    <ClCompile Include="persistence\accessor.cpp" />
+    <ClCompile Include="persistence\connection.cpp" />
+    <ClCompile Include="persistence\transactionguard.cpp" />
+    <ClCompile Include="procurementpermission\repository\requestsqlmapper.cpp" />
+    <ClCompile Include="returns\componentmanager\returncomponentmanager.cpp" />
+    <ClCompile Include="returns\returnannouncement\returnannouncement.cpp" />
+    <ClCompile Include="returns\returnannouncement\returnannouncementhead\returnannouncementhead.cpp" />
+    <ClCompile Include="returns\returnannouncement\returnannouncementhead\returnannouncementheadmapperbase.cpp" />
+    <ClCompile Include="returns\returnannouncement\returnannouncementhead\returnannouncementheadsqlmapper.cpp" />
+    <ClCompile Include="returns\returnannouncement\returnannouncementmapperbase.cpp" />
+    <ClCompile Include="returns\returnannouncement\returnannouncementpos\returnannouncementpos.cpp" />
+    <ClCompile Include="returns\returnannouncement\returnannouncementpos\returnannouncementposmapperbase.cpp" />
+    <ClCompile Include="returns\returnannouncement\returnannouncementpos\returnannouncementpossqlmapper.cpp" />
+    <ClCompile Include="returns\returnannouncement\returnannouncementrepository.cpp" />
+    <ClCompile Include="returns\returnannouncement\returnannouncementsqlmapper.cpp" />
+    <ClCompile Include="returns\returnperiod\returnperiod.cpp" />
+    <ClCompile Include="returns\returnperiod\returnperiodmapperbase.cpp" />
+    <ClCompile Include="returns\returnperiod\returnperiodrepository.cpp" />
+    <ClCompile Include="returns\returnperiod\returnperiodsqlmapper.cpp" />
+    <ClCompile Include="returns\returnpositioncheckuc\returnpositioncheckuc.cpp" />
+    <ClCompile Include="returns\returnrulebook\returnrulebook.cpp" />
+    <ClCompile Include="returns\returnrulebook\returnrulebookmapperbase.cpp" />
+    <ClCompile Include="returns\returnrulebook\returnrulebookrepository.cpp" />
+    <ClCompile Include="returns\returnrulebook\returnrulebooksqlmapper.cpp" />
+    <ClCompile Include="shipmenttracking\componentmanager\shipmenttrackingcomponentmanager.cpp" />
+    <ClCompile Include="shipmenttracking\configuration\etadelayevaluation.cpp" />
+    <ClCompile Include="shipmenttracking\configuration\etadelayevaluationmapperbase.cpp" />
+    <ClCompile Include="shipmenttracking\configuration\etadelayevaluationsqlmapper.cpp" />
+    <ClCompile Include="shipmenttracking\configuration\etadelaypresentation.cpp" />
+    <ClCompile Include="shipmenttracking\configuration\etadelaypresentationmapperbase.cpp" />
+    <ClCompile Include="shipmenttracking\configuration\etadelaypresentationsqlmapper.cpp" />
+    <ClCompile Include="shipmenttracking\configuration\transmedstatusiddeliveredtocustomersqlfetcher.cpp" />
+    <ClCompile Include="shipmenttracking\packageinformation\shipmenttrackingbatchtototelinemapper.cpp" />
+    <ClCompile Include="shipmenttracking\packageinformation\shipmenttrackingcurrentwhslinecontext.cpp" />
+    <ClCompile Include="shipmenttracking\packageinformation\shipmenttrackingcustomerordertopackagemapmaker.cpp" />
+    <ClCompile Include="shipmenttracking\packageinformation\shipmenttrackingibtinformation.cpp" />
+    <ClCompile Include="shipmenttracking\packageinformation\shipmenttrackingibtinformationmapperbase.cpp" />
+    <ClCompile Include="shipmenttracking\packageinformation\shipmenttrackingibtinformationsqlmapper.cpp" />
+    <ClCompile Include="shipmenttracking\packageinformation\shipmenttrackingibtordertopackagemapmaker.cpp" />
+    <ClCompile Include="shipmenttracking\packageinformation\shipmenttrackinglinedetail.cpp" />
+    <ClCompile Include="shipmenttracking\packageinformation\shipmenttrackinglinedetailmapperbase.cpp" />
+    <ClCompile Include="shipmenttracking\packageinformation\shipmenttrackinglinedetailsqlmapper.cpp" />
+    <ClCompile Include="shipmenttracking\packageinformation\shipmenttrackingtotepositiontolinebuildermapper.cpp" />
+    <ClCompile Include="shipmenttracking\packageinformation\shipmenttrackingordertopackagemapmakerbase.cpp" />
+    <ClCompile Include="shipmenttracking\packageinformation\shipmenttrackingpackageinformation.cpp" />
+    <ClCompile Include="shipmenttracking\packageinformation\shipmenttrackingpackageinformationmapperbase.cpp" />
+    <ClCompile Include="shipmenttracking\packageinformation\shipmenttrackingpackageinformationsqlmapper.cpp" />
+    <ClCompile Include="shipmenttracking\packageinformation\shipmenttrackingpackageproperties.cpp" />
+    <ClCompile Include="shipmenttracking\packageinformation\shipmenttrackingpackagepropertiesmapperbase.cpp" />
+    <ClCompile Include="shipmenttracking\packageinformation\shipmenttrackingpackagepropertiessqlmapper.cpp" />
+    <ClCompile Include="shipmenttracking\packageinformation\shipmenttrackingarticletopositionmapper.cpp" />
+    <ClCompile Include="shipmenttracking\shipmenttrackingdatafilter.cpp" />
+    <ClCompile Include="shipmenttracking\shipmenttrackingrepository.cpp" />
+    <ClCompile Include="shipmenttracking\shipmenttrackingrepositorybuilder.cpp" />
+    <ClCompile Include="shipmenttracking\shipmenttrackingrepositorysqlbuilder.cpp" />
+    <ClCompile Include="shipmenttracking\shipmenttrackingrequestprocessingcontext.cpp" />
+    <ClCompile Include="shipmenttracking\shipmenttrackingutils.cpp" />
+    <ClCompile Include="shipmenttracking\tourinformation\shipmenttrackingetaanddeliverydata.cpp" />
+    <ClCompile Include="shipmenttracking\tourinformation\shipmenttrackingetaanddeliverydatamapperbase.cpp" />
+    <ClCompile Include="shipmenttracking\tourinformation\shipmenttrackingetaanddeliverydatasqlmapper.cpp" />
+    <ClCompile Include="shipmenttracking\tourinformation\shipmenttrackingtourdata.cpp" />
+    <ClCompile Include="shipmenttracking\tourinformation\shipmenttrackingtourdatamapperbase.cpp" />
+    <ClCompile Include="shipmenttracking\tourinformation\shipmenttrackingtourdatasqlmapper.cpp" />
+    <ClCompile Include="shipmenttracking\tourinformation\shipmenttrackingtourinformation.cpp" />
+    <ClCompile Include="shipmenttracking\tourinformation\shipmenttrackingtourinformationmapperbase.cpp" />
+    <ClCompile Include="shipmenttracking\tourinformation\shipmenttrackingtourinformationsqlmapper.cpp" />
+    <ClCompile Include="stockbooking\bulkrangeselector\bulkrangeselector.cpp" />
+    <ClCompile Include="stockbooking\componentmanager\stockbookingcomponentmanager.cpp" />
+    <ClCompile Include="stockbooking\longtermlack\longtermlackmapperbase.cpp" />
+    <ClCompile Include="stockbooking\longtermlack\longtermlackrepository.cpp" />
+    <ClCompile Include="stockbooking\longtermlack\longtermlackselectsqlparameterbinder.cpp" />
+    <ClCompile Include="stockbooking\longtermlack\longtermlacksqlmapper.cpp" />
+    <ClCompile Include="stockbooking\reservationconfig\ordertypereservationconfig.cpp" />
+    <ClCompile Include="stockbooking\reservationconfig\ordertypereservationconfigmapperbase.cpp" />
+    <ClCompile Include="stockbooking\reservationconfig\ordertypereservationconfigpharmacygroup.cpp" />
+    <ClCompile Include="stockbooking\reservationconfig\ordertypereservationconfigpharmacygroupmapperbase.cpp" />
+    <ClCompile Include="stockbooking\reservationconfig\ordertypereservationconfigpharmacygroupsqlmapper.cpp" />
+    <ClCompile Include="stockbooking\reservationconfig\ordertypereservationconfigsqlmapper.cpp" />
+    <ClCompile Include="stockbooking\reservationconfig\reservationconfigrepository.cpp" />
+    <ClCompile Include="stockbooking\reservationconfig\reservationtype.cpp" />
+    <ClCompile Include="stockbooking\reservationconfig\reservationtypemapperbase.cpp" />
+    <ClCompile Include="stockbooking\reservationconfig\reservationtypesqlmapper.cpp" />
+    <ClCompile Include="stockbooking\reservation\articlereservation.cpp" />
+    <ClCompile Include="stockbooking\reservation\articlereservationmapperbase.cpp" />
+    <ClCompile Include="stockbooking\reservation\articlereservationsqlmapper.cpp" />
+    <ClCompile Include="stockbooking\reservation\customerstockreserved.cpp" />
+    <ClCompile Include="stockbooking\reservation\customerstockreservedmapperbase.cpp" />
+    <ClCompile Include="stockbooking\reservation\customerstockreservedsqlmapper.cpp" />
+    <ClCompile Include="stockbooking\reservation\reservationrepository.cpp" />
+    <ClCompile Include="subseqdelivery\componentmanager\sudcomponentmanager.cpp" />
+    <ClCompile Include="subseqdelivery\workupcompletedchecker\workupcompletedchecker.cpp" />
+    <ClCompile Include="tender\componentmanager\tendercomponentmanager.cpp" />
+    <ClCompile Include="tender\repository\tenderrepository.cpp" />
+    <ClCompile Include="tender\sqlmapper\tendermapperbase.cpp" />
+    <ClCompile Include="tender\sqlmapper\tendersqlmapper.cpp" />
+    <ClCompile Include="tender\tender.cpp" />
+    <ClCompile Include="util\configfilereader.cpp" />
+    <ClCompile Include="util\datetimeutil.cpp" />
+    <ClCompile Include="util\loggingutils.cpp" />
+    <ClCompile Include="util\messagetxtresource.cpp" />
+    <ClCompile Include="workingdayscalendar\componentmanager\workingdayscalendarcomponentmanager.cpp" />
+    <ClCompile Include="workingdayscalendar\workingdayscalendar.cpp" />
+    <ClCompile Include="workingdayscalendar\workingdayscalendarmapperbase.cpp" />
+    <ClCompile Include="workingdayscalendar\workingdayscalendarrepository.cpp" />
+    <ClCompile Include="workingdayscalendar\workingdayscalendarsqlmapper.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="base\dmcollection\dmcollection.h" />
+    <ClInclude Include="base\ibooleanresult.h" />
+    <ClInclude Include="base\iint32result.h" />
+    <ClInclude Include="base\irunnable.h" />
+    <ClInclude Include="base\irunnableptr.h" />
+    <ClInclude Include="base\isqlparameterbinder\idomainmodule.h" />
+    <ClInclude Include="base\isqlparameterbinder\idomainmoduleptr.h" />
+    <ClInclude Include="base\isqlparameterbinder\sqlparameterbinder.h" />
+    <ClInclude Include="base\istreamable.h" />
+    <ClInclude Include="blockedarticles\blockedarticles.h" />
+    <ClInclude Include="blockedarticles\blockedarticlesmapperbase.h" />
+    <ClInclude Include="blockedarticles\blockedarticlesptr.h" />
+    <ClInclude Include="blockedarticles\blockedarticlesrepository.h" />
+    <ClInclude Include="blockedarticles\blockedarticlesrepositoryptr.h" />
+    <ClInclude Include="blockedarticles\blockedarticlessqlmapper.h" />
+    <ClInclude Include="blockedarticles\componentmanager\blockedarticlescomponentmanager.h" />
+    <ClInclude Include="blockedarticles\componentmanager\blockedarticlescomponentmanagerptr.h" />
+    <ClInclude Include="blockedarticles\iblockedarticlesrepository.h" />
+    <ClInclude Include="blockedarticles\iblockedarticlesrepositoryptr.h" />
+    <ClInclude Include="callback\componentmanager\componentmanager.h" />
+    <ClInclude Include="callback\componentmanager\componentmanagerptr.h" />
+    <ClInclude Include="callback\domainmodule\callbackoverviewcollection.h" />
+    <ClInclude Include="callback\domainmodule\callbackoverviewcollectionptr.h" />
+    <ClInclude Include="callback\domainmodule\callbackcustomercollection.h" />
+    <ClInclude Include="callback\domainmodule\callbackcustomercollectionptr.h" />
+    <ClInclude Include="callback\domainmodule\callbackcustomerdm.h" />
+    <ClInclude Include="callback\domainmodule\callbackcustomerdmptr.h" />
+    <ClInclude Include="callback\domainmodule\callbackdivisioncollection.h" />
+    <ClInclude Include="callback\domainmodule\callbackdivisioncollectionptr.h" />
+    <ClInclude Include="callback\domainmodule\callbackdivisiondm.h" />
+    <ClInclude Include="callback\domainmodule\callbackdivisiondmptr.h" />
+    <ClInclude Include="callback\domainmodule\callbackdm.h" />
+    <ClInclude Include="callback\domainmodule\callbackdmptr.h" />
+    <ClInclude Include="callback\domainmodule\callbackitemdm.h" />
+    <ClInclude Include="callback\domainmodule\callbackitemdmptr.h" />
+    <ClInclude Include="callback\domainmodule\callbackoverviewitemdm.h" />
+    <ClInclude Include="callback\domainmodule\callbackoverviewitemdmptr.h" />
+    <ClInclude Include="callback\domainmodule\callbackposcollection.h" />
+    <ClInclude Include="callback\domainmodule\callbackposcollectionptr.h" />
+    <ClInclude Include="callback\domainmodule\callbackposdm.h" />
+    <ClInclude Include="callback\domainmodule\callbackposdmptr.h" />
+    <ClInclude Include="callback\domainmodule\callbackreasoncollection.h" />
+    <ClInclude Include="callback\domainmodule\callbackreasoncollectionptr.h" />
+    <ClInclude Include="callback\domainmodule\callbackreasondm.h" />
+    <ClInclude Include="callback\domainmodule\callbackreasondmptr.h" />
+    <ClInclude Include="callback\domainmodule\callbackstatuscollection.h" />
+    <ClInclude Include="callback\domainmodule\callbackstatuscollectionptr.h" />
+    <ClInclude Include="callback\domainmodule\callbackstatusdm.h" />
+    <ClInclude Include="callback\domainmodule\callbackstatusdmptr.h" />
+    <ClInclude Include="callback\domainmodule\critdm.h" />
+    <ClInclude Include="callback\domainmodule\critdmptr.h" />
+    <ClInclude Include="callback\domainmodule\critposdm.h" />
+    <ClInclude Include="callback\domainmodule\critposdmptr.h" />
+    <ClInclude Include="callback\domainmodule\icallbackcustomer.h" />
+    <ClInclude Include="callback\domainmodule\icallbackcustomerptr.h" />
+    <ClInclude Include="callback\domainmodule\icallbackdivision.h" />
+    <ClInclude Include="callback\domainmodule\icallbackdivisionptr.h" />
+    <ClInclude Include="callback\domainmodule\icallback.h" />
+    <ClInclude Include="callback\domainmodule\icallbackoverviewitem.h" />
+    <ClInclude Include="callback\domainmodule\icallbackoverviewitemptr.h" />
+    <ClInclude Include="callback\domainmodule\icallbackpos.h" />
+    <ClInclude Include="callback\domainmodule\icallbackposptr.h" />
+    <ClInclude Include="callback\domainmodule\icallbackptr.h" />
+    <ClInclude Include="callback\domainmodule\icallbackitem.h" />
+    <ClInclude Include="callback\domainmodule\icallbackitemptr.h" />
+    <ClInclude Include="callback\domainmodule\icallbackreason.h" />
+    <ClInclude Include="callback\domainmodule\icallbackreasonptr.h" />
+    <ClInclude Include="callback\domainmodule\icallbackstatus.h" />
+    <ClInclude Include="callback\domainmodule\icallbackstatusptr.h" />
+    <ClInclude Include="callback\domainmodule\icrit.h" />
+    <ClInclude Include="callback\domainmodule\icritptr.h" />
+    <ClInclude Include="callback\domainmodule\icritpos.h" />
+    <ClInclude Include="callback\domainmodule\icritposptr.h" />
+    <ClInclude Include="callback\domainmodule\inewcallbackcritpos.h" />
+    <ClInclude Include="callback\domainmodule\inewcallbackcritposptr.h" />
+    <ClInclude Include="callback\domainmodule\inewcallback.h" />
+    <ClInclude Include="callback\domainmodule\inewcallbackptr.h" />
+    <ClInclude Include="callback\domainmodule\newcallbackcritposdm.h" />
+    <ClInclude Include="callback\domainmodule\newcallbackcritposdmptr.h" />
+    <ClInclude Include="callback\domainmodule\newcallbackdm.h" />
+    <ClInclude Include="callback\domainmodule\newcallbackdmptr.h" />
+    <ClInclude Include="callback\exceptions\callbacklockedexception.h" />
+    <ClInclude Include="callback\exceptions\callbacknotfoundexception.h" />
+    <ClInclude Include="callback\exceptions\customernotfoundexception.h" />
+    <ClInclude Include="callback\repository\callbackcustomermapper.h" />
+    <ClInclude Include="callback\repository\callbackdivisionmapper.h" />
+    <ClInclude Include="callback\repository\callbackitemmapper.h" />
+    <ClInclude Include="callback\repository\callbackmapper.h" />
+    <ClInclude Include="callback\repository\callbackoverviewitemmapper.h" />
+    <ClInclude Include="callback\repository\callbackposmapper.h" />
+    <ClInclude Include="callback\repository\callbackreasonmapper.h" />
+    <ClInclude Include="callback\repository\callbackstatusmapper.h" />
+    <ClInclude Include="callback\repository\findcallbacksrequest.h" />
+    <ClInclude Include="callback\repository\findcustomersrequest.h" />
+    <ClInclude Include="callback\repository\irepository.h" />
+    <ClInclude Include="callback\repository\irepositoryptr.h" />
+    <ClInclude Include="callback\repository\repository.h" />
+    <ClInclude Include="callback\repository\repositoryptr.h" />
+    <ClInclude Include="callback\repository\callbacksqlmapper.h" />
+    <ClInclude Include="callback\usecase\writenewcallbackcritposuc.h" />
+    <ClInclude Include="callback\usecase\writenewcallbackuc.h" />
+    <ClInclude Include="crema\componentmanager\cremacomponentmanager.h" />
+    <ClInclude Include="crema\componentmanager\cremacomponentmanagerptr.h" />
+    <ClInclude Include="crema\creditlimitdata\creditlimitdata.h" />
+    <ClInclude Include="crema\creditlimitdata\creditlimitdatacollection.h" />
+    <ClInclude Include="crema\creditlimitdata\creditlimitdatacollectionptr.h" />
+    <ClInclude Include="crema\creditlimitdata\creditlimitdatamapperbase.h" />
+    <ClInclude Include="crema\creditlimitdata\creditlimitdataptr.h" />
+    <ClInclude Include="crema\creditlimitdata\creditlimitdatasql.h" />
+    <ClInclude Include="crema\creditlimitdata\creditlimitdatasqlmapper.h" />
+    <ClInclude Include="crema\creditlimitdata\icreditlimitdata.h" />
+    <ClInclude Include="crema\creditlimitdata\icreditlimitdataptr.h" />
+    <ClInclude Include="crema\cremaorder\cremaorder.h" />
+    <ClInclude Include="crema\cremaorder\cremaordercollection.h" />
+    <ClInclude Include="crema\cremaorder\cremaordercollectionptr.h" />
+    <ClInclude Include="crema\cremaorder\cremaordermapperbase.h" />
+    <ClInclude Include="crema\cremaorder\cremaorderptr.h" />
+    <ClInclude Include="crema\cremaorder\cremaordersql.h" />
+    <ClInclude Include="crema\cremaorder\cremaordersqlmapper.h" />
+    <ClInclude Include="crema\cremaorder\icremaorder.h" />
+    <ClInclude Include="crema\cremaorder\icremaorderptr.h" />
+    <ClInclude Include="Crema\GuiData\guidata.h" />
+    <ClInclude Include="Crema\GuiData\guidatamapperbase.h" />
+    <ClInclude Include="Crema\GuiData\guidataptr.h" />
+    <ClInclude Include="Crema\GuiData\guidatasql.h" />
+    <ClInclude Include="Crema\GuiData\guidatasqlmapper.h" />
+    <ClInclude Include="Crema\GuiData\iguidata.h" />
+    <ClInclude Include="Crema\GuiData\iguidataptr.h" />
+    <ClInclude Include="crema\maildata\imaildata.h" />
+    <ClInclude Include="crema\maildata\imaildataptr.h" />
+    <ClInclude Include="crema\maildata\irecipient.h" />
+    <ClInclude Include="crema\maildata\maildata.h" />
+    <ClInclude Include="crema\maildata\recipient.h" />
+    <ClInclude Include="crema\maildata\recipientcollection.h" />
+    <ClInclude Include="crema\maildata\recipientcollectionptr.h" />
+    <ClInclude Include="crema\maildata\maildatamapperbase.h" />
+    <ClInclude Include="crema\maildata\maildataptr.h" />
+    <ClInclude Include="crema\maildata\maildatasql.h" />
+    <ClInclude Include="crema\maildata\maildatasqlmapper.h" />
+    <ClInclude Include="crema\maildata\recipientptr.h" />
+    <ClInclude Include="crema\orderdata\iorderdata.h" />
+    <ClInclude Include="crema\orderdata\iorderdataptr.h" />
+    <ClInclude Include="crema\orderdata\orderdata.h" />
+    <ClInclude Include="crema\orderdata\orderdatamapperbase.h" />
+    <ClInclude Include="crema\orderdata\orderdataptr.h" />
+    <ClInclude Include="crema\orderdata\orderdatasql.h" />
+    <ClInclude Include="crema\orderdata\orderdatasqlmapper.h" />
+    <ClInclude Include="crema\reason\ireason.h" />
+    <ClInclude Include="crema\reason\ireasonptr.h" />
+    <ClInclude Include="crema\reason\reason.h" />
+    <ClInclude Include="crema\reason\reasoncollection.h" />
+    <ClInclude Include="crema\reason\reasoncollectionptr.h" />
+    <ClInclude Include="crema\reason\reasonmapperbase.h" />
+    <ClInclude Include="crema\reason\reasonptr.h" />
+    <ClInclude Include="crema\reason\reasonsql.h" />
+    <ClInclude Include="crema\reason\reasonsqlmapper.h" />
+    <ClInclude Include="crema\repository\irepository.h" />
+    <ClInclude Include="crema\repository\irepositoryptr.h" />
+    <ClInclude Include="crema\repository\repository.h" />
+    <ClInclude Include="crema\repository\repositoryptr.h" />
+    <ClInclude Include="crema\usersuggestion\iusersuggestion.h" />
+    <ClInclude Include="crema\usersuggestion\iusersuggestionptr.h" />
+    <ClInclude Include="crema\usersuggestion\usersuggestion.h" />
+    <ClInclude Include="crema\usersuggestion\usersuggestionmapperbase.h" />
+    <ClInclude Include="crema\usersuggestion\usersuggestionptr.h" />
+    <ClInclude Include="crema\usersuggestion\usersuggestionsql.h" />
+    <ClInclude Include="crema\usersuggestion\usersuggestionsqlmapper.h" />
+    <ClInclude Include="cscorderpos\componentmanager\cscorderposcomponentmanager.h" />
+    <ClInclude Include="cscorderpos\componentmanager\cscorderposcomponentmanagerptr.h" />
+    <ClInclude Include="cscorderpos\cscorderpossplittinfo\cscorderpossplittinfo.h" />
+    <ClInclude Include="cscorderpos\cscorderpossplittinfo\cscorderpossplittinfoinsertsqlparameterbinder.h" />
+    <ClInclude Include="cscorderpos\cscorderpossplittinfo\cscorderpossplittinfomapperbase.h" />
+    <ClInclude Include="cscorderpos\cscorderpossplittinfo\cscorderpossplittinfoptr.h" />
+    <ClInclude Include="cscorderpos\cscorderpossplittinfo\cscorderpossplittinforepository.h" />
+    <ClInclude Include="cscorderpos\cscorderpossplittinfo\cscorderpossplittinforepositoryptr.h" />
+    <ClInclude Include="cscorderpos\cscorderpossplittinfo\cscorderpossplittinfosqlmapper.h" />
+    <ClInclude Include="cscorderpos\cscorderpossplittinfo\icscorderpossplittinfo.h" />
+    <ClInclude Include="cscorderpos\cscorderpossplittinfo\icscorderpossplittinfoptr.h" />
+    <ClInclude Include="cscorderpos\cscorderpossplittinfo\icscorderpossplittinforepository.h" />
+    <ClInclude Include="cscorderpos\cscorderpossplittinfo\icscorderpossplittinforepositoryptr.h" />
+    <ClInclude Include="cscordertype\componentmanager\cscordertypecomponentmanager.h" />
+    <ClInclude Include="cscordertype\componentmanager\cscordertypecomponentmanagerptr.h" />
+    <ClInclude Include="cscordertype\cscordertype.h" />
+    <ClInclude Include="cscordertype\cscordertypebatchconfig\cscordertypebatchconfig.h" />
+    <ClInclude Include="cscordertype\cscordertypebatchconfig\cscordertypebatchconfigmapperbase.h" />
+    <ClInclude Include="cscordertype\cscordertypebatchconfig\cscordertypebatchconfigptr.h" />
+    <ClInclude Include="cscordertype\cscordertypebatchconfig\cscordertypebatchconfigsqlmapper.h" />
+    <ClInclude Include="cscordertype\cscordertypebatchconfig\icscordertypebatchconfig.h" />
+    <ClInclude Include="cscordertype\cscordertypebatchconfig\icscordertypebatchconfigptr.h" />
+    <ClInclude Include="cscordertype\cscordertypecollection.h" />
+    <ClInclude Include="cscordertype\cscordertypecollectionptr.h" />
+    <ClInclude Include="cscordertype\cscordertypeptr.h" />
+    <ClInclude Include="cscordertype\icscordertype.h" />
+    <ClInclude Include="cscordertype\icscordertypeptr.h" />
+    <ClInclude Include="cscordertype\ordertypeflagtype\iordertypeflagtype.h" />
+    <ClInclude Include="cscordertype\ordertypeflagtype\iordertypeflagtypeptr.h" />
+    <ClInclude Include="cscordertype\ordertypeflagtype\ordertypeflagtype.h" />
+    <ClInclude Include="cscordertype\ordertypeflagtype\ordertypeflagtypecollection.h" />
+    <ClInclude Include="cscordertype\ordertypeflagtype\ordertypeflagtypecollectionptr.h" />
+    <ClInclude Include="cscordertype\ordertypeflagtype\ordertypeflagtypeenum.h" />
+    <ClInclude Include="cscordertype\ordertypeflagtype\ordertypeflagtypemapperbase.h" />
+    <ClInclude Include="cscordertype\ordertypeflagtype\ordertypeflagtypeptr.h" />
+    <ClInclude Include="cscordertype\ordertypeflagtype\ordertypeflagtypesqlmapper.h" />
+    <ClInclude Include="cscordertype\repository\cscordertyperepository.h" />
+    <ClInclude Include="cscordertype\repository\cscordertyperepositoryptr.h" />
+    <ClInclude Include="cscordertype\repository\icscordertyperepository.h" />
+    <ClInclude Include="cscordertype\repository\icscordertyperepositoryptr.h" />
+    <ClInclude Include="cscordertype\sqlmapper\cscordertypemapperbase.h" />
+    <ClInclude Include="cscordertype\sqlmapper\cscordertypesqlmapper.h" />
+    <ClInclude Include="cscorder\componentmanager\cscordercomponentmanager.h" />
+    <ClInclude Include="cscorder\componentmanager\cscordercomponentmanagerptr.h" />
+    <ClInclude Include="cscorder\csccallplan\csccallplan.h" />
+    <ClInclude Include="cscorder\csccallplan\csccallplaninsertsqlparameterbinder.h" />
+    <ClInclude Include="cscorder\csccallplan\csccallplanupdatesqlparameterbinder.h" />
+    <ClInclude Include="cscorder\csccallplan\csccallplanmapperbase.h" />
+    <ClInclude Include="cscorder\csccallplan\csccallplanptr.h" />
+    <ClInclude Include="cscorder\csccallplan\csccallplanrepository.h" />
+    <ClInclude Include="cscorder\csccallplan\csccallplanrepositoryptr.h" />
+    <ClInclude Include="cscorder\csccallplan\csccallplansqlmapper.h" />
+    <ClInclude Include="cscorder\csccallplan\csccallplanselectsqlparameterbinder.h" />
+    <ClInclude Include="cscorder\csccallplan\icsccallplan.h" />
+    <ClInclude Include="cscorder\csccallplan\icsccallplanptr.h" />
+    <ClInclude Include="cscorder\csccallplan\icsccallplanrepository.h" />
+    <ClInclude Include="cscorder\csccallplan\icsccallplanrepositoryptr.h" />
+    <ClInclude Include="cscorder\cscorderflags\cscorderflags.h" />
+    <ClInclude Include="cscorder\cscorderflags\cscorderflagsinsertsqlparameterbinder.h" />
+    <ClInclude Include="cscorder\cscorderflags\cscorderflagsmapperbase.h" />
+    <ClInclude Include="cscorder\cscorderflags\cscorderflagsptr.h" />
+    <ClInclude Include="cscorder\cscorderflags\cscorderflagsrepository.h" />
+    <ClInclude Include="cscorder\cscorderflags\cscorderflagsrepositoryptr.h" />
+    <ClInclude Include="cscorder\cscorderflags\cscorderflagssqlmapper.h" />
+    <ClInclude Include="cscorder\cscorderflags\cscorderflagsupdatesqlparameterbinder.h" />
+    <ClInclude Include="cscorder\cscorderflags\icscorderflags.h" />
+    <ClInclude Include="cscorder\cscorderflags\icscorderflagsptr.h" />
+    <ClInclude Include="cscorder\cscorderflags\icscorderflagsrepository.h" />
+    <ClInclude Include="cscorder\cscorderflags\icscorderflagsrepositoryptr.h" />
+    <ClInclude Include="cscorder\cscorderibtpickingdata\cscorderibtpickingdatacollectionptr.h" />
+    <ClInclude Include="cscorder\cscorderibtpickingdata\cscorderibtpickingdataposcollection.h" />
+    <ClInclude Include="cscorder\exceptions\cscorderflagsexception.h" />
+    <ClInclude Include="cscorder\usecase\savecsccallplanuc.h" />
+    <ClInclude Include="customer\articleinfo\articleinfo.h" />
+    <ClInclude Include="customer\articleinfo\articleinfocollection.h" />
+    <ClInclude Include="customer\articleinfo\articleinfocollectionptr.h" />
+    <ClInclude Include="customer\articleinfo\articleinfomapperbase.h" />
+    <ClInclude Include="customer\articleinfo\articleinfoptr.h" />
+    <ClInclude Include="customer\articleinfo\articleinfosqlmapper.h" />
+    <ClInclude Include="customer\articleinfo\articleorderinfo.h" />
+    <ClInclude Include="customer\articleinfo\articleorderinfomapperbase.h" />
+    <ClInclude Include="customer\articleinfo\articleorderinfoptr.h" />
+    <ClInclude Include="customer\articleinfo\articleorderinfosqlmapper.h" />
+    <ClInclude Include="customer\articleinfo\iarticleinfo.h" />
+    <ClInclude Include="customer\articleinfo\iarticleinfoptr.h" />
+    <ClInclude Include="customer\articleinfo\iarticleorderinfo.h" />
+    <ClInclude Include="customer\articleinfo\iarticleorderinfoptr.h" />
+    <ClInclude Include="customer\changedquantities\changedquantities.h" />
+    <ClInclude Include="customer\changedquantities\changedquantitiescollection.h" />
+    <ClInclude Include="customer\changedquantities\changedquantitiescollectionptr.h" />
+    <ClInclude Include="customer\changedquantities\changedquantitiesmapperbase.h" />
+    <ClInclude Include="customer\changedquantities\changedquantitiesptr.h" />
+    <ClInclude Include="customer\changedquantities\changedquantitiessql.h" />
+    <ClInclude Include="customer\changedquantities\changedquantitiessqlmapper.h" />
+    <ClInclude Include="customer\changedquantities\ichangedquantities.h" />
+    <ClInclude Include="customer\changedquantities\ichangedquantitiesptr.h" />
+    <ClInclude Include="customer\componentmanager\customercomponentmanager.h" />
+    <ClInclude Include="customer\componentmanager\customercomponentmanagerptr.h" />
+    <ClInclude Include="customer\customer.h" />
+    <ClInclude Include="customer\customercollection.h" />
+    <ClInclude Include="customer\customercollectionptr.h" />
+    <ClInclude Include="customer\customercondition\customercondition.h" />
+    <ClInclude Include="customer\customercondition\customerconditioncollection.h" />
+    <ClInclude Include="customer\customercondition\customerconditioncollectionptr.h" />
+    <ClInclude Include="customer\customercondition\customerconditionmapperbase.h" />
+    <ClInclude Include="customer\customercondition\customerconditionptr.h" />
+    <ClInclude Include="customer\customercondition\customerconditionsqlmapper.h" />
+    <ClInclude Include="customer\customercondition\icustomercondition.h" />
+    <ClInclude Include="customer\customercondition\icustomerconditionptr.h" />
+    <ClInclude Include="customer\customermapperbase.h" />
+    <ClInclude Include="customer\customerptr.h" />
+    <ClInclude Include="customer\customerrepository.h" />
+    <ClInclude Include="customer\customerrepositoryptr.h" />
+    <ClInclude Include="customer\customersqlmapper.h" />
+    <ClInclude Include="customer\discountaccount\discountaccount.h" />
+    <ClInclude Include="customer\discountaccount\discountaccountmapperbase.h" />
+    <ClInclude Include="customer\discountaccount\discountaccountptr.h" />
+    <ClInclude Include="customer\discountaccount\discountaccountsql.h" />
+    <ClInclude Include="customer\discountaccount\discountaccountsqlmapper.h" />
+    <ClInclude Include="customer\discountaccount\idiscountaccount.h" />
+    <ClInclude Include="customer\discountaccount\idiscountaccountptr.h" />
+    <ClInclude Include="customer\icustomer.h" />
+    <ClInclude Include="customer\icustomerptr.h" />
+    <ClInclude Include="customer\icustomerrepository.h" />
+    <ClInclude Include="customer\icustomerrepositoryptr.h" />
+    <ClInclude Include="customer\orderinfo\iorderinfo.h" />
+    <ClInclude Include="customer\orderinfo\iorderinfoptr.h" />
+    <ClInclude Include="customer\orderinfo\orderinfo.h" />
+    <ClInclude Include="customer\orderinfo\orderinfocollection.h" />
+    <ClInclude Include="customer\orderinfo\orderinfocollectionptr.h" />
+    <ClInclude Include="customer\orderinfo\orderinfomapperbase.h" />
+    <ClInclude Include="customer\orderinfo\orderinfoptr.h" />
+    <ClInclude Include="customer\orderinfo\orderinfosqlmapper.h" />
+    <ClInclude Include="customer\orderstatus\iorderstatus.h" />
+    <ClInclude Include="customer\orderstatus\iorderstatusptr.h" />
+    <ClInclude Include="customer\orderstatus\orderstatus.h" />
+    <ClInclude Include="customer\orderstatus\orderstatusmapperbase.h" />
+    <ClInclude Include="customer\orderstatus\orderstatusptr.h" />
+    <ClInclude Include="customer\orderstatus\orderstatussql.h" />
+    <ClInclude Include="customer\orderstatus\orderstatussqlmapper.h" />
+    <ClInclude Include="customer\paymentconditions\ipaymentconditions.h" />
+    <ClInclude Include="customer\paymentconditions\ipaymentconditionsptr.h" />
+    <ClInclude Include="customer\paymentconditions\paymentconditions.h" />
+    <ClInclude Include="customer\paymentconditions\paymentconditionsmapperbase.h" />
+    <ClInclude Include="customer\paymentconditions\paymentconditionsptr.h" />
+    <ClInclude Include="customer\paymentconditions\paymentconditionssql.h" />
+    <ClInclude Include="customer\paymentconditions\paymentconditionssqlmapper.h" />
+    <ClInclude Include="customer\payments\ipayments.h" />
+    <ClInclude Include="customer\payments\ipaymentsptr.h" />
+    <ClInclude Include="customer\payments\payments.h" />
+    <ClInclude Include="customer\payments\paymentscollection.h" />
+    <ClInclude Include="customer\payments\paymentscollectionptr.h" />
+    <ClInclude Include="customer\payments\paymentsmapperbase.h" />
+    <ClInclude Include="customer\payments\paymentsptr.h" />
+    <ClInclude Include="customer\payments\paymentssql.h" />
+    <ClInclude Include="customer\payments\paymentssqlmapper.h" />
+    <ClInclude Include="customer\pricesanddiscounts\ipricesanddiscounts.h" />
+    <ClInclude Include="customer\pricesanddiscounts\ipricesanddiscountsptr.h" />
+    <ClInclude Include="customer\pricesanddiscounts\pricesanddiscounts.h" />
+    <ClInclude Include="customer\pricesanddiscounts\pricesanddiscountscollection.h" />
+    <ClInclude Include="customer\pricesanddiscounts\pricesanddiscountscollectionptr.h" />
+    <ClInclude Include="customer\pricesanddiscounts\pricesanddiscountsmapperbase.h" />
+    <ClInclude Include="customer\pricesanddiscounts\pricesanddiscountsptr.h" />
+    <ClInclude Include="customer\pricesanddiscounts\pricesanddiscountssql.h" />
+    <ClInclude Include="customer\pricesanddiscounts\pricesanddiscountssqlmapper.h" />
+    <ClInclude Include="customer\promotions\ipromotions.h" />
+    <ClInclude Include="customer\promotions\ipromotionsptr.h" />
+    <ClInclude Include="customer\promotions\promotions.h" />
+    <ClInclude Include="customer\promotions\promotionscollection.h" />
+    <ClInclude Include="customer\promotions\promotionscollectionptr.h" />
+    <ClInclude Include="customer\promotions\promotionsmapperbase.h" />
+    <ClInclude Include="customer\promotions\promotionsptr.h" />
+    <ClInclude Include="customer\promotions\promotionssql.h" />
+    <ClInclude Include="customer\promotions\promotionssqlmapper.h" />
+    <ClInclude Include="customer\routes\iroutes.h" />
+    <ClInclude Include="customer\routes\iroutesptr.h" />
+    <ClInclude Include="customer\routes\routes.h" />
+    <ClInclude Include="customer\routes\routescollection.h" />
+    <ClInclude Include="customer\routes\routescollectionptr.h" />
+    <ClInclude Include="customer\routes\routesmapperbase.h" />
+    <ClInclude Include="customer\routes\routesptr.h" />
+    <ClInclude Include="customer\routes\routessql.h" />
+    <ClInclude Include="customer\routes\routessqlmapper.h" />
+    <ClInclude Include="customer\tenderinfo\itenderinfo.h" />
+    <ClInclude Include="customer\tenderinfo\itenderinfoptr.h" />
+    <ClInclude Include="customer\tenderinfo\tenderinfo.h" />
+    <ClInclude Include="customer\tenderinfo\tenderinfocollection.h" />
+    <ClInclude Include="customer\tenderinfo\tenderinfocollectionptr.h" />
+    <ClInclude Include="customer\tenderinfo\tenderinfomapperbase.h" />
+    <ClInclude Include="customer\tenderinfo\tenderinfoptr.h" />
+    <ClInclude Include="customer\tenderinfo\tenderinfosqlmapper.h" />
+    <ClInclude Include="customer\tours\itours.h" />
+    <ClInclude Include="customer\tours\itoursptr.h" />
+    <ClInclude Include="customer\tours\tours.h" />
+    <ClInclude Include="customer\tours\tourscollection.h" />
+    <ClInclude Include="customer\tours\tourscollectionptr.h" />
+    <ClInclude Include="customer\tours\toursmapperbase.h" />
+    <ClInclude Include="customer\tours\toursptr.h" />
+    <ClInclude Include="customer\tours\tourssql.h" />
+    <ClInclude Include="customer\tours\tourssqlmapper.h" />
+    <ClInclude Include="customer\tours\weektours\iweektours.h" />
+    <ClInclude Include="customer\tours\weektours\iweektoursptr.h" />
+    <ClInclude Include="customer\tours\weektours\weektours.h" />
+    <ClInclude Include="customer\tours\weektours\weektourscollection.h" />
+    <ClInclude Include="customer\tours\weektours\weektourscollectionptr.h" />
+    <ClInclude Include="customer\tours\weektours\weektoursmapperbase.h" />
+    <ClInclude Include="customer\tours\weektours\weektoursptr.h" />
+    <ClInclude Include="customer\tours\weektours\weektourssql.h" />
+    <ClInclude Include="customer\tours\weektours\weektourssqlmapper.h" />
+    <ClInclude Include="customer\turnover\iturnover.h" />
+    <ClInclude Include="customer\turnover\iturnoverptr.h" />
+    <ClInclude Include="customer\turnover\turnover.h" />
+    <ClInclude Include="customer\turnover\turnovercollection.h" />
+    <ClInclude Include="customer\turnover\turnovercollectionptr.h" />
+    <ClInclude Include="customer\turnover\turnovermapperbase.h" />
+    <ClInclude Include="customer\turnover\turnoverptr.h" />
+    <ClInclude Include="customer\turnover\turnoversql.h" />
+    <ClInclude Include="customer\turnover\turnoversqlmapper.h" />
+    <ClInclude Include="datatypes\boolean.h" />
+    <ClInclude Include="datatypes\date.h" />
+    <ClInclude Include="datatypes\int16.h" />
+    <ClInclude Include="datatypes\int64.h" />
+    <ClInclude Include="datatypes\orderremarktypeenum.h" />
+    <ClInclude Include="datatypes\property.hpp" />
+    <ClInclude Include="datatypes\weekdayenum.h" />
+    <ClInclude Include="discount\calculator\commands\conditionalfilter.h" />
+    <ClInclude Include="discount\calculator\commands\dediscountcalculatorcommand.h" />
+    <ClInclude Include="discount\calculator\commands\discountbestpricefilter.h" />
+    <ClInclude Include="discount\calculator\commands\discountcalculatorchaincommandbase.h" />
+    <ClInclude Include="discount\calculator\commands\discountcalculatorchaincommandbaseptr.h" />
+    <ClInclude Include="discount\calculator\commands\discountcustomerordertypepermissionfilter.h" />
+    <ClInclude Include="discount\calculator\commands\discountcustomerrxafilter.h" />
+    <ClInclude Include="discount\calculator\commands\discountordertypefilter.h" />
+    <ClInclude Include="discount\calculator\commands\discountpriorityfilter.h" />
+    <ClInclude Include="discount\calculator\commands\discounttaxspannencheckfilter.h" />
+    <ClInclude Include="discount\calculator\commands\discountvisibilityfilter.h" />
+    <ClInclude Include="discount\calculator\commands\idiscountfilter.h" />
+    <ClInclude Include="discount\calculator\commands\unconditionalfilter.h" />
+    <ClInclude Include="discount\discountcollectionfinder\discountcollectionfinder.h" />
+    <ClInclude Include="discount\discountcollectionfinder\discountcollectionfinderptr.h" />
+    <ClInclude Include="discount\discountcollectionfinder\idiscountcollectionfinder.h" />
+    <ClInclude Include="discount\discountcollectionfinder\idiscountcollectionfinderptr.h" />
+    <ClInclude Include="discount\orderpositiondiscount\orderpositiondiscountrebateinkindentryselectsqlparameterbinder.h" />
+    <ClInclude Include="discount\tender\repository\itenderdiscountfinder.h" />
+    <ClInclude Include="discount\tender\repository\itenderdiscountfinderptr.h" />
+    <ClInclude Include="discount\tender\repository\tenderdiscountrepository.h" />
+    <ClInclude Include="discount\tender\repository\tenderdiscountrepositoryptr.h" />
+    <ClInclude Include="discount\tender\repository\tenderdiscountsearchparams.h" />
+    <ClInclude Include="discount\tender\sqlmapper\tenderdiscountmapperbase.h" />
+    <ClInclude Include="discount\tender\sqlmapper\tenderdiscountsqlmapper.h" />
+    <ClInclude Include="discount\tender\tenderdiscount.h" />
+    <ClInclude Include="discount\tender\tenderdiscountcollection.h" />
+    <ClInclude Include="discount\tender\tenderdiscountcollectionptr.h" />
+    <ClInclude Include="discount\tender\tenderdiscountptr.h" />
+    <ClInclude Include="discount\usecase\nulldiscountcalcuc.h" />
+    <ClInclude Include="document\componentmanager\documentcomponentmanager.h" />
+    <ClInclude Include="document\componentmanager\documentcomponentmanagerptr.h" />
+    <ClInclude Include="document\deliveryadvice\deliveryadvice.h" />
+    <ClInclude Include="document\deliveryadvice\deliveryadviceinformationfilter.h" />
+    <ClInclude Include="document\deliveryadvice\deliveryadvicekey.h" />
+    <ClInclude Include="document\deliveryadvice\deliveryadvicelineibtlink\deliveryadvicelineibtlink.h" />
+    <ClInclude Include="document\deliveryadvice\deliveryadvicelineibtlink\deliveryadvicelineibtlinkmapperbase.h" />
+    <ClInclude Include="document\deliveryadvice\deliveryadvicelineibtlink\deliveryadvicelineibtlinkptr.h" />
+    <ClInclude Include="document\deliveryadvice\deliveryadvicelineibtlink\deliveryadvicelineibtlinksqlmapper.h" />
+    <ClInclude Include="document\deliveryadvice\deliveryadviceline\deliveryadviceline.h" />
+    <ClInclude Include="document\deliveryadvice\deliveryadviceline\deliveryadvicelinedetails.h" />
+    <ClInclude Include="document\deliveryadvice\deliveryadviceline\deliveryadvicelinedetailsmapperbase.h" />
+    <ClInclude Include="document\deliveryadvice\deliveryadviceline\deliveryadvicelinedetailsptr.h" />
+    <ClInclude Include="document\deliveryadvice\deliveryadviceline\deliveryadvicelinedetailssqlmapper.h" />
+    <ClInclude Include="document\deliveryadvice\deliveryadviceline\deliveryadvicelinediscount.h" />
+    <ClInclude Include="document\deliveryadvice\deliveryadviceline\deliveryadvicelinediscountmapperbase.h" />
+    <ClInclude Include="document\deliveryadvice\deliveryadviceline\deliveryadvicelinediscountptr.h" />
+    <ClInclude Include="document\deliveryadvice\deliveryadviceline\deliveryadvicelinediscountsqlmapper.h" />
+    <ClInclude Include="document\deliveryadvice\deliveryadviceline\deliveryadvicelineextrasat.h" />
+    <ClInclude Include="document\deliveryadvice\deliveryadviceline\deliveryadvicelineextrasatmapperbase.h" />
+    <ClInclude Include="document\deliveryadvice\deliveryadviceline\deliveryadvicelineextrasatptr.h" />
+    <ClInclude Include="document\deliveryadvice\deliveryadviceline\deliveryadvicelineextrasatsqlmapper.h" />
+    <ClInclude Include="document\deliveryadvice\deliveryadviceline\deliveryadvicelinemapperbase.h" />
+    <ClInclude Include="document\deliveryadvice\deliveryadviceline\deliveryadvicelineptr.h" />
+    <ClInclude Include="document\deliveryadvice\deliveryadviceline\deliveryadvicelinereturn.h" />
+    <ClInclude Include="document\deliveryadvice\deliveryadviceline\deliveryadvicelinereturnmapperbase.h" />
+    <ClInclude Include="document\deliveryadvice\deliveryadviceline\deliveryadvicelinereturnptr.h" />
+    <ClInclude Include="document\deliveryadvice\deliveryadviceline\deliveryadvicelinereturnsqlmapper.h" />
+    <ClInclude Include="document\deliveryadvice\deliveryadviceline\deliveryadvicelinesqlmapper.h" />
+    <ClInclude Include="document\deliveryadvice\deliveryadvicemapperbase.h" />
+    <ClInclude Include="document\deliveryadvice\deliveryadviceptr.h" />
+    <ClInclude Include="document\deliveryadvice\deliveryadviceremarks.h" />
+    <ClInclude Include="document\deliveryadvice\deliveryadviceremarksmapperbase.h" />
+    <ClInclude Include="document\deliveryadvice\deliveryadviceremarksptr.h" />
+    <ClInclude Include="document\deliveryadvice\deliveryadviceremarkssqlmapper.h" />
+    <ClInclude Include="document\deliveryadvice\deliveryadvicesqlmapper.h" />
+    <ClInclude Include="document\deliveryadvice\deliveryadvicerepository.h" />
+    <ClInclude Include="document\deliveryadvice\deliveryadvicerepositoryptr.h" />
+    <ClInclude Include="document\deliveryadvice\deliveryadvicevattotals.h" />
+    <ClInclude Include="document\deliveryadvice\deliveryadvicevattotalsmapperbase.h" />
+    <ClInclude Include="document\deliveryadvice\deliveryadvicevattotalsptr.h" />
+    <ClInclude Include="document\deliveryadvice\deliveryadvicevattotalssqlmapper.h" />
+    <ClInclude Include="document\documentarchiveinfo\documentarchiveinfo.h" />
+    <ClInclude Include="document\documentarchiveinfo\documentarchiveinfoinsertsqlparameterbinder.h" />
+    <ClInclude Include="document\documentarchiveinfo\documentarchiveinfomapperbase.h" />
+    <ClInclude Include="document\documentarchiveinfo\documentarchiveinfoptr.h" />
+    <ClInclude Include="document\documentarchiveinfo\documentarchiveinforepository.h" />
+    <ClInclude Include="document\documentarchiveinfo\documentarchiveinforepositoryptr.h" />
+    <ClInclude Include="document\documentarchiveinfo\documentarchiveinfoselectbyguidsqlparameterbinder.h" />
+    <ClInclude Include="document\documentarchiveinfo\documentarchiveinfoselectsqlparameterbinder.h" />
+    <ClInclude Include="document\documentarchiveinfo\documentarchiveinfosqlmapper.h" />
+    <ClInclude Include="document\documentprintinfo\documentprintinfo.h" />
+    <ClInclude Include="document\documentprintinfo\documentprintinfoinsertsqlparameterbinder.h" />
+    <ClInclude Include="document\documentprintinfo\documentprintinfomapperbase.h" />
+    <ClInclude Include="document\documentprintinfo\documentprintinfoptr.h" />
+    <ClInclude Include="document\documentprintinfo\documentprintinforepository.h" />
+    <ClInclude Include="document\documentprintinfo\documentprintinforepositoryptr.h" />
+    <ClInclude Include="document\documentprintinfo\documentprintinfoselectsqlparameterbinder.h" />
+    <ClInclude Include="document\documentprintinfo\documentprintinfosqlmapper.h" />
+    <ClInclude Include="document\narcoticarchive\narcoticarchive.h" />
+    <ClInclude Include="document\narcoticarchive\narcoticarchiveptr.h" />
+    <ClInclude Include="document\narcoticarchive\narcoticarchiverepository.h" />
+    <ClInclude Include="document\narcoticarchive\narcoticarchiverepositoryptr.h" />
+    <ClInclude Include="document\narcoticarchive\narcoticarchivesqlmapper.h" />
+    <ClInclude Include="document\narcoticarchive\narcoticarchiveinsertsqlparameterbinder.h" />
+    <ClInclude Include="document\narcoticarchive\narcoticarchiveselectbycontributionvouchernosqlparameterbinder.h" />
+    <ClInclude Include="document\narcoticarchive\narcoticarchiveselectsqlparameterbinder.h" />
+    <ClInclude Include="document\narcoticarchive\narcoticarchivemapperbase.h" />
+    <ClInclude Include="document\taxrates\itaxrates.h" />
+    <ClInclude Include="document\taxrates\itaxratesptr.h" />
+    <ClInclude Include="document\taxrates\taxrates.h" />
+    <ClInclude Include="document\taxrates\taxratescollection.h" />
+    <ClInclude Include="document\taxrates\taxratescollectionptr.h" />
+    <ClInclude Include="document\taxrates\taxratesmapperbase.h" />
+    <ClInclude Include="document\taxrates\taxratesptr.h" />
+    <ClInclude Include="document\taxrates\taxratesrepository.h" />
+    <ClInclude Include="document\taxrates\taxratesrepositoryptr.h" />
+    <ClInclude Include="document\taxrates\taxratessql.h" />
+    <ClInclude Include="document\taxrates\taxratessqlmapper.h" />
+    <ClInclude Include="exceptions\exceptionhelper.h" />
+    <ClInclude Include="persistence\iaccessorfactory.h" />
+    <ClInclude Include="shipmenttracking\configuration\etadelayevaluation.h" />
+    <ClInclude Include="shipmenttracking\configuration\etadelayevaluationmapperbase.h" />
+    <ClInclude Include="shipmenttracking\configuration\etadelayevaluationptr.h" />
+    <ClInclude Include="shipmenttracking\configuration\etadelayevaluationsqlmapper.h" />
+    <ClInclude Include="shipmenttracking\configuration\etadelaypresentation.h" />
+    <ClInclude Include="shipmenttracking\configuration\etadelaypresentationmapperbase.h" />
+    <ClInclude Include="shipmenttracking\configuration\etadelaypresentationptr.h" />
+    <ClInclude Include="shipmenttracking\configuration\etadelaypresentationsqlmapper.h" />
+    <ClInclude Include="shipmenttracking\configuration\transmedstatusiddeliveredtocustomersqlfetcher.h" />
+    <ClInclude Include="exceptions\sqlduplicateexception.h" />
+    <ClInclude Include="exceptions\sqlnotfoundexception.h" />
+    <ClInclude Include="exceptions\sqltoomanyrowsexception.h" />
+    <ClInclude Include="ibt\articlequotachecker\articlequotachecker.h" />
+    <ClInclude Include="ibt\articlequotachecker\articlequotacheckerptr.h" />
+    <ClInclude Include="ibt\articlequotachecker\iarticlequotachecker.h" />
+    <ClInclude Include="ibt\articlequotachecker\iarticlequotacheckerptr.h" />
+    <ClInclude Include="ibt\bookingcompletedchecker\bookingcompletedchecker.h" />
+    <ClInclude Include="ibt\bookingcompletedchecker\bookingcompletedcheckerptr.h" />
+    <ClInclude Include="ibt\bookingcompletedchecker\ibookingcompletedchecker.h" />
+    <ClInclude Include="ibt\bookingcompletedchecker\ibookingcompletedcheckerptr.h" />
+    <ClInclude Include="ibt\ibtbranch\ibtbranchrepository.h" />
+    <ClInclude Include="ibt\ibtbranch\ibtbranchrepositoryptr.h" />
+    <ClInclude Include="ibt\ibtbranch\ibtbranchsetting.h" />
+    <ClInclude Include="ibt\ibtbranch\ibtbranchsettingcollection.h" />
+    <ClInclude Include="ibt\ibtbranch\ibtbranchsettingcollectionptr.h" />
+    <ClInclude Include="ibt\ibtbranch\ibtbranchsettingmapperbase.h" />
+    <ClInclude Include="ibt\ibtbranch\ibtbranchsettingptr.h" />
+    <ClInclude Include="ibt\ibtbranch\ibtbranchsettingsqlmapper.h" />
+    <ClInclude Include="ibt\ibtbranch\iibtbranchrepository.h" />
+    <ClInclude Include="ibt\ibtbranch\iibtbranchrepositoryptr.h" />
+    <ClInclude Include="ibt\ibtbranch\iibtbranchsetting.h" />
+    <ClInclude Include="ibt\ibtbranch\iibtbranchsettingcollection.h" />
+    <ClInclude Include="ibt\ibtbranch\iibtbranchsettingcollectionptr.h" />
+    <ClInclude Include="ibt\ibtbranch\iibtbranchsettingptr.h" />
+    <ClInclude Include="cscorder\cscorderibtpickingdata\cscorderibtpickingdata.h" />
+    <ClInclude Include="cscorder\cscorderibtpickingdata\cscorderibtpickingdatainsertsqlparameterbinder.h" />
+    <ClInclude Include="cscorder\cscorderibtpickingdata\cscorderibtpickingdatamapperbase.h" />
+    <ClInclude Include="cscorder\cscorderibtpickingdata\cscorderibtpickingdataptr.h" />
+    <ClInclude Include="cscorder\cscorderibtpickingdata\cscorderibtpickingdatarepository.h" />
+    <ClInclude Include="cscorder\cscorderibtpickingdata\cscorderibtpickingdatarepositoryptr.h" />
+    <ClInclude Include="cscorder\cscorderibtpickingdata\cscorderibtpickingdatasqlmapper.h" />
+    <ClInclude Include="cscorder\cscorderibtpickingdata\icscorderibtpickingdata.h" />
+    <ClInclude Include="cscorder\cscorderibtpickingdata\icscorderibtpickingdataptr.h" />
+    <ClInclude Include="cscorder\cscorderibtpickingdata\icscorderibtpickingdatarepository.h" />
+    <ClInclude Include="cscorder\cscorderibtpickingdata\icscorderibtpickingdatarepositoryptr.h" />
+    <ClInclude Include="ibt\ibtrequest\discount\ibtrequestdiscount.h" />
+    <ClInclude Include="ibt\ibtrequest\discount\ibtrequestdiscountmapperbase.h" />
+    <ClInclude Include="ibt\ibtrequest\discount\ibtrequestdiscountptr.h" />
+    <ClInclude Include="ibt\ibtrequest\discount\ibtrequestdiscountsqlmapper.h" />
+    <ClInclude Include="ibt\ibtrequest\discount\ibtrequestdiscounttypeenum.h" />
+    <ClInclude Include="ibt\ibtrequest\discount\iibtrequestdiscount.h" />
+    <ClInclude Include="ibt\ibtrequest\discount\iibtrequestdiscountptr.h" />
+    <ClInclude Include="ibt\ibtrequest\ibtrequest.h" />
+    <ClInclude Include="ibt\ibtrequest\ibtrequestkey.h" />
+    <ClInclude Include="ibt\ibtrequest\ibtrequestmapperbase.h" />
+    <ClInclude Include="ibt\ibtrequest\ibtrequestprocessingstateenum.h" />
+    <ClInclude Include="ibt\ibtrequest\ibtrequestptr.h" />
+    <ClInclude Include="ibt\ibtrequest\ibtrequestrepository.h" />
+    <ClInclude Include="ibt\ibtrequest\ibtrequestrepositoryptr.h" />
+    <ClInclude Include="ibt\ibtrequest\ibtrequestsqlmapper.h" />
+    <ClInclude Include="ibt\ibtrequest\iibtrequest.h" />
+    <ClInclude Include="ibt\ibtrequest\iibtrequestfactory.h" />
+    <ClInclude Include="ibt\ibtrequest\iibtrequestfactoryptr.h" />
+    <ClInclude Include="ibt\ibtrequest\iibtrequestptr.h" />
+    <ClInclude Include="ibt\ibtrequest\iibtrequestrepository.h" />
+    <ClInclude Include="ibt\ibtrequest\iibtrequestrepositoryptr.h" />
+    <ClInclude Include="ibt\ibtrequest\remark\ibtrequestremark.h" />
+    <ClInclude Include="ibt\ibtrequest\remark\ibtrequestremarklevelenum.h" />
+    <ClInclude Include="ibt\ibtrequest\remark\ibtrequestremarkmapperbase.h" />
+    <ClInclude Include="ibt\ibtrequest\remark\ibtrequestremarkptr.h" />
+    <ClInclude Include="ibt\ibtrequest\remark\ibtrequestremarksqlmapper.h" />
+    <ClInclude Include="ibt\ibtrequest\remark\iibtrequestremark.h" />
+    <ClInclude Include="ibt\ibtrequest\remark\iibtrequestremarkptr.h" />
+    <ClInclude Include="ibt\ibtresponse\ibtresponse.h" />
+    <ClInclude Include="ibt\ibtresponse\ibtresponsemapperbase.h" />
+    <ClInclude Include="ibt\ibtresponse\ibtresponseptr.h" />
+    <ClInclude Include="ibt\ibtresponse\ibtresponserepository.h" />
+    <ClInclude Include="ibt\ibtresponse\ibtresponserepositoryptr.h" />
+    <ClInclude Include="ibt\ibtresponse\ibtresponsesqlmapper.h" />
+    <ClInclude Include="ibt\ibtresponse\iibtresponse.h" />
+    <ClInclude Include="ibt\ibtresponse\iibtresponsefactory.h" />
+    <ClInclude Include="ibt\ibtresponse\iibtresponsefactoryptr.h" />
+    <ClInclude Include="ibt\ibtresponse\iibtresponseptr.h" />
+    <ClInclude Include="ibt\ibtresponse\iibtresponserepository.h" />
+    <ClInclude Include="ibt\ibtresponse\iibtresponserepositoryptr.h" />
+    <ClInclude Include="ibt\transportexclusionchecker\itransportexclusionchecker.h" />
+    <ClInclude Include="ibt\transportexclusionchecker\itransportexclusioncheckerptr.h" />
+    <ClInclude Include="ibt\transportexclusionchecker\transportexclusionchecker.h" />
+    <ClInclude Include="ibt\transportexclusionchecker\transportexclusioncheckerptr.h" />
+    <ClInclude Include="msv3\componentmanager\msv3componentmanager.h" />
+    <ClInclude Include="msv3\componentmanager\msv3componentmanagerptr.h" />
+    <ClInclude Include="msv3\customerdata\customerdata.h" />
+    <ClInclude Include="msv3\customerdata\customerdatamapperbase.h" />
+    <ClInclude Include="msv3\customerdata\customerdataptr.h" />
+    <ClInclude Include="msv3\customerdata\customerdatarepository.h" />
+    <ClInclude Include="msv3\customerdata\customerdatarepositoryptr.h" />
+    <ClInclude Include="msv3\customerdata\customerdataselectsqlparameterbinder.h" />
+    <ClInclude Include="msv3\customerdata\customerdatasqlmapper.h" />
+    <ClInclude Include="msv3\orderresponse\orderresponse.h" />
+    <ClInclude Include="msv3\orderresponse\orderresponseinsertsqlparameterbinder.h" />
+    <ClInclude Include="msv3\orderresponse\orderresponsemapperbase.h" />
+    <ClInclude Include="msv3\orderresponse\orderresponseptr.h" />
+    <ClInclude Include="msv3\orderresponse\orderresponserepository.h" />
+    <ClInclude Include="msv3\orderresponse\orderresponserepositoryptr.h" />
+    <ClInclude Include="msv3\orderresponse\orderresponseselectsqlparameterbinder.h" />
+    <ClInclude Include="msv3\orderresponse\orderresponsesqlmapper.h" />
+    <ClInclude Include="msv3\orderresponse\orderresponseupdatesqlparameterbinder.h" />
+    <ClInclude Include="msv3\transmissionresponse\transmissionresponse.h" />
+    <ClInclude Include="msv3\transmissionresponse\transmissionresponseinsertsqlparameterbinder.h" />
+    <ClInclude Include="msv3\transmissionresponse\transmissionresponsemapperbase.h" />
+    <ClInclude Include="msv3\transmissionresponse\transmissionresponseptr.h" />
+    <ClInclude Include="msv3\transmissionresponse\transmissionresponserepository.h" />
+    <ClInclude Include="msv3\transmissionresponse\transmissionresponserepositoryptr.h" />
+    <ClInclude Include="msv3\transmissionresponse\transmissionresponseselectbyintermalhashsqlparameterbinder.h" />
+    <ClInclude Include="msv3\transmissionresponse\transmissionresponseselectsqlparameterbinder.h" />
+    <ClInclude Include="msv3\transmissionresponse\transmissionresponsesqlmapper.h" />
+    <ClInclude Include="msv3\transmissionresponse\transmissionresponseupdatesqlparameterbinder.h" />
+    <ClInclude Include="parameter\branchparametergetter.h" />
+    <ClInclude Include="parameter\componentmanager\parametercomponentmanager.h" />
+    <ClInclude Include="parameter\componentmanager\parametercomponentmanagerptr.h" />
+    <ClInclude Include="parameter\csvorderimport\cscorderimportcsvcolumns.h" />
+    <ClInclude Include="parameter\csvorderimport\cscorderimportcsvcolumnsmapperbase.h" />
+    <ClInclude Include="parameter\csvorderimport\cscorderimportcsvcolumnsptr.h" />
+    <ClInclude Include="parameter\csvorderimport\cscorderimportcsvcolumnssqlmapper.h" />
+    <ClInclude Include="parameter\csvorderimport\cscorderimportcsvformats.h" />
+    <ClInclude Include="parameter\csvorderimport\cscorderimportcsvformatsmapperbase.h" />
+    <ClInclude Include="parameter\csvorderimport\cscorderimportcsvformatsptr.h" />
+    <ClInclude Include="parameter\csvorderimport\cscorderimportcsvformatssqlmapper.h" />
+    <ClInclude Include="parameter\csvorderimport\cscorderimportfields.h" />
+    <ClInclude Include="parameter\csvorderimport\cscorderimportfieldsmapperbase.h" />
+    <ClInclude Include="parameter\csvorderimport\cscorderimportfieldsptr.h" />
+    <ClInclude Include="parameter\csvorderimport\cscorderimportfieldssqlmapper.h" />
+    <ClInclude Include="parameter\csvorderimport\csvorderimportrepository.h" />
+    <ClInclude Include="parameter\csvorderimport\csvorderimportrepositoryptr.h" />
+    <ClInclude Include="parameter\csvorderimport\icscorderimportcsvcolumns.h" />
+    <ClInclude Include="parameter\csvorderimport\icscorderimportcsvcolumnsptr.h" />
+    <ClInclude Include="parameter\csvorderimport\icscorderimportcsvformats.h" />
+    <ClInclude Include="parameter\csvorderimport\icscorderimportcsvformatsptr.h" />
+    <ClInclude Include="parameter\csvorderimport\icscorderimportfields.h" />
+    <ClInclude Include="parameter\csvorderimport\icscorderimportfieldsptr.h" />
+    <ClInclude Include="parameter\csvorderimport\icsvorderimportrepository.h" />
+    <ClInclude Include="parameter\csvorderimport\icsvorderimportrepositoryptr.h" />
+    <ClInclude Include="parameter\ibranchparametergetter.h" />
+    <ClInclude Include="parameter\ibranchparametergetterptr.h" />
+    <ClInclude Include="parameter\iorderparametergetter.h" />
+    <ClInclude Include="parameter\iorderparametergetterptr.h" />
+    <ClInclude Include="parameter\isessionparametergetter.h" />
+    <ClInclude Include="parameter\isessionparametergetterptr.h" />
+    <ClInclude Include="parameter\orderparametergetter.h" />
+    <ClInclude Include="parameter\sessionparametergetter.h" />
+    <ClInclude Include="persistence\accessorfactory.h" />
+    <ClInclude Include="persistence\iaccessorfactoryptr.h" />
+    <ClInclude Include="persistence\nullaccessor.h" />
+    <ClInclude Include="procurementpermission\componentmanager\componentmanager.h" />
+    <ClInclude Include="procurementpermission\componentmanager\componentmanagerptr.h" />
+    <ClInclude Include="procurementpermission\repository\irepository.h" />
+    <ClInclude Include="procurementpermission\repository\irepositoryptr.h" />
+    <ClInclude Include="procurementpermission\repository\repository.h" />
+    <ClInclude Include="procurementpermission\repository\repositoryptr.h" />
+    <ClInclude Include="discount\basevalues\discountbasevalue\discountbasevaluerepositoryptr.h" />
+    <ClInclude Include="discount\basevalues\orderbasevalue\articleclassificationcollection.h" />
+    <ClInclude Include="discount\basevalues\orderbasevalue\articleclassificationrepository.h" />
+    <ClInclude Include="discount\basevalues\orderbasevalue\articleclassificationsqlmapper.h" />
+    <ClInclude Include="discount\basevalues\orderbasevalue\iarticleclassificationgetter.h" />
+    <ClInclude Include="discount\basevalues\orderbasevalue\iarticleclassificationgetterptr.h" />
+    <ClInclude Include="discount\basevalues\orderbasevalue\iorderitembasevaluecollection.h" />
+    <ClInclude Include="discount\basevalues\orderbasevalue\iorderitembasevaluecollectionptr.h" />
+    <ClInclude Include="discount\basevalues\orderbasevalue\orderitembasevalue.h" />
+    <ClInclude Include="discount\basevalues\orderbasevalue\orderitembasevaluecollection.h" />
+    <ClInclude Include="discount\basevalues\orderbasevalue\orderitembasevaluecollectionptr.h" />
+    <ClInclude Include="discount\basevalues\orderbasevalue\orderitembasevalueptr.h" />
+    <ClInclude Include="discount\calculator\commands\bestof4customercombinedcalculatorcommand.h" />
+    <ClInclude Include="discount\calculator\commands\discountcalculatorcommandbaseptr.h" />
+    <ClInclude Include="discount\calculator\commands\discountcalculatorcompositecommandbaseptr.h" />
+    <ClInclude Include="discount\calculator\commands\retailcalculatorcommand.h" />
+    <ClInclude Include="discount\calculator\commands\sumcalculatorcommand.h" />
+    <ClInclude Include="discount\calculator\commands\wholesaleallcustomerarticlecalculatorcommand.h" />
+    <ClInclude Include="discount\calculator\commands\wholesaleallcustomerarticlegroupcalculatorcommand.h" />
+    <ClInclude Include="discount\calculator\commands\wholesaleallcustomermanufacturercalculatorcommand.h" />
+    <ClInclude Include="discount\calculator\commands\wholesaleallcustomermanufacturergroupcalculatorcommand.h" />
+    <ClInclude Include="discount\calculator\commands\wholesalecustomerarticlecalculatorcommand.h" />
+    <ClInclude Include="discount\calculator\commands\wholesalecustomerarticlegroupcalculatorcommand.h" />
+    <ClInclude Include="discount\calculator\commands\wholesalecustomergrouparticlecalculatorcommand.h" />
+    <ClInclude Include="discount\calculator\commands\wholesalecustomergrouparticlegroupcalculatorcommand.h" />
+    <ClInclude Include="discount\calculator\commands\wholesalecustomergroupmanufacturercalculatorcommand.h" />
+    <ClInclude Include="discount\calculator\commands\wholesalecustomergroupmanufacturergroupcalculatorcommand.h" />
+    <ClInclude Include="discount\calculator\commands\wholesalecustomermanufacturercalculatorcommand.h" />
+    <ClInclude Include="discount\calculator\commands\wholesalecustomermanufacturergroupcalculatorcommand.h" />
+    <ClInclude Include="discount\calculator\commands\wholesaleindustryallcustomerarticlecalculatorcommand.h" />
+    <ClInclude Include="discount\calculator\commands\wholesaleindustryallcustomerarticlegroupcalculatorcommand.h" />
+    <ClInclude Include="discount\calculator\commands\wholesaleindustryallcustomermanufacturercalculatorcommand.h" />
+    <ClInclude Include="discount\calculator\commands\wholesaleindustryallcustomermanufacturergroupcalculatorcommand.h" />
+    <ClInclude Include="discount\calculator\commands\wholesaleindustrycustomerarticlecalculatorcommand.h" />
+    <ClInclude Include="discount\calculator\commands\wholesaleindustrycustomerarticlegroupcalculatorcommand.h" />
+    <ClInclude Include="discount\calculator\commands\wholesaleindustrycustomergrouparticlecalculatorcommand.h" />
+    <ClInclude Include="discount\calculator\commands\wholesaleindustrycustomergrouparticlegroupcalculatorcommand.h" />
+    <ClInclude Include="discount\calculator\commands\wholesaleindustrycustomergroupmanufacturercalculatorcommand.h" />
+    <ClInclude Include="discount\calculator\commands\wholesaleindustrycustomergroupmanufacturergroupcalculatorcommand.h" />
+    <ClInclude Include="discount\calculator\commands\wholesaleindustrycustomermanufacturercalculatorcommand.h" />
+    <ClInclude Include="discount\calculator\commands\wholesaleindustrycustomermanufacturergroupcalculatorcommand.h" />
+    <ClInclude Include="discount\calculator\discountcalculatortypemapper.h" />
+    <ClInclude Include="discount\componentmanager\discountcomponentmanager.h" />
+    <ClInclude Include="discount\componentmanager\discountcomponentmanagerptr.h" />
+    <ClInclude Include="discount\componentmanager\hrdiscountcalculatorcomponentmanagerbase.h" />
+    <ClInclude Include="discount\componentmanager\hrorderdiscountcalculatorcomponentmanager.h" />
+    <ClInclude Include="discount\componentmanager\hrpositiondiscountcalculatorcomponentmanager.h" />
+    <ClInclude Include="discount\logger\discountlogger\discountlogposition.h" />
+    <ClInclude Include="discount\logger\discountlogger\discountlogpositioncollection.h" />
+    <ClInclude Include="discount\logger\discountlogger\discountlogpositioninsertsqlparameterbinder.h" />
+    <ClInclude Include="discount\logger\discountlogger\discountlogpositionmapperbase.h" />
+    <ClInclude Include="discount\logger\discountlogger\discountlogpositionptr.h" />
+    <ClInclude Include="discount\logger\discountlogger\discountlogpositionrepository.h" />
+    <ClInclude Include="discount\logger\discountlogger\discountlogpositionsqlmapper.h" />
+    <ClInclude Include="discount\logger\discountlogger\idiscountlogpositionrepository.h" />
+    <ClInclude Include="discount\logger\discountlogger\idiscountlogpositionrepositoryptr.h" />
+    <ClInclude Include="discount\logger\discountlogger\log4cplusdiscountlogger.h" />
+    <ClInclude Include="discount\logger\discountlogger\repositorydiscountlogger.h" />
+    <ClInclude Include="discount\logger\hierarchylogger\ihierarchylogger.h" />
+    <ClInclude Include="discount\logger\hierarchylogger\ihierarchyloggerptr.h" />
+    <ClInclude Include="discount\logger\hierarchylogger\nullhierarchylogger.h" />
+    <ClInclude Include="discount\logger\hierarchylogger\shellhierarchylogger.h" />
+    <ClInclude Include="discount\orderpositiondiscountprocessed\iorderpositiondiscountprocessedcollection.h" />
+    <ClInclude Include="discount\orderpositiondiscountprocessed\iorderpositiondiscountprocessedcollectionptr.h" />
+    <ClInclude Include="discount\orderpositiondiscountprocessed\iorderpositiondiscountprocessedrepository.h" />
+    <ClInclude Include="discount\orderpositiondiscountprocessed\iorderpositiondiscountprocessedrepositoryptr.h" />
+    <ClInclude Include="discount\orderpositiondiscountprocessed\orderpositiondiscountprocessed.h" />
+    <ClInclude Include="discount\orderpositiondiscountprocessed\orderpositiondiscountprocessedcollection.h" />
+    <ClInclude Include="discount\orderpositiondiscountprocessed\orderpositiondiscountprocessedcollectionptr.h" />
+    <ClInclude Include="discount\orderpositiondiscountprocessed\orderpositiondiscountprocessedinsertsqlparameterbinder.h" />
+    <ClInclude Include="discount\orderpositiondiscountprocessed\orderpositiondiscountprocessedmapperbase.h" />
+    <ClInclude Include="discount\orderpositiondiscountprocessed\orderpositiondiscountprocessedptr.h" />
+    <ClInclude Include="discount\orderpositiondiscountprocessed\orderpositiondiscountprocessedrepository.h" />
+    <ClInclude Include="discount\orderpositiondiscountprocessed\orderpositiondiscountprocessedrepositoryptr.h" />
+    <ClInclude Include="discount\orderpositiondiscountprocessed\orderpositiondiscountprocessedselectsqlparameterbinder.h" />
+    <ClInclude Include="discount\orderpositiondiscountprocessed\orderpositiondiscountprocessedsqlmapper.h" />
+    <ClInclude Include="discount\orderpositiondiscount\iorderpositiondiscountfinder.h" />
+    <ClInclude Include="discount\orderpositiondiscount\iorderpositiondiscountfinderptr.h" />
+    <ClInclude Include="discount\orderpositiondiscount\iorderpositiondiscountrepository.h" />
+    <ClInclude Include="discount\orderpositiondiscount\iorderpositiondiscountrepositoryptr.h" />
+    <ClInclude Include="discount\orderpositiondiscount\orderpositiondiscount.h" />
+    <ClInclude Include="discount\orderpositiondiscount\orderpositiondiscountcollection.h" />
+    <ClInclude Include="discount\orderpositiondiscount\orderpositiondiscountcollectionptr.h" />
+    <ClInclude Include="discount\orderpositiondiscount\orderpositiondiscountdeletesqlparameterbinder.h" />
+    <ClInclude Include="discount\orderpositiondiscount\orderpositiondiscountinsertsqlparameterbinder.h" />
+    <ClInclude Include="discount\orderpositiondiscount\orderpositiondiscountmapperbase.h" />
+    <ClInclude Include="discount\orderpositiondiscount\orderpositiondiscountmodeenum.h" />
+    <ClInclude Include="discount\orderpositiondiscount\orderpositiondiscountmodemapper.h" />
+    <ClInclude Include="discount\orderpositiondiscount\orderpositiondiscountordercompletionselectsqlparameterbinder.h" />
+    <ClInclude Include="discount\orderpositiondiscount\orderpositiondiscountptr.h" />
+    <ClInclude Include="discount\orderpositiondiscount\orderpositiondiscountrepository.h" />
+    <ClInclude Include="discount\orderpositiondiscount\orderpositiondiscountrepositoryptr.h" />
+    <ClInclude Include="discount\orderpositiondiscount\orderpositiondiscountsinglearticleselectsqlparameterbinder.h" />
+    <ClInclude Include="discount\orderpositiondiscount\orderpositiondiscountsqlmapper.h" />
+    <ClInclude Include="discount\orderpositiondiscount\orderpositiondiscountupdatesqlparameterbinder.h" />
+    <ClInclude Include="discount\resultprocessor\compositeresultprocessor.h" />
+    <ClInclude Include="discount\resultprocessor\irebateinkindrepository.h" />
+    <ClInclude Include="discount\resultprocessor\irebateinkindrepositoryptr.h" />
+    <ClInclude Include="discount\resultprocessor\iresultprocessor.h" />
+    <ClInclude Include="discount\resultprocessor\iresultprocessorptr.h" />
+    <ClInclude Include="discount\resultprocessor\nullresultprocessor.h" />
+    <ClInclude Include="discount\resultprocessor\rebateinkindresultprocessor.h" />
+    <ClInclude Include="discount\resultprocessor\repositoryresultprocessor.h" />
+    <ClInclude Include="discount\resultprocessor\repositoryresultprocessorbase.h" />
+    <ClInclude Include="discount\resultprocessor\shellresultprocessor.h" />
+    <ClInclude Include="discount\usecase\orderdiscountcalcuc.h" />
+    <ClInclude Include="discount\usecase\positiondiscountcalcuc.h" />
+    <ClInclude Include="exceptions\cscexceptionbase.h" />
+    <ClInclude Include="exceptions\emptycollectionexception.h" />
+    <ClInclude Include="exceptions\emptycompositeexception.h" />
+    <ClInclude Include="exceptions\invaliddataexception.h" />
+    <ClInclude Include="exceptions\invalidparameterexception.h" />
+    <ClInclude Include="exceptions\persistenceexception.h" />
+    <ClInclude Include="exceptions\propertyunsetexception.h" />
+    <ClInclude Include="ibt\componentmanager\ibtcomponentmanager.h" />
+    <ClInclude Include="ibt\componentmanager\ibtcomponentmanagerptr.h" />
+    <ClInclude Include="ibt\environmentchecker\environmentchecker.h" />
+    <ClInclude Include="ibt\environmentchecker\environmentcheckerptr.h" />
+    <ClInclude Include="ibt\environmentchecker\ienvironmentchecker.h" />
+    <ClInclude Include="ibt\environmentchecker\ienvironmentcheckerptr.h" />
+    <ClInclude Include="ibt\exceptions\ibtrequestexception.h" />
+    <ClInclude Include="logger\loggerconfig.h" />
+    <ClInclude Include="logger\loggerpool.h" />
+    <ClInclude Include="discount\calculator\discountcalculatorresult.h" />
+    <ClInclude Include="discount\calculator\discountcalculatortypeenum.h" />
+    <ClInclude Include="discount\calculator\commands\discountcalculatorcommandbase.h" />
+    <ClInclude Include="discount\calculator\commands\discountcalculatorcompositecommandbase.h" />
+    <ClInclude Include="discount\calculator\commands\idiscountcalculatorcommand.h" />
+    <ClInclude Include="discount\calculator\commands\idiscountcalculatorcommandptr.h" />
+    <ClInclude Include="discount\calculator\commands\fixedpricecalculatorcommand.h" />
+    <ClInclude Include="discount\calculator\commands\firstwinscalculatorcommand.h" />
+    <ClInclude Include="discount\logger\discountlogger\idiscountlogger.h" />
+    <ClInclude Include="discount\logger\discountlogger\idiscountloggerptr.h" />
+    <ClInclude Include="discount\logger\discountlogger\nulldiscountlogger.h" />
+    <ClInclude Include="discount\logger\discountlogger\shelldiscountlogger.h" />
+    <ClInclude Include="discount\basevalues\orderbasevalue\iorderbasevaluegetter.h" />
+    <ClInclude Include="discount\basevalues\orderbasevalue\iorderbasevaluegetterptr.h" />
+    <ClInclude Include="discount\basevalues\discountbasevalue\discountbasevalue.h" />
+    <ClInclude Include="discount\basevalues\discountbasevalue\discountbasevalueptr.h" />
+    <ClInclude Include="discount\basevalues\discountbasevalue\discountbasevaluemapperbase.h" />
+    <ClInclude Include="discount\basevalues\discountbasevalue\discountbasevaluesqlmapper.h" />
+    <ClInclude Include="discount\basevalues\discountbasevalue\discountbasevaluesinglearticlesqlparameterbinder.h" />
+    <ClInclude Include="discount\basevalues\discountbasevalue\discountbasevaluecollection.h" />
+    <ClInclude Include="discount\basevalues\discountbasevalue\discountbasevaluecollectionptr.h" />
+    <ClInclude Include="discount\basevalues\discountbasevalue\idiscountbasevaluegetter.h" />
+    <ClInclude Include="discount\basevalues\discountbasevalue\idiscountbasevaluegetterptr.h" />
+    <ClInclude Include="discount\basevalues\discountbasevalue\discountbasevaluerepository.h" />
+    <ClInclude Include="discount\basevalues\discountbasevalue\idiscountbasevaluerepository.h" />
+    <ClInclude Include="discount\basevalues\discountbasevalue\idiscountbasevaluerepositoryptr.h" />
+    <ClInclude Include="datatypes\decimal.h" />
+    <ClInclude Include="datatypes\propertycollection.h" />
+    <ClInclude Include="datatypes\propertystate.h" />
+    <ClInclude Include="datatypes\propertystateenum.h" />
+    <ClInclude Include="datatypes\int32.h" />
+    <ClInclude Include="datatypes\varstring.h" />
+    <ClInclude Include="datatypes\datetime.h" />
+    <ClInclude Include="persistence\accessor.h" />
+    <ClInclude Include="persistence\connectionptr.h" />
+    <ClInclude Include="persistence\iaccessor.h" />
+    <ClInclude Include="persistence\iaccessorptr.h" />
+    <ClInclude Include="persistence\isqlparameterbinder.h" />
+    <ClInclude Include="persistence\isqlparameterbinderptr.h" />
+    <ClInclude Include="persistence\connection.h" />
+    <ClInclude Include="persistence\itransactionfactory.h" />
+    <ClInclude Include="persistence\itransactionfactoryptr.h" />
+    <ClInclude Include="persistence\transactionguard.h" />
+    <ClInclude Include="procurementpermission\repository\requestsqlmapper.h" />
+    <ClInclude Include="returns\componentmanager\returncomponentmanager.h" />
+    <ClInclude Include="returns\componentmanager\returncomponentmanagerptr.h" />
+    <ClInclude Include="returns\returnannouncement\ireturnannouncementrepository.h" />
+    <ClInclude Include="returns\returnannouncement\ireturnannouncementrepositoryptr.h" />
+    <ClInclude Include="returns\returnannouncement\returnannouncement.h" />
+    <ClInclude Include="returns\returnannouncement\returnannouncementhead\returnannouncementhead.h" />
+    <ClInclude Include="returns\returnannouncement\returnannouncementhead\returnannouncementheadmapperbase.h" />
+    <ClInclude Include="returns\returnannouncement\returnannouncementhead\returnannouncementheadptr.h" />
+    <ClInclude Include="returns\returnannouncement\returnannouncementhead\returnannouncementheadsqlmapper.h" />
+    <ClInclude Include="returns\returnannouncement\returnannouncementmapperbase.h" />
+    <ClInclude Include="returns\returnannouncement\returnannouncementpos\returnannouncementpos.h" />
+    <ClInclude Include="returns\returnannouncement\returnannouncementpos\returnannouncementposmapperbase.h" />
+    <ClInclude Include="returns\returnannouncement\returnannouncementpos\returnannouncementposptr.h" />
+    <ClInclude Include="returns\returnannouncement\returnannouncementpos\returnannouncementpossqlmapper.h" />
+    <ClInclude Include="returns\returnannouncement\returnannouncementptr.h" />
+    <ClInclude Include="returns\returnannouncement\returnannouncementrepository.h" />
+    <ClInclude Include="returns\returnannouncement\returnannouncementrepositoryptr.h" />
+    <ClInclude Include="returns\returnannouncement\returnannouncementsqlmapper.h" />
+    <ClInclude Include="returns\returnperiod\ireturnperiodrepository.h" />
+    <ClInclude Include="returns\returnperiod\ireturnperiodrepositoryptr.h" />
+    <ClInclude Include="returns\returnperiod\returnperiod.h" />
+    <ClInclude Include="returns\returnperiod\returnperiodarticletypeenum.h" />
+    <ClInclude Include="returns\returnperiod\returnperiodmapperbase.h" />
+    <ClInclude Include="returns\returnperiod\returnperiodptr.h" />
+    <ClInclude Include="returns\returnperiod\returnperiodrepository.h" />
+    <ClInclude Include="returns\returnperiod\returnperiodrepositoryptr.h" />
+    <ClInclude Include="returns\returnperiod\returnperiodsqlmapper.h" />
+    <ClInclude Include="returns\returnpositioncheckuc\returnpositioncheckuc.h" />
+    <ClInclude Include="returns\returnrulebook\ireturnrulebookrepository.h" />
+    <ClInclude Include="returns\returnrulebook\ireturnrulebookrepositoryptr.h" />
+    <ClInclude Include="returns\returnrulebook\returnacceptancecheckenum.h" />
+    <ClInclude Include="returns\returnrulebook\returnrulebook.h" />
+    <ClInclude Include="returns\returnrulebook\returnrulebookmapperbase.h" />
+    <ClInclude Include="returns\returnrulebook\returnrulebookptr.h" />
+    <ClInclude Include="returns\returnrulebook\returnrulebookrepository.h" />
+    <ClInclude Include="returns\returnrulebook\returnrulebookrepositoryptr.h" />
+    <ClInclude Include="returns\returnrulebook\returnrulebooksqlmapper.h" />
+    <ClInclude Include="shipmenttracking\componentmanager\shipmenttrackingcomponentmanager.h" />
+    <ClInclude Include="shipmenttracking\componentmanager\shipmenttrackingcomponentmanagerptr.h" />
+    <ClInclude Include="shipmenttracking\packageinformation\shipmenttrackingbatchtototelinemapperptr.h" />
+    <ClInclude Include="shipmenttracking\packageinformation\shipmenttrackingbatchtototelinemapper.h" />
+    <ClInclude Include="shipmenttracking\packageinformation\shipmenttrackingcurrentwhslinecontext.h" />
+    <ClInclude Include="shipmenttracking\packageinformation\shipmenttrackingcurrentwhslinecontextptr.h" />
+    <ClInclude Include="shipmenttracking\packageinformation\shipmenttrackingtotepositiontolinebuildermapper.h" />
+    <ClInclude Include="shipmenttracking\packageinformation\shipmenttrackingtotepositiontolinebuildermapperptr.h" />
+    <ClInclude Include="shipmenttracking\packageinformation\shipmenttrackingordertopackagemapmakerbase.h" />
+    <ClInclude Include="shipmenttracking\packageinformation\shipmenttrackingordertopackagemapmakerbaseptr.h" />
+    <ClInclude Include="shipmenttracking\packageinformation\shipmenttrackingcustomerordertopackagemapmaker.h" />
+    <ClInclude Include="shipmenttracking\packageinformation\shipmenttrackingcustomerordertopackagemapmakerptr.h" />
+    <ClInclude Include="shipmenttracking\packageinformation\shipmenttrackingibtinformation.h" />
+    <ClInclude Include="shipmenttracking\packageinformation\shipmenttrackingibtinformationmapperbase.h" />
+    <ClInclude Include="shipmenttracking\packageinformation\shipmenttrackingibtinformationptr.h" />
+    <ClInclude Include="shipmenttracking\packageinformation\shipmenttrackingibtinformationsqlmapper.h" />
+    <ClInclude Include="shipmenttracking\packageinformation\shipmenttrackingibtinformationsqlmapperptr.h" />
+    <ClInclude Include="shipmenttracking\packageinformation\shipmenttrackingibtordertopackagemapmaker.h" />
+    <ClInclude Include="shipmenttracking\packageinformation\shipmenttrackingibtordertopackagemapmakerptr.h" />
+    <ClInclude Include="shipmenttracking\packageinformation\shipmenttrackinglinedetail.h" />
+    <ClInclude Include="shipmenttracking\packageinformation\shipmenttrackinglinedetailmapperbase.h" />
+    <ClInclude Include="shipmenttracking\packageinformation\shipmenttrackinglinedetailptr.h" />
+    <ClInclude Include="shipmenttracking\packageinformation\shipmenttrackinglinedetailsqlmapper.h" />
+    <ClInclude Include="shipmenttracking\packageinformation\shipmenttrackinglinedetailsqlmapperptr.h" />
+    <ClInclude Include="shipmenttracking\packageinformation\shipmenttrackingpackageinformation.h" />
+    <ClInclude Include="shipmenttracking\packageinformation\shipmenttrackingpackageinformationmapperbase.h" />
+    <ClInclude Include="shipmenttracking\packageinformation\shipmenttrackingpackageinformationptr.h" />
+    <ClInclude Include="shipmenttracking\packageinformation\shipmenttrackingpackageinformationsqlmapper.h" />
+    <ClInclude Include="shipmenttracking\packageinformation\shipmenttrackingpackageinformationsqlmapperptr.h" />
+    <ClInclude Include="shipmenttracking\packageinformation\shipmenttrackingpackageproperties.h" />
+    <ClInclude Include="shipmenttracking\packageinformation\shipmenttrackingpackagepropertiesmapperbase.h" />
+    <ClInclude Include="shipmenttracking\packageinformation\shipmenttrackingpackagepropertiesptr.h" />
+    <ClInclude Include="shipmenttracking\packageinformation\shipmenttrackingpackagepropertiessqlmapper.h" />
+    <ClInclude Include="shipmenttracking\packageinformation\shipmenttrackingarticletopositionmapper.h" />
+    <ClInclude Include="shipmenttracking\packageinformation\shipmenttrackingarticletopositionmapperptr.h" />
+    <ClInclude Include="shipmenttracking\shipmenttrackingdatafilter.h" />
+    <ClInclude Include="shipmenttracking\shipmenttrackingrepository.h" />
+    <ClInclude Include="shipmenttracking\shipmenttrackingrepositorybuilder.h" />
+    <ClInclude Include="shipmenttracking\shipmenttrackingrepositoryptr.h" />
+    <ClInclude Include="shipmenttracking\shipmenttrackingrepositorysqlbuilder.h" />
+    <ClInclude Include="shipmenttracking\shipmenttrackingrequestprocessingcontext.h" />
+    <ClInclude Include="shipmenttracking\shipmenttrackingrequestprocessingcontextptr.h" />
+    <ClInclude Include="shipmenttracking\shipmenttrackingutils.h" />
+    <ClInclude Include="shipmenttracking\tourinformation\shipmenttrackingetaanddeliverydata.h" />
+    <ClInclude Include="shipmenttracking\tourinformation\shipmenttrackingetaanddeliverydatamapperbase.h" />
+    <ClInclude Include="shipmenttracking\tourinformation\shipmenttrackingetaanddeliverydataptr.h" />
+    <ClInclude Include="shipmenttracking\tourinformation\shipmenttrackingetaanddeliverydatasqlmapper.h" />
+    <ClInclude Include="shipmenttracking\tourinformation\shipmenttrackingtourdata.h" />
+    <ClInclude Include="shipmenttracking\tourinformation\shipmenttrackingtourdatamapperbase.h" />
+    <ClInclude Include="shipmenttracking\tourinformation\shipmenttrackingtourdataptr.h" />
+    <ClInclude Include="shipmenttracking\tourinformation\shipmenttrackingtourdatasqlmapper.h" />
+    <ClInclude Include="shipmenttracking\tourinformation\shipmenttrackingtourinformation.h" />
+    <ClInclude Include="shipmenttracking\tourinformation\shipmenttrackingtourinformationmapperbase.h" />
+    <ClInclude Include="shipmenttracking\tourinformation\shipmenttrackingtourinformationptr.h" />
+    <ClInclude Include="shipmenttracking\tourinformation\shipmenttrackingtourinformationsqlmapper.h" />
+    <ClInclude Include="shipmenttracking\tourinformation\shipmenttrackingtourinformationsqlmapperptr.h" />
+    <ClInclude Include="stockbooking\bulkrangeselector\bulkrangeselector.h" />
+    <ClInclude Include="stockbooking\bulkrangeselector\bulkrangeselectorptr.h" />
+    <ClInclude Include="stockbooking\bulkrangeselector\ibulkrangeselector.h" />
+    <ClInclude Include="stockbooking\bulkrangeselector\ibulkrangeselectorptr.h" />
+    <ClInclude Include="stockbooking\componentmanager\stockbookingcomponentmanager.h" />
+    <ClInclude Include="stockbooking\componentmanager\stockbookingcomponentmanagerptr.h" />
+    <ClInclude Include="stockbooking\longtermlack\ilongtermlackchecker.h" />
+    <ClInclude Include="stockbooking\longtermlack\ilongtermlackcheckerptr.h" />
+    <ClInclude Include="stockbooking\longtermlack\ilongtermlackdeleter.h" />
+    <ClInclude Include="stockbooking\longtermlack\ilongtermlackdeleterptr.h" />
+    <ClInclude Include="stockbooking\longtermlack\longtermlackmapperbase.h" />
+    <ClInclude Include="stockbooking\longtermlack\longtermlackrepository.h" />
+    <ClInclude Include="stockbooking\longtermlack\longtermlackrepositoryptr.h" />
+    <ClInclude Include="stockbooking\longtermlack\longtermlackselectsqlparameterbinder.h" />
+    <ClInclude Include="stockbooking\longtermlack\longtermlacksqlmapper.h" />
+    <ClInclude Include="stockbooking\reservationconfig\iordertypereservationconfig.h" />
+    <ClInclude Include="stockbooking\reservationconfig\iordertypereservationconfigpharmacygroup.h" />
+    <ClInclude Include="stockbooking\reservationconfig\iordertypereservationconfigpharmacygroupptr.h" />
+    <ClInclude Include="stockbooking\reservationconfig\iordertypereservationconfigptr.h" />
+    <ClInclude Include="stockbooking\reservationconfig\ireservationconfigrepository.h" />
+    <ClInclude Include="stockbooking\reservationconfig\ireservationconfigrepositoryptr.h" />
+    <ClInclude Include="stockbooking\reservationconfig\ireservationtype.h" />
+    <ClInclude Include="stockbooking\reservationconfig\ireservationtypeptr.h" />
+    <ClInclude Include="stockbooking\reservationconfig\ordertypereservationconfig.h" />
+    <ClInclude Include="stockbooking\reservationconfig\ordertypereservationconfigmapperbase.h" />
+    <ClInclude Include="stockbooking\reservationconfig\ordertypereservationconfigpharmacygroup.h" />
+    <ClInclude Include="stockbooking\reservationconfig\ordertypereservationconfigpharmacygroupmapperbase.h" />
+    <ClInclude Include="stockbooking\reservationconfig\ordertypereservationconfigpharmacygroupptr.h" />
+    <ClInclude Include="stockbooking\reservationconfig\ordertypereservationconfigpharmacygroupsqlmapper.h" />
+    <ClInclude Include="stockbooking\reservationconfig\ordertypereservationconfigptr.h" />
+    <ClInclude Include="stockbooking\reservationconfig\ordertypereservationconfigsqlmapper.h" />
+    <ClInclude Include="stockbooking\reservationconfig\reservationconfigrepository.h" />
+    <ClInclude Include="stockbooking\reservationconfig\reservationconfigrepositoryptr.h" />
+    <ClInclude Include="stockbooking\reservationconfig\reservationtype.h" />
+    <ClInclude Include="stockbooking\reservationconfig\reservationtypemapperbase.h" />
+    <ClInclude Include="stockbooking\reservationconfig\reservationtypeptr.h" />
+    <ClInclude Include="stockbooking\reservationconfig\reservationtypesqlmapper.h" />
+    <ClInclude Include="stockbooking\reservation\articlereservation.h" />
+    <ClInclude Include="stockbooking\reservation\articlereservationmapperbase.h" />
+    <ClInclude Include="stockbooking\reservation\articlereservationptr.h" />
+    <ClInclude Include="stockbooking\reservation\articlereservationsqlmapper.h" />
+    <ClInclude Include="stockbooking\reservation\customerstockreserved.h" />
+    <ClInclude Include="stockbooking\reservation\customerstockreservedmapperbase.h" />
+    <ClInclude Include="stockbooking\reservation\customerstockreservedptr.h" />
+    <ClInclude Include="stockbooking\reservation\customerstockreservedsqlmapper.h" />
+    <ClInclude Include="stockbooking\reservation\iarticlereservation.h" />
+    <ClInclude Include="stockbooking\reservation\iarticlereservationptr.h" />
+    <ClInclude Include="stockbooking\reservation\icustomerstockreserved.h" />
+    <ClInclude Include="stockbooking\reservation\icustomerstockreservedptr.h" />
+    <ClInclude Include="stockbooking\reservation\ireservationrepository.h" />
+    <ClInclude Include="stockbooking\reservation\ireservationrepositoryptr.h" />
+    <ClInclude Include="stockbooking\reservation\reservationrepository.h" />
+    <ClInclude Include="stockbooking\reservation\reservationrepositoryptr.h" />
+    <ClInclude Include="subseqdelivery\componentmanager\sudcomponentmanager.h" />
+    <ClInclude Include="subseqdelivery\componentmanager\sudcomponentmanagerptr.h" />
+    <ClInclude Include="subseqdelivery\workupcompletedchecker\iworkupcompletedchecker.h" />
+    <ClInclude Include="subseqdelivery\workupcompletedchecker\iworkupcompletedcheckerptr.h" />
+    <ClInclude Include="subseqdelivery\workupcompletedchecker\workupcompletedchecker.h" />
+    <ClInclude Include="subseqdelivery\workupcompletedchecker\workupcompletedcheckerptr.h" />
+    <ClInclude Include="tender\componentmanager\tendercomponentmanager.h" />
+    <ClInclude Include="tender\componentmanager\tendercomponentmanagerptr.h" />
+    <ClInclude Include="tender\repository\itenderrepository.h" />
+    <ClInclude Include="tender\repository\itenderrepositoryptr.h" />
+    <ClInclude Include="tender\repository\tenderrepository.h" />
+    <ClInclude Include="tender\repository\tenderrepositoryptr.h" />
+    <ClInclude Include="tender\sqlmapper\tendermapperbase.h" />
+    <ClInclude Include="tender\sqlmapper\tendersqlmapper.h" />
+    <ClInclude Include="tender\tender.h" />
+    <ClInclude Include="tender\tendercollection.h" />
+    <ClInclude Include="tender\tendercollectionptr.h" />
+    <ClInclude Include="tender\tenderptr.h" />
+    <ClInclude Include="util\configfilereader.h" />
+    <ClInclude Include="util\istringresource.h" />
+    <ClInclude Include="util\loggingutils.h" />
+    <ClInclude Include="util\messagetxtresource.h" />
+    <ClInclude Include="workingdayscalendar\componentmanager\workingdayscalendarcomponentmanager.h" />
+    <ClInclude Include="workingdayscalendar\componentmanager\workingdayscalendarcomponentmanagerptr.h" />
+    <ClInclude Include="workingdayscalendar\iworkingdayscalendarrepository.h" />
+    <ClInclude Include="workingdayscalendar\iworkingdayscalendarrepositoryptr.h" />
+    <ClInclude Include="workingdayscalendar\workingdayscalendar.h" />
+    <ClInclude Include="workingdayscalendar\workingdayscalendarmapperbase.h" />
+    <ClInclude Include="workingdayscalendar\workingdayscalendarptr.h" />
+    <ClInclude Include="workingdayscalendar\workingdayscalendarrepository.h" />
+    <ClInclude Include="workingdayscalendar\workingdayscalendarrepositoryptr.h" />
+    <ClInclude Include="workingdayscalendar\workingdayscalendarsqlmapper.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties QtVersion="4.4.3" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

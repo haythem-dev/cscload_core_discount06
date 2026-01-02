@@ -1,0 +1,62 @@
+#if !defined(AFX_SERVERDLG_H__97303FE1_6E26_11D2_92F8_0060973B18D8__INCLUDED_)
+#define AFX_SERVERDLG_H__97303FE1_6E26_11D2_92F8_0060973B18D8__INCLUDED_
+
+#if _MSC_VER >= 1000
+#pragma once
+#endif // _MSC_VER >= 1000
+// ServerDlg.h : header file
+//
+
+/////////////////////////////////////////////////////////////////////////////
+// CServerDlg dialog
+
+class CServerDlg : public CDialog
+{
+// Construction
+public:
+	CServerDlg(CWnd* pParent = NULL);   // standard constructor
+
+// Dialog Data
+	//{{AFX_DATA(CServerDlg)
+	enum { IDD = IDD_SERVER };
+	CEdit	m_SERVER;
+	CEdit	m_DBASE;
+	//}}AFX_DATA
+
+
+// Overrides
+	// ClassWizard generated virtual function overrides
+	//{{AFX_VIRTUAL(CServerDlg)
+	protected:
+	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV support
+	//}}AFX_VIRTUAL
+
+// Implementation
+private:
+	CString m_NewServerName;
+	CString m_OldServerName;
+	CString m_NewDbaseName;
+	CString m_OldDbaseName;
+	int     m_nMaxServerNumber;
+
+public:
+	CString GetServerName();
+	void    SetServerName( CString Name );
+	CString GetDbaseName();
+	void    SetDbaseName( CString Name );
+	void    SetMaxServerNumer( int nr );
+
+protected:
+
+	// Generated message map functions
+	//{{AFX_MSG(CServerDlg)
+	virtual void OnOK();
+	virtual BOOL OnInitDialog();
+	//}}AFX_MSG
+	DECLARE_MESSAGE_MAP()
+};
+
+//{{AFX_INSERT_LOCATION}}
+// Microsoft Developer Studio will insert additional declarations immediately before the previous line.
+
+#endif // !defined(AFX_SERVERDLG_H__97303FE1_6E26_11D2_92F8_0060973B18D8__INCLUDED_)

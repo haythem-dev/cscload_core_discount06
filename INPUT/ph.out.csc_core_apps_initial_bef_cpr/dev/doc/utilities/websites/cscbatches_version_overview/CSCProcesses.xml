@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CSCProcesses xsi:noNamespaceSchemaLocation="CSCProcesses.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Country ShortName="at" ServerName="oat21" UserName="produser" Password="redR8-Wo3">			
+		<Process CommandIdentifier="cscozek" />				
+		<Process CommandIdentifier="cscbatchhistory" />				
+	</Country>		
+	<Country ShortName="bg" ServerName="obg21" UserName="produser" Password="redR8-Wo3">		
+		<Process CommandIdentifier="cscozek" />		
+		<Process CommandIdentifier="cscbatchhistory" />				
+	</Country>		
+	<Country ShortName="ch" ServerName="och21" UserName="produser" Password="redR8-Wo3">		
+		<Process CommandIdentifier="cscozek" />		
+		<Process CommandIdentifier="cscbatchhistory" />				
+	</Country>			
+	<Country ShortName="de" ServerName="ode21" UserName="produser" Password="redR8-Wo3">		
+		<Process CommandIdentifier="cscozek"/>				
+		<Process CommandIdentifier="cscbatchhistory" />				
+	</Country>			
+	<Country ShortName="fr" ServerName="ofr21" UserName="produser" Password="redR8-Wo3">		
+		<Process CommandIdentifier="cscozek"/>		
+		<Process CommandIdentifier="cscbatchhistory" />				
+	</Country>
+	<Country ShortName="hr" ServerName="ohr21" UserName="produser" Password="redR8-Wo3">
+		<Process CommandIdentifier="cscozek" />		
+		<Process CommandIdentifier="cscbatchhistory" />				
+	</Country>					
+	<Country ShortName="rs" ServerName="ors21" UserName="produser" Password="redR8-Wo3">
+		<Process CommandIdentifier="cscozek" />		
+		<Process CommandIdentifier="cscbatchhistory" />				
+	</Country>							
+</CSCProcesses>

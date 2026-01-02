@@ -1,0 +1,352 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="ini">
+      <UniqueIdentifier>{dceb1146-4eb8-4ab8-8402-74ec9722500e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="aapsel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="aasera.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="aasrv.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ausrvfkt.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="sockmain.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="version.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="cscorderimport.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="cststockreservation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="aarufpl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="aasrv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="aasrvfkt.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="aatour.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="aeorderstat.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="aepwd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="aetexte.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="alterfil.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="artikel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="artsel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="auftrag.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="auftraginfo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ausrvfkt.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="callback.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="callplan.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="callplanday.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="callplanmaintenance.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="callplanundertake.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="collectivorders.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="controlling.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="customer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="druckpara.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="eilbotendruck.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="filialpartner.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="filinf.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="hersteller.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="invoicesettings.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="kndsel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="koplist.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="kritik.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="kritikkopf.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="kritikpos.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="kritiksatz.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="mailsystem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="modemtab.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="nachlart.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="nachlief.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="nachlprot.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="orders.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ordervalues.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="param.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="partikel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="passwd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="processcheck.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="promo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="promoinfo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="rabattorder.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="rangelist.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ranges.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="rebateprice.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="rufplan.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="seralog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="serviceorder.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="statistics.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="supplinfo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="telview.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="tender.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="tm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="touren.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="usertexte.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="vbbuch.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="vbcount.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="vblief.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="verbundcheck.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="zeitart.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cremamailaddresses.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="callbackmaillink.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cscorderimport.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="articleomg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="auftragsart.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cscorderimportcsvcolumns.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cscorderimportcsvfile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cscorderimportcsvformats.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cscorderimportfields.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cscreservationtypes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dadedb.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="deliveryadvicedocument.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="deliveryadvicehead.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="deliveryadviceline.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="deliveryadvicelinedetails.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="deliveryadvicelinediscounts.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="deliveryadvicelineibtlink.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="deliveryadvicelinereturn.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="deliveryadviceremark.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="deliveryadvicevattotals.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fcorderssel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="lieferinfo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="lockview.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="msv3.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ordertypereservationconfig.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ordertypereservationconfigcpg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="parameter_change_log_defs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="parameter_change_logging.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="parameterchangelog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sendmail.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="tourdelay.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="win32dade\stdbool.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="win32dade\unistd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cststockreservation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="makefile" />
+    <None Include="ini\zaapunix.cfg">
+      <Filter>ini</Filter>
+    </None>
+    <None Include="ini\zaasunix.cfg">
+      <Filter>ini</Filter>
+    </None>
+    <None Include="makefile.win" />
+    <None Include="makefile.win64" />
+  </ItemGroup>
+</Project>

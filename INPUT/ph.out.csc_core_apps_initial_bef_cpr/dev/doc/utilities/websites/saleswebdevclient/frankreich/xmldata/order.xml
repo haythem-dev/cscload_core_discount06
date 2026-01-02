@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<orderRequest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://salesweb.phoenix-ag.de/wsxmlfrance/schemas/PhoenixOrderRequestFR.xsd" language="de">
+	<order>
+		<orderHeader customerNumber="9998000" branchNumber="30" referenceNumber="04OR144" callBackDesired="true"/>
+		<orderLine orderQuantity="1" interbranchTransferDesired="false" subsequentDeliveryDesired="false" articleRequirementPurchaseOrderDesired="false">
+			<byArticleNumber articleNumber="2495052"/>
+		</orderLine>
+		<orderLine orderQuantity="2">
+			<byArticleNumber articleNumber="7621113"/>
+		</orderLine>
+		<orderLine orderQuantity="3">
+			<byArticleNumber articleNumber="831669"/>
+		</orderLine>
+		<orderLine orderQuantity="4" interbranchTransferDesired="false" subsequentDeliveryDesired="false" articleRequirementPurchaseOrderDesired="false">
+			<byArticleNumber articleNumber="78597"/>
+		</orderLine>
+		<orderLine orderQuantity="5">
+			<byArticleNumber articleNumber="3524436"/>
+		</orderLine>
+		<orderLine orderQuantity="6">
+			<byArticleNumber articleNumber="3648629"/>
+		</orderLine>
+		<orderLine orderQuantity="7">
+			<byEAN EAN="4103380854860"/>
+		</orderLine>
+	</order>
+</orderRequest>

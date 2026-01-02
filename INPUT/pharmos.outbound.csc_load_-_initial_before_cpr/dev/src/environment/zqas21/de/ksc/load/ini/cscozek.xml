@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<KSCRefreshSettings xsi:noNamespaceSchemaLocation="KSCRefreshSettings.xsd" xmlns:xsi="http:/www.w3.org/2001/XMLSchema-instance" >
+	<Country Country="BG" >
+		<Settings>
+			<General PollInterval="300000" LogLevel="Errors" Test="false"/>
+			<Informix ConnectionRetries="10" ConnectionWaitBeforeRetry="10000" IfxHost="zqas21_tcp" IfxDataBase="ode21" IfxHostPurchase="zqas21_tcp" IfxDataBasePurchase="ide21" />
+		</Settings>
+	<Branches>
+	</Branches>
+	</Country>
+</KSCRefreshSettings>

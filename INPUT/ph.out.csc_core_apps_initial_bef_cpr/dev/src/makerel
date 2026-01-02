@@ -1,0 +1,44 @@
+#! /usr/bin/ksh
+set -e
+
+cd cxxtools
+make rel -j2
+cd ../pxdb
+make rel -j2
+cd ../pxverbund
+make rel -j2
+cd ../libcsc
+make rel -j2
+
+cd ../aaorderclose
+make rel -j2
+cd ../aapserv
+make rel -j2
+cd ../clearreservation
+make rel -j2
+cd ../kscserver
+make rel -j2
+cd ../vborderimport2
+make rel -j2
+
+cd ../csc_host_interface/libbatch
+make rel -j2
+cd ../libcsc_utils
+make rel -j2
+cd ../csc_corpha
+make rel -j2
+cd ../csc_phabor
+make rel -j2
+cd ../csc_phatra
+make rel -j2
+
+cd ../../ibtorderimport
+make rel -j2
+
+cd ../csc_deli/libcsc_deli
+make rel -j2
+cd ../csc_deli
+make rel -j2
+
+cd ../..
+

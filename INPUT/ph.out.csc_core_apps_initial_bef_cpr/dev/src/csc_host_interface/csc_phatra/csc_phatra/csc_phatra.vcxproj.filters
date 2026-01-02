@@ -1,0 +1,883 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="UseCases">
+      <UniqueIdentifier>{a8da8cf1-4c7a-48cd-8b49-9416dcfe65d5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="main">
+      <UniqueIdentifier>{2a2e5d58-a53e-4aa3-837f-90206e91f94b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="main\CommandLine">
+      <UniqueIdentifier>{ea489aef-6ade-41bb-979d-4f8e9e695b8d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="main\AppSession">
+      <UniqueIdentifier>{4c6e3b3e-bcee-44cf-b1a0-14b18c98e413}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="main\Heartbeat">
+      <UniqueIdentifier>{da6156a5-64e8-44ab-a4a7-7f05d47bdcb8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules">
+      <UniqueIdentifier>{6716da31-35e6-4cf6-a1d9-48fd46971e84}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\pharmosTransaction">
+      <UniqueIdentifier>{ba9a709d-ba41-492a-802c-0127dfd0309a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\pharmosTransaction\PXVERBUND">
+      <UniqueIdentifier>{f4577587-3b07-45bc-8b0b-16603323ca5e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\pharmosTransaction\PXVERBUND\OrderEntryParamChecker">
+      <UniqueIdentifier>{122f168f-a559-46ba-9595-18b292c9ca62}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\pharmosTransaction\PXVERBUND\OrderEntryParamChecker\PXVBOrderEntryParamChecker">
+      <UniqueIdentifier>{591be992-0454-45e2-a5a3-5c49ea7153db}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\pharmosTransaction\PXVERBUND\DBConnection">
+      <UniqueIdentifier>{39e9a397-0b67-4cf9-8bea-b2260298bd2d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\pharmosTransaction\PXVERBUND\DBConnection\PXVBDBConnection">
+      <UniqueIdentifier>{6df9be9b-67e3-4c5b-9f9f-33f75bc2045c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\pharmosTransaction\PXVERBUND\DBConnection\NullPXVBDBConnection">
+      <UniqueIdentifier>{c7d9cc58-7daa-47ef-b44b-29283380d811}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\pharmosTransaction\PXVERBUND\Initialization">
+      <UniqueIdentifier>{7fabf9eb-b110-4364-b059-159d33f3a117}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\pharmosTransaction\PXVERBUND\Initialization\PXVBInitialization">
+      <UniqueIdentifier>{588b13db-9038-4359-ae36-0ec23e3bf539}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\pharmosTransaction\PXVERBUND\Session">
+      <UniqueIdentifier>{fc8b9af6-d95a-49bc-995a-8192b06c0e3e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\pharmosTransaction\PXVERBUND\Session\PXVBSession">
+      <UniqueIdentifier>{d1bd406e-a63d-4210-8a8d-1c99c4a33edf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\pharmosTransaction\PXVERBUND\IPXVBServiceLocator">
+      <UniqueIdentifier>{c48d3521-a9be-48ee-baa0-e9c468ad78c3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\pharmosTransaction\PREPARATION">
+      <UniqueIdentifier>{d20af05a-50fe-4881-becc-3694f02cf077}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\pharmosTransaction\PREPARATION\CISCPharmosTransactionDM">
+      <UniqueIdentifier>{7220f5df-ecbf-4b1b-8540-a3883f0c11b7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\pharmosTransaction\PREPARATION\CISCPharmosTransactionDM\Accessor">
+      <UniqueIdentifier>{5f20f6be-21c2-4196-b46d-7a30af2f673a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\pharmosTransaction\PREPARATION\CICSPharmosTransactionRecord">
+      <UniqueIdentifier>{cf5dd2ee-b45a-47fa-916d-1d634dbdfb11}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\pharmosTransaction\PREPARATION\PDX010RemoteProcedure">
+      <UniqueIdentifier>{1591a2bb-30c8-48d1-aee5-39594ec3970a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\pharmosTransaction\PROCESSING">
+      <UniqueIdentifier>{88b08b53-a535-4e27-8ef9-1ec7eb494dc9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\pharmosTransaction\PROCESSING\RecordTypes">
+      <UniqueIdentifier>{13972a40-88c0-471a-a1c9-6dd4350c7a1f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\pharmosTransaction\PROCESSING\RecordTypes\TR_RecordTypeTransferQuarantine">
+      <UniqueIdentifier>{265220fc-2101-47bf-b3ce-f1dc512da7bf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\pharmosTransaction\PROCESSING\RecordTypes\D1, D2, D3, D4 RecordTypeDealerVolumeBase">
+      <UniqueIdentifier>{42544253-daf0-4215-b340-c116c4fcfe67}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\pharmosTransaction\PROCESSING\RecordTypes\D1, D2, D3, D4 RecordTypeDealerVolumeBase\D1_RecordTypeDealerVolumeTotal">
+      <UniqueIdentifier>{f1d7ca19-a411-41d8-a8b5-b45984435784}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\pharmosTransaction\PROCESSING\RecordTypes\D1, D2, D3, D4 RecordTypeDealerVolumeBase\D2_RecordTypeDealerVolumeElectronic">
+      <UniqueIdentifier>{5253a7a8-f07b-49cc-8587-c368a43943db}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\pharmosTransaction\PROCESSING\RecordTypes\D1, D2, D3, D4 RecordTypeDealerVolumeBase\D3_RecordTypeDealerVolumeExclusiveTotal">
+      <UniqueIdentifier>{12d5060a-d8cd-4a2a-8e24-780e5643ffe3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\pharmosTransaction\PROCESSING\RecordTypes\D1, D2, D3, D4 RecordTypeDealerVolumeBase\D4_RecordTypeDealerVolumeExclusiveElectronic">
+      <UniqueIdentifier>{0d4be011-2206-4a5a-8c74-d2150cad8749}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\pharmosTransaction\PROCESSING\RecordTypes\CB_RecordTypeCodeBlocage">
+      <UniqueIdentifier>{d52cc684-0e0d-4c62-a107-3cbe6e7d732f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\pharmosTransaction\PROCESSING\RecordTypes\AW_RecordTypeArticleInfoGoodsIn">
+      <UniqueIdentifier>{50c108f4-2bba-4abc-851e-633aae30e1ec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\pharmosTransaction\PROCESSING\RecordTypes\KR_RecordTypeDiscountAccount">
+      <UniqueIdentifier>{67e7249d-7ed7-462d-b24c-1c8bd52deeae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\pharmosTransaction\PROCESSING\RecordTypes\CH_RecordTypeBatch">
+      <UniqueIdentifier>{2b919da4-acbd-4e3f-860b-43f1d154e213}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\pharmosTransaction\PROCESSING\RecordTypes\WE_RecordTypeGoodsIn">
+      <UniqueIdentifier>{e113e369-c104-4412-afd3-1f3e4dceb8ff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\pharmosTransaction\PROCESSING\RecordTypes\BL_RecordTypeStopSellingOfArticle">
+      <UniqueIdentifier>{aab699fd-e297-49c8-9ea2-290a1cf72132}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\pharmosTransaction\PROCESSING\RecordTypes\AP_RecordTypeChangeOrderItem">
+      <UniqueIdentifier>{37d800c2-0b31-41a2-b337-a7588dff2ca9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\pharmosTransaction\PROCESSING\RecordTypes\RN_RecordTypeImportInvoiceNo">
+      <UniqueIdentifier>{6312c2b2-d2a5-42b9-80ab-c181fcf9ab5c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\pharmosTransaction\PROCESSING\RecordTypes\LO_RecordTypeChangeArticleDetails">
+      <UniqueIdentifier>{b2703cae-9998-43b4-ad24-336936274361}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\pharmosTransaction\PROCESSING\RecordTypes\BV_RecordTypeChangeIBTStockLevel">
+      <UniqueIdentifier>{c18c8a69-3b03-4271-9183-423b45a3dc70}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\pharmosTransaction\PROCESSING\RecordTypes\RecordTypeOther">
+      <UniqueIdentifier>{ababe999-7945-4bea-b5e4-7293e74ba6cf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\pharmosTransaction\PROCESSING\RecordTypes\ZT_RecordTypeReturnPredeliveredArticle">
+      <UniqueIdentifier>{cf280cab-6581-47e7-b0e3-98d2d292eb4a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\pharmosTransaction\PROCESSING\RecordTypes\RK_RecordTypeCustomerReturn">
+      <UniqueIdentifier>{9cbdbda1-507b-4fb6-bbf8-c3f7e647c68c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\pharmosTransaction\PROCESSING\RecordTypes\VD_RecordTypeExpiryDate">
+      <UniqueIdentifier>{30ec5fdb-24e8-4d71-a246-a5f5f351efb5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\pharmosTransaction\PROCESSING\RecordTypes\RecordType_No_Processing">
+      <UniqueIdentifier>{c4777354-ac3a-46bb-a5f1-b3913c410b3d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\pharmosTransaction\PROCESSING\RecordTypes\RT_RecordTypeTenderChangeCustomerReturn">
+      <UniqueIdentifier>{b8d5a111-4436-413c-a210-25ea7730784b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\pharmosTransaction\PROCESSING\RecordTypes\KD_RecordTypePickingLack">
+      <UniqueIdentifier>{f2e8cea2-5ca6-4fb2-9230-a9a5084a4653}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\pharmosTransaction\PROCESSING\RecordTypes\ST_RecordTypeInvoiceCancellation">
+      <UniqueIdentifier>{65da7e2d-344a-4a85-ac74-516fa166d1ae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\pharmosTransaction\PROCESSING\RecordProcessHelpers">
+      <UniqueIdentifier>{3004eaea-33ac-4c31-b7fb-09b3d49cfd2f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\pharmosTransaction\CORE">
+      <UniqueIdentifier>{ad81fae5-5f68-4f7c-b3c1-3cd247d4f90e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\pharmosTransaction\CORE\TransactionRecordBase">
+      <UniqueIdentifier>{7c316a43-afe0-43f4-973c-d12c79bfe396}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\pharmosTransaction\CORE\TransactionDMBase">
+      <UniqueIdentifier>{6e897b2c-9d29-41ed-8240-39d57913cc98}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\pharmosTransaction\CORE\PharmosTransactionDM">
+      <UniqueIdentifier>{af1712c3-c95c-4173-ae11-296945a9ffb2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\pharmosTransaction\CORE\PharmosTransactionDM\Accessor">
+      <UniqueIdentifier>{c16a6eb3-4802-46b1-9f5f-0038fb265d72}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\pharmosTransaction\CORE\PharmosTransactionRecord">
+      <UniqueIdentifier>{c89ebd2e-fdfa-4f07-9d3e-9405fa0d1243}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\pharmosTransaction\CORE\RecordTypeClassifier">
+      <UniqueIdentifier>{bc325d02-8163-4fb5-924d-2b6e669d6812}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\pharmosTransaction\CORE\IRecordTypeOf">
+      <UniqueIdentifier>{a41c98ad-9e18-460c-9b5e-ff3749a5c487}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\pharmosTransaction\CORE\RecordTypeBase">
+      <UniqueIdentifier>{5d2f2f3f-4281-49d2-ae7c-a2566a1e1a89}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\pharmosTransaction\CORE\RecordTypeFactory">
+      <UniqueIdentifier>{0a0d6f68-2e86-4d0b-89d6-c0f005fea4c2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\pharmosTransaction\UTIL">
+      <UniqueIdentifier>{172440b0-fd9c-4e17-9b89-f396ea66c3ab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\pharmosTransaction\UTIL\IRecordTypeCreator">
+      <UniqueIdentifier>{96c286f1-9c5c-4bac-a557-9938e2d811d5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\pharmosTransaction\UTIL\IRecordTypeTransformer">
+      <UniqueIdentifier>{781072f5-0e20-4574-b51b-9423f9acb23a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\pharmosTransaction\UTIL\ITransferKeyGetter">
+      <UniqueIdentifier>{37cdf35f-37c6-41ae-baef-b39104cf59ef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\pharmosTransaction\UTIL\ITransactionRecordCreator">
+      <UniqueIdentifier>{7e675b0d-07e0-48bc-949b-6a0fec653c67}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\pharmosTransaction\UTIL\IRecordTypeTransformerCreator">
+      <UniqueIdentifier>{15ab0483-9685-4c7a-b107-733fc87f9b90}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\pharmosTransaction\UTIL\IRecordTypeProcessor">
+      <UniqueIdentifier>{5c51405e-33fd-44d9-b970-4ee1fec7db29}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\pharmosTransaction\PXVERBUND\PXVBComponentManager">
+      <UniqueIdentifier>{f379a269-05ac-4dd5-b1c4-cbf0fa29d517}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\pharmosTransaction\PROCESSING\RecordTypes\K1, K2, KK, GU, KG RecordTypeCreditLimitBase">
+      <UniqueIdentifier>{854e3c32-895d-4908-8547-420cdbc639c7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\pharmosTransaction\PROCESSING\RecordTypes\K1, K2, KK, GU, KG RecordTypeCreditLimitBase\K1_RecordTypeCreditLimitChain">
+      <UniqueIdentifier>{ebd3ad30-cffe-4334-94bf-2644f63dd299}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\pharmosTransaction\PROCESSING\RecordTypes\K1, K2, KK, GU, KG RecordTypeCreditLimitBase\K2_RecordTypeCreditLimitCustomer">
+      <UniqueIdentifier>{6b4c2d13-ec7d-4039-a454-96c76867ce5a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\pharmosTransaction\PROCESSING\RecordTypes\K1, K2, KK, GU, KG RecordTypeCreditLimitBase\KK_RecordTypeCreditLimit">
+      <UniqueIdentifier>{b534f1fa-67f8-4dbb-b36f-43f2869b5e69}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\pharmosTransaction\PROCESSING\RecordTypes\K1, K2, KK, GU, KG RecordTypeCreditLimitBase\GU_RecordTypeCreditLimitCustomerReturn">
+      <UniqueIdentifier>{985ca6d5-cbdb-4313-9e29-a69516595281}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\pharmosTransaction\PROCESSING\RecordTypes\K1, K2, KK, GU, KG RecordTypeCreditLimitBase\KG_RecordTypeCreditLimitGroup">
+      <UniqueIdentifier>{7b5dff9b-ebfc-4d72-9363-c0475b2a0743}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\pharmosTransaction\PROCESSING\RecordTypes\VW_RecordTypeIBTGoods">
+      <UniqueIdentifier>{0bad8bd0-2d10-43b7-b334-7465f69807b5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\pharmosTransaction\PREPARATION\CTransferCscDM">
+      <UniqueIdentifier>{e0bbadfd-808c-43ab-85b6-43e8d2a28b75}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\pharmosTransaction\PROCESSING\RecordTypes\ZP_RecordTypeChangeArticleMasterData">
+      <UniqueIdentifier>{6198f9b5-53e9-45c1-8b0e-9f3863c9198c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\pharmosTransaction\PREPARATION\CTransferCscTransactionRecord">
+      <UniqueIdentifier>{1e808538-6bf8-4a32-970a-5defe7a4cbe5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\pharmosTransaction\PROCESSING\RecordTypes\QA_RecordTypeChangeQuarantine">
+      <UniqueIdentifier>{58f72c47-dbf2-4f66-9a3e-7f9e7b2a55d4}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="csc_phatrauc.cpp">
+      <Filter>UseCases</Filter>
+    </ClCompile>
+    <ClCompile Include="csc_phatraappl.cpp">
+      <Filter>main</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>main</Filter>
+    </ClCompile>
+    <ClCompile Include="csc_phatraappinitializer.cpp">
+      <Filter>main\CommandLine</Filter>
+    </ClCompile>
+    <ClCompile Include="csc_phatracmdlineevaluator.cpp">
+      <Filter>main\CommandLine</Filter>
+    </ClCompile>
+    <ClCompile Include="appsession.cpp">
+      <Filter>main\AppSession</Filter>
+    </ClCompile>
+    <ClCompile Include="csc_heartbeat.cpp">
+      <Filter>main\Heartbeat</Filter>
+    </ClCompile>
+    <ClCompile Include="pxvborderentryparamchecker.cpp">
+      <Filter>DomainModules\pharmosTransaction\PXVERBUND\OrderEntryParamChecker\PXVBOrderEntryParamChecker</Filter>
+    </ClCompile>
+    <ClCompile Include="pxvbdbtransactionlevelmapper.cpp">
+      <Filter>DomainModules\pharmosTransaction\PXVERBUND\DBConnection</Filter>
+    </ClCompile>
+    <ClCompile Include="pxvbdbconnection.cpp">
+      <Filter>DomainModules\pharmosTransaction\PXVERBUND\DBConnection\PXVBDBConnection</Filter>
+    </ClCompile>
+    <ClCompile Include="nullpxvbdbconnection.cpp">
+      <Filter>DomainModules\pharmosTransaction\PXVERBUND\DBConnection\NullPXVBDBConnection</Filter>
+    </ClCompile>
+    <ClCompile Include="pxvbinitialization.cpp">
+      <Filter>DomainModules\pharmosTransaction\PXVERBUND\Initialization\PXVBInitialization</Filter>
+    </ClCompile>
+    <ClCompile Include="pxvbsession.cpp">
+      <Filter>DomainModules\pharmosTransaction\PXVERBUND\Session\PXVBSession</Filter>
+    </ClCompile>
+    <ClCompile Include="pxvbcomponentmanager.cpp">
+      <Filter>DomainModules\pharmosTransaction\PXVERBUND\PXVBComponentManager</Filter>
+    </ClCompile>
+    <ClCompile Include="cicspharmostransactiondm.cpp">
+      <Filter>DomainModules\pharmosTransaction\PREPARATION\CISCPharmosTransactionDM</Filter>
+    </ClCompile>
+    <ClCompile Include="dkbvzacc.cpp">
+      <Filter>DomainModules\pharmosTransaction\PREPARATION\CISCPharmosTransactionDM\Accessor</Filter>
+    </ClCompile>
+    <ClCompile Include="cicspharmostransactionrecord.cpp">
+      <Filter>DomainModules\pharmosTransaction\PREPARATION\CICSPharmosTransactionRecord</Filter>
+    </ClCompile>
+    <ClCompile Include="pdx010remoteprocedure.cpp">
+      <Filter>DomainModules\pharmosTransaction\PREPARATION\PDX010RemoteProcedure</Filter>
+    </ClCompile>
+    <ClCompile Include="recordtypetransferquarantine.cpp">
+      <Filter>DomainModules\pharmosTransaction\PROCESSING\RecordTypes\TR_RecordTypeTransferQuarantine</Filter>
+    </ClCompile>
+    <ClCompile Include="recordtypecreditlimitbase.cpp">
+      <Filter>DomainModules\pharmosTransaction\PROCESSING\RecordTypes\K1, K2, KK, GU, KG RecordTypeCreditLimitBase</Filter>
+    </ClCompile>
+    <ClCompile Include="recordtypecreditlimitchain.cpp">
+      <Filter>DomainModules\pharmosTransaction\PROCESSING\RecordTypes\K1, K2, KK, GU, KG RecordTypeCreditLimitBase\K1_RecordTypeCreditLimitChain</Filter>
+    </ClCompile>
+    <ClCompile Include="recordtypecreditlimitcustomer.cpp">
+      <Filter>DomainModules\pharmosTransaction\PROCESSING\RecordTypes\K1, K2, KK, GU, KG RecordTypeCreditLimitBase\K2_RecordTypeCreditLimitCustomer</Filter>
+    </ClCompile>
+    <ClCompile Include="recordtypecreditlimit.cpp">
+      <Filter>DomainModules\pharmosTransaction\PROCESSING\RecordTypes\K1, K2, KK, GU, KG RecordTypeCreditLimitBase\KK_RecordTypeCreditLimit</Filter>
+    </ClCompile>
+    <ClCompile Include="recordtypecreditlimitcustomerreturn.cpp">
+      <Filter>DomainModules\pharmosTransaction\PROCESSING\RecordTypes\K1, K2, KK, GU, KG RecordTypeCreditLimitBase\GU_RecordTypeCreditLimitCustomerReturn</Filter>
+    </ClCompile>
+    <ClCompile Include="recordtypedealervolumebase.cpp">
+      <Filter>DomainModules\pharmosTransaction\PROCESSING\RecordTypes\D1, D2, D3, D4 RecordTypeDealerVolumeBase</Filter>
+    </ClCompile>
+    <ClCompile Include="recordtypedealervolumetotal.cpp">
+      <Filter>DomainModules\pharmosTransaction\PROCESSING\RecordTypes\D1, D2, D3, D4 RecordTypeDealerVolumeBase\D1_RecordTypeDealerVolumeTotal</Filter>
+    </ClCompile>
+    <ClCompile Include="recordtypedealervolumeelectronic.cpp">
+      <Filter>DomainModules\pharmosTransaction\PROCESSING\RecordTypes\D1, D2, D3, D4 RecordTypeDealerVolumeBase\D2_RecordTypeDealerVolumeElectronic</Filter>
+    </ClCompile>
+    <ClCompile Include="recordtypedealervolumeexclusivetotal.cpp">
+      <Filter>DomainModules\pharmosTransaction\PROCESSING\RecordTypes\D1, D2, D3, D4 RecordTypeDealerVolumeBase\D3_RecordTypeDealerVolumeExclusiveTotal</Filter>
+    </ClCompile>
+    <ClCompile Include="recordtypedealervolumeexclusiveelectronic.cpp">
+      <Filter>DomainModules\pharmosTransaction\PROCESSING\RecordTypes\D1, D2, D3, D4 RecordTypeDealerVolumeBase\D4_RecordTypeDealerVolumeExclusiveElectronic</Filter>
+    </ClCompile>
+    <ClCompile Include="recordtypecodeblocage.cpp">
+      <Filter>DomainModules\pharmosTransaction\PROCESSING\RecordTypes\CB_RecordTypeCodeBlocage</Filter>
+    </ClCompile>
+    <ClCompile Include="recordtypearticleinfogoodsin.cpp">
+      <Filter>DomainModules\pharmosTransaction\PROCESSING\RecordTypes\AW_RecordTypeArticleInfoGoodsIn</Filter>
+    </ClCompile>
+    <ClCompile Include="recordtypediscountaccount.cpp">
+      <Filter>DomainModules\pharmosTransaction\PROCESSING\RecordTypes\KR_RecordTypeDiscountAccount</Filter>
+    </ClCompile>
+    <ClCompile Include="recordtypebatch.cpp">
+      <Filter>DomainModules\pharmosTransaction\PROCESSING\RecordTypes\CH_RecordTypeBatch</Filter>
+    </ClCompile>
+    <ClCompile Include="recordtypegoodsin.cpp">
+      <Filter>DomainModules\pharmosTransaction\PROCESSING\RecordTypes\WE_RecordTypeGoodsIn</Filter>
+    </ClCompile>
+    <ClCompile Include="recordtypestopsellingofarticle.cpp">
+      <Filter>DomainModules\pharmosTransaction\PROCESSING\RecordTypes\BL_RecordTypeStopSellingOfArticle</Filter>
+    </ClCompile>
+    <ClCompile Include="recordtypechangeorderitem.cpp">
+      <Filter>DomainModules\pharmosTransaction\PROCESSING\RecordTypes\AP_RecordTypeChangeOrderItem</Filter>
+    </ClCompile>
+    <ClCompile Include="recordtypeimportinvoiceno.cpp">
+      <Filter>DomainModules\pharmosTransaction\PROCESSING\RecordTypes\RN_RecordTypeImportInvoiceNo</Filter>
+    </ClCompile>
+    <ClCompile Include="recordtypechangearticledetails.cpp">
+      <Filter>DomainModules\pharmosTransaction\PROCESSING\RecordTypes\LO_RecordTypeChangeArticleDetails</Filter>
+    </ClCompile>
+    <ClCompile Include="recordtypechangeibtstocklevel.cpp">
+      <Filter>DomainModules\pharmosTransaction\PROCESSING\RecordTypes\BV_RecordTypeChangeIBTStockLevel</Filter>
+    </ClCompile>
+    <ClCompile Include="recordtypeother.cpp">
+      <Filter>DomainModules\pharmosTransaction\PROCESSING\RecordTypes\RecordTypeOther</Filter>
+    </ClCompile>
+    <ClCompile Include="recordtypereturnpredeliveredarticle.cpp">
+      <Filter>DomainModules\pharmosTransaction\PROCESSING\RecordTypes\ZT_RecordTypeReturnPredeliveredArticle</Filter>
+    </ClCompile>
+    <ClCompile Include="recordtypecustomerreturn.cpp">
+      <Filter>DomainModules\pharmosTransaction\PROCESSING\RecordTypes\RK_RecordTypeCustomerReturn</Filter>
+    </ClCompile>
+    <ClCompile Include="recordtypeexpirydate.cpp">
+      <Filter>DomainModules\pharmosTransaction\PROCESSING\RecordTypes\VD_RecordTypeExpiryDate</Filter>
+    </ClCompile>
+    <ClCompile Include="recordtypenoprocessing.cpp">
+      <Filter>DomainModules\pharmosTransaction\PROCESSING\RecordTypes\RecordType_No_Processing</Filter>
+    </ClCompile>
+    <ClCompile Include="recordtypetenderchangecustomerreturn.cpp">
+      <Filter>DomainModules\pharmosTransaction\PROCESSING\RecordTypes\RT_RecordTypeTenderChangeCustomerReturn</Filter>
+    </ClCompile>
+    <ClCompile Include="recordtypepickinglack.cpp">
+      <Filter>DomainModules\pharmosTransaction\PROCESSING\RecordTypes\KD_RecordTypePickingLack</Filter>
+    </ClCompile>
+    <ClCompile Include="recordtypeinvoicecancellation.cpp">
+      <Filter>DomainModules\pharmosTransaction\PROCESSING\RecordTypes\ST_RecordTypeInvoiceCancellation</Filter>
+    </ClCompile>
+    <ClCompile Include="recordprocesshelper.cpp">
+      <Filter>DomainModules\pharmosTransaction\PROCESSING\RecordProcessHelpers</Filter>
+    </ClCompile>
+    <ClCompile Include="transactionrecordbase.cpp">
+      <Filter>DomainModules\pharmosTransaction\CORE\TransactionRecordBase</Filter>
+    </ClCompile>
+    <ClCompile Include="transactiondmbase.cpp">
+      <Filter>DomainModules\pharmosTransaction\CORE\TransactionDMBase</Filter>
+    </ClCompile>
+    <ClCompile Include="pharmostransactiondm.cpp">
+      <Filter>DomainModules\pharmosTransaction\CORE\PharmosTransactionDM</Filter>
+    </ClCompile>
+    <ClCompile Include="pharmostransactionacc.cpp">
+      <Filter>DomainModules\pharmosTransaction\CORE\PharmosTransactionDM\Accessor</Filter>
+    </ClCompile>
+    <ClCompile Include="pharmostransactionrecord.cpp">
+      <Filter>DomainModules\pharmosTransaction\CORE\PharmosTransactionRecord</Filter>
+    </ClCompile>
+    <ClCompile Include="recordtypeclassifier.cpp">
+      <Filter>DomainModules\pharmosTransaction\CORE\RecordTypeClassifier</Filter>
+    </ClCompile>
+    <ClCompile Include="recordtypebase.cpp">
+      <Filter>DomainModules\pharmosTransaction\CORE\RecordTypeBase</Filter>
+    </ClCompile>
+    <ClCompile Include="recordtypefactory.cpp">
+      <Filter>DomainModules\pharmosTransaction\CORE\RecordTypeFactory</Filter>
+    </ClCompile>
+    <ClCompile Include="recordtypecreditlimitgroup.cpp">
+      <Filter>DomainModules\pharmosTransaction\PROCESSING\RecordTypes\K1, K2, KK, GU, KG RecordTypeCreditLimitBase\KG_RecordTypeCreditLimitGroup</Filter>
+    </ClCompile>
+    <ClCompile Include="version.c">
+      <Filter>main</Filter>
+    </ClCompile>
+    <ClCompile Include="recordtypeibtgoods.cpp">
+      <Filter>DomainModules\pharmosTransaction\PROCESSING\RecordTypes\VW_RecordTypeIBTGoods</Filter>
+    </ClCompile>
+    <ClCompile Include="transferbaseuc.cpp">
+      <Filter>UseCases</Filter>
+    </ClCompile>
+    <ClCompile Include="transferfromcicsuc.cpp">
+      <Filter>UseCases</Filter>
+    </ClCompile>
+    <ClCompile Include="transferfromzdpuc.cpp">
+      <Filter>UseCases</Filter>
+    </ClCompile>
+    <ClCompile Include="transfertocscuc.cpp">
+      <Filter>UseCases</Filter>
+    </ClCompile>
+    <ClCompile Include="ctransfercscacc.cpp">
+      <Filter>DomainModules\pharmosTransaction\PREPARATION\CTransferCscDM</Filter>
+    </ClCompile>
+    <ClCompile Include="ctransfercscdm.cpp">
+      <Filter>DomainModules\pharmosTransaction\PREPARATION\CTransferCscDM</Filter>
+    </ClCompile>
+    <ClCompile Include="recordtypechangearticlemasterdata.cpp">
+      <Filter>DomainModules\pharmosTransaction\PROCESSING\RecordTypes\ZP_RecordTypeChangeArticleMasterData</Filter>
+    </ClCompile>
+    <ClCompile Include="ctransfercsctransactionrecord.cpp">
+      <Filter>DomainModules\pharmosTransaction\PREPARATION\CTransferCscTransactionRecord</Filter>
+    </ClCompile>
+    <ClCompile Include="recordtypechangequarantine.cpp">
+      <Filter>DomainModules\pharmosTransaction\PROCESSING\RecordTypes\QA_RecordTypeChangeQuarantine</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="csc_phatrauc.h">
+      <Filter>UseCases</Filter>
+    </ClInclude>
+    <ClInclude Include="columnname_definitions.h">
+      <Filter>main</Filter>
+    </ClInclude>
+    <ClInclude Include="csc_phatra_definitions.h">
+      <Filter>main</Filter>
+    </ClInclude>
+    <ClInclude Include="csc_phatraappl.h">
+      <Filter>main</Filter>
+    </ClInclude>
+    <ClInclude Include="property_definitions.h">
+      <Filter>main</Filter>
+    </ClInclude>
+    <ClInclude Include="appargs.h">
+      <Filter>main\CommandLine</Filter>
+    </ClInclude>
+    <ClInclude Include="csc_phatraappinitializer.h">
+      <Filter>main\CommandLine</Filter>
+    </ClInclude>
+    <ClInclude Include="csc_phatraappinitializerptr.h">
+      <Filter>main\CommandLine</Filter>
+    </ClInclude>
+    <ClInclude Include="csc_phatracmdlineevaluator.h">
+      <Filter>main\CommandLine</Filter>
+    </ClInclude>
+    <ClInclude Include="csc_phatracmdlineevaluatorptr.h">
+      <Filter>main\CommandLine</Filter>
+    </ClInclude>
+    <ClInclude Include="csc_phatracmdlineoption_definitions.h">
+      <Filter>main\CommandLine</Filter>
+    </ClInclude>
+    <ClInclude Include="appsession.h">
+      <Filter>main\AppSession</Filter>
+    </ClInclude>
+    <ClInclude Include="appsessionptr.h">
+      <Filter>main\AppSession</Filter>
+    </ClInclude>
+    <ClInclude Include="csc_heartbeat.h">
+      <Filter>main\Heartbeat</Filter>
+    </ClInclude>
+    <ClInclude Include="icsc_heartbeat.h">
+      <Filter>main\Heartbeat</Filter>
+    </ClInclude>
+    <ClInclude Include="icsc_heartbeatptr.h">
+      <Filter>main\Heartbeat</Filter>
+    </ClInclude>
+    <ClInclude Include="csc_phatra_table_definitions.h">
+      <Filter>DomainModules</Filter>
+    </ClInclude>
+    <ClInclude Include="dmbase.h">
+      <Filter>DomainModules</Filter>
+    </ClInclude>
+    <ClInclude Include="initparamsdm.h">
+      <Filter>DomainModules</Filter>
+    </ClInclude>
+    <ClInclude Include="ipxvborderentryparamchecker.h">
+      <Filter>DomainModules\pharmosTransaction\PXVERBUND\OrderEntryParamChecker</Filter>
+    </ClInclude>
+    <ClInclude Include="ipxvborderentryparamcheckerptr.h">
+      <Filter>DomainModules\pharmosTransaction\PXVERBUND\OrderEntryParamChecker</Filter>
+    </ClInclude>
+    <ClInclude Include="pxvborderentryparamcheckerptr.h">
+      <Filter>DomainModules\pharmosTransaction\PXVERBUND\OrderEntryParamChecker\PXVBOrderEntryParamChecker</Filter>
+    </ClInclude>
+    <ClInclude Include="ipxvbdbconnection.h">
+      <Filter>DomainModules\pharmosTransaction\PXVERBUND\DBConnection</Filter>
+    </ClInclude>
+    <ClInclude Include="ipxvbdbconnectionptr.h">
+      <Filter>DomainModules\pharmosTransaction\PXVERBUND\DBConnection</Filter>
+    </ClInclude>
+    <ClInclude Include="pxvbdbconnection_definitions.h">
+      <Filter>DomainModules\pharmosTransaction\PXVERBUND\DBConnection</Filter>
+    </ClInclude>
+    <ClInclude Include="pxvbdbtransactionlevelmapper.h">
+      <Filter>DomainModules\pharmosTransaction\PXVERBUND\DBConnection</Filter>
+    </ClInclude>
+    <ClInclude Include="nullpxvbdbconnection.h">
+      <Filter>DomainModules\pharmosTransaction\PXVERBUND\DBConnection\NullPXVBDBConnection</Filter>
+    </ClInclude>
+    <ClInclude Include="nullpxvbdbconnectionptr.h">
+      <Filter>DomainModules\pharmosTransaction\PXVERBUND\DBConnection\NullPXVBDBConnection</Filter>
+    </ClInclude>
+    <ClInclude Include="ipxvbinitialization.h">
+      <Filter>DomainModules\pharmosTransaction\PXVERBUND\Initialization</Filter>
+    </ClInclude>
+    <ClInclude Include="ipxvbinitializationptr.h">
+      <Filter>DomainModules\pharmosTransaction\PXVERBUND\Initialization</Filter>
+    </ClInclude>
+    <ClInclude Include="pxvbinitializationptr.h">
+      <Filter>DomainModules\pharmosTransaction\PXVERBUND\Initialization\PXVBInitialization</Filter>
+    </ClInclude>
+    <ClInclude Include="ipxvbsession.h">
+      <Filter>DomainModules\pharmosTransaction\PXVERBUND\Session</Filter>
+    </ClInclude>
+    <ClInclude Include="ipxvbsessionptr.h">
+      <Filter>DomainModules\pharmosTransaction\PXVERBUND\Session</Filter>
+    </ClInclude>
+    <ClInclude Include="ipxvbservicelocator.h">
+      <Filter>DomainModules\pharmosTransaction\PXVERBUND\IPXVBServiceLocator</Filter>
+    </ClInclude>
+    <ClInclude Include="ipxvbservicelocatorptr.h">
+      <Filter>DomainModules\pharmosTransaction\PXVERBUND\IPXVBServiceLocator</Filter>
+    </ClInclude>
+    <ClInclude Include="cicspharmostransactiondm.h">
+      <Filter>DomainModules\pharmosTransaction\PREPARATION\CISCPharmosTransactionDM</Filter>
+    </ClInclude>
+    <ClInclude Include="cicspharmostransactiondmptr.h">
+      <Filter>DomainModules\pharmosTransaction\PREPARATION\CISCPharmosTransactionDM</Filter>
+    </ClInclude>
+    <ClInclude Include="dkbvzacc.h">
+      <Filter>DomainModules\pharmosTransaction\PREPARATION\CISCPharmosTransactionDM\Accessor</Filter>
+    </ClInclude>
+    <ClInclude Include="dkbvzacc_definitions.h">
+      <Filter>DomainModules\pharmosTransaction\PREPARATION\CISCPharmosTransactionDM\Accessor</Filter>
+    </ClInclude>
+    <ClInclude Include="cicspharmostransactionrecord.h">
+      <Filter>DomainModules\pharmosTransaction\PREPARATION\CICSPharmosTransactionRecord</Filter>
+    </ClInclude>
+    <ClInclude Include="pdx010remoteprocedure.h">
+      <Filter>DomainModules\pharmosTransaction\PREPARATION\PDX010RemoteProcedure</Filter>
+    </ClInclude>
+    <ClInclude Include="pdx010remoteprocedure_definitions.h">
+      <Filter>DomainModules\pharmosTransaction\PREPARATION\PDX010RemoteProcedure</Filter>
+    </ClInclude>
+    <ClInclude Include="recordtypetransferquarantine.h">
+      <Filter>DomainModules\pharmosTransaction\PROCESSING\RecordTypes\TR_RecordTypeTransferQuarantine</Filter>
+    </ClInclude>
+    <ClInclude Include="recordtypecreditlimitbase.h">
+      <Filter>DomainModules\pharmosTransaction\PROCESSING\RecordTypes\K1, K2, KK, GU, KG RecordTypeCreditLimitBase</Filter>
+    </ClInclude>
+    <ClInclude Include="recordtypecreditlimitchain.h">
+      <Filter>DomainModules\pharmosTransaction\PROCESSING\RecordTypes\K1, K2, KK, GU, KG RecordTypeCreditLimitBase\K1_RecordTypeCreditLimitChain</Filter>
+    </ClInclude>
+    <ClInclude Include="recordtypecreditlimitcustomer.h">
+      <Filter>DomainModules\pharmosTransaction\PROCESSING\RecordTypes\K1, K2, KK, GU, KG RecordTypeCreditLimitBase\K2_RecordTypeCreditLimitCustomer</Filter>
+    </ClInclude>
+    <ClInclude Include="recordtypecreditlimit.h">
+      <Filter>DomainModules\pharmosTransaction\PROCESSING\RecordTypes\K1, K2, KK, GU, KG RecordTypeCreditLimitBase\KK_RecordTypeCreditLimit</Filter>
+    </ClInclude>
+    <ClInclude Include="recordtypecreditlimitcustomerreturn.h">
+      <Filter>DomainModules\pharmosTransaction\PROCESSING\RecordTypes\K1, K2, KK, GU, KG RecordTypeCreditLimitBase\GU_RecordTypeCreditLimitCustomerReturn</Filter>
+    </ClInclude>
+    <ClInclude Include="recordtypedealervolumebase.h">
+      <Filter>DomainModules\pharmosTransaction\PROCESSING\RecordTypes\D1, D2, D3, D4 RecordTypeDealerVolumeBase</Filter>
+    </ClInclude>
+    <ClInclude Include="recordtypedealervolumetotal.h">
+      <Filter>DomainModules\pharmosTransaction\PROCESSING\RecordTypes\D1, D2, D3, D4 RecordTypeDealerVolumeBase\D1_RecordTypeDealerVolumeTotal</Filter>
+    </ClInclude>
+    <ClInclude Include="recordtypedealervolumeelectronic.h">
+      <Filter>DomainModules\pharmosTransaction\PROCESSING\RecordTypes\D1, D2, D3, D4 RecordTypeDealerVolumeBase\D2_RecordTypeDealerVolumeElectronic</Filter>
+    </ClInclude>
+    <ClInclude Include="recordtypedealervolumeexclusivetotal.h">
+      <Filter>DomainModules\pharmosTransaction\PROCESSING\RecordTypes\D1, D2, D3, D4 RecordTypeDealerVolumeBase\D3_RecordTypeDealerVolumeExclusiveTotal</Filter>
+    </ClInclude>
+    <ClInclude Include="recordtypedealervolumeexclusiveelectronic.h">
+      <Filter>DomainModules\pharmosTransaction\PROCESSING\RecordTypes\D1, D2, D3, D4 RecordTypeDealerVolumeBase\D4_RecordTypeDealerVolumeExclusiveElectronic</Filter>
+    </ClInclude>
+    <ClInclude Include="recordtypecodeblocage.h">
+      <Filter>DomainModules\pharmosTransaction\PROCESSING\RecordTypes\CB_RecordTypeCodeBlocage</Filter>
+    </ClInclude>
+    <ClInclude Include="recordtypearticleinfogoodsin.h">
+      <Filter>DomainModules\pharmosTransaction\PROCESSING\RecordTypes\AW_RecordTypeArticleInfoGoodsIn</Filter>
+    </ClInclude>
+    <ClInclude Include="recordtypediscountaccount.h">
+      <Filter>DomainModules\pharmosTransaction\PROCESSING\RecordTypes\KR_RecordTypeDiscountAccount</Filter>
+    </ClInclude>
+    <ClInclude Include="recordtypebatch.h">
+      <Filter>DomainModules\pharmosTransaction\PROCESSING\RecordTypes\CH_RecordTypeBatch</Filter>
+    </ClInclude>
+    <ClInclude Include="recordtypegoodsin.h">
+      <Filter>DomainModules\pharmosTransaction\PROCESSING\RecordTypes\WE_RecordTypeGoodsIn</Filter>
+    </ClInclude>
+    <ClInclude Include="recordtypestopsellingofarticle.h">
+      <Filter>DomainModules\pharmosTransaction\PROCESSING\RecordTypes\BL_RecordTypeStopSellingOfArticle</Filter>
+    </ClInclude>
+    <ClInclude Include="recordtypechangeorderitem.h">
+      <Filter>DomainModules\pharmosTransaction\PROCESSING\RecordTypes\AP_RecordTypeChangeOrderItem</Filter>
+    </ClInclude>
+    <ClInclude Include="recordtypeimportinvoiceno.h">
+      <Filter>DomainModules\pharmosTransaction\PROCESSING\RecordTypes\RN_RecordTypeImportInvoiceNo</Filter>
+    </ClInclude>
+    <ClInclude Include="recordtypechangearticledetails.h">
+      <Filter>DomainModules\pharmosTransaction\PROCESSING\RecordTypes\LO_RecordTypeChangeArticleDetails</Filter>
+    </ClInclude>
+    <ClInclude Include="recordtypechangeibtstocklevel.h">
+      <Filter>DomainModules\pharmosTransaction\PROCESSING\RecordTypes\BV_RecordTypeChangeIBTStockLevel</Filter>
+    </ClInclude>
+    <ClInclude Include="recordtypeother.h">
+      <Filter>DomainModules\pharmosTransaction\PROCESSING\RecordTypes\RecordTypeOther</Filter>
+    </ClInclude>
+    <ClInclude Include="recordtypereturnpredeliveredarticle.h">
+      <Filter>DomainModules\pharmosTransaction\PROCESSING\RecordTypes\ZT_RecordTypeReturnPredeliveredArticle</Filter>
+    </ClInclude>
+    <ClInclude Include="recordtypecustomerreturn.h">
+      <Filter>DomainModules\pharmosTransaction\PROCESSING\RecordTypes\RK_RecordTypeCustomerReturn</Filter>
+    </ClInclude>
+    <ClInclude Include="recordtypeexpirydate.h">
+      <Filter>DomainModules\pharmosTransaction\PROCESSING\RecordTypes\VD_RecordTypeExpiryDate</Filter>
+    </ClInclude>
+    <ClInclude Include="recordtypenoprocessing.h">
+      <Filter>DomainModules\pharmosTransaction\PROCESSING\RecordTypes\RecordType_No_Processing</Filter>
+    </ClInclude>
+    <ClInclude Include="recordtypetenderchangecustomerreturn.h">
+      <Filter>DomainModules\pharmosTransaction\PROCESSING\RecordTypes\RT_RecordTypeTenderChangeCustomerReturn</Filter>
+    </ClInclude>
+    <ClInclude Include="recordtypepickinglack.h">
+      <Filter>DomainModules\pharmosTransaction\PROCESSING\RecordTypes\KD_RecordTypePickingLack</Filter>
+    </ClInclude>
+    <ClInclude Include="recordtypeinvoicecancellation.h">
+      <Filter>DomainModules\pharmosTransaction\PROCESSING\RecordTypes\ST_RecordTypeInvoiceCancellation</Filter>
+    </ClInclude>
+    <ClInclude Include="pxartbaseptr.h">
+      <Filter>DomainModules\pharmosTransaction\PROCESSING\RecordProcessHelpers</Filter>
+    </ClInclude>
+    <ClInclude Include="pxartoldpriceptr.h">
+      <Filter>DomainModules\pharmosTransaction\PROCESSING\RecordProcessHelpers</Filter>
+    </ClInclude>
+    <ClInclude Include="pxartpriceptr.h">
+      <Filter>DomainModules\pharmosTransaction\PROCESSING\RecordProcessHelpers</Filter>
+    </ClInclude>
+    <ClInclude Include="pxartreservationptr.h">
+      <Filter>DomainModules\pharmosTransaction\PROCESSING\RecordProcessHelpers</Filter>
+    </ClInclude>
+    <ClInclude Include="pxartstorelocptr.h">
+      <Filter>DomainModules\pharmosTransaction\PROCESSING\RecordProcessHelpers</Filter>
+    </ClInclude>
+    <ClInclude Include="pxtenderprogressptr.h">
+      <Filter>DomainModules\pharmosTransaction\PROCESSING\RecordProcessHelpers</Filter>
+    </ClInclude>
+    <ClInclude Include="recordprocesshelper.h">
+      <Filter>DomainModules\pharmosTransaction\PROCESSING\RecordProcessHelpers</Filter>
+    </ClInclude>
+    <ClInclude Include="recordprocesshelperptr.h">
+      <Filter>DomainModules\pharmosTransaction\PROCESSING\RecordProcessHelpers</Filter>
+    </ClInclude>
+    <ClInclude Include="recordtypecodeblocageptr.h">
+      <Filter>DomainModules\pharmosTransaction\PROCESSING\RecordProcessHelpers</Filter>
+    </ClInclude>
+    <ClInclude Include="recordtypecustomerreturnptr.h">
+      <Filter>DomainModules\pharmosTransaction\PROCESSING\RecordProcessHelpers</Filter>
+    </ClInclude>
+    <ClInclude Include="recordtypegoodsinptr.h">
+      <Filter>DomainModules\pharmosTransaction\PROCESSING\RecordProcessHelpers</Filter>
+    </ClInclude>
+    <ClInclude Include="recordtypeinvoicecancellationptr.h">
+      <Filter>DomainModules\pharmosTransaction\PROCESSING\RecordProcessHelpers</Filter>
+    </ClInclude>
+    <ClInclude Include="recordtypeotherptr.h">
+      <Filter>DomainModules\pharmosTransaction\PROCESSING\RecordProcessHelpers</Filter>
+    </ClInclude>
+    <ClInclude Include="recordtypepickinglackptr.h">
+      <Filter>DomainModules\pharmosTransaction\PROCESSING\RecordProcessHelpers</Filter>
+    </ClInclude>
+    <ClInclude Include="recordtypetenderchangecustomerreturnptr.h">
+      <Filter>DomainModules\pharmosTransaction\PROCESSING\RecordProcessHelpers</Filter>
+    </ClInclude>
+    <ClInclude Include="recordtypetransferquarantineptr.h">
+      <Filter>DomainModules\pharmosTransaction\PROCESSING\RecordProcessHelpers</Filter>
+    </ClInclude>
+    <ClInclude Include="transactionrecordbase.h">
+      <Filter>DomainModules\pharmosTransaction\CORE\TransactionRecordBase</Filter>
+    </ClInclude>
+    <ClInclude Include="transactionrecordbaseptr.h">
+      <Filter>DomainModules\pharmosTransaction\CORE\TransactionRecordBase</Filter>
+    </ClInclude>
+    <ClInclude Include="transactiondmbase.h">
+      <Filter>DomainModules\pharmosTransaction\CORE\TransactionDMBase</Filter>
+    </ClInclude>
+    <ClInclude Include="transactiondmbase_definitions.h">
+      <Filter>DomainModules\pharmosTransaction\CORE\TransactionDMBase</Filter>
+    </ClInclude>
+    <ClInclude Include="transactiondmbaseptr.h">
+      <Filter>DomainModules\pharmosTransaction\CORE\TransactionDMBase</Filter>
+    </ClInclude>
+    <ClInclude Include="pharmostransactiondm.h">
+      <Filter>DomainModules\pharmosTransaction\CORE\PharmosTransactionDM</Filter>
+    </ClInclude>
+    <ClInclude Include="pharmostransactiondmptr.h">
+      <Filter>DomainModules\pharmosTransaction\CORE\PharmosTransactionDM</Filter>
+    </ClInclude>
+    <ClInclude Include="pharmostransactionacc.h">
+      <Filter>DomainModules\pharmosTransaction\CORE\PharmosTransactionDM\Accessor</Filter>
+    </ClInclude>
+    <ClInclude Include="pharmostransactionacc_definitions.h">
+      <Filter>DomainModules\pharmosTransaction\CORE\PharmosTransactionDM\Accessor</Filter>
+    </ClInclude>
+    <ClInclude Include="pharmostransactionrecord.h">
+      <Filter>DomainModules\pharmosTransaction\CORE\PharmosTransactionRecord</Filter>
+    </ClInclude>
+    <ClInclude Include="recordtypeclassifier.h">
+      <Filter>DomainModules\pharmosTransaction\CORE\RecordTypeClassifier</Filter>
+    </ClInclude>
+    <ClInclude Include="recordtypeclassifier_definitions.h">
+      <Filter>DomainModules\pharmosTransaction\CORE\RecordTypeClassifier</Filter>
+    </ClInclude>
+    <ClInclude Include="irecordtypeof.h">
+      <Filter>DomainModules\pharmosTransaction\CORE\IRecordTypeOf</Filter>
+    </ClInclude>
+    <ClInclude Include="irecordtypeofptr.h">
+      <Filter>DomainModules\pharmosTransaction\CORE\IRecordTypeOf</Filter>
+    </ClInclude>
+    <ClInclude Include="recordtypebase.h">
+      <Filter>DomainModules\pharmosTransaction\CORE\RecordTypeBase</Filter>
+    </ClInclude>
+    <ClInclude Include="recordtypebaseptr.h">
+      <Filter>DomainModules\pharmosTransaction\CORE\RecordTypeBase</Filter>
+    </ClInclude>
+    <ClInclude Include="recordtypefactory.h">
+      <Filter>DomainModules\pharmosTransaction\CORE\RecordTypeFactory</Filter>
+    </ClInclude>
+    <ClInclude Include="recordtypefactoryptr.h">
+      <Filter>DomainModules\pharmosTransaction\CORE\RecordTypeFactory</Filter>
+    </ClInclude>
+    <ClInclude Include="irecordtypecreator.h">
+      <Filter>DomainModules\pharmosTransaction\UTIL\IRecordTypeCreator</Filter>
+    </ClInclude>
+    <ClInclude Include="irecordtypecreatorptr.h">
+      <Filter>DomainModules\pharmosTransaction\UTIL\IRecordTypeCreator</Filter>
+    </ClInclude>
+    <ClInclude Include="irecordtypetransformer.h">
+      <Filter>DomainModules\pharmosTransaction\UTIL\IRecordTypeTransformer</Filter>
+    </ClInclude>
+    <ClInclude Include="irecordtypetransformerptr.h">
+      <Filter>DomainModules\pharmosTransaction\UTIL\IRecordTypeTransformer</Filter>
+    </ClInclude>
+    <ClInclude Include="itransferkeygetter.h">
+      <Filter>DomainModules\pharmosTransaction\UTIL\ITransferKeyGetter</Filter>
+    </ClInclude>
+    <ClInclude Include="itransferkeygetterptr.h">
+      <Filter>DomainModules\pharmosTransaction\UTIL\ITransferKeyGetter</Filter>
+    </ClInclude>
+    <ClInclude Include="itransactionrecordcreator.h">
+      <Filter>DomainModules\pharmosTransaction\UTIL\ITransactionRecordCreator</Filter>
+    </ClInclude>
+    <ClInclude Include="itransactionrecordcreatorptr.h">
+      <Filter>DomainModules\pharmosTransaction\UTIL\ITransactionRecordCreator</Filter>
+    </ClInclude>
+    <ClInclude Include="irecordtypetransformercreator.h">
+      <Filter>DomainModules\pharmosTransaction\UTIL\IRecordTypeTransformerCreator</Filter>
+    </ClInclude>
+    <ClInclude Include="irecordtypetransformercreatorptr.h">
+      <Filter>DomainModules\pharmosTransaction\UTIL\IRecordTypeTransformerCreator</Filter>
+    </ClInclude>
+    <ClInclude Include="irecordtypeprocessor.h">
+      <Filter>DomainModules\pharmosTransaction\UTIL\IRecordTypeProcessor</Filter>
+    </ClInclude>
+    <ClInclude Include="irecordtypeprocessorptr.h">
+      <Filter>DomainModules\pharmosTransaction\UTIL\IRecordTypeProcessor</Filter>
+    </ClInclude>
+    <ClInclude Include="pvhx01_includes.h">
+      <Filter>DomainModules\pharmosTransaction\PXVERBUND</Filter>
+    </ClInclude>
+    <ClInclude Include="recordtypecreditlimitgroup.h">
+      <Filter>DomainModules\pharmosTransaction\PROCESSING\RecordTypes\K1, K2, KK, GU, KG RecordTypeCreditLimitBase\KG_RecordTypeCreditLimitGroup</Filter>
+    </ClInclude>
+    <ClInclude Include="recordtypeibtgoods.h">
+      <Filter>DomainModules\pharmosTransaction\PROCESSING\RecordTypes\VW_RecordTypeIBTGoods</Filter>
+    </ClInclude>
+    <ClInclude Include="recordtypeibtgoodsptr.h">
+      <Filter>DomainModules\pharmosTransaction\PROCESSING\RecordProcessHelpers</Filter>
+    </ClInclude>
+    <ClInclude Include="pxtoteinfoptr.h">
+      <Filter>DomainModules\pharmosTransaction\PROCESSING\RecordProcessHelpers</Filter>
+    </ClInclude>
+    <ClInclude Include="transferbaseuc.h">
+      <Filter>UseCases</Filter>
+    </ClInclude>
+    <ClInclude Include="transferfromcicsuc.h">
+      <Filter>UseCases</Filter>
+    </ClInclude>
+    <ClInclude Include="transferfromzdpuc.h">
+      <Filter>UseCases</Filter>
+    </ClInclude>
+    <ClInclude Include="transfertocscuc.h">
+      <Filter>UseCases</Filter>
+    </ClInclude>
+    <ClInclude Include="ctransfercsc_definitions.h">
+      <Filter>DomainModules\pharmosTransaction\PREPARATION\CTransferCscDM</Filter>
+    </ClInclude>
+    <ClInclude Include="ctransfercscacc.h">
+      <Filter>DomainModules\pharmosTransaction\PREPARATION\CTransferCscDM</Filter>
+    </ClInclude>
+    <ClInclude Include="ctransfercscdm.h">
+      <Filter>DomainModules\pharmosTransaction\PREPARATION\CTransferCscDM</Filter>
+    </ClInclude>
+    <ClInclude Include="ctransfercscdmptr.h">
+      <Filter>DomainModules\pharmosTransaction\PREPARATION\CTransferCscDM</Filter>
+    </ClInclude>
+    <ClInclude Include="recordtypechangearticlemasterdata.h">
+      <Filter>DomainModules\pharmosTransaction\PROCESSING\RecordTypes\ZP_RecordTypeChangeArticleMasterData</Filter>
+    </ClInclude>
+    <ClInclude Include="ctransfercsctransactionrecord.h">
+      <Filter>DomainModules\pharmosTransaction\PREPARATION\CTransferCscTransactionRecord</Filter>
+    </ClInclude>
+    <ClInclude Include="recordtypechangequarantine.h">
+      <Filter>DomainModules\pharmosTransaction\PROCESSING\RecordTypes\QA_RecordTypeChangeQuarantine</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="appargs.inl">
+      <Filter>main\CommandLine</Filter>
+    </None>
+    <None Include="appsession.inl">
+      <Filter>main\AppSession</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuildStep Include="pxvborderentryparamchecker.h">
+      <Filter>DomainModules\pharmosTransaction\PXVERBUND\OrderEntryParamChecker\PXVBOrderEntryParamChecker</Filter>
+    </CustomBuildStep>
+    <CustomBuildStep Include="pxvbdbconnection.h">
+      <Filter>DomainModules\pharmosTransaction\PXVERBUND\DBConnection\PXVBDBConnection</Filter>
+    </CustomBuildStep>
+    <CustomBuildStep Include="pxvbdbconnectionptr.h">
+      <Filter>DomainModules\pharmosTransaction\PXVERBUND\DBConnection\PXVBDBConnection</Filter>
+    </CustomBuildStep>
+    <CustomBuildStep Include="pxvbinitialization.h">
+      <Filter>DomainModules\pharmosTransaction\PXVERBUND\Initialization\PXVBInitialization</Filter>
+    </CustomBuildStep>
+    <CustomBuildStep Include="pxvbsession.h">
+      <Filter>DomainModules\pharmosTransaction\PXVERBUND\Session\PXVBSession</Filter>
+    </CustomBuildStep>
+    <CustomBuildStep Include="pxvbsessionptr.h">
+      <Filter>DomainModules\pharmosTransaction\PXVERBUND\Session\PXVBSession</Filter>
+    </CustomBuildStep>
+    <CustomBuildStep Include="pxvbcomponentmanager.h">
+      <Filter>DomainModules\pharmosTransaction\PXVERBUND\PXVBComponentManager</Filter>
+    </CustomBuildStep>
+    <CustomBuildStep Include="pxvbcomponentmanagerptr.h">
+      <Filter>DomainModules\pharmosTransaction\PXVERBUND\PXVBComponentManager</Filter>
+    </CustomBuildStep>
+  </ItemGroup>
+</Project>

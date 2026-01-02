@@ -1,0 +1,13 @@
+;
+;               Order Entry Server initialization parameters.
+;
+[Generic]
+MessageFile        = $INI_PATH/message.txt
+
+[Session]
+DataSource         = ofr21pre@zqas21_shm
+DeviceName         = PVA400
+DeviceType         = 2
+Country            = FR
+Interval           = 30
+

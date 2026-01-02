@@ -1,0 +1,2822 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="rrn:org.xcbl:schemas/xcbl/v3_5/xcbl35.xsd" targetNamespace="rrn:org.xcbl:schemas/xcbl/v3_5/xcbl35.xsd" elementFormDefault="qualified">
+    <xsd:annotation>
+        <xsd:documentation xml:lang="en">
+            XML Common Business Library 3.5
+            Copyright 2000 Commerce One, Inc.
+            Permission is granted to use, copy, modify and distribute the
+            DTD's, schemas and modules in the Commerce One XML Common Business
+            Library Version 3.5 subject to the terms and conditions specified
+            at http://www.xcbl.org/license.html
+        </xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexType name="TradingPartnerUserInformation">
+        <xsd:sequence>
+            <xsd:element ref="TradingPartnerUserPurpose"/>
+            <xsd:element ref="ListOfTradingPartnerUser"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:element name="TradingPartnerUserInformation" type="TradingPartnerUserInformation"/>
+    <xsd:complexType name="TradingPartnerUserPurpose">
+        <xsd:sequence>
+            <xsd:element name="TradingPartnerUserPurposeCoded" type="TradingPartnerUserPurposeCode"/>
+            <xsd:element minOccurs="0" name="TradingPartnerUserPurposeCodedOther" type="xsd:string"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:element name="TradingPartnerUserPurpose" type="TradingPartnerUserPurpose"/>
+    <xsd:simpleType name="TradingPartnerUserPurposeCode">
+        <xsd:restriction base="xsd:NMTOKEN">
+            <xsd:enumeration value="Other"/>
+            <xsd:enumeration value="Duplicate"/>
+            <xsd:enumeration value="Create"/>
+            <xsd:enumeration value="Change"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:complexType name="ListOfTradingPartnerUser">
+        <xsd:sequence>
+            <xsd:element maxOccurs="unbounded" ref="TradingPartnerUser"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:element name="ListOfTradingPartnerUser" type="ListOfTradingPartnerUser"/>
+    <xsd:complexType name="TradingPartnerUser">
+        <xsd:sequence>
+            <xsd:element name="TradingPartnerOrganizationReference">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element ref="Identifications"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element ref="UserID"/>
+            <xsd:element ref="PersonProfile"/>
+            <xsd:element minOccurs="0" ref="ListOfUserRole"/>
+            <xsd:element minOccurs="0" ref="UserAdministration"/>
+            <xsd:element minOccurs="0" name="ListOfContactRelationType">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element ref="ContactRelationType"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:element name="TradingPartnerUser" type="TradingPartnerUser"/>
+    <xsd:complexType name="Identifications">
+        <xsd:sequence>
+            <xsd:element minOccurs="0" ref="PrimaryID"/>
+            <xsd:element minOccurs="0" ref="ListOfTradingPartnerID"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:element name="Identifications" type="Identifications"/>
+    <xsd:complexType name="PrimaryID">
+        <xsd:complexContent>
+            <xsd:extension base="Identifier">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" name="ShortID" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="PrimaryIDURN" type="xsd:anyURI"/>
+                </xsd:sequence>
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+    <xsd:element name="PrimaryID" type="PrimaryID"/>
+    <xsd:complexType name="Identifier">
+        <xsd:sequence>
+            <xsd:element ref="Agency"/>
+            <xsd:element name="Ident" type="xsd:string"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:element name="Identifier" type="Identifier"/>
+    <xsd:complexType name="Agency">
+        <xsd:sequence>
+            <xsd:element name="AgencyCoded" type="AgencyCode"/>
+            <xsd:element minOccurs="0" name="AgencyCodedOther" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="AgencyDescription" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="CodeListIdentifierCoded" type="CodeListIdentifierCode"/>
+            <xsd:element minOccurs="0" name="CodeListIdentifierCodedOther" type="xsd:string"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:element name="Agency" type="Agency"/>
+    <xsd:simpleType name="AgencyCode">
+        <xsd:restriction base="xsd:NMTOKEN">
+            <xsd:enumeration value="Other"/>
+            <xsd:enumeration value="AAMVA"/>
+            <xsd:enumeration value="ABCD-TheMicrocomputerIndustryAssociation"/>
+            <xsd:enumeration value="ACGIH"/>
+            <xsd:enumeration value="ACORD"/>
+            <xsd:enumeration value="AdvertisingIndustry"/>
+            <xsd:enumeration value="AECMA"/>
+            <xsd:enumeration value="AIHA"/>
+            <xsd:enumeration value="AirTransportAssociationOfAmerica"/>
+            <xsd:enumeration value="Alabama"/>
+            <xsd:enumeration value="Alaska"/>
+            <xsd:enumeration value="AluminumAssociation"/>
+            <xsd:enumeration value="AmericanApparelManufacturersAssociation"/>
+            <xsd:enumeration value="AmericanFurnitureManufacturersAssociation"/>
+            <xsd:enumeration value="AmericanIronAndSteelInstitute"/>
+            <xsd:enumeration value="AmericanLandTitleAssociation"/>
+            <xsd:enumeration value="AmericanMedicalAssociation"/>
+            <xsd:enumeration value="AmericanPaperInstitute"/>
+            <xsd:enumeration value="AmericanPetroleumInstitute"/>
+            <xsd:enumeration value="APWAAndOCSI"/>
+            <xsd:enumeration value="AmericanSocietyForAutomationInPharmacy"/>
+            <xsd:enumeration value="AmericanTextileManufacturersInstitute"/>
+            <xsd:enumeration value="AmericanTruckingAssociations"/>
+            <xsd:enumeration value="ANSIAccreditedStandardsCommittee"/>
+            <xsd:enumeration value="Arizona"/>
+            <xsd:enumeration value="Arkansas"/>
+            <xsd:enumeration value="ASME"/>
+            <xsd:enumeration value="AssignedByBuyerOrBuyersAgent"/>
+            <xsd:enumeration value="AssignedByCarrier"/>
+            <xsd:enumeration value="AssignedByDistributor"/>
+            <xsd:enumeration value="AssignedByManufacturer"/>
+            <xsd:enumeration value="AssignedByMarketPlace"/>
+            <xsd:enumeration value="AssignedByNationalTradeAgency"/>
+            <xsd:enumeration value="AssignedByOwnerOfOperation"/>
+            <xsd:enumeration value="AssignedByPartyOriginatingTheMessage"/>
+            <xsd:enumeration value="AssignedBySellerOrSellersAgent"/>
+            <xsd:enumeration value="AssignedByTransportCompany"/>
+            <xsd:enumeration value="ASTM"/>
+            <xsd:enumeration value="AT"/>
+            <xsd:enumeration value="AT-GeldausgabeautomatenServiceGesellschaftMBH"/>
+            <xsd:enumeration value="AT-AustrianCustoms"/>
+            <xsd:enumeration value="AT-AustrianPTT"/>
+            <xsd:enumeration value="AT-VerbandOesterreichischerBankenUndBankiers"/>
+            <xsd:enumeration value="AU-ACOS"/>
+            <xsd:enumeration value="AU-ADA"/>
+            <xsd:enumeration value="AU-AIHW"/>
+            <xsd:enumeration value="AU-APCA"/>
+            <xsd:enumeration value="AU-AQIS"/>
+            <xsd:enumeration value="AU-AustrianCustomsService"/>
+            <xsd:enumeration value="AU-DOH"/>
+            <xsd:enumeration value="AU-HIC"/>
+            <xsd:enumeration value="AU-LIFA"/>
+            <xsd:enumeration value="AU-NCCH"/>
+            <xsd:enumeration value="AU-ROA"/>
+            <xsd:enumeration value="AU-SAA"/>
+            <xsd:enumeration value="AU-Tradegate"/>
+            <xsd:enumeration value="AWS"/>
+            <xsd:enumeration value="AYSA"/>
+            <xsd:enumeration value="BE"/>
+            <xsd:enumeration value="BE-BelgianBankersAssociation"/>
+            <xsd:enumeration value="BE-BelgianCustoms"/>
+            <xsd:enumeration value="BE-BelgianMinistryOfFinance"/>
+            <xsd:enumeration value="Bellcore"/>
+            <xsd:enumeration value="BG"/>
+            <xsd:enumeration value="BIC"/>
+            <xsd:enumeration value="BookIndustrySystemsAdvisoryCommittee"/>
+            <xsd:enumeration value="BR-BancoCentralDoBrazil"/>
+            <xsd:enumeration value="BR-MAAndRAAAndLIMNETAndRINET"/>
+            <xsd:enumeration value="CA-CPA"/>
+            <xsd:enumeration value="CA-CSIO"/>
+            <xsd:enumeration value="California"/>
+            <xsd:enumeration value="CaliforniaLandTitleAssociation"/>
+            <xsd:enumeration value="CanadianFreightClassification"/>
+            <xsd:enumeration value="CarbideManufacturers"/>
+            <xsd:enumeration value="CA-RevenueCanadaCustomsAndExcise"/>
+            <xsd:enumeration value="CAS"/>
+            <xsd:enumeration value="CA-SCC"/>
+            <xsd:enumeration value="CCC"/>
+            <xsd:enumeration value="CEC"/>
+            <xsd:enumeration value="CECDGXIIID5"/>
+            <xsd:enumeration value="CECDGXXI01"/>
+            <xsd:enumeration value="CECDGXXIB1"/>
+            <xsd:enumeration value="CECDGXXXIV"/>
+            <xsd:enumeration value="CEFIC"/>
+            <xsd:enumeration value="CH"/>
+            <xsd:enumeration value="CH-AdministrationFederaleDesContributions"/>
+            <xsd:enumeration value="CH-AssociationSuisseCodeDesArticles"/>
+            <xsd:enumeration value="CH-Carbura"/>
+            <xsd:enumeration value="CH-CentraleSuissePourLImportationDuCharbon"/>
+            <xsd:enumeration value="CH-DirectionGeneraleDesDouanes"/>
+            <xsd:enumeration value="CH-DivisionDesImportationsEtExportations"/>
+            <xsd:enumeration value="CH-EntrepriseDesPTT"/>
+            <xsd:enumeration value="CH-MinistryOfTaxationCentralCustomsAndTaxAdministration"/>
+            <xsd:enumeration value="CH-OfficeFiduciaireDesImportateursDeDenreesAlimentaires"/>
+            <xsd:enumeration value="CH-SwissSecuritiesClearingCorporation"/>
+            <xsd:enumeration value="CH-TelekursAG"/>
+            <xsd:enumeration value="CIDX"/>
+            <xsd:enumeration value="CIECA"/>
+            <xsd:enumeration value="CodeAssignedByTheOrganizationThatIsTheUltimateDestinationOfTheTransactionSet"/>
+            <xsd:enumeration value="CO-DIAN"/>
+            <xsd:enumeration value="Colorado"/>
+            <xsd:enumeration value="CommanderRomeAirDevelopmentCenter"/>
+            <xsd:enumeration value="ConcordEDIGroup"/>
+            <xsd:enumeration value="Connecticut"/>
+            <xsd:enumeration value="ConventionsOnSADAndTransit"/>
+            <xsd:enumeration value="CopperAndBrassFabricatorsCouncil"/>
+            <xsd:enumeration value="CO-SBDC"/>
+            <xsd:enumeration value="CountyDesignatorCode"/>
+            <xsd:enumeration value="CSI"/>
+            <xsd:enumeration value="CSIExtended"/>
+            <xsd:enumeration value="CUSIP"/>
+            <xsd:enumeration value="CZ"/>
+            <xsd:enumeration value="DE"/>
+            <xsd:enumeration value="DE-ARE"/>
+            <xsd:enumeration value="DE-BDI"/>
+            <xsd:enumeration value="DE-BIA"/>
+            <xsd:enumeration value="DE-BRD"/>
+            <xsd:enumeration value="DE-DIN"/>
+            <xsd:enumeration value="DE-DTAG"/>
+            <xsd:enumeration value="DE-EDIBAU"/>
+            <xsd:enumeration value="DefenseLogisticsAgency"/>
+            <xsd:enumeration value="DE-GDV"/>
+            <xsd:enumeration value="DE-GermanBankersAssociation"/>
+            <xsd:enumeration value="DE-GermanCustoms"/>
+            <xsd:enumeration value="DE-GMBH"/>
+            <xsd:enumeration value="Delaware"/>
+            <xsd:enumeration value="DepartmentOfAirForce"/>
+            <xsd:enumeration value="DepartmentOfArmy"/>
+            <xsd:enumeration value="DepartmentOfDefense"/>
+            <xsd:enumeration value="DepartmentOfHealthAndHumanServices"/>
+            <xsd:enumeration value="DepartmentOfHousingAndUrbanDevelopment"/>
+            <xsd:enumeration value="DepartmentOfLabor"/>
+            <xsd:enumeration value="DepartmentOfTheNavy"/>
+            <xsd:enumeration value="DE-SiemensAG"/>
+            <xsd:enumeration value="DE-VDA"/>
+            <xsd:enumeration value="DFAS"/>
+            <xsd:enumeration value="DIN"/>
+            <xsd:enumeration value="DirectionGeneraleDesDouanesEtDroitsIndirects"/>
+            <xsd:enumeration value="DistrictOfColumbia"/>
+            <xsd:enumeration value="DK"/>
+            <xsd:enumeration value="DK-EAN"/>
+            <xsd:enumeration value="DK-MHA"/>
+            <xsd:enumeration value="DK-NBH"/>
+            <xsd:enumeration value="DK-PBS"/>
+            <xsd:enumeration value="DunAndBradstreet"/>
+            <xsd:enumeration value="EAN"/>
+            <xsd:enumeration value="Edibuild"/>
+            <xsd:enumeration value="EdielNordicForum"/>
+            <xsd:enumeration value="EDIFICE"/>
+            <xsd:enumeration value="EDITEUR"/>
+            <xsd:enumeration value="EDITEX"/>
+            <xsd:enumeration value="EEG7"/>
+            <xsd:enumeration value="EIDX"/>
+            <xsd:enumeration value="ElectricUtilities"/>
+            <xsd:enumeration value="ElectronicIndustriesAssociation"/>
+            <xsd:enumeration value="EPA"/>
+            <xsd:enumeration value="ES"/>
+            <xsd:enumeration value="ESDX"/>
+            <xsd:enumeration value="ES-ODETT"/>
+            <xsd:enumeration value="ES-SpanishCustoms"/>
+            <xsd:enumeration value="EU-EDIFICAS"/>
+            <xsd:enumeration value="EU-ETIS"/>
+            <xsd:enumeration value="EU-ROFER"/>
+            <xsd:enumeration value="FASLINC"/>
+            <xsd:enumeration value="FCC"/>
+            <xsd:enumeration value="FCI"/>
+            <xsd:enumeration value="FDA"/>
+            <xsd:enumeration value="FederalGovernment"/>
+            <xsd:enumeration value="FederalHighwayAdministration"/>
+            <xsd:enumeration value="FI"/>
+            <xsd:enumeration value="FI-ATA"/>
+            <xsd:enumeration value="FI-FinnishCustoms"/>
+            <xsd:enumeration value="FI-TB"/>
+            <xsd:enumeration value="FI-TheFinnishBankersAssociation"/>
+            <xsd:enumeration value="Florida"/>
+            <xsd:enumeration value="FR"/>
+            <xsd:enumeration value="FR-AGF"/>
+            <xsd:enumeration value="FR-ArvA"/>
+            <xsd:enumeration value="FR-BanqueDeFrance"/>
+            <xsd:enumeration value="FR-CFONB"/>
+            <xsd:enumeration value="FR-CNAMTS"/>
+            <xsd:enumeration value="FR-DCP"/>
+            <xsd:enumeration value="FR-DGI"/>
+            <xsd:enumeration value="FR-EDIFCAS"/>
+            <xsd:enumeration value="FR-EDIFRANCE"/>
+            <xsd:enumeration value="FR-EDITRANSPORT"/>
+            <xsd:enumeration value="FR-GALIA"/>
+            <xsd:enumeration value="FR-GENCOD"/>
+            <xsd:enumeration value="FR-INSEE"/>
+            <xsd:enumeration value="FR-RC"/>
+            <xsd:enumeration value="GB"/>
+            <xsd:enumeration value="GB-ABI"/>
+            <xsd:enumeration value="GB-ABTA"/>
+            <xsd:enumeration value="GB-ArticleNumberAssociationLimited"/>
+            <xsd:enumeration value="GB-AssociationForPaymentClearingServices"/>
+            <xsd:enumeration value="GB-BACSLimited"/>
+            <xsd:enumeration value="GB-CHAPSAndTownClearingCompanyLimited"/>
+            <xsd:enumeration value="GB-FLEETNET"/>
+            <xsd:enumeration value="GB-HMCustomsAndExcise"/>
+            <xsd:enumeration value="GB-ODETTE"/>
+            <xsd:enumeration value="GB-TheClearingHouse"/>
+            <xsd:enumeration value="Georgia"/>
+            <xsd:enumeration value="GraphicsCommunicationsAssociation"/>
+            <xsd:enumeration value="GRE"/>
+            <xsd:enumeration value="GR-GreekCustoms"/>
+            <xsd:enumeration value="GSA"/>
+            <xsd:enumeration value="GTIN"/>
+            <xsd:enumeration value="Hawaii"/>
+            <xsd:enumeration value="HealthCareFinancingAdministration"/>
+            <xsd:enumeration value="HealthInsuranceAssociationOfAmerica"/>
+            <xsd:enumeration value="HK-HongKongCustoms"/>
+            <xsd:enumeration value="HU"/>
+            <xsd:enumeration value="IAPSO"/>
+            <xsd:enumeration value="IARC"/>
+            <xsd:enumeration value="IATA"/>
+            <xsd:enumeration value="ICAO"/>
+            <xsd:enumeration value="ICC"/>
+            <xsd:enumeration value="ICS"/>
+            <xsd:enumeration value="Idaho"/>
+            <xsd:enumeration value="IE"/>
+            <xsd:enumeration value="IE-RevenueCommissionersCustomsAEProject"/>
+            <xsd:enumeration value="IL-IsraelCustoms"/>
+            <xsd:enumeration value="Illinois"/>
+            <xsd:enumeration value="IMO"/>
+            <xsd:enumeration value="Indiana"/>
+            <xsd:enumeration value="InterContainerInterFrigo"/>
+            <xsd:enumeration value="InternationalAssociationOfCorporationAdministrators"/>
+            <xsd:enumeration value="InternationalAssociationOfIndustrialAccidentBoardsAndCommissions"/>
+            <xsd:enumeration value="InternationalStandardsOrganization"/>
+            <xsd:enumeration value="Iowa"/>
+            <xsd:enumeration value="IP"/>
+            <xsd:enumeration value="IronAndSteelStandardsCommitteeISM"/>
+            <xsd:enumeration value="IS-IcelandCustoms"/>
+            <xsd:enumeration value="ISO"/>
+            <xsd:enumeration value="InsuranceServicesOffice"/>
+            <xsd:enumeration value="IT"/>
+            <xsd:enumeration value="IT-AssociazioneBancariaItaliana"/>
+            <xsd:enumeration value="IT-ItalianCustoms"/>
+            <xsd:enumeration value="IT-ODETTE"/>
+            <xsd:enumeration value="IT-SocieataInterbancariaPerLAutomazione"/>
+            <xsd:enumeration value="JapaneseStandardsAssociation"/>
+            <xsd:enumeration value="JP-JapanCustoms"/>
+            <xsd:enumeration value="JP-MOT"/>
+            <xsd:enumeration value="JP-MSA"/>
+            <xsd:enumeration value="JP-NACCS"/>
+            <xsd:enumeration value="Kansas"/>
+            <xsd:enumeration value="Kentucky"/>
+            <xsd:enumeration value="LeasingIndustry"/>
+            <xsd:enumeration value="LifeAndAnnuityIndustryCommittee"/>
+            <xsd:enumeration value="LI-LiechtensteinAuthority"/>
+            <xsd:enumeration value="LloydsRegisterOfShipping"/>
+            <xsd:enumeration value="Louisiana"/>
+            <xsd:enumeration value="LU"/>
+            <xsd:enumeration value="LU-LuxembourgCustoms"/>
+            <xsd:enumeration value="Maine"/>
+            <xsd:enumeration value="ManufacturingCompany"/>
+            <xsd:enumeration value="Maryland"/>
+            <xsd:enumeration value="Massachusetts"/>
+            <xsd:enumeration value="MaterialSafetyDataSheetProvider"/>
+            <xsd:enumeration value="Michigan"/>
+            <xsd:enumeration value="MilitaryStandard"/>
+            <xsd:enumeration value="Minnesota"/>
+            <xsd:enumeration value="Mississippi"/>
+            <xsd:enumeration value="Missouri"/>
+            <xsd:enumeration value="Montana"/>
+            <xsd:enumeration value="MortgageBankersAssociationOfAmerica"/>
+            <xsd:enumeration value="MY-DagangNet"/>
+            <xsd:enumeration value="MY-MalaysiaCentralBank"/>
+            <xsd:enumeration value="MY-MalaysiaCustomsAndExcise"/>
+            <xsd:enumeration value="NACE"/>
+            <xsd:enumeration value="NAGS"/>
+            <xsd:enumeration value="NationalAlcoholBeverageControlAssociation"/>
+            <xsd:enumeration value="NationalAssociationOfBusinessAndEducationalRadio"/>
+            <xsd:enumeration value="NationalBusinessFormsAssociation"/>
+            <xsd:enumeration value="NationalCenterforStateCourts"/>
+            <xsd:enumeration value="NationalCottonCouncilOfAmerica"/>
+            <xsd:enumeration value="NationalCouncilOnCompensationInsurance"/>
+            <xsd:enumeration value="NationalRetailMerchantsAssociation"/>
+            <xsd:enumeration value="NationalWholesaleDruggistsAssociation"/>
+            <xsd:enumeration value="NATO"/>
+            <xsd:enumeration value="NaturalGasUtilities"/>
+            <xsd:enumeration value="NCIC"/>
+            <xsd:enumeration value="Nebraska"/>
+            <xsd:enumeration value="NEMA"/>
+            <xsd:enumeration value="Nevada"/>
+            <xsd:enumeration value="NewHampshire"/>
+            <xsd:enumeration value="NewJersey"/>
+            <xsd:enumeration value="NewMexico"/>
+            <xsd:enumeration value="NewspaperAssociationOfAmerica"/>
+            <xsd:enumeration value="NewYork"/>
+            <xsd:enumeration value="NFPA"/>
+            <xsd:enumeration value="NICB"/>
+            <xsd:enumeration value="NIOSH"/>
+            <xsd:enumeration value="NL"/>
+            <xsd:enumeration value="NetherlandsRailways"/>
+            <xsd:enumeration value="NL-BankGirocentraleBV"/>
+            <xsd:enumeration value="NL-BEANETBV"/>
+            <xsd:enumeration value="NL-EAN"/>
+            <xsd:enumeration value="NL-InterpayCards"/>
+            <xsd:enumeration value="NL-InterpayGiraal"/>
+            <xsd:enumeration value="NL-NetherlandsCustoms"/>
+            <xsd:enumeration value="NL-ODETTE"/>
+            <xsd:enumeration value="NorweigianStateRailway"/>
+            <xsd:enumeration value="NO"/>
+            <xsd:enumeration value="NO-NORPRO"/>
+            <xsd:enumeration value="NO-NorwegianBankersAssociation"/>
+            <xsd:enumeration value="NO-NorwegianCustoms"/>
+            <xsd:enumeration value="NO-NorwegianInterbankResearchOrganization"/>
+            <xsd:enumeration value="NorthAmerica-TelecommunicationsIndustryForum"/>
+            <xsd:enumeration value="NorthCarolina"/>
+            <xsd:enumeration value="NorthDakota"/>
+            <xsd:enumeration value="NTP"/>
+            <xsd:enumeration value="NZ-NewZealandCustoms"/>
+            <xsd:enumeration value="ODETTE"/>
+            <xsd:enumeration value="OfficeOfManagementAndBudget"/>
+            <xsd:enumeration value="OfficeOfWorkersCompensationPrograms"/>
+            <xsd:enumeration value="OfficeProducts"/>
+            <xsd:enumeration value="Ohio"/>
+            <xsd:enumeration value="Oklahoma"/>
+            <xsd:enumeration value="OpticalIndustry"/>
+            <xsd:enumeration value="Oregon"/>
+            <xsd:enumeration value="OSHA"/>
+            <xsd:enumeration value="Pennsylvania"/>
+            <xsd:enumeration value="PennsylvaniaCourts"/>
+            <xsd:enumeration value="PL"/>
+            <xsd:enumeration value="PT"/>
+            <xsd:enumeration value="PT-CB"/>
+            <xsd:enumeration value="PT-PortugueseCustoms"/>
+            <xsd:enumeration value="PT-SIBS"/>
+            <xsd:enumeration value="RealEstateInformationIndustry"/>
+            <xsd:enumeration value="RhodeIsland"/>
+            <xsd:enumeration value="RINET"/>
+            <xsd:enumeration value="RO"/>
+            <xsd:enumeration value="RU-BIC"/>
+            <xsd:enumeration value="RU-SFT"/>
+            <xsd:enumeration value="SAE"/>
+            <xsd:enumeration value="SA-SaudiArabiaCustoms"/>
+            <xsd:enumeration value="SE"/>
+            <xsd:enumeration value="SE-CentralBank"/>
+            <xsd:enumeration value="SE-ODETTE"/>
+            <xsd:enumeration value="SE-SvenskaBankfoereningen"/>
+            <xsd:enumeration value="SE-SwedishCustoms"/>
+            <xsd:enumeration value="ShippersAssociation"/>
+            <xsd:enumeration value="SISAC"/>
+            <xsd:enumeration value="SK"/>
+            <xsd:enumeration value="SouthCarolina"/>
+            <xsd:enumeration value="SouthDakota"/>
+            <xsd:enumeration value="StateAgencyAssigned"/>
+            <xsd:enumeration value="StudentLoanGuarantor"/>
+            <xsd:enumeration value="SWIFT"/>
+            <xsd:enumeration value="TALC"/>
+            <xsd:enumeration value="TelecommunicationsIndustry"/>
+            <xsd:enumeration value="TemporaryHelpIndustry"/>
+            <xsd:enumeration value="Tennessee"/>
+            <xsd:enumeration value="Texas"/>
+            <xsd:enumeration value="TexasLandTitleAssociation"/>
+            <xsd:enumeration value="TextileDistributorsAssociationInc"/>
+            <xsd:enumeration value="TDCC-EDIA"/>
+            <xsd:enumeration value="TW-ChineseTaipeiCustoms"/>
+            <xsd:enumeration value="TW-Trade-van"/>
+            <xsd:enumeration value="UCS"/>
+            <xsd:enumeration value="UIC"/>
+            <xsd:enumeration value="UN"/>
+            <xsd:enumeration value="UNECE"/>
+            <xsd:enumeration value="UNCTAD"/>
+            <xsd:enumeration value="UnitedStatesCourts"/>
+            <xsd:enumeration value="UnitedStatesMarineCorps"/>
+            <xsd:enumeration value="UnitedStatesNuclearRegulatoryCommission"/>
+            <xsd:enumeration value="UPU"/>
+            <xsd:enumeration value="US-AA"/>
+            <xsd:enumeration value="US-AAR"/>
+            <xsd:enumeration value="US-ABA"/>
+            <xsd:enumeration value="US-AIAG"/>
+            <xsd:enumeration value="US-AirTransportAssociationOfAmerica"/>
+            <xsd:enumeration value="US-AISI"/>
+            <xsd:enumeration value="US-AmericanPetroleumInstitute"/>
+            <xsd:enumeration value="US-ANSIASCX12"/>
+            <xsd:enumeration value="US-API"/>
+            <xsd:enumeration value="US-ASTM"/>
+            <xsd:enumeration value="US-ATF"/>
+            <xsd:enumeration value="US-BATF"/>
+            <xsd:enumeration value="US-BXA"/>
+            <xsd:enumeration value="US-CHIPS"/>
+            <xsd:enumeration value="US-CIDX"/>
+            <xsd:enumeration value="US-CM"/>
+            <xsd:enumeration value="US-COPAS"/>
+            <xsd:enumeration value="US-DAndB"/>
+            <xsd:enumeration value="US-DCI"/>
+            <xsd:enumeration value="US-DEA"/>
+            <xsd:enumeration value="US-DHHS"/>
+            <xsd:enumeration value="US-DISA"/>
+            <xsd:enumeration value="US-DISCUS"/>
+            <xsd:enumeration value="US-DLMSO"/>
+            <xsd:enumeration value="US-DOA"/>
+            <xsd:enumeration value="US-DOD"/>
+            <xsd:enumeration value="US-DODAAC"/>
+            <xsd:enumeration value="US-DOL"/>
+            <xsd:enumeration value="US-DOT"/>
+            <xsd:enumeration value="US-DSAA"/>
+            <xsd:enumeration value="US-EIA"/>
+            <xsd:enumeration value="US-FCC"/>
+            <xsd:enumeration value="US-FDA"/>
+            <xsd:enumeration value="US-FIPS"/>
+            <xsd:enumeration value="US-FMC"/>
+            <xsd:enumeration value="US-FWS"/>
+            <xsd:enumeration value="US-GSA"/>
+            <xsd:enumeration value="US-HBICC"/>
+            <xsd:enumeration value="US-HI"/>
+            <xsd:enumeration value="US-HL7"/>
+            <xsd:enumeration value="US-ISA"/>
+            <xsd:enumeration value="US-MARAD"/>
+            <xsd:enumeration value="US-NABCA"/>
+            <xsd:enumeration value="US-NAIC"/>
+            <xsd:enumeration value="USNationalCenterForHealthStatisticsCommissionOfProfessionalAndHospitalActivities"/>
+            <xsd:enumeration value="US-NationalMotorFreightClassificationAssociation"/>
+            <xsd:enumeration value="US-NationalRetailFederation"/>
+            <xsd:enumeration value="US-NCCMA"/>
+            <xsd:enumeration value="US-NIST"/>
+            <xsd:enumeration value="US-NRC"/>
+            <xsd:enumeration value="US-NWDA"/>
+            <xsd:enumeration value="US-ODTC"/>
+            <xsd:enumeration value="US-OFAC"/>
+            <xsd:enumeration value="US-OMB"/>
+            <xsd:enumeration value="US-StandardCarrierAlphaCode"/>
+            <xsd:enumeration value="US-TDCC"/>
+            <xsd:enumeration value="US-UCC"/>
+            <xsd:enumeration value="US-UN-SPSC"/>
+            <xsd:enumeration value="US-UOP"/>
+            <xsd:enumeration value="US-USCensusBureau"/>
+            <xsd:enumeration value="US-USCustomsService"/>
+            <xsd:enumeration value="US-USPS"/>
+            <xsd:enumeration value="US-VA"/>
+            <xsd:enumeration value="US-VICS"/>
+            <xsd:enumeration value="US-WSSA"/>
+            <xsd:enumeration value="Utah"/>
+            <xsd:enumeration value="UtilityIndustryGroup"/>
+            <xsd:enumeration value="Vermont"/>
+            <xsd:enumeration value="VICS"/>
+            <xsd:enumeration value="Virginia"/>
+            <xsd:enumeration value="Washington"/>
+            <xsd:enumeration value="WestVirginia"/>
+            <xsd:enumeration value="WHMIS"/>
+            <xsd:enumeration value="Wisconsin"/>
+            <xsd:enumeration value="Wyoming"/>
+            <xsd:enumeration value="DirectorGeneralOfCanada"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="CodeListIdentifierCode">
+        <xsd:restriction base="xsd:NMTOKEN">
+            <xsd:enumeration value="Other"/>
+            <xsd:enumeration value="AcceptanceSiteCode"/>
+            <xsd:enumeration value="AccidentParameters"/>
+            <xsd:enumeration value="AccordEuropeenRelatifAuTransportInternationalDesMarchandises"/>
+            <xsd:enumeration value="AccountAnalysisCodes"/>
+            <xsd:enumeration value="AccountCharacteristicsCode"/>
+            <xsd:enumeration value="AccountingInformationIdentifier"/>
+            <xsd:enumeration value="AccountRating"/>
+            <xsd:enumeration value="AccountRelationshipType"/>
+            <xsd:enumeration value="AcquisitionAdviceCode"/>
+            <xsd:enumeration value="AcquisitionMethodCode"/>
+            <xsd:enumeration value="AcquisitionMethodSuffixCode"/>
+            <xsd:enumeration value="ActionCode"/>
+            <xsd:enumeration value="ActivitePrincipaleExerceeCode"/>
+            <xsd:enumeration value="Activity"/>
+            <xsd:enumeration value="AdmittingDiagnosis"/>
+            <xsd:enumeration value="AdverseEventCode"/>
+            <xsd:enumeration value="AdverseEventOutcomeCode"/>
+            <xsd:enumeration value="AdviceCode"/>
+            <xsd:enumeration value="AgentStatusCode"/>
+            <xsd:enumeration value="AidTypeCode"/>
+            <xsd:enumeration value="AirCarrier"/>
+            <xsd:enumeration value="AirCommodityAndSpecialHandlingCode"/>
+            <xsd:enumeration value="AircraftMissionDesignSeriesCode"/>
+            <xsd:enumeration value="AirDimensionCode"/>
+            <xsd:enumeration value="AirportOrCity"/>
+            <xsd:enumeration value="AirportTerminal"/>
+            <xsd:enumeration value="AirTerminalIdentifierCode"/>
+            <xsd:enumeration value="AllegationTypeCode"/>
+            <xsd:enumeration value="AllPatientDiagnosisRelatedGroups"/>
+            <xsd:enumeration value="AllPatientRefinedDiagnosisRelatedGroups"/>
+            <xsd:enumeration value="AlterationLookup"/>
+            <xsd:enumeration value="AmbulatoryPatientGroups"/>
+            <xsd:enumeration value="AmendmentCode-Customs"/>
+            <xsd:enumeration value="AmericanPsychiatricAssociationDiagnosticStatisticalManualOfMentalDisorders"/>
+            <xsd:enumeration value="AmericanSocietyForTestingAndMaterials"/>
+            <xsd:enumeration value="AntennaPolarization"/>
+            <xsd:enumeration value="AntennaStructureType"/>
+            <xsd:enumeration value="ApplicantClassificationType"/>
+            <xsd:enumeration value="ApplicantType"/>
+            <xsd:enumeration value="ApplicationAcknowledgementAndErrorCodes"/>
+            <xsd:enumeration value="ApplicationErrorCode"/>
+            <xsd:enumeration value="ApplicationQuestionIdentifier"/>
+            <xsd:enumeration value="ApplicationType"/>
+            <xsd:enumeration value="Area"/>
+            <xsd:enumeration value="AreaOfOperation"/>
+            <xsd:enumeration value="ArrestReason"/>
+            <xsd:enumeration value="ArticleStatus"/>
+            <xsd:enumeration value="AssetDetails"/>
+            <xsd:enumeration value="AssetRecurrence"/>
+            <xsd:enumeration value="AssetStatusOrTransactionReportingCode"/>
+            <xsd:enumeration value="AssetTransferStatusCode"/>
+            <xsd:enumeration value="AssetType"/>
+            <xsd:enumeration value="AssignedByReceiver"/>
+            <xsd:enumeration value="AssignedBySender"/>
+            <xsd:enumeration value="AssociationOfAmericanRailroadsDeprescriptionDistributionList"/>
+            <xsd:enumeration value="AssociationOfAmericanRailroadsDeprescriptionExceptionList"/>
+            <xsd:enumeration value="AssociationOfAmericanRailroadsRateEdiNetworkErrorCode"/>
+            <xsd:enumeration value="AssociationOfAmericanRailroadsStandardTransportationCommodityCodeDescriptionQualifier"/>
+            <xsd:enumeration value="AssociationOfAmericanRailroadsStandardTransportationCommodityCodeMasterDescriptionInformation"/>
+            <xsd:enumeration value="AssociationOfAmericanRailroadsSwitchReleaseCodes"/>
+            <xsd:enumeration value="AssuredDeliveryIndicator"/>
+            <xsd:enumeration value="AuthorizationType"/>
+            <xsd:enumeration value="AutomatedClearingHouse"/>
+            <xsd:enumeration value="AutomatedDataProcessingEquipmentIdentificationCode"/>
+            <xsd:enumeration value="AwardSource"/>
+            <xsd:enumeration value="BalanceTypeCode"/>
+            <xsd:enumeration value="BankAdministrationInstitute"/>
+            <xsd:enumeration value="BankBranchSortingIdentification"/>
+            <xsd:enumeration value="BankIdentification"/>
+            <xsd:enumeration value="BankSecuritiesCode"/>
+            <xsd:enumeration value="BasisOfJurisdictionCode"/>
+            <xsd:enumeration value="BeneficiaryType"/>
+            <xsd:enumeration value="BidRejectionReason"/>
+            <xsd:enumeration value="BilledOfficeIndicatorCode"/>
+            <xsd:enumeration value="BillingAdviceCode"/>
+            <xsd:enumeration value="BillingStatusCode"/>
+            <xsd:enumeration value="BillOfLadingClauses"/>
+            <xsd:enumeration value="BoardOfInspectionAndSurveyPartLookup"/>
+            <xsd:enumeration value="BoardOfInspectionAndSurveyResponsibilityLookup"/>
+            <xsd:enumeration value="BoardOfInspectionAndSurveyShipLookup"/>
+            <xsd:enumeration value="BusinessAccountNumber"/>
+            <xsd:enumeration value="BusinessChangeCode"/>
+            <xsd:enumeration value="BusinessClassification"/>
+            <xsd:enumeration value="BusinessCreditRating"/>
+            <xsd:enumeration value="BusinessEntityFilingDetailCode"/>
+            <xsd:enumeration value="BusinessEntityFilingLocationCode"/>
+            <xsd:enumeration value="BusinessEntityFilingReportTypeCode"/>
+            <xsd:enumeration value="BusinessEntityFilingSecuritiesInformationCode"/>
+            <xsd:enumeration value="BusinessEntityFilingStatusCode"/>
+            <xsd:enumeration value="BusinessEntityFinancialInformationCode"/>
+            <xsd:enumeration value="BusinessEntityStatusCode"/>
+            <xsd:enumeration value="BusinessFunction"/>
+            <xsd:enumeration value="BusinessLegalStructureType"/>
+            <xsd:enumeration value="BusinessSizeCode"/>
+            <xsd:enumeration value="BusinessType"/>
+            <xsd:enumeration value="CallSignDirectory"/>
+            <xsd:enumeration value="CanadianInterEdi"/>
+            <xsd:enumeration value="CancellationReason"/>
+            <xsd:enumeration value="Carriers"/>
+            <xsd:enumeration value="CaseDesignatorNumber"/>
+            <xsd:enumeration value="CaseOriginCode"/>
+            <xsd:enumeration value="CashDiscountStipulationCode"/>
+            <xsd:enumeration value="CauseLookup"/>
+            <xsd:enumeration value="CauseOfInjuryCode"/>
+            <xsd:enumeration value="CauseOfLossCode"/>
+            <xsd:enumeration value="CeilingTypeCode"/>
+            <xsd:enumeration value="CertificationRequirementsCode"/>
+            <xsd:enumeration value="Charge"/>
+            <xsd:enumeration value="CitizenIdentification"/>
+            <xsd:enumeration value="City"/>
+            <xsd:enumeration value="CitySubdivision"/>
+            <xsd:enumeration value="ClaimPaymentRemarkCodes"/>
+            <xsd:enumeration value="ClaimType"/>
+            <xsd:enumeration value="ClassOfOperation"/>
+            <xsd:enumeration value="ClassOfPitch"/>
+            <xsd:enumeration value="ClauseStatusType"/>
+            <xsd:enumeration value="ClearingCode"/>
+            <xsd:enumeration value="ClearingHouseAutomatedPayment"/>
+            <xsd:enumeration value="ClearingHouseInterbankPaymentSystemParticipantsId"/>
+            <xsd:enumeration value="ClearingHouseInterbankPaymentSystemUniversalId"/>
+            <xsd:enumeration value="CoastDesignationCode"/>
+            <xsd:enumeration value="CognizanceSymbol"/>
+            <xsd:enumeration value="CollisionIndustryElectronicCommerceAssociation-Inspection"/>
+            <xsd:enumeration value="CollisionIndustryElectronicCommerceAssociation-LossCategory"/>
+            <xsd:enumeration value="CollisionIndustryElectronicCommerceAssociation-PointsOfImpact"/>
+            <xsd:enumeration value="CollisionIndustryElectronicCommerceAssociation-Profile"/>
+            <xsd:enumeration value="Combiterms1990"/>
+            <xsd:enumeration value="CommercialAndGovernmentEntity"/>
+            <xsd:enumeration value="CommercialDriversLicense"/>
+            <xsd:enumeration value="CommercialVehicleOperationsCommodityCode"/>
+            <xsd:enumeration value="CommercialVehicleOperationsHazardousMaterialCode"/>
+            <xsd:enumeration value="CommercialVehicleOperationsInsurance"/>
+            <xsd:enumeration value="CommercialVehicleOperationsSafetyCode"/>
+            <xsd:enumeration value="CommercialVehicleOperationsStatusCode"/>
+            <xsd:enumeration value="CommercialVehicleRegistration"/>
+            <xsd:enumeration value="CommercialVehicleTax"/>
+            <xsd:enumeration value="CommercialVehicleTitle"/>
+            <xsd:enumeration value="CommercialVehicleType"/>
+            <xsd:enumeration value="Commodity"/>
+            <xsd:enumeration value="CommunicationsRoutingIdentifierCode"/>
+            <xsd:enumeration value="CompensationTypeCodes"/>
+            <xsd:enumeration value="CompetitiveCharacteristicsCode"/>
+            <xsd:enumeration value="ComplaintRequestCode"/>
+            <xsd:enumeration value="ComplianceReviewCode"/>
+            <xsd:enumeration value="ConclusionEvaluationCode"/>
+            <xsd:enumeration value="Condition"/>
+            <xsd:enumeration value="ConditionDetail"/>
+            <xsd:enumeration value="ConsigneesPremises"/>
+            <xsd:enumeration value="ConsignorsPremises"/>
+            <xsd:enumeration value="ConsolidationAndContainerizationPointCode"/>
+            <xsd:enumeration value="ConsolidationDetail"/>
+            <xsd:enumeration value="ConstructionMaterial"/>
+            <xsd:enumeration value="ContactorAlertListReason"/>
+            <xsd:enumeration value="ContactStatusCode"/>
+            <xsd:enumeration value="ContainerAndRoll-OnOrRoll-OffNumberCode"/>
+            <xsd:enumeration value="ContainerTerminal"/>
+            <xsd:enumeration value="ContentIndicatorCode"/>
+            <xsd:enumeration value="Continent"/>
+            <xsd:enumeration value="Contract"/>
+            <xsd:enumeration value="ContractClose-OutGroupCode"/>
+            <xsd:enumeration value="ContractDeliveryDateRevisionAgentCode"/>
+            <xsd:enumeration value="ContractFundReportingTransactionCode"/>
+            <xsd:enumeration value="ContractorAlertListStatus"/>
+            <xsd:enumeration value="ContractorReviewListStatus"/>
+            <xsd:enumeration value="ContractPaymentDeductionOrCollectionCode"/>
+            <xsd:enumeration value="ContractPaymentLineItemStatusCode"/>
+            <xsd:enumeration value="ContractShipmentAdviceCode"/>
+            <xsd:enumeration value="ControlledInventoryItemCode"/>
+            <xsd:enumeration value="ControlUnitDesignCode"/>
+            <xsd:enumeration value="ControvertCode"/>
+            <xsd:enumeration value="ConvictionOffenseType"/>
+            <xsd:enumeration value="CooperativeLogisticsProgramSupportCode"/>
+            <xsd:enumeration value="CorporateFinancialFilingCriteria"/>
+            <xsd:enumeration value="CorporateStatementFilingCode"/>
+            <xsd:enumeration value="CorrectionOrChangeForStorageItemRecordsCode"/>
+            <xsd:enumeration value="Country"/>
+            <xsd:enumeration value="CountryAndActivityCode"/>
+            <xsd:enumeration value="CountryCode-FinanceAndAcquisition"/>
+            <xsd:enumeration value="CountrySub-Entity"/>
+            <xsd:enumeration value="County"/>
+            <xsd:enumeration value="CountyDesignatorCode"/>
+            <xsd:enumeration value="CouponAdjustmentReasonCode"/>
+            <xsd:enumeration value="CourtAppearanceTypeCode"/>
+            <xsd:enumeration value="CourtCaseStatusCode"/>
+            <xsd:enumeration value="CourtDispositionCode"/>
+            <xsd:enumeration value="CourtDocumentTypeCode"/>
+            <xsd:enumeration value="CourtIssuedWarrantTypeCode"/>
+            <xsd:enumeration value="CourtOfLawEventType"/>
+            <xsd:enumeration value="CourtOfLawType"/>
+            <xsd:enumeration value="CourtPartyStatus"/>
+            <xsd:enumeration value="CourtPleadingTypeCode"/>
+            <xsd:enumeration value="CoverageCodeList"/>
+            <xsd:enumeration value="CoverageModifier"/>
+            <xsd:enumeration value="Cpa-CanadianPaymentsAssociation"/>
+            <xsd:enumeration value="CriminalCharge"/>
+            <xsd:enumeration value="CriminalChargeGrade"/>
+            <xsd:enumeration value="CriticalityDesignatorCode"/>
+            <xsd:enumeration value="CuisineTypeCode"/>
+            <xsd:enumeration value="CurrentAssetDetails"/>
+            <xsd:enumeration value="CurrentDentalTerminologyCode"/>
+            <xsd:enumeration value="CurrentLiabilityDetails"/>
+            <xsd:enumeration value="CurrentProceduralTerminologyCodes"/>
+            <xsd:enumeration value="CustomerMaintenanceLevelLookup"/>
+            <xsd:enumeration value="CustomerWithinCountryCode"/>
+            <xsd:enumeration value="CustomizedNoticeTypeCode"/>
+            <xsd:enumeration value="CustomsAreaOfTransaction"/>
+            <xsd:enumeration value="CustomsDeclarationType"/>
+            <xsd:enumeration value="CustomsDomesticPortLocationCodes-USScheduleD"/>
+            <xsd:enumeration value="CustomsForeignPortLocationCodes-USScheduleK"/>
+            <xsd:enumeration value="CustomsIndicator"/>
+            <xsd:enumeration value="CustomsInspectionType"/>
+            <xsd:enumeration value="CustomsOffice"/>
+            <xsd:enumeration value="CustomsPreference"/>
+            <xsd:enumeration value="CustomsProcedure"/>
+            <xsd:enumeration value="CustomsReleaseNotification"/>
+            <xsd:enumeration value="CustomsSimplifiedProcedure"/>
+            <xsd:enumeration value="CustomsSpecialCodes"/>
+            <xsd:enumeration value="CustomsStatusOfGoods"/>
+            <xsd:enumeration value="CustomsTransitGuarantee"/>
+            <xsd:enumeration value="CustomsTransitType"/>
+            <xsd:enumeration value="CustomsValuationMethod"/>
+            <xsd:enumeration value="CustomsWarehouse"/>
+            <xsd:enumeration value="DangerousGoodsPackingType"/>
+            <xsd:enumeration value="DataCategory"/>
+            <xsd:enumeration value="DateShippedOrReceivedCode"/>
+            <xsd:enumeration value="DebtorBusinessTypeCode"/>
+            <xsd:enumeration value="DebtorTypeCode"/>
+            <xsd:enumeration value="DefendantPleaTypeCode"/>
+            <xsd:enumeration value="DefensePrioritiesAndAllocationsSystemCode"/>
+            <xsd:enumeration value="DeferralLookup"/>
+            <xsd:enumeration value="DeficiencyCause"/>
+            <xsd:enumeration value="DeficiencyIndicator"/>
+            <xsd:enumeration value="DelinquencyIndicator"/>
+            <xsd:enumeration value="DeliverySourceCode"/>
+            <xsd:enumeration value="DeliveryTermCode"/>
+            <xsd:enumeration value="DemandCode"/>
+            <xsd:enumeration value="DemilitarizationCode"/>
+            <xsd:enumeration value="DepartmentOfDefenseIdentificationCode"/>
+            <xsd:enumeration value="DeviceAvailabilityCode"/>
+            <xsd:enumeration value="DeviceEvaluationCode"/>
+            <xsd:enumeration value="DeviceEventProblemCode"/>
+            <xsd:enumeration value="DeviceOperatorTypeCode"/>
+            <xsd:enumeration value="DeviceStatusCode"/>
+            <xsd:enumeration value="DeviceUsageCode"/>
+            <xsd:enumeration value="Diagnosis"/>
+            <xsd:enumeration value="DiagnosisEncounteredDuringExaminationAndInvestigationOfIndividualsAndPopulationsCode"/>
+            <xsd:enumeration value="DiagnosisRelatedGroup"/>
+            <xsd:enumeration value="DiagnosticAndStatisticalManualOfMentalDisorders"/>
+            <xsd:enumeration value="DirectNumericalControlSystemCode"/>
+            <xsd:enumeration value="DisbursementStatusCode"/>
+            <xsd:enumeration value="Discrepancy"/>
+            <xsd:enumeration value="DiscrepancyAdviceCode"/>
+            <xsd:enumeration value="DiscrepancyCode"/>
+            <xsd:enumeration value="DiscrepancyIndicatorCode"/>
+            <xsd:enumeration value="DiscrepancyStatusOrDispositionCode"/>
+            <xsd:enumeration value="DisposalAuthorityCode"/>
+            <xsd:enumeration value="DisposalConditionCode"/>
+            <xsd:enumeration value="DistributionCode"/>
+            <xsd:enumeration value="DocumentIdentificationCode"/>
+            <xsd:enumeration value="DocumentRequestedByCustoms"/>
+            <xsd:enumeration value="Dodaac-DepartmentOfDefenseActivityAddressCode"/>
+            <xsd:enumeration value="DomesticLineOfBusinessCode"/>
+            <xsd:enumeration value="DoseFormCode"/>
+            <xsd:enumeration value="DriverParameters"/>
+            <xsd:enumeration value="DriversLicenseWithdrawalBasis"/>
+            <xsd:enumeration value="DriversLicenseWithdrawalDueProcessStatus"/>
+            <xsd:enumeration value="DriversLicenseWithdrawalExtent"/>
+            <xsd:enumeration value="DriversLicenseWithdrawalReason"/>
+            <xsd:enumeration value="DriversLicenseWithdrawalType"/>
+            <xsd:enumeration value="DrugDetailCode"/>
+            <xsd:enumeration value="DrugStatusAdverseEventCode"/>
+            <xsd:enumeration value="DrugStatusCode"/>
+            <xsd:enumeration value="DumpingOrCountervailingAssessmentMethod"/>
+            <xsd:enumeration value="DumpingSpecification"/>
+            <xsd:enumeration value="DunAndBradstreetCanadas8DigitStandardIndustrialClassificationCode"/>
+            <xsd:enumeration value="Duns-DunAndBradstreetPlus4"/>
+            <xsd:enumeration value="DunsStandardIndustrialClassification2Plus2DunAndBradstreet"/>
+            <xsd:enumeration value="DutyTaxOrFeePaymentMethod"/>
+            <xsd:enumeration value="DynamicGeneratorSetCode"/>
+            <xsd:enumeration value="DynamicLocomotiveTagCode"/>
+            <xsd:enumeration value="Edira-Id-EdiRegistrationAuthorityIdentification"/>
+            <xsd:enumeration value="EditErrorCode"/>
+            <xsd:enumeration value="EducationalInstitutionType"/>
+            <xsd:enumeration value="EducationalStudyArea"/>
+            <xsd:enumeration value="ElectromagneticTransmitterIdentification"/>
+            <xsd:enumeration value="EmployeeIdentification"/>
+            <xsd:enumeration value="EnhancedPartyIdentification"/>
+            <xsd:enumeration value="Entitlement"/>
+            <xsd:enumeration value="EntityRelationship"/>
+            <xsd:enumeration value="EquipmentStatusLookup"/>
+            <xsd:enumeration value="ErrorClassificationCode"/>
+            <xsd:enumeration value="EssentialityCode"/>
+            <xsd:enumeration value="EstimatedTimeOfArrivalCode"/>
+            <xsd:enumeration value="EstimateTypeLookup"/>
+            <xsd:enumeration value="EstimatingMethodStatusCode"/>
+            <xsd:enumeration value="Ethnicity"/>
+            <xsd:enumeration value="EvaluateWorkCandidateLookup"/>
+            <xsd:enumeration value="EvaluateWorkCandidateReasonLookup"/>
+            <xsd:enumeration value="EventAbatementCode"/>
+            <xsd:enumeration value="EventCodes"/>
+            <xsd:enumeration value="EventOrExposureCode"/>
+            <xsd:enumeration value="EventReappearanceCode"/>
+            <xsd:enumeration value="ExaminationFacility"/>
+            <xsd:enumeration value="ExcavationInformationCodeList"/>
+            <xsd:enumeration value="ExcessMaterialDispositionCode"/>
+            <xsd:enumeration value="ExciseDuty"/>
+            <xsd:enumeration value="ExportCommodityClassification-USScheduleB"/>
+            <xsd:enumeration value="ExportRequirements"/>
+            <xsd:enumeration value="ExtensionReason"/>
+            <xsd:enumeration value="EyeColorCode"/>
+            <xsd:enumeration value="FacilityIdentification"/>
+            <xsd:enumeration value="FacilitySecurityClearance"/>
+            <xsd:enumeration value="FailureToAwardReason"/>
+            <xsd:enumeration value="FannieMaeAdjustableRateMortgagePlanCodes"/>
+            <xsd:enumeration value="FannieMae-FederalNationalMortgageAssociation-MortgageInsuranceCode"/>
+            <xsd:enumeration value="FannieMae-FederalNationalMortgageAssociation-PoolFeatureCode"/>
+            <xsd:enumeration value="FannieMae-FederalNationalMortgageAssociation-RemittancePrograms"/>
+            <xsd:enumeration value="FannieMae-FederalNationalMortgageAssociation-SpecialFeatureCode"/>
+            <xsd:enumeration value="FannieMaeRefinancePlanCode"/>
+            <xsd:enumeration value="FederalFinanceCodeList1"/>
+            <xsd:enumeration value="FederalHealthCareCodeList1"/>
+            <xsd:enumeration value="FederalLogisticsCodeList1"/>
+            <xsd:enumeration value="FederalProcurementCodeList1"/>
+            <xsd:enumeration value="FederalTransportationCodeList1"/>
+            <xsd:enumeration value="FinancialAnalysisCategories"/>
+            <xsd:enumeration value="FinancialInformationType"/>
+            <xsd:enumeration value="FinancialItemAllocation"/>
+            <xsd:enumeration value="FinancialItemAttributedCode"/>
+            <xsd:enumeration value="FinancialItemReclassification"/>
+            <xsd:enumeration value="FinancialManagementServiceCash-LinkCode"/>
+            <xsd:enumeration value="FinancialRating"/>
+            <xsd:enumeration value="FinancialRegime"/>
+            <xsd:enumeration value="FinancialRouting"/>
+            <xsd:enumeration value="FinancialStatementFormat"/>
+            <xsd:enumeration value="FleetParameters"/>
+            <xsd:enumeration value="FlowOfTheGoods"/>
+            <xsd:enumeration value="Follow-UpCode"/>
+            <xsd:enumeration value="ForecastType"/>
+            <xsd:enumeration value="ForeignLineOfBusinessCode"/>
+            <xsd:enumeration value="ForeignMilitarySalesCountryCode"/>
+            <xsd:enumeration value="FormTypeCode"/>
+            <xsd:enumeration value="ForwardingRestrictions"/>
+            <xsd:enumeration value="FreddieMac-FederalHomeLoanMortgageCorporation-MortgageInsuranceCode"/>
+            <xsd:enumeration value="FreddieMac-FederalHomeLoanMortgageCorporation-RemittancePrograms"/>
+            <xsd:enumeration value="FreddieMac-FederalHomeLoanMortgageCorporation-SpecialCharacterCode"/>
+            <xsd:enumeration value="FreddieMacRefinancePlanCode"/>
+            <xsd:enumeration value="FreeOnBoardSiteCode"/>
+            <xsd:enumeration value="FreeZone"/>
+            <xsd:enumeration value="FreightForwarder"/>
+            <xsd:enumeration value="Frequency"/>
+            <xsd:enumeration value="FrequencyBand"/>
+            <xsd:enumeration value="FunctionalArea"/>
+            <xsd:enumeration value="FunctionalGroup"/>
+            <xsd:enumeration value="FundCode"/>
+            <xsd:enumeration value="FundPurpose"/>
+            <xsd:enumeration value="GainOrLossIndicatorCode"/>
+            <xsd:enumeration value="Gate"/>
+            <xsd:enumeration value="GeneralServicesAdministrationCustomerSupplyCenterNumberCode"/>
+            <xsd:enumeration value="GeneralTerritoryType"/>
+            <xsd:enumeration value="GeneratorSetMountingCode"/>
+            <xsd:enumeration value="GeographicLocation"/>
+            <xsd:enumeration value="GlassActionCode"/>
+            <xsd:enumeration value="GoodsDescription"/>
+            <xsd:enumeration value="GovernmentAgencyProcedure"/>
+            <xsd:enumeration value="GradeOfDifficulty"/>
+            <xsd:enumeration value="GroupQualifierCode"/>
+            <xsd:enumeration value="HairColorCode"/>
+            <xsd:enumeration value="HandlingAction"/>
+            <xsd:enumeration value="HarmonizedSystem"/>
+            <xsd:enumeration value="HazardousMaterialCode"/>
+            <xsd:enumeration value="HazardousMaterialsCredential"/>
+            <xsd:enumeration value="HazardousResponseCodes"/>
+            <xsd:enumeration value="HealthCareClaimStatusCode"/>
+            <xsd:enumeration value="HealthCareFinancingAdministrationCommonProceduralCodingSystem"/>
+            <xsd:enumeration value="HealthCareFinancingAdministrationCommonProceduralCodingSystemPrincipalProcedure"/>
+            <xsd:enumeration value="HealthCareFinancingAdministrationDurableMedicalEquipmentRegionalCarrierCertificateOfMedicalNecessityForms"/>
+            <xsd:enumeration value="HealthcareProviderCharacteristicsAndResources"/>
+            <xsd:enumeration value="HealthcareProviderTaxonomy"/>
+            <xsd:enumeration value="HealthIndustryNumber"/>
+            <xsd:enumeration value="HealthIndustryOrganizationIdentification"/>
+            <xsd:enumeration value="Hobby"/>
+            <xsd:enumeration value="Icd10"/>
+            <xsd:enumeration value="IdentificationCode"/>
+            <xsd:enumeration value="IdentifyingCharacteristics"/>
+            <xsd:enumeration value="IdentityDisclosureCode"/>
+            <xsd:enumeration value="ImmunizationInjectionCode"/>
+            <xsd:enumeration value="ImpactAxisOrAnalogPortCode"/>
+            <xsd:enumeration value="ImpactRecorderCode"/>
+            <xsd:enumeration value="IncidentConditionCode"/>
+            <xsd:enumeration value="IncidentConsequenceCode"/>
+            <xsd:enumeration value="IncidentLocationCode"/>
+            <xsd:enumeration value="IncidentRelatedActionCode"/>
+            <xsd:enumeration value="Incoterms1980"/>
+            <xsd:enumeration value="IndicatorCode"/>
+            <xsd:enumeration value="IndividualInsuranceFinancialDetail"/>
+            <xsd:enumeration value="IndividualParticipationInCompany"/>
+            <xsd:enumeration value="IndividualSecurityClearance"/>
+            <xsd:enumeration value="IndustryRating"/>
+            <xsd:enumeration value="InformationIndicatorCode"/>
+            <xsd:enumeration value="InformationRequestResult"/>
+            <xsd:enumeration value="InformationRequestType"/>
+            <xsd:enumeration value="InformationType"/>
+            <xsd:enumeration value="InitialTreatmentCode"/>
+            <xsd:enumeration value="InquirySelection"/>
+            <xsd:enumeration value="InspectionParameters"/>
+            <xsd:enumeration value="InsuranceCoverageDetail"/>
+            <xsd:enumeration value="InsuranceInformationIndicator"/>
+            <xsd:enumeration value="InsurancePlanDescriptionCharacteristics"/>
+            <xsd:enumeration value="IntermediateContainerCode"/>
+            <xsd:enumeration value="IntermediateContainerQuantityCode"/>
+            <xsd:enumeration value="InternationalClassificationOfDiseasesClinicalModificationProcedure"/>
+            <xsd:enumeration value="InternationalClassificationOfDiseasesClinicalModificationPrincipalProcedure"/>
+            <xsd:enumeration value="InternationalClassificationOfDiseasesClinicalModification-Icd-9-CmCode"/>
+            <xsd:enumeration value="InternationalStandardDesignationSystemForTeethAndAreasOfTheOralCavity"/>
+            <xsd:enumeration value="InventoryCategoryCode"/>
+            <xsd:enumeration value="InventoryTypeCode"/>
+            <xsd:enumeration value="InvestigationStatusCode"/>
+            <xsd:enumeration value="InvestmentFundType"/>
+            <xsd:enumeration value="InvestmentType"/>
+            <xsd:enumeration value="IrsQualificationCode"/>
+            <xsd:enumeration value="ItemManagementCode"/>
+            <xsd:enumeration value="ItemSourcingCategory"/>
+            <xsd:enumeration value="ItemType"/>
+            <xsd:enumeration value="JobCharacteristicsLookup"/>
+            <xsd:enumeration value="JobOriginatorLookup"/>
+            <xsd:enumeration value="JointLifeInsuranceIndicator"/>
+            <xsd:enumeration value="JudicialHearingTypeCode"/>
+            <xsd:enumeration value="JudicialOrderTypeCode"/>
+            <xsd:enumeration value="JudicialSentenceTypeCode"/>
+            <xsd:enumeration value="JurisdictionType"/>
+            <xsd:enumeration value="KeyEventLookup"/>
+            <xsd:enumeration value="KindOfContractCode"/>
+            <xsd:enumeration value="KindOfModificationCode"/>
+            <xsd:enumeration value="LaboratoryResultsIdentificationCode"/>
+            <xsd:enumeration value="LaboratoryTestConditionCode"/>
+            <xsd:enumeration value="LegalCaseType"/>
+            <xsd:enumeration value="LegalEvent"/>
+            <xsd:enumeration value="LegalStructureCode"/>
+            <xsd:enumeration value="LetterOfRecommendationRatingCategory"/>
+            <xsd:enumeration value="LiabilityDetails"/>
+            <xsd:enumeration value="LiabilityType"/>
+            <xsd:enumeration value="LifeOrAnnuityProductCode"/>
+            <xsd:enumeration value="LifeOrAnnuityServiceFeatures"/>
+            <xsd:enumeration value="LifeOrAnnuityStatusCodes"/>
+            <xsd:enumeration value="LifeReinsuranceMessageType"/>
+            <xsd:enumeration value="LineItemConditionCode"/>
+            <xsd:enumeration value="LineOfAuthority"/>
+            <xsd:enumeration value="LineOfBusinessCode"/>
+            <xsd:enumeration value="LoanType"/>
+            <xsd:enumeration value="LocaleOfActivity"/>
+            <xsd:enumeration value="LocalSourceCode"/>
+            <xsd:enumeration value="LocationCode"/>
+            <xsd:enumeration value="LocationOfGoods"/>
+            <xsd:enumeration value="LocationsForTariffCalculations"/>
+            <xsd:enumeration value="LogicalObservationIdentifierNamesAndCodesCodes"/>
+            <xsd:enumeration value="LogisticsCodeList"/>
+            <xsd:enumeration value="LossDescriptionCode"/>
+            <xsd:enumeration value="LossSeverityCode"/>
+            <xsd:enumeration value="LotTypeCode"/>
+            <xsd:enumeration value="MajorForceProgramCode"/>
+            <xsd:enumeration value="ManagementCode"/>
+            <xsd:enumeration value="ManagementIndicatorCode-Petroleum"/>
+            <xsd:enumeration value="ManualClassCode"/>
+            <xsd:enumeration value="MarineBerth"/>
+            <xsd:enumeration value="MarineWharf"/>
+            <xsd:enumeration value="MarketPlaceOrganizationID"/>
+            <xsd:enumeration value="MarketPlaceTradingPartnerID"/>
+            <xsd:enumeration value="MaterialControlCode"/>
+            <xsd:enumeration value="Materials"/>
+            <xsd:enumeration value="MeansOfCommunicationsIdentifier"/>
+            <xsd:enumeration value="MeansOfTransportIdentification"/>
+            <xsd:enumeration value="MechanizationOfContractAdministrationServicesSystemErrorCode"/>
+            <xsd:enumeration value="MediaAndStatusCode"/>
+            <xsd:enumeration value="MedicaidProvider"/>
+            <xsd:enumeration value="MedicalBenefitsSchedule"/>
+            <xsd:enumeration value="MedicareProvider"/>
+            <xsd:enumeration value="MediumOfTransmissionCode"/>
+            <xsd:enumeration value="MemberOrganizations"/>
+            <xsd:enumeration value="MethodEvaluationCode"/>
+            <xsd:enumeration value="MethodsOfPayment"/>
+            <xsd:enumeration value="MilitaryAndCivilianGradeCode"/>
+            <xsd:enumeration value="MilitaryAssistanceProgramAddressCode"/>
+            <xsd:enumeration value="MinorityIndicator"/>
+            <xsd:enumeration value="MissionImpactStatementCode"/>
+            <xsd:enumeration value="MonetaryFunctionDetail"/>
+            <xsd:enumeration value="MortgageIndexSourceCode"/>
+            <xsd:enumeration value="Multi-MediaObject"/>
+            <xsd:enumeration value="Nacha-NationalAutomatedClearingHouseAssociation"/>
+            <xsd:enumeration value="NationalCouncilForPrescriptionDrugProgramsRejectOrPaymentCodes"/>
+            <xsd:enumeration value="NationalCouncilOnCompensationInsuranceNatureOfInjuryCode"/>
+            <xsd:enumeration value="NationalCouncilOnCompensationInsurancePartOfBodyCode"/>
+            <xsd:enumeration value="NationalCouncilOnCompensationInsuranceSourceOfInjuryCode"/>
+            <xsd:enumeration value="NationalDrugCode"/>
+            <xsd:enumeration value="NationalMotorFreightClassificationCode"/>
+            <xsd:enumeration value="NationalStandardToothNumberingSystem"/>
+            <xsd:enumeration value="NatureOfBuy"/>
+            <xsd:enumeration value="NatureOfDebtCode"/>
+            <xsd:enumeration value="NatureOfEventCode"/>
+            <xsd:enumeration value="NatureOfInjuryCode"/>
+            <xsd:enumeration value="NatureOfSuit"/>
+            <xsd:enumeration value="NatureOfSuitCode"/>
+            <xsd:enumeration value="NatureOfTransaction"/>
+            <xsd:enumeration value="NoLongerConsideredForAwardReason"/>
+            <xsd:enumeration value="NomenclatureActivityClassificationEconomyCode"/>
+            <xsd:enumeration value="Non-PostalTown"/>
+            <xsd:enumeration value="NormeActiviteFrancaiseCode"/>
+            <xsd:enumeration value="NoticeType"/>
+            <xsd:enumeration value="NotificationIndicatorCode"/>
+            <xsd:enumeration value="ObligationVarianceCode"/>
+            <xsd:enumeration value="OccupationalSafetyAndHealthAdministrationNatureOfInjuryCode"/>
+            <xsd:enumeration value="OccupationalSafetyAndHealthAdministrationPartOfBodyCode"/>
+            <xsd:enumeration value="OccupationalSafetyAndHealthAdministrationSourceOfInjuryCode"/>
+            <xsd:enumeration value="OccupationClassification"/>
+            <xsd:enumeration value="OccupationCode"/>
+            <xsd:enumeration value="Occurrence"/>
+            <xsd:enumeration value="OccurrenceSpan"/>
+            <xsd:enumeration value="OceanCarrierCode"/>
+            <xsd:enumeration value="OfferAndReleaseOptionCode"/>
+            <xsd:enumeration value="OfficeOfWorkersCompensationProgramsNatureOfInjuryCode"/>
+            <xsd:enumeration value="OfficeOfWorkersCompensationProgramsOccupationCode"/>
+            <xsd:enumeration value="OfficeOfWorkersCompensationProgramsPartOfBodyCode"/>
+            <xsd:enumeration value="OfficeOfWorkersCompensationProgramsSourceOfInjuryCode"/>
+            <xsd:enumeration value="OperatingStatus"/>
+            <xsd:enumeration value="OperationType"/>
+            <xsd:enumeration value="OversizeOrOverweightCredential"/>
+            <xsd:enumeration value="OwnershipCode"/>
+            <xsd:enumeration value="OwnershipRights"/>
+            <xsd:enumeration value="PackageFailureCode"/>
+            <xsd:enumeration value="PackingAndOrUnpackingFacility"/>
+            <xsd:enumeration value="PackingRequirementLevelACode"/>
+            <xsd:enumeration value="PackingRequirementLevelBCode"/>
+            <xsd:enumeration value="PackingRequirementLevelCCode"/>
+            <xsd:enumeration value="PartOfBodyAffected"/>
+            <xsd:enumeration value="PartOfBodyCode"/>
+            <xsd:enumeration value="PartyIdentification"/>
+            <xsd:enumeration value="PassportNumber"/>
+            <xsd:enumeration value="PatientEventProblemCode"/>
+            <xsd:enumeration value="PaymentBehaviourRating"/>
+            <xsd:enumeration value="PaymentTypeCode"/>
+            <xsd:enumeration value="PedestrianCode"/>
+            <xsd:enumeration value="PersonalPropertyAndContentsCode"/>
+            <xsd:enumeration value="PetroleumBillType"/>
+            <xsd:enumeration value="PetroleumLandCategory"/>
+            <xsd:enumeration value="PetroleumLeaseStatus"/>
+            <xsd:enumeration value="PetroleumProductDisposition"/>
+            <xsd:enumeration value="PetroleumProductPoint-Of-Sale"/>
+            <xsd:enumeration value="PetroleumProductSellingArrangement"/>
+            <xsd:enumeration value="PetroleumProductValueAdjustment"/>
+            <xsd:enumeration value="PetroleumRegulatoryReport"/>
+            <xsd:enumeration value="PetroleumRoyaltyAdjustment"/>
+            <xsd:enumeration value="PetroleumRoyaltyCalculationMethod"/>
+            <xsd:enumeration value="PetroleumRoyaltyTransaction"/>
+            <xsd:enumeration value="PetroleumUnitedStatesGeologicalSurveyFormationCode"/>
+            <xsd:enumeration value="PetroleumWellAction"/>
+            <xsd:enumeration value="PetroleumWellClassificationStatus"/>
+            <xsd:enumeration value="PetroleumWellInformation"/>
+            <xsd:enumeration value="PetroleumWellShut-InReason"/>
+            <xsd:enumeration value="PetroleumWellTestInformation"/>
+            <xsd:enumeration value="PhysicalCharacteristicsCode"/>
+            <xsd:enumeration value="PlantClearanceOfficeCode"/>
+            <xsd:enumeration value="PlusOrMinusIndicatorCode"/>
+            <xsd:enumeration value="PolicyOnClaimIndicator"/>
+            <xsd:enumeration value="PolicyReserveValuationType"/>
+            <xsd:enumeration value="PolicyType"/>
+            <xsd:enumeration value="Port"/>
+            <xsd:enumeration value="PortalID"/>
+            <xsd:enumeration value="PostalDistrict"/>
+            <xsd:enumeration value="PostalServiceCarrierRoute"/>
+            <xsd:enumeration value="PostcodeDirectory"/>
+            <xsd:enumeration value="PostMarketStudyStatusCode"/>
+            <xsd:enumeration value="PreciousMetalsIndicatorCode"/>
+            <xsd:enumeration value="PreservationDataCode"/>
+            <xsd:enumeration value="PreservationMaterialCode"/>
+            <xsd:enumeration value="PreventiveMeasure"/>
+            <xsd:enumeration value="PrimaryDiagnosis"/>
+            <xsd:enumeration value="PrincipalDiagnosis"/>
+            <xsd:enumeration value="PrincipalPartyCitizenshipCode"/>
+            <xsd:enumeration value="PriorityDesignatorCode"/>
+            <xsd:enumeration value="PriorityLookup"/>
+            <xsd:enumeration value="ProducerFinancialHistoryCodes"/>
+            <xsd:enumeration value="ProductCode"/>
+            <xsd:enumeration value="ProductQualityDeficiencyReportSummaryCode"/>
+            <xsd:enumeration value="ProductSupplyCondition"/>
+            <xsd:enumeration value="ProfessionalDesignation"/>
+            <xsd:enumeration value="ProfessionalStatusCode"/>
+            <xsd:enumeration value="ProfessionTypeCode"/>
+            <xsd:enumeration value="ProgramOriginatorCode"/>
+            <xsd:enumeration value="ProgramYearCode"/>
+            <xsd:enumeration value="ProjectCode"/>
+            <xsd:enumeration value="ProjectionType"/>
+            <xsd:enumeration value="PropertyOwnershipExtent"/>
+            <xsd:enumeration value="PropertyOwnershipTypeCode"/>
+            <xsd:enumeration value="PropertyRecordStatusCode"/>
+            <xsd:enumeration value="PropertySourceCode"/>
+            <xsd:enumeration value="PropertyType"/>
+            <xsd:enumeration value="PropertyUnderwritingConditionCode"/>
+            <xsd:enumeration value="Proprietary"/>
+            <xsd:enumeration value="PurchasingContractOfficerInstructionsCode"/>
+            <xsd:enumeration value="PurposeCode"/>
+            <xsd:enumeration value="QualityAlertListReason"/>
+            <xsd:enumeration value="QualityAssuranceSiteCode"/>
+            <xsd:enumeration value="QualityConformance"/>
+            <xsd:enumeration value="QualityControlCode"/>
+            <xsd:enumeration value="QuantityPerUnitPackCode"/>
+            <xsd:enumeration value="QueryOptions"/>
+            <xsd:enumeration value="QueryStatus"/>
+            <xsd:enumeration value="RadioFrequencyType"/>
+            <xsd:enumeration value="RadioServiceType"/>
+            <xsd:enumeration value="RadioSystemType"/>
+            <xsd:enumeration value="RailAdditionalCharges"/>
+            <xsd:enumeration value="RailcarLetterMarking"/>
+            <xsd:enumeration value="RailDocumentNames"/>
+            <xsd:enumeration value="RailHandlingRestrictionsAndInstructions"/>
+            <xsd:enumeration value="RailHarmonizedCodificationOfTariffs"/>
+            <xsd:enumeration value="RailHarmonizedEquipmentType"/>
+            <xsd:enumeration value="RailRoutes"/>
+            <xsd:enumeration value="RailUnifiedNomenclatureOfGoods"/>
+            <xsd:enumeration value="RailwayCompanyNetwork"/>
+            <xsd:enumeration value="RailwayCustomer"/>
+            <xsd:enumeration value="RailwayFrontierAndTransitPoint"/>
+            <xsd:enumeration value="RailwayLocations"/>
+            <xsd:enumeration value="RailwayServicesHarmonizedCode"/>
+            <xsd:enumeration value="RateClass"/>
+            <xsd:enumeration value="RatingSummaryValue"/>
+            <xsd:enumeration value="RealEstateAssetType"/>
+            <xsd:enumeration value="ReasonForContractDeliveryDateRevisionCode"/>
+            <xsd:enumeration value="ReasonForDelayedClosingOfContractFileCode"/>
+            <xsd:enumeration value="ReasonForDisposalCode"/>
+            <xsd:enumeration value="ReasonForFinancialItemDetailChange"/>
+            <xsd:enumeration value="ReasonForPublicRecordFiling"/>
+            <xsd:enumeration value="ReasonForRequisitioningCode"/>
+            <xsd:enumeration value="RecipientOfBillingStatusCode"/>
+            <xsd:enumeration value="RecommendationsRegardingDelayedDeliveriesCode"/>
+            <xsd:enumeration value="RecordControlNumber"/>
+            <xsd:enumeration value="RecordPrecedenceBasedOnItsCurrencyInTime"/>
+            <xsd:enumeration value="ReferenceAndStationCode"/>
+            <xsd:enumeration value="RefrigerationUnitOperatingModeCode"/>
+            <xsd:enumeration value="Region"/>
+            <xsd:enumeration value="RegisteredContractorActivityCode"/>
+            <xsd:enumeration value="RegistrationType"/>
+            <xsd:enumeration value="ReinsuranceMonetaryType"/>
+            <xsd:enumeration value="ReinsurancePolicyAttributes"/>
+            <xsd:enumeration value="RejectAdviceCode"/>
+            <xsd:enumeration value="RejectIndicatorCode"/>
+            <xsd:enumeration value="RelatedDeviceApplicabilityCode"/>
+            <xsd:enumeration value="ReligiousAffiliationCode"/>
+            <xsd:enumeration value="RemedialActionCode"/>
+            <xsd:enumeration value="RemovableAccessoriesAndSpecialEquipmentOnRailcars"/>
+            <xsd:enumeration value="RentalCharge"/>
+            <xsd:enumeration value="RepairFacility"/>
+            <xsd:enumeration value="ReportableEventCode"/>
+            <xsd:enumeration value="ReportableEventStatusCode"/>
+            <xsd:enumeration value="ReportCode"/>
+            <xsd:enumeration value="ReportDistributionCode"/>
+            <xsd:enumeration value="ReportSourceCode"/>
+            <xsd:enumeration value="RepresentativeBuyIndicator"/>
+            <xsd:enumeration value="RequestCode"/>
+            <xsd:enumeration value="RequestType"/>
+            <xsd:enumeration value="RequirementCode"/>
+            <xsd:enumeration value="RequirementsIndicator"/>
+            <xsd:enumeration value="ResidencyIndicator"/>
+            <xsd:enumeration value="ResidentialAndCommercialRoomCode"/>
+            <xsd:enumeration value="ResponseStatusCode"/>
+            <xsd:enumeration value="RestrictionsAndProhibitionsPlacedOnTheRe-UseOf"/>
+            <xsd:enumeration value="ResultEvaluationCode"/>
+            <xsd:enumeration value="ReviewPeriodIndicatorCode"/>
+            <xsd:enumeration value="RiskClass"/>
+            <xsd:enumeration value="RoadCharacteristicCode"/>
+            <xsd:enumeration value="RoadwayDetail"/>
+            <xsd:enumeration value="RoadwayType"/>
+            <xsd:enumeration value="RouteCode"/>
+            <xsd:enumeration value="RunType"/>
+            <xsd:enumeration value="SafetyAndFitnessElectronicRecordSystemsErrorCode"/>
+            <xsd:enumeration value="SafetyAndFitnessElectronicRecordSystemsSubscriptionOption"/>
+            <xsd:enumeration value="SafetyHazardLookup"/>
+            <xsd:enumeration value="SafetyRegulation"/>
+            <xsd:enumeration value="SalesPriceConditionCode"/>
+            <xsd:enumeration value="SalvageDispositionCode"/>
+            <xsd:enumeration value="SampleExtractionLocation"/>
+            <xsd:enumeration value="SeavanOwnershipCode"/>
+            <xsd:enumeration value="SecondaryDiagnosis"/>
+            <xsd:enumeration value="SecondarySourceOfInjury"/>
+            <xsd:enumeration value="SecurityShareType"/>
+            <xsd:enumeration value="Service"/>
+            <xsd:enumeration value="ServiceAndAgencyCode"/>
+            <xsd:enumeration value="ServiceContractActOccupationCategoryCode"/>
+            <xsd:enumeration value="ServiceContractActOccupationClassificationCode"/>
+            <xsd:enumeration value="ServiceContractActOperationCode"/>
+            <xsd:enumeration value="SettlementOrPayoutOptions"/>
+            <xsd:enumeration value="ShareTypeCode"/>
+            <xsd:enumeration value="ShelfLifeCode"/>
+            <xsd:enumeration value="ShipmentAcceptanceDiscrepancyExplanationCode"/>
+            <xsd:enumeration value="ShipmentDescription"/>
+            <xsd:enumeration value="ShipmentHoldCode"/>
+            <xsd:enumeration value="ShipmentReleaseCode"/>
+            <xsd:enumeration value="ShippingAgent"/>
+            <xsd:enumeration value="SignalCode"/>
+            <xsd:enumeration value="SingleStateRegistrationSystemAndOperatingAuthorityCredential"/>
+            <xsd:enumeration value="SingleUseLabelCode"/>
+            <xsd:enumeration value="SizeAndType"/>
+            <xsd:enumeration value="SkinToneCode"/>
+            <xsd:enumeration value="SmallArmsErrorTransactionRejectCode"/>
+            <xsd:enumeration value="SmallArmsTransactionCode"/>
+            <xsd:enumeration value="SocialSecurityIdentification"/>
+            <xsd:enumeration value="SolicitationCancellationReason"/>
+            <xsd:enumeration value="SolicitationMethod"/>
+            <xsd:enumeration value="SoundCode"/>
+            <xsd:enumeration value="Source"/>
+            <xsd:enumeration value="SourceMaintenanceAndRecoverabilityCode"/>
+            <xsd:enumeration value="SourceOfDepositCode"/>
+            <xsd:enumeration value="SourceOfDisclosure"/>
+            <xsd:enumeration value="SourceOfInjuryCode"/>
+            <xsd:enumeration value="SourceOfLeadCode"/>
+            <xsd:enumeration value="SourceOfLossCode"/>
+            <xsd:enumeration value="SpecialCategoryCode"/>
+            <xsd:enumeration value="SpecialContractProvisionCode"/>
+            <xsd:enumeration value="SpecialDating"/>
+            <xsd:enumeration value="SpecialHandling"/>
+            <xsd:enumeration value="SpecialMarketingTypeCode"/>
+            <xsd:enumeration value="SpecialMarkingCode"/>
+            <xsd:enumeration value="SpecialMaterialIdentificationCode"/>
+            <xsd:enumeration value="SpecialProgramRequirementStatusCode"/>
+            <xsd:enumeration value="SpecialReimbursableProvisionsCode"/>
+            <xsd:enumeration value="SpecialRequirementLookup"/>
+            <xsd:enumeration value="SpecialRequirementsCode"/>
+            <xsd:enumeration value="StandardIndustrialClassification"/>
+            <xsd:enumeration value="StandardOccupationClassificationCode"/>
+            <xsd:enumeration value="StandardTextAccordingUSEmbargoRegulations"/>
+            <xsd:enumeration value="StandardTextClauses"/>
+            <xsd:enumeration value="StandardTextForExportAccordingNationalPrescriptions"/>
+            <xsd:enumeration value="StateCode"/>
+            <xsd:enumeration value="StationClassification"/>
+            <xsd:enumeration value="StationClassificationType"/>
+            <xsd:enumeration value="StatisticalAdministrativeInformationCode"/>
+            <xsd:enumeration value="StatisticalNatureOfTransaction"/>
+            <xsd:enumeration value="StatisticalObject"/>
+            <xsd:enumeration value="StatisticalProcedures"/>
+            <xsd:enumeration value="StatisticBundesAmtCode"/>
+            <xsd:enumeration value="StatusCode"/>
+            <xsd:enumeration value="StockExchangeCode"/>
+            <xsd:enumeration value="StockExchangeDetail"/>
+            <xsd:enumeration value="StockFundOrNon-StockFundCode"/>
+            <xsd:enumeration value="StorageFacility"/>
+            <xsd:enumeration value="StudentActivityTypeCode"/>
+            <xsd:enumeration value="StudentAwardCode"/>
+            <xsd:enumeration value="SubcaseNumber"/>
+            <xsd:enumeration value="SubrogationActionCode"/>
+            <xsd:enumeration value="SubrogationPaymentOptions"/>
+            <xsd:enumeration value="SubrogationRequestCodes"/>
+            <xsd:enumeration value="SubrogationResponseCodes"/>
+            <xsd:enumeration value="SubsistenceTypeOfPackCode"/>
+            <xsd:enumeration value="SuffixCode"/>
+            <xsd:enumeration value="SuffixOrLimitCode"/>
+            <xsd:enumeration value="SummonsTypeCode"/>
+            <xsd:enumeration value="SupplementalData"/>
+            <xsd:enumeration value="SupplementaryAccountingClassificationCode"/>
+            <xsd:enumeration value="SuppliersStockTurnover"/>
+            <xsd:enumeration value="SupplyConditionCode"/>
+            <xsd:enumeration value="SurfaceDescriptorCode"/>
+            <xsd:enumeration value="SWIFT"/>
+            <xsd:enumeration value="SyntaxNotes"/>
+            <xsd:enumeration value="SystematizedNomenclatureOfHumanAndVeterinaryMedicine"/>
+            <xsd:enumeration value="SystemStatus"/>
+            <xsd:enumeration value="TariffSchedule"/>
+            <xsd:enumeration value="TaxAssessmentMethod"/>
+            <xsd:enumeration value="TaxOrFeeExemptionReasonCode"/>
+            <xsd:enumeration value="TaxPartyIdentification"/>
+            <xsd:enumeration value="TechnicalAssessmentChecklist"/>
+            <xsd:enumeration value="TelephoneDirectory"/>
+            <xsd:enumeration value="TemplateCharacteristicLookup"/>
+            <xsd:enumeration value="TemplateOwnerLookup"/>
+            <xsd:enumeration value="TemplateTypeLookup"/>
+            <xsd:enumeration value="Termination"/>
+            <xsd:enumeration value="TermsOfDelivery"/>
+            <xsd:enumeration value="TertiaryDiagnosis"/>
+            <xsd:enumeration value="TestingDemographicCategoryCodeList"/>
+            <xsd:enumeration value="TestingServiceQuestionCodeList"/>
+            <xsd:enumeration value="TestingStatisticalCategoryCodeList"/>
+            <xsd:enumeration value="TestResultsCode"/>
+            <xsd:enumeration value="TitleDocumentCodeList"/>
+            <xsd:enumeration value="TitleExceptionAndRequirementCodeList"/>
+            <xsd:enumeration value="TradeCode"/>
+            <xsd:enumeration value="TrainIdentification"/>
+            <xsd:enumeration value="TransactionStatusIndicatorCode"/>
+            <xsd:enumeration value="TransportationBillCode"/>
+            <xsd:enumeration value="TransportationHoldingDelayCode"/>
+            <xsd:enumeration value="TransportationModeOrMethodCode"/>
+            <xsd:enumeration value="TransportationModeReasonCode"/>
+            <xsd:enumeration value="TransportationPriorityCode"/>
+            <xsd:enumeration value="TreasuryManagementAssociationServiceCode"/>
+            <xsd:enumeration value="TreasuryManagementAssociationServiceCodeAndBankServiceCode"/>
+            <xsd:enumeration value="TreasurySymbolCode"/>
+            <xsd:enumeration value="TreatmentCodes"/>
+            <xsd:enumeration value="TrendReason"/>
+            <xsd:enumeration value="TrialTypeCode"/>
+            <xsd:enumeration value="TypeAdjustmentCode"/>
+            <xsd:enumeration value="TypeAndCauseCode"/>
+            <xsd:enumeration value="TypeDue-InIndicator"/>
+            <xsd:enumeration value="TypeIdentityChangeCode"/>
+            <xsd:enumeration value="TypeInspectionCode"/>
+            <xsd:enumeration value="TypeNumericalControlSystemCode"/>
+            <xsd:enumeration value="TypeOfAssetsAndLiabilities"/>
+            <xsd:enumeration value="TypeOfAssistanceCode"/>
+            <xsd:enumeration value="TypeOfBillCode"/>
+            <xsd:enumeration value="TypeOfBusinessCode"/>
+            <xsd:enumeration value="TypeOfCargoCode"/>
+            <xsd:enumeration value="TypeOfContractCode"/>
+            <xsd:enumeration value="TypeOfContractorCode"/>
+            <xsd:enumeration value="TypeOfDelayCode"/>
+            <xsd:enumeration value="TypeOfFinancialAccount"/>
+            <xsd:enumeration value="TypeOfFirmCode"/>
+            <xsd:enumeration value="TypeOfIndustrialActivity"/>
+            <xsd:enumeration value="TypeOfInquiryCode"/>
+            <xsd:enumeration value="TypeOfInsured"/>
+            <xsd:enumeration value="TypeOfIssueCode"/>
+            <xsd:enumeration value="TypeOfLocationReconciliationRequest"/>
+            <xsd:enumeration value="TypeOfMediaCode"/>
+            <xsd:enumeration value="TypeOfPackage"/>
+            <xsd:enumeration value="TypeOfProcurement"/>
+            <xsd:enumeration value="TypeOfStorageCode"/>
+            <xsd:enumeration value="TypeOfSurveyQuestion"/>
+            <xsd:enumeration value="TypePackCode"/>
+            <xsd:enumeration value="TypePhysicalInventoryOrTransactionHistoryCode"/>
+            <xsd:enumeration value="UltimateRecipientCode"/>
+            <xsd:enumeration value="UnclaimedPropertyAdditionsDeletionsAndDeductionsCodes"/>
+            <xsd:enumeration value="UnclaimedPropertyTypeCode"/>
+            <xsd:enumeration value="UniformFreightClassificationCode"/>
+            <xsd:enumeration value="UniformResidentialAppraisalAttributesCode"/>
+            <xsd:enumeration value="UnitCode"/>
+            <xsd:enumeration value="UnitedNationsCommonCodingSystem"/>
+            <xsd:enumeration value="UnitedNationsStandardProductsAndServices"/>
+            <xsd:enumeration value="UnitedStatesDepartmentOfHealthAndHumanServicesOfficeOfVitalStatisticsE-Code"/>
+            <xsd:enumeration value="UnsolicitedProposalRejectionReason"/>
+            <xsd:enumeration value="UtilizationCode"/>
+            <xsd:enumeration value="VaccinationInnoculationOrIsolationCode"/>
+            <xsd:enumeration value="ValuationTypeCode"/>
+            <xsd:enumeration value="Value"/>
+            <xsd:enumeration value="ValueAddedTaxIdentification"/>
+            <xsd:enumeration value="VehicleClass"/>
+            <xsd:enumeration value="VehicleOccupantCode"/>
+            <xsd:enumeration value="VehicleParameters"/>
+            <xsd:enumeration value="VesselStatusAndTermsOfCarriageCode"/>
+            <xsd:enumeration value="VesselStowageLocationCode"/>
+            <xsd:enumeration value="VesselSustainingCode"/>
+            <xsd:enumeration value="ViewParameters"/>
+            <xsd:enumeration value="ViolationTypeCodeList"/>
+            <xsd:enumeration value="VoyageDocumentNumberCode"/>
+            <xsd:enumeration value="VoyageManifestReferenceCode"/>
+            <xsd:enumeration value="Warehouse"/>
+            <xsd:enumeration value="WarReserveMaterialRequirementCode"/>
+            <xsd:enumeration value="WaterCommodityAndSpecialHandlingCode"/>
+            <xsd:enumeration value="WaterTerminalIdentifierCode"/>
+            <xsd:enumeration value="WeightOrFragilityCode"/>
+            <xsd:enumeration value="WhenDiscoveredLookup"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:complexType name="ListOfTradingPartnerID">
+        <xsd:sequence>
+            <xsd:element maxOccurs="unbounded" name="TradingPartnerID">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element ref="Identifier"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:element name="ListOfTradingPartnerID" type="ListOfTradingPartnerID"/>
+    <xsd:complexType name="UserID">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute name="UserShortID" type="xsd:string" use="optional"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:element name="UserID" type="UserID"/>
+    <xsd:complexType name="PersonProfile">
+        <xsd:sequence>
+            <xsd:element minOccurs="0" ref="Title"/>
+            <xsd:element minOccurs="0" ref="AcademicTitle"/>
+            <xsd:element name="LastName" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="FirstName" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="MiddleName" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="FullName" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="CorrespondenceLanguage">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element ref="Language"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="NumberFormat" type="xsd:string"/>
+            <xsd:element minOccurs="0" ref="DateFormat"/>
+            <xsd:element minOccurs="0" name="TimeFormat" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="PersonTimezone">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element ref="Timezone"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element minOccurs="0" ref="ListOfX509Certificate"/>
+            <xsd:element ref="PersonAddress"/>
+            <xsd:element minOccurs="0" name="GeneralNotes" type="xsd:string"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:element name="PersonProfile" type="PersonProfile"/>
+    <xsd:complexType name="Title">
+        <xsd:sequence>
+            <xsd:element name="TitleCoded" type="TitleCode"/>
+            <xsd:element minOccurs="0" name="TitleCodedOther" type="xsd:string"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:element name="Title" type="Title"/>
+    <xsd:simpleType name="TitleCode">
+        <xsd:restriction base="xsd:NMTOKEN">
+            <xsd:enumeration value="Other"/>
+            <xsd:enumeration value="Mr"/>
+            <xsd:enumeration value="Mrs"/>
+            <xsd:enumeration value="Miss"/>
+            <xsd:enumeration value="Ms"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:complexType name="AcademicTitle">
+        <xsd:sequence>
+            <xsd:element name="AcademicTitleCoded" type="AcademicTitleCode"/>
+            <xsd:element minOccurs="0" name="AcademicTitleCodedOther" type="xsd:string"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:element name="AcademicTitle" type="AcademicTitle"/>
+    <xsd:simpleType name="AcademicTitleCode">
+        <xsd:restriction base="xsd:NMTOKEN">
+            <xsd:enumeration value="Other"/>
+            <xsd:enumeration value="Prof"/>
+            <xsd:enumeration value="Dr"/>
+            <xsd:enumeration value="Magister"/>
+            <xsd:enumeration value="Phd"/>
+            <xsd:enumeration value="MBA"/>
+            <xsd:enumeration value="BA"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:complexType name="Language">
+        <xsd:sequence>
+            <xsd:element name="LanguageCoded" type="LanguageCode"/>
+            <xsd:element minOccurs="0" name="LanguageCodedOther" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="LocaleCoded" type="LocaleCode"/>
+            <xsd:element minOccurs="0" name="LocaleCodedOther" type="xsd:string"/>
+        </xsd:sequence>
+        <xsd:attribute name="LanguageDependent" type="xcblBoolean" use="optional"/>
+    </xsd:complexType>
+    <xsd:element name="Language" type="Language"/>
+    <xsd:simpleType name="LanguageCode">
+        <xsd:restriction base="xsd:NMTOKEN">
+            <xsd:enumeration value="Other"/>
+            <xsd:enumeration value="aa"/>
+            <xsd:enumeration value="ab"/>
+            <xsd:enumeration value="af"/>
+            <xsd:enumeration value="am"/>
+            <xsd:enumeration value="ar"/>
+            <xsd:enumeration value="as"/>
+            <xsd:enumeration value="ay"/>
+            <xsd:enumeration value="az"/>
+            <xsd:enumeration value="ba"/>
+            <xsd:enumeration value="be"/>
+            <xsd:enumeration value="bg"/>
+            <xsd:enumeration value="bh"/>
+            <xsd:enumeration value="bi"/>
+            <xsd:enumeration value="bn"/>
+            <xsd:enumeration value="bo"/>
+            <xsd:enumeration value="br"/>
+            <xsd:enumeration value="ca"/>
+            <xsd:enumeration value="co"/>
+            <xsd:enumeration value="cs"/>
+            <xsd:enumeration value="cy"/>
+            <xsd:enumeration value="da"/>
+            <xsd:enumeration value="de"/>
+            <xsd:enumeration value="dz"/>
+            <xsd:enumeration value="el"/>
+            <xsd:enumeration value="en"/>
+            <xsd:enumeration value="eo"/>
+            <xsd:enumeration value="es"/>
+            <xsd:enumeration value="et"/>
+            <xsd:enumeration value="eu"/>
+            <xsd:enumeration value="fa"/>
+            <xsd:enumeration value="fi"/>
+            <xsd:enumeration value="fj"/>
+            <xsd:enumeration value="fo"/>
+            <xsd:enumeration value="fr"/>
+            <xsd:enumeration value="fy"/>
+            <xsd:enumeration value="ga"/>
+            <xsd:enumeration value="gd"/>
+            <xsd:enumeration value="gl"/>
+            <xsd:enumeration value="gn"/>
+            <xsd:enumeration value="gu"/>
+            <xsd:enumeration value="ha"/>
+            <xsd:enumeration value="he"/>
+            <xsd:enumeration value="hi"/>
+            <xsd:enumeration value="hr"/>
+            <xsd:enumeration value="hu"/>
+            <xsd:enumeration value="hy"/>
+            <xsd:enumeration value="ia"/>
+            <xsd:enumeration value="id"/>
+            <xsd:enumeration value="ie"/>
+            <xsd:enumeration value="ik"/>
+            <xsd:enumeration value="is"/>
+            <xsd:enumeration value="it"/>
+            <xsd:enumeration value="iu"/>
+            <xsd:enumeration value="ja"/>
+            <xsd:enumeration value="jw"/>
+            <xsd:enumeration value="ka"/>
+            <xsd:enumeration value="kk"/>
+            <xsd:enumeration value="kl"/>
+            <xsd:enumeration value="km"/>
+            <xsd:enumeration value="kn"/>
+            <xsd:enumeration value="ko"/>
+            <xsd:enumeration value="ks"/>
+            <xsd:enumeration value="ku"/>
+            <xsd:enumeration value="ky"/>
+            <xsd:enumeration value="la"/>
+            <xsd:enumeration value="ln"/>
+            <xsd:enumeration value="lo"/>
+            <xsd:enumeration value="lt"/>
+            <xsd:enumeration value="lv"/>
+            <xsd:enumeration value="mg"/>
+            <xsd:enumeration value="mi"/>
+            <xsd:enumeration value="mk"/>
+            <xsd:enumeration value="ml"/>
+            <xsd:enumeration value="mn"/>
+            <xsd:enumeration value="mo"/>
+            <xsd:enumeration value="mr"/>
+            <xsd:enumeration value="ms"/>
+            <xsd:enumeration value="mt"/>
+            <xsd:enumeration value="my"/>
+            <xsd:enumeration value="na"/>
+            <xsd:enumeration value="ne"/>
+            <xsd:enumeration value="nl"/>
+            <xsd:enumeration value="no"/>
+            <xsd:enumeration value="oc"/>
+            <xsd:enumeration value="om"/>
+            <xsd:enumeration value="or"/>
+            <xsd:enumeration value="pa"/>
+            <xsd:enumeration value="pl"/>
+            <xsd:enumeration value="ps"/>
+            <xsd:enumeration value="pt"/>
+            <xsd:enumeration value="qu"/>
+            <xsd:enumeration value="rm"/>
+            <xsd:enumeration value="rn"/>
+            <xsd:enumeration value="ro"/>
+            <xsd:enumeration value="ru"/>
+            <xsd:enumeration value="rw"/>
+            <xsd:enumeration value="sa"/>
+            <xsd:enumeration value="sd"/>
+            <xsd:enumeration value="sg"/>
+            <xsd:enumeration value="sh"/>
+            <xsd:enumeration value="si"/>
+            <xsd:enumeration value="sk"/>
+            <xsd:enumeration value="sl"/>
+            <xsd:enumeration value="sm"/>
+            <xsd:enumeration value="sn"/>
+            <xsd:enumeration value="so"/>
+            <xsd:enumeration value="sq"/>
+            <xsd:enumeration value="sr"/>
+            <xsd:enumeration value="ss"/>
+            <xsd:enumeration value="st"/>
+            <xsd:enumeration value="su"/>
+            <xsd:enumeration value="sv"/>
+            <xsd:enumeration value="sw"/>
+            <xsd:enumeration value="ta"/>
+            <xsd:enumeration value="te"/>
+            <xsd:enumeration value="tg"/>
+            <xsd:enumeration value="th"/>
+            <xsd:enumeration value="ti"/>
+            <xsd:enumeration value="tk"/>
+            <xsd:enumeration value="tl"/>
+            <xsd:enumeration value="tn"/>
+            <xsd:enumeration value="to"/>
+            <xsd:enumeration value="tr"/>
+            <xsd:enumeration value="ts"/>
+            <xsd:enumeration value="tt"/>
+            <xsd:enumeration value="tw"/>
+            <xsd:enumeration value="ug"/>
+            <xsd:enumeration value="uk"/>
+            <xsd:enumeration value="ur"/>
+            <xsd:enumeration value="uz"/>
+            <xsd:enumeration value="vi"/>
+            <xsd:enumeration value="vo"/>
+            <xsd:enumeration value="wo"/>
+            <xsd:enumeration value="xh"/>
+            <xsd:enumeration value="yi"/>
+            <xsd:enumeration value="yo"/>
+            <xsd:enumeration value="za"/>
+            <xsd:enumeration value="zh"/>
+            <xsd:enumeration value="zu"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="LocaleCode">
+        <xsd:restriction base="xsd:NMTOKEN">
+            <xsd:enumeration value="Other"/>
+            <xsd:enumeration value="ae"/>
+            <xsd:enumeration value="af"/>
+            <xsd:enumeration value="ag"/>
+            <xsd:enumeration value="ai"/>
+            <xsd:enumeration value="al"/>
+            <xsd:enumeration value="am"/>
+            <xsd:enumeration value="an"/>
+            <xsd:enumeration value="ao"/>
+            <xsd:enumeration value="aq"/>
+            <xsd:enumeration value="ar"/>
+            <xsd:enumeration value="as"/>
+            <xsd:enumeration value="at"/>
+            <xsd:enumeration value="au"/>
+            <xsd:enumeration value="aw"/>
+            <xsd:enumeration value="az"/>
+            <xsd:enumeration value="ba"/>
+            <xsd:enumeration value="bb"/>
+            <xsd:enumeration value="bd"/>
+            <xsd:enumeration value="be"/>
+            <xsd:enumeration value="bf"/>
+            <xsd:enumeration value="bg"/>
+            <xsd:enumeration value="bh"/>
+            <xsd:enumeration value="bi"/>
+            <xsd:enumeration value="bj"/>
+            <xsd:enumeration value="bm"/>
+            <xsd:enumeration value="bn"/>
+            <xsd:enumeration value="bo"/>
+            <xsd:enumeration value="br"/>
+            <xsd:enumeration value="bs"/>
+            <xsd:enumeration value="bt"/>
+            <xsd:enumeration value="bu"/>
+            <xsd:enumeration value="bw"/>
+            <xsd:enumeration value="by"/>
+            <xsd:enumeration value="bz"/>
+            <xsd:enumeration value="ca"/>
+            <xsd:enumeration value="cc"/>
+            <xsd:enumeration value="cd"/>
+            <xsd:enumeration value="cf"/>
+            <xsd:enumeration value="cg"/>
+            <xsd:enumeration value="ch"/>
+            <xsd:enumeration value="ci"/>
+            <xsd:enumeration value="ck"/>
+            <xsd:enumeration value="cl"/>
+            <xsd:enumeration value="cm"/>
+            <xsd:enumeration value="cn"/>
+            <xsd:enumeration value="co"/>
+            <xsd:enumeration value="cr"/>
+            <xsd:enumeration value="cs"/>
+            <xsd:enumeration value="cu"/>
+            <xsd:enumeration value="cv"/>
+            <xsd:enumeration value="cx"/>
+            <xsd:enumeration value="cy"/>
+            <xsd:enumeration value="cz"/>
+            <xsd:enumeration value="de"/>
+            <xsd:enumeration value="dj"/>
+            <xsd:enumeration value="dk"/>
+            <xsd:enumeration value="dm"/>
+            <xsd:enumeration value="do"/>
+            <xsd:enumeration value="dz"/>
+            <xsd:enumeration value="ec"/>
+            <xsd:enumeration value="ee"/>
+            <xsd:enumeration value="eg"/>
+            <xsd:enumeration value="eh"/>
+            <xsd:enumeration value="er"/>
+            <xsd:enumeration value="es"/>
+            <xsd:enumeration value="et"/>
+            <xsd:enumeration value="fi"/>
+            <xsd:enumeration value="fj"/>
+            <xsd:enumeration value="fk"/>
+            <xsd:enumeration value="fm"/>
+            <xsd:enumeration value="fo"/>
+            <xsd:enumeration value="fr"/>
+            <xsd:enumeration value="ga"/>
+            <xsd:enumeration value="gb"/>
+            <xsd:enumeration value="gd"/>
+            <xsd:enumeration value="ge"/>
+            <xsd:enumeration value="gf"/>
+            <xsd:enumeration value="gh"/>
+            <xsd:enumeration value="gi"/>
+            <xsd:enumeration value="gl"/>
+            <xsd:enumeration value="gm"/>
+            <xsd:enumeration value="gn"/>
+            <xsd:enumeration value="gp"/>
+            <xsd:enumeration value="gq"/>
+            <xsd:enumeration value="gr"/>
+            <xsd:enumeration value="gs"/>
+            <xsd:enumeration value="gt"/>
+            <xsd:enumeration value="gu"/>
+            <xsd:enumeration value="gw"/>
+            <xsd:enumeration value="gy"/>
+            <xsd:enumeration value="hk"/>
+            <xsd:enumeration value="hn"/>
+            <xsd:enumeration value="hr"/>
+            <xsd:enumeration value="ht"/>
+            <xsd:enumeration value="hu"/>
+            <xsd:enumeration value="id"/>
+            <xsd:enumeration value="ie"/>
+            <xsd:enumeration value="il"/>
+            <xsd:enumeration value="in"/>
+            <xsd:enumeration value="io"/>
+            <xsd:enumeration value="iq"/>
+            <xsd:enumeration value="ir"/>
+            <xsd:enumeration value="is"/>
+            <xsd:enumeration value="it"/>
+            <xsd:enumeration value="jm"/>
+            <xsd:enumeration value="jo"/>
+            <xsd:enumeration value="jp"/>
+            <xsd:enumeration value="ke"/>
+            <xsd:enumeration value="kg"/>
+            <xsd:enumeration value="kh"/>
+            <xsd:enumeration value="ki"/>
+            <xsd:enumeration value="km"/>
+            <xsd:enumeration value="kn"/>
+            <xsd:enumeration value="kp"/>
+            <xsd:enumeration value="kr"/>
+            <xsd:enumeration value="kw"/>
+            <xsd:enumeration value="ky"/>
+            <xsd:enumeration value="kz"/>
+            <xsd:enumeration value="la"/>
+            <xsd:enumeration value="lb"/>
+            <xsd:enumeration value="lc"/>
+            <xsd:enumeration value="li"/>
+            <xsd:enumeration value="lk"/>
+            <xsd:enumeration value="lr"/>
+            <xsd:enumeration value="ls"/>
+            <xsd:enumeration value="lt"/>
+            <xsd:enumeration value="lu"/>
+            <xsd:enumeration value="lv"/>
+            <xsd:enumeration value="ly"/>
+            <xsd:enumeration value="ma"/>
+            <xsd:enumeration value="mc"/>
+            <xsd:enumeration value="md"/>
+            <xsd:enumeration value="mg"/>
+            <xsd:enumeration value="mh"/>
+            <xsd:enumeration value="mk"/>
+            <xsd:enumeration value="ml"/>
+            <xsd:enumeration value="mm"/>
+            <xsd:enumeration value="mn"/>
+            <xsd:enumeration value="mo"/>
+            <xsd:enumeration value="mp"/>
+            <xsd:enumeration value="mq"/>
+            <xsd:enumeration value="mr"/>
+            <xsd:enumeration value="ms"/>
+            <xsd:enumeration value="mt"/>
+            <xsd:enumeration value="mu"/>
+            <xsd:enumeration value="mv"/>
+            <xsd:enumeration value="mw"/>
+            <xsd:enumeration value="mx"/>
+            <xsd:enumeration value="my"/>
+            <xsd:enumeration value="mz"/>
+            <xsd:enumeration value="na"/>
+            <xsd:enumeration value="nc"/>
+            <xsd:enumeration value="ne"/>
+            <xsd:enumeration value="nf"/>
+            <xsd:enumeration value="ng"/>
+            <xsd:enumeration value="ni"/>
+            <xsd:enumeration value="nl"/>
+            <xsd:enumeration value="no"/>
+            <xsd:enumeration value="np"/>
+            <xsd:enumeration value="nr"/>
+            <xsd:enumeration value="nu"/>
+            <xsd:enumeration value="nz"/>
+            <xsd:enumeration value="om"/>
+            <xsd:enumeration value="pa"/>
+            <xsd:enumeration value="pe"/>
+            <xsd:enumeration value="pf"/>
+            <xsd:enumeration value="pg"/>
+            <xsd:enumeration value="ph"/>
+            <xsd:enumeration value="pk"/>
+            <xsd:enumeration value="pl"/>
+            <xsd:enumeration value="pm"/>
+            <xsd:enumeration value="pn"/>
+            <xsd:enumeration value="pr"/>
+            <xsd:enumeration value="pt"/>
+            <xsd:enumeration value="pw"/>
+            <xsd:enumeration value="py"/>
+            <xsd:enumeration value="qa"/>
+            <xsd:enumeration value="re"/>
+            <xsd:enumeration value="ro"/>
+            <xsd:enumeration value="ru"/>
+            <xsd:enumeration value="rw"/>
+            <xsd:enumeration value="sa"/>
+            <xsd:enumeration value="sb"/>
+            <xsd:enumeration value="sc"/>
+            <xsd:enumeration value="sd"/>
+            <xsd:enumeration value="se"/>
+            <xsd:enumeration value="sg"/>
+            <xsd:enumeration value="sh"/>
+            <xsd:enumeration value="si"/>
+            <xsd:enumeration value="sj"/>
+            <xsd:enumeration value="sk"/>
+            <xsd:enumeration value="sl"/>
+            <xsd:enumeration value="sm"/>
+            <xsd:enumeration value="sn"/>
+            <xsd:enumeration value="so"/>
+            <xsd:enumeration value="sr"/>
+            <xsd:enumeration value="st"/>
+            <xsd:enumeration value="sv"/>
+            <xsd:enumeration value="sy"/>
+            <xsd:enumeration value="sz"/>
+            <xsd:enumeration value="tc"/>
+            <xsd:enumeration value="td"/>
+            <xsd:enumeration value="tf"/>
+            <xsd:enumeration value="tg"/>
+            <xsd:enumeration value="th"/>
+            <xsd:enumeration value="tj"/>
+            <xsd:enumeration value="tm"/>
+            <xsd:enumeration value="tn"/>
+            <xsd:enumeration value="to"/>
+            <xsd:enumeration value="tp"/>
+            <xsd:enumeration value="tr"/>
+            <xsd:enumeration value="tt"/>
+            <xsd:enumeration value="tv"/>
+            <xsd:enumeration value="tw"/>
+            <xsd:enumeration value="tz"/>
+            <xsd:enumeration value="ua"/>
+            <xsd:enumeration value="ug"/>
+            <xsd:enumeration value="um"/>
+            <xsd:enumeration value="us"/>
+            <xsd:enumeration value="uy"/>
+            <xsd:enumeration value="uz"/>
+            <xsd:enumeration value="va"/>
+            <xsd:enumeration value="vc"/>
+            <xsd:enumeration value="ve"/>
+            <xsd:enumeration value="vg"/>
+            <xsd:enumeration value="vi"/>
+            <xsd:enumeration value="vn"/>
+            <xsd:enumeration value="vu"/>
+            <xsd:enumeration value="wf"/>
+            <xsd:enumeration value="ws"/>
+            <xsd:enumeration value="ye"/>
+            <xsd:enumeration value="yt"/>
+            <xsd:enumeration value="yu"/>
+            <xsd:enumeration value="za"/>
+            <xsd:enumeration value="zm"/>
+            <xsd:enumeration value="zw"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:complexType name="DateFormat">
+        <xsd:sequence>
+            <xsd:element name="DateFormatCoded" type="DateFormatCode"/>
+            <xsd:element minOccurs="0" name="DateFormatCodedOther" type="xsd:string"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:element name="DateFormat" type="DateFormat"/>
+    <xsd:simpleType name="DateFormatCode">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="Other"/>
+            <xsd:enumeration value="DD.MM.YYYY"/>
+            <xsd:enumeration value="DD/MM/YYYY"/>
+            <xsd:enumeration value="DD-MM-YYYY"/>
+            <xsd:enumeration value="MM.DD.YYYY"/>
+            <xsd:enumeration value="MM/DD/YYYY"/>
+            <xsd:enumeration value="MM-DD-YYYY"/>
+            <xsd:enumeration value="YYYY.MM.DD"/>
+            <xsd:enumeration value="YYYY/MM/DD"/>
+            <xsd:enumeration value="YYYY-MM-DD"/>
+            <xsd:enumeration value="YYYYMMDD"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:complexType name="Timezone">
+        <xsd:sequence>
+            <xsd:element name="TimezoneCoded" type="TimezoneCode"/>
+            <xsd:element minOccurs="0" name="TimezoneCodedOther" type="xsd:string"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:element name="Timezone" type="Timezone"/>
+    <xsd:simpleType name="TimezoneCode">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="Other"/>
+            <xsd:enumeration value="12.00"/>
+            <xsd:enumeration value="11.45"/>
+            <xsd:enumeration value="11.30"/>
+            <xsd:enumeration value="11.15"/>
+            <xsd:enumeration value="11.00"/>
+            <xsd:enumeration value="10.45"/>
+            <xsd:enumeration value="10.30"/>
+            <xsd:enumeration value="10.15"/>
+            <xsd:enumeration value="10.00"/>
+            <xsd:enumeration value="09.45"/>
+            <xsd:enumeration value="09.30"/>
+            <xsd:enumeration value="09.15"/>
+            <xsd:enumeration value="09.00"/>
+            <xsd:enumeration value="08.45"/>
+            <xsd:enumeration value="08.30"/>
+            <xsd:enumeration value="08.15"/>
+            <xsd:enumeration value="08.00"/>
+            <xsd:enumeration value="07.45"/>
+            <xsd:enumeration value="07.30"/>
+            <xsd:enumeration value="07.15"/>
+            <xsd:enumeration value="07.00"/>
+            <xsd:enumeration value="06.45"/>
+            <xsd:enumeration value="06.30"/>
+            <xsd:enumeration value="06.15"/>
+            <xsd:enumeration value="06.00"/>
+            <xsd:enumeration value="05.45"/>
+            <xsd:enumeration value="05.30"/>
+            <xsd:enumeration value="05.15"/>
+            <xsd:enumeration value="05.00"/>
+            <xsd:enumeration value="04.45"/>
+            <xsd:enumeration value="04.30"/>
+            <xsd:enumeration value="04.15"/>
+            <xsd:enumeration value="04.00"/>
+            <xsd:enumeration value="03.45"/>
+            <xsd:enumeration value="03.30"/>
+            <xsd:enumeration value="03.15"/>
+            <xsd:enumeration value="03.00"/>
+            <xsd:enumeration value="02.45"/>
+            <xsd:enumeration value="02.30"/>
+            <xsd:enumeration value="02.15"/>
+            <xsd:enumeration value="02.00"/>
+            <xsd:enumeration value="01.45"/>
+            <xsd:enumeration value="01.30"/>
+            <xsd:enumeration value="01.15"/>
+            <xsd:enumeration value="01.00"/>
+            <xsd:enumeration value="00.45"/>
+            <xsd:enumeration value="00.30"/>
+            <xsd:enumeration value="00.15"/>
+            <xsd:enumeration value="00.00"/>
+            <xsd:enumeration value="-00.15"/>
+            <xsd:enumeration value="-00.30"/>
+            <xsd:enumeration value="-00.45"/>
+            <xsd:enumeration value="-01.00"/>
+            <xsd:enumeration value="-01.15"/>
+            <xsd:enumeration value="-01.30"/>
+            <xsd:enumeration value="-01.45"/>
+            <xsd:enumeration value="-02.00"/>
+            <xsd:enumeration value="-02.15"/>
+            <xsd:enumeration value="-02.30"/>
+            <xsd:enumeration value="-02.45"/>
+            <xsd:enumeration value="-03.00"/>
+            <xsd:enumeration value="-03.15"/>
+            <xsd:enumeration value="-03.30"/>
+            <xsd:enumeration value="-03.45"/>
+            <xsd:enumeration value="-04.00"/>
+            <xsd:enumeration value="-04.15"/>
+            <xsd:enumeration value="-04.30"/>
+            <xsd:enumeration value="-04.45"/>
+            <xsd:enumeration value="-05.00"/>
+            <xsd:enumeration value="-05.15"/>
+            <xsd:enumeration value="-05.30"/>
+            <xsd:enumeration value="-05.45"/>
+            <xsd:enumeration value="-06.00"/>
+            <xsd:enumeration value="-06.15"/>
+            <xsd:enumeration value="-06.30"/>
+            <xsd:enumeration value="-06.45"/>
+            <xsd:enumeration value="-07.00"/>
+            <xsd:enumeration value="-07.15"/>
+            <xsd:enumeration value="-07.30"/>
+            <xsd:enumeration value="-07.45"/>
+            <xsd:enumeration value="-08.00"/>
+            <xsd:enumeration value="-08.15"/>
+            <xsd:enumeration value="-08.30"/>
+            <xsd:enumeration value="-08.45"/>
+            <xsd:enumeration value="-09.00"/>
+            <xsd:enumeration value="-09.15"/>
+            <xsd:enumeration value="-09.30"/>
+            <xsd:enumeration value="-09.45"/>
+            <xsd:enumeration value="-10.00"/>
+            <xsd:enumeration value="-10.15"/>
+            <xsd:enumeration value="-10.30"/>
+            <xsd:enumeration value="-10.45"/>
+            <xsd:enumeration value="-11.00"/>
+            <xsd:enumeration value="-11.15"/>
+            <xsd:enumeration value="-11.30"/>
+            <xsd:enumeration value="-11.45"/>
+            <xsd:enumeration value="-12.00"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:complexType name="ListOfX509Certificate">
+        <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="unbounded" ref="X509Certificate"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:element name="ListOfX509Certificate" type="ListOfX509Certificate"/>
+    <xsd:complexType name="X509Certificate">
+        <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="unbounded" ref="ListOfCertificatePurpose"/>
+            <xsd:choice>
+                <xsd:element name="X509Cert" type="xsd:string"/>
+                <xsd:element ref="X509CertificateInfo"/>
+            </xsd:choice>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:element name="X509Certificate" type="X509Certificate"/>
+    <xsd:complexType name="ListOfCertificatePurpose">
+        <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="unbounded" ref="CertificatePurpose"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:element name="ListOfCertificatePurpose" type="ListOfCertificatePurpose"/>
+    <xsd:complexType name="CertificatePurpose">
+        <xsd:sequence>
+            <xsd:element name="CertificatePurposeCoded" type="CertificatePurposeCode"/>
+            <xsd:element minOccurs="0" name="CertificatePurposeCodedOther" type="xsd:string"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:element name="CertificatePurpose" type="CertificatePurpose"/>
+    <xsd:simpleType name="CertificatePurposeCode">
+        <xsd:restriction base="xsd:NMTOKEN">
+            <xsd:enumeration value="Other"/>
+            <xsd:enumeration value="LogonCertificate"/>
+            <xsd:enumeration value="DigitalSignature"/>
+            <xsd:enumeration value="Encryption"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:complexType name="X509CertificateInfo">
+        <xsd:sequence>
+            <xsd:element name="X509Subject" type="xsd:string"/>
+            <xsd:element name="X509Issuer" type="xsd:string"/>
+            <xsd:element name="X509SerialNumber" type="xsd:string"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:element name="X509CertificateInfo" type="X509CertificateInfo"/>
+    <xsd:complexType name="PersonAddress">
+        <xsd:sequence>
+            <xsd:choice>
+                <xsd:element name="OrganizationAddressID" type="xsd:string"/>
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" ref="POBox"/>
+                    <xsd:element minOccurs="0" name="Street" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="HouseNumber" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="StreetSupplement1" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="StreetSupplement2" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="PostalCode" type="xsd:string"/>
+                    <xsd:element name="City" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="County" type="xsd:string"/>
+                    <xsd:element minOccurs="0" ref="Region"/>
+                    <xsd:element minOccurs="0" name="District" type="xsd:string"/>
+                    <xsd:element ref="Country"/>
+                </xsd:sequence>
+            </xsd:choice>
+            <xsd:element minOccurs="0" name="Building" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="Floor" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="RoomNumber" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="InhouseMail" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="Department" type="xsd:string"/>
+            <xsd:element ref="ListOfCommunicationDetail"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:element name="PersonAddress" type="PersonAddress"/>
+    <xsd:complexType name="POBox">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute name="POBoxPostalCode" type="xsd:string" use="optional"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:element name="POBox" type="POBox"/>
+    <xsd:complexType name="Region">
+        <xsd:sequence>
+            <xsd:element name="RegionCoded" type="RegionCode"/>
+            <xsd:element minOccurs="0" name="RegionCodedOther" type="xsd:string"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:element name="Region" type="Region"/>
+    <xsd:simpleType name="RegionCode">
+        <xsd:restriction base="xsd:NMTOKEN">
+            <xsd:enumeration value="Other"/>
+            <xsd:enumeration value="AUACT"/>
+            <xsd:enumeration value="AUNSW"/>
+            <xsd:enumeration value="AUNT"/>
+            <xsd:enumeration value="AUQLD"/>
+            <xsd:enumeration value="AUSA"/>
+            <xsd:enumeration value="AUTAS"/>
+            <xsd:enumeration value="AUVIC"/>
+            <xsd:enumeration value="AUWA"/>
+            <xsd:enumeration value="BRAC"/>
+            <xsd:enumeration value="BRAL"/>
+            <xsd:enumeration value="BRAM"/>
+            <xsd:enumeration value="BRAP"/>
+            <xsd:enumeration value="BRBA"/>
+            <xsd:enumeration value="BRCE"/>
+            <xsd:enumeration value="BRDF"/>
+            <xsd:enumeration value="BRES"/>
+            <xsd:enumeration value="BRGO"/>
+            <xsd:enumeration value="BRMA"/>
+            <xsd:enumeration value="BRMG"/>
+            <xsd:enumeration value="BRMS"/>
+            <xsd:enumeration value="BRMT"/>
+            <xsd:enumeration value="BRPA"/>
+            <xsd:enumeration value="BRPB"/>
+            <xsd:enumeration value="BRPE"/>
+            <xsd:enumeration value="BRPI"/>
+            <xsd:enumeration value="BRPR"/>
+            <xsd:enumeration value="BRRJ"/>
+            <xsd:enumeration value="BRRN"/>
+            <xsd:enumeration value="BRRO"/>
+            <xsd:enumeration value="BRRR"/>
+            <xsd:enumeration value="BRRS"/>
+            <xsd:enumeration value="BRSC"/>
+            <xsd:enumeration value="BRSE"/>
+            <xsd:enumeration value="BRSP"/>
+            <xsd:enumeration value="BRTO"/>
+            <xsd:enumeration value="CAAB"/>
+            <xsd:enumeration value="CABC"/>
+            <xsd:enumeration value="CAMB"/>
+            <xsd:enumeration value="CANB"/>
+            <xsd:enumeration value="CANF"/>
+            <xsd:enumeration value="CANS"/>
+            <xsd:enumeration value="CANT"/>
+            <xsd:enumeration value="CAON"/>
+            <xsd:enumeration value="CAPE"/>
+            <xsd:enumeration value="CAQC"/>
+            <xsd:enumeration value="CASK"/>
+            <xsd:enumeration value="CAYT"/>
+            <xsd:enumeration value="GBAM"/>
+            <xsd:enumeration value="GBAR"/>
+            <xsd:enumeration value="GBAT"/>
+            <xsd:enumeration value="GBBA"/>
+            <xsd:enumeration value="GBBB"/>
+            <xsd:enumeration value="GBBE"/>
+            <xsd:enumeration value="GBBF"/>
+            <xsd:enumeration value="GBBH"/>
+            <xsd:enumeration value="GBBK"/>
+            <xsd:enumeration value="GBBL"/>
+            <xsd:enumeration value="GBBM"/>
+            <xsd:enumeration value="GBBN"/>
+            <xsd:enumeration value="GBBO"/>
+            <xsd:enumeration value="GBBP"/>
+            <xsd:enumeration value="GBBR"/>
+            <xsd:enumeration value="GBBS"/>
+            <xsd:enumeration value="GBBU"/>
+            <xsd:enumeration value="GBBY"/>
+            <xsd:enumeration value="GBCA"/>
+            <xsd:enumeration value="GBCE"/>
+            <xsd:enumeration value="GBCG"/>
+            <xsd:enumeration value="GBCH"/>
+            <xsd:enumeration value="GBCI"/>
+            <xsd:enumeration value="GBCK"/>
+            <xsd:enumeration value="GBCL"/>
+            <xsd:enumeration value="GBCO"/>
+            <xsd:enumeration value="GBCR"/>
+            <xsd:enumeration value="GBCS"/>
+            <xsd:enumeration value="GBCU"/>
+            <xsd:enumeration value="GBCV"/>
+            <xsd:enumeration value="GBDB"/>
+            <xsd:enumeration value="GBDF"/>
+            <xsd:enumeration value="GBDG"/>
+            <xsd:enumeration value="GBDL"/>
+            <xsd:enumeration value="GBDN"/>
+            <xsd:enumeration value="GBDO"/>
+            <xsd:enumeration value="GBDU"/>
+            <xsd:enumeration value="GBDV"/>
+            <xsd:enumeration value="GBDY"/>
+            <xsd:enumeration value="GBER"/>
+            <xsd:enumeration value="GBES"/>
+            <xsd:enumeration value="GBFI"/>
+            <xsd:enumeration value="GBFM"/>
+            <xsd:enumeration value="GBGL"/>
+            <xsd:enumeration value="GBGM"/>
+            <xsd:enumeration value="GBGR"/>
+            <xsd:enumeration value="GBGS"/>
+            <xsd:enumeration value="GBGW"/>
+            <xsd:enumeration value="GBGY"/>
+            <xsd:enumeration value="GBHA"/>
+            <xsd:enumeration value="GBHI"/>
+            <xsd:enumeration value="GBHL"/>
+            <xsd:enumeration value="GBHR"/>
+            <xsd:enumeration value="GBHT"/>
+            <xsd:enumeration value="GBHW"/>
+            <xsd:enumeration value="GBIW"/>
+            <xsd:enumeration value="GBKE"/>
+            <xsd:enumeration value="GBKH"/>
+            <xsd:enumeration value="GBLA"/>
+            <xsd:enumeration value="GBLC"/>
+            <xsd:enumeration value="GBLD"/>
+            <xsd:enumeration value="GBLE"/>
+            <xsd:enumeration value="GBLI"/>
+            <xsd:enumeration value="GBLM"/>
+            <xsd:enumeration value="GBLO"/>
+            <xsd:enumeration value="GBLR"/>
+            <xsd:enumeration value="GBLS"/>
+            <xsd:enumeration value="GBLT"/>
+            <xsd:enumeration value="GBLU"/>
+            <xsd:enumeration value="GBMA"/>
+            <xsd:enumeration value="GBMG"/>
+            <xsd:enumeration value="GBMI"/>
+            <xsd:enumeration value="GBMK"/>
+            <xsd:enumeration value="GBMO"/>
+            <xsd:enumeration value="GBMY"/>
+            <xsd:enumeration value="GBNA"/>
+            <xsd:enumeration value="GBNB"/>
+            <xsd:enumeration value="GBNC"/>
+            <xsd:enumeration value="GBND"/>
+            <xsd:enumeration value="GBNE"/>
+            <xsd:enumeration value="GBNH"/>
+            <xsd:enumeration value="GBNK"/>
+            <xsd:enumeration value="GBNL"/>
+            <xsd:enumeration value="GBNM"/>
+            <xsd:enumeration value="GBNS"/>
+            <xsd:enumeration value="GBNT"/>
+            <xsd:enumeration value="GBNU"/>
+            <xsd:enumeration value="GBOM"/>
+            <xsd:enumeration value="GBOR"/>
+            <xsd:enumeration value="GBOX"/>
+            <xsd:enumeration value="GBPB"/>
+            <xsd:enumeration value="GBPL"/>
+            <xsd:enumeration value="GBPM"/>
+            <xsd:enumeration value="GBPO"/>
+            <xsd:enumeration value="GBPY"/>
+            <xsd:enumeration value="GBRD"/>
+            <xsd:enumeration value="GBRE"/>
+            <xsd:enumeration value="GBRM"/>
+            <xsd:enumeration value="GBRU"/>
+            <xsd:enumeration value="GBSC"/>
+            <xsd:enumeration value="GBSD"/>
+            <xsd:enumeration value="GBSE"/>
+            <xsd:enumeration value="GBSG"/>
+            <xsd:enumeration value="GBSH"/>
+            <xsd:enumeration value="GBSK"/>
+            <xsd:enumeration value="GBSL"/>
+            <xsd:enumeration value="GBSN"/>
+            <xsd:enumeration value="GBSO"/>
+            <xsd:enumeration value="GBSP"/>
+            <xsd:enumeration value="GBSR"/>
+            <xsd:enumeration value="GBST"/>
+            <xsd:enumeration value="GBSU"/>
+            <xsd:enumeration value="GBSW"/>
+            <xsd:enumeration value="GBSY"/>
+            <xsd:enumeration value="GBTA"/>
+            <xsd:enumeration value="GBTD"/>
+            <xsd:enumeration value="GBTH"/>
+            <xsd:enumeration value="GBTO"/>
+            <xsd:enumeration value="GBTW"/>
+            <xsd:enumeration value="GBWA"/>
+            <xsd:enumeration value="GBWD"/>
+            <xsd:enumeration value="GBWG"/>
+            <xsd:enumeration value="GBWI"/>
+            <xsd:enumeration value="GBWL"/>
+            <xsd:enumeration value="GBWM"/>
+            <xsd:enumeration value="GBWO"/>
+            <xsd:enumeration value="GBWR"/>
+            <xsd:enumeration value="GBWT"/>
+            <xsd:enumeration value="GBYK"/>
+            <xsd:enumeration value="GBYN"/>
+            <xsd:enumeration value="GBYS"/>
+            <xsd:enumeration value="GBYW"/>
+            <xsd:enumeration value="ITAG"/>
+            <xsd:enumeration value="ITAL"/>
+            <xsd:enumeration value="ITAN"/>
+            <xsd:enumeration value="ITAO"/>
+            <xsd:enumeration value="ITAP"/>
+            <xsd:enumeration value="ITAQ"/>
+            <xsd:enumeration value="ITAR"/>
+            <xsd:enumeration value="ITAT"/>
+            <xsd:enumeration value="ITAV"/>
+            <xsd:enumeration value="ITBA"/>
+            <xsd:enumeration value="ITBG"/>
+            <xsd:enumeration value="ITBI"/>
+            <xsd:enumeration value="ITBL"/>
+            <xsd:enumeration value="ITBN"/>
+            <xsd:enumeration value="ITBO"/>
+            <xsd:enumeration value="ITBR"/>
+            <xsd:enumeration value="ITBS"/>
+            <xsd:enumeration value="ITBZ"/>
+            <xsd:enumeration value="ITCA"/>
+            <xsd:enumeration value="ITCB"/>
+            <xsd:enumeration value="ITCE"/>
+            <xsd:enumeration value="ITCH"/>
+            <xsd:enumeration value="ITCL"/>
+            <xsd:enumeration value="ITCN"/>
+            <xsd:enumeration value="ITCO"/>
+            <xsd:enumeration value="ITCR"/>
+            <xsd:enumeration value="ITCS"/>
+            <xsd:enumeration value="ITCT"/>
+            <xsd:enumeration value="ITCZ"/>
+            <xsd:enumeration value="ITEN"/>
+            <xsd:enumeration value="ITFE"/>
+            <xsd:enumeration value="ITFG"/>
+            <xsd:enumeration value="ITFI"/>
+            <xsd:enumeration value="ITFO"/>
+            <xsd:enumeration value="ITFR"/>
+            <xsd:enumeration value="ITGE"/>
+            <xsd:enumeration value="ITGO"/>
+            <xsd:enumeration value="ITGR"/>
+            <xsd:enumeration value="ITIM"/>
+            <xsd:enumeration value="ITIS"/>
+            <xsd:enumeration value="ITKR"/>
+            <xsd:enumeration value="ITLC"/>
+            <xsd:enumeration value="ITLE"/>
+            <xsd:enumeration value="ITLI"/>
+            <xsd:enumeration value="ITLO"/>
+            <xsd:enumeration value="ITLT"/>
+            <xsd:enumeration value="ITLU"/>
+            <xsd:enumeration value="ITMC"/>
+            <xsd:enumeration value="ITME"/>
+            <xsd:enumeration value="ITMI"/>
+            <xsd:enumeration value="ITMN"/>
+            <xsd:enumeration value="ITMO"/>
+            <xsd:enumeration value="ITMS"/>
+            <xsd:enumeration value="ITMT"/>
+            <xsd:enumeration value="ITNA"/>
+            <xsd:enumeration value="ITNO"/>
+            <xsd:enumeration value="ITNU"/>
+            <xsd:enumeration value="ITOR"/>
+            <xsd:enumeration value="ITPA"/>
+            <xsd:enumeration value="ITPC"/>
+            <xsd:enumeration value="ITPD"/>
+            <xsd:enumeration value="ITPE"/>
+            <xsd:enumeration value="ITPG"/>
+            <xsd:enumeration value="ITPI"/>
+            <xsd:enumeration value="ITPN"/>
+            <xsd:enumeration value="ITPO"/>
+            <xsd:enumeration value="ITPR"/>
+            <xsd:enumeration value="ITPS"/>
+            <xsd:enumeration value="ITPT"/>
+            <xsd:enumeration value="ITPV"/>
+            <xsd:enumeration value="ITPZ"/>
+            <xsd:enumeration value="ITRA"/>
+            <xsd:enumeration value="ITRC"/>
+            <xsd:enumeration value="ITRE"/>
+            <xsd:enumeration value="ITRG"/>
+            <xsd:enumeration value="ITRI"/>
+            <xsd:enumeration value="ITRM"/>
+            <xsd:enumeration value="ITRN"/>
+            <xsd:enumeration value="ITRO"/>
+            <xsd:enumeration value="ITRV"/>
+            <xsd:enumeration value="ITSA"/>
+            <xsd:enumeration value="ITSI"/>
+            <xsd:enumeration value="ITSO"/>
+            <xsd:enumeration value="ITSP"/>
+            <xsd:enumeration value="ITSR"/>
+            <xsd:enumeration value="ITSS"/>
+            <xsd:enumeration value="ITSV"/>
+            <xsd:enumeration value="ITTA"/>
+            <xsd:enumeration value="ITTE"/>
+            <xsd:enumeration value="ITTN"/>
+            <xsd:enumeration value="ITTO"/>
+            <xsd:enumeration value="ITTP"/>
+            <xsd:enumeration value="ITTR"/>
+            <xsd:enumeration value="ITTS"/>
+            <xsd:enumeration value="ITTV"/>
+            <xsd:enumeration value="ITUD"/>
+            <xsd:enumeration value="ITVA"/>
+            <xsd:enumeration value="ITVC"/>
+            <xsd:enumeration value="ITVE"/>
+            <xsd:enumeration value="ITVI"/>
+            <xsd:enumeration value="ITVR"/>
+            <xsd:enumeration value="ITVT"/>
+            <xsd:enumeration value="ITVV"/>
+            <xsd:enumeration value="USAK"/>
+            <xsd:enumeration value="USAL"/>
+            <xsd:enumeration value="USAR"/>
+            <xsd:enumeration value="USAS"/>
+            <xsd:enumeration value="USAZ"/>
+            <xsd:enumeration value="USCA"/>
+            <xsd:enumeration value="USCO"/>
+            <xsd:enumeration value="USCT"/>
+            <xsd:enumeration value="USDC"/>
+            <xsd:enumeration value="USDE"/>
+            <xsd:enumeration value="USFL"/>
+            <xsd:enumeration value="USGA"/>
+            <xsd:enumeration value="USGU"/>
+            <xsd:enumeration value="USHI"/>
+            <xsd:enumeration value="USIA"/>
+            <xsd:enumeration value="USID"/>
+            <xsd:enumeration value="USIL"/>
+            <xsd:enumeration value="USIN"/>
+            <xsd:enumeration value="USKS"/>
+            <xsd:enumeration value="USKY"/>
+            <xsd:enumeration value="USLA"/>
+            <xsd:enumeration value="USMA"/>
+            <xsd:enumeration value="USMD"/>
+            <xsd:enumeration value="USME"/>
+            <xsd:enumeration value="USMI"/>
+            <xsd:enumeration value="USMN"/>
+            <xsd:enumeration value="USMO"/>
+            <xsd:enumeration value="USMP"/>
+            <xsd:enumeration value="USMS"/>
+            <xsd:enumeration value="USMT"/>
+            <xsd:enumeration value="USNC"/>
+            <xsd:enumeration value="USND"/>
+            <xsd:enumeration value="USNE"/>
+            <xsd:enumeration value="USNH"/>
+            <xsd:enumeration value="USNJ"/>
+            <xsd:enumeration value="USNM"/>
+            <xsd:enumeration value="USNV"/>
+            <xsd:enumeration value="USNY"/>
+            <xsd:enumeration value="USOH"/>
+            <xsd:enumeration value="USOK"/>
+            <xsd:enumeration value="USOR"/>
+            <xsd:enumeration value="USPA"/>
+            <xsd:enumeration value="USPR"/>
+            <xsd:enumeration value="USRI"/>
+            <xsd:enumeration value="USSC"/>
+            <xsd:enumeration value="USSD"/>
+            <xsd:enumeration value="USTN"/>
+            <xsd:enumeration value="USTX"/>
+            <xsd:enumeration value="USUT"/>
+            <xsd:enumeration value="USVA"/>
+            <xsd:enumeration value="USVI"/>
+            <xsd:enumeration value="USVT"/>
+            <xsd:enumeration value="USWA"/>
+            <xsd:enumeration value="USWI"/>
+            <xsd:enumeration value="USWV"/>
+            <xsd:enumeration value="USWY"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:complexType name="Country">
+        <xsd:sequence>
+            <xsd:element name="CountryCoded" type="CountryCode"/>
+            <xsd:element minOccurs="0" name="CountryCodedOther" type="xsd:string"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:element name="Country" type="Country"/>
+    <xsd:simpleType name="CountryCode">
+        <xsd:restriction base="xsd:NMTOKEN">
+            <xsd:enumeration value="Other"/>
+            <xsd:enumeration value="AE"/>
+            <xsd:enumeration value="AF"/>
+            <xsd:enumeration value="AG"/>
+            <xsd:enumeration value="AI"/>
+            <xsd:enumeration value="AL"/>
+            <xsd:enumeration value="AM"/>
+            <xsd:enumeration value="AN"/>
+            <xsd:enumeration value="AO"/>
+            <xsd:enumeration value="AQ"/>
+            <xsd:enumeration value="AR"/>
+            <xsd:enumeration value="AS"/>
+            <xsd:enumeration value="AT"/>
+            <xsd:enumeration value="AU"/>
+            <xsd:enumeration value="AW"/>
+            <xsd:enumeration value="AZ"/>
+            <xsd:enumeration value="BA"/>
+            <xsd:enumeration value="BB"/>
+            <xsd:enumeration value="BD"/>
+            <xsd:enumeration value="BE"/>
+            <xsd:enumeration value="BF"/>
+            <xsd:enumeration value="BG"/>
+            <xsd:enumeration value="BH"/>
+            <xsd:enumeration value="BI"/>
+            <xsd:enumeration value="BJ"/>
+            <xsd:enumeration value="BM"/>
+            <xsd:enumeration value="BN"/>
+            <xsd:enumeration value="BO"/>
+            <xsd:enumeration value="BR"/>
+            <xsd:enumeration value="BS"/>
+            <xsd:enumeration value="BT"/>
+            <xsd:enumeration value="BU"/>
+            <xsd:enumeration value="BW"/>
+            <xsd:enumeration value="BY"/>
+            <xsd:enumeration value="BZ"/>
+            <xsd:enumeration value="CA"/>
+            <xsd:enumeration value="CC"/>
+            <xsd:enumeration value="CD"/>
+            <xsd:enumeration value="CF"/>
+            <xsd:enumeration value="CG"/>
+            <xsd:enumeration value="CH"/>
+            <xsd:enumeration value="CI"/>
+            <xsd:enumeration value="CK"/>
+            <xsd:enumeration value="CL"/>
+            <xsd:enumeration value="CM"/>
+            <xsd:enumeration value="CN"/>
+            <xsd:enumeration value="CO"/>
+            <xsd:enumeration value="CR"/>
+            <xsd:enumeration value="CS"/>
+            <xsd:enumeration value="CU"/>
+            <xsd:enumeration value="CV"/>
+            <xsd:enumeration value="CX"/>
+            <xsd:enumeration value="CY"/>
+            <xsd:enumeration value="CZ"/>
+            <xsd:enumeration value="DE"/>
+            <xsd:enumeration value="DJ"/>
+            <xsd:enumeration value="DK"/>
+            <xsd:enumeration value="DM"/>
+            <xsd:enumeration value="DO"/>
+            <xsd:enumeration value="DZ"/>
+            <xsd:enumeration value="EC"/>
+            <xsd:enumeration value="EE"/>
+            <xsd:enumeration value="EG"/>
+            <xsd:enumeration value="EH"/>
+            <xsd:enumeration value="ER"/>
+            <xsd:enumeration value="ES"/>
+            <xsd:enumeration value="ET"/>
+            <xsd:enumeration value="FI"/>
+            <xsd:enumeration value="FJ"/>
+            <xsd:enumeration value="FK"/>
+            <xsd:enumeration value="FM"/>
+            <xsd:enumeration value="FO"/>
+            <xsd:enumeration value="FR"/>
+            <xsd:enumeration value="GA"/>
+            <xsd:enumeration value="GB"/>
+            <xsd:enumeration value="GD"/>
+            <xsd:enumeration value="GE"/>
+            <xsd:enumeration value="GF"/>
+            <xsd:enumeration value="GH"/>
+            <xsd:enumeration value="GI"/>
+            <xsd:enumeration value="GL"/>
+            <xsd:enumeration value="GM"/>
+            <xsd:enumeration value="GN"/>
+            <xsd:enumeration value="GP"/>
+            <xsd:enumeration value="GQ"/>
+            <xsd:enumeration value="GR"/>
+            <xsd:enumeration value="GS"/>
+            <xsd:enumeration value="GT"/>
+            <xsd:enumeration value="GU"/>
+            <xsd:enumeration value="GW"/>
+            <xsd:enumeration value="GY"/>
+            <xsd:enumeration value="HK"/>
+            <xsd:enumeration value="HN"/>
+            <xsd:enumeration value="HR"/>
+            <xsd:enumeration value="HT"/>
+            <xsd:enumeration value="HU"/>
+            <xsd:enumeration value="ID"/>
+            <xsd:enumeration value="IE"/>
+            <xsd:enumeration value="IL"/>
+            <xsd:enumeration value="IN"/>
+            <xsd:enumeration value="IO"/>
+            <xsd:enumeration value="IQ"/>
+            <xsd:enumeration value="IR"/>
+            <xsd:enumeration value="IS"/>
+            <xsd:enumeration value="IT"/>
+            <xsd:enumeration value="JM"/>
+            <xsd:enumeration value="JO"/>
+            <xsd:enumeration value="JP"/>
+            <xsd:enumeration value="KE"/>
+            <xsd:enumeration value="KG"/>
+            <xsd:enumeration value="KH"/>
+            <xsd:enumeration value="KI"/>
+            <xsd:enumeration value="KM"/>
+            <xsd:enumeration value="KN"/>
+            <xsd:enumeration value="KP"/>
+            <xsd:enumeration value="KR"/>
+            <xsd:enumeration value="KW"/>
+            <xsd:enumeration value="KY"/>
+            <xsd:enumeration value="KZ"/>
+            <xsd:enumeration value="LA"/>
+            <xsd:enumeration value="LB"/>
+            <xsd:enumeration value="LC"/>
+            <xsd:enumeration value="LI"/>
+            <xsd:enumeration value="LK"/>
+            <xsd:enumeration value="LR"/>
+            <xsd:enumeration value="LS"/>
+            <xsd:enumeration value="LT"/>
+            <xsd:enumeration value="LU"/>
+            <xsd:enumeration value="LV"/>
+            <xsd:enumeration value="LY"/>
+            <xsd:enumeration value="MA"/>
+            <xsd:enumeration value="MC"/>
+            <xsd:enumeration value="MD"/>
+            <xsd:enumeration value="MG"/>
+            <xsd:enumeration value="MH"/>
+            <xsd:enumeration value="MK"/>
+            <xsd:enumeration value="ML"/>
+            <xsd:enumeration value="MM"/>
+            <xsd:enumeration value="MN"/>
+            <xsd:enumeration value="MO"/>
+            <xsd:enumeration value="MP"/>
+            <xsd:enumeration value="MQ"/>
+            <xsd:enumeration value="MR"/>
+            <xsd:enumeration value="MS"/>
+            <xsd:enumeration value="MT"/>
+            <xsd:enumeration value="MU"/>
+            <xsd:enumeration value="MV"/>
+            <xsd:enumeration value="MW"/>
+            <xsd:enumeration value="MX"/>
+            <xsd:enumeration value="MY"/>
+            <xsd:enumeration value="MZ"/>
+            <xsd:enumeration value="NA"/>
+            <xsd:enumeration value="NC"/>
+            <xsd:enumeration value="NE"/>
+            <xsd:enumeration value="NF"/>
+            <xsd:enumeration value="NG"/>
+            <xsd:enumeration value="NI"/>
+            <xsd:enumeration value="NL"/>
+            <xsd:enumeration value="NO"/>
+            <xsd:enumeration value="NP"/>
+            <xsd:enumeration value="NR"/>
+            <xsd:enumeration value="NU"/>
+            <xsd:enumeration value="NZ"/>
+            <xsd:enumeration value="OM"/>
+            <xsd:enumeration value="PA"/>
+            <xsd:enumeration value="PE"/>
+            <xsd:enumeration value="PF"/>
+            <xsd:enumeration value="PG"/>
+            <xsd:enumeration value="PH"/>
+            <xsd:enumeration value="PK"/>
+            <xsd:enumeration value="PL"/>
+            <xsd:enumeration value="PM"/>
+            <xsd:enumeration value="PN"/>
+            <xsd:enumeration value="PR"/>
+            <xsd:enumeration value="PT"/>
+            <xsd:enumeration value="PW"/>
+            <xsd:enumeration value="PY"/>
+            <xsd:enumeration value="QA"/>
+            <xsd:enumeration value="RE"/>
+            <xsd:enumeration value="RO"/>
+            <xsd:enumeration value="RU"/>
+            <xsd:enumeration value="RW"/>
+            <xsd:enumeration value="SA"/>
+            <xsd:enumeration value="SB"/>
+            <xsd:enumeration value="SC"/>
+            <xsd:enumeration value="SD"/>
+            <xsd:enumeration value="SE"/>
+            <xsd:enumeration value="SG"/>
+            <xsd:enumeration value="SH"/>
+            <xsd:enumeration value="SI"/>
+            <xsd:enumeration value="SJ"/>
+            <xsd:enumeration value="SK"/>
+            <xsd:enumeration value="SL"/>
+            <xsd:enumeration value="SM"/>
+            <xsd:enumeration value="SN"/>
+            <xsd:enumeration value="SO"/>
+            <xsd:enumeration value="SR"/>
+            <xsd:enumeration value="ST"/>
+            <xsd:enumeration value="SV"/>
+            <xsd:enumeration value="SY"/>
+            <xsd:enumeration value="SZ"/>
+            <xsd:enumeration value="TC"/>
+            <xsd:enumeration value="TD"/>
+            <xsd:enumeration value="TF"/>
+            <xsd:enumeration value="TG"/>
+            <xsd:enumeration value="TH"/>
+            <xsd:enumeration value="TJ"/>
+            <xsd:enumeration value="TM"/>
+            <xsd:enumeration value="TN"/>
+            <xsd:enumeration value="TO"/>
+            <xsd:enumeration value="TP"/>
+            <xsd:enumeration value="TR"/>
+            <xsd:enumeration value="TT"/>
+            <xsd:enumeration value="TV"/>
+            <xsd:enumeration value="TW"/>
+            <xsd:enumeration value="TZ"/>
+            <xsd:enumeration value="UA"/>
+            <xsd:enumeration value="UG"/>
+            <xsd:enumeration value="UM"/>
+            <xsd:enumeration value="US"/>
+            <xsd:enumeration value="UY"/>
+            <xsd:enumeration value="UZ"/>
+            <xsd:enumeration value="VA"/>
+            <xsd:enumeration value="VC"/>
+            <xsd:enumeration value="VE"/>
+            <xsd:enumeration value="VG"/>
+            <xsd:enumeration value="VI"/>
+            <xsd:enumeration value="VN"/>
+            <xsd:enumeration value="VU"/>
+            <xsd:enumeration value="WF"/>
+            <xsd:enumeration value="WS"/>
+            <xsd:enumeration value="YE"/>
+            <xsd:enumeration value="YT"/>
+            <xsd:enumeration value="YU"/>
+            <xsd:enumeration value="ZA"/>
+            <xsd:enumeration value="ZM"/>
+            <xsd:enumeration value="ZW"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:complexType name="ListOfCommunicationDetail">
+        <xsd:sequence>
+            <xsd:element maxOccurs="unbounded" ref="CommunicationDetail"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:element name="ListOfCommunicationDetail" type="ListOfCommunicationDetail"/>
+    <xsd:complexType name="CommunicationDetail">
+        <xsd:sequence>
+            <xsd:element minOccurs="0" name="CommunicationDetailDescription" type="xsd:string"/>
+            <xsd:element ref="PersonCommunicationType"/>
+            <xsd:element name="CommunicationValue" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="DefaultCommunication" type="xcblBoolean"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:element name="CommunicationDetail" type="CommunicationDetail"/>
+    <xsd:complexType name="PersonCommunicationType">
+        <xsd:sequence>
+            <xsd:element name="PersonCommunicationTypeCoded" type="PersonCommunicationTypeCode"/>
+            <xsd:element name="PersonCommunicationTypeCodedOther" type="xsd:string"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:element name="PersonCommunicationType" type="PersonCommunicationType"/>
+    <xsd:simpleType name="PersonCommunicationTypeCode">
+        <xsd:restriction base="xsd:NMTOKEN">
+            <xsd:enumeration value="Other"/>
+            <xsd:enumeration value="TelephoneNumber"/>
+            <xsd:enumeration value="FaxNumber"/>
+            <xsd:enumeration value="EmailAddress"/>
+            <xsd:enumeration value="MobileNumber"/>
+            <xsd:enumeration value="TelexNumber"/>
+            <xsd:enumeration value="TelextexNumber"/>
+            <xsd:enumeration value="PagerNumber"/>
+            <xsd:enumeration value="HomePage"/>
+            <xsd:enumeration value="URL"/>
+            <xsd:enumeration value="FTP"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:complexType name="ListOfUserRole">
+        <xsd:sequence>
+            <xsd:element maxOccurs="unbounded" ref="UserRole"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:element name="ListOfUserRole" type="ListOfUserRole"/>
+    <xsd:complexType name="UserRole">
+        <xsd:sequence>
+            <xsd:element minOccurs="0" name="UserRoleAuthority" type="xsd:string"/>
+            <xsd:element name="UserRoleName" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="UserRoleID" type="xsd:string"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:element name="UserRole" type="UserRole"/>
+    <xsd:complexType name="UserAdministration">
+        <xsd:sequence>
+            <xsd:element minOccurs="0" ref="ValidityDates"/>
+            <xsd:element minOccurs="0" ref="UserStatus"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:element name="UserAdministration" type="UserAdministration"/>
+    <xsd:complexType name="ValidityDates">
+        <xsd:sequence>
+            <xsd:element name="StartDate" type="xcblDatetime"/>
+            <xsd:element name="EndDate" type="xcblDatetime"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:element name="ValidityDates" type="ValidityDates"/>
+    <xsd:complexType name="UserStatus">
+        <xsd:sequence>
+            <xsd:element name="UserStatusCoded" type="UserStatusCode"/>
+            <xsd:element minOccurs="0" name="UserStatusCodedOther" type="xsd:string"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:element name="UserStatus" type="UserStatus"/>
+    <xsd:simpleType name="UserStatusCode">
+        <xsd:restriction base="xsd:NMTOKEN">
+            <xsd:enumeration value="Other"/>
+            <xsd:enumeration value="Active"/>
+            <xsd:enumeration value="Inactive"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:complexType name="ContactRelationType">
+        <xsd:sequence>
+            <xsd:element name="ContactRelationTypeCoded" type="ContactRelationTypeCode"/>
+            <xsd:element minOccurs="0" name="ContactRelationTypeCodedOther" type="xsd:string"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:element name="ContactRelationType" type="ContactRelationType"/>
+    <xsd:simpleType name="ContactRelationTypeCode">
+        <xsd:restriction base="xsd:NMTOKEN">
+            <xsd:enumeration value="Other"/>
+            <xsd:enumeration value="ContactPerson"/>
+            <xsd:enumeration value="ShipToContact"/>
+            <xsd:enumeration value="BillToContact"/>
+            <xsd:enumeration value="SoldToContact"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <!-- SOX format datatypes where they difer from standard XSDL datatypes-->
+    <xsd:simpleType name="xcblDate">
+        <xsd:restriction base="xsd:string">
+            <xsd:pattern value="[0-9]{4}(((01|03|05|07|08|10|12)((0[1-9])|([1-2][0-9])|(3[0-1])))|((04|06|09|11)((0[1-9])|([1-2][0-9])|30))|((02)((0[1-9])|([1-2][0-9]))))"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="xcblTime">
+        <xsd:restriction base="xsd:string">
+            <xsd:pattern value="((([0-1][0-9])|(2[0-3]))(:([0-5][0-9])){2}((\+|-)(([0-1][0-9])|(2[0-3])):([0-5][0-9]))?)"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="xcblDatetime">
+        <xsd:restriction base="xsd:string">
+            <xsd:pattern value="[0-9]{4}(((01|03|05|07|08|10|12)((0[1-9])|([1-2][0-9])|(3[0-1])))|((04|06|09|11)((0[1-9])|([1-2][0-9])|30))|((02)((0[1-9])|([1-2][0-9]))))T((([0-1][0-9])|(2[0-3]))(:([0-5][0-9])){2}((\+|-)(([0-1][0-9])|(2[0-3])):([0-5][0-9]))?)"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="xcblBoolean">
+        <xsd:restriction base="xsd:boolean">
+            <xsd:pattern value="true|false"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="xcblFloat">
+        <xsd:restriction base="xsd:float">
+            <xsd:pattern value="(\+|-)?[0-9]*\.?[0-9]*(E|e)?[0-9]*"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="xcblDouble">
+        <xsd:restriction base="xsd:double">
+            <xsd:pattern value="(\+|-)?[0-9]*\.?[0-9]*(E|e)?[0-9]*"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+</xsd:schema>

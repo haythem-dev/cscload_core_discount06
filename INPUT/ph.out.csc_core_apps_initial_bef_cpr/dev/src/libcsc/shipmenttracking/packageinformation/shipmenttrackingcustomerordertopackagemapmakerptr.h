@@ -1,0 +1,25 @@
+#ifndef GUARD_LIBCSC_SHIPMENTTRACKING_SHIPMENTTRACKINGCUSTOMERORDERTOPACKAGEMAPMAKER_PTR_H
+#define GUARD_LIBCSC_SHIPMENTTRACKING_SHIPMENTTRACKINGCUSTOMERORDERTOPACKAGEMAPMAKER_PTR_H
+
+#include <libbasar_definitions.h>
+
+#include <boost/shared_ptr.hpp>
+#include <list>
+#include <map>
+
+namespace libcsc {
+namespace shipmenttracking {
+
+class ShipmentTrackingCustomerOrderToPackageMapMaker;
+typedef boost::shared_ptr<ShipmentTrackingCustomerOrderToPackageMapMaker> ShipmentTrackingCustomerOrderToPackageMapMakerPtr;
+
+typedef std::list<ShipmentTrackingCustomerOrderToPackageMapMakerPtr> ShipmentTrackingCustomerOrderToPackageMapMakerCollection;
+
+typedef boost::shared_ptr<ShipmentTrackingCustomerOrderToPackageMapMakerCollection> ShipmentTrackingCustomerOrderToPackageMapMakerCollectionPtr;
+
+typedef std::map<basar::Int32, ShipmentTrackingCustomerOrderToPackageMapMakerPtr> ShipmentTrackingCustomerOrderToPackageMapMakerInt32Map;
+
+} // namespace shipmenttracking
+} // namespace libcsc
+
+#endif // GUARD_LIBCSC_SHIPMENTTRACKING_SHIPMENTTRACKINGCUSTOMERORDERTOPACKAGEMAPMAKER_PTR_H

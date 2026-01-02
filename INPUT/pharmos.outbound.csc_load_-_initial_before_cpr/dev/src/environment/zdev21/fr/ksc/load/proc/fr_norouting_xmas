@@ -1,0 +1,11 @@
+# qual
+. /software/etc/profile_prz
+
+dbaccess ofr21 -<<%
+begin work;
+delete from customerrouting 
+where branchno = $1 
+and weekday = $2;
+commit work;
+%
+

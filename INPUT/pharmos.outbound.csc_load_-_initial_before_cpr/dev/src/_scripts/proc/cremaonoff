@@ -1,0 +1,26 @@
+# cremaonoff
+
+#--------------------------------------------------------------------#
+# READ IN GLOBAL VARIABLES --> using variable DATABASE_AE from there
+#--------------------------------------------------------------------#
+. $(dirname $0)/../vars/kscserver.vars
+ 
+VZ=$1
+WERT=$2
+TMPF=/tmp/`basename $0`_$$
+trap "rm -f $TMPF" 0 1 2 15
+
+case $WERT in
+-start|-stop) if [ "$WERT" == "-start" ]; then WERT=1;else WERT=0;fi; 
+        echo "begin work; update paraauftragbearb set sstopcrema=$WERT where filialnr = $VZ; commit work;"|dbaccess $DATABASE_AE;;
+
+-status) echo "unload to $TMPF select sstopcrema from paraauftragbearb where filialnr = $VZ;"|dbaccess $DATABASE_AE 2>/dev/null;
+        status=`cat $TMPF`;status="${status%?}";
+        case $status in
+        0)      echo "STATUS=off";;
+        1)      echo "STATUS=on";;
+       *)      echo STATUS=unknown;;
+        esac;;
+*) echo "usage: vz [-start|-stop|-status]";;
+esac
+

@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{85A90DEC-7A27-4BEF-BDC0-BE4539A3B317}</ProjectGuid>
+    <RootNamespace>aapservinf</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <NMakeBuildCommandLine>nmake /f makefile.win</NMakeBuildCommandLine>
+    <NMakeReBuildCommandLine>nmake /f makefile.win dbg_all</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine>nmake /f makefile.win clean</NMakeCleanCommandLine>
+    <NMakePreprocessorDefinitions>WIN32;_DEBUG;ESQL_C;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+    <NMakeOutput>$(ProjectDir)$(Configuration)\aapservinf.lib</NMakeOutput>
+    <NMakeIncludeSearchPath>.;$(SolutionDir)pxdb\include;$(SolutionDir)pxverbund\include;$(SolutionDir)libcsc;$(SolutionDir)..\ext\cxxtools\include;$(SolutionDir)..\ext\pplib\include;$(SolutionDir)..\ext\pplib\include\pplib;$(SolutionDir)..\ext\boost\include;$(SolutionDir)..\ext\ssuk\basar\include;$(SolutionDir)..\ext\log4cplus\include;$(SolutionDir)\aapserv\win32dade;$(SolutionDir)..\ext\hdatum\include;$(SolutionDir)..\ext\hdatum\include\hdatum</NMakeIncludeSearchPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <NMakeBuildCommandLine>nmake /f makefile.win64</NMakeBuildCommandLine>
+    <NMakeReBuildCommandLine>nmake /f makefile.win64 dbg_all</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine>nmake /f makefile.win64 clean</NMakeCleanCommandLine>
+    <NMakePreprocessorDefinitions>WIN32;_DEBUG;ESQL_C;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+    <NMakeOutput>$(ProjectDir)$(Configuration)\aapservinf.lib</NMakeOutput>
+    <NMakeIncludeSearchPath>.;$(SolutionDir)pxdb\include;$(SolutionDir)pxverbund\include;$(SolutionDir)libcsc;$(SolutionDir)..\ext\cxxtools\include;$(SolutionDir)..\ext\pplib\include;$(SolutionDir)..\ext\pplib\include\pplib;$(SolutionDir)..\ext\boost\include;$(SolutionDir)..\ext\ssuk\basar\include;$(SolutionDir)..\ext\log4cplus\include;$(SolutionDir)\aapserv\win32dade;$(SolutionDir)..\ext\hdatum\include</NMakeIncludeSearchPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <NMakeBuildCommandLine>nmake /f makefile.win rel</NMakeBuildCommandLine>
+    <NMakeReBuildCommandLine>nmake /f makefile.win rel_all</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine>nmake /f makefile.win clean</NMakeCleanCommandLine>
+    <NMakeOutput>$(ProjectDir)$(Configuration)\aapservinf.lib</NMakeOutput>
+    <NMakePreprocessorDefinitions>WIN32;ESQL_C;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+    <NMakeIncludeSearchPath>.;$(SolutionDir)pxdb\include;$(SolutionDir)pxverbund\include;$(SolutionDir)libcsc;$(SolutionDir)..\ext\cxxtools\include;$(SolutionDir)..\ext\pplib\include;$(SolutionDir)..\ext\pplib\include\pplib;$(SolutionDir)..\ext\boost\include;$(SolutionDir)..\ext\ssuk\basar\include;$(SolutionDir)..\ext\log4cplus\include;$(SolutionDir)\aapserv\win32dade;$(SolutionDir)..\ext\hdatum\include;$(SolutionDir)..\ext\hdatum\include\hdatum</NMakeIncludeSearchPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <NMakeBuildCommandLine>nmake /f makefile.win64 rel</NMakeBuildCommandLine>
+    <NMakeReBuildCommandLine>nmake /f makefile.win64 rel_all</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine>nmake /f makefile.win64 clean</NMakeCleanCommandLine>
+    <NMakeOutput>$(ProjectDir)$(Configuration)\aapservinf.lib</NMakeOutput>
+    <NMakePreprocessorDefinitions>WIN32;ESQL_C;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+    <NMakeIncludeSearchPath>.;$(SolutionDir)pxdb\include;$(SolutionDir)pxverbund\include;$(SolutionDir)libcsc;$(SolutionDir)..\ext\cxxtools\include;$(SolutionDir)..\ext\pplib\include;$(SolutionDir)..\ext\pplib\include\pplib;$(SolutionDir)..\ext\boost\include;$(SolutionDir)..\ext\ssuk\basar\include;$(SolutionDir)..\ext\log4cplus\include;$(SolutionDir)\aapserv\win32dade;$(SolutionDir)..\ext\hdatum\include</NMakeIncludeSearchPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="makefile" />
+    <None Include="makefile.win" />
+    <None Include="makefile.win64" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="aadruck.cxx" />
+    <ClCompile Include="aafil.cxx" />
+    <ClCompile Include="aakritik.cxx" />
+    <ClCompile Include="aakunde.cxx" />
+    <ClCompile Include="aatour.cxx" />
+    <ClCompile Include="artikel.cxx" />
+    <ClCompile Include="auftraginfo.cxx" />
+    <ClCompile Include="callback.cxx" />
+    <ClCompile Include="callplanday.cxx" />
+    <ClCompile Include="callplanmaintenance.cxx" />
+    <ClCompile Include="callplanundertake.cxx" />
+    <ClCompile Include="collectivorders.cxx" />
+    <ClCompile Include="controlling.cxx" />
+    <ClCompile Include="cremamailaddresses.cxx" />
+    <ClCompile Include="customer.cxx" />
+    <ClCompile Include="dadedb.cxx" />
+    <ClCompile Include="dbinit.cxx" />
+    <ClCompile Include="eilbotendruck.cxx" />
+    <ClCompile Include="filialpartner.cxx" />
+    <ClCompile Include="hersteller.cxx" />
+    <ClCompile Include="liefersel.cxx" />
+    <ClCompile Include="mailsystem.cxx" />
+    <ClCompile Include="modemtab.cxx" />
+    <ClCompile Include="msv3.cxx" />
+    <ClCompile Include="orders.cxx" />
+    <ClCompile Include="processcheck.cxx" />
+    <ClCompile Include="promo.cxx" />
+    <ClCompile Include="promoinfo.cxx" />
+    <ClCompile Include="serviceorder.cxx" />
+    <ClCompile Include="statistics.cxx" />
+    <ClCompile Include="tender.cxx" />
+    <ClCompile Include="touren.cxx" />
+    <ClCompile Include="verbundcheck.cxx" />
+    <ClCompile Include="zaaauft.cxx" />
+    <ClCompile Include="zaaplan.cxx" />
+    <ClCompile Include="zaatart.cxx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="dadedb.h" />
+    <ClInclude Include="win32dade\stdbool.h" />
+    <ClInclude Include="win32dade\unistd.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

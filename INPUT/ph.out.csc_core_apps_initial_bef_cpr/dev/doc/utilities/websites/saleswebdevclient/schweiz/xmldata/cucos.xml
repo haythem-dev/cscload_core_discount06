@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<customerSpecificConditionsRequest xmlns="http://salesweb.phoenixgroup.eu/wsxmlamedis/schemas/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://salesweb.phoenixgroup.eu/wsxmlamedis/schemas/ http://salesweb.phoenixgroup.eu/wsxmlamedis/schemas/customerSpecificConditionsRequestPhoenixGroup.xsd" language="de" productAvailabilityDesired="false" productDescriptionDesired="false" version="1.0">
+  <client number="9999011" password="DEMOXML" />
+  <!--Get first page-->
+  <browseRequest direction="next" requestKey="" />
+  <!--  Only two lines requested, for demonstration purposes -->
+  <customerSpecificConditionsBrowseDefinition pageSize="900" changedAfter="2005-08-03" />
+</customerSpecificConditionsRequest>

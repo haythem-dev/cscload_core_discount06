@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<KSCRefreshSettings xsi:noNamespaceSchemaLocation="../../KSCRefreshSettings.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Country Country="FR">
+		<Settings>
+			<General PollInterval="5" LogLevel="Warnings" Test="false"/>
+			<SMTP Port="25" Host="10.100.121.30" SendMailFrom="csc_phatra@phoenixgroup.eu">
+				<Information eMail=""/>
+				<Warnings eMail=""/>
+				<Errors eMail="kscrefreshtest@phoenixgroup.eu"/>
+			</SMTP>
+			<TCAccess TCATransaction="TCAS" TCAHost="PhoenixGeneric_west" ConnectionRetries="10" ConnectionWaitBeforeRetry="10000" Username="CORPHA" Password=""/>
+			<pxVerbund DeviceType="7" DeviceName="PHATRA" Computer="" LogMode="1" DataSource="ofr21pre@zdev21_shm" MessageFile="/software/wss/pfr/ksc/batch/ini/message.txt"/>
+			<Informix ConnectionRetries="10" ConnectionWaitBeforeRetry="10000" IfxServiceName="53004" IfxHost="zdev21_tcp" IfxDataBase="ofr21pre"/>
+		</Settings>
+		<Branches>
+			<Branch BranchNo="48">
+				<Settings>
+					<TCAccess IPAddress="10.242.5.209" Port="3102"/>
+					<pxVerbund LogFile="/software/wss/pfr/ksc/batch/log/48_csc_phatra.log" SystemLogFile="/software/wss/pfr/ksc/batch/log/48_csc_phatra_wws.log"/>
+				</Settings>
+			</Branch>
+			<Branch BranchNo="43">
+				<Settings>
+					<TCAccess IPAddress="10.242.5.209" Port="3104"/>
+					<pxVerbund LogFile="/software/wss/pfr/ksc/batch/log/43_csc_phatra.log" SystemLogFile="/software/wss/pfr/ksc/batch/log/43_csc_phatra_wws.log"/>
+				</Settings>
+			</Branch>
+		</Branches>
+	</Country>
+</KSCRefreshSettings>

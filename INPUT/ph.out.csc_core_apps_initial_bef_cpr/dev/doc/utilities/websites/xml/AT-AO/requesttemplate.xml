@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ArgeOrderRequest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://salesweb.phoenix-ag.de/wsxmlaustria/schemas/ArgeOrderRequest.xsd" Version="#ARGEORDERVERSION#" Language="de">
+	<General RequestId="#REQUESTID#" TimeStamp="#TIMESTAMP#">
+		<Customer Id="#CUSTOMERID#" SoftwareId="#SOFTWAREID#"/>
+		<Supplier Id="#SUPPLIERID#" Branch="#BRANCH#"/>
+	</General>
+	<Order OrderNumber="#ORDERNUMBER#" OrderDate="#ORDERDATE#" >
+		#ORDERITEM#
+	</Order>
+</ArgeOrderRequest>
+
+

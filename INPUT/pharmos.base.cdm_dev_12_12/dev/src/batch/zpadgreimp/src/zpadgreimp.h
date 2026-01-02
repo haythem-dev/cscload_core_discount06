@@ -1,0 +1,10 @@
+#ifndef ZPADGREIMP_INCLUDED
+#define ZPADGREIMP_INCLUDED
+
+#define NO_SIGNS 315
+
+
+#define WITHUPDATES 2
+
+#define MAX_ENTRIES 1000
+#endif

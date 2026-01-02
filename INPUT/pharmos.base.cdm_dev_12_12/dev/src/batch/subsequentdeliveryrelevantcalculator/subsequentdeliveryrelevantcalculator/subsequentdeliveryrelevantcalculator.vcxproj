@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="componentmanager\iusecasegetter.h" />
+    <ClInclude Include="componentmanager\iusecasegetterptr.h" />
+    <ClInclude Include="componentmanager\subsequentdeliveryrelevantcalculatorapplcompmgr.h" />
+    <ClInclude Include="componentmanager\subsequentdeliveryrelevantcalculatorapplcompmgrptr.h" />
+    <ClInclude Include="componentmanager\subsequentdeliveryrelevantcalculatorinfrastructurecompmgr.h" />
+    <ClInclude Include="componentmanager\subsequentdeliveryrelevantcalculatorinfrastructurecompmgrptr.h" />
+    <ClInclude Include="domainmodule\article\articledm.h" />
+    <ClInclude Include="domainmodule\deliveryparam\deliveryparamdm.h" />
+    <ClInclude Include="domainmodule\subsequentdeliveryconfig\subsequentdeliveryconfigdm.h" />
+    <ClInclude Include="infrastructure\accessor\article\articleacc.h" />
+    <ClInclude Include="infrastructure\accessor\deliveryparam\deliveryparamacc.h" />
+    <ClInclude Include="infrastructure\accessor\subsequentdeliveryconfig\subsequentdeliveryconfigacc.h" />
+    <ClInclude Include="infrastructure\cmdline\subsequentdeliveryrelevantcalculatorcmdlineevaluator.h" />
+    <ClInclude Include="infrastructure\cmdline\subsequentdeliveryrelevantcalculatorcmdlineevaluatorptr.h" />
+    <ClInclude Include="infrastructure\login\login_definitions.h" />
+    <ClInclude Include="infrastructure\setup\isubsequentdeliveryrelevantcalculatorlogingetter.h" />
+    <ClInclude Include="infrastructure\setup\isubsequentdeliveryrelevantcalculatorlogingetterptr.h" />
+    <ClInclude Include="infrastructure\setup\subsequentdeliveryrelevantcalculatorinfrastructuresetup.h" />
+    <ClInclude Include="infrastructure\setup\subsequentdeliveryrelevantcalculatorinfrastructuresetupptr.h" />
+    <ClInclude Include="loggerpool\subsequentdeliveryrelevantcalculator_loggerpool.h" />
+    <ClInclude Include="subsequentdeliveryrelevantcalculator\subsequentdeliveryrelevantcalculatorapplctrl.h" />
+    <ClInclude Include="usecase\CalculationRules.h" />
+    <ClInclude Include="usecase\mainuc.h" />
+    <ClInclude Include="usecase\mainucptr.h" />
+    <ClInclude Include="usecase\Utils.h" />
+    <ClInclude Include="version.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="componentmanager\subsequentdeliveryrelevantcalculatorapplcompmgr.cpp" />
+    <ClCompile Include="componentmanager\subsequentdeliveryrelevantcalculatorinfrastructurecompmgr.cpp" />
+    <ClCompile Include="domainmodule\article\articledm.cpp" />
+    <ClCompile Include="domainmodule\deliveryparam\deliveryparamdm.cpp" />
+    <ClCompile Include="domainmodule\subsequentdeliveryconfig\subsequentdeliveryconfigdm.cpp" />
+    <ClCompile Include="infrastructure\accessor\article\articleacc.cpp" />
+    <ClCompile Include="infrastructure\accessor\deliveryparam\deliveryparamacc.cpp" />
+    <ClCompile Include="infrastructure\accessor\subsequentdeliveryconfig\subsequentdeliveryconfigacc.cpp" />
+    <ClCompile Include="infrastructure\cmdline\subsequentdeliveryrelevantcalculatorcmdlineevaluator.cpp" />
+    <ClCompile Include="infrastructure\setup\subsequentdeliveryrelevantcalculatorinfrastructuresetup.cpp" />
+    <ClCompile Include="loggerpool\subsequentdeliveryrelevantcalculator_loggerpool.cpp" />
+    <ClCompile Include="subsequentdeliveryrelevantcalculator\main.cpp" />
+    <ClCompile Include="subsequentdeliveryrelevantcalculator\subsequentdeliveryrelevantcalculatorapplctrl.cpp" />
+    <ClCompile Include="usecase\CalculationRules.cpp" />
+    <ClCompile Include="usecase\mainuc.cpp" />
+    <ClCompile Include="usecase\Utils.cpp" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{aa63294b-9635-4d29-9268-59581157c66f}</ProjectGuid>
+    <RootNamespace>subsequentdeliveryrelevantcalculator</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);..\..\..\..\ext\hdatum\include</IncludePath>
+    <LibraryPath>$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);$(NETFXKitsDir)Lib\um\x64;$(SolutionDir)..\ext\hdatum\lib\$(Configuration)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level4</WarningLevel>
+      <SDLCheck>
+      </SDLCheck>
+      <PreprocessorDefinitions>_WIN32;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>
+      </ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir);$(SolutionDir)..\ext\ssuk\basar\include;$(SolutionDir)..\ext\boost\include;$(SolutionDir)..\ext\log4cplus\include;$(SolutionDir)..\ext\libutil\include;$(SolutionDir)..\ext\hdatum\include;$(SolutionDir)..\ext\hdatum\include;.;$(QTDIR)\include\QtSql;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtCore;$(QTDIR)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SupportJustMyCode>false</SupportJustMyCode>
+      <PrecompiledHeader />
+      <PrecompiledHeaderFile />
+      <DiagnosticsFormat />
+      <UseFullPaths />
+      <ModuleOutputFile />
+      <ModuleDependenciesFile />
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)..\ext\libutil\lib\$(Configuration);$(SolutionDir)..\ext\ssuk\basar\\lib\$(Configuration);$(SolutionDir)..\ext\log4cplus\lib\$(Configuration);$(SolutionDir)..\ext\hdatum\lib\$(Configuration);$(SolutionDir)..\ext\Boost\lib;$(QTDIR)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>libbasarcmnutil.lib;libbasardbaspect.lib;libbasarproperty.lib;libbasardbsql.lib;libbasarlogin.lib;libbasarappl.lib;libbasarguitie.lib;libbasarguiqt.lib;libbasarqtwidget.lib;hdatum.lib;log4cplusD.lib;Qt5Cored.lib;Qt5Widgetsd.lib;libutil.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level4</WarningLevel>
+      <SDLCheck>
+      </SDLCheck>
+      <PreprocessorDefinitions>_WIN32;WIN32;;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>
+      </ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir);$(SolutionDir)..\ext\ssuk\basar\include;$(SolutionDir)..\ext\boost\include;$(SolutionDir)..\ext\log4cplus\include;$(SolutionDir)..\ext\libutil\include;$(SolutionDir)..\ext\hdatum\include;.;$(QTDIR)\include\QtSql;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtCore;$(QTDIR)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SupportJustMyCode>false</SupportJustMyCode>
+      <PrecompiledHeader />
+      <PrecompiledHeaderFile />
+      <DiagnosticsFormat />
+      <UseFullPaths />
+      <ModuleOutputFile />
+      <ModuleDependenciesFile />
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)..\ext\libutil\lib\$(Configuration);$(SolutionDir)..\ext\ssuk\basar\\lib\$(Configuration);$(SolutionDir)..\ext\log4cplus\lib\$(Configuration);$(SolutionDir)..\ext\hdatum\lib\$(Configuration);$(SolutionDir)..\ext\Boost\lib;$(QTDIR)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>libbasarcmnutil.lib;libbasardbaspect.lib;libbasarproperty.lib;libbasardbsql.lib;libbasarlogin.lib;libbasarappl.lib;libbasarguitie.lib;libbasarguiqt.lib;libbasarqtwidget.lib;hdatum.lib;log4cplus.lib;Qt5Cored.lib;Qt5Widgetsd.lib;libutil.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

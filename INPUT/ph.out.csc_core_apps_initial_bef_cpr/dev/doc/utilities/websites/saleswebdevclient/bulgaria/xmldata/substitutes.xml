@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SubstitutesRequest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://salestest.phoenix-ag.de/wsxmlbulgaria/schemas/substitutes/SubstitutesRequest.xsd">
+	<Substitutes BranchNo="23" CustomerNo="17"/>
+</SubstitutesRequest>

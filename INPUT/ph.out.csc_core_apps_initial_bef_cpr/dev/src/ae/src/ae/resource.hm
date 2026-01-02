@@ -1,0 +1,6 @@
+// Microsoft Developer Studio generated Help ID include file.
+// Used by AE.RC
+//
+#define HIDC_EDIT_MENGE                 0x8080040f    // IDR_MAINFRAME
+#define HIDC_EDIT_NATRAB                0x80800416    // IDR_MAINFRAME
+#define HIDC_EDIT_NORMPACKUNG           0x8080041a    // IDR_MAINFRAME

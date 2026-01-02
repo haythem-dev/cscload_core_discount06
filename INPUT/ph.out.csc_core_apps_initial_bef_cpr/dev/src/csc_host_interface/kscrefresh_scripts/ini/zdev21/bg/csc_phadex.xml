@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<KSCRefreshSettings>
+	<Country Country="BG">
+		<Settings>
+			<General PollInterval="3000" LogLevel="Errors" Test="false" BulkInsert="true" MaxSelect="40"/>
+			<SMTP Port="25" Host="10.100.121.30" SendMailFrom="zbw@phoenixgroup.eu">
+				<Information eMail="kscrefreshtest@phoenixgroup.eu"/>
+				<Warnings eMail="kscrefreshtest@phoenixgroup.eu"/>
+				<Errors eMail="kscrefreshtest@phoenixgroup.eu"/>
+			</SMTP>
+			<TCAccess TCATransaction="TCAS" TCAHost="PhoenixGeneric_west" ConnectionRetries="10" ConnectionWaitBeforeRetry="10000" Username="PHADEX" Password=""/>
+			<pxVerbund DeviceType="7" DeviceName="PHADEX" Computer="" LogMode="1" DataSource="obg21@zdev21_tcp" MessageFile="/software/wss/bg/ksc/batch/ini/message.txt"/>
+			<Informix ConnectionRetries="10" ConnectionWaitBeforeRetry="10000" IfxServiceName="53004" IfxHost="zdev21_tcp" IfxDataBase="obg21"/>
+		</Settings>
+		<Branches>
+			<Branch BranchNo="22"><Settings><TCAccess IPAddress="10.242.5.211" Port="3100"/></Settings></Branch>
+			<Branch BranchNo="23"><Settings><TCAccess IPAddress="10.242.5.211" Port="3100"/></Settings></Branch>
+			<Branch BranchNo="24"><Settings><TCAccess IPAddress="10.242.5.211" Port="3100"/></Settings></Branch>
+			<Branch BranchNo="25"><Settings><TCAccess IPAddress="10.242.5.211" Port="3100"/></Settings></Branch>
+			<Branch BranchNo="26"><Settings><TCAccess IPAddress="10.242.5.211" Port="3100"/></Settings></Branch>
+			<Branch BranchNo="28"><Settings><TCAccess IPAddress="10.242.5.211" Port="3100"/></Settings></Branch>
+		</Branches>
+	</Country>
+</KSCRefreshSettings>

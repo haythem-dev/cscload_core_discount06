@@ -1,0 +1,386 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="log4cplus">
+      <UniqueIdentifier>{03d68f86-26b1-421b-9d21-cbfc5b721b9c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Datatypes">
+      <UniqueIdentifier>{8f421c2d-da28-4e30-bdd4-0c7042c04241}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Datatypes\Decimal">
+      <UniqueIdentifier>{2596865f-3b51-4923-a5e5-b4bb3b51ad21}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Datatypes\PropertyState">
+      <UniqueIdentifier>{6a3a965b-911f-4494-b4bb-769ca619ea34}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Datatypes\Int32">
+      <UniqueIdentifier>{4541b53c-1dad-422a-ab9e-0fc7ab8952a5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Datatypes\VarString">
+      <UniqueIdentifier>{4239b65c-94fa-4933-8e77-b88db98d5720}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Datatypes\DateTime">
+      <UniqueIdentifier>{90520f3f-a26b-454e-8c97-13b5c47cea8a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Datatypes\PropertyCollection">
+      <UniqueIdentifier>{9ed81309-8aae-4456-bcaf-3ac3cf3f6df6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Discount">
+      <UniqueIdentifier>{1d70d333-cf8f-42d5-abe1-906e52fb8571}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Discount\Calculator">
+      <UniqueIdentifier>{2abc0e01-1f25-4d1d-b7f7-fc5f3e8cab06}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Discount\Calculator\Commands">
+      <UniqueIdentifier>{58c72845-7365-473f-a6ad-b49300e036e2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Discount\Calculator\Commands\Common">
+      <UniqueIdentifier>{7d475edc-35bc-4823-b7ca-3d9693c7e2f7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Discount\System">
+      <UniqueIdentifier>{804ba810-647e-4284-967e-5310efb04ccf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Discount\System\Common">
+      <UniqueIdentifier>{3ba915fc-bdda-4d62-b36d-d82ddd9ccc27}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Discount\System\HR">
+      <UniqueIdentifier>{e74d12a5-96fb-4464-95d3-17e896c31be9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Discount\System\Misc">
+      <UniqueIdentifier>{38a94138-9aac-4341-ace3-52d2cb59a73f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Discount\Common">
+      <UniqueIdentifier>{9d7a52dd-7811-438a-b415-2ef07a0c0986}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Main">
+      <UniqueIdentifier>{df789d13-0601-4c5f-91cd-a97d050007e0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Datatypes\PropertyTemplate">
+      <UniqueIdentifier>{44163d7c-95e6-4ddf-9f44-32f81990d069}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Discount\Logger">
+      <UniqueIdentifier>{0ee1be53-2594-450a-835d-7ec5bd23ca42}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Discount\Calculator\CalculatorResult">
+      <UniqueIdentifier>{3705faa5-fe7e-4008-bde5-3875fbf58300}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Discount\Calculator\CalculatorResult\common">
+      <UniqueIdentifier>{4bb308a8-3ee9-4913-9677-65e516592e3f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Discount\Calculator\Commands\Conditional">
+      <UniqueIdentifier>{3cbc9f51-84a9-4320-bc03-7d1a73f81a1d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Discount\ResultProcessor">
+      <UniqueIdentifier>{6d9c5a39-a344-44a4-9216-1fcf658b3835}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Discount\ResultProcessor\Common">
+      <UniqueIdentifier>{a6f5f70f-941c-4a6d-abbc-83a326e06f60}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Discount\Calculator\Commands\Article">
+      <UniqueIdentifier>{4bd48dd6-bd3e-4ba0-8303-b5b747248488}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Discount\Calculator\Commands\Range">
+      <UniqueIdentifier>{518d4fea-f38c-4da5-b835-e71addb9673b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Datatypes\Date">
+      <UniqueIdentifier>{edfe51a1-fa43-4db3-9481-cd4124efc4d1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="util">
+      <UniqueIdentifier>{aba20fab-549a-46ab-b9e8-93bb043d0008}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="libcscUnitTest.cfg">
+      <Filter>log4cplus</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="datatypes\decimalfixture.cpp">
+      <Filter>Datatypes\Decimal</Filter>
+    </ClCompile>
+    <ClCompile Include="datatypes\decimaltest.cpp">
+      <Filter>Datatypes\Decimal</Filter>
+    </ClCompile>
+    <ClCompile Include="datatypes\propertystatefixture.cpp">
+      <Filter>Datatypes\PropertyState</Filter>
+    </ClCompile>
+    <ClCompile Include="datatypes\propertystatetest.cpp">
+      <Filter>Datatypes\PropertyState</Filter>
+    </ClCompile>
+    <ClCompile Include="datatypes\int32fixture.cpp">
+      <Filter>Datatypes\Int32</Filter>
+    </ClCompile>
+    <ClCompile Include="datatypes\int32test.cpp">
+      <Filter>Datatypes\Int32</Filter>
+    </ClCompile>
+    <ClCompile Include="datatypes\varstringfixture.cpp">
+      <Filter>Datatypes\VarString</Filter>
+    </ClCompile>
+    <ClCompile Include="datatypes\varstringtest.cpp">
+      <Filter>Datatypes\VarString</Filter>
+    </ClCompile>
+    <ClCompile Include="datatypes\datetimefixture.cpp">
+      <Filter>Datatypes\DateTime</Filter>
+    </ClCompile>
+    <ClCompile Include="datatypes\datetimetest.cpp">
+      <Filter>Datatypes\DateTime</Filter>
+    </ClCompile>
+    <ClCompile Include="datatypes\propertycollectionfixture.cpp">
+      <Filter>Datatypes\PropertyCollection</Filter>
+    </ClCompile>
+    <ClCompile Include="datatypes\propertycollectiontest.cpp">
+      <Filter>Datatypes\PropertyCollection</Filter>
+    </ClCompile>
+    <ClCompile Include="discount\calculator\commands\common\calculatorcommandstub.cpp">
+      <Filter>Discount\Calculator\Commands\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="discount\calculator\commands\common\commoncalculatorcommandfixture.cpp">
+      <Filter>Discount\Calculator\Commands\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="discount\calculator\commands\common\discountbasevaluemapperstub.cpp">
+      <Filter>Discount\Calculator\Commands\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="discount\calculator\commands\common\discountloggermock.cpp">
+      <Filter>Discount\Calculator\Commands\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="discount\system\common\discountsystemfixture.cpp">
+      <Filter>Discount\System\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="discount\system\discountsystemhrtest.cpp">
+      <Filter>Discount\System\HR</Filter>
+    </ClCompile>
+    <ClCompile Include="discount\system\discountsystemtest.cpp">
+      <Filter>Discount\System\Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="discount\common\orderbasevaluestub.cpp">
+      <Filter>Discount\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="main\cmnut.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="main\main.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="datatypes\propertytest.cpp">
+      <Filter>Datatypes\PropertyTemplate</Filter>
+    </ClCompile>
+    <ClCompile Include="datatypes\propertyfixture.cpp">
+      <Filter>Datatypes\PropertyTemplate</Filter>
+    </ClCompile>
+    <ClCompile Include="discount\system\discountsystemhrhierarchy.cpp">
+      <Filter>Discount\System\HR</Filter>
+    </ClCompile>
+    <ClCompile Include="discount\calculator\result\discountcalculatorresulttest.cpp">
+      <Filter>Discount\Calculator\CalculatorResult</Filter>
+    </ClCompile>
+    <ClCompile Include="discount\calculator\result\common\discountcalculatorresultfixture.cpp">
+      <Filter>Discount\Calculator\CalculatorResult\common</Filter>
+    </ClCompile>
+    <ClCompile Include="discount\calculator\result\discountresultbasevaluetest.cpp">
+      <Filter>Discount\Calculator\CalculatorResult</Filter>
+    </ClCompile>
+    <ClCompile Include="discount\calculator\result\discountresulttest.cpp">
+      <Filter>Discount\Calculator\CalculatorResult</Filter>
+    </ClCompile>
+    <ClCompile Include="discount\calculator\result\discountsourcetest.cpp">
+      <Filter>Discount\Calculator\CalculatorResult</Filter>
+    </ClCompile>
+    <ClCompile Include="discount\calculator\result\rebateinkindvaluetest.cpp">
+      <Filter>Discount\Calculator\CalculatorResult</Filter>
+    </ClCompile>
+    <ClCompile Include="discount\calculator\result\common\discountresultbasevaluefixture.cpp">
+      <Filter>Discount\Calculator\CalculatorResult\common</Filter>
+    </ClCompile>
+    <ClCompile Include="discount\calculator\result\common\discountresultfixture.cpp">
+      <Filter>Discount\Calculator\CalculatorResult\common</Filter>
+    </ClCompile>
+    <ClCompile Include="discount\calculator\result\common\discountsourcefixture.cpp">
+      <Filter>Discount\Calculator\CalculatorResult\common</Filter>
+    </ClCompile>
+    <ClCompile Include="discount\calculator\result\common\rebateinkindvaluefixture.cpp">
+      <Filter>Discount\Calculator\CalculatorResult\common</Filter>
+    </ClCompile>
+    <ClCompile Include="discount\calculator\commands\bestof4customercalculatorcommandtest.cpp">
+      <Filter>Discount\Calculator\Commands\Conditional</Filter>
+    </ClCompile>
+    <ClCompile Include="discount\calculator\commands\firstwinscalculatorcommandtest.cpp">
+      <Filter>Discount\Calculator\Commands\Conditional</Filter>
+    </ClCompile>
+    <ClCompile Include="discount\calculator\commands\sumcalculatorcommandtest.cpp">
+      <Filter>Discount\Calculator\Commands\Conditional</Filter>
+    </ClCompile>
+    <ClCompile Include="discount\resultprocessor\resultprocessortest.cpp">
+      <Filter>Discount\ResultProcessor</Filter>
+    </ClCompile>
+    <ClCompile Include="discount\resultprocessor\common\resultprocessorfixture.cpp">
+      <Filter>Discount\ResultProcessor\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="discount\resultprocessor\common\orderpositiondiscountrepositorystub.cpp">
+      <Filter>Discount\ResultProcessor\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="discount\calculator\commands\retailcalculatorcommandtest.cpp">
+      <Filter>Discount\Calculator\Commands\Article</Filter>
+    </ClCompile>
+    <ClCompile Include="discount\calculator\commands\fixedpricecalculatorcommandtest.cpp">
+      <Filter>Discount\Calculator\Commands\Article</Filter>
+    </ClCompile>
+    <ClCompile Include="discount\calculator\commands\wholesaleallcustomerarticlecalculatorcommandtest.cpp">
+      <Filter>Discount\Calculator\Commands\Article</Filter>
+    </ClCompile>
+    <ClCompile Include="discount\calculator\commands\wholesaleallcustomerarticlegroupcalculatorcommandtest.cpp">
+      <Filter>Discount\Calculator\Commands\Range</Filter>
+    </ClCompile>
+    <ClCompile Include="discount\calculator\commands\wholesaleallcustomermanufacturercalculatorcommandtest.cpp">
+      <Filter>Discount\Calculator\Commands\Range</Filter>
+    </ClCompile>
+    <ClCompile Include="discount\calculator\commands\wholesaleallcustomermanufacturergroupcalculatorcommandtest.cpp">
+      <Filter>Discount\Calculator\Commands\Range</Filter>
+    </ClCompile>
+    <ClCompile Include="discount\calculator\commands\wholesalecustomerarticlecalculatorcommandtest.cpp">
+      <Filter>Discount\Calculator\Commands\Article</Filter>
+    </ClCompile>
+    <ClCompile Include="discount\calculator\commands\wholesalecustomerarticlegroupcalculatorcommandtest.cpp">
+      <Filter>Discount\Calculator\Commands\Range</Filter>
+    </ClCompile>
+    <ClCompile Include="discount\calculator\commands\wholesalecustomergrouparticlecalculatorcommandtest.cpp">
+      <Filter>Discount\Calculator\Commands\Article</Filter>
+    </ClCompile>
+    <ClCompile Include="discount\calculator\commands\wholesalecustomergrouparticlegroupcalculatorcommandtest.cpp">
+      <Filter>Discount\Calculator\Commands\Range</Filter>
+    </ClCompile>
+    <ClCompile Include="discount\calculator\commands\wholesalecustomergroupmanufacturercalculatorcommandtest.cpp">
+      <Filter>Discount\Calculator\Commands\Range</Filter>
+    </ClCompile>
+    <ClCompile Include="discount\calculator\commands\wholesalecustomergroupmanufacturergroupcalculatorcommandtest.cpp">
+      <Filter>Discount\Calculator\Commands\Range</Filter>
+    </ClCompile>
+    <ClCompile Include="discount\calculator\commands\wholesalecustomermanufacturercalculatorcommandtest.cpp">
+      <Filter>Discount\Calculator\Commands\Range</Filter>
+    </ClCompile>
+    <ClCompile Include="discount\calculator\commands\wholesalecustomermanufacturergroupcalculatorcommandtest.cpp">
+      <Filter>Discount\Calculator\Commands\Range</Filter>
+    </ClCompile>
+    <ClCompile Include="discount\calculator\commands\wholesaleindustryallcustomerarticlecalculatorcommandtest.cpp">
+      <Filter>Discount\Calculator\Commands\Article</Filter>
+    </ClCompile>
+    <ClCompile Include="discount\calculator\commands\wholesaleindustryallcustomerarticlegroupcalculatorcommandtest.cpp">
+      <Filter>Discount\Calculator\Commands\Range</Filter>
+    </ClCompile>
+    <ClCompile Include="discount\calculator\commands\wholesaleindustryallcustomermanufacturercalculatorcommandtest.cpp">
+      <Filter>Discount\Calculator\Commands\Range</Filter>
+    </ClCompile>
+    <ClCompile Include="discount\calculator\commands\wholesaleindustryallcustomermanufacturergroupcalculatorcommandtest.cpp">
+      <Filter>Discount\Calculator\Commands\Range</Filter>
+    </ClCompile>
+    <ClCompile Include="discount\calculator\commands\wholesaleindustrycustomerarticlecalculatorcommandtest.cpp">
+      <Filter>Discount\Calculator\Commands\Article</Filter>
+    </ClCompile>
+    <ClCompile Include="discount\calculator\commands\wholesaleindustrycustomerarticlegroupcalculatorcommandtest.cpp">
+      <Filter>Discount\Calculator\Commands\Range</Filter>
+    </ClCompile>
+    <ClCompile Include="discount\calculator\commands\wholesaleindustrycustomergrouparticlecalculatorcommandtest.cpp">
+      <Filter>Discount\Calculator\Commands\Article</Filter>
+    </ClCompile>
+    <ClCompile Include="discount\calculator\commands\wholesaleindustrycustomergrouparticlegroupcalculatorcommandtest.cpp">
+      <Filter>Discount\Calculator\Commands\Range</Filter>
+    </ClCompile>
+    <ClCompile Include="discount\calculator\commands\wholesaleindustrycustomergroupmanufacturercalculatorcommandtest.cpp">
+      <Filter>Discount\Calculator\Commands\Range</Filter>
+    </ClCompile>
+    <ClCompile Include="discount\calculator\commands\wholesaleindustrycustomergroupmanufacturergroupcalculatorcommandtest.cpp">
+      <Filter>Discount\Calculator\Commands\Range</Filter>
+    </ClCompile>
+    <ClCompile Include="discount\calculator\commands\wholesaleindustrycustomermanufacturercalculatorcommandtest.cpp">
+      <Filter>Discount\Calculator\Commands\Range</Filter>
+    </ClCompile>
+    <ClCompile Include="discount\calculator\commands\wholesaleindustrycustomermanufacturergroupcalculatorcommandtest.cpp">
+      <Filter>Discount\Calculator\Commands\Range</Filter>
+    </ClCompile>
+    <ClCompile Include="datatypes\datefixture.cpp">
+      <Filter>Datatypes\Date</Filter>
+    </ClCompile>
+    <ClCompile Include="datatypes\datetest.cpp">
+      <Filter>Datatypes\Date</Filter>
+    </ClCompile>
+    <ClCompile Include="util\configfilereaderfixture.cpp">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="util\configfilereadertest.cpp">
+      <Filter>util</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="datatypes\decimalfixture.h">
+      <Filter>Datatypes\Decimal</Filter>
+    </ClInclude>
+    <ClInclude Include="datatypes\propertystatefixture.h">
+      <Filter>Datatypes\PropertyState</Filter>
+    </ClInclude>
+    <ClInclude Include="datatypes\int32fixture.h">
+      <Filter>Datatypes\Int32</Filter>
+    </ClInclude>
+    <ClInclude Include="datatypes\varstringfixture.h">
+      <Filter>Datatypes\VarString</Filter>
+    </ClInclude>
+    <ClInclude Include="datatypes\datetimefixture.h">
+      <Filter>Datatypes\DateTime</Filter>
+    </ClInclude>
+    <ClInclude Include="datatypes\propertycollectionfixture.h">
+      <Filter>Datatypes\PropertyCollection</Filter>
+    </ClInclude>
+    <ClInclude Include="discount\calculator\commands\common\calculatorcommandstub.h">
+      <Filter>Discount\Calculator\Commands\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="discount\calculator\commands\common\commoncalculatorcommandfixture.h">
+      <Filter>Discount\Calculator\Commands\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="discount\calculator\commands\common\discountbasevaluemapperstub.h">
+      <Filter>Discount\Calculator\Commands\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="discount\calculator\commands\common\discountloggermock.h">
+      <Filter>Discount\Calculator\Commands\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="discount\system\common\discountsystemfixture.h">
+      <Filter>Discount\System\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="discount\common\orderbasevaluestub.h">
+      <Filter>Discount\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="main\cmnut.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="datatypes\propertyfixture.h">
+      <Filter>Datatypes\PropertyTemplate</Filter>
+    </ClInclude>
+    <ClInclude Include="discount\calculator\result\common\discountcalculatorresultfixture.h">
+      <Filter>Discount\Calculator\CalculatorResult\common</Filter>
+    </ClInclude>
+    <ClInclude Include="discount\calculator\result\common\discountresultbasevaluefixture.h">
+      <Filter>Discount\Calculator\CalculatorResult\common</Filter>
+    </ClInclude>
+    <ClInclude Include="discount\calculator\result\common\discountresultfixture.h">
+      <Filter>Discount\Calculator\CalculatorResult\common</Filter>
+    </ClInclude>
+    <ClInclude Include="discount\calculator\result\common\discountsourcefixture.h">
+      <Filter>Discount\Calculator\CalculatorResult\common</Filter>
+    </ClInclude>
+    <ClInclude Include="discount\calculator\result\common\rebateinkindvaluefixture.h">
+      <Filter>Discount\Calculator\CalculatorResult\common</Filter>
+    </ClInclude>
+    <ClInclude Include="discount\calculator\commands\common\discountloggermockptr.h">
+      <Filter>Discount\Calculator\Commands\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="discount\resultprocessor\common\resultprocessorfixture.h">
+      <Filter>Discount\ResultProcessor\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="discount\resultprocessor\common\orderpositiondiscountrepositorystub.h">
+      <Filter>Discount\ResultProcessor\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="datatypes\datefixture.h">
+      <Filter>Datatypes\Date</Filter>
+    </ClInclude>
+    <ClInclude Include="util\configfilereaderfixture.h">
+      <Filter>util</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

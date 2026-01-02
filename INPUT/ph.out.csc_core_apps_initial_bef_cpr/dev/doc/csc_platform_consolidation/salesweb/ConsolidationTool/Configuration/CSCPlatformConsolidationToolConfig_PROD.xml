@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CSCPlatformConsolidationToolConfig
+xsi:noNamespaceSchemaLocation="CSCPlatformConsolidationToolConfig.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Modus="Simulation" Environment="Prod">
+	<Branches2BMoved Direction="South2North">
+		<Branch>81</Branch>
+		<Branch>82</Branch>
+	</Branches2BMoved>
+	<Applications>
+		<Application ApplicationVersion="v1.0">msv3</Application>
+		<Application ApplicationVersion="v2.0">msv3</Application>
+		<Application ApplicationVersion="">swimp</Application>
+	</Applications>
+	<Servers>
+		<!-- SWIMP OR DN SL -->
+		<Server>denu03ms0084</Server>
+		<Server>denu03ms0085</Server>
+		<Server>denu03ms0086</Server>
+		<Server>denu03ms0087</Server>
+		<!-- SWIMP PA -->
+		<Server>denu03ms0076</Server>
+		<Server>denu03ms0077</Server>
+		<Server>denu03ms0078</Server>
+		<Server>denu03ms0079</Server>
+		<Server>denu03ms0080</Server>
+		<Server>denu03ms0081</Server>
+		<Server>denu03ms0082</Server>
+		<Server>denu03ms0083</Server>
+		<!-- MSV3 v1.0 PHX Maintenance WBE PA -->
+		<Server>denu03ms0037</Server>
+		<Server>denu03ms0038</Server>
+		<Server>denu03ms0039</Server>
+		<Server>denu03ms0040</Server>
+		<Server>denu03ms0041</Server>
+		<Server>denu03ms0042</Server>
+		<Server>denu03ms0043</Server>
+		<Server>denu03ms0044</Server>
+		<Server>denu03ms0045</Server>
+		<Server>denu03ms0046</Server>
+		<Server>denu03ms0088</Server>
+		<Server>denu03ms0089</Server>
+		<Server>denu03ms0090</Server>
+		<Server>denu03ms0091</Server>
+		<Server>denu03ms0092</Server>
+		<Server>denu03ms0093</Server>
+		<!-- MSV3 v1.0 PHX Maintenance WBE OR OS RO CT BPA CFG... -->		
+		<Server>denu03ms0019</Server>		
+		<Server>denu03ms0034</Server>
+		<Server>denu03ms0035</Server>
+		<Server>denu03ms0036</Server>
+		<!-- MSV3 v1.0 Hageda Maintenance WBE PA OR OS RO CT BPA CFG... -->
+		<Server>denu03ms0110</Server>
+		<Server>denu03ms0111</Server>
+		<!-- PROD MSV3 v1.0 and v2.0 PHX and Hageda Maintenance WBE DR-DN-RA -->
+		<Server>denu03ms0355</Server>
+		<Server>denu03ms0356</Server>
+		<!-- PROD MSV3 v1.0 and v2.0 PHX and Hageda Maintenance WBE PA-BPA -->
+		<Server>denu03ms0345</Server>	
+		<Server>denu03ms0346</Server>	
+		<Server>denu03ms0347</Server>	
+		<Server>denu03ms0348</Server>	
+		<Server>denu03ms0349</Server>	
+		<Server>denu03ms0350</Server>	
+		<Server>denu03ms0351</Server>	
+		<Server>denu03ms0352</Server>	
+		<!-- PROD MSV3 v1.0 and v2.0 PHX and Hageda Maintenance WBE OR-OS-CFG-CT-RO -->
+		<Server>denu03ms0357</Server>	
+		<Server>denu03ms0358</Server>	
+		<Server>denu03ms0359</Server>	
+		<Server>denu03ms0360</Server>	
+	</Servers>
+	<Interfaces>
+		<MSV3v1Interfaces>
+			<MSV3v1Interface>bestellen-be</MSV3v1Interface>
+			<MSV3v1Interface>bestellstatusabfragen-be</MSV3v1Interface>
+			<MSV3v1Interface>ruecknahmeangebotanfordern-be</MSV3v1Interface>
+			<MSV3v1Interface>verbindungtesten-be</MSV3v1Interface>
+			<MSV3v1Interface>verfuegbarkeitanfragen-be</MSV3v1Interface>
+			<MSV3v1Interface>verfuegbarkeitanfragenbulk-be</MSV3v1Interface>
+			<MSV3v1Interface>vertragsdatenabfragen-be</MSV3v1Interface>
+		</MSV3v1Interfaces>
+		<MSV3v2Interfaces>
+			<MSV3v2Interface>bestellen-be</MSV3v2Interface>
+			<MSV3v2Interface>bestellstatusabfragen-be</MSV3v2Interface>
+			<MSV3v2Interface>dokumentAbfragen-be</MSV3v2Interface>
+			<MSV3v2Interface>lieferavis-be</MSV3v2Interface>
+			<MSV3v2Interface>retourenavis-be</MSV3v2Interface>
+			<MSV3v2Interface>ruecknahmeangebotanfordern-be</MSV3v2Interface>
+			<MSV3v2Interface>verbindungtesten-be</MSV3v2Interface>
+			<MSV3v2Interface>verfuegbarkeitanfragen-be</MSV3v2Interface>
+			<MSV3v2Interface>verfuegbarkeitanfragenbulk-be</MSV3v2Interface>
+			<MSV3v2Interface>vertragsdatenabfragen-be</MSV3v2Interface>
+		</MSV3v2Interfaces>
+		<SwimpInterfaces>
+			<SwimpInterface>sw-b-de-dn</SwimpInterface>
+			<SwimpInterface>sw-b-de-or</SwimpInterface>
+			<SwimpInterface>sw-b-de-pa</SwimpInterface>
+			<SwimpInterface>sw-b-de-sl</SwimpInterface>
+		</SwimpInterfaces>
+	</Interfaces>
+	<Paths>		
+        <BackupDir>C:\CSCPlatformConsolidation\ProdMove\Backup</BackupDir>
+        <TempDir>C:\CSCPlatformConsolidation\ProdMove\Temp</TempDir>
+	</Paths>
+</CSCPlatformConsolidationToolConfig>

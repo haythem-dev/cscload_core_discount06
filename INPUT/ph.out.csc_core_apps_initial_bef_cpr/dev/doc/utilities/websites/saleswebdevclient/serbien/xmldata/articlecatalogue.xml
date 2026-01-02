@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<articleCatalogueRequest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://salesweb.phoenix-ag.de/wsxmlcroatia/schemas/PhoenixArticleCatalogueRequest.xsd" language="de">
+ <client branchNumber="84" customerNumber="0015734"/>
+	<articles insertMasterData="yes">
+		<byArticleNumber articleNumber="18247"/>		
+	</articles>
+</articleCatalogueRequest>

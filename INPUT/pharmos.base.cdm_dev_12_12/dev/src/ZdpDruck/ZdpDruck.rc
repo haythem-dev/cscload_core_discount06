@@ -1,0 +1,1062 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// German (Germany) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_DEU)
+LANGUAGE LANG_GERMAN, SUBLANG_GERMAN
+#pragma code_page(1252)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_DEU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 7, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif\r\n"
+    "#include ""res\\ZdpDruck.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""l.deu\\afxres.rc""          // Standard components\r\n"
+    "#include ""l.deu\\afxprint.rc""        // printing/print preview resources\r\n"
+    "#endif\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\ZdpDruck.ico"
+
+IDR_ZDPDRUCKTYPE        ICON                    "res\\ZdpDruckDoc.ico"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_MAINFRAME           BITMAP                  "res\\Toolbar.bmp"
+
+IDB_BM_KNOEDEL          BITMAP                  "res\\bm_knoedel.bmp"
+
+IDB_BM_VOGESE           BITMAP                  "res\\bm_voges.bmp"
+
+IDB_BM_RIGHTS           BITMAP                  "res\\bm_right.bmp"
+
+IDB_BM_PASSWD           BITMAP                  "res\\bm_passw.bmp"
+
+IDB_BM_SUCHE            BITMAP                  "res\\bm_suche.bmp"
+
+IDB_BM_RUEBL            BITMAP                  "res\\bm_ruebl.bmp"
+
+IDB_BM_VORBL            BITMAP                  "res\\bm_vorbl.bmp"
+
+IDB_BM_RUEBL1           BITMAP                  "res\\bmp00001.bmp"
+
+IDB_BM_VORBL1           BITMAP                  "res\\bmp00002.bmp"
+
+IDB_BM_SUCHE1           BITMAP                  "res\\bmp00003.bmp"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_MAINFRAME TOOLBAR 16, 15
+BEGIN
+    BUTTON      ID_RECORD_CUT
+    BUTTON      ID_RECORD_COPY
+    BUTTON      ID_RECORD_PASTE
+    SEPARATOR
+    BUTTON      ID_FILE_PRINT
+    BUTTON      ID_FILE_SPEICHERN
+    SEPARATOR
+    BUTTON      ID_RECORD_SEARCH
+    BUTTON      ID_RECORD_NEXT
+    BUTTON      ID_RECORD_PREV
+    SEPARATOR
+    BUTTON      ID_RECORD_SAVE
+    BUTTON      ID_RECORD_DELETE
+    SEPARATOR
+    BUTTON      ID_RECORD_NEW
+    BUTTON      ID_RECORD_UNDO
+    SEPARATOR
+    BUTTON      ID_ARTBLIE
+    BUTTON      ID_ARTHERS
+    SEPARATOR
+    BUTTON      ID_GHAEN
+    SEPARATOR
+    BUTTON      ID_NEMWART
+    BUTTON      ID_NEMWLIE
+    BUTTON      ID_ART7PROZ
+    BUTTON      ID_ARTSPERR
+    BUTTON      ID_NONEMLIE
+    BUTTON      ID_INKONS
+    SEPARATOR
+    BUTTON      ID_PERHOEH
+    BUTTON      ID_PERHABVK
+    BUTTON      ID_PERHABVK_HS
+    SEPARATOR
+    BUTTON      ID_VIEW_RECHTE
+    BUTTON      ID_APP_ABOUT
+    BUTTON      ID_AMBLIEF
+    BUTTON      ID_ELEKTROWART
+    BUTTON      ID_ELEKTRO_NEUAUFN
+    BUTTON      ID_HERSTELLERLISTEN_HERSTELLERCODE
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU
+BEGIN
+    POPUP "&Datei"
+    BEGIN
+        MENUITEM "&Drucken...\tStrg+P",         ID_FILE_PRINT
+        MENUITEM "Sei&tenansicht",              ID_FILE_PRINT_PREVIEW
+        MENUITEM "Drucker&einrichtung...",      ID_FILE_PRINT_SETUP
+        MENUITEM SEPARATOR
+        MENUITEM "&Liste speichern",            ID_FILE_SPEICHERN
+        MENUITEM SEPARATOR
+        MENUITEM "Letzte Datei",                ID_FILE_MRU_FILE1, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "&Beenden",                    ID_APP_EXIT
+    END
+    POPUP "Da&tensatz"
+    BEGIN
+        MENUITEM "&Suchen\tF2",                 ID_RECORD_SEARCH
+        MENUITEM "&Vorblättern\tBild runter",   ID_RECORD_NEXT
+        MENUITEM "&Zurückblättern\tBild rauf",  ID_RECORD_PREV
+        MENUITEM SEPARATOR
+        MENUITEM "&Neuanlage/Ändern\tEnter",    ID_RECORD_NEW
+        MENUITEM "S&peichern\tF1",              ID_RECORD_SAVE
+        MENUITEM "&Löschen\tF7",                ID_RECORD_DELETE
+        MENUITEM SEPARATOR
+        MENUITEM "&Rückgängig\tESC",            ID_RECORD_UNDO
+        MENUITEM SEPARATOR
+        MENUITEM "&Ausschneiden\tStrg+Shift+X", ID_RECORD_CUT
+        MENUITEM "&Kopieren\tStrg+Shift+C",     ID_RECORD_COPY
+        MENUITEM "E&infügen\tStrg+Shift+V",     ID_RECORD_PASTE
+    END
+    POPUP "&Artikellisten"
+    BEGIN
+        MENUITEM "Nach &Bestelladresse",        ID_ARTBLIE
+        MENUITEM "Nach &Hersteller",            ID_ARTHERS
+        MENUITEM SEPARATOR
+        POPUP "Datacare"
+        BEGIN
+            MENUITEM "Liste wesentliche Preisveränderungen", ID_DC_PREISAEND
+        END
+        POPUP "LogIndex"
+        BEGIN
+            MENUITEM "Neuaufnahmen",                ID_GALDATNEU
+            MENUITEM "Änderungen AH oder Ersatz-PZN", ID_GALDATAH
+        END
+    END
+    POPUP "&Zdplisten"
+    BEGIN
+        MENUITEM "&Kennzeichen GH",             ID_GHAEN
+    END
+    POPUP "&Nemlisten"
+    BEGIN
+        MENUITEM "NEM-Wechsel &Artikel",        ID_NEMWART
+        MENUITEM "NEM-Wechsel &Lieferant",      ID_NEMWLIE
+        MENUITEM "&Neuaufn. verminderte MWST",  ID_ART7PROZ
+        MENUITEM "&Gesperrte Artikel",          ID_ARTSPERR
+        MENUITEM "Lieferant &ohne NEM-Kennung", ID_NONEMLIE
+        MENUITEM "&Inkonsistente Nem-Artikel",  ID_INKONS
+        MENUITEM SEPARATOR
+        MENUITEM "Elektro-Wechsel Artikel",     ID_ELEKTROWART
+        MENUITEM "Neuaufn. Elektroartikel nicht registriert", ID_ELEKTRO_NEUAUFN
+    END
+    POPUP "&Eklisten"
+    BEGIN
+        MENUITEM "&Preiserhöhung",              ID_PERHOEH
+        MENUITEM "P&reiserhöhung mit Abverkauf", ID_PERHABVK
+        MENUITEM "Preis&senkung mit Abverkauf", ID_PSENKABVK
+        MENUITEM "Lieferanten Arzneimittelbezug nicht A,B,C", ID_AMBLIEF
+    END
+    POPUP "&Herstellerlisten"
+    BEGIN
+        MENUITEM "Hersteller nach Hersteller-Code", ID_HERSTELLERLISTEN_HERSTELLERCODE
+    END
+    POPUP "&Ansicht"
+    BEGIN
+        MENUITEM "&Symbolleiste",               ID_VIEW_TOOLBAR
+        MENUITEM "S&tatusleiste",               ID_VIEW_STATUS_BAR
+        MENUITEM SEPARATOR
+        MENUITEM "S&ymbolleiste anpassen",      ID_VIEW_CUSTTOOLBAR
+        MENUITEM SEPARATOR
+        MENUITEM "&Microsoft-Standard",         ID_VIEW_MS_STANDARD
+        MENUITEM "&Bearbeitungsfragen",         ID_VIEW_AUTO_FRAGE
+        MENUITEM SEPARATOR
+        MENUITEM "Benutzer&rechte",             ID_VIEW_RECHTE
+    END
+    POPUP "&?"
+    BEGIN
+        MENUITEM "&Taschenrechner",             ID_TASCHENRECHNER
+        MENUITEM "&Server",                     ID_SERVER
+        MENUITEM "Inf&o über ZdpDruck...",      ID_APP_ABOUT
+        MENUITEM SEPARATOR
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS
+BEGIN
+    "C",            ID_RECORD_COPY,         VIRTKEY, SHIFT, CONTROL, NOINVERT
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL, NOINVERT
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL, NOINVERT
+    "P",            ID_FILE_PRINT,          VIRTKEY, CONTROL, NOINVERT
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL, NOINVERT
+    "V",            ID_RECORD_PASTE,        VIRTKEY, SHIFT, CONTROL, NOINVERT
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT, NOINVERT
+    VK_ESCAPE,      ID_RECORD_UNDO,         VIRTKEY, NOINVERT
+    VK_F1,          ID_RECORD_SAVE,         VIRTKEY, NOINVERT
+    VK_F2,          ID_RECORD_SEARCH,       VIRTKEY, NOINVERT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY, NOINVERT
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT, NOINVERT
+    VK_F7,          ID_RECORD_DELETE,       VIRTKEY, NOINVERT
+    VK_NEXT,        ID_RECORD_NEXT,         VIRTKEY, NOINVERT
+    VK_PRIOR,       ID_RECORD_PREV,         VIRTKEY, NOINVERT
+    VK_RETURN,      ID_RECORD_NEW,          VIRTKEY, NOINVERT
+    "X",            ID_RECORD_CUT,          VIRTKEY, SHIFT, CONTROL, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 216, 122
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Info über ZdpDruck"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "Druckprogramme ZDP Version 6.15",IDC_ABOUT_VERSION,40,10,160,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 1994 - 2004  PHOENIX - Pharma",IDC_STATIC,40,25,160,8
+    LTEXT           "Last Update:  22.11 2004     ",IDC_ABOUT_DATE,40,40,84,8
+    LTEXT           "Author:  Hajo Schmitt    ",IDC_STATIC,40,55,68,8
+    CTEXT           "Katze: Knödel",IDC_ABOUT_KNOEDEL,143,108,52,8
+    DEFPUSHBUTTON   "Button1",IDC_ABOUT_PB,141,39,56,68,BS_BITMAP | BS_FLAT,WS_EX_DLGMODALFRAME | WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+END
+
+IDD_SERVER DIALOG 0, 0, 187, 91
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Server"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "&Server",IDC_STATIC,39,18,40,8
+    EDITTEXT        IDC_SERVER_SERVER,92,16,51,12,ES_AUTOHSCROLL
+    LTEXT           "&Datenbank",IDC_STATIC,39,38,38,8
+    EDITTEXT        IDC_SERVER_DBASE,92,36,51,12,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "&OK",IDOK,22,62,50,14
+    PUSHBUTTON      "&Abbrechen",IDCANCEL,113,62,50,14
+END
+
+IDD_USER DIALOGEX 0, 0, 187, 91
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Benutzer-Kennung"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    LTEXT           "&Benutzername:",IDC_STATIC,39,18,46,8
+    EDITTEXT        IDC_USER_NAME,90,16,68,14
+    LTEXT           "&Passwort:",IDC_STATIC,39,38,30,8
+    EDITTEXT        IDC_USER_PASSWD,90,36,68,14,ES_PASSWORD
+    DEFPUSHBUTTON   "&OK",IDOK,18,64,50,14
+    PUSHBUTTON      "&Abbrechen",IDCANCEL,116,64,50,14
+END
+
+IDD_RECHTE DIALOGEX 0, 0, 324, 366
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Benutzerrechte"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    COMBOBOX        IDC_RECHTE_CB_USERNAME,5,5,58,166,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "&Kopieren",IDC_RECHTE_BP_COPY,72,5,50,12
+    PUSHBUTTON      "&Einfügen",IDC_RECHTE_BP_PASTE,72,19,50,12
+    PUSHBUTTON      "&Speichern",IDC_RECHTE_BP_SPEICHERN,127,5,50,12
+    PUSHBUTTON      "&Beenden",IDCANCEL,127,19,50,12
+    CONTROL         IDB_BM_RIGHTS,IDC_STATIC,"Static",SS_BITMAP,205,6,64,30
+    CONTROL         "&SubSuperuser",IDC_RECHTE_CK_SUBSUPER,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,5,21,62,10
+    LTEXT           "Sued    ",IDC_RECHTE_ST_REG_MUSTER,180,46,23,8
+    LTEXT           "Liste Lief.  ohne NEM-Kennung  ",IDC_RECHTE_ST_MEN_MUSTER,71,58,103,8
+    CONTROL         "",IDC_RECHTE_RB_NONE,"Button",BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,178,59,8,8
+    CONTROL         "",IDC_RECHTE_RB_READ,"Button",BS_AUTORADIOBUTTON,186,59,8,8
+    CONTROL         "",IDC_RECHTE_RB_WRITE,"Button",BS_AUTORADIOBUTTON,194,59,8,8
+    PUSHBUTTON      "S&uperuser",IDC_RECHTE_BP_SUPER,72,33,50,12
+END
+
+IDD_ARTBLIE DIALOG 0, 0, 275, 95
+STYLE DS_SETFONT | WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "&LiefNr    ",IDC_STATIC,17,15,25,8
+    EDITTEXT        IDC_ARTBLIE_SUCHB,54,13,27,12,ES_AUTOHSCROLL
+    LTEXT           "?",IDC_STATIC,85,15,8,8
+    LTEXT           "",IDC_ARTBLIE_SHOW,97,9,116,20,SS_SUNKEN
+    CONTROL         "ArtNr",IDC_ARTBLIE_RD_NR,"Button",BS_AUTORADIOBUTTON | WS_GROUP,218,8,31,10
+    CONTROL         "ArtName",IDC_ARTBLIE_RD_NAME,"Button",BS_AUTORADIOBUTTON,218,21,43,10
+    CONTROL         "Custom1",IDC_ARTBLIE_GRID,"GXWND",WS_BORDER | WS_VSCROLL | WS_TABSTOP,16,38,131,41
+END
+
+IDD_ARTHERS DIALOG 0, 0, 275, 95
+STYLE DS_SETFONT | WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "&HerstNr",IDC_STATIC,17,15,33,8
+    EDITTEXT        IDC_ARTHERS_SUCHB,54,13,27,12,ES_AUTOHSCROLL
+    LTEXT           "?",IDC_STATIC,85,15,8,8
+    LTEXT           "",IDC_ARTHERS_SHOW,97,9,116,20,SS_SUNKEN
+    CONTROL         "ArtNr",IDC_ARTHERS_RD_NR,"Button",BS_AUTORADIOBUTTON | WS_GROUP,218,8,31,10
+    CONTROL         "ArtName",IDC_ARTHERS_RD_NAME,"Button",BS_AUTORADIOBUTTON,218,21,43,10
+    CONTROL         "Custom1",IDC_ARTHERS_GRID,"GXWND",WS_BORDER | WS_VSCROLL | WS_TABSTOP,16,38,131,41
+END
+
+IDD_SELECTDLG1 DIALOG 0, 0, 363, 200
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Auswahl"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "&Auswahlkriterium................:",IDC_ST_SELECTDIALOG_AUSWAHL,14,11,77,8
+    COMBOBOX        IDC_CB_SELECTDIALOG_AUSWAHL,92,9,98,63,CBS_DROPDOWNLIST | CBS_OEMCONVERT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "&Suchbegriff1 ........................:",IDC_STATIC_SUCHB1_1,14,24,77,8
+    EDITTEXT        IDC_EDIT_SUCHB1_1,92,23,124,12,ES_UPPERCASE | ES_AUTOHSCROLL
+    LTEXT           "?  ",IDC_STATIC_FRAGE1_1,220,26,8,8
+    LTEXT           "S&uchbegriff2.........................:",IDC_STATIC_SUCHB1_2,14,38,77,8
+    EDITTEXT        IDC_EDIT_SUCHB1_2,92,37,124,12,ES_UPPERCASE | ES_AUTOHSCROLL
+    LTEXT           "?",IDC_STATIC_FRAGE1_2,220,39,8,8
+    CONTROL         "List2",IDC_LISTCTRL_BOX,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | WS_BORDER | WS_TABSTOP,13,55,334,131
+    PUSHBUTTON      "&Suchen",IDC_SUCHE,232,22,15,14,BS_BITMAP | NOT WS_TABSTOP
+    PUSHBUTTON      "&vor",IDC_VORBL,251,22,14,14,BS_BITMAP | NOT WS_TABSTOP
+    PUSHBUTTON      "&zurück",IDC_RUEBL,269,22,14,14,BS_BITMAP | NOT WS_TABSTOP
+    PUSHBUTTON      "OK",IDOK,297,21,50,14,NOT WS_TABSTOP
+    PUSHBUTTON      "Cancel",IDCANCEL,297,36,50,14,NOT WS_TABSTOP
+END
+
+IDD_DRUCK DIALOG 0, 0, 187, 95
+STYLE DS_SETFONT | WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+END
+
+IDD_NEMWART DIALOG 0, 0, 228, 104
+STYLE DS_SETFONT | WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Datum &von  ",IDC_STATIC,17,15,42,8
+    EDITTEXT        IDC_NEMWART_DATVON,64,13,46,12,ES_AUTOHSCROLL
+    LTEXT           "Datum &bis",IDC_STATIC,123,15,37,8
+    EDITTEXT        IDC_NEMWART_DATBIS,163,13,46,12,ES_AUTOHSCROLL
+    CONTROL         "Custom1",IDC_NEMWART_GRID,"GXWND",WS_BORDER | WS_VSCROLL | WS_TABSTOP,16,38,131,41
+END
+
+IDD_NEMWLIEF DIALOG 0, 0, 228, 104
+STYLE DS_SETFONT | WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Datum &von  ",IDC_STATIC,17,15,42,8
+    EDITTEXT        IDC_NEMWLIEF_DATVON,64,13,46,12,ES_AUTOHSCROLL
+    LTEXT           "Datum &bis",IDC_STATIC,123,15,37,8
+    EDITTEXT        IDC_NEMWLIEF_DATBIS,163,13,46,12,ES_AUTOHSCROLL
+    CONTROL         "Custom1",IDC_NEMWLIEF_GRID,"GXWND",WS_BORDER | WS_VSCROLL | WS_TABSTOP,16,38,131,41
+END
+
+IDD_LINEPROT DIALOG 0, 0, 277, 124
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "line protocol"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,76,86,50,14
+    PUSHBUTTON      "Abbrechen",IDCANCEL,185,86,50,14
+    LTEXT           "Protokoll-&Modus",IDC_STATIC,7,15,57,8
+    CONTROL         "Protokoll mit Zeitstempel",IDC_PROT_MODE1,"Button",BS_AUTORADIOBUTTON,74,15,92,10
+    CONTROL         "Protokoll ohne Zeitstempel",IDC_PROT_MODE2,"Button",BS_AUTORADIOBUTTON,74,27,99,10
+    CONTROL         "Protokoll ausschalten",IDC_PROT_MODE3,"Button",BS_AUTORADIOBUTTON,74,39,83,10
+    LTEXT           "Protokoll-&Datei     ",IDC_STATIC,7,65,57,8
+    EDITTEXT        IDC_PROT_FILE,76,62,190,14,ES_AUTOHSCROLL
+END
+
+IDD_ART7PROZ DIALOG 0, 0, 224, 103
+STYLE DS_SETFONT | WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Datum &von  ",IDC_STATIC,17,15,42,8
+    EDITTEXT        IDC_ART7PROZ_DATVON,64,13,46,12,ES_AUTOHSCROLL
+    LTEXT           "Datum &bis",IDC_STATIC,123,15,37,8
+    EDITTEXT        IDC_ART7PROZ_DATBIS,163,13,46,12,ES_AUTOHSCROLL
+    CONTROL         "Custom1",IDC_ART7PROZ_GRID,"GXWND",WS_BORDER | WS_VSCROLL | WS_TABSTOP,16,38,131,41
+END
+
+IDD_ARTSPERR DIALOG 0, 0, 224, 104
+STYLE DS_SETFONT | WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Datum &von  ",IDC_STATIC,17,15,42,8
+    EDITTEXT        IDC_ARTSPERR_DATVON,64,13,46,12,ES_AUTOHSCROLL
+    LTEXT           "Datum &bis",IDC_STATIC,123,15,37,8
+    EDITTEXT        IDC_ARTSPERR_DATBIS,163,13,46,12,ES_AUTOHSCROLL
+    CONTROL         "Custom1",IDC_ARTSPERR_GRID,"GXWND",WS_BORDER | WS_VSCROLL | WS_TABSTOP,16,38,131,41
+END
+
+IDD_NONEMLIE DIALOG 0, 0, 228, 103
+STYLE DS_SETFONT | WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Datum &von  ",IDC_STATIC,17,15,42,8
+    EDITTEXT        IDC_NONEMLIE_DATVON,64,13,46,12,ES_AUTOHSCROLL
+    LTEXT           "Datum &bis",IDC_STATIC,123,15,37,8
+    EDITTEXT        IDC_NONEMLIE_DATBIS,163,13,46,12,ES_AUTOHSCROLL
+    CONTROL         "Custom1",IDC_NONEMLIE_GRID,"GXWND",WS_BORDER | WS_VSCROLL | WS_TABSTOP,16,38,131,41
+END
+
+IDD_INKONS DIALOG 0, 0, 228, 104
+STYLE DS_SETFONT | WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Datum &von  ",IDC_STATIC,17,15,42,8
+    EDITTEXT        IDC_INKONS_DATVON,64,13,46,12,ES_AUTOHSCROLL
+    LTEXT           "Datum &bis",IDC_STATIC,123,15,37,8
+    EDITTEXT        IDC_INKONS_DATBIS,163,13,46,12,ES_AUTOHSCROLL
+    CONTROL         "Custom1",IDC_INKONS_GRID,"GXWND",WS_BORDER | WS_VSCROLL | WS_TABSTOP,16,38,131,41
+END
+
+IDD_PERHOEH DIALOG 0, 0, 257, 103
+STYLE DS_SETFONT | WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "&Gültigkeitsdatum >",IDC_STATIC,17,15,62,8
+    EDITTEXT        IDC_PERHOEH_DATVON,84,13,46,12,ES_AUTOHSCROLL
+    LTEXT           "&Gültigkeitsdatum <=",IDC_STATIC,137,15,62,8
+    EDITTEXT        IDC_PERHOEH_DATBIS,204,13,46,12,ES_AUTOHSCROLL
+    CONTROL         "Custom1",IDC_PERHOEH_GRID,"GXWND",WS_BORDER | WS_VSCROLL | WS_TABSTOP,16,38,131,41
+END
+
+IDD_PERHABVK DIALOGEX 0, 0, 525, 98
+STYLE DS_SETFONT | WS_CHILD
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    LTEXT           "&Gültigkeitsdatum >",IDC_STATIC,17,15,62,8
+    EDITTEXT        IDC_PERHABVK_DATVON,84,13,46,12,ES_AUTOHSCROLL
+    LTEXT           "&Gültigkeitsdatum <=",IDC_STATIC,137,15,62,8
+    EDITTEXT        IDC_PERHABVK_DATBIS,204,13,46,12,ES_AUTOHSCROLL
+    COMBOBOX        IDC_PERHABVK_BRANCH,347,13,72,64,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Custom1",IDC_PERHABVK_GRID,"GXWND",WS_BORDER | WS_VSCROLL | WS_TABSTOP,16,38,131,41
+    PUSHBUTTON      "&Filiale zuschalten",IDC_PERHABVK_FILZU,429,13,66,13
+END
+
+IDD_GHAEN DIALOG 0, 0, 229, 102
+STYLE DS_SETFONT | WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Datum &von  ",IDC_STATIC,17,15,42,8
+    EDITTEXT        IDC_GHAEN_DATVON,64,13,46,12,ES_AUTOHSCROLL
+    LTEXT           "Datum &bis",IDC_STATIC,123,15,37,8
+    EDITTEXT        IDC_GHAEN_DATBIS,163,13,46,12,ES_AUTOHSCROLL
+    CONTROL         "Custom1",IDC_GHAEN_GRID,"GXWND",WS_BORDER | WS_VSCROLL | WS_TABSTOP,16,38,131,41
+END
+
+IDD_AMBLIEF DIALOG 0, 0, 347, 117
+STYLE DS_SETFONT | WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "Custom1",IDC_AMBLIEF_GRID,"GXWND",WS_BORDER | WS_VSCROLL | WS_TABSTOP,16,38,131,41
+END
+
+IDD_DC_PREISAEND DIALOGEX 0, 0, 186, 95
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "Custom1",IDC_DC_GRID,"GXWND",WS_BORDER | WS_VSCROLL | WS_TABSTOP,16,38,131,41
+    LTEXT           "VZ",IDC_STATIC,18,12,19,8
+    EDITTEXT        IDC_VZ,33,11,22,12,ES_AUTOHSCROLL
+END
+
+IDD_GALDAT_NEU DIALOGEX 0, 0, 267, 118
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Datum &von  ",IDC_STATIC,27,23,42,8
+    EDITTEXT        IDC_DATVON,73,22,46,12,ES_AUTOHSCROLL
+    LTEXT           "Datum &bis",IDC_STATIC,133,23,37,8
+    EDITTEXT        IDC_DATBIS,173,22,46,12,ES_AUTOHSCROLL
+    CONTROL         "Custom1",IDC_GALDAT_GRID,"GXWND",WS_BORDER | WS_VSCROLL | WS_TABSTOP,25,47,131,41
+END
+
+IDD_GALDAT_AH DIALOGEX 0, 0, 281, 134
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_CHILD
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Datum &von  ",IDC_STATIC,37,31,42,8
+    EDITTEXT        IDC_DATVON,83,31,46,12,ES_AUTOHSCROLL
+    LTEXT           "Datum &bis",IDC_STATIC,143,31,37,8
+    EDITTEXT        IDC_DATBIS,183,31,46,12,ES_AUTOHSCROLL
+    CONTROL         "Custom1",IDC_GALDAT_GRID,"GXWND",WS_BORDER | WS_VSCROLL | WS_TABSTOP,35,55,131,41
+END
+
+IDD_ELEKTRO_AEND DIALOGEX 0, 0, 229, 102
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Datum &von  ",IDC_STATIC,17,15,42,8
+    EDITTEXT        IDC_DATVON,64,13,46,12,ES_AUTOHSCROLL
+    LTEXT           "Datum &bis",IDC_STATIC,123,15,37,8
+    EDITTEXT        IDC_DATBIS,163,13,46,12,ES_AUTOHSCROLL
+    CONTROL         "Custom1",IDC_ELEKTRO_GRID,"GXWND",WS_BORDER | WS_VSCROLL | WS_TABSTOP,16,38,131,41
+END
+
+IDD_ELEKTRONEU DIALOGEX 0, 0, 229, 102
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Datum &von  ",IDC_STATIC,17,15,42,8
+    EDITTEXT        IDC_DATVON,64,13,46,12,ES_AUTOHSCROLL
+    LTEXT           "Datum &bis",IDC_STATIC,123,15,37,8
+    EDITTEXT        IDC_DATBIS,163,13,46,12,ES_AUTOHSCROLL
+    CONTROL         "Custom1",IDC_ELEKTRO_GRID,"GXWND",WS_BORDER | WS_VSCROLL | WS_TABSTOP,16,38,131,41
+END
+
+IDD_HERSTELLERCODE DIALOGEX 0, 0, 186, 94
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_CHILD
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "Custom1",IDC_HERSTELLER_GRID,"GXWND",WS_BORDER | WS_VSCROLL | WS_TABSTOP,7,46,131,41
+    LTEXT           "Hersteller-Code",IDC_STATIC,14,15,50,8
+    EDITTEXT        IDC_HERSTELLERCODE,69,13,30,12,ES_AUTOHSCROLL
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040704B0"
+        BEGIN
+            VALUE "FileDescription", "ZdpDruck MFC Application"
+            VALUE "FileVersion", "1, 0, 0, 1"
+            VALUE "InternalName", "ZdpDruck"
+            VALUE "LegalCopyright", "Copyright (C) 1999"
+            VALUE "OriginalFilename", "ZdpDruck.EXE"
+            VALUE "ProductName", "ZdpDruck Application"
+            VALUE "ProductVersion", "1, 0, 0, 1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x407, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 209
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 115
+    END
+
+    IDD_SERVER, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 180
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 84
+    END
+
+    IDD_USER, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 84
+    END
+
+    IDD_RECHTE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 308
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 361
+    END
+
+    IDD_ARTBLIE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 268
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 88
+    END
+
+    IDD_ARTHERS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 268
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 88
+    END
+
+    IDD_SELECTDLG1, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 354
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 186
+    END
+
+    IDD_DRUCK, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 180
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 88
+    END
+
+    IDD_NEMWART, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 221
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 97
+    END
+
+    IDD_NEMWLIEF, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 221
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 97
+    END
+
+    IDD_LINEPROT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 270
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 117
+    END
+
+    IDD_ART7PROZ, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 217
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 96
+    END
+
+    IDD_ARTSPERR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 217
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 97
+    END
+
+    IDD_NONEMLIE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 221
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 96
+    END
+
+    IDD_INKONS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 221
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 97
+    END
+
+    IDD_PERHOEH, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 250
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 96
+    END
+
+    IDD_PERHABVK, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 518
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 91
+    END
+
+    IDD_GHAEN, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 222
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 95
+    END
+
+    IDD_AMBLIEF, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 340
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 110
+    END
+
+    IDD_DC_PREISAEND, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 88
+    END
+
+    IDD_GALDAT_NEU, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 260
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 111
+    END
+
+    IDD_GALDAT_AH, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 274
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 127
+    END
+
+    IDD_ELEKTRO_AEND, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 222
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 95
+    END
+
+    IDD_ELEKTRONEU, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 222
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 95
+    END
+
+    IDD_HERSTELLERCODE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 87
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_PERHABVK DLGINIT
+BEGIN
+    IDC_PERHABVK_BRANCH, 0x403, 10, 0
+0x6946, 0x696c, 0x6c61, 0x2065, 0x0031, 
+    IDC_PERHABVK_BRANCH, 0x403, 10, 0
+0x6946, 0x696c, 0x6c61, 0x2065, 0x0032, 
+    IDC_PERHABVK_BRANCH, 0x403, 10, 0
+0x6946, 0x696c, 0x6c61, 0x2065, 0x0033, 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// AFX_DIALOG_LAYOUT
+//
+
+IDD_USER AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDR_MAINFRAME           "Druck ZP (ZdpDruck)\n\nZdpDruck\n\n\nZdpDruck.Document\nZdpDruck Document"
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_APP_TITLE       "ZdpDruck"
+    AFX_IDS_IDLEMESSAGE     "Bereit"
+END
+
+STRINGTABLE
+BEGIN
+    ID_INDICATOR_EXT        "ER"
+    ID_INDICATOR_CAPS       "UF"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "RF"
+    ID_INDICATOR_OVR        "ÜB"
+    ID_INDICATOR_REC        "MA"
+END
+
+STRINGTABLE
+BEGIN
+    ID_FILE_NEW             "Erstellt ein neues Dokument.\nNeu"
+    ID_FILE_OPEN            "Öffnet ein bestehendes Dokument.\nÖffnen"
+    ID_FILE_CLOSE           "Schließt das aktive Dokument.\nSchließen"
+    ID_FILE_SAVE            "Speichert das aktive Dokument.\nSpeichern"
+    ID_FILE_SAVE_AS         "Speichert das aktive Dokument unter neuem Namen.\nSpeichern unter"
+    ID_FILE_PAGE_SETUP      "Ändert die Druckoptionen.\nSeite einrichten"
+    ID_FILE_PRINT_SETUP     "Ändert den Drucker und die Druckoptionen.\nDruckereinrichtung"
+    ID_FILE_PRINT           "Druckt das aktive Dokument.\nDrucken"
+    ID_FILE_PRINT_PREVIEW   "Zeigt ganze Seiten an.\nSeitenansicht"
+END
+
+STRINGTABLE
+BEGIN
+    ID_APP_ABOUT            "Zeigt Programm-Informationen, Versionsnummer und Copyright an.\nInfo"
+    ID_APP_EXIT             "Verläßt die Anwendung; fragt, ob Dokumente gespeichert werden sollen.\nBeenden"
+END
+
+STRINGTABLE
+BEGIN
+    ID_FILE_MRU_FILE1       "Öffnet dieses Dokument."
+    ID_FILE_MRU_FILE2       "Öffnet dieses Dokument."
+    ID_FILE_MRU_FILE3       "Öffnet dieses Dokument."
+    ID_FILE_MRU_FILE4       "Öffnet dieses Dokument."
+    ID_FILE_MRU_FILE5       "Öffnet dieses Dokument."
+    ID_FILE_MRU_FILE6       "Öffnet dieses Dokument."
+    ID_FILE_MRU_FILE7       "Öffnet dieses Dokument."
+    ID_FILE_MRU_FILE8       "Öffnet dieses Dokument."
+    ID_FILE_MRU_FILE9       "Öffnet dieses Dokument."
+    ID_FILE_MRU_FILE10      "Öffnet dieses Dokument."
+    ID_FILE_MRU_FILE11      "Öffnet dieses Dokument."
+    ID_FILE_MRU_FILE12      "Öffnet dieses Dokument."
+    ID_FILE_MRU_FILE13      "Öffnet dieses Dokument."
+    ID_FILE_MRU_FILE14      "Öffnet dieses Dokument."
+    ID_FILE_MRU_FILE15      "Öffnet dieses Dokument."
+    ID_FILE_MRU_FILE16      "Öffnet dieses Dokument."
+END
+
+STRINGTABLE
+BEGIN
+    ID_NEXT_PANE            "Wechselt zum nächsten Fensterausschnitt.\nNächster Ausschnitt"
+    ID_PREV_PANE            "Springt zum vorherigen Fensterausschnitt zurück.\nVorheriger Ausschnitt"
+END
+
+STRINGTABLE
+BEGIN
+    ID_WINDOW_SPLIT         "Teilt das aktive Fenster in Ausschnitte.\nTeilen"
+END
+
+STRINGTABLE
+BEGIN
+    ID_EDIT_CLEAR           "Löscht die Markierung.\nLöschen"
+    ID_EDIT_CLEAR_ALL       "Löscht alles.\nAlles löschen"
+    ID_EDIT_COPY            "Kopiert die Markierung und überträgt sie in die Zwischenablage.\nKopieren"
+    ID_EDIT_CUT             "Entfernt die Markierung und überträgt sie in die Zwischenablage.\nAusschneiden"
+    ID_EDIT_FIND            "Sucht den angegebenen Text.\nSuchen"
+    ID_EDIT_PASTE           "Fügt den Inhalt der Zwischenablage ein.\nEinfügen"
+    ID_EDIT_REPEAT          "Wiederholt die letzte Aktion.\nWiederholen"
+    ID_EDIT_REPLACE         "Ersetzt einen bestimmten Text durch einen anderen.\nErsetzen"
+    ID_EDIT_SELECT_ALL      "Markiert das gesamte Dokument.\nAlles markieren"
+    ID_EDIT_UNDO            "Macht die letzte Aktion rückgängig.\nRückgängig"
+    ID_EDIT_REDO            "Wiederholt die vorher rückgängig gemachte Aktion.\nWiederherstellen"
+END
+
+STRINGTABLE
+BEGIN
+    ID_VIEW_TOOLBAR         "Blendet die Symbolleiste ein oder aus.\nSymbolleiste ein-/ausschalten"
+    ID_VIEW_STATUS_BAR      "Blendet die Statusleiste ein oder aus.\nStatusleiste ein-/ausschalten"
+END
+
+STRINGTABLE
+BEGIN
+    ID_VIEW_MS_STANDARD     "Schaltet um zwischen Microsoft -Standard und Phosixo-Spezial\nMS-Standard ein/aus"
+    ID_VIEW_AUTO_FRAGE      "Mit oder ohne Bearbeitungsfragen/nFragen ein/aus"
+    ID_VIEW_CUSTTOOLBAR     "Symbolleiste anpassen"
+    ID_RECORD_UNDO          "Zurück\nZurück"
+    ID_RECORD_CUT           "Satz ausschneiden\nAusschneiden"
+    ID_RECORD_COPY          "Satz kopieren\nKopieren"
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_SCSIZE          "Ändert die Fenstergröße."
+    AFX_IDS_SCMOVE          "Ändert die Position des Fensters."
+    AFX_IDS_SCMINIMIZE      "Verkleinert das Fenster zu einem Symbol."
+    AFX_IDS_SCMAXIMIZE      "Vergrößert das Fenster zu voller Größe."
+    AFX_IDS_SCNEXTWINDOW    "Wechselt zum nächsten Dokumentfenster."
+    AFX_IDS_SCPREVWINDOW    "Wechselt zum vorherigen Dokumentfenster."
+    AFX_IDS_SCCLOSE         "Schließt das aktive Fenster und fordert zur Dokumentspeicherung auf."
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_SCRESTORE       "Stellt das Fenster in seiner normalen Größe wieder her."
+    AFX_IDS_SCTASKLIST      "Aktiviert die Task-Liste."
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_PREVIEW_CLOSE   "Beendet die Seitenansicht.\nSeitenansicht beenden"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_TB_COMBO_0          "Filialen\nFilialen"
+    IDS_TB_COMBO_1          "Sonst\nSonst"
+END
+
+STRINGTABLE
+BEGIN
+    ID_RECORD_PASTE         "Satz einfügen\nEinfügen"
+    ID_RECORD_SEARCH        "Datensatz suchen\nSuchen"
+    ID_RECORD_SAVE          "Satz speichern\nSpeichern"
+    ID_RECORD_DELETE        "Satz löschen\nLöschen"
+    ID_RECORD_NEW           "Satz anlegen/ändern, Feld vor\nBearbeiten"
+    ID_VIEW_RECHTE          "Benutzerrechte\nBenutzerrechte"
+    ID_ARTBLIE              "Artikelliste nach Bestelladresse\n nach Bestelladresse"
+END
+
+STRINGTABLE
+BEGIN
+    ID_RECORD_NEXT          "Nächster Datensatz\nVorblättern"
+    ID_RECORD_PREV          "Vorhergehender Datensatz\nZurückblättern"
+END
+
+STRINGTABLE
+BEGIN
+    ID_HERST                "Artikelliste nach Hersteller\n nach Hersteller"
+    ID_ARTHERS              "Artikelliste nach Hersteller\n nach Hersteller"
+    ID_NEMWART              "NEM-Wechsel Artikel\nNEM-Wechsel Artikel"
+    ID_NEMWLIE              "NEM-Wechsel Lieferant\nNEM-Wechsel Lieferant"
+    ID_FILE_SPEICHERN       "Liste speichern\nListe speichen"
+    ID_CLIENT_PROTO         "ClientProtokoll\nClientProtokoll"
+    ID_BUFFERED_OFF         "Fetchs ungepuffert\nFetchs ungepuffert"
+    ID_BUFFERED_ON          "Fetchs gepuffert\nFetchs gepuffert"
+    ID_COMPRESS_OFF         "Komprimierung aus\nKomprimierung aus"
+    ID_COMPRESS_ON1         "Komprimierung-1\nKomprimierung-1"
+    ID_COMPRESS_ON2         "Komprimierung-2\nKomprimierung-2"
+    ID_ART7PROZ             "Neuauf verm MWST\nNeuauf verm MWST"
+END
+
+STRINGTABLE
+BEGIN
+    ID_ARTSPERR             "Gesperrte Artikel\nGesperrte Artikel"
+    ID_NONEMLIE             "Lief ohne Nem\nLief ohne Nem"
+    ID_INKONS               "Inkonsistente Nem-Artikel\nInkonsistente Nem-Artikel"
+    ID_PERHOEH              "Preiserhöhung\nPreiserhöhung"
+    ID_PERHABVK             "Preiserhöhung mit AbVk\nPreiserhöhung mit AbVk"
+    ID_PERHABVK_HS          "HS Preiserhöhung mit AbVk\nHS Preiserhöhung mit AbVk"
+    ID_GHAEN_HS             "Kennzeichen GH\nKennzeichen GH"
+    ID_GHAEN                "Kennzeichen GH\nKennzeichen GH"
+    ID_AMBLIEF              "Lieferanten Arzneimittelbezug nicht A,B,C\nLieferanten Arzneimittelbezug nicht A,B,C"
+END
+
+#endif    // German (Germany) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_DEU)
+#ifdef _WIN32
+LANGUAGE 7, 1
+#pragma code_page(1252)
+#endif
+#include "res\ZdpDruck.rc2"  // non-Microsoft Visual C++ edited resources
+#include "l.deu\afxres.rc"          // Standard components
+#include "l.deu\afxprint.rc"        // printing/print preview resources
+#endif
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

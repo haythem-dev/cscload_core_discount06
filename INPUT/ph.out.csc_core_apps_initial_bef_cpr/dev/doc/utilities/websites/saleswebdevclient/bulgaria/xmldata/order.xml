@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<OrderRequestBG xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://salestest.phoenix-ag.de/wsxmlbulgaria/schemas/order/OrderRequestBG.xsd">
+  <Order BranchNo="23" CustomerNo="17" Version="1.0">
+    <OrderHeader Reference="SalesWeb" NarcoticsFormID="narcid" />
+    <OrderItem OrderQuantity="1" LineReference="L01">
+      <ArticleNo>7870</ArticleNo>
+    </OrderItem>
+  </Order>
+</OrderRequestBG>

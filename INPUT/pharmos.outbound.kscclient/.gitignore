@@ -1,0 +1,13 @@
+/dev/ext/
+/export/
+/dev/src/pkg-install/
+.vs/
+Debug/
+Debug SWIMP/
+Release/
+Release SWIMP/
+x64/
+ipch/
+*.suo
+*.user
+*.db

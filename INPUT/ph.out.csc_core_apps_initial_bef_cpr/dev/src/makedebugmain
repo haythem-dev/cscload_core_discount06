@@ -1,0 +1,27 @@
+#! /usr/bin/ksh
+
+cd cxxtools
+make -j40
+cd ../pxdb
+make -j40
+cd ../pxverbund
+make -j40
+cd ../libcsc
+make -j40
+
+cd ../aaorderclose
+make -j40
+cd ../aapserv
+make -j40
+cd ../kscserver
+make -j40
+cd ../thrift
+make -j40
+cd ../vborderimport2
+make -j40
+
+cd ../../ibtorderimport
+make -j40
+
+cd ../..
+

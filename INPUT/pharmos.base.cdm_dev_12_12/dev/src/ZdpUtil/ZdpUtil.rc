@@ -1,0 +1,888 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// German (Germany) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_DEU)
+LANGUAGE LANG_GERMAN, SUBLANG_GERMAN
+#pragma code_page(1252)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_DEU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 7, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\ZdpUtil.rc2""  // Nicht mit Microsoft Visual C++ bearbeitete Ressourcen\r\n"
+    "#include ""l.deu\\afxres.rc""          // Standardkomponenten\r\n"
+    "#include ""l.deu\\afxprint.rc""        // Ressourcen für Drucken/Seitenansicht\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\ZdpUtil.ico"
+
+IDR_ZDPUTITYPE          ICON                    "res\\ZdpUtilDoc.ico"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BITMAP1             BITMAP                  "res\\bitmap1.bmp"
+
+IDB_BM_KNOEDEL          BITMAP                  "res\\bm_knoedel.bmp"
+
+IDB_BM_PASSWD           BITMAP                  "res\\bm_passw.bmp"
+
+IDB_BM_VORBL1           BITMAP                  "res\\bmp00002.bmp"
+
+IDB_BM_VORBL            BITMAP                  "res\\bm_vorbl.bmp"
+
+IDB_BM_VOGESE           BITMAP                  "res\\bm_voges.bmp"
+
+IDB_BM_SUCHE1           BITMAP                  "res\\bmp00003.bmp"
+
+IDB_BM_SUCHE            BITMAP                  "res\\bm_suche.bmp"
+
+IDB_BM_RUEBL1           BITMAP                  "res\\bmp00001.bmp"
+
+IDB_BM_RUEBL            BITMAP                  "res\\bm_ruebl.bmp"
+
+IDB_BM_RIGHTS           BITMAP                  "res\\bm_right.bmp"
+
+IDR_MAINFRAME           BITMAP                  "res\\Toolbar.bmp"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU
+BEGIN
+    POPUP "&Datei"
+    BEGIN
+        MENUITEM "&Neu\tStrg+N",                ID_FILE_NEW
+        MENUITEM "Ö&ffnen...\tStrg+O",          ID_FILE_OPEN
+        MENUITEM "S&peichern\tStrg+S",          ID_FILE_SAVE
+        MENUITEM "Speichern &unter...",         ID_FILE_SAVE_AS
+        MENUITEM SEPARATOR
+        MENUITEM "&Drucken...\tStrg+P",         ID_FILE_PRINT
+        MENUITEM "Sei&tenansicht",              ID_FILE_PRINT_PREVIEW
+        MENUITEM "Drucker&einrichtung...",      ID_FILE_PRINT_SETUP
+        MENUITEM SEPARATOR
+        MENUITEM "Letzte Datei",                ID_FILE_MRU_FILE1, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "&Beenden",                    ID_APP_EXIT
+    END
+    POPUP "&Bearbeiten"
+    BEGIN
+        MENUITEM "&Suchen\tF2",                 ID_RECORD_SEARCH
+        MENUITEM "&Vorblättern\tBild runter",   ID_RECORD_NEXT
+        MENUITEM "&Zurückblättern\tBild rauf",  ID_RECORD_PREV
+        MENUITEM SEPARATOR
+        MENUITEM "&Feld vor\tEnter",            ID_RECORD_NEW
+        MENUITEM "S&peichern\tF1",              ID_RECORD_SAVE
+        MENUITEM "&Löschen\tF7",                ID_RECORD_DELETE
+        MENUITEM SEPARATOR
+        MENUITEM "&Rückgängig\tESC",            ID_RECORD_UNDO
+        MENUITEM SEPARATOR
+        MENUITEM "&Ausschneiden\tStrg+Shift+X", ID_RECORD_CUT
+        MENUITEM "&Kopieren\tStrg+Shift+C",     ID_RECORD_COPY
+        MENUITEM "E&infügen\tStrg+Shift+V",     ID_RECORD_PASTE
+    END
+    POPUP "Utilities"
+    BEGIN
+        MENUITEM "Neue &AUTIDEM-Artikel",       ID_NEWAUTIDEM
+        MENUITEM "Festbetragslieferung &IFA generieren", ID_GENFESTB
+        MENUITEM "Update aus &Excel",           ID_UPD_ZARTIKEL
+        MENUITEM "&Protokoll Datei holen (Upd Excel)", ID_UTILITIES_PROTOKOLL
+    END
+    POPUP "&Ansicht"
+    BEGIN
+        MENUITEM "&Symbolleiste",               ID_VIEW_TOOLBAR
+        MENUITEM "S&tatusleiste",               ID_VIEW_STATUS_BAR
+        MENUITEM SEPARATOR
+        MENUITEM "S&ymbolleiste anpassen",      ID_VIEW_CUSTTOOLBAR
+        MENUITEM SEPARATOR
+        MENUITEM "&Microsoft-Standard",         ID_VIEW_MS_STANDARD
+        MENUITEM "&Bearbeitungsfragen",         ID_VIEW_AUTO_FRAGE
+        MENUITEM SEPARATOR
+        MENUITEM "Benutzer&rechte",             ID_VIEW_RECHTE
+    END
+    POPUP "&?"
+    BEGIN
+        MENUITEM "&Taschenrechner",             ID_TASCHENRECHNER
+        MENUITEM "&Server",                     ID_SERVER
+        MENUITEM "Inf&o über ZdpUtil...",       ID_APP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS
+BEGIN
+    "C",            ID_RECORD_COPY,         VIRTKEY, SHIFT, CONTROL, NOINVERT
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL, NOINVERT
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL, NOINVERT
+    "P",            ID_FILE_PRINT,          VIRTKEY, CONTROL, NOINVERT
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL, NOINVERT
+    "V",            ID_RECORD_PASTE,        VIRTKEY, SHIFT, CONTROL, NOINVERT
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT, NOINVERT
+    VK_ESCAPE,      ID_RECORD_UNDO,         VIRTKEY, NOINVERT
+    VK_F1,          ID_RECORD_SAVE,         VIRTKEY, NOINVERT
+    VK_F2,          ID_RECORD_SEARCH,       VIRTKEY, NOINVERT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY, NOINVERT
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT, NOINVERT
+    VK_F7,          ID_RECORD_DELETE,       VIRTKEY, NOINVERT
+    VK_NEXT,        ID_RECORD_NEXT,         VIRTKEY, NOINVERT
+    VK_PRIOR,       ID_RECORD_PREV,         VIRTKEY, NOINVERT
+    VK_RETURN,      ID_RECORD_NEW,          VIRTKEY, NOINVERT
+    "X",            ID_RECORD_CUT,          VIRTKEY, SHIFT, CONTROL, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 214, 119
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Info über ZdpUtil"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "ZdpUtil  Version 1.0", IDC_ABOUT_VERSION, 40, 10, 130, 8, SS_NOPREFIX
+    LTEXT           "Copyright (C) 2002 - 2024  PHOENIX - Pharma", IDC_STATIC, 40, 25, 160, 8
+    LTEXT           "Last Update:  01.02.2024    ", IDC_ABOUT_DATE, 40, 40, 110, 8
+    LTEXT           "Author:  Hajo Schmitt    ",IDC_STATIC,40,55,68,8
+    CTEXT           "Katze: Knödel",IDC_ABOUT_KNOEDEL,143,108,52,8
+    DEFPUSHBUTTON   "Button1",IDC_ABOUT_PB,141,39,56,68,BS_BITMAP | BS_FLAT,WS_EX_DLGMODALFRAME | WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+END
+
+IDD_RECHTE DIALOG 0, 0, 301, 193
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Benutzerrechte"
+FONT 8, "MS Sans Serif"
+BEGIN
+    COMBOBOX        IDC_RECHTE_CB_USERNAME,5,5,58,166,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "&Kopieren",IDC_RECHTE_BP_COPY,72,5,50,12
+    PUSHBUTTON      "&Einfügen",IDC_RECHTE_BP_PASTE,72,19,50,12
+    PUSHBUTTON      "&Speichern",IDC_RECHTE_BP_SPEICHERN,127,5,50,12
+    PUSHBUTTON      "&Beenden",IDCANCEL,127,19,50,12
+    CONTROL         IDB_BM_RIGHTS,IDC_STATIC,"Static",SS_BITMAP,205,6,48,24
+    CONTROL         "&SubSuperuser",IDC_RECHTE_CK_SUBSUPER,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,5,21,62,10
+    LTEXT           "Sued    ",IDC_RECHTE_ST_REG_MUSTER,180,46,23,8
+    LTEXT           "Liste Lief.  ohne NEM-Kennung  ",IDC_RECHTE_ST_MEN_MUSTER,71,58,103,8
+    CONTROL         "",IDC_RECHTE_RB_NONE,"Button",BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,178,59,8,8
+    CONTROL         "",IDC_RECHTE_RB_READ,"Button",BS_AUTORADIOBUTTON,186,59,8,8
+    CONTROL         "",IDC_RECHTE_RB_WRITE,"Button",BS_AUTORADIOBUTTON,194,59,8,8
+    PUSHBUTTON      "S&uperuser",IDC_RECHTE_BP_SUPER,72,33,50,12
+END
+
+IDD_SERVER DIALOG 0, 0, 184, 95
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Server"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "&Server",IDC_STATIC,39,18,40,8
+    EDITTEXT        IDC_SERVER_SERVER,92,16,51,12,ES_AUTOHSCROLL
+    LTEXT           "&Datenbank",IDC_STATIC,39,38,38,8
+    EDITTEXT        IDC_SERVER_DBASE,92,36,51,12,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "&OK",IDOK,22,62,50,14
+    PUSHBUTTON      "&Abbrechen",IDCANCEL,113,62,50,14
+END
+
+IDD_USER DIALOG 0, 0, 187, 91
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Benutzer-Kennung"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "&Benutzername:",IDC_STATIC,39,18,46,8
+    EDITTEXT        IDC_USER_NAME,90,16,49,14
+    LTEXT           "&Passwort:",IDC_STATIC,39,38,30,8
+    EDITTEXT        IDC_USER_PASSWD,90,36,49,14,ES_PASSWORD
+    DEFPUSHBUTTON   "&OK",IDOK,18,64,50,14
+    PUSHBUTTON      "&Abbrechen",IDCANCEL,116,64,50,14
+END
+
+IDD_LINEPROT DIALOG 0, 0, 277, 124
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "line protocol"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,76,86,50,14
+    PUSHBUTTON      "Abbrechen",IDCANCEL,185,86,50,14
+    LTEXT           "Protokoll-&Modus",IDC_STATIC,7,15,57,8
+    CONTROL         "Protokoll mit Zeitstempel",IDC_PROT_MODE1,"Button",BS_AUTORADIOBUTTON,74,15,92,10
+    CONTROL         "Protokoll ohne Zeitstempel",IDC_PROT_MODE2,"Button",BS_AUTORADIOBUTTON,74,27,99,10
+    CONTROL         "Protokoll ausschalten",IDC_PROT_MODE3,"Button",BS_AUTORADIOBUTTON,74,39,83,10
+    LTEXT           "Protokoll-&Datei     ",IDC_STATIC,7,65,57,8
+    EDITTEXT        IDC_PROT_FILE,76,62,190,14,ES_AUTOHSCROLL
+END
+
+IDD_SELECTDLG1 DIALOG 0, 0, 363, 200
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Auswahl"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "&Auswahlkriterium................:",IDC_ST_SELECTDIALOG_AUSWAHL,14,11,77,8
+    COMBOBOX        IDC_CB_SELECTDIALOG_AUSWAHL,92,9,98,63,CBS_DROPDOWNLIST | CBS_OEMCONVERT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "&Suchbegriff1 ........................:",IDC_STATIC_SUCHB1_1,14,24,77,8
+    EDITTEXT        IDC_EDIT_SUCHB1_1,92,23,124,12,ES_UPPERCASE | ES_AUTOHSCROLL
+    LTEXT           "?  ",IDC_STATIC_FRAGE1_1,220,26,8,8
+    LTEXT           "S&uchbegriff2.........................:",IDC_STATIC_SUCHB1_2,14,38,77,8
+    EDITTEXT        IDC_EDIT_SUCHB1_2,92,37,124,12,ES_UPPERCASE | ES_AUTOHSCROLL
+    LTEXT           "?",IDC_STATIC_FRAGE1_2,220,39,8,8
+    CONTROL         "List2",IDC_LISTCTRL_BOX,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | WS_BORDER | WS_TABSTOP,13,55,334,131
+    PUSHBUTTON      "&Suchen",IDC_SUCHE,232,22,15,14,BS_BITMAP | NOT WS_TABSTOP
+    PUSHBUTTON      "&vor",IDC_VORBL,251,22,14,14,BS_BITMAP | NOT WS_TABSTOP
+    PUSHBUTTON      "&zurück",IDC_RUEBL,269,22,14,14,BS_BITMAP | NOT WS_TABSTOP
+    PUSHBUTTON      "OK",IDOK,297,21,50,14,NOT WS_TABSTOP
+    PUSHBUTTON      "Cancel",IDCANCEL,297,36,50,14,NOT WS_TABSTOP
+END
+
+IDD_DRUCK DIALOG 0, 0, 187, 95
+STYLE DS_SETFONT | WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+END
+
+IDD_NEWAUTIDEM DIALOG 0, 0, 362, 245
+STYLE DS_SETFONT | WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    COMBOBOX        IDC_NEWAUTIDEM_CB_ACTION,84,32,122,96,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "&Aktion",IDC_STATIC,40,35,33,8
+    GROUPBOX        "Überschrift der PZN-Spalte",IDC_NEWAUTIDEM_ST_SPALTE,84,57,122,40,BS_CENTER
+    EDITTEXT        IDC_NEWAUTIDEM_SPALTE,95,73,101,13,ES_AUTOHSCROLL
+END
+
+IDD_GENFESTB DIALOG 0, 0, 424, 247
+STYLE DS_SETFONT | WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "&Datum der IFA-Lieferung",IDC_STATIC,29,25,97,8
+    EDITTEXT        IDC_GENFESTB_LIEFDAT,136,24,49,12,ES_AUTOHSCROLL
+    LTEXT           "&Gültigkeitsdatum  C00GDAT",IDC_STATIC,30,45,97,8
+    EDITTEXT        IDC_GENFESTB_GUELDAT,136,43,49,12,ES_AUTOHSCROLL
+    LTEXT           "&Satzart C00SSATZ",IDC_STATIC,30,65,97,8
+    COMBOBOX        IDC_GENFESTB_SATZART,136,62,63,51,CBS_DROPDOWNLIST | CBS_OEMCONVERT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "&Verzeichnis der IFA-Lieferung",IDC_STATIC,30,84,97,8
+    EDITTEXT        IDC_GENFESTB_VERZ,136,82,220,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "S&uchen",IDC_GENFESTB_PB_VERZ,369,82,43,13
+    LTEXT           "Ü&bernahme-Datei",IDC_STATIC,30,104,97,8
+    EDITTEXT        IDC_GENFESTB_FILE,136,102,220,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "Su&chen",IDC_GENFESTB_PB_FILE,369,102,43,13
+    LTEXT           "&Aufbau der Übernahme-Datei",IDC_STATIC,30,123,97,8
+    LTEXT           "",IDC_GENFESTB_DATAUF,136,121,220,12,SS_SUNKEN | WS_BORDER
+    LTEXT           "FeldNr &PZN",IDC_STATIC,136,144,50,8
+    EDITTEXT        IDC_GENFESTB_POSPZN,202,142,23,12,ES_AUTOHSCROLL
+    LTEXT           "FeldNr &Festbetrag",IDC_STATIC,136,161,59,8
+    EDITTEXT        IDC_GENFESTB_POSFEST,202,159,23,12,ES_AUTOHSCROLL
+    LTEXT           "&Trennzeichen",IDC_STATIC,136,178,59,8
+    EDITTEXT        IDC_GENFESTB_TRENN,202,176,23,12,ES_AUTOHSCROLL
+END
+
+IDD_UPDFROMEXCEL DIALOGEX 0, 0, 646, 317
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Z&Artikel - Felder",IDC_BT_ZARTIKEL,7,7,71,14
+    PUSHBUTTON      "ZArt&Preis - Felder",IDC_BT_ZARTPREIS,7,24,71,14
+    PUSHBUTTON      "ZArt&Wg - Felder",IDC_BT_ZARTWG,7,42,71,14
+    PUSHBUTTON      "&CDiscount - Felder",IDC_BT_CDISCOUNT_FLEXIBLE,7,59,71,14
+    PUSHBUTTON      "C&Discount - feste Struktur",IDC_BT_CDISCOUNT,90,7,97,14
+    PUSHBUTTON      "Art&Ve - Felder",IDC_BT_ARTVE,90,24,97,14
+    PUSHBUTTON      "&RPG - Felder",IDC_BT_RPG,90,42,97,14
+    PUSHBUTTON      "CDiscount - &beenden",IDC_BT_CDISCOUNT_END,90,59,97,14
+    PUSHBUTTON      "&länderspezifische Felder",IDC_BT_COUNTRY_SPECIFIC,197,7,97,14
+    PUSHBUTTON      "CArticleC&odes - Felder",IDC_BT_CODES,197,24,97,14
+    PUSHBUTTON      "&Stücklisten - Felder",IDC_BT_ARTCOMPACK,197,42,97,14
+    PUSHBUTTON      "&WE Chargenerf. - Felder",IDC_BT_GIBATCHENTRY,197,59,97,14
+    PUSHBUTTON      "CArticleExt - Felder",IDC_BT_CARTICLEEXT,303,7,71,14
+    PUSHBUTTON      "ChargenRR - Felder",IDC_BT_ZCHARGENRR,303,24,71,14
+    LTEXT           "Überschrift PZN-Spalte:",IDC_STATIC_PZN,7,98,76,8
+    EDITTEXT        IDC_ED_PZN_COL,7,106,74,14,ES_UPPERCASE | ES_AUTOHSCROLL
+    LTEXT           " Tabellen-Spalte:",IDC_ST_COL,7,125,125,12,SS_SUNKEN
+    LTEXT           " fester Wert / Wert aus CSV-Datei ?",IDC_ST_CK_STATICVAL,141,125,124,12,SS_SUNKEN
+    LTEXT           " fester Wert / CSV-Spalte:",IDC_ST_STATVAL_CSV,274,125,92,12,SS_SUNKEN
+    LTEXT           " Rest ändern ?",IDC_ST_CK_NEGREST,375,125,73,12,SS_SUNKEN
+    LTEXT           " Wert für Rest:",IDC_ST_RESTVAL,458,125,77,12,SS_SUNKEN
+    EDITTEXT        IDC_ED_MUSTER,488,7,76,14,ES_AUTOHSCROLL
+    COMBOBOX        IDC_CB_MUSTER,488,24,76,30,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Aktivieren1",IDC_CK_MUSTER,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,489,42,77,10
+    PUSHBUTTON      "Im/Ex- Sperre",IDC_BT_CIMEXBLOCK,303,42,71,14
+    PUSHBUTTON      "IBT - Felder",IDC_BT_IBT,303,59,71,14
+    PUSHBUTTON      "EAN - Nummer",IDC_BT_EAN,7,76,71,14
+    PUSHBUTTON      "Artikel Nachlieferung",IDC_BT_SUBSEQUENTDELIVERY,90,76,97,14
+    PUSHBUTTON      "ZArtWg - (5/A/G)",IDC_BT_ZARTWG_5AG,197,76,97,14
+    PUSHBUTTON      "Bliesort - Felder",IDC_BT_BLIESORT,303,76,71,14
+    PUSHBUTTON      "Basislisten",IDC_BT_BASELIST,383,7,71,14
+    PUSHBUTTON      "Cartmedactor",IDC_BT_CARTMEDACTOR,384,42,71,14
+    PUSHBUTTON      "Cmedicalactor",IDC_BT_CMEDICALACTOR,384,24,71,14
+END
+
+IDD_PFLFELDER DIALOGEX 0, 0, 778, 221
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
+CAPTION "Auswahl der zu pflegenden Felder"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,537,200,50,14
+    PUSHBUTTON      "Abbrechen",IDCANCEL,598,200,50,14
+    CONTROL         "CK-Pfelegetfeld-00",IDC_CK_PFLFELD_00,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,7,134,9
+    CONTROL         "CK-Pfelegetfeld-01",IDC_CK_PFLFELD_01,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,20,134,10
+    CONTROL         "CK-Pfelegetfeld-02",IDC_CK_PFLFELD_02,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,35,134,10
+    CONTROL         "CK-Pfelegetfeld-03",IDC_CK_PFLFELD_03,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,50,134,10
+    CONTROL         "CK-Pfelegetfeld-04",IDC_CK_PFLFELD_04,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,65,134,10
+    CONTROL         "CK-Pfelegetfeld-05",IDC_CK_PFLFELD_05,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,80,134,10
+    CONTROL         "CK-Pfelegetfeld-06",IDC_CK_PFLFELD_06,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,95,134,10
+    CONTROL         "CK-Pfelegetfeld-07",IDC_CK_PFLFELD_07,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,110,134,10
+    CONTROL         "CK-Pfelegetfeld-08",IDC_CK_PFLFELD_08,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,124,134,10
+    CONTROL         "CK-Pfelegetfeld-09",IDC_CK_PFLFELD_09,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,140,134,10
+    CONTROL         "CK-Pfelegetfeld-10",IDC_CK_PFLFELD_10,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,155,134,10
+    CONTROL         "CK-Pfelegetfeld-11",IDC_CK_PFLFELD_11,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,153,7,118,9
+    CONTROL         "CK-Pfelegetfeld-12",IDC_CK_PFLFELD_12,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,153,20,118,10
+    CONTROL         "CK-Pfelegetfeld-13",IDC_CK_PFLFELD_13,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,153,35,118,10
+    CONTROL         "CK-Pfelegetfeld-14",IDC_CK_PFLFELD_14,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,153,50,118,10
+    CONTROL         "CK-Pfelegetfeld-15",IDC_CK_PFLFELD_15,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,153,65,118,10
+    CONTROL         "CK-Pfelegetfeld-16",IDC_CK_PFLFELD_16,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,153,80,118,10
+    CONTROL         "CK-Pfelegetfeld-17",IDC_CK_PFLFELD_17,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,153,95,118,10
+    CONTROL         "CK-Pfelegetfeld-18",IDC_CK_PFLFELD_18,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,153,110,118,10
+    CONTROL         "CK-Pfelegetfeld-19",IDC_CK_PFLFELD_19,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,153,124,118,10
+    CONTROL         "CK-Pfelegetfeld-20",IDC_CK_PFLFELD_20,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,153,140,118,10
+    CONTROL         "CK-Pfelegetfeld-21",IDC_CK_PFLFELD_21,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,153,155,118,10
+    CONTROL         "CK-Pfelegetfeld-22",IDC_CK_PFLFELD_22,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,281,7,118,9
+    CONTROL         "CK-Pfelegetfeld-23",IDC_CK_PFLFELD_23,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,281,20,118,10
+    CONTROL         "CK-Pfelegetfeld-24",IDC_CK_PFLFELD_24,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,281,35,118,10
+    CONTROL         "CK-Pfelegetfeld-25",IDC_CK_PFLFELD_25,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,281,50,118,10
+    CONTROL         "CK-Pfelegetfeld-26",IDC_CK_PFLFELD_26,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,281,65,118,10
+    CONTROL         "CK-Pfelegetfeld-27",IDC_CK_PFLFELD_27,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,281,80,118,10
+    CONTROL         "CK-Pfelegetfeld-28",IDC_CK_PFLFELD_28,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,281,95,118,10
+    CONTROL         "CK-Pfelegetfeld-29",IDC_CK_PFLFELD_29,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,281,110,118,10
+    CONTROL         "CK-Pfelegetfeld-30",IDC_CK_PFLFELD_30,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,281,124,118,10
+    CONTROL         "CK-Pfelegetfeld-31",IDC_CK_PFLFELD_31,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,281,140,118,10
+    CONTROL         "CK-Pfelegetfeld-32",IDC_CK_PFLFELD_32,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,281,155,118,10
+    CONTROL         "CK-Pfelegetfeld-33",IDC_CK_PFLFELD_33,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,407,7,118,9
+    CONTROL         "CK-Pfelegetfeld-34",IDC_CK_PFLFELD_34,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,407,20,118,10
+    CONTROL         "CK-Pfelegetfeld-35",IDC_CK_PFLFELD_35,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,407,35,118,10
+    CONTROL         "CK-Pfelegetfeld-36",IDC_CK_PFLFELD_36,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,407,50,118,10
+    CONTROL         "CK-Pfelegetfeld-37",IDC_CK_PFLFELD_37,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,407,65,118,10
+    CONTROL         "CK-Pfelegetfeld-38",IDC_CK_PFLFELD_38,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,407,80,118,10
+    CONTROL         "CK-Pfelegetfeld-39",IDC_CK_PFLFELD_39,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,407,95,118,10
+    CONTROL         "CK-Pfelegetfeld-40",IDC_CK_PFLFELD_40,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,407,110,118,10
+    CONTROL         "CK-Pfelegetfeld-41",IDC_CK_PFLFELD_41,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,407,124,118,10
+    CONTROL         "CK-Pfelegetfeld-42",IDC_CK_PFLFELD_42,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,407,140,118,10
+    CONTROL         "CK-Pfelegetfeld-43",IDC_CK_PFLFELD_43,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,407,155,118,10
+    CONTROL         "CK-Pfelegetfeld-44",IDC_CK_PFLFELD_44,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,530,7,118,9
+    CONTROL         "CK-Pfelegetfeld-45",IDC_CK_PFLFELD_45,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,530,20,118,10
+    CONTROL         "CK-Pfelegetfeld-46",IDC_CK_PFLFELD_46,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,530,35,118,10
+    CONTROL         "CK-Pfelegetfeld-47",IDC_CK_PFLFELD_47,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,530,50,118,10
+    CONTROL         "CK-Pfelegetfeld-48",IDC_CK_PFLFELD_48,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,530,65,118,10
+    CONTROL         "CK-Pfelegetfeld-49",IDC_CK_PFLFELD_49,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,530,80,118,10
+    CONTROL         "CK-Pfelegetfeld-50",IDC_CK_PFLFELD_50,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,530,95,118,10
+    CONTROL         "CK-Pfelegetfeld-51",IDC_CK_PFLFELD_51,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,530,110,118,10
+    CONTROL         "CK-Pfelegetfeld-52",IDC_CK_PFLFELD_52,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,530,124,118,10
+    CONTROL         "CK-Pfelegetfeld-53",IDC_CK_PFLFELD_53,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,530,140,118,10
+    CONTROL         "CK-Pfelegetfeld-54",IDC_CK_PFLFELD_54,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,530,155,118,10
+    CONTROL         "CK-Pfelegetfeld-55",IDC_CK_PFLFELD_55,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,653,7,118,9
+    CONTROL         "CK-Pfelegetfeld-56",IDC_CK_PFLFELD_56,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,653,20,118,10
+    CONTROL         "CK-Pfelegetfeld-57",IDC_CK_PFLFELD_57,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,653,35,118,10
+    CONTROL         "CK-Pfelegetfeld-58",IDC_CK_PFLFELD_58,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,653,50,118,10
+    CONTROL         "CK-Pfelegetfeld-59",IDC_CK_PFLFELD_59,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,653,65,118,10
+    CONTROL         "CK-Pfelegetfeld-60",IDC_CK_PFLFELD_60,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,653,80,118,10
+    CONTROL         "CK-Pfelegetfeld-61",IDC_CK_PFLFELD_61,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,653,95,118,10
+    CONTROL         "CK-Pfelegetfeld-62",IDC_CK_PFLFELD_62,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,653,110,118,10
+    CONTROL         "CK-Pfelegetfeld-63",IDC_CK_PFLFELD_63,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,653,124,118,10
+    CONTROL         "CK-Pfelegetfeld-64",IDC_CK_PFLFELD_64,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,653,140,118,10
+END
+
+IDD_READPROTO DIALOGEX 0, 0, 369, 177
+STYLE DS_SETFONT | WS_CHILD
+FONT 8, "Microsoft Sans Serif", 400, 0, 0x0
+BEGIN
+    LTEXT           "Name der CSV-Datei für den Upload:",IDC_ST_NAME_CSV,7,25,110,14
+    EDITTEXT        IDC_ED_NAME_CSV,125,25,150,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Suchen",IDC_BT_SEARCH_CSV,280,25,50,14
+    PUSHBUTTON      "Protokoll-Dateien suchen",IDC_BT_SEARCH_PROTO,125,50,90,14
+    LTEXT           "Protokoll-Dateien:",IDC_ST_PROTO_FILES,7,73,107,14
+    COMBOBOX        IDC_CB_PROTO_FILES,125,75,205,45,CBS_DROPDOWN | CBS_AUTOHSCROLL | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Übertragen nach Windows",IDC_BT_TRANSFER_PROTO,125,100,90,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040704B0"
+        BEGIN
+            VALUE "FileDescription", "MFC-Anwendung ZdpUtil"
+            VALUE "FileVersion", "1, 0, 0, 1"
+            VALUE "InternalName", "ZdpUtil"
+            VALUE "LegalCopyright", "Copyright (C) 2002"
+            VALUE "OriginalFilename", "ZdpUtil.EXE"
+            VALUE "ProductName", "Anwendung ZdpUtil"
+            VALUE "ProductVersion", "1, 0, 0, 1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x407, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 207
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 112
+    END
+
+    IDD_RECHTE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 285
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 188
+    END
+
+    IDD_SERVER, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 177
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 88
+    END
+
+    IDD_USER, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 84
+    END
+
+    IDD_LINEPROT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 270
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 117
+    END
+
+    IDD_SELECTDLG1, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 354
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 186
+    END
+
+    IDD_DRUCK, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 180
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 88
+    END
+
+    IDD_NEWAUTIDEM, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 355
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 238
+    END
+
+    IDD_GENFESTB, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 417
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 240
+    END
+
+    IDD_UPDFROMEXCEL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 639
+        VERTGUIDE, 90
+        VERTGUIDE, 197
+        VERTGUIDE, 303
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 310
+        HORZGUIDE, 24
+        HORZGUIDE, 42
+        HORZGUIDE, 59
+    END
+
+    IDD_PFLFELDER, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 648
+        VERTGUIDE, 153
+        VERTGUIDE, 281
+        VERTGUIDE, 407
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 214
+        HORZGUIDE, 16
+        HORZGUIDE, 30
+        HORZGUIDE, 45
+        HORZGUIDE, 60
+        HORZGUIDE, 75
+        HORZGUIDE, 90
+        HORZGUIDE, 105
+        HORZGUIDE, 120
+        HORZGUIDE, 134
+        HORZGUIDE, 150
+    END
+
+    IDD_READPROTO, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 362
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 170
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_MAINFRAME TOOLBAR 16, 15
+BEGIN
+    BUTTON      ID_RECORD_CUT
+    BUTTON      ID_RECORD_COPY
+    BUTTON      ID_RECORD_PASTE
+    SEPARATOR
+    BUTTON      ID_FILE_PRINT
+    BUTTON      ID_FILE_SPEICHERN
+    SEPARATOR
+    BUTTON      ID_RECORD_SEARCH
+    BUTTON      ID_RECORD_NEXT
+    BUTTON      ID_RECORD_PREV
+    SEPARATOR
+    BUTTON      ID_RECORD_SAVE
+    BUTTON      ID_RECORD_DELETE
+    SEPARATOR
+    BUTTON      ID_RECORD_NEW
+    BUTTON      ID_RECORD_UNDO
+    SEPARATOR
+    BUTTON      ID_NEWAUTIDEM
+    BUTTON      ID_GENFESTB
+    BUTTON      ID_VIEW_RECHTE
+    BUTTON      ID_APP_ABOUT
+    BUTTON      ID_UPD_ZARTIKEL
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_NEWAUTIDEM DLGINIT
+BEGIN
+    IDC_NEWAUTIDEM_CB_ACTION, 0x403, 25, 0
+0x5845, 0x4543, 0x2d4c, 0x7363, 0x2d76, 0x6144, 0x6574, 0x2069, 0x6965, 
+0x6c6e, 0x7365, 0x6e65, "\000" 
+    IDC_NEWAUTIDEM_CB_ACTION, 0x403, 7, 0
+0x6554, 0x7473, 0x6e65, "\000" 
+    IDC_NEWAUTIDEM_CB_ACTION, 0x403, 25, 0
+0x7541, 0x6974, 0x6564, 0x2d6d, 0x6144, 0x6574, 0x206e, 0x6965, 0x736e, 
+0x6970, 0x6c65, 0x6e65, "\000" 
+    0
+END
+
+IDD_GENFESTB DLGINIT
+BEGIN
+    IDC_GENFESTB_SATZART, 0x403, 10, 0
+0x2030, 0x6542, 0x7473, 0x6e61, 0x0064, 
+    IDC_GENFESTB_SATZART, 0x403, 6, 0
+0x2031, 0x654e, 0x0075, 
+    IDC_GENFESTB_SATZART, 0x403, 10, 0
+0x2032, 0x6557, 0x6667, 0x6c61, 0x006c, 
+    IDC_GENFESTB_SATZART, 0x403, 11, 0
+0x2033, 0x6ec4, 0x6564, 0x7572, 0x676e, "\000" 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// AFX_DIALOG_LAYOUT
+//
+
+IDD_UPDFROMEXCEL AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_READPROTO AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDR_MAINFRAME           "ZdpUtil\n\nZdpUti\n\n\nZdpUtil.Document\nZdpUti Document"
+    IDS_MSG_OK              "&OK"
+    IDS_MSG_YES             "&Ja"
+    IDS_MSG_NO              "&Nein"
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_APP_TITLE       "ZdpUtil"
+    AFX_IDS_IDLEMESSAGE     "Bereit"
+END
+
+STRINGTABLE
+BEGIN
+    ID_INDICATOR_EXT        "ER"
+    ID_INDICATOR_CAPS       "UF"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "RF"
+    ID_INDICATOR_OVR        "ÜB"
+    ID_INDICATOR_REC        "MA"
+END
+
+STRINGTABLE
+BEGIN
+    ID_FILE_NEW             "Erstellt ein neues Dokument.\nNeu"
+    ID_FILE_OPEN            "Öffnet ein bestehendes Dokument.\nÖffnen"
+    ID_FILE_CLOSE           "Schließt das aktive Dokument.\nSchließen"
+    ID_FILE_SAVE            "Speichert das aktive Dokument.\nSpeichern"
+    ID_FILE_SAVE_AS         "Speichert das aktive Dokument unter neuem Namen.\nSpeichern unter"
+    ID_FILE_PAGE_SETUP      "Ändert die Druckoptionen.\nSeite einrichten"
+    ID_FILE_PRINT_SETUP     "Ändert den Drucker und die Druckoptionen.\nDruckereinrichtung"
+    ID_FILE_PRINT           "Druckt das aktive Dokument.\nDrucken"
+    ID_FILE_PRINT_PREVIEW   "Zeigt ganze Seiten an.\nSeitenansicht"
+END
+
+STRINGTABLE
+BEGIN
+    ID_APP_ABOUT            "Zeigt Programm-Informationen, Versionsnummer und Copyright an.\nInfo"
+    ID_APP_EXIT             "Verläßt die Anwendung; fragt, ob Dokumente gespeichert werden sollen.\nBeenden"
+END
+
+STRINGTABLE
+BEGIN
+    ID_FILE_MRU_FILE1       "Öffnet dieses Dokument."
+    ID_FILE_MRU_FILE2       "Öffnet dieses Dokument."
+    ID_FILE_MRU_FILE3       "Öffnet dieses Dokument."
+    ID_FILE_MRU_FILE4       "Öffnet dieses Dokument."
+    ID_FILE_MRU_FILE5       "Öffnet dieses Dokument."
+    ID_FILE_MRU_FILE6       "Öffnet dieses Dokument."
+    ID_FILE_MRU_FILE7       "Öffnet dieses Dokument."
+    ID_FILE_MRU_FILE8       "Öffnet dieses Dokument."
+    ID_FILE_MRU_FILE9       "Öffnet dieses Dokument."
+    ID_FILE_MRU_FILE10      "Öffnet dieses Dokument."
+    ID_FILE_MRU_FILE11      "Öffnet dieses Dokument."
+    ID_FILE_MRU_FILE12      "Öffnet dieses Dokument."
+    ID_FILE_MRU_FILE13      "Öffnet dieses Dokument."
+    ID_FILE_MRU_FILE14      "Öffnet dieses Dokument."
+    ID_FILE_MRU_FILE15      "Öffnet dieses Dokument."
+    ID_FILE_MRU_FILE16      "Öffnet dieses Dokument."
+END
+
+STRINGTABLE
+BEGIN
+    ID_NEXT_PANE            "Wechselt zum nächsten Fensterausschnitt.\nNächster Ausschnitt"
+    ID_PREV_PANE            "Springt zum vorherigen Fensterausschnitt zurück.\nVorheriger Ausschnitt"
+END
+
+STRINGTABLE
+BEGIN
+    ID_WINDOW_SPLIT         "Teilt das aktive Fenster in Ausschnitte.\nTeilen"
+END
+
+STRINGTABLE
+BEGIN
+    ID_EDIT_CLEAR           "Löscht die Markierung.\nLöschen"
+    ID_EDIT_CLEAR_ALL       "Löscht alles.\nAlles löschen"
+    ID_EDIT_COPY            "Kopiert die Markierung und überträgt sie in die Zwischenablage.\nKopieren"
+    ID_EDIT_CUT             "Entfernt die Markierung und überträgt sie in die Zwischenablage.\nAusschneiden"
+    ID_EDIT_FIND            "Sucht den angegebenen Text.\nSuchen"
+    ID_EDIT_PASTE           "Fügt den Inhalt der Zwischenablage ein.\nEinfügen"
+    ID_EDIT_REPEAT          "Wiederholt die letzte Aktion.\nWiederholen"
+    ID_EDIT_REPLACE         "Ersetzt einen bestimmten Text durch einen anderen.\nErsetzen"
+    ID_EDIT_SELECT_ALL      "Markiert das gesamte Dokument.\nAlles markieren"
+    ID_EDIT_UNDO            "Macht die letzte Aktion rückgängig.\nRückgängig"
+    ID_EDIT_REDO            "Wiederholt die vorher rückgängig gemachte Aktion.\nWiederherstellen"
+END
+
+STRINGTABLE
+BEGIN
+    ID_VIEW_TOOLBAR         "Blendet die Symbolleiste ein oder aus.\nSymbolleiste ein-/ausschalten"
+    ID_VIEW_STATUS_BAR      "Blendet die Statusleiste ein oder aus.\nStatusleiste ein-/ausschalten"
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_SCSIZE          "Ändert die Fenstergröße."
+    AFX_IDS_SCMOVE          "Ändert die Position des Fensters."
+    AFX_IDS_SCMINIMIZE      "Verkleinert das Fenster zu einem Symbol."
+    AFX_IDS_SCMAXIMIZE      "Vergrößert das Fenster zu voller Größe."
+    AFX_IDS_SCNEXTWINDOW    "Wechselt zum nächsten Dokumentfenster."
+    AFX_IDS_SCPREVWINDOW    "Wechselt zum vorherigen Dokumentfenster."
+    AFX_IDS_SCCLOSE         "Schließt das aktive Fenster und fordert zur Dokumentspeicherung auf."
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_SCRESTORE       "Stellt das Fenster in seiner normalen Größe wieder her."
+    AFX_IDS_SCTASKLIST      "Aktiviert die Task-Liste."
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_PREVIEW_CLOSE   "Beendet die Seitenansicht.\nSeitenansicht beenden"
+END
+
+STRINGTABLE
+BEGIN
+    ID_VIEW_MS_STANDARD     "Schaltet um zwischen Microsoft -Standard und Phosixo-Spezial\nMS-Standard ein/aus"
+    ID_VIEW_AUTO_FRAGE      "Mit oder ohne Bearbeitungsfragen/nFragen ein/aus"
+    ID_VIEW_CUSTTOOLBAR     "Symbolleiste anpassen"
+    ID_NEWAUTIDEM           "Neue AUTIDEM-Artikel\nNeue AUTIDEM-Artikel"
+    ID_GENFESTB             "Gen. Festbetrag\nGen. Festbetrag"
+    ID_UPD_ZARTIKEL         "Update aus Excel\nUpdate aus Excel"
+    ID_UTILITIES_PROTOKOLL  "Protokoll-Datei lesen\nProtokoll-Datei lesen"
+    ID_RECORD_UNDO          "Zurück\nZurück"
+    ID_RECORD_CUT           "Satz ausschneiden\nAusschneiden"
+    ID_RECORD_COPY          "Satz kopieren\nKopieren"
+END
+
+STRINGTABLE
+BEGIN
+    ID_RECORD_PASTE         "Satz einfügen\nEinfügen"
+    ID_RECORD_SEARCH        "Datensatz suchen\nSuchen"
+    ID_RECORD_SAVE          "Satz speichern\nSpeichern"
+    ID_RECORD_DELETE        "Satz löschen\nLöschen"
+    ID_RECORD_NEW           "Feld vor\nFeld vor"
+    ID_VIEW_RECHTE          "Benutzerrechte\nBenutzerrechte"
+END
+
+STRINGTABLE
+BEGIN
+    ID_RECORD_NEXT          "Nächster Datensatz\nVorblättern"
+    ID_RECORD_PREV          "Vorhergehender Datensatz\nZurückblättern"
+END
+
+#endif    // German (Germany) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_DEU)
+#ifdef _WIN32
+LANGUAGE 7, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\ZdpUtil.rc2"  // Nicht mit Microsoft Visual C++ bearbeitete Ressourcen
+#include "l.deu\afxres.rc"          // Standardkomponenten
+#include "l.deu\afxprint.rc"        // Ressourcen für Drucken/Seitenansicht
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

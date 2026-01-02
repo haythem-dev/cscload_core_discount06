@@ -1,0 +1,12 @@
+@INCLUDE               = Doxyfile
+
+PROJECT_NAME           = "KSC Versionshistorie"
+OUTPUT_DIRECTORY       = ./codedocu/customer
+LAYOUT_FILE            = DoxygenLayout.customer.xml
+INPUT                  = ../src/pxverbund/include/pxverbund_version.h
+ALIASES                = "en=\par Recent changes:" \
+                         "de=\par Änderungen:" \
+                         "customer=\if customer" \
+                         "endcustomer=\endif"
+ENABLED_SECTIONS       = customer
+INTERNAL_DOCS          = NO

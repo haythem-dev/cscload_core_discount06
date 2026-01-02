@@ -1,0 +1,30 @@
+if [[ $1 -eq "" ]]
+then
+   echo "Fehler: Aufruf muss mit Datums-Parameter des 31.10. erfolgen"
+   echo "Beispiel: $(basename $0) $(date '+%Y')1031"
+   exit 9
+fi
+YYYYMMDD=$1
+
+INFORMIXDIR=/opt/lib/informix1
+export INFORMIXDIR
+
+echo $YYYYMMDD
+
+dbaccess zpos1de -<<%
+delete from kundeanrufplantag
+where vertriebszentrumnr = 6
+and datum = $YYYYMMDD
+and kundennr in (
+select kundennr from kunde where vertriebszentrumnr = 6
+and telnrdafue not like "030%");
+delete from kundeanrufplanprot
+where vertriebszentrumnr = 6
+and datum = $YYYYMMDD
+and kundennr in (
+select kundennr from kunde where vertriebszentrumnr = 6
+and telnrdafue not like "030%");
+%
+
+INFORMIXDIR=/opt/lib/informix1/csdk
+export INFORMIXDIR

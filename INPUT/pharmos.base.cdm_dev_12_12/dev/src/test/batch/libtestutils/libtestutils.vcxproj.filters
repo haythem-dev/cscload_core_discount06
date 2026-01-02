@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="utils">
+      <UniqueIdentifier>{15e6c78b-ff01-4950-8fbd-8ee09f67ecbf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="helper">
+      <UniqueIdentifier>{06299448-4425-494b-8880-994d1329db86}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="testselectionlist.h">
+      <Filter>helper</Filter>
+    </ClInclude>
+    <ClInclude Include="unittesthelper.h">
+      <Filter>helper</Filter>
+    </ClInclude>
+    <ClInclude Include="version.h" />
+    <ClInclude Include="basefixture.h">
+      <Filter>helper</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="utils\unittestconnection.cpp">
+      <Filter>utils</Filter>
+    </ClCompile>
+    <ClCompile Include="testselectionlist.cpp">
+      <Filter>helper</Filter>
+    </ClCompile>
+    <ClCompile Include="unittesthelper.cpp">
+      <Filter>helper</Filter>
+    </ClCompile>
+    <ClCompile Include="basefixture.cpp">
+      <Filter>helper</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuildStep Include="utils\unittestconnection.h">
+      <Filter>utils</Filter>
+    </CustomBuildStep>
+  </ItemGroup>
+</Project>

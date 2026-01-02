@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<salesweblog>
+	<logservice user="salesweblog" password="ST49fiUt" uri="urn:SalesWebLogServer"/>
+	<serverlist>
+		<server name="All Servers" location=""/>
+		<!--<server name="SalesTest" location="http://10.100.121.110:81/SalesWebLogService/SalesWebLogService.php"/>-->
+		<server name="SalesWeb1" location="http://10.100.121.201:81/SalesWebLogService/SalesWebLogService.php"/>
+		<server name="SalesWeb2" location="http://10.100.121.202:81/SalesWebLogService/SalesWebLogService.php"/>
+		<server name="SalesWeb3" location="http://10.100.121.203:81/SalesWebLogService/SalesWebLogService.php"/>
+		<server name="SalesWeb4" location="http://10.100.121.204:81/SalesWebLogService/SalesWebLogService.php"/>
+		<server name="SalesWeb5" location="http://10.100.121.205:81/SalesWebLogService/SalesWebLogService.php"/>
+		<server name="SalesWeb6" location="http://10.100.121.206:81/SalesWebLogService/SalesWebLogService.php"/>
+		<server name="SalesWeb7" location="http://10.100.121.207:81/SalesWebLogService/SalesWebLogService.php"/>
+		<server name="SalesWeb8" location="http://10.100.121.208:81/SalesWebLogService/SalesWebLogService.php"/>
+	</serverlist>
+	<logdatabases>
+		<logdb name="ChangedQuantities" dbname="swlog_bg_changedquantities_#DATE#_.db" dbnameerrors="swlog_bg_changedquantities_errors_#DATE#_.db"/>
+		<logdb name="CreditLimit" dbname="swlog_bg_creditlimit_#DATE#_.db" dbnameerrors="swlog_bg_creditlimit_errors_#DATE#_.db"/>		
+		<logdb name="DiscountAccount" dbname="swlog_bg_discountaccount_#DATE#_.db" dbnameerrors="swlog_bg_discountaccount_errors_#DATE#_.db"/>		
+		<logdb name="ExpiryDates" dbname="swlog_bg_expirydates_#DATE#_.db" dbnameerrors="swlog_bg_expirydates_errors_#DATE#_.db"/>		
+		<logdb name="Invoices" dbname="swlog_bg_invoices_#DATE#_.db" dbnameerrors="swlog_bg_invoices_errors_#DATE#_.db"/>		
+		<logdb name="Order" dbname="swlog_bg_order_#DATE#_.db" dbnameerrors="swlog_bg_order_errors_#DATE#_.db"/>		
+		<logdb name="OrderStatus" dbname="swlog_bg_orderstatus_#DATE#_.db" dbnameerrors="swlog_bg_orderstatus_errors_#DATE#_.db"/>		
+		<logdb name="PaymentConditions" dbname="swlog_bg_paymentconditions_#DATE#_.db" dbnameerrors="swlog_bg_paymentconditions_errors_#DATE#_.db"/>		
+		<logdb name="Payments" dbname="swlog_bg_payments_#DATE#_.db" dbnameerrors="swlog_bg_payments_errors_#DATE#_.db"/>		
+		<logdb name="PricesAndDiscounts" dbname="swlog_bg_pricesanddiscounts_#DATE#_.db" dbnameerrors="swlog_bg_pricesanddiscounts_errors_#DATE#_.db"/>		
+		<logdb name="PricesAndDiscounts2" dbname="swlog_bg_pricesanddiscounts2_#DATE#_.db" dbnameerrors="swlog_bg_pricesanddiscounts2_errors_#DATE#_.db"/>		
+		<logdb name="ProductAvailability" dbname="swlog_bg_productavailability_#DATE#_.db" dbnameerrors="swlog_bg_productavailability_errors_#DATE#_.db"/>		
+		<logdb name="Promotions" dbname="swlog_bg_promotions_#DATE#_.db" dbnameerrors="swlog_bg_promotions_errors_#DATE#_.db"/>		
+		<logdb name="Routes" dbname="swlog_bg_routes_#DATE#_.db" dbnameerrors="swlog_bg_routes_errors_#DATE#_.db"/>		
+		<logdb name="Substitutes" dbname="swlog_bg_substitutes_#DATE#_.db" dbnameerrors="swlog_bg_substitutes_errors_#DATE#_.db"/>		
+		<logdb name="Turnover" dbname="swlog_bg_turnover_#DATE#_.db" dbnameerrors="swlog_bg_turnover_errors_#DATE#_.db"/>		
+	</logdatabases>
+	<branchlist>
+		<branch no="" name="All Branches"/>
+		<branch no="22" name="Sofia"/>
+		<branch no="23" name="Burgas"/>			
+		<branch no="24" name="Varna"/>
+		<branch no="25" name="Plodiv"/>			
+		<branch no="26" name="Veliko Tarnovo"/>
+		<branch no="28" name="Sofia CNA"/>
+	</branchlist>
+</salesweblog>

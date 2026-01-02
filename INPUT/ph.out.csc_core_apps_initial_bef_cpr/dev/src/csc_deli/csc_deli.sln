@@ -1,0 +1,50 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "csc_deli", "csc_deli\csc_deli.vcxproj", "{30015DEA-7037-1014-980B-AB4141A31375}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libcsc_deli", "libcsc_deli\libcsc_deli.vcxproj", "{30016D8F-7037-1014-980B-AB4141A31375}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+		Template|Win32 = Template|Win32
+		Test|Win32 = Test|Win32
+		UnitTest_Debug|Win32 = UnitTest_Debug|Win32
+		UnitTest_Release|Win32 = UnitTest_Release|Win32
+		UnitTest|Win32 = UnitTest|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{30015DEA-7037-1014-980B-AB4141A31375}.Debug|Win32.ActiveCfg = Debug|Win32
+		{30015DEA-7037-1014-980B-AB4141A31375}.Debug|Win32.Build.0 = Debug|Win32
+		{30015DEA-7037-1014-980B-AB4141A31375}.Release|Win32.ActiveCfg = Release|Win32
+		{30015DEA-7037-1014-980B-AB4141A31375}.Release|Win32.Build.0 = Release|Win32
+		{30015DEA-7037-1014-980B-AB4141A31375}.Template|Win32.ActiveCfg = Template|Win32
+		{30015DEA-7037-1014-980B-AB4141A31375}.Template|Win32.Build.0 = Template|Win32
+		{30015DEA-7037-1014-980B-AB4141A31375}.Test|Win32.ActiveCfg = Test|Win32
+		{30015DEA-7037-1014-980B-AB4141A31375}.Test|Win32.Build.0 = Test|Win32
+		{30015DEA-7037-1014-980B-AB4141A31375}.UnitTest_Debug|Win32.ActiveCfg = UnitTest|Win32
+		{30015DEA-7037-1014-980B-AB4141A31375}.UnitTest_Debug|Win32.Build.0 = UnitTest|Win32
+		{30015DEA-7037-1014-980B-AB4141A31375}.UnitTest_Release|Win32.ActiveCfg = UnitTest_Release|Win32
+		{30015DEA-7037-1014-980B-AB4141A31375}.UnitTest_Release|Win32.Build.0 = UnitTest_Release|Win32
+		{30015DEA-7037-1014-980B-AB4141A31375}.UnitTest|Win32.ActiveCfg = UnitTest|Win32
+		{30015DEA-7037-1014-980B-AB4141A31375}.UnitTest|Win32.Build.0 = UnitTest|Win32
+		{30016D8F-7037-1014-980B-AB4141A31375}.Debug|Win32.ActiveCfg = Debug|Win32
+		{30016D8F-7037-1014-980B-AB4141A31375}.Debug|Win32.Build.0 = Debug|Win32
+		{30016D8F-7037-1014-980B-AB4141A31375}.Release|Win32.ActiveCfg = Release|Win32
+		{30016D8F-7037-1014-980B-AB4141A31375}.Release|Win32.Build.0 = Release|Win32
+		{30016D8F-7037-1014-980B-AB4141A31375}.Template|Win32.ActiveCfg = Release|Win32
+		{30016D8F-7037-1014-980B-AB4141A31375}.Template|Win32.Build.0 = Release|Win32
+		{30016D8F-7037-1014-980B-AB4141A31375}.Test|Win32.ActiveCfg = Release|Win32
+		{30016D8F-7037-1014-980B-AB4141A31375}.Test|Win32.Build.0 = Release|Win32
+		{30016D8F-7037-1014-980B-AB4141A31375}.UnitTest_Debug|Win32.ActiveCfg = Debug|Win32
+		{30016D8F-7037-1014-980B-AB4141A31375}.UnitTest_Debug|Win32.Build.0 = Debug|Win32
+		{30016D8F-7037-1014-980B-AB4141A31375}.UnitTest_Release|Win32.ActiveCfg = Release|Win32
+		{30016D8F-7037-1014-980B-AB4141A31375}.UnitTest_Release|Win32.Build.0 = Release|Win32
+		{30016D8F-7037-1014-980B-AB4141A31375}.UnitTest|Win32.ActiveCfg = Release|Win32
+		{30016D8F-7037-1014-980B-AB4141A31375}.UnitTest|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,323 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{BF577F8F-DD4C-4A89-A7C3-1C53961905B0}</ProjectGuid>
+    <RootNamespace>libcscUnitTest</RootNamespace>
+	<QTDIR>$(SolutionDir)..\ext\qt5</QTDIR>
+    <Keyword>Qt4VSv1.0</Keyword>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>.;$(SolutionDir)libcsc;$(SolutionDir)..\ext\libutil\include\libutil;$(SolutionDir)..\ext\unittestpp\include\unittest++;$(SolutionDir)..\ext\ssuk\basar\include;$(SolutionDir)..\ext\log4cplus\include;$(SolutionDir)..\ext\boost\include;$(QTDIR)\include;$(QTDIR)\include\QtCore;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;QT_CORE_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>cmnut.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>$(IntDir)cmnut.pch</PrecompiledHeaderOutputFile>
+      <WarningLevel>Level4</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalOptions>/WX
+ %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>libutil.lib;libbasarcmnutil.lib;libbasardbsql.lib;libbasardbaspect.lib;libbasarproperty.lib;libbasarlogin.lib;libbasarappl.lib;libbasarguitie.lib;libbasarguiqt.lib;libbasarqtwidget.lib;log4cplusd.lib;unittest++.lib;Qt5Cored.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)libcscUnitTest.exe</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>$(SolutionDir)..\ext\libutil\lib\$(Configuration);$(SolutionDir)..\ext\unittestpp\lib\$(Configuration);$(SolutionDir)..\ext\Boost\lib;$(SolutionDir)..\ext\ssuk\basar\lib\$(Configuration);$(SolutionDir)..\ext\log4cplus\lib\$(Configuration);$(QTDIR)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)$(TargetName).pdb</ProgramDatabaseFile>
+      <SubSystem>Console</SubSystem>
+      <OptimizeReferences>false</OptimizeReferences>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Message>start unittest $(Configuration)</Message>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>.;$(SolutionDir)libcsc;$(SolutionDir)..\ext\libutil\include\libutil;$(SolutionDir)..\ext\unittestpp\include\UnitTest++;$(SolutionDir)..\ext\ssuk\basar\include;$(SolutionDir)..\ext\log4cplus\include;$(SolutionDir)..\ext\boost\include;$(QTDIR)\include;$(QTDIR)\include\QtCore;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;QT_CORE_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>cmnut.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>$(IntDir)cmnut.pch</PrecompiledHeaderOutputFile>
+      <WarningLevel>Level4</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>26429;26433;26439;26440;26447;26455;26812;26814</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <AdditionalOptions>/WX
+ %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>libutil.lib;libbasarcmnutil.lib;libbasardbsql.lib;libbasardbaspect.lib;libbasarproperty.lib;libbasarlogin.lib;libbasarappl.lib;libbasarguitie.lib;libbasarguiqt.lib;libbasarqtwidget.lib;unittest++.lib;log4cplusd.lib;unittest++.lib;Qt5Cored.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)libcscUnitTest.exe</OutputFile>
+      <AdditionalLibraryDirectories>$(SolutionDir)..\ext\libutil\lib\$(Configuration);$(SolutionDir)..\ext\unittestpp\lib\$(Configuration);$(SolutionDir)..\ext\Boost\lib;$(SolutionDir)..\ext\ssuk\basar\lib\$(Configuration);$(SolutionDir)..\ext\log4cplus\lib\$(Configuration);$(QTDIR)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)$(TargetName).pdb</ProgramDatabaseFile>
+      <SubSystem>Console</SubSystem>
+      <OptimizeReferences>false</OptimizeReferences>
+    </Link>
+    <PostBuildEvent>
+      <Message>start unittest $(Configuration)</Message>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <OmitFramePointers>true</OmitFramePointers>
+      <AdditionalIncludeDirectories>.;$(SolutionDir)libcsc;$(SolutionDir)..\ext\libutil\include\libutil;$(SolutionDir)..\ext\unittestpp\include\unittest++;$(SolutionDir)..\ext\ssuk\basar\include;$(SolutionDir)..\ext\log4cplus\include;$(SolutionDir)..\ext\boost\include;$(QTDIR)\include;$(QTDIR)\include\QtCore;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;QT_CORE_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>cmnut.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>$(IntDir)cmnut.pch</PrecompiledHeaderOutputFile>
+      <WarningLevel>Level4</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </ClCompile>
+    <Link>
+      <AdditionalOptions>/WX
+ %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>libutil.lib;libbasarcmnutil.lib;libbasardbsql.lib;libbasardbaspect.lib;libbasarproperty.lib;libbasarlogin.lib;libbasarappl.lib;libbasarguitie.lib;libbasarguiqt.lib;libbasarqtwidget.lib;log4cplus.lib;unittest++.lib;Qt5Core.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)libcscUnitTest.exe</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>$(SolutionDir)..\ext\libutil\lib\$(Configuration);$(SolutionDir)..\ext\unittestpp\lib\$(Configuration);$(SolutionDir)..\ext\Boost\lib;$(SolutionDir)..\ext\ssuk\basar\lib\$(Configuration);$(SolutionDir)..\ext\log4cplus\lib\$(Configuration);$(QTDIR)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <SubSystem>Console</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.;$(SolutionDir)libcsc;$(SolutionDir)..\ext\libutil\include\libutil;$(SolutionDir)..\ext\unittestpp\include\UnitTest++;$(SolutionDir)..\ext\ssuk\basar\include;$(SolutionDir)..\ext\log4cplus\include;$(SolutionDir)..\ext\boost\include;$(QTDIR)\include;$(QTDIR)\include\QtCore;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;QT_CORE_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <WarningLevel>Level4</WarningLevel>
+      <DisableSpecificWarnings>26429;26433;26439;26440;26447;26455;26812;26814</DisableSpecificWarnings>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>cmnut.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>$(IntDir)cmnut.pch</PrecompiledHeaderOutputFile>
+    </ClCompile>
+    <Link>
+      <AdditionalOptions>/WX
+ %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>libutil.lib;libbasarcmnutil.lib;libbasardbsql.lib;libbasardbaspect.lib;libbasarproperty.lib;libbasarlogin.lib;libbasarappl.lib;libbasarguitie.lib;libbasarguiqt.lib;libbasarqtwidget.lib;unittest++.lib;log4cplus.lib;unittest++.lib;Qt5Core.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)..\ext\libutil\lib\$(Configuration);$(SolutionDir)..\ext\unittestpp\lib\$(Configuration);$(SolutionDir)..\ext\Boost\lib;$(SolutionDir)..\ext\ssuk\basar\lib\$(Configuration);$(SolutionDir)..\ext\log4cplus\lib\$(Configuration);$(QTDIR)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <SubSystem>Console</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="libcscUnitTest.cfg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="datatypes\datefixture.cpp" />
+    <ClCompile Include="datatypes\datetest.cpp" />
+    <ClCompile Include="datatypes\decimalfixture.cpp" />
+    <ClCompile Include="datatypes\decimaltest.cpp" />
+    <ClCompile Include="datatypes\propertyfixture.cpp" />
+    <ClCompile Include="datatypes\propertystatefixture.cpp" />
+    <ClCompile Include="datatypes\propertystatetest.cpp" />
+    <ClCompile Include="datatypes\int32fixture.cpp" />
+    <ClCompile Include="datatypes\int32test.cpp" />
+    <ClCompile Include="datatypes\propertytest.cpp" />
+    <ClCompile Include="datatypes\varstringfixture.cpp" />
+    <ClCompile Include="datatypes\varstringtest.cpp" />
+    <ClCompile Include="datatypes\datetimefixture.cpp" />
+    <ClCompile Include="datatypes\datetimetest.cpp" />
+    <ClCompile Include="datatypes\propertycollectionfixture.cpp" />
+    <ClCompile Include="datatypes\propertycollectiontest.cpp" />
+    <ClCompile Include="discount\calculator\commands\bestof4customercalculatorcommandtest.cpp" />
+    <ClCompile Include="discount\calculator\commands\firstwinscalculatorcommandtest.cpp" />
+    <ClCompile Include="discount\calculator\commands\fixedpricecalculatorcommandtest.cpp" />
+    <ClCompile Include="discount\calculator\commands\common\calculatorcommandstub.cpp" />
+    <ClCompile Include="discount\calculator\commands\common\commoncalculatorcommandfixture.cpp" />
+    <ClCompile Include="discount\calculator\commands\common\discountbasevaluemapperstub.cpp" />
+    <ClCompile Include="discount\calculator\commands\common\discountloggermock.cpp" />
+    <ClCompile Include="discount\calculator\commands\retailcalculatorcommandtest.cpp" />
+    <ClCompile Include="discount\calculator\commands\sumcalculatorcommandtest.cpp" />
+    <ClCompile Include="discount\calculator\commands\wholesaleallcustomerarticlecalculatorcommandtest.cpp" />
+    <ClCompile Include="discount\calculator\commands\wholesaleallcustomerarticlegroupcalculatorcommandtest.cpp" />
+    <ClCompile Include="discount\calculator\commands\wholesaleallcustomermanufacturercalculatorcommandtest.cpp" />
+    <ClCompile Include="discount\calculator\commands\wholesaleallcustomermanufacturergroupcalculatorcommandtest.cpp" />
+    <ClCompile Include="discount\calculator\commands\wholesalecustomerarticlecalculatorcommandtest.cpp" />
+    <ClCompile Include="discount\calculator\commands\wholesalecustomerarticlegroupcalculatorcommandtest.cpp" />
+    <ClCompile Include="discount\calculator\commands\wholesalecustomergrouparticlecalculatorcommandtest.cpp" />
+    <ClCompile Include="discount\calculator\commands\wholesalecustomergrouparticlegroupcalculatorcommandtest.cpp" />
+    <ClCompile Include="discount\calculator\commands\wholesalecustomergroupmanufacturercalculatorcommandtest.cpp" />
+    <ClCompile Include="discount\calculator\commands\wholesalecustomergroupmanufacturergroupcalculatorcommandtest.cpp" />
+    <ClCompile Include="discount\calculator\commands\wholesalecustomermanufacturercalculatorcommandtest.cpp" />
+    <ClCompile Include="discount\calculator\commands\wholesalecustomermanufacturergroupcalculatorcommandtest.cpp" />
+    <ClCompile Include="discount\calculator\commands\wholesaleindustryallcustomerarticlecalculatorcommandtest.cpp" />
+    <ClCompile Include="discount\calculator\commands\wholesaleindustryallcustomerarticlegroupcalculatorcommandtest.cpp" />
+    <ClCompile Include="discount\calculator\commands\wholesaleindustryallcustomermanufacturercalculatorcommandtest.cpp" />
+    <ClCompile Include="discount\calculator\commands\wholesaleindustryallcustomermanufacturergroupcalculatorcommandtest.cpp" />
+    <ClCompile Include="discount\calculator\commands\wholesaleindustrycustomerarticlecalculatorcommandtest.cpp" />
+    <ClCompile Include="discount\calculator\commands\wholesaleindustrycustomerarticlegroupcalculatorcommandtest.cpp" />
+    <ClCompile Include="discount\calculator\commands\wholesaleindustrycustomergrouparticlecalculatorcommandtest.cpp" />
+    <ClCompile Include="discount\calculator\commands\wholesaleindustrycustomergrouparticlegroupcalculatorcommandtest.cpp" />
+    <ClCompile Include="discount\calculator\commands\wholesaleindustrycustomergroupmanufacturercalculatorcommandtest.cpp" />
+    <ClCompile Include="discount\calculator\commands\wholesaleindustrycustomergroupmanufacturergroupcalculatorcommandtest.cpp" />
+    <ClCompile Include="discount\calculator\commands\wholesaleindustrycustomermanufacturercalculatorcommandtest.cpp" />
+    <ClCompile Include="discount\calculator\commands\wholesaleindustrycustomermanufacturergroupcalculatorcommandtest.cpp" />
+    <ClCompile Include="discount\calculator\result\common\discountcalculatorresultfixture.cpp" />
+    <ClCompile Include="discount\calculator\result\common\discountresultbasevaluefixture.cpp" />
+    <ClCompile Include="discount\calculator\result\common\discountresultfixture.cpp" />
+    <ClCompile Include="discount\calculator\result\common\discountsourcefixture.cpp" />
+    <ClCompile Include="discount\calculator\result\common\rebateinkindvaluefixture.cpp" />
+    <ClCompile Include="discount\calculator\result\discountcalculatorresulttest.cpp" />
+    <ClCompile Include="discount\calculator\result\discountresultbasevaluetest.cpp" />
+    <ClCompile Include="discount\calculator\result\discountresulttest.cpp" />
+    <ClCompile Include="discount\calculator\result\discountsourcetest.cpp" />
+    <ClCompile Include="discount\calculator\result\rebateinkindvaluetest.cpp" />
+    <ClCompile Include="discount\resultprocessor\common\orderpositiondiscountrepositorystub.cpp" />
+    <ClCompile Include="discount\resultprocessor\common\resultprocessorfixture.cpp" />
+    <ClCompile Include="discount\resultprocessor\resultprocessortest.cpp" />
+    <ClCompile Include="discount\system\common\discountsystemfixture.cpp" />
+    <ClCompile Include="discount\system\discountsystemhrhierarchy.cpp" />
+    <ClCompile Include="discount\system\discountsystemhrtest.cpp" />
+    <ClCompile Include="discount\system\discountsystemtest.cpp" />
+    <ClCompile Include="discount\common\orderbasevaluestub.cpp" />
+    <ClCompile Include="main\cmnut.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="main\main.cpp" />
+    <ClCompile Include="util\configfilereaderfixture.cpp" />
+    <ClCompile Include="util\configfilereadertest.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="datatypes\datefixture.h" />
+    <ClInclude Include="datatypes\decimalfixture.h" />
+    <ClInclude Include="datatypes\propertyfixture.h" />
+    <ClInclude Include="datatypes\propertystatefixture.h" />
+    <ClInclude Include="datatypes\int32fixture.h" />
+    <ClInclude Include="datatypes\varstringfixture.h" />
+    <ClInclude Include="datatypes\datetimefixture.h" />
+    <ClInclude Include="datatypes\propertycollectionfixture.h" />
+    <ClInclude Include="discount\calculator\commands\common\calculatorcommandstub.h" />
+    <ClInclude Include="discount\calculator\commands\common\commoncalculatorcommandfixture.h" />
+    <ClInclude Include="discount\calculator\commands\common\discountbasevaluemapperstub.h" />
+    <ClInclude Include="discount\calculator\commands\common\discountloggermock.h" />
+    <ClInclude Include="discount\calculator\commands\common\discountloggermockptr.h" />
+    <ClInclude Include="discount\calculator\result\common\discountcalculatorresultfixture.h" />
+    <ClInclude Include="discount\calculator\result\common\discountresultbasevaluefixture.h" />
+    <ClInclude Include="discount\calculator\result\common\discountresultfixture.h" />
+    <ClInclude Include="discount\calculator\result\common\discountsourcefixture.h" />
+    <ClInclude Include="discount\calculator\result\common\rebateinkindvaluefixture.h" />
+    <ClInclude Include="discount\resultprocessor\common\orderpositiondiscountrepositorystub.h" />
+    <ClInclude Include="discount\resultprocessor\common\resultprocessorfixture.h" />
+    <ClInclude Include="discount\system\common\discountsystemfixture.h" />
+    <ClInclude Include="discount\common\orderbasevaluestub.h" />
+    <ClInclude Include="main\cmnut.h" />
+    <ClInclude Include="util\configfilereaderfixture.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\libcsc\libcsc.vcxproj">
+      <Project>{23068ffe-d708-4b28-91b4-bc6e22e45e16}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties Qt5Version_x0020_Win32="5.2.0" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

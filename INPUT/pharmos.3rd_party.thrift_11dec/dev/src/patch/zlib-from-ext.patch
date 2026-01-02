@@ -1,0 +1,33 @@
+diff -ur a/build/cmake/DefineOptions.cmake b/build/cmake/DefineOptions.cmake
+--- a/build/cmake/DefineOptions.cmake	2019-08-02 08:07:03.000000000 +0200
++++ b/build/cmake/DefineOptions.cmake	2019-08-02 09:18:20.000000000 +0200
+@@ -69,9 +69,12 @@
+         # FindZLIB.cmake does not normalize path so we need to do it ourselves.
+         file(TO_CMAKE_PATH ${ZLIB_LIBRARY} ZLIB_LIBRARY)
+     endif()
+-    find_package(ZLIB QUIET)
++    find_package(zlib QUIET
++        HINTS ${CMAKE_SOURCE_DIR}/../../ext/zlib
++        PATH_SUFFIXES zlib
++    )
+     CMAKE_DEPENDENT_OPTION(WITH_ZLIB "Build with ZLIB support" ON
+-                           "ZLIB_FOUND" OFF)
++                           "zlib_FOUND" OFF)
+     find_package(Libevent QUIET)
+     CMAKE_DEPENDENT_OPTION(WITH_LIBEVENT "Build with libevent support" ON
+                            "Libevent_FOUND" OFF)
+diff -ur a/lib/cpp/CMakeLists.txt b/lib/cpp/CMakeLists.txt
+--- a/lib/cpp/CMakeLists.txt	2019-08-02 08:07:04.000000000 +0200
++++ b/lib/cpp/CMakeLists.txt	2019-08-02 09:18:57.000000000 +0200
+@@ -180,7 +183,10 @@
+ endif()
+ 
+ if(WITH_ZLIB)
+-    find_package(ZLIB REQUIRED)
++    find_package(zlib REQUIRED
++        HINTS ${CMAKE_SOURCE_DIR}/../../ext/zlib
++        PATH_SUFFIXES zlib
++    )
+     include_directories(SYSTEM ${ZLIB_INCLUDE_DIRS})
+ 
+     ADD_LIBRARY_THRIFT(thriftz ${thriftcppz_SOURCES})

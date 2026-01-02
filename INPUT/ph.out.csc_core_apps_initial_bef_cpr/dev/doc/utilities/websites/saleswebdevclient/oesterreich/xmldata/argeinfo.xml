@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--XML-Beispieldatei: Artikelanfrage-->
+<ArgeItemInfoRequest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://salesweb.phoenix-ag.de/wsxmlaustria/ArgeItemInfoRequest.xsd" Version="3.00">
+	<General RequestId="A01" TimeStamp="2006-11-24T14:30:47" RequestItemDetails="true">
+		<Customer Id="9999011" SoftwareId="A5"/>
+		<Supplier Id="PHO" Branch="61"/>
+	</General>
+	<InfoItem PosId="1" Quantity="2">
+		<ItemId Type="PZN" Id="0"/>
+	</InfoItem>
+	<InfoItem PosId="2" Quantity="1">
+		<ItemId Type="Barcode" Id="9088880939840"/>
+	</InfoItem>
+	<InfoItem PosId="3" Quantity="50000">
+		<ItemId Type="PZN" Id="1"/>
+	</InfoItem>
+	<InfoItem PosId="4" Quantity="5">
+		<ItemId Type="PZN" Id="655"/>
+	</InfoItem>
+	<InfoItem PosId="5" Quantity="30">
+		<ItemId Type="PZN" Id="3990"/>
+	</InfoItem>
+	<InfoItem PosId="6" Quantity="1">
+		<ItemId Type="Barcode" Id="9088881320531"/>
+	</InfoItem>
+	<InfoItem PosId="7" Quantity="1">
+		<ItemId Type="PZN" Id="4009"/>
+	</InfoItem>	
+	<InfoItem PosId="8" Quantity="1">
+		<ItemId Type="PZN" Id="4015"/>
+	</InfoItem>		
+	<InfoItem PosId="9" Quantity="1">
+		<ItemId Type="PZN" Id="4038"/>
+	</InfoItem>			
+	<InfoItem PosId="10" Quantity="1">
+		<ItemId Type="PZN" Id="4067"/>
+	</InfoItem>				
+  <InfoItem PosId="11" Quantity="1">
+		<ItemId Type="PZN" Id="6936"/>
+	</InfoItem>					
+  <InfoItem PosId="12" Quantity="1">
+		<ItemId Type="PZN" Id="6965"/>
+	</InfoItem>						
+  <InfoItem PosId="13" Quantity="1">
+		<ItemId Type="PZN" Id="8585"/>
+	</InfoItem>							
+  <InfoItem PosId="14" Quantity="1">
+		<ItemId Type="PZN" Id="8616"/>
+	</InfoItem>								
+  <InfoItem PosId="15" Quantity="1">
+		<ItemId Type="PZN" Id="9372"/>
+	</InfoItem>									
+  <InfoItem PosId="16" Quantity="1">
+		<ItemId Type="PZN" Id="9745"/>
+	</InfoItem>										
+  <InfoItem PosId="17" Quantity="1">
+		<ItemId Type="PZN" Id="9952"/>
+	</InfoItem>										
+  <InfoItem PosId="18" Quantity="1">
+		<ItemId Type="PZN" Id="9969"/>
+	</InfoItem>										
+  <InfoItem PosId="19" Quantity="1">
+		<ItemId Type="PZN" Id="9975"/>
+	</InfoItem>										
+</ArgeItemInfoRequest>

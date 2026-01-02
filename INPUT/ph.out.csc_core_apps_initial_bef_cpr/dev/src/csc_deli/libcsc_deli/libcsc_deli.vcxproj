@@ -1,0 +1,357 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{30016D8F-7037-1014-980B-AB4141A31375}</ProjectGuid>
+    <RootNamespace>libcsc_deli</RootNamespace>
+    <Keyword>Qt4VS</Keyword>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(QTDIR)/include;.;$(SolutionDir)csc_deli/libcsc_deli/componentmanager;$(SolutionDir)csc_deli/libcsc_deli/libcsc_deliinfo;$(SolutionDir)csc_deli/libcsc_deli/loggerpool;$(SolutionDir)csc_deli/libcsc_deli/infrastructure;$(SolutionDir)csc_deli/libcsc_deli/domainmodule;$(SolutionDir)csc_deli/libcsc_deli;$(SolutionDir)..\ext\libutil\include;$(SolutionDir)..\ext\libutil\include\libutil;$(SolutionDir)..\ext\ssuk\basar\include;$(SolutionDir)../ext/log4cplus/include;$(SolutionDir)../ext/boost\include;$(SolutionDir)pxverbund/include;$(SolutionDir)libcsc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Lib>
+      <OutputFile>$(OutDir)libcsc_deli.lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(QTDIR)/include;.;$(SolutionDir)csc_deli/libcsc_deli/componentmanager;$(SolutionDir)csc_deli/libcsc_deli/libcsc_deliinfo;$(SolutionDir)csc_deli/libcsc_deli/loggerpool;$(SolutionDir)csc_deli/libcsc_deli/infrastructure;$(SolutionDir)csc_deli/libcsc_deli/domainmodule;$(SolutionDir)csc_deli/libcsc_deli;$(SolutionDir)..\ext\libutil\include;$(SolutionDir)..\ext\libutil\include\libutil;$(SolutionDir)..\ext\ssuk\basar/include;$(SolutionDir)../ext/log4cplus/include;$(SolutionDir)../ext/boost\include;$(SolutionDir)pxverbund/include;$(SolutionDir)libcsc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Lib>
+      <OutputFile>$(OutDir)libcsc_deli.lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <OmitFramePointers>true</OmitFramePointers>
+      <AdditionalIncludeDirectories>$(QTDIR)/include;.;$(SolutionDir)csc_deli/libcsc_deli/componentmanager;$(SolutionDir)csc_deli/libcsc_deli/libcsc_deliinfo;$(SolutionDir)csc_deli/libcsc_deli/loggerpool;$(SolutionDir)csc_deli/libcsc_deli/infrastructure;$(SolutionDir)csc_deli/libcsc_deli/domainmodule;$(SolutionDir)csc_deli/libcsc_deli;$(SolutionDir)..\ext\libutil\include;$(SolutionDir)..\ext\libutil\include\libutil;$(SolutionDir)..\ext\ssuk\basar\include;$(SolutionDir)../ext/log4cplus/include;$(SolutionDir)../ext/boost\include;$(SolutionDir)pxverbund/include;$(SolutionDir)libcsc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <Lib>
+      <OutputFile>$(OutDir)libcsc_deli.lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <OmitFramePointers>true</OmitFramePointers>
+      <AdditionalIncludeDirectories>$(QTDIR)/include;.;$(SolutionDir)csc_deli/libcsc_deli/componentmanager;$(SolutionDir)csc_deli/libcsc_deli/libcsc_deliinfo;$(SolutionDir)csc_deli/libcsc_deli/loggerpool;$(SolutionDir)csc_deli/libcsc_deli/infrastructure;$(SolutionDir)csc_deli/libcsc_deli/domainmodule;$(SolutionDir)csc_deli/libcsc_deli;$(SolutionDir)..\ext\libutil\include;$(SolutionDir)..\ext\libutil\include\libutil;$(SolutionDir)..\ext\ssuk\basar\include;$(SolutionDir)../ext/log4cplus/include;$(SolutionDir)../ext/boost\include;$(SolutionDir)pxverbund/include;$(SolutionDir)libcsc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <Lib>
+      <OutputFile>$(OutDir)libcsc_deli.lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="componentmanager\customerinvoiceconnectedfactory.cpp" />
+    <ClCompile Include="componentmanager\debtlimitdisconnectedfactory.cpp" />
+    <ClCompile Include="componentManager\libcsc_deliapplcompmgr.cpp" />
+    <ClCompile Include="domainmodule\cremamail\cremamailcleanupdm.cpp" />
+    <ClCompile Include="domainmodule\customerinvoice\customerinvoicingcollectiondm.cpp" />
+    <ClCompile Include="domainmodule\customerinvoice\customerinvoicedm.cpp" />
+    <ClCompile Include="domainmodule\customerorder\customerordercollectiondm.cpp" />
+    <ClCompile Include="domainmodule\customer\customerdm.cpp" />
+    <ClCompile Include="domainmodule\debtlimit\debtlimitcollectiondm.cpp" />
+    <ClCompile Include="domainmodule\debtlimit\debtlimitdm.cpp" />
+    <ClCompile Include="domainmodule\debtlimit\debtlimitimportdm.cpp" />
+    <ClCompile Include="domainmodule\debtlimit\debtlimitmaildm.cpp" />
+    <ClCompile Include="domainmodule\sap\sapbalancecollectiondm.cpp" />
+    <ClCompile Include="domainmodule\sap\sapcustomerturnovercollectiondm.cpp" />
+    <ClCompile Include="domainmodule\sap\saplimitcollectiondm.cpp" />
+    <ClCompile Include="domainmodule\turnover\customerturnovercollectiondm.cpp" />
+    <ClCompile Include="domainmodule\turnover\customerturnoverexportdm.cpp" />
+    <ClCompile Include="domainmodule\turnover\turnoverdm.cpp" />
+    <ClCompile Include="exception\dbconnectionexception.cpp" />
+    <ClCompile Include="exception\duplicatenameexception.cpp" />
+    <ClCompile Include="exception\filenotfoundexception.cpp" />
+    <ClCompile Include="exception\methodnotfoundexception.cpp" />
+    <ClCompile Include="exception\namenotfoundexception.cpp" />
+    <ClCompile Include="infrastructure\accessor\accessorbase\accessorbase.cpp" />
+    <ClCompile Include="infrastructure\accessor\accessordecorator\accessorproxyuniondecorator.cpp" />
+    <ClCompile Include="infrastructure\accessor\cremamail\cremamailcleanupacc.cpp" />
+    <ClCompile Include="infrastructure\accessor\customerinvoice\customerinvoiceacc.cpp" />
+    <ClCompile Include="infrastructure\accessor\customerinvoice\customerinvoicingcollectionacc.cpp" />
+    <ClCompile Include="infrastructure\accessor\customerinvoice\customerinvoicecollectionacc.cpp" />
+    <ClCompile Include="infrastructure\accessor\customerorder\customerordercollectionacc.cpp" />
+    <ClCompile Include="infrastructure\accessor\customerturnover\customerturnovercollectionacc.cpp" />
+    <ClCompile Include="infrastructure\accessor\customer\customeracc.cpp" />
+    <ClCompile Include="infrastructure\accessor\debtlimit\debtlimitacc.cpp" />
+    <ClCompile Include="infrastructure\accessor\debtlimit\debtlimitcollectionacc.cpp" />
+    <ClCompile Include="infrastructure\accessor\sap\sapbalancecollectionacc.cpp" />
+    <ClCompile Include="infrastructure\accessor\sap\sapcustomerturnovercollectionacc.cpp" />
+    <ClCompile Include="infrastructure\accessor\sap\saplimitcollectionacc.cpp" />
+    <ClCompile Include="infrastructure\connectionpool\connectionpool.cpp" />
+    <ClCompile Include="infrastructure\csvfile\csvfile.cpp" />
+    <ClCompile Include="infrastructure\csvfile\csvfileexception.cpp" />
+    <ClCompile Include="infrastructure\csvfile\csvrow.cpp" />
+    <ClCompile Include="infrastructure\parameter\accparameter.cpp" />
+    <ClCompile Include="infrastructure\parameter\areamapper.cpp" />
+    <ClCompile Include="libcsc_deliinfo\libcsc_deli_info.cpp" />
+    <ClCompile Include="loggerpool\libcsc_deli_loggerpool.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="componentmanager\customerinvoiceconnectedfactory.h" />
+    <ClInclude Include="componentmanager\customerinvoiceconnectedfactoryptr.h" />
+    <ClInclude Include="componentmanager\debtlimitdisconnectedfactory.h" />
+    <ClInclude Include="componentmanager\debtlimitdisconnectedfactoryptr.h" />
+    <ClInclude Include="componentmanager\icustomerinvoiceconnectedfactory.h" />
+    <ClInclude Include="componentmanager\icustomerinvoiceconnectedfactoryptr.h" />
+    <ClInclude Include="componentmanager\icustomerinvoicegetter.h" />
+    <ClInclude Include="componentmanager\icustomerinvoicegetterptr.h" />
+    <ClInclude Include="componentmanager\idebtlimitdisconnectedfactory.h" />
+    <ClInclude Include="componentmanager\idebtlimitdisconnectedfactoryptr.h" />
+    <ClInclude Include="componentManager\libcsc_deliapplcompmgr.h" />
+    <ClInclude Include="componentManager\libcsc_deliapplcompmgrptr.h" />
+    <ClInclude Include="domainmodule\cremamail\cremamailcleanupdm.h" />
+    <ClInclude Include="domainmodule\cremamail\cremamailcleanupdmptr.h" />
+    <ClInclude Include="domainmodule\cremamail\icremamailcleaner.h" />
+    <ClInclude Include="domainmodule\cremamail\icremamailcleanerptr.h" />
+    <ClInclude Include="domainmodule\customerinvoice\customerinvoicingcollectiondm.h" />
+    <ClInclude Include="domainmodule\customerinvoice\customerinvoicingcollectiondmptr.h" />
+    <ClInclude Include="domainmodule\customerinvoice\customerinvoicedm.h" />
+    <ClInclude Include="domainmodule\customerinvoice\customerinvoicedmptr.h" />
+    <ClInclude Include="domainmodule\customerinvoice\icustomerinvoice.h" />
+    <ClInclude Include="domainmodule\customerinvoice\icustomerinvoiceflag.h" />
+    <ClInclude Include="domainmodule\customerinvoice\icustomerinvoiceflagptr.h" />
+    <ClInclude Include="domainmodule\customerinvoice\icustomerinvoicingcollectionptr.h" />
+    <ClInclude Include="domainmodule\customerinvoice\icustomerinvoicingcollection.h" />
+    <ClInclude Include="domainmodule\customerinvoice\icustomerinvoiceptr.h" />
+    <ClInclude Include="domainmodule\customerorder\customerordercollectiondm.h" />
+    <ClInclude Include="domainmodule\customerorder\customerordercollectiondmptr.h" />
+    <ClInclude Include="domainmodule\customerorder\icustomerordercollectionfinder.h" />
+    <ClInclude Include="domainmodule\customerorder\icustomerordercollectionfinderptr.h" />
+    <ClInclude Include="domainmodule\customer\customerdm.h" />
+    <ClInclude Include="domainmodule\customer\customerdmptr.h" />
+    <ClInclude Include="domainmodule\customer\icustomerfinder.h" />
+    <ClInclude Include="domainmodule\customer\icustomerfinderptr.h" />
+    <ClInclude Include="domainmodule\debtlimit\debtlimitcollectiondm.h" />
+    <ClInclude Include="domainmodule\debtlimit\debtlimitcollectiondmptr.h" />
+    <ClInclude Include="domainmodule\debtlimit\debtlimitdm.h" />
+    <ClInclude Include="domainmodule\debtlimit\debtlimitdmptr.h" />
+    <ClInclude Include="domainmodule\debtlimit\debtlimitimportdm.h" />
+    <ClInclude Include="domainmodule\debtlimit\debtlimitimportdmptr.h" />
+    <ClInclude Include="domainmodule\debtlimit\debtlimitmaildm.h" />
+    <ClInclude Include="domainmodule\debtlimit\debtlimitmaildmptr.h" />
+    <ClInclude Include="domainmodule\debtlimit\idebtlimit.h" />
+    <ClInclude Include="domainmodule\debtlimit\idebtlimitcollection.h" />
+    <ClInclude Include="domainmodule\debtlimit\idebtlimitcollectionptr.h" />
+    <ClInclude Include="domainmodule\debtlimit\idebtlimitimporter.h" />
+    <ClInclude Include="domainmodule\debtlimit\idebtlimitimporterptr.h" />
+    <ClInclude Include="domainmodule\debtlimit\idebtlimitmailprocessor.h" />
+    <ClInclude Include="domainmodule\debtlimit\idebtlimitmailprocessorptr.h" />
+    <ClInclude Include="domainmodule\debtlimit\idebtlimitptr.h" />
+    <ClInclude Include="domainmodule\debtlimit\pxcremamailhandlerptr.h" />
+    <ClInclude Include="domainmodule\sap\isapcollectionreader.h" />
+    <ClInclude Include="domainmodule\sap\isapcollectionreaderptr.h" />
+    <ClInclude Include="domainmodule\sap\isapcollectionwriter.h" />
+    <ClInclude Include="domainmodule\sap\isapcollectionwriterptr.h" />
+    <ClInclude Include="domainmodule\sap\sapbalancecollectiondm.h" />
+    <ClInclude Include="domainmodule\sap\sapbalancecollectiondmptr.h" />
+    <ClInclude Include="domainmodule\sap\sapcustomerturnovercollectiondm.h" />
+    <ClInclude Include="domainmodule\sap\sapcustomerturnovercollectiondmptr.h" />
+    <ClInclude Include="domainmodule\sap\saplimitcollectiondm.h" />
+    <ClInclude Include="domainmodule\sap\saplimitcollectiondmptr.h" />
+    <ClInclude Include="domainmodule\turnover\customerturnovercollectiondm.h" />
+    <ClInclude Include="domainmodule\turnover\customerturnovercollectiondmptr.h" />
+    <ClInclude Include="domainmodule\turnover\customerturnoverexportdm.h" />
+    <ClInclude Include="domainmodule\turnover\customerturnoverexportdmptr.h" />
+    <ClInclude Include="domainmodule\turnover\icustomerturnovercollectionloader.h" />
+    <ClInclude Include="domainmodule\turnover\icustomerturnovercollectionloaderptr.h" />
+    <ClInclude Include="domainmodule\turnover\icustomerturnoverexporter.h" />
+    <ClInclude Include="domainmodule\turnover\icustomerturnoverexporterptr.h" />
+    <ClInclude Include="domainmodule\turnover\iturnoverfinder.h" />
+    <ClInclude Include="domainmodule\turnover\iturnoverfinderptr.h" />
+    <ClInclude Include="domainmodule\turnover\turnoverdm.h" />
+    <ClInclude Include="domainmodule\turnover\turnoverdmptr.h" />
+    <ClInclude Include="domainmodule\turnover\turnoverdm_definitions.h" />
+    <ClInclude Include="exception\dbconnectionexception.h" />
+    <ClInclude Include="exception\duplicatenameexception.h" />
+    <ClInclude Include="exception\filenotfoundexception.h" />
+    <ClInclude Include="exception\methodnotfoundexception.h" />
+    <ClInclude Include="exception\namenotfoundexception.h" />
+    <ClInclude Include="infrastructure\accessor\accessordecorator\accessorproxyuniondecorator.h" />
+    <ClInclude Include="infrastructure\accessor\accessordecorator\accessorproxyuniondecoratorptr.h" />
+    <ClInclude Include="infrastructure\accessor\backup_settings.h" />
+    <ClInclude Include="infrastructure\accessor\cremamail\cremamailcleanupacc.h" />
+    <ClInclude Include="infrastructure\accessor\cremamail\cremamailcleanupacc_definitions.h" />
+    <ClInclude Include="infrastructure\accessor\customerinvoice\customerinvoiceacc.h" />
+    <ClInclude Include="infrastructure\accessor\customerinvoice\customerinvoiceacc_definitions.h" />
+    <ClInclude Include="infrastructure\accessor\customerinvoice\customerinvoicingcollectionacc_definitions.h" />
+    <ClInclude Include="infrastructure\accessor\customerinvoice\customerinvoicingcollectionacc.h" />
+    <ClInclude Include="infrastructure\accessor\customerinvoice\customerinvoicecollectionacc.h" />
+    <ClInclude Include="infrastructure\accessor\customerinvoice\customerinvoicecollectionacc_definitions.h" />
+    <ClInclude Include="infrastructure\accessor\customerorder\customerordercollectionacc.h" />
+    <ClInclude Include="infrastructure\accessor\customerorder\customerordercollectionacc_definitions.h" />
+    <ClInclude Include="infrastructure\accessor\customerturnover\customerturnovercollectionacc.h" />
+    <ClInclude Include="infrastructure\accessor\customerturnover\customerturnovercollectionacc_definitions.h" />
+    <ClInclude Include="infrastructure\accessor\customer\customeracc.h" />
+    <ClInclude Include="infrastructure\accessor\customer\customeracc_definitions.h" />
+    <ClInclude Include="infrastructure\accessor\debtlimit\debtlimitacc.h" />
+    <ClInclude Include="infrastructure\accessor\debtlimit\debtlimitacc_definitions.h" />
+    <ClInclude Include="infrastructure\accessor\debtlimit\debtlimitcollectionacc.h" />
+    <ClInclude Include="infrastructure\accessor\debtlimit\debtlimitcollectionacc_definitions.h" />
+    <ClInclude Include="infrastructure\accessor\accessorbase\accessmethodcaller.hpp" />
+    <ClInclude Include="infrastructure\accessor\accessorbase\accessorbase.h" />
+    <ClInclude Include="infrastructure\accessor\sap\sapbalancecollectionacc.h" />
+    <ClInclude Include="infrastructure\accessor\sap\sapbalancecollectionacc_definitions.h" />
+    <ClInclude Include="infrastructure\accessor\sap\sapcustomerturnovercollectionacc.h" />
+    <ClInclude Include="infrastructure\accessor\sap\sapcustomerturnovercollectionacc_definitions.h" />
+    <ClInclude Include="infrastructure\accessor\sap\saplimitcollectionacc.h" />
+    <ClInclude Include="infrastructure\accessor\sap\saplimitcollectionacc_definitions.h" />
+    <ClInclude Include="infrastructure\accessor\sap\sap_definitions.h" />
+    <ClInclude Include="domainmodule\libcsc_deli_properties_definitions.h" />
+    <ClInclude Include="infrastructure\connectionpool\connectionpool.h" />
+    <ClInclude Include="infrastructure\connectionpool\connectionpoolptr.h" />
+    <ClInclude Include="infrastructure\connectionpool\iconnectionpool.h" />
+    <ClInclude Include="infrastructure\connectionpool\iconnectionpoolgetter.h" />
+    <ClInclude Include="infrastructure\connectionpool\iconnectionpoolgetterptr.h" />
+    <ClInclude Include="infrastructure\connectionpool\iconnectionpoolptr.h" />
+    <ClInclude Include="infrastructure\connectionpool\idbconnectionfactory.h" />
+    <ClInclude Include="infrastructure\connectionpool\idbconnectionfactoryconstptr.h" />
+    <ClInclude Include="infrastructure\csvfile\csvfile.h" />
+    <ClInclude Include="infrastructure\csvfile\csvfileexception.h" />
+    <ClInclude Include="infrastructure\csvfile\csviterator.h" />
+    <ClInclude Include="infrastructure\csvfile\csvrow.h" />
+    <ClInclude Include="infrastructure\parameter\accparameter.h" />
+    <ClInclude Include="infrastructure\parameter\accparameterptr.h" />
+    <ClInclude Include="infrastructure\parameter\areamapper.h" />
+    <ClInclude Include="infrastructure\parameter\iaccparameter.h" />
+    <ClInclude Include="infrastructure\parameter\iaccparameterptr.h" />
+    <ClInclude Include="infrastructure\parameter\parameterkeys.h" />
+    <ClInclude Include="libcsc_deliinfo\libcsc_deli_info.h" />
+    <ClInclude Include="loggerpool\libcsc_deli_loggerpool.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="csc_deli.cfg" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties Qt5Version_x0020_Win32="5.2.0" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSCTestUserCreator", "csctestusercreator\CSCTestUserCreator.csproj", "{99B2C617-46B2-4BEC-8DE0-DA834CEA707F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{99B2C617-46B2-4BEC-8DE0-DA834CEA707F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99B2C617-46B2-4BEC-8DE0-DA834CEA707F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99B2C617-46B2-4BEC-8DE0-DA834CEA707F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99B2C617-46B2-4BEC-8DE0-DA834CEA707F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

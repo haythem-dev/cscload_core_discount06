@@ -1,0 +1,22 @@
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Target Name="ThriftIdlCsCodeGenerator" 
+          BeforeTargets="PrepareForBuild"
+          Inputs="$(MSBuildThisFileDirectory)..\tools\**\*.thrift"
+          Outputs="gen-csharp\**\*.cs"
+          >
+    <ItemGroup>
+      <ThriftFiles Include="$(MSBuildThisFileDirectory)..\tools\**\*.thrift"/>
+    </ItemGroup>
+    <RemoveDir Directories="$(ProjectDir)gen-csharp" />
+    <Exec Command="$(thrift_compiler) -strict -r -o $(ProjectDir) --gen csharp:serial,nullable %(ThriftFiles.Identity)" />
+    <!-- remove all generated files and re-add them (handles files removed in later versions) -->
+    <ItemGroup>
+      <Compile Remove="gen-csharp\**\*.cs" />
+      <Compile Include="gen-csharp\**\*.cs" />
+      <!-- <Compile Update="gen-csharp\**\*.cs"/> -->
+      <!-- <FileWrites Include="gen-csharp\**\*.cs"/> -->
+    </ItemGroup>
+    <!-- <Message Importance="High" Text="INPUT Thrift IDL file: %(ThriftFiles.Identity)"/> <==> already logged via Exec above -->
+    <Message Importance="High" Text="COMPILED Generated C# file: $(ProjectDir)%(Compile.Identity)"/>
+  </Target>
+</Project>

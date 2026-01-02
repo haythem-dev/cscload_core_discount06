@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TurnoverRequest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://salestest.phoenix-ag.de/wsxmlbulgaria/schemas/turnover/TurnoverRequest.xsd">
+  <Client BranchNo="23" CustomerNo="17" />
+  <RequestPeriod StartDate="2010-01-01" EndDate="2010-05-01" />
+</TurnoverRequest>

@@ -1,0 +1,26 @@
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// include section
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+#include "longtermlackmapperbase.h"
+
+namespace libcsc
+{
+namespace stockbooking
+{
+LongTermLackMapperBase::LongTermLackMapperBase( const basar::Int32 articleNo )
+: m_ArticleNo( articleNo )
+{
+}
+
+    LongTermLackMapperBase::~LongTermLackMapperBase()
+{
+}
+
+void LongTermLackMapperBase::map()
+{
+	doMap();
+}
+
+}
+}
+

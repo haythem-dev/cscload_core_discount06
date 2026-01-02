@@ -1,0 +1,105 @@
+SD/LL  restype 0 ekgrp 400 PLA --> fliegt weg
+OH     restype 0 ekgrp 900 Covid
+IL     restype 0 ekgrp 950 Ihr Labor
+NF     restype 100         Notfalllager --> neu 
+SD/LL  restype 101         PLA --> neu
+
+
+4 tables:
+  A) sapmaterialstockreplication (available stock in SAP)
+  B) sapconfirmedissues (stock reserved for open orders in SAP)
+  C) cststockreserved (stock reserved for open orders in KSC)
+  D) articlereservation reservtype 0 oder 2 (reservations only known in KSC)
+
+New KSC stock is A - B - C - D.
+
+
+
+Step 1: alle Artikel bestimmen, die upgedated werden müssen:
+drop table if exists t1;
+select distinct branchno, articleno from sapmaterialstockreplication
+where branchno = 61 
+into temp t1;
+
+
+Iteriere über alle Artikel in t1:
+	Step 2: zusammenfassen mehrerer Chargen zu einem Eintrag pro Artikel/Reservierungstyp
+	drop table if exists t2;
+	select branchno, articleno, reservtype, pharmacygroupid, sum(quantity) as quantity
+	from sapmaterialstockreplication
+	where branchno = 61 and articleno = 14
+	group by 1, 2, 3, 4
+	into temp t2;
+
+	Step 3: zusammenfassen mehrerer offener Buchungen im SAP zu einem Eintrag pro Artikel/Reservierungstyp
+	drop table if exists t3;
+	select branchno, articleno, reservtype, pharmacygroupid, sum(quantity) as quantity
+	from sapconfirmedissues
+	where branchno = 61 and articleno = 14
+	group by 1, 2, 3, 4
+	into temp t3;
+
+	Step 4: zusammenfassen aller offenen Buchungen im KSC
+	drop table if exists t4;
+	select branchno, articleno, cast(-1 as SMALLINT) as reservtype, cast('' as CHAR(3)) as pharmacygroupid, sum(reservedqty) as quantity
+	from cststockreserved
+	where branchno = 61 and articleno = 14 
+	group by 1, 2, 3, 4
+	into temp t4;
+
+	Step 5:
+	drop table if exists t5;
+	select branchno, articleno, cast(-1 as SMALLINT) as reservtype, cast('' as CHAR(3)) as pharmacygroupid, sum(reservedqty) as quantity
+	from articlereservation
+	where branchno = 61 and articleno = 14 and reservtype in (0, 2)
+	group by 1, 2, 3, 4
+	into temp t5;
+
+
+	Step 6: Abziehen t3, t4, t5 von t2
+	drop table if exists t6;
+	select t2.branchno, t2.articleno, t2.reservtype, t2.pharmacygroupid, t2.quantity - NVL(t3.quantity, 0) - NVL(t4.quantity) - NVL(t5.quantity)
+	from t2
+	left outer join t3 on t2.branchno = t3.branchno and t2.articleno = t3.articleno and t2.reservtype = t3.reservtype and t2.pharmacygroupid = t3.pharmacygroupid
+	left outer join t4 on t2.branchno = t4.branchno and t2.articleno = t4.articleno and t2.reservtype = t4.reservtype and t2.pharmacygroupid = t4.pharmacygroupid
+	left outer join t5 on t2.branchno = t5.branchno and t2.articleno = t5.articleno and t2.reservtype = t5.reservtype and t2.pharmacygroupid = t5.pharmacygroupid
+	where t2.branchno = 61 and t2.articleno = 14
+	into temp t6;
+
+	Step 7: Vorbereitung für Bestandsupdate
+	BEGIN WORK
+	update artikellokal set bestand = 0 where filialnr = 61 and artikel_nr = 14;
+	delete from articlereservation where branchno = 61 and articleno = 14 and reservtype not in (0, 2);
+
+	Step 8: iteriere über t6
+		if (reservtype = -1) 
+			check if t.quantity < 0 --> log and set to 0
+			(update artikellokal set bestand = max(t6.quantity, 0) where branchno = 61 and articleno = 14)
+		else
+			INSERT INTO ARTICLERESERVATION (branchno,pharmacygroupid,articleno,reservtype,reservedqty)
+			VALUES (t6.branchno,t6.pharmacygroupid,t6.articleno,t6.reservtype,t6.quantity);
+
+	ende iteration über t6
+	COMMIT
+ende iteration über t1
+
+
+TODO: chargenupdate
+
+	Step 1: zusammenfassen mehrerer Chargen zu einem Eintrag pro Artikel/Reservierungstyp
+	drop table if exists tmp_batch;
+	select branchno, articleno, sapbatchid, sum(quantity) as quantity
+	from sapmaterialstockreplication
+	where branchno = 61 and articleno = 14
+	group by 1, 2, 3
+	into temp tmp_batch;
+
+	Step 2: Vorbereitung für Chargenupdate
+	BEGIN WORK
+	update articlecharge set bestand = 0 where filialnr = 61 and artikel_nr = 14;
+
+	Step 3: iteriere über tmp_batch
+		update articlecharge set bestand = <x> where filialnr = 61 and artikel_nr = 14 and sapbatchid = '0000000012';
+	ende iteration über tmp_batch
+	COMMIT
+	

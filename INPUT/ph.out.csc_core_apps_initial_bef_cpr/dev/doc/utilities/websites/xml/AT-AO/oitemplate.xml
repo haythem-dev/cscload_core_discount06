@@ -1,0 +1,3 @@
+		<OrderItem PosId="#POSID#" Quantity="#QTY#">
+			<ItemId Type="#ITEMID_PZN#" Id="#ITEMID_ID#"/>
+		</OrderItem>

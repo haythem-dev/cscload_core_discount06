@@ -1,0 +1,190 @@
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+Tables from INBOUND SIDE:
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+table name: discount
+
+###################metadata:#############################
+ColumnIndex	getColumnName	getColumnTypeName	getPrecision	getScale	isNullable	getTableName	getSchemaName	getCatalogName	getColumnClassName	getColumnDisplaySize	getColumnLabel	getColumnType	isAutoIncrement	isCaseSensitive	isCurrency	isDefinitelyWritable	isReadOnly	isSearchable	isSigned	isWritable
+1	branchno	smallint	5	0	0	discount	 	 	java.lang.Short	5	branchno	5	false	false	false	true	false	true	true	true
+2	articleno	int	10	0	0	discount	 	 	java.lang.Integer	10	articleno	4	false	false	false	true	false	true	true	true
+3	discountgrpno	int	10	0	0	discount	 	 	java.lang.Integer	10	discountgrpno	4	false	false	false	true	false	true	true	true
+4	pharmacygroupid	char	3	0	0	discount	 	 	java.lang.String	3	pharmacygroupid	1	false	false	false	true	false	true	false	true
+5	customerno	int	10	0	0	discount	 	 	java.lang.Integer	10	customerno	4	false	false	false	true	false	true	true	true
+6	grpdiscounttyp	smallint	5	0	0	discount	 	 	java.lang.Short	5	grpdiscounttyp	5	false	false	false	true	false	true	true	true
+7	datefrom	int	10	0	0	discount	 	 	java.lang.Integer	10	datefrom	4	false	false	false	true	false	true	true	true
+8	dateto	int	10	0	0	discount	 	 	java.lang.Integer	10	dateto	4	false	false	false	true	false	true	true	true
+9	baseqty	int	10	0	0	discount	 	 	java.lang.Integer	10	baseqty	4	false	false	false	true	false	true	true	true
+10	discountspec	smallint	5	0	0	discount	 	 	java.lang.Short	5	discountspec	5	false	false	false	true	false	true	true	true
+11	discounttype	smallint	5	0	0	discount	 	 	java.lang.Short	5	discounttype	5	false	false	false	true	false	true	true	true
+12	discountqty	smallint	5	0	0	discount	 	 	java.lang.Short	5	discountqty	5	false	false	false	true	false	true	true	true
+13	discountvaluepct	decimal	5	2	0	discount	 	 	java.math.BigDecimal	5	discountvaluepct	3	false	false	false	true	false	true	true	true
+14	discountqtypct	decimal	5	2	0	discount	 	 	java.math.BigDecimal	5	discountqtypct	3	false	false	false	true	false	true	true	true
+15	surchargepct	decimal	5	2	0	discount	 	 	java.math.BigDecimal	5	surchargepct	3	false	false	false	true	false	true	true	true
+16	pharmgrpexcluded	char	3	0	0	discount	 	 	java.lang.String	3	pharmgrpexcluded	1	false	false	false	true	false	true	false	true
+17	fixedprice	decimal	9	2	0	discount	 	 	java.math.BigDecimal	9	fixedprice	3	false	false	false	true	false	true	true	true
+18	refundpct	decimal	5	2	0	discount	 	 	java.math.BigDecimal	5	refundpct	3	false	false	false	true	false	true	true	true
+19	internaldiscount	char	1	0	0	discount	 	 	java.lang.String	1	internaldiscount	1	false	false	false	true	false	true	false	true
+20	discountarticle	int	10	0	0	discount	 	 	java.lang.Integer	10	discountarticle	4	false	false	false	true	false	true	true	true
+21	updatesign	char	1	0	0	discount	 	 	java.lang.String	1	updatesign	1	false	false	false	true	false	true	false	true
+22	pharmgrpexcl_2	char	3	0	0	discount	 	 	java.lang.String	3	pharmgrpexcl_2	1	false	false	false	true	false	true	false	true
+23	pharmgrpexcl_3	char	3	0	0	discount	 	 	java.lang.String	3	pharmgrpexcl_3	1	false	false	false	true	false	true	false	true
+24	base_value	decimal	10	2	0	discount	 	 	java.math.BigDecimal	10	base_value	3	false	false	false	true	false	true	true	true
+25	base_mult_std_qty	int	10	0	0	discount	 	 	java.lang.Integer	10	base_mult_std_qty	4	false	false	false	true	false	true	true	true
+26	no_multiple_qty	char	1	0	0	discount	 	 	java.lang.String	1	no_multiple_qty	1	false	false	false	true	false	true	false	true
+27	fixeddiscountvalue	decimal	9	2	0	discount	 	 	java.math.BigDecimal	9	fixeddiscountvalue	3	false	false	false	true	false	true	true	true
+28	manufacturerno	int	10	0	0	discount	 	 	java.lang.Integer	10	manufacturerno	4	false	false	false	true	false	true	true	true
+29	artcategoryno	int	10	0	0	discount	 	 	java.lang.Integer	10	artcategoryno	4	false	false	false	true	false	true	true	true
+30	paymenttargetno	smallint	5	0	0	discount	 	 	java.lang.Short	5	paymenttargetno	5	false	false	false	true	false	true	true	true
+31	grossprofitpct	decimal	5	2	0	discount	 	 	java.math.BigDecimal	5	grossprofitpct	3	false	false	false	true	false	true	true	true
+32	addondiscountok	char	1	0	0	discount	 	 	java.lang.String	1	addondiscountok	1	false	false	false	true	false	true	false	true
+33	paymenttermtype	char	1	0	0	discount	 	 	java.lang.String	1	paymenttermtype	1	false	false	false	true	false	true	false	true
+34	targetqty	int	10	0	0	discount	 	 	java.lang.Integer	10	targetqty	4	false	false	false	true	false	true	true	true
+35	exceedancepct	decimal	5	2	0	discount	 	 	java.math.BigDecimal	5	exceedancepct	3	false	false	false	true	false	true	true	true
+36	refundtype	smallint	5	0	0	discount	 	 	java.lang.Short	5	refundtype	5	false	false	false	true	false	true	true	true
+37	article_no_pack	int	10	0	0	discount	 	 	java.lang.Integer	10	article_no_pack	4	false	false	false	true	false	true	true	true
+38	refundvalue	decimal	9	2	0	discount	 	 	java.math.BigDecimal	9	refundvalue	3	false	false	false	true	false	true	true	true
+39	promotion_no	smallint	5	0	0	discount	 	 	java.lang.Short	5	promotion_no	5	false	false	false	true	false	true	true	true
+40	maxqty	int	10	0	0	discount	 	 	java.lang.Integer	10	maxqty	4	false	false	false	true	false	true	true	true
+41	turnovercalcimpact	char	1	0	0	discount	 	 	java.lang.String	1	turnovercalcimpact	1	false	false	false	true	false	true	false	true
+42	addondiscount	char	1	0	0	discount	 	 	java.lang.String	1	addondiscount	1	false	false	false	true	false	true	false	true
+43	monthlydiscount	char	1	0	0	discount	 	 	java.lang.String	1	monthlydiscount	1	false	false	false	true	false	true	false	true
+44	discountcalcfrom	smallint	5	0	0	discount	 	 	java.lang.Short	5	discountcalcfrom	5	false	false	false	true	false	true	true	true
+45	discountapplyto	smallint	5	0	0	discount	 	 	java.lang.Short	5	discountapplyto	5	false	false	false	true	false	true	true	true
+
+
+###################constraint:#############################
+ColumnIndex	getColumnName	getColumnTypeName	getPrecision	getScale	isNullable	getTableName	getSchemaName	getCatalogName	getColumnClassName	getColumnDisplaySize	getColumnLabel	getColumnType	isAutoIncrement	isCaseSensitive	isCurrency	isDefinitelyWritable	isReadOnly	isSearchable	isSigned	isWritable
+1	constrid	serial	10	0	0		 	 	java.lang.Integer	10	constrid	4	true	false	false	true	false	true	false	true
+2	constrname	varchar	128	0	1		 	 	java.lang.String	128	constrname	12	false	false	false	true	false	true	false	true
+3	constrtype	char	1	0	1		 	 	java.lang.String	1	constrtype	1	false	false	false	true	false	true	false	true
+4	constraint_type	char	25	0	1		 	 	java.lang.String	25	constraint_type	1	false	false	false	true	false	true	false	true
+5	owner	char	32	0	1		 	 	java.lang.String	32	owner	1	false	false	false	true	false	true	false	true
+
+###################indexes:#############################
+ColumnIndex	getColumnName	getColumnTypeName	getPrecision	getScale	isNullable	getTableName	getSchemaName	getCatalogName	getColumnClassName	getColumnDisplaySize	getColumnLabel	getColumnType	isAutoIncrement	isCaseSensitive	isCurrency	isDefinitelyWritable	isReadOnly	isSearchable	isSigned	isWritable
+1	idxname	varchar	128	0	1		 	 	java.lang.String	128	idxname	12	false	false	false	true	false	true	false	true
+2	owner	char	32	0	1		 	 	java.lang.String	32	owner	1	false	false	false	true	false	true	false	true
+3	idxtype	char	1	0	1		 	 	java.lang.String	1	idxtype	1	false	false	false	true	false	true	false	true
+4	index_type	char	11	0	1		 	 	java.lang.String	11	index_type	1	false	false	false	true	false	true	false	true
+5	clustered	char	1	0	1		 	 	java.lang.String	1	clustered	1	false	false	false	true	false	true	false	true
+6	levels	smallint	5	0	1		 	 	java.lang.Short	5	levels	5	false	false	false	true	false	true	true	true
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+table name: customersurcharge
+
+###################metadata:#############################
+ColumnIndex	getColumnName	getColumnTypeName	getPrecision	getScale	isNullable	getTableName	getSchemaName	getCatalogName	getColumnClassName	getColumnDisplaySize	getColumnLabel	getColumnType	isAutoIncrement	isCaseSensitive	isCurrency	isDefinitelyWritable	isReadOnly	isSearchable	isSigned	isWritable
+1	branchno	smallint	5	0	0	customersurcharge	 	 	java.lang.Short	5	branchno	5	false	false	false	true	false	true	true	true
+2	customerno	int	10	0	0	customersurcharge	 	 	java.lang.Integer	10	customerno	4	false	false	false	true	false	true	true	true
+3	manufacturerno	int	10	0	0	customersurcharge	 	 	java.lang.Integer	10	manufacturerno	4	false	false	false	true	false	true	true	true
+4	surchargepct	decimal	5	2	0	customersurcharge	 	 	java.math.BigDecimal	5	surchargepct	3	false	false	false	true	false	true	true	true
+5	updatesign	char	1	0	0	customersurcharge	 	 	java.lang.String	1	updatesign	1	false	false	false	true	false	true	false	true
+
+
+###################constraint:#############################
+ColumnIndex	getColumnName	getColumnTypeName	getPrecision	getScale	isNullable	getTableName	getSchemaName	getCatalogName	getColumnClassName	getColumnDisplaySize	getColumnLabel	getColumnType	isAutoIncrement	isCaseSensitive	isCurrency	isDefinitelyWritable	isReadOnly	isSearchable	isSigned	isWritable
+1	constrid	serial	10	0	0		 	 	java.lang.Integer	10	constrid	4	true	false	false	true	false	true	false	true
+2	constrname	varchar	128	0	1		 	 	java.lang.String	128	constrname	12	false	false	false	true	false	true	false	true
+3	constrtype	char	1	0	1		 	 	java.lang.String	1	constrtype	1	false	false	false	true	false	true	false	true
+4	constraint_type	char	25	0	1		 	 	java.lang.String	25	constraint_type	1	false	false	false	true	false	true	false	true
+5	owner	char	32	0	1		 	 	java.lang.String	32	owner	1	false	false	false	true	false	true	false	true
+
+###################indexes:#############################
+ColumnIndex	getColumnName	getColumnTypeName	getPrecision	getScale	isNullable	getTableName	getSchemaName	getCatalogName	getColumnClassName	getColumnDisplaySize	getColumnLabel	getColumnType	isAutoIncrement	isCaseSensitive	isCurrency	isDefinitelyWritable	isReadOnly	isSearchable	isSigned	isWritable
+1	idxname	varchar	128	0	1		 	 	java.lang.String	128	idxname	12	false	false	false	true	false	true	false	true
+2	owner	char	32	0	1		 	 	java.lang.String	32	owner	1	false	false	false	true	false	true	false	true
+3	idxtype	char	1	0	1		 	 	java.lang.String	1	idxtype	1	false	false	false	true	false	true	false	true
+4	index_type	char	11	0	1		 	 	java.lang.String	11	index_type	1	false	false	false	true	false	true	false	true
+5	clustered	char	1	0	1		 	 	java.lang.String	1	clustered	1	false	false	false	true	false	true	false	true
+6	levels	smallint	5	0	1		 	 	java.lang.Short	5	levels	5	false	false	false	true	false	true	true	true
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+table name: 
+
+###################metadata:#############################
+
+
+###################constraint:#############################
+
+###################indexes:#############################
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+table name: 
+
+###################metadata:#############################
+
+
+###################constraint:#############################
+
+###################indexes:#############################
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+table name: 
+
+###################metadata:#############################
+
+
+###################constraint:#############################
+
+###################indexes:#############################
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+Tables from INBOUND SIDE:
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+table name: rebate
+
+###################metadata:#############################
+ColumnIndex	getColumnName	getColumnTypeName	getPrecision	getScale	isNullable	getTableName	getSchemaName	getCatalogName	getColumnClassName	getColumnDisplaySize	getColumnLabel	getColumnType	isAutoIncrement	isCaseSensitive	isCurrency	isDefinitelyWritable	isReadOnly	isSearchable	isSigned	isWritable
+1	id	serial	10	0	0	rebate	 	 	java.lang.Integer	10	id	4	true	false	false	true	false	true	false	true
+2	rebatetype	smallint	5	0	0	rebate	 	 	java.lang.Short	5	rebatetype	5	false	false	false	true	false	true	true	true
+3	customer_idf	int	10	0	1	rebate	 	 	java.lang.Integer	10	customer_idf	4	false	false	false	true	false	true	true	true
+4	customer_branchno	smallint	5	0	1	rebate	 	 	java.lang.Short	5	customer_branchno	5	false	false	false	true	false	true	true	true
+5	rebate_value	decimal	5	2	1	rebate	 	 	java.math.BigDecimal	5	rebate_value	3	false	false	false	true	false	true	true	true
+6	rebate_percentage	decimal	5	2	1	rebate	 	 	java.math.BigDecimal	5	rebate_percentage	3	false	false	false	true	false	true	true	true
+7	changedate	datetime year to fraction(3)	23	3	0	rebate	 	 	java.sql.Timestamp	23	changedate	93	false	false	false	true	false	true	false	true
+8	rebate_pricebase	char	1	0	1	rebate	 	 	java.lang.String	1	rebate_pricebase	1	false	false	false	true	false	true	false	true
+
+
+###################constraint:#############################
+ColumnIndex	getColumnName	getColumnTypeName	getPrecision	getScale	isNullable	getTableName	getSchemaName	getCatalogName	getColumnClassName	getColumnDisplaySize	getColumnLabel	getColumnType	isAutoIncrement	isCaseSensitive	isCurrency	isDefinitelyWritable	isReadOnly	isSearchable	isSigned	isWritable
+1	constrid	serial	10	0	0		 	 	java.lang.Integer	10	constrid	4	true	false	false	true	false	true	false	true
+2	constrname	varchar	128	0	1		 	 	java.lang.String	128	constrname	12	false	false	false	true	false	true	false	true
+3	constrtype	char	1	0	1		 	 	java.lang.String	1	constrtype	1	false	false	false	true	false	true	false	true
+4	constraint_type	char	25	0	1		 	 	java.lang.String	25	constraint_type	1	false	false	false	true	false	true	false	true
+5	owner	char	32	0	1		 	 	java.lang.String	32	owner	1	false	false	false	true	false	true	false	true
+
+###################indexes:#############################
+ColumnIndex	getColumnName	getColumnTypeName	getPrecision	getScale	isNullable	getTableName	getSchemaName	getCatalogName	getColumnClassName	getColumnDisplaySize	getColumnLabel	getColumnType	isAutoIncrement	isCaseSensitive	isCurrency	isDefinitelyWritable	isReadOnly	isSearchable	isSigned	isWritable
+1	idxname	varchar	128	0	1		 	 	java.lang.String	128	idxname	12	false	false	false	true	false	true	false	true
+2	owner	char	32	0	1		 	 	java.lang.String	32	owner	1	false	false	false	true	false	true	false	true
+3	idxtype	char	1	0	1		 	 	java.lang.String	1	idxtype	1	false	false	false	true	false	true	false	true
+4	index_type	char	11	0	1		 	 	java.lang.String	11	index_type	1	false	false	false	true	false	true	false	true
+5	clustered	char	1	0	1		 	 	java.lang.String	1	clustered	1	false	false	false	true	false	true	false	true
+6	levels	smallint	5	0	1		 	 	java.lang.Short	5	levels	5	false	false	false	true	false	true	true	true
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+table name: rebatesync
+
+###################metadata:#############################
+ColumnIndex	getColumnName	getColumnTypeName	getPrecision	getScale	isNullable	getTableName	getSchemaName	getCatalogName	getColumnClassName	getColumnDisplaySize	getColumnLabel	getColumnType	isAutoIncrement	isCaseSensitive	isCurrency	isDefinitelyWritable	isReadOnly	isSearchable	isSigned	isWritable
+1	idf	int	10	0	0	rebatesync	 	 	java.lang.Integer	10	idf	4	false	false	false	true	false	true	true	true
+2	branchno	smallint	5	0	0	rebatesync	 	 	java.lang.Short	5	branchno	5	false	false	false	true	false	true	true	true
+3	rebatetype	smallint	5	0	0	rebatesync	 	 	java.lang.Short	5	rebatetype	5	false	false	false	true	false	true	true	true
+
+
+###################constraint:#############################
+ColumnIndex	getColumnName	getColumnTypeName	getPrecision	getScale	isNullable	getTableName	getSchemaName	getCatalogName	getColumnClassName	getColumnDisplaySize	getColumnLabel	getColumnType	isAutoIncrement	isCaseSensitive	isCurrency	isDefinitelyWritable	isReadOnly	isSearchable	isSigned	isWritable
+1	constrid	serial	10	0	0		 	 	java.lang.Integer	10	constrid	4	true	false	false	true	false	true	false	true
+2	constrname	varchar	128	0	1		 	 	java.lang.String	128	constrname	12	false	false	false	true	false	true	false	true
+3	constrtype	char	1	0	1		 	 	java.lang.String	1	constrtype	1	false	false	false	true	false	true	false	true
+4	constraint_type	char	25	0	1		 	 	java.lang.String	25	constraint_type	1	false	false	false	true	false	true	false	true
+5	owner	char	32	0	1		 	 	java.lang.String	32	owner	1	false	false	false	true	false	true	false	true
+
+###################indexes:#############################
+ColumnIndex	getColumnName	getColumnTypeName	getPrecision	getScale	isNullable	getTableName	getSchemaName	getCatalogName	getColumnClassName	getColumnDisplaySize	getColumnLabel	getColumnType	isAutoIncrement	isCaseSensitive	isCurrency	isDefinitelyWritable	isReadOnly	isSearchable	isSigned	isWritable
+1	idxname	varchar	128	0	1		 	 	java.lang.String	128	idxname	12	false	false	false	true	false	true	false	true
+2	owner	char	32	0	1		 	 	java.lang.String	32	owner	1	false	false	false	true	false	true	false	true
+3	idxtype	char	1	0	1		 	 	java.lang.String	1	idxtype	1	false	false	false	true	false	true	false	true
+4	index_type	char	11	0	1		 	 	java.lang.String	11	index_type	1	false	false	false	true	false	true	false	true
+5	clustered	char	1	0	1		 	 	java.lang.String	1	clustered	1	false	false	false	true	false	true	false	true
+6	levels	smallint	5	0	1		 	 	java.lang.Short	5	levels	5	false	false	false	true	false	true	true	true
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

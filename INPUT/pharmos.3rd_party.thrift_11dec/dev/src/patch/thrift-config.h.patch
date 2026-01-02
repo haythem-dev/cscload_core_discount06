@@ -1,0 +1,13 @@
+--- a/include/thrift/thrift-config.h	2019-08-20 11:03:58.799271100 +0200
++++ b/include/thrift/thrift-config.h	2019-08-20 11:04:02.848960500 +0200
+@@ -16,7 +16,10 @@
+  * specific language governing permissions and limitations
+  * under the License.
+  */
+ 
++#define FORCE_BOOST_FUNCTIONAL 1
++#define FORCE_BOOST_SMART_PTR 1
++
+ #ifdef _WIN32
+ #include <thrift/windows/config.h>
+ #else

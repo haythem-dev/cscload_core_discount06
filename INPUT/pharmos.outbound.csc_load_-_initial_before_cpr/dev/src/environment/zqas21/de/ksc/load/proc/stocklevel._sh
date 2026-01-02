@@ -1,0 +1,466 @@
+#!/usr/bin/ksh
+
+################################# database tables read ###################################
+#
+# This Script takes the customers from a file and identifies the stock level of all
+# given articles (by another file) belonging to that customer
+# It dynamically creates an SQL-File which is performed by dbaccess.
+#
+# ATTENTION!
+# If interbranch transfer is done between a branch in Northern Germany and a branch 
+# in Southern Germany the stock level will be 0 for the branch in the foreign region
+#
+# The following database tables are needed:
+# paraauftrager
+# artikellokal
+# articlequota
+# rechner
+
+# 1.5.2:
+# - set isolation dirty read, damit Locking von Datensätzen nicht zum Fehler führt
+# - "DROP TABLE table" in "DROP TABLE" geaendert
+
+# 1.5.3:
+# - Wegen PZN8
+# - noch im Übergang: beim Join articlecodes on (code_type=11 or code_type=16)
+# - *später beim Join articlecodes on code_type=11 -> 16
+
+# 1.5.4:
+# - PZN8-kompatibel
+#
+
+VERSION=1.5.4.0
+
+################################# parameter ###################################
+# $1, $2: customer file
+# $3, $4: article file
+# $5, $6: KSC database
+# $6, $8: name of machine (e.g. zpos1)
+# 
+# example for call of this script: stocklevel._sh -start -cf lagershops.info -af shoppzn.info -kscdb zpos4de -m zpos4
+
+################################# return codes ###################################
+# 0: ok
+# 1: wrong usage
+# 2: file not found
+# 3: "empty" stock file (that means a file which contains only the heading)
+# 5: DON'T USE THIS! Reserved for error, which is none (empty file)
+#99: general error
+
+################################# parameters ###################################
+### -version (Version):
+if [[ $1 = "-version" ]];then
+	echo stocklevel.sh version ${VERSION}
+	exit 0
+fi
+
+if [[ ! $1 = "-cf" ]];then
+        echo "usage: $(basename $0) -start -cf CUSTOMERFILE - af ARTICLEFILE - kscdb KSCDB -m MACHINE"
+        echo="Beispiel:"
+        echo "stocklevel.sh -start -cf $WSS/de/ksc/load/data/lagershops.info -af $WSS/de/ksc/load/data/shoppzn.info -kscdb zpos1de -m zdev1"
+        exit 1
+fi
+
+if [[ ! $3 = "-af" ]];then
+        echo "usage: $(basename $0) -start -cf CUSTOMERFILE - af ARTICLEFILE - kscdb KSCDB -m MACHINE"
+        exit 1
+fi
+
+if [[ ! $5 = "-kscdb" ]];then
+        echo "usage: $(basename $0) -start -cf CUSTOMERFILE - af ARTICLEFILE - kscdb KSCDB -m MACHINE"
+        exit 1
+fi
+
+if [[ ! $7 = "-m" ]];then
+        echo "usage: $(basename $0) -start -cf CUSTOMERFILE - af ARTICLEFILE - kscdb KSCDB -m MACHINE"
+        exit 1
+fi
+
+FILECUSTOMER=$2
+FILEARTICLE=$4
+KSCDB=$6
+MACHINE=$8
+
+################################# general settings ###################################
+today=`date +%Y-%m-%d`
+LOGPATH=${LOG_PATH}
+DATAPATH=${DATA_PATH}
+FILELOG=${LOGPATH}/stocklevel.${today}.log
+SQLFILE=${DATAPATH}/stocklevel.sql
+
+echo INFO: prerequisits>>${FILELOG}
+
+################################# check existance of files ###################################
+if [[ ! -f ${FILECUSTOMER} ]]; then
+	echo "File ${FILECUSTOMER} does not exist" >>${FILELOG}
+	echo "File ${FILECUSTOMER} does not exist" 
+	exit 2;
+fi
+
+if [[ ! -f ${FILEARTICLE} ]]; then
+	echo "File ${FILEARTICLE} does not exist" >>${FILELOG}
+	exit 2;
+fi
+
+################################# remove files and tmp directory ###################################
+if [[ -f ${SQLFILE} ]]; then
+	rm ${SQLFILE}
+fi
+
+TMPDIR=${DATAPATH}/tmp_stocklevel
+if [[ -d ${TMPDIR} ]]; then
+        rm -r ${TMPDIR}
+fi
+
+################################# create temporary directory and prepare customer file and article file ###################################
+### create tmp directory
+mkdir ${TMPDIR}
+
+### delete first line (headline) of customer file
+FILECUSTOMER_TEMP=${TMPDIR}/stocklevel_customerlist.info
+sed "1d" ${FILECUSTOMER} >${FILECUSTOMER_TEMP}
+
+### delete first line (headline) of article file
+FILEARTICLE_TEMP=${TMPDIR}/stocklevel_articlelist.info
+sed "1d" ${FILEARTICLE} >${FILEARTICLE_TEMP} 
+
+################################# get IBT branches ###################################
+echo INFO: get IBT branches>>${FILELOG}
+_IFS_OLD=${IFS}; IFS='|' # delimiter needed for ${FILECUSTOMER}
+
+sql_statement0="set isolation dirty read;"
+
+while read shop customerno branchno garbage #from ${FILECUSTOMER_TEMP}
+do
+	sql_statement1="unload to ${TMPDIR}/stocklevel_customer0.tmp delimiter '|' 
+		select ${customerno} as customerno, p.filialnr, vbfilialnr1, vbfilialnr2,vbfilialnr3, vbfilialnr4, vbfilialnr5 
+		from paraauftrager p 
+		left join rechner r on p.filialnr=r.filialnr 
+		where p.filialnr=${branchno} and rechner_name='${MACHINE}';"
+
+	sql_statement2="unload to '${TMPDIR}/stocklevel_branch0.tmp' delimiter ';'
+		select p.filialnr, vbfilialnr1, vbfilialnr2, vbfilialnr3, vbfilialnr4, vbfilialnr5 
+		from paraauftrager p 
+		left join rechner r on p.filialnr=r.filialnr 
+		where p.filialnr=${branchno} and rechner_name='${MACHINE}';"
+
+dbaccess ${KSCDB} 2>>${FILELOG} <<SQL_IBT
+$sql_statement0
+$sql_statement1
+$sql_statement2
+SQL_IBT
+	
+	### append to stocklevel_...1
+	if [[ -f ${TMPDIR}/stocklevel_customer0.tmp ]]; then
+		cat ${TMPDIR}/stocklevel_customer0.tmp >>${TMPDIR}/stocklevel_customer1.tmp
+	fi
+	if [[ -f ${TMPDIR}/stocklevel_branch0.tmp ]]; then
+		cat ${TMPDIR}/stocklevel_branch0.tmp >>${TMPDIR}/stocklevel_branch1.tmp
+	fi
+done <${FILECUSTOMER_TEMP} #while read branchno customerno 
+
+
+IFS=${_IFS_OLD}; # reset default delimiter
+
+sort ${TMPDIR}/stocklevel_customer1.tmp | uniq >${TMPDIR}/stocklevel_customer.tmp # in case of duplicate entries
+
+### replace ; by \n, sort (empty lines at the beginning), delete empty lines and delete doubletons
+cat ${TMPDIR}/stocklevel_branch1.tmp | tr '[;]' '[\n]' | sort | sed '/^ *$/d' | uniq >${TMPDIR}/stocklevel_branch.tmp
+
+################################# prepare SQL statements for dbaccess ###################################
+echo INFO: prepare SQL statements for dbaccess>>${FILELOG}
+
+
+
+### create tarticle and insert all articles from given article file:
+echo "--------- create table for all concerning articles and insert all articles from given article file:" >>${SQLFILE}
+sql_statement="set isolation dirty read;"
+echo "$sql_statement" >>${SQLFILE}
+
+sql_statement="CREATE TEMP TABLE tarticle0(
+	artikel_nr int not null
+	) WITH NO LOG;"
+echo "$sql_statement" >>${SQLFILE}
+
+sql_statement="LOAD FROM '${FILEARTICLE_TEMP}'
+	INSERT INTO tarticle0;" 
+echo "$sql_statement" >>${SQLFILE}
+echo >>${SQLFILE}
+
+### update pzn8 to internal pzn for processing
+sql_statement="UPDATE tarticle0 
+	SET artikel_nr = (SELECT articleno FROM articlecodes WHERE article_code = tarticle0.artikel_nr)
+ 	WHERE artikel_nr > 9999999;"
+echo "$sql_statement" >>${SQLFILE}
+echo >>${SQLFILE}
+
+
+#sql_statement="SELECT ac.article_code, ta0.artikel_nr 
+#	FROM tarticle0 ta0
+#	INNER JOIN articlecodes ac on ac.articleno=ta0.artikel_nr and ac.code_type=16
+#	INTO TEMP tarticle;"
+sql_statement="SELECT ac.article_code, ta0.artikel_nr 
+	FROM tarticle0 ta0
+	INNER JOIN articlecodes ac on ac.articleno=ta0.artikel_nr and (ac.code_type=16 or ac.code_type=11)
+	INTO TEMP tarticle;"
+echo "$sql_statement" >>${SQLFILE}
+echo >>${SQLFILE}
+
+
+### initialize SQL statemtents to get stock on hand and to drop tables t${branchno}
+i=0
+while read branchno #from ${TMPDIR}/stocklevel_branch.tmp
+do
+{
+###+++	SqlSelectStockLevel[$i]="select a.artikel_nr, bestand, verbundartikel 
+	SqlSelectStockLevel[$i]="select ta.artikel_nr, ta.article_code, a.bestand, a.verbundartikel 
+		from tarticle ta
+		inner join artikellokal a on  a.artikel_nr=ta.artikel_nr
+		where filialnr = ${branchno} 
+		into temp t${branchno} 
+		WITH NO LOG;"
+
+	SqlDrop[$i]="drop table t${branchno};"
+	let i=i+1
+} done <${TMPDIR}/stocklevel_branch.tmp
+CountBranches=${#SqlSelectStockLevel[*]}
+
+
+
+### perform SQL statemtents to get stock on hand:
+echo "--------- create tables for stocklevels of all branches" >>${SQLFILE}
+i=0
+until (( $i > ${CountBranches} ));do
+	echo ${SqlSelectStockLevel[$i]} >>${SQLFILE}
+	let i=i+1
+done
+echo >>${SQLFILE}
+
+
+
+
+echo "--------- process all customers" >>${SQLFILE}
+
+FS_OLD=${IFS}; IFS='|' # delimiter needed for stocklevel_customer.tmp
+
+while read customerno branchno0 branchno1 branchno2 branchno3 branchno4 branchno5 #from ${FILECUSTOMER_TEMP}
+do
+        echo >>${SQLFILE}
+	echo "--------- process customer ${customerno}" >>${SQLFILE}
+
+        columnststocklevel="Article char(20) not null, flagIBT char(20) default'0' not null, stocklevelDC  char(20) default'0' not null "
+	stocklevelvaluestring="'Article','IBT',  ${branchno0}"
+        valuestring=""
+        fromstring=""
+        wherestring=""
+	echo "SELECT * 
+		FROM t${branchno0} 
+		INTO temp tvz0quotedstock 
+		WITH NO LOG;" >>${SQLFILE} 
+        echo "SELECT articleno, quota-kumqty as quota 
+		FROM articlequota aq
+		INNER JOIN tarticle ta ON ta.artikel_nr=aq.articleno
+		where aq.customerno = ${customerno} and aq.branchno = ${branchno0}
+		INTO temp tquota 
+		WITH NO LOG;" >>${SQLFILE}
+        echo "UPDATE tvz0quotedstock 
+		SET bestand = (select quota from tquota where tvz0quotedstock.artikel_nr = tquota.articleno) 
+		WHERE artikel_nr in (select articleno from tquota) 
+		AND bestand > (select quota from tquota where tvz0quotedstock.artikel_nr = tquota.articleno);" >>${SQLFILE} 
+        valuestring=${valuestring}" NVL(tvz0quotedstock.bestand,'0') as stocklevelDC "
+        fromstring=" FROM tvz0quotedstock "
+        wherestring=" WHERE 1=1 "
+	echo "drop table tquota;" >>${SQLFILE}
+	echo >>${SQLFILE}
+
+
+        if [[ ${branchno1} -ne 0 ]]; then
+	    echo "SELECT * 
+		FROM t${branchno1} 
+		INTO temp tvz1quotedstock 
+		WITH NO LOG;" >>${SQLFILE} 
+            echo "SELECT articleno, quota-kumqty as quota 
+		FROM articlequota aq
+		INNER JOIN tarticle ta ON ta.artikel_nr=aq.articleno
+		where aq.customerno = ${customerno} and aq.branchno = ${branchno1}
+		INTO temp tquota 
+		WITH NO LOG;" >>${SQLFILE}
+            echo "UPDATE tvz1quotedstock 
+		SET bestand = (select quota from tquota where tvz1quotedstock.artikel_nr = tquota.articleno) 
+		WHERE artikel_nr in (select articleno from tquota) 
+		AND bestand > (select quota from tquota where tvz1quotedstock.artikel_nr = tquota.articleno);" >>${SQLFILE} 
+            stocklevelvaluestring=${stocklevelvaluestring}", ${branchno1} "
+	    columnststocklevel=${columnststocklevel}", stocklevelIBT1 char(20) default'0' not null "
+            valuestring=${valuestring}", CASE NVL(tvz0quotedstock.verbundartikel,'0') WHEN '0' THEN '0' ELSE NVL(tvz1quotedstock.bestand,'0') END as stocklevelIBT1 "
+            fromstring=${fromstring}", OUTER tvz1quotedstock"
+            wherestring=${wherestring}" AND tvz0quotedstock.artikel_nr = tvz1quotedstock.artikel_nr "
+            echo "drop table tquota;" >>${SQLFILE}
+	    echo >>${SQLFILE}
+        fi
+
+        if [[ ${branchno2} -ne 0 ]]; then
+	    echo "SELECT * 
+		FROM t${branchno2} 
+		INTO temp tvz2quotedstock 
+		WITH NO LOG;" >>${SQLFILE} 
+            echo "SELECT articleno, quota-kumqty as quota 
+		FROM articlequota aq
+		INNER JOIN tarticle ta ON ta.artikel_nr=aq.articleno
+		where aq.customerno = ${customerno} and aq.branchno = ${branchno2}
+		INTO temp tquota 
+		WITH NO LOG;" >>${SQLFILE}
+            echo "UPDATE tvz2quotedstock 
+		SET bestand = (select quota from tquota where tvz2quotedstock.artikel_nr = tquota.articleno) 
+		WHERE artikel_nr in (select articleno from tquota) 
+		AND bestand > (select quota from tquota where tvz2quotedstock.artikel_nr = tquota.articleno);" >>${SQLFILE} 
+            stocklevelvaluestring=${stocklevelvaluestring}", ${branchno2} "
+	    columnststocklevel=${columnststocklevel}", stocklevelIBT2 char(20) default'0' not null "
+            valuestring=${valuestring}", CASE NVL(tvz0quotedstock.verbundartikel,'0') WHEN '0' THEN '0' ELSE NVL(tvz2quotedstock.bestand,'0') END as stocklevelIBT2 "
+            fromstring=${fromstring}", OUTER tvz2quotedstock"
+            wherestring=${wherestring}" AND tvz0quotedstock.artikel_nr = tvz2quotedstock.artikel_nr "
+            echo "drop table tquota;" >>${SQLFILE}
+	    echo >>${SQLFILE}
+        fi
+
+        if [[ ${branchno3} -ne 0 ]]; then
+	    echo "SELECT * 
+		FROM t${branchno3} 
+		INTO temp tvz3quotedstock 
+		WITH NO LOG;" >>${SQLFILE} 
+            echo "SELECT articleno, quota-kumqty as quota 
+		FROM articlequota aq
+		INNER JOIN tarticle ta ON ta.artikel_nr=aq.articleno
+		where aq.customerno = ${customerno} and aq.branchno = ${branchno3}
+		INTO temp tquota 
+		WITH NO LOG;" >>${SQLFILE}
+            echo "UPDATE tvz3quotedstock 
+		SET bestand = (select quota from tquota where tvz3quotedstock.artikel_nr = tquota.articleno) 
+		WHERE artikel_nr in (select articleno from tquota) 
+		AND bestand > (select quota from tquota where tvz3quotedstock.artikel_nr = tquota.articleno);" >>${SQLFILE} 
+	    columnststocklevel=${columnststocklevel}", stocklevelIBT3 char(20) default'0' not null "
+            stocklevelvaluestring=${stocklevelvaluestring}", ${branchno3} "
+            valuestring=${valuestring}", CASE NVL(tvz0quotedstock.verbundartikel,'0') WHEN '0' THEN '0' ELSE NVL(tvz3quotedstock.bestand,'0') END as stocklevelIBT3 "
+            fromstring=${fromstring}", OUTER tvz3quotedstock"
+            wherestring=${wherestring}" AND tvz0quotedstock.artikel_nr = tvz3quotedstock.artikel_nr "
+            echo "drop table tquota;" >>${SQLFILE}
+	    echo >>${SQLFILE}
+        fi 
+
+        if [[ ${branchno4} -ne 0 ]]; then
+	    echo "SELECT * 
+		FROM t${branchno4} 
+		INTO temp tvz4quotedstock 
+		WITH NO LOG;" >>${SQLFILE} 
+            echo "SELECT articleno, quota-kumqty as quota 
+		FROM articlequota aq
+		INNER JOIN tarticle ta ON ta.artikel_nr=aq.articleno
+		where aq.customerno = ${customerno} and aq.branchno = ${branchno4}
+		INTO temp tquota 
+		WITH NO LOG;" >>${SQLFILE}
+            echo "UPDATE tvz4quotedstock 
+		SET bestand = (select quota from tquota where tvz4quotedstock.artikel_nr = tquota.articleno) 
+		WHERE artikel_nr in (select articleno from tquota) 
+		AND bestand > (select quota from tquota where tvz4quotedstock.artikel_nr = tquota.articleno);" >>${SQLFILE} 
+	    columnststocklevel=${columnststocklevel}", stocklevelIBT4 char(20) default'0' not null "
+            stocklevelvaluestring=${stocklevelvaluestring}", ${branchno4} "
+            valuestring=${valuestring}", CASE NVL(tvz0quotedstock.verbundartikel,'0') WHEN '0' THEN '0' ELSE NVL(tvz4quotedstock.bestand,'0') END as stocklevelIBT4 "
+            fromstring=${fromstring}", OUTER tvz4quotedstock"
+            wherestring=${wherestring}" AND tvz0quotedstock.artikel_nr = tvz4quotedstock.artikel_nr "
+            echo "drop table tquota;" >>${SQLFILE}
+	    echo >>${SQLFILE}
+        fi
+
+        if [[ ${branchno5} -ne 0 ]]; then
+	    echo "SELECT * 
+		FROM t${branchno5} 
+		INTO temp tvz5quotedstock 
+		WITH NO LOG;" >>${SQLFILE} 
+            echo "SELECT articleno, quota-kumqty as quota 
+		FROM articlequota aq
+		INNER JOIN tarticle ta ON ta.artikel_nr=aq.articleno
+		where aq.customerno = ${customerno} and aq.branchno = ${branchno5}
+		INTO temp tquota 
+		WITH NO LOG;" >>${SQLFILE}
+            echo "UPDATE tvz5quotedstock 
+		SET bestand = (select quota from tquota where tvz5quotedstock.artikel_nr = tquota.articleno) 
+		WHERE artikel_nr in (select articleno from tquota) 
+		AND bestand > (select quota from tquota where tvz5quotedstock.artikel_nr = tquota.articleno);" >>${SQLFILE} 
+	    columnststocklevel=${columnststocklevel}", stocklevelIBT5 char(20) default'0' not null "
+            stocklevelvaluestring=${stocklevelvaluestring}", ${branchno5} "
+            valuestring=${valuestring}", CASE NVL(tvz0quotedstock.verbundartikel,'0') WHEN '0' THEN '0' ELSE NVL(tvz5quotedstock.bestand,'0') END as stocklevelIBT5 "
+            fromstring=${fromstring}", OUTER tvz5quotedstock"
+            wherestring=${wherestring}" AND tvz0quotedstock.artikel_nr = tvz5quotedstock.artikel_nr "
+            echo "drop table tquota;" >>${SQLFILE}
+	    echo >>${SQLFILE}
+        fi
+	echo >>${SQLFILE}
+
+
+	echo "CREATE TEMP TABLE tstocklevel (${columnststocklevel}) WITH NO LOG;" >>${SQLFILE}
+	echo >>${SQLFILE}
+	echo "INSERT INTO tstocklevel values (${stocklevelvaluestring});" >>${SQLFILE}
+	echo "INSERT INTO tstocklevel select " >>${SQLFILE}
+
+	### !!! Attention: article_code has 25 characters in database, but interface only wants 20:
+	echo "Substring(tvz0quotedstock.article_code from 1 for 20) as Article, " >>${SQLFILE}
+
+	echo "NVL(tvz0quotedstock.verbundartikel,'0') as flagIBT, " >>${SQLFILE}
+        echo ${valuestring} >>${SQLFILE}
+        echo ${fromstring} >>${SQLFILE}
+        echo "${wherestring};" >>${SQLFILE}
+	#echo "where tvz0quotedstock.artikel_nr = tvz1quotedstock.artikel_nr and tvz0quotedstock.artikel_nr = tvz2quotedstock.artikel_nr and tvz0quotedstock.artikel_nr = tvz3quotedstock.artikel_nr and tvz0quotedstock.artikel_nr = tvz4quotedstock.artikel_nr and tvz0quotedstock.artikel_nr = tvz5quotedstock.artikel_nr;" >>${SQLFILE}
+	echo >>${SQLFILE}
+
+        branchnostr=`printf "%03d\n" ${branchno0}`
+        customernostr=`printf "%07d\n" ${customerno}`
+	echo "UNLOAD TO '${DATAPATH}/bestand-${branchnostr}-${customernostr}.info' SELECT * FROM tstocklevel;" >>${SQLFILE}
+	echo >>${SQLFILE}
+
+	echo "DROP TABLE tstocklevel; " >>${SQLFILE}
+	echo "DROP TABLE tvz0quotedstock;" >>${SQLFILE}
+        if [[ ${branchno1} -ne 0 ]]; then
+	    echo "DROP TABLE tvz1quotedstock;" >>${SQLFILE}
+        fi
+        if [[ ${branchno2} -ne 0 ]]; then
+	    echo "DROP TABLE tvz2quotedstock;" >>${SQLFILE}
+        fi
+        if [[ ${branchno3} -ne 0 ]]; then
+	    echo "DROP TABLE tvz3quotedstock;" >>${SQLFILE}
+        fi
+        if [[ ${branchno4} -ne 0 ]]; then
+	    echo "DROP TABLE tvz4quotedstock;" >>${SQLFILE}
+        fi
+        if [[ ${branchno5} -ne 0 ]]; then
+            echo "DROP TABLE tvz5quotedstock;" >>${SQLFILE}
+        fi
+	echo >>${SQLFILE}
+done <${TMPDIR}/stocklevel_customer.tmp #while read 
+IFS=${_IFS_OLD}; # reset default delimiter
+
+
+
+### perform SQL statemtents to drop tables:
+echo "--------- drop tables for stocklevels of all branches" >>${SQLFILE}
+i=0
+until (( $i > ${CountBranches} ));do 
+	echo ${SqlDrop[$i]} >>${SQLFILE}
+	let i=i+1
+done
+echo >>${SQLFILE}
+
+echo "--------- drop general tables" >>${SQLFILE}
+echo "drop table tarticle;" >>${SQLFILE}
+
+################################# perform SQL statements ###################################
+echo INFO: perform SQL statements>>${FILELOG}
+dbaccess ${KSCDB} ${SQLFILE} 2>>${FILELOG}
+
+################################# check, whether there are emtpy files ###################################
+res=`wc -l ${DATA_PATH}/bestand-*.info | awk '{if ($1 == 1) print "EMPTY"};'`
+if [[ "" == $res ]]; then
+  exit 0
+else
+  exit 3
+fi
+exit 99
+

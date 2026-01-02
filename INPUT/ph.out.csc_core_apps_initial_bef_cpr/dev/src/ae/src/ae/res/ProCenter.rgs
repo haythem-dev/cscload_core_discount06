@@ -1,0 +1,23 @@
+HKCR
+{
+	AE.ProCenter.1 = s 'ProCenter Class'
+	{
+		CLSID = s '{321958FE-44F0-4EC5-9AA4-4B9E9DAC034A}'
+	}
+	AE.ProCenter = s 'ProCenter Class'
+	{
+		CLSID = s '{321958FE-44F0-4EC5-9AA4-4B9E9DAC034A}'
+		CurVer = s 'AE.ProCenter.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {321958FE-44F0-4EC5-9AA4-4B9E9DAC034A} = s 'ProCenter Class'
+		{
+			ProgID = s 'AE.ProCenter.1'
+			VersionIndependentProgID = s 'AE.ProCenter'
+			LocalServer32 = s '%MODULE%'
+			val AppID = s '{0C2BCDB3-A608-4C33-BBF2-50229BC91B17}'
+			'TypeLib' = s '{D5E79D49-9565-4362-9A59-494CCF58DE21}'
+		}
+	}
+}

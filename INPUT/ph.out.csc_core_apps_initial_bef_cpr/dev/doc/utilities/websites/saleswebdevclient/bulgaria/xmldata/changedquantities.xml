@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ChangedQuantitiesRequest 
+	branchno="23" 
+	datefrom="2011-06-01" 
+	dateto="2011-06-30" 
+	customerno="3004895" 
+	xsi:noNamespaceSchemaLocation="https://salestest.phoenixgroup.eu/wsxmlbulgaria/schemas/changedquantities/ChangedQuantitiesRequest.xsd" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>

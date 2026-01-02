@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<KSCRefreshSettings>
+    <Country Country="BG">
+        <Settings>
+            <General PollInterval="3000" LogLevel="Errors" Test="false" BulkInsert="true" MaxSelect="40"/>
+            <SMTP Port="25" Host="10.156.80.21" SendMailFrom="kscrefreshtest@phoenixgroup.eu">
+                <Information eMail="kscrefreshtest@phoenixgroup.eu"/>
+                <Warnings eMail="kscrefreshtest@phoenixgroup.eu"/>
+                <Errors eMail="kscrefreshtest@phoenixgroup.eu"/>
+            </SMTP>
+            <TCAccess TCATransaction="TCAS" TCAHost="PhoenixGeneric_west" ConnectionRetries="10" ConnectionWaitBeforeRetry="10000" Username="PHADEX" Password=""/>
+            <pxVerbund DeviceType="7" DeviceName="PHADEX" Computer="" LogMode="1" DataSource="obg21@zqas21_tcp" MessageFile="/software/wss/bg/ksc/batch/ini/message.txt"/>
+            <Informix ConnectionRetries="10" ConnectionWaitBeforeRetry="10000" IfxServiceName="53004" IfxHost="zqas21_tcp" IfxDataBase="obg21"/>
+        </Settings>
+        <Branches>
+            <Branch BranchNo="22">
+                <Settings>
+                    <TCAccess IPAddress="10.242.5.215" Port="3322"/>
+                </Settings>
+            </Branch>
+            <Branch BranchNo="23">
+                <Settings>
+                    <TCAccess IPAddress="10.242.5.215" Port="3323"/>
+                </Settings>
+            </Branch>
+            <Branch BranchNo="24">
+                <Settings>
+                    <TCAccess IPAddress="10.242.5.215" Port="3324"/>
+                </Settings>
+            </Branch>
+            <Branch BranchNo="25">
+                <Settings>
+                    <TCAccess IPAddress="10.242.5.215" Port="3325"/>
+                </Settings>
+            </Branch>
+            <Branch BranchNo="26">
+                <Settings>
+                    <TCAccess IPAddress="10.242.5.215" Port="3326"/>
+                </Settings>
+            </Branch>
+            <Branch BranchNo="28">
+                <Settings>
+                    <TCAccess IPAddress="10.242.5.215" Port="3328"/>
+                </Settings>
+            </Branch>
+        </Branches>
+    </Country>
+</KSCRefreshSettings>

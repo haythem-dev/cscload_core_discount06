@@ -1,0 +1,830 @@
+#####################################################################
+#                                                                   #
+#	pxdb makefile for informix esqlc sources (Windows)              #
+#	Frank Naumann                                                   #
+#	18.11.2014                                                      #
+#                                                                   #
+#####################################################################
+
+#-------------------------------------------------------------
+#   target
+#-------------------------------------------------------------
+TARGET_NAME = $(OUT_DIR)\pxdb.lib
+
+#-------------------------------------------------------------
+#   flags
+#-------------------------------------------------------------
+CFLAGS_CMN = /D_LIB /D_CRT_SECURE_NO_WARNINGS /DWIN32 /W4 /wd4115 /wd4127
+CFLAGS_DBG = /Od /D_DEBUG /MD /Zi /Fd..\..\x64\Debug\pxdb.pdb
+CFLAGS_REL = /O2 /DNDEBUG /MD /Zi /Fd..\..\x64\Release\pxdb.pdb
+CFLAGS     = $(CFLAGS_CMN) $(CFLAGS_DBG)
+LFLAGS     = /subsystem:console
+ESQL_DEFINES = /DESQL_C
+
+#-------------------------------------------------------------
+#   libraries, lib path, include path
+#-------------------------------------------------------------
+LIBS        = isqlt09a.lib
+LIBS_DIR    = /LIBPATH:"$(INFORMIXDIR)\lib"
+
+INT_DIR     = ..\x64\Debug
+INT_DIR_REL = ..\x64\Release
+
+OUT_DIR     = ..\..\x64\Debug
+OUT_DIR_REL = ..\..\x64\Release
+
+INCS        = -I..\..\..\ext\pplib\include \
+              -I..\..\..\ext\pplib\include\pplib \
+              -I..\..\cxxtools\include \
+              -I..\..\pxdb\include
+
+#-------------------------------------------------------------
+#   object files
+#-------------------------------------------------------------
+PROJ_OBJS=\
+        $(INT_DIR)\connect.obj \
+        $(INT_DIR)\disconn.obj \
+        $(INT_DIR)\rartacct.obj \
+        $(INT_DIR)\rartikel.obj \
+        $(INT_DIR)\suppldeliveryinfo.obj \
+        $(INT_DIR)\tartalt.obj \
+        $(INT_DIR)\tartbpr.obj \
+        $(INT_DIR)\tartcompack.obj \
+        $(INT_DIR)\tarticlecharge.obj \
+        $(INT_DIR)\tarticlecodes.obj \
+        $(INT_DIR)\tarticlegrp.obj \
+        $(INT_DIR)\tarticlelppr.obj \
+        $(INT_DIR)\tarticleoldprice.obj \
+        $(INT_DIR)\tarticlepackunit.obj \
+        $(INT_DIR)\tartlag.obj \
+        $(INT_DIR)\tartmas.obj \
+        $(INT_DIR)\tartmasfr.obj \
+        $(INT_DIR)\tartnum.obj \
+        $(INT_DIR)\tartquot.obj \
+        $(INT_DIR)\tartreservation.obj \
+        $(INT_DIR)\tartspecialcond.obj \
+        $(INT_DIR)\tarttext.obj \
+        $(INT_DIR)\tartvza.obj \
+        $(INT_DIR)\tasbc0.obj \
+        $(INT_DIR)\tasbc1.obj \
+        $(INT_DIR)\tasbc18.obj \
+        $(INT_DIR)\tasbc19.obj \
+        $(INT_DIR)\tasbc22.obj \
+        $(INT_DIR)\tasbc25.obj \
+        $(INT_DIR)\tasbc26.obj \
+        $(INT_DIR)\tasbc27.obj \
+        $(INT_DIR)\tasbc28.obj \
+        $(INT_DIR)\tasbc29.obj \
+        $(INT_DIR)\tasbc30.obj \
+        $(INT_DIR)\tasbc31.obj \
+        $(INT_DIR)\tasbc32.obj \
+        $(INT_DIR)\tasbc33.obj \
+        $(INT_DIR)\tasbc42.obj \
+        $(INT_DIR)\tasbc45.obj \
+        $(INT_DIR)\tasbc48.obj \
+        $(INT_DIR)\tasbc49.obj \
+        $(INT_DIR)\tasbc50.obj \
+        $(INT_DIR)\tasbc53.obj \
+        $(INT_DIR)\tasbc56.obj \
+        $(INT_DIR)\tasbc57.obj \
+        $(INT_DIR)\tasbc60.obj \
+        $(INT_DIR)\tasbc61.obj \
+        $(INT_DIR)\tasbc62.obj \
+        $(INT_DIR)\tasbc63.obj \
+        $(INT_DIR)\tasbc64.obj \
+        $(INT_DIR)\tasbc65.obj \
+        $(INT_DIR)\tasbc66.obj \
+        $(INT_DIR)\tasbc67.obj \
+        $(INT_DIR)\tasbc68.obj \
+        $(INT_DIR)\tasbc69.obj \
+        $(INT_DIR)\tasbc70.obj \
+        $(INT_DIR)\tasbc71.obj \
+        $(INT_DIR)\tasbc72.obj \
+        $(INT_DIR)\tasbc73.obj \
+        $(INT_DIR)\taufart.obj \
+        $(INT_DIR)\taufartk.obj \
+        $(INT_DIR)\taufbem.obj \
+        $(INT_DIR)\taufende.obj \
+        $(INT_DIR)\tauferg.obj \
+        $(INT_DIR)\tauftrag.obj \
+        $(INT_DIR)\tauftragartkomb.obj \
+        $(INT_DIR)\tbucart.obj \
+        $(INT_DIR)\tcountrycodes.obj \
+        $(INT_DIR)\tcpvalidperiod.obj \
+        $(INT_DIR)\tcremamail.obj \
+        $(INT_DIR)\tcsccustomer.obj \
+        $(INT_DIR)\tcstcalcavp.obj \
+        $(INT_DIR)\tcstdiscacc.obj \
+        $(INT_DIR)\tcstdiscountcont.obj \
+        $(INT_DIR)\tcstpaymentterms.obj \
+        $(INT_DIR)\tcstprint.obj \
+        $(INT_DIR)\tcstsepordartgrp.obj \
+        $(INT_DIR)\tcststockrsrvd.obj \
+        $(INT_DIR)\tcustgrpflagtypes.obj \
+        $(INT_DIR)\tcustomerbusinesshours.obj \
+        $(INT_DIR)\tcustomergroup.obj \
+        $(INT_DIR)\tcustomergrpflags.obj \
+        $(INT_DIR)\tcustomersurcharge.obj \
+        $(INT_DIR)\tcustomerspecials.obj \
+        $(INT_DIR)\tcustomertour.obj \
+        $(INT_DIR)\tcustphg.obj \
+        $(INT_DIR)\tcustrou.obj \
+        $(INT_DIR)\tdelayeddeliverycst.obj \
+        $(INT_DIR)\tdealervolume.obj \
+        $(INT_DIR)\tdebtlim.obj \
+        $(INT_DIR)\tdiscount.obj \
+        $(INT_DIR)\tdiscountgrp.obj \
+        $(INT_DIR)\tdiscountgrpmem.obj \
+        $(INT_DIR)\tdiscountlist.obj \
+        $(INT_DIR)\tdiscountordtyp.obj \
+        $(INT_DIR)\tdispart.obj \
+        $(INT_DIR)\tencloserscale.obj \
+        $(INT_DIR)\teventreason.obj \
+        $(INT_DIR)\tfiliale.obj \
+        $(INT_DIR)\tgeneralcalcavp.obj \
+        $(INT_DIR)\tholiday.obj \
+        $(INT_DIR)\tibtassortmenttype.obj \
+        $(INT_DIR)\tibtbrancharticleconfig.obj \
+        $(INT_DIR)\tibtbranches.obj \
+        $(INT_DIR)\tibttype.obj \
+        $(INT_DIR)\tkdaufdiscacc.obj \
+        $(INT_DIR)\tkdaufin.obj \
+        $(INT_DIR)\tkdauftragdebtrel.obj \
+        $(INT_DIR)\tkdauftragpos.obj \
+        $(INT_DIR)\tkdauftragposchange.obj \
+        $(INT_DIR)\tkdauftragposcharge.obj \
+        $(INT_DIR)\tkdauftragposereignis.obj \
+        $(INT_DIR)\kdauftragposinfo.obj \
+        $(INT_DIR)\tkdauftragpospromo.obj \
+        $(INT_DIR)\tkdauftragposrab.obj \
+        $(INT_DIR)\tkdauftragposrefund.obj \
+        $(INT_DIR)\tkdauftragpostour.obj \
+        $(INT_DIR)\tkdauftragprolink.obj \
+        $(INT_DIR)\tkdauftragrechart.obj \
+        $(INT_DIR)\tkdauftragwerte.obj \
+        $(INT_DIR)\tkdauftrposrechart.obj \
+        $(INT_DIR)\tkdordnr.obj \
+        $(INT_DIR)\tkomart.obj \
+        $(INT_DIR)\tkundbet.obj \
+        $(INT_DIR)\tkunde.obj \
+        $(INT_DIR)\tkundeausku.obj \
+        $(INT_DIR)\tkundenotdienstplan.obj \
+        $(INT_DIR)\tkundeschalter.obj \
+        $(INT_DIR)\tkundgrp.obj \
+        $(INT_DIR)\tkundkon.obj \
+        $(INT_DIR)\tlagrev.obj \
+        $(INT_DIR)\tliefpo.obj \
+        $(INT_DIR)\tmanufacturergroup.obj \
+        $(INT_DIR)\tmsv3auftrag.obj \
+        $(INT_DIR)\tnarctracttrfer.obj \
+        $(INT_DIR)\tnlprot.obj \
+        $(INT_DIR)\tnhifprices.obj \
+        $(INT_DIR)\tnummer.obj \
+        $(INT_DIR)\toeorigintypes.obj \
+        $(INT_DIR)\toerestrictiontypes.obj \
+        $(INT_DIR)\tordercriteria.obj \
+        $(INT_DIR)\torderentryrestrictions.obj \
+        $(INT_DIR)\torderperiod.obj \
+        $(INT_DIR)\torderrelationno.obj \
+        $(INT_DIR)\torderrelationnotype.obj \
+        $(INT_DIR)\torderremarks.obj \
+        $(INT_DIR)\torderremarktypes.obj \
+        $(INT_DIR)\tparaauftragbearb.obj \
+        $(INT_DIR)\tparamet.obj \
+        $(INT_DIR)\tpositionparking.obj \
+        $(INT_DIR)\tpromotionquota.obj \
+        $(INT_DIR)\tpromotionquotacst.obj \
+        $(INT_DIR)\tpromotions.obj \
+        $(INT_DIR)\tpromotionscale.obj \
+        $(INT_DIR)\transact.obj \
+        $(INT_DIR)\transmissionresponse.obj \
+        $(INT_DIR)\trechner.obj \
+        $(INT_DIR)\tregistersprices.obj \
+        $(INT_DIR)\treimprt.obj \
+        $(INT_DIR)\tsalesman.obj \
+        $(INT_DIR)\tseporderartgrp.obj \
+        $(INT_DIR)\tservices.obj \
+        $(INT_DIR)\tstkent.obj \
+        $(INT_DIR)\ttaskctl.obj \
+        $(INT_DIR)\ttaxrates.obj \
+        $(INT_DIR)\ttaxtab.obj \
+        $(INT_DIR)\ttendercustomer.obj \
+        $(INT_DIR)\ttenderhead.obj \
+        $(INT_DIR)\ttenderpos.obj \
+        $(INT_DIR)\ttenderprogress.obj \
+        $(INT_DIR)\ttoteinfo.obj \
+        $(INT_DIR)\ttour.obj \
+        $(INT_DIR)\ttourconstime.obj \
+        $(INT_DIR)\ttourmasterdata.obj \
+        $(INT_DIR)\ttourplanwoche.obj \
+        $(INT_DIR)\ttourplconstime.obj \
+        $(INT_DIR)\ttourpltwoche.obj \
+        $(INT_DIR)\ttourpt.obj \
+        $(INT_DIR)\tvartikellokal.obj \
+        $(INT_DIR)\tzeitart.obj
+
+#-------------------------------------------------------------
+#   tools (Microsoft)
+#-------------------------------------------------------------
+MAKE     = nmake /f makefile.win64
+LINK     = lib
+ESQL     = "$(INFORMIXDIR)\bin\esql.exe"
+EPROTECT = "$(INFORMIXDIR)\lib\eprotect.exe"
+
+#-------------------------------------------------------------
+#   target rules
+#-------------------------------------------------------------
+
+$(TARGET_NAME): $(INT_DIR) $(PROJ_OBJS) $(OUT_DIR)
+	$(LINK) /OUT:$(TARGET_NAME) $(LIBS_DIR) $(LFLAGS) $(PROJ_OBJS) $(LIBS)
+
+$(OUT_DIR):
+	mkdir $(OUT_DIR)
+
+$(INT_DIR):
+	mkdir $(INT_DIR)
+
+rel:
+	$(MAKE) CFLAGS="$(CFLAGS_CMN) $(CFLAGS_REL)" INT_DIR="$(INT_DIR_REL)" OUT_DIR="$(OUT_DIR_REL)"
+
+rel_all:
+	$(MAKE) rel_clean
+	$(MAKE) rel
+
+dbg_all: 
+	$(MAKE) clean
+	$(MAKE)
+
+rel_clean:
+	$(MAKE) INT_DIR="$(INT_DIR_REL)" OUT_DIR="$(OUT_DIR_REL)" clean
+
+clean:
+	del /q $(INT_DIR)\*.obj $(INT_DIR)\*.ec $(OUT_DIR)\pxdb.lib $(OUT_DIR)\pxdb.pdb
+
+#-------------------------------------------------------------
+#   suffix rules
+#-------------------------------------------------------------
+ESQL_DEFINES = /DESQL_C
+
+.cxx.obj:
+	set PATH=%PATH%;$(INFORMIXDIR)\bin
+	@if not exist $(INT_DIR) mkdir $(INT_DIR)
+	$(CPP) $(CFLAGS) $(ESQL_DEFINES) $(INCS) /E /TC $*.cxx >$(INT_DIR)\$*.ec
+	$(ESQL) -dcmdl $(CFLAGS) /Fo$(INT_DIR)\ /TC -c $(INT_DIR)\$*.ec
+	del $(*)*.c $(*)*.c_
+#	del $(INT_DIR)\$*.ec
+
+
+#-------------------------------------------------------------
+#   suffix
+#-------------------------------------------------------------
+.SUFFIXES:
+.SUFFIXES: .cxx
+
+#-------------------------------------------------------------
+#   dependencies between object and header files
+#-------------------------------------------------------------
+# DEP_START
+
+$(INT_DIR)\connect.obj: connect.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" connect.obj
+
+$(INT_DIR)\disconn.obj: disconn.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" disconn.obj
+
+$(INT_DIR)\rartacct.obj: rartacct.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" rartacct.obj
+
+$(INT_DIR)\rartikel.obj: rartikel.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" rartikel.obj
+
+$(INT_DIR)\suppldeliveryinfo.obj: suppldeliveryinfo.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" suppldeliveryinfo.obj
+
+$(INT_DIR)\tartalt.obj: tartalt.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tartalt.obj
+
+$(INT_DIR)\tartbpr.obj: tartbpr.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tartbpr.obj
+
+$(INT_DIR)\tartcompack.obj: tartcompack.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tartcompack.obj
+
+$(INT_DIR)\tarticlecharge.obj: tarticlecharge.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tarticlecharge.obj
+
+$(INT_DIR)\tarticlecodes.obj: tarticlecodes.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tarticlecodes.obj
+
+$(INT_DIR)\tarticlegrp.obj: tarticlegrp.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tarticlegrp.obj
+
+$(INT_DIR)\tarticlelppr.obj: tarticlelppr.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tarticlelppr.obj
+
+$(INT_DIR)\tarticleoldprice.obj: tarticleoldprice.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tarticleoldprice.obj
+
+$(INT_DIR)\tarticlepackunit.obj: tarticlepackunit.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tarticlepackunit.obj
+
+$(INT_DIR)\tartlag.obj: tartlag.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tartlag.obj
+
+$(INT_DIR)\tartmas.obj: tartmas.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tartmas.obj
+
+$(INT_DIR)\tartmasfr.obj: tartmasfr.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tartmasfr.obj
+
+$(INT_DIR)\tartnum.obj: tartnum.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tartnum.obj
+
+$(INT_DIR)\tartquot.obj: tartquot.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tartquot.obj
+
+$(INT_DIR)\tartreservation.obj: tartreservation.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tartreservation.obj
+
+$(INT_DIR)\tartspecialcond.obj: tartspecialcond.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tartspecialcond.obj
+
+$(INT_DIR)\tarttext.obj: tarttext.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tarttext.obj
+
+$(INT_DIR)\tartvza.obj: tartvza.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tartvza.obj
+
+$(INT_DIR)\tasbc0.obj: tasbc0.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tasbc0.obj
+
+$(INT_DIR)\tasbc1.obj: tasbc1.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tasbc1.obj
+
+$(INT_DIR)\tasbc18.obj: tasbc18.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tasbc18.obj
+
+$(INT_DIR)\tasbc19.obj: tasbc19.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tasbc19.obj
+
+$(INT_DIR)\tasbc22.obj: tasbc22.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tasbc22.obj
+
+$(INT_DIR)\tasbc25.obj: tasbc25.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tasbc25.obj
+
+$(INT_DIR)\tasbc26.obj: tasbc26.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tasbc26.obj
+
+$(INT_DIR)\tasbc27.obj: tasbc27.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tasbc27.obj
+
+$(INT_DIR)\tasbc28.obj: tasbc28.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tasbc28.obj
+
+$(INT_DIR)\tasbc29.obj: tasbc29.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tasbc29.obj
+
+$(INT_DIR)\tasbc30.obj: tasbc30.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tasbc30.obj
+
+$(INT_DIR)\tasbc31.obj: tasbc31.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tasbc31.obj
+
+$(INT_DIR)\tasbc32.obj: tasbc32.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tasbc32.obj
+
+$(INT_DIR)\tasbc33.obj: tasbc33.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tasbc33.obj
+
+$(INT_DIR)\tasbc42.obj: tasbc42.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tasbc42.obj
+
+$(INT_DIR)\tasbc45.obj: tasbc45.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tasbc45.obj
+
+$(INT_DIR)\tasbc48.obj: tasbc48.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tasbc48.obj
+
+$(INT_DIR)\tasbc49.obj: tasbc49.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tasbc49.obj
+
+$(INT_DIR)\tasbc50.obj: tasbc50.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tasbc50.obj
+
+$(INT_DIR)\tasbc53.obj: tasbc53.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tasbc53.obj
+
+$(INT_DIR)\tasbc56.obj: tasbc56.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tasbc56.obj
+
+$(INT_DIR)\tasbc57.obj: tasbc57.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tasbc57.obj
+
+$(INT_DIR)\tasbc60.obj: tasbc60.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tasbc60.obj
+
+$(INT_DIR)\tasbc61.obj: tasbc61.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tasbc61.obj
+
+$(INT_DIR)\tasbc62.obj: tasbc62.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tasbc62.obj
+
+$(INT_DIR)\tasbc63.obj: tasbc63.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tasbc63.obj
+
+$(INT_DIR)\tasbc64.obj: tasbc64.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tasbc64.obj
+
+$(INT_DIR)\tasbc65.obj: tasbc65.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tasbc65.obj
+
+$(INT_DIR)\tasbc66.obj: tasbc66.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tasbc66.obj
+
+$(INT_DIR)\tasbc67.obj: tasbc67.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tasbc67.obj
+
+$(INT_DIR)\tasbc68.obj: tasbc68.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tasbc68.obj
+
+$(INT_DIR)\tasbc69.obj: tasbc69.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tasbc69.obj
+
+$(INT_DIR)\tasbc70.obj: tasbc70.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tasbc70.obj
+
+$(INT_DIR)\tasbc71.obj: tasbc71.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tasbc71.obj
+
+$(INT_DIR)\tasbc72.obj: tasbc72.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tasbc72.obj
+
+$(INT_DIR)\tasbc73.obj: tasbc73.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tasbc73.obj
+
+$(INT_DIR)\taufart.obj: taufart.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" taufart.obj
+
+$(INT_DIR)\taufartk.obj: taufartk.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" taufartk.obj
+
+$(INT_DIR)\taufbem.obj: taufbem.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" taufbem.obj
+
+$(INT_DIR)\taufende.obj: taufende.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" taufende.obj
+
+$(INT_DIR)\tauferg.obj: tauferg.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tauferg.obj
+
+$(INT_DIR)\tauftrag.obj: tauftrag.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tauftrag.obj
+
+$(INT_DIR)\tauftragartkomb.obj: tauftragartkomb.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tauftragartkomb.obj
+
+$(INT_DIR)\tbucart.obj: tbucart.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tbucart.obj
+
+$(INT_DIR)\tcountrycodes.obj: tcountrycodes.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tcountrycodes.obj
+
+$(INT_DIR)\tcpvalidperiod.obj: tcpvalidperiod.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tcpvalidperiod.obj
+
+$(INT_DIR)\tcremamail.obj: tcremamail.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tcremamail.obj
+
+$(INT_DIR)\tcsccustomer.obj: tcsccustomer.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tcsccustomer.obj
+
+$(INT_DIR)\tcstcalcavp.obj: tcstcalcavp.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tcstcalcavp.obj
+
+$(INT_DIR)\tcstdiscacc.obj: tcstdiscacc.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tcstdiscacc.obj
+
+$(INT_DIR)\tcstdiscountcont.obj: tcstdiscountcont.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tcstdiscountcont.obj
+
+$(INT_DIR)\tcstpaymentterms.obj: tcstpaymentterms.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tcstpaymentterms.obj
+
+$(INT_DIR)\tcstprint.obj: tcstprint.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tcstprint.obj
+
+$(INT_DIR)\tcstsepordartgrp.obj: tcstsepordartgrp.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tcstsepordartgrp.obj
+
+$(INT_DIR)\tcststockrsrvd.obj: tcststockrsrvd.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tcststockrsrvd.obj
+
+$(INT_DIR)\tcustgrpflagtypes.obj: tcustgrpflagtypes.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tcustgrpflagtypes.obj
+
+$(INT_DIR)\tcustomerbusinesshours.obj: tcustomerbusinesshours.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tcustomerbusinesshours.obj
+
+$(INT_DIR)\tcustomergroup.obj: tcustomergroup.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tcustomergroup.obj
+
+$(INT_DIR)\tcustomergrpflags.obj: tcustomergrpflags.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tcustomergrpflags.obj
+
+$(INT_DIR)\tcustomersurcharge.obj: tcustomersurcharge.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tcustomersurcharge.obj
+
+$(INT_DIR)\tcustomerspecials.obj: tcustomerspecials.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tcustomerspecials.obj
+
+$(INT_DIR)\tcustomertour.obj: tcustomertour.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tcustomertour.obj
+
+$(INT_DIR)\tcustphg.obj: tcustphg.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tcustphg.obj
+
+$(INT_DIR)\tcustrou.obj: tcustrou.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tcustrou.obj
+
+$(INT_DIR)\tdelayeddeliverycst.obj: tdelayeddeliverycst.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tdelayeddeliverycst.obj
+
+$(INT_DIR)\tdealervolume.obj: tdealervolume.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tdealervolume.obj
+
+$(INT_DIR)\tdebtlim.obj: tdebtlim.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tdebtlim.obj
+
+$(INT_DIR)\tdiscount.obj: tdiscount.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tdiscount.obj
+
+$(INT_DIR)\tdiscountgrp.obj: tdiscountgrp.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tdiscountgrp.obj
+
+$(INT_DIR)\tdiscountgrpmem.obj: tdiscountgrpmem.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tdiscountgrpmem.obj
+
+$(INT_DIR)\tdiscountlist.obj: tdiscountlist.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tdiscountlist.obj
+
+$(INT_DIR)\tdiscountordtyp.obj: tdiscountordtyp.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tdiscountordtyp.obj
+
+$(INT_DIR)\tdispart.obj: tdispart.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tdispart.obj
+
+$(INT_DIR)\tencloserscale.obj: tencloserscale.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tencloserscale.obj
+
+$(INT_DIR)\teventreason.obj: teventreason.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" teventreason.obj
+
+$(INT_DIR)\tfiliale.obj: tfiliale.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tfiliale.obj
+
+$(INT_DIR)\tgeneralcalcavp.obj: tgeneralcalcavp.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tgeneralcalcavp.obj
+
+$(INT_DIR)\tholiday.obj: tholiday.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tholiday.obj
+
+$(INT_DIR)\tibtassortmenttype.obj: tibtassortmenttype.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tibtassortmenttype.obj
+
+$(INT_DIR)\tibtbrancharticleconfig.obj: tibtbrancharticleconfig.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tibtbrancharticleconfig.obj
+
+$(INT_DIR)\tibtbranches.obj: tibtbranches.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tibtbranches.obj
+
+$(INT_DIR)\tibttype.obj: tibttype.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tibttype.obj
+
+$(INT_DIR)\tkdaufdiscacc.obj: tkdaufdiscacc.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tkdaufdiscacc.obj
+
+$(INT_DIR)\tkdaufin.obj: tkdaufin.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tkdaufin.obj
+
+$(INT_DIR)\tkdauftragdebtrel.obj: tkdauftragdebtrel.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tkdauftragdebtrel.obj
+
+$(INT_DIR)\tkdauftragpos.obj: tkdauftragpos.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tkdauftragpos.obj
+
+$(INT_DIR)\tkdauftragposchange.obj: tkdauftragposchange.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tkdauftragposchange.obj
+
+$(INT_DIR)\tkdauftragposcharge.obj: tkdauftragposcharge.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tkdauftragposcharge.obj
+
+$(INT_DIR)\tkdauftragposereignis.obj: tkdauftragposereignis.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tkdauftragposereignis.obj
+
+$(INT_DIR)\kdauftragposinfo.obj: kdauftragposinfo.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" kdauftragposinfo.obj
+
+$(INT_DIR)\tkdauftragpospromo.obj: tkdauftragpospromo.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tkdauftragpospromo.obj
+
+$(INT_DIR)\tkdauftragposrab.obj: tkdauftragposrab.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tkdauftragposrab.obj
+
+$(INT_DIR)\tkdauftragposrefund.obj: tkdauftragposrefund.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tkdauftragposrefund.obj
+
+$(INT_DIR)\tkdauftragpostour.obj: tkdauftragpostour.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tkdauftragpostour.obj
+
+$(INT_DIR)\tkdauftragprolink.obj: tkdauftragprolink.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tkdauftragprolink.obj
+
+$(INT_DIR)\tkdauftragrechart.obj: tkdauftragrechart.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tkdauftragrechart.obj
+
+$(INT_DIR)\tkdauftragwerte.obj: tkdauftragwerte.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tkdauftragwerte.obj
+
+$(INT_DIR)\tkdauftrposrechart.obj: tkdauftrposrechart.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tkdauftrposrechart.obj
+
+$(INT_DIR)\tkdordnr.obj: tkdordnr.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tkdordnr.obj
+
+$(INT_DIR)\tkomart.obj: tkomart.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tkomart.obj
+
+$(INT_DIR)\tkundbet.obj: tkundbet.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tkundbet.obj
+
+$(INT_DIR)\tkunde.obj: tkunde.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tkunde.obj
+
+$(INT_DIR)\tkundeausku.obj: tkundeausku.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tkundeausku.obj
+
+$(INT_DIR)\tkundenotdienstplan.obj: tkundenotdienstplan.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tkundenotdienstplan.obj
+
+$(INT_DIR)\tkundeschalter.obj: tkundeschalter.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tkundeschalter.obj
+
+$(INT_DIR)\tkundgrp.obj: tkundgrp.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tkundgrp.obj
+
+$(INT_DIR)\tkundkon.obj: tkundkon.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tkundkon.obj
+
+$(INT_DIR)\tlagrev.obj: tlagrev.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tlagrev.obj
+
+$(INT_DIR)\tliefpo.obj: tliefpo.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tliefpo.obj
+
+$(INT_DIR)\tmanufacturergroup.obj: tmanufacturergroup.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tmanufacturergroup.obj
+
+$(INT_DIR)\tmsv3auftrag.obj: tmsv3auftrag.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tmsv3auftrag.obj
+
+$(INT_DIR)\tnarctracttrfer.obj: tnarctracttrfer.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tnarctracttrfer.obj
+
+$(INT_DIR)\tnhifprices.obj: tnhifprices.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tnhifprices.obj
+
+$(INT_DIR)\tnlprot.obj: tnlprot.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tnlprot.obj
+
+$(INT_DIR)\tnummer.obj: tnummer.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tnummer.obj
+
+$(INT_DIR)\toeorigintypes.obj: toeorigintypes.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" toeorigintypes.obj
+
+$(INT_DIR)\toerestrictiontypes.obj: toerestrictiontypes.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" toerestrictiontypes.obj
+
+$(INT_DIR)\tordercriteria.obj: tordercriteria.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tordercriteria.obj
+
+$(INT_DIR)\torderentryrestrictions.obj: torderentryrestrictions.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" torderentryrestrictions.obj
+
+$(INT_DIR)\torderperiod.obj: torderperiod.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" torderperiod.obj
+
+$(INT_DIR)\torderrelationno.obj: torderrelationno.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" torderrelationno.obj
+
+$(INT_DIR)\torderrelationnotype.obj: torderrelationnotype.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" torderrelationnotype.obj
+
+$(INT_DIR)\torderremarks.obj: torderremarks.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" torderremarks.obj
+
+$(INT_DIR)\torderremarktypes.obj: torderremarktypes.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" torderremarktypes.obj
+
+$(INT_DIR)\tparaauftragbearb.obj: tparaauftragbearb.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tparaauftragbearb.obj
+
+$(INT_DIR)\tparamet.obj: tparamet.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tparamet.obj
+
+$(INT_DIR)\tpositionparking.obj: tpositionparking.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tpositionparking.obj
+
+$(INT_DIR)\tpromotionquota.obj: tpromotionquota.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tpromotionquota.obj
+
+$(INT_DIR)\tpromotionquotacst.obj: tpromotionquotacst.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tpromotionquotacst.obj
+
+$(INT_DIR)\tpromotions.obj: tpromotions.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tpromotions.obj
+
+$(INT_DIR)\tpromotionscale.obj: tpromotionscale.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tpromotionscale.obj
+
+$(INT_DIR)\transact.obj: transact.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" transact.obj
+
+$(INT_DIR)\transmissionresponse.obj: transmissionresponse.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" transmissionresponse.obj
+
+$(INT_DIR)\trechner.obj: trechner.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" trechner.obj
+
+$(INT_DIR)\tregistersprices.obj: tregistersprices.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tregistersprices.obj
+
+$(INT_DIR)\treimprt.obj: treimprt.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" treimprt.obj
+
+$(INT_DIR)\tsalesman.obj: tsalesman.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tsalesman.obj
+
+$(INT_DIR)\tseporderartgrp.obj: tseporderartgrp.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tseporderartgrp.obj
+
+$(INT_DIR)\tservices.obj: tservices.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tservices.obj
+
+$(INT_DIR)\tstkent.obj: tstkent.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tstkent.obj
+
+$(INT_DIR)\ttaskctl.obj: ttaskctl.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" ttaskctl.obj
+
+$(INT_DIR)\ttaxrates.obj: ttaxrates.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" ttaxrates.obj
+
+$(INT_DIR)\ttaxtab.obj: ttaxtab.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" ttaxtab.obj
+
+$(INT_DIR)\ttendercustomer.obj: ttendercustomer.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" ttendercustomer.obj
+
+$(INT_DIR)\ttenderhead.obj: ttenderhead.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" ttenderhead.obj
+
+$(INT_DIR)\ttenderpos.obj: ttenderpos.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" ttenderpos.obj
+
+$(INT_DIR)\ttenderprogress.obj: ttenderprogress.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" ttenderprogress.obj
+
+$(INT_DIR)\ttoteinfo.obj: ttoteinfo.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" ttoteinfo.obj
+
+$(INT_DIR)\ttour.obj: ttour.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" ttour.obj
+
+$(INT_DIR)\ttourconstime.obj: ttourconstime.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" ttourconstime.obj
+
+$(INT_DIR)\ttourmasterdata.obj: ttourmasterdata.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" ttourmasterdata.obj
+
+$(INT_DIR)\ttourplanwoche.obj: ttourplanwoche.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" ttourplanwoche.obj
+
+$(INT_DIR)\ttourplconstime.obj: ttourplconstime.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" ttourplconstime.obj
+
+$(INT_DIR)\ttourpltwoche.obj: ttourpltwoche.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" ttourpltwoche.obj
+
+$(INT_DIR)\ttourpt.obj: ttourpt.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" ttourpt.obj
+
+$(INT_DIR)\tvartikellokal.obj: tvartikellokal.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tvartikellokal.obj
+
+$(INT_DIR)\tzeitart.obj: tzeitart.cxx
+                $(MAKE) CFLAGS="$(CFLAGS)" INT_DIR="$(INT_DIR)" tzeitart.obj
+
+
+# DEP_END

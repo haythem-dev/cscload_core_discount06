@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ProductAvailabilityRequest>
+	<client BranchNo="23" CustomerNo="17"/>	
+	<article articleNumber="17"/>
+	<article articleNumber="649"/>
+	<article articleNumber="2460"/>
+	<article articleNumber="2803"/>	
+</ProductAvailabilityRequest>
+
+

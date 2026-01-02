@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Pharmos.Outbound.Base.CscService_Idl</id>
+    <version>$version$</version>
+    <authors>Marco Köppendörfer</authors>
+    <owners>Marco Köppendörfer</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Thrift idl for cscservice</description>
+    <releaseNotes>initial version as nuget package</releaseNotes>
+    <copyright>Copyright 2017</copyright>
+    <tags>phoenix cscservice idl thrift</tags>
+      <developmentDependency>true</developmentDependency>
+    <dependencies>
+      <!-- require thrift version 0.9.3 -->
+      <dependency id="Pharmos.3rd_Party.Thrift" version="[0.9.3.5,0.9.4)" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="idl\**" target="tools\cscservice\idl" />
+    <file src="target\**" target="build" />
+  </files>
+</package>

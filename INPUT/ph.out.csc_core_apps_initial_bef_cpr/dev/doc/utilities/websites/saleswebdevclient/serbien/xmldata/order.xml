@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<orderRequest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" language="rs">
+<order>
+<orderHeader referenceNumber="VD1" branchNumber="84" customerNumber="3211" ValueDate="2014-02-12"/>
+<orderLine orderQuantity="2">
+<articleCode>8757</articleCode>
+</orderLine>
+</order>
+</orderRequest>
+
+

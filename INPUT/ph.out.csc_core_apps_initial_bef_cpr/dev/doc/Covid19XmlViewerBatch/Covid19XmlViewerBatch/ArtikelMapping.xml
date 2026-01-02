@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ArtikelMapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ArtikelMapping.xsd">
+	<XMLArtikel ArticleID="1">
+		<!--<ArtikelNr>5424437</ArtikelNr>-->
+		<ArtikelNr>5424472</ArtikelNr>
+	</XMLArtikel>
+	<XMLArtikel ArticleID="2">
+		<!--<ArtikelNr>5424437</ArtikelNr>-->
+		<ArtikelNr>5424472</ArtikelNr>
+	</XMLArtikel>
+	<XMLArtikel ArticleID="3">		
+		<!--<ArtikelNr>5424437</ArtikelNr>-->
+		<ArtikelNr>5424472</ArtikelNr>
+	</XMLArtikel>	
+	<XMLArtikel ArticleID="4">				
+		<ArtikelNr>5426867</ArtikelNr>
+	</XMLArtikel>		
+	<XMLArtikel ArticleID="5">				
+		<ArtikelNr>5426867</ArtikelNr>
+	</XMLArtikel>			
+	<XMLArtikel ArticleID="6">				
+		<ArtikelNr>5426867</ArtikelNr>
+	</XMLArtikel>
+	<XMLArtikel ArticleID="7">				
+		<ArtikelNr>5430076</ArtikelNr>
+	</XMLArtikel>	
+	<XMLArtikel ArticleID="8">				
+		<ArtikelNr>5430076</ArtikelNr>
+	</XMLArtikel>		
+	<XMLArtikel ArticleID="9">				
+		<ArtikelNr>5430076</ArtikelNr>
+	</XMLArtikel>			
+	<XMLArtikel ArticleID="10">				
+		<ArtikelNr>5440991</ArtikelNr>
+	</XMLArtikel>			
+	<XMLArtikel ArticleID="11">				
+		<ArtikelNr>5441016</ArtikelNr>
+	</XMLArtikel>			
+	<XMLArtikel ArticleID="12">				
+		<ArtikelNr>5437457</ArtikelNr>
+	</XMLArtikel>			
+	<XMLArtikel ArticleID="13">				
+		<ArtikelNr>5441074</ArtikelNr>
+	</XMLArtikel>			
+	<XMLArtikel ArticleID="14">				
+		<ArtikelNr>5424905</ArtikelNr>
+	</XMLArtikel>			
+	<XMLArtikel ArticleID="15">				
+		<ArtikelNr>5441080</ArtikelNr>
+	</XMLArtikel>			
+	<XMLArtikel ArticleID="16">				
+		<ArtikelNr>5626844</ArtikelNr>
+	</XMLArtikel>			
+	<!--
+	<XMLArtikel ArticleID="17">				
+		<ArtikelNr>Etikett Moderna</ArtikelNr>
+	</XMLArtikel>				
+	<XMLArtikel ArticleID="18">				
+		<ArtikelNr>Impfstoffkarton Moderna</ArtikelNr>
+	</XMLArtikel>					
+	-->
+	<XMLArtikel ArticleID="21">				
+		<ArtikelNr>5445899</ArtikelNr>
+	</XMLArtikel>				
+	<XMLArtikel ArticleID="6B">				
+		<ArtikelNr>123456</ArtikelNr>
+	</XMLArtikel>		
+	<XMLArtikel ArticleID="5608321">
+		<ArtikelNr>5608321</ArtikelNr>
+	</XMLArtikel>
+	<XMLArtikel ArticleID="5612417">
+		<ArtikelNr>5612392</ArtikelNr>
+	</XMLArtikel>
+	<XMLArtikel ArticleID="5615203">
+		<ArtikelNr>5615203</ArtikelNr>
+	</XMLArtikel>	
+	<XMLArtikel ArticleID="5611903">
+		<ArtikelNr>5611903</ArtikelNr>
+	</XMLArtikel>		
+	<XMLArtikel ArticleID="5692764">
+		<ArtikelNr>5692764</ArtikelNr>
+	</XMLArtikel>
+	<XMLArtikel ArticleID="5701612">
+		<ArtikelNr>5701612</ArtikelNr>
+	</XMLArtikel>	
+	<XMLArtikel ArticleID="5700104">
+		<ArtikelNr>5700104</ArtikelNr>
+	</XMLArtikel>
+	<XMLArtikel ArticleID="5630390">
+		<ArtikelNr>5630390</ArtikelNr>
+	</XMLArtikel>	
+	<XMLArtikel ArticleID="5710924">
+		<ArtikelNr>5710918</ArtikelNr>
+	</XMLArtikel>		
+	<XMLArtikel ArticleID="5714997">
+		<ArtikelNr>5714230</ArtikelNr>
+	</XMLArtikel>
+	<XMLArtikel ArticleID="5720905">
+		<ArtikelNr>5720880</ArtikelNr>
+	</XMLArtikel>
+  <XMLArtikel ArticleID="5714158">
+		<ArtikelNr>5714141</ArtikelNr>
+	</XMLArtikel>
+  <XMLArtikel ArticleID="5730039">
+    <ArtikelNr>5727729</ArtikelNr>
+  </XMLArtikel>
+</ArtikelMapping>

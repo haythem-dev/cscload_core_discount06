@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="makefile.win" />
+    <None Include="makefile" />
+    <None Include="makefile.win64" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="aadruck.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="aafil.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="aakritik.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="aakunde.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="aatour.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="artikel.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="auftraginfo.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="callback.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="callplanday.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="callplanmaintenance.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="callplanundertake.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="collectivorders.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="controlling.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="customer.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dbinit.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eilbotendruck.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filialpartner.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="hersteller.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mailsystem.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="modemtab.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="processcheck.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="promo.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="promoinfo.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="serviceorder.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="statistics.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tender.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="verbundcheck.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="zaaauft.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="zaaplan.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="zaatart.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="orders.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="cremamailaddresses.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="msv3.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dadedb.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="touren.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="liefersel.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="dadedb.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="win32dade\unistd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="win32dade\stdbool.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

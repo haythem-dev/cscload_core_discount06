@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<KSCServerOrderRequest RequestInformation="ConsoleApp" xsi:noNamespaceSchemaLocation="https://salestest.phoenix-ag.de/wsxmlbulgaria/schemas/KSCServerOrderRequest.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> 
+<Order Version="1.0" BranchNo="05" CustomerNo="9999005">    
+  <OrderHeader OrderType="NO" BookingType="0" PickingType="0" Reference="1#REF#" CallBackDesired="true" TestOrder="true"/>
+  <OrderItem OrderQuantity="1" LineReference="L001"><ArticleNo>78597</ArticleNo></OrderItem>
+  <OrderItem OrderQuantity="2" LineReference="L002"><ArticleNo>78597</ArticleNo></OrderItem>
+</Order>
+<Order Version="1.0" BranchNo="05" CustomerNo="9999005">    
+  <OrderHeader OrderType="NO" BookingType="0" PickingType="0" Reference="2#REF#" CallBackDesired="true" TestOrder="true"/>
+  <OrderItem OrderQuantity="3" LineReference="L003"><ArticleNo>78597</ArticleNo></OrderItem>  
+</Order>
+<Order Version="1.0" BranchNo="05" CustomerNo="9999005">    
+  <OrderHeader OrderType="NO" BookingType="0" PickingType="0" Reference="3#REF#" CallBackDesired="true" TestOrder="true"/>
+  <OrderItem OrderQuantity="4" LineReference="L004"><ArticleNo>78597</ArticleNo></OrderItem>  
+  <OrderItem OrderQuantity="5" LineReference="L005"><ArticleNo>78597</ArticleNo></OrderItem>  
+</Order>
+</KSCServerOrderRequest>

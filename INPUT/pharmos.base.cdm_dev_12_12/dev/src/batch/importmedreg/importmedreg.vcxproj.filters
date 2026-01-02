@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Main">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Loggerpool">
+      <UniqueIdentifier>{dac64350-e2d8-4a63-8e45-c8daed381d23}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Service">
+      <UniqueIdentifier>{773c4078-f826-4d66-b3c6-8d35b663a856}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CSV">
+      <UniqueIdentifier>{f03c4483-c55d-47ec-8593-f6ac9db8947e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ini">
+      <UniqueIdentifier>{2322063a-9de2-40ed-a56a-cf7a206197d3}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="importmedreg_loggerpool.cpp">
+      <Filter>Loggerpool</Filter>
+    </ClCompile>
+    <ClCompile Include="importmedreg.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="importmedreg_jsontocsv.cpp">
+      <Filter>CSV</Filter>
+    </ClCompile>
+    <ClCompile Include="importmedreg_webservice.cpp">
+      <Filter>Service</Filter>
+    </ClCompile>
+    <ClCompile Include="importmedreg_keymanager.cpp">
+      <Filter>Service</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="importmedreg.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="importmedreg_loggerpool.h">
+      <Filter>Loggerpool</Filter>
+    </ClInclude>
+    <ClInclude Include="importmedreg_webservice.h">
+      <Filter>Service</Filter>
+    </ClInclude>
+    <ClInclude Include="importmedreg_jsontocsv.h">
+      <Filter>CSV</Filter>
+    </ClInclude>
+    <ClInclude Include="importmedreg_keymanager.h">
+      <Filter>Service</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="unix\ini\importmedreg_log.cfg">
+      <Filter>ini</Filter>
+    </None>
+    <None Include="unix\ini\importmedreg_properties_acc.cfg">
+      <Filter>ini</Filter>
+    </None>
+    <None Include="unix\ini\importmedreg_properties_prd.cfg">
+      <Filter>ini</Filter>
+    </None>
+    <None Include="unix\ini\importmedreg_properties_tst.cfg">
+      <Filter>ini</Filter>
+    </None>
+    <None Include="unix\ini\importmedreg_token_acc.csv">
+      <Filter>ini</Filter>
+    </None>
+    <None Include="unix\ini\importmedreg_token_prd.csv">
+      <Filter>ini</Filter>
+    </None>
+    <None Include="unix\ini\importmedreg_token_tst.csv">
+      <Filter>ini</Filter>
+    </None>
+  </ItemGroup>
+</Project>

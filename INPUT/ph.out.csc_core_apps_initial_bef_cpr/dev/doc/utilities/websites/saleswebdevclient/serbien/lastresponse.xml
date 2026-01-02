@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<!--order Response - created by Phoenix Farmacija-->
+<orderResponse xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" language="rs">
+<order>
+<orderHeader referenceNumber="VD3" branchNumber="84" customerNumber="3211" ValueDate="2014-02-10" orderEntryRefNumber="856957"/>
+<orderLine orderQuantity="2">
+<articleCode>8757</articleCode>
+	<orderLineResponse confirmedQuantity="2" interbranchTransferQuantity="0" subsequentDeliveryQuantity="0" articleRequirementPurchaseOrderQuantity="0"/>
+		</orderLine>
+</order></orderResponse>

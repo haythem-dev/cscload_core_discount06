@@ -1,0 +1,365 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="UseCase">
+      <UniqueIdentifier>{0A7D1BD8-6D64-1014-B856-1A9E5588203F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UseCase\MainUC">
+      <UniqueIdentifier>{0A7D1E10-6D64-1014-B856-1A9E5588203F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure">
+      <UniqueIdentifier>{0A7D1FC7-6D64-1014-B856-1A9E5588203F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\CommandLine">
+      <UniqueIdentifier>{0A7D214A-6D64-1014-B856-1A9E5588203F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\CommandLine\CmdLineEvaluator">
+      <UniqueIdentifier>{0A7D22BF-6D64-1014-B856-1A9E5588203F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ComponentManager">
+      <UniqueIdentifier>{0A7D2434-6D64-1014-B856-1A9E5588203F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ComponentManager\ApplCompMgr">
+      <UniqueIdentifier>{0A7D25A6-6D64-1014-B856-1A9E5588203F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ComponentManager\ApplCompMgr\Interface">
+      <UniqueIdentifier>{0A7D271E-6D64-1014-B856-1A9E5588203F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ComponentManager\ApplCompMgr\Interface\UseCaseGetter">
+      <UniqueIdentifier>{0A7D288E-6D64-1014-B856-1A9E5588203F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ComponentManager\ApplCompMgr\Impl">
+      <UniqueIdentifier>{0A7D2A17-6D64-1014-B856-1A9E5588203F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ComponentManager\InfrastructureCompMgr">
+      <UniqueIdentifier>{0A7D2B8E-6D64-1014-B856-1A9E5588203F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\Setup">
+      <UniqueIdentifier>{0A7D2D05-6D64-1014-B856-1A9E5588203F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\Setup\Interface">
+      <UniqueIdentifier>{0A7D2E8E-6D64-1014-B856-1A9E5588203F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\Setup\impl">
+      <UniqueIdentifier>{0A7D3001-6D64-1014-B856-1A9E5588203F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Ibtorderimport">
+      <UniqueIdentifier>{0A7D3168-6D64-1014-B856-1A9E5588203F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Ibtorderimport\ApplController">
+      <UniqueIdentifier>{0A7D32DD-6D64-1014-B856-1A9E5588203F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Loggerpool">
+      <UniqueIdentifier>{0A7D3472-6D64-1014-B856-1A9E5588203F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModule">
+      <UniqueIdentifier>{0A7D35DF-6D64-1014-B856-1A9E5588203F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\MailAlert">
+      <UniqueIdentifier>{0A7D3B8F-6D64-1014-B856-1A9E5588203F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\MailAlert\Alert">
+      <UniqueIdentifier>{0A7D3D15-6D64-1014-B856-1A9E5588203F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\MailAlert\Proxy">
+      <UniqueIdentifier>{0A7D3E86-6D64-1014-B856-1A9E5588203F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="unix">
+      <UniqueIdentifier>{0A7D439B-6D64-1014-B856-1A9E5588203F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UseCase\MainUC\Interfaces">
+      <UniqueIdentifier>{281c4bf2-0b42-4831-b64f-677aec73e8b6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UseCase\MainUC\Impl">
+      <UniqueIdentifier>{2c374986-1f67-4837-b10e-51ce32c13386}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModule\pxOrderTransmit">
+      <UniqueIdentifier>{3a0e9ff6-5561-42ce-b348-8499e2ce0366}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModule\pxOrderTransmit\Interface">
+      <UniqueIdentifier>{16db73ee-64e5-445a-9814-c99da256440c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModule\pxOrderTransmit\Impl">
+      <UniqueIdentifier>{37c37e28-eb73-4126-9d99-a8e47db17e13}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModule\pxOrder">
+      <UniqueIdentifier>{2ac35610-f655-440f-96a0-b6a3e4248652}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModule\pxOrder\Impl">
+      <UniqueIdentifier>{a050057f-2336-4462-be0a-cfebe31fc926}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModule\pxOrder\Interface">
+      <UniqueIdentifier>{88192eb6-bb05-4aca-a206-e5793ee2cc31}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModule\pxTaskControl">
+      <UniqueIdentifier>{b2d1f107-a91a-4229-81dc-98a534fa9cf3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModule\pxTaskControl\Impl">
+      <UniqueIdentifier>{908d4a66-30f8-420d-8569-97571d088ad0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModule\pxTaskControl\Interface">
+      <UniqueIdentifier>{6e78b45a-3c7f-43a9-85f1-aeda6a87ac2d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModule\pxOrderItem">
+      <UniqueIdentifier>{353af06d-3b8f-4172-b771-a8964596e9a3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModule\pxOrderItem\Impl">
+      <UniqueIdentifier>{3099c518-7c8a-4e47-aa7e-df4f42b8f65b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModule\pxOrderItem\Interface">
+      <UniqueIdentifier>{3abb288d-1f06-4c75-a922-8df9a227e37b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModule\pxItemDiscount">
+      <UniqueIdentifier>{8dab82ed-fe17-4bea-b59a-71933f7b481a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModule\pxItemDiscount\Impl">
+      <UniqueIdentifier>{d39d8810-f4cd-40ea-a901-681d900834f1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModule\pxItemDiscount\Interface">
+      <UniqueIdentifier>{4e4741da-8c0a-48cb-9204-5262a2b9ab5a}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="usecase\mainuc.cpp">
+      <Filter>UseCase\MainUC</Filter>
+    </ClCompile>
+    <ClCompile Include="componentmanager\ibtorderimportapplcompmgr.cpp">
+      <Filter>ComponentManager\ApplCompMgr\Impl</Filter>
+    </ClCompile>
+    <ClCompile Include="componentmanager\ibtorderimportinfrastructurecompmgr.cpp">
+      <Filter>ComponentManager\InfrastructureCompMgr</Filter>
+    </ClCompile>
+    <ClCompile Include="infrastructure\cmdline\ibtorderimportcmdlineevaluator.cpp">
+      <Filter>Infrastructure\CommandLine\CmdLineEvaluator</Filter>
+    </ClCompile>
+    <ClCompile Include="ibtorderimport\main.cpp">
+      <Filter>Ibtorderimport</Filter>
+    </ClCompile>
+    <ClCompile Include="ibtorderimport\ibtorderimportapplctrl.cpp">
+      <Filter>Ibtorderimport\ApplController</Filter>
+    </ClCompile>
+    <ClCompile Include="infrastructure\setup\ibtorderimportinfrastructuresetup.cpp">
+      <Filter>Infrastructure\Setup\impl</Filter>
+    </ClCompile>
+    <ClCompile Include="loggerpool\ibtorderimport_loggerpool.cpp">
+      <Filter>Loggerpool</Filter>
+    </ClCompile>
+    <ClCompile Include="infrastructure\mail\mailparameterproxy.cpp">
+      <Filter>Infrastructure\MailAlert\Proxy</Filter>
+    </ClCompile>
+    <ClCompile Include="infrastructure\mail\mailalert.cpp">
+      <Filter>Infrastructure\MailAlert\Alert</Filter>
+    </ClCompile>
+    <ClCompile Include="usecase\ibtordermanager.cpp">
+      <Filter>UseCase\MainUC\Impl</Filter>
+    </ClCompile>
+    <ClCompile Include="domainmodule\pxordertransmit.cpp">
+      <Filter>DomainModule\pxOrderTransmit\Impl</Filter>
+    </ClCompile>
+    <ClCompile Include="domainmodule\pxorder.cpp">
+      <Filter>DomainModule\pxOrder\Impl</Filter>
+    </ClCompile>
+    <ClCompile Include="domainmodule\pxtaskcontrol.cpp">
+      <Filter>DomainModule\pxTaskControl\Impl</Filter>
+    </ClCompile>
+    <ClCompile Include="domainmodule\pxorderitem.cpp">
+      <Filter>DomainModule\pxOrderItem\Impl</Filter>
+    </ClCompile>
+    <ClCompile Include="version.c">
+      <Filter>Ibtorderimport</Filter>
+    </ClCompile>
+    <ClCompile Include="domainmodule\pxitemdiscount.cpp">
+      <Filter>DomainModule\pxItemDiscount\Impl</Filter>
+    </ClCompile>
+    <ClCompile Include="usecase\nachlieferposwriter.cpp">
+      <Filter>UseCase</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="usecase\mainuc.h">
+      <Filter>UseCase\MainUC</Filter>
+    </ClInclude>
+    <ClInclude Include="usecase\mainucptr.h">
+      <Filter>UseCase\MainUC</Filter>
+    </ClInclude>
+    <ClInclude Include="componentmanager\iusecasegetter.h">
+      <Filter>ComponentManager\ApplCompMgr\Interface\UseCaseGetter</Filter>
+    </ClInclude>
+    <ClInclude Include="componentmanager\iusecasegetterptr.h">
+      <Filter>ComponentManager\ApplCompMgr\Interface\UseCaseGetter</Filter>
+    </ClInclude>
+    <ClInclude Include="componentmanager\ibtorderimportapplcompmgrptr.h">
+      <Filter>ComponentManager\ApplCompMgr\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="componentmanager\ibtorderimportapplcompmgr.h">
+      <Filter>ComponentManager\ApplCompMgr\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="componentmanager\ibtorderimportinfrastructurecompmgrptr.h">
+      <Filter>ComponentManager\InfrastructureCompMgr</Filter>
+    </ClInclude>
+    <ClInclude Include="componentmanager\ibtorderimportinfrastructurecompmgr.h">
+      <Filter>ComponentManager\InfrastructureCompMgr</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\cmdline\ibtorderimportcmdlineevaluator.h">
+      <Filter>Infrastructure\CommandLine\CmdLineEvaluator</Filter>
+    </ClInclude>
+    <ClInclude Include="ibtorderimport\ibtorderimportapplctrl.h">
+      <Filter>Ibtorderimport\ApplController</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\setup\ibtorderimportinfrastructuresetup.h">
+      <Filter>Infrastructure\Setup\impl</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\setup\ibtorderimportinfrastructuresetupptr.h">
+      <Filter>Infrastructure\Setup\impl</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\cmdline\ibtorderimportcmdlineevaluatorptr.h">
+      <Filter>Infrastructure\CommandLine\CmdLineEvaluator</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\setup\iibtorderimportlogingetter.h">
+      <Filter>Infrastructure\Setup\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\setup\iibtorderimportlogingetterptr.h">
+      <Filter>Infrastructure\Setup\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="loggerpool\ibtorderimport_loggerpool.h">
+      <Filter>Loggerpool</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\ibtorderimport_property_definitions.h">
+      <Filter>DomainModule</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\mail\mailparameterkeys.h">
+      <Filter>Infrastructure\MailAlert</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\mail\imailparameterproxy.h">
+      <Filter>Infrastructure\MailAlert\Proxy</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\mail\imailparameterproxyptr.h">
+      <Filter>Infrastructure\MailAlert\Proxy</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\mail\mailparameterproxy.h">
+      <Filter>Infrastructure\MailAlert\Proxy</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\mail\mailparameterproxyptr.h">
+      <Filter>Infrastructure\MailAlert\Proxy</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\mail\imailalert.h">
+      <Filter>Infrastructure\MailAlert\Alert</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\mail\imailalertptr.h">
+      <Filter>Infrastructure\MailAlert\Alert</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\mail\mailalert.h">
+      <Filter>Infrastructure\MailAlert\Alert</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\mail\mailalertptr.h">
+      <Filter>Infrastructure\MailAlert\Alert</Filter>
+    </ClInclude>
+    <ClInclude Include="usecase\iibtordergetter.h">
+      <Filter>UseCase\MainUC\Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="usecase\iibtordergetterptr.h">
+      <Filter>UseCase\MainUC\Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="usecase\ibtordermanager.h">
+      <Filter>UseCase\MainUC\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="usecase\ibtordermanagerptr.h">
+      <Filter>UseCase\MainUC\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\ipxordertransmit.h">
+      <Filter>DomainModule\pxOrderTransmit\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\ipxordertransmitptr.h">
+      <Filter>DomainModule\pxOrderTransmit\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\pxordertransmit.h">
+      <Filter>DomainModule\pxOrderTransmit\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\pxordertransmitptr.h">
+      <Filter>DomainModule\pxOrderTransmit\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\pxvbpxordertransmitptr.h">
+      <Filter>DomainModule\pxOrderTransmit\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\pxvb_includes.h">
+      <Filter>DomainModule\pxOrderTransmit</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\ipxorderptr.h">
+      <Filter>DomainModule\pxOrder\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\ipxorder.h">
+      <Filter>DomainModule\pxOrder\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\pxorder.h">
+      <Filter>DomainModule\pxOrder\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\pxorderptr.h">
+      <Filter>DomainModule\pxOrder\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\ipxtaskcontrolptr.h">
+      <Filter>DomainModule\pxTaskControl\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\ipxtaskcontrol.h">
+      <Filter>DomainModule\pxTaskControl\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\pxvbpxtaskcontrolptr.h">
+      <Filter>DomainModule\pxTaskControl\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\pxtaskcontrol.h">
+      <Filter>DomainModule\pxTaskControl\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\pxtaskcontrolptr.h">
+      <Filter>DomainModule\pxTaskControl\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\ipxorderitem.h">
+      <Filter>DomainModule\pxOrderItem\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\ipxorderitemptr.h">
+      <Filter>DomainModule\pxOrderItem\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\pxorderitemptr.h">
+      <Filter>DomainModule\pxOrderItem\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\pxorderitem.h">
+      <Filter>DomainModule\pxOrderItem\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\parameterkeys.h">
+      <Filter>Infrastructure</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\ipxitemdiscount.h">
+      <Filter>DomainModule\pxItemDiscount\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\ipxitemdiscountptr.h">
+      <Filter>DomainModule\pxItemDiscount\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\pxitemdiscount.h">
+      <Filter>DomainModule\pxItemDiscount\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\pxitemdiscountptr.h">
+      <Filter>DomainModule\pxItemDiscount\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="usecase\inachlieferposwriter.h">
+      <Filter>UseCase</Filter>
+    </ClInclude>
+    <ClInclude Include="usecase\inachlieferposwriterptr.h">
+      <Filter>UseCase</Filter>
+    </ClInclude>
+    <ClInclude Include="usecase\nachlieferposwriter.h">
+      <Filter>UseCase</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ibtorderimport.cfg">
+      <Filter>Loggerpool</Filter>
+    </None>
+    <None Include="unix\ibtorderimport.option">
+      <Filter>unix</Filter>
+    </None>
+    <None Include="unix\ibtorderimport.sh">
+      <Filter>unix</Filter>
+    </None>
+    <None Include="makefile">
+      <Filter>unix</Filter>
+    </None>
+  </ItemGroup>
+</Project>

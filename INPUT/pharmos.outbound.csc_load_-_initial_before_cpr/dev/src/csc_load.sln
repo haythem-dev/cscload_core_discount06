@@ -1,0 +1,961 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.34114.132
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "loadarticleinfo", "loadarticleinfo", "{F4693C9D-5F21-41F0-817A-A61A0AFE63F0}"
+	ProjectSection(SolutionItems) = preProject
+		loadarticleinfo\dateiverarb.c = loadarticleinfo\dateiverarb.c
+		loadarticleinfo\dateiverarb.h = loadarticleinfo\dateiverarb.h
+		loadarticleinfo\loadarticleinfo.cxx = loadarticleinfo\loadarticleinfo.cxx
+		loadarticleinfo\makefile = loadarticleinfo\makefile
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tpldzentral", "tpldzentral", "{0B2AD9C0-AE37-42F6-A640-28433D574FF7}"
+	ProjectSection(SolutionItems) = preProject
+		tpldzentral\artalter.h = tpldzentral\artalter.h
+		tpldzentral\articlecodes.h = tpldzentral\articlecodes.h
+		tpldzentral\artikellppr.h = tpldzentral\artikellppr.h
+		tpldzentral\artikelnummern.h = tpldzentral\artikelnummern.h
+		tpldzentral\artikelzentral.h = tpldzentral\artikelzentral.h
+		tpldzentral\artpreis.h = tpldzentral\artpreis.h
+		tpldzentral\artsek.h = tpldzentral\artsek.h
+		tpldzentral\artsel.h = tpldzentral\artsel.h
+		tpldzentral\artspecialcond.h = tpldzentral\artspecialcond.h
+		tpldzentral\makefile = tpldzentral\makefile
+		tpldzentral\tpldzentral.cxx = tpldzentral\tpldzentral.cxx
+		tpldzentral\zapflege.h = tpldzentral\zapflege.h
+		tpldzentral\zartikel.h = tpldzentral\zartikel.h
+		tpldzentral\zartpreis.h = tpldzentral\zartpreis.h
+		tpldzentral\zartsekbez.h = tpldzentral\zartsekbez.h
+		tpldzentral\zartwg.h = tpldzentral\zartwg.h
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tpldzentkd", "tpldzentkd", "{5CCF9710-61FF-4E3E-99B7-67F6B61A1230}"
+	ProjectSection(SolutionItems) = preProject
+		tpldzentknd\auftragartkd.h = tpldzentknd\auftragartkd.h
+		tpldzentknd\cstdisccont.h = tpldzentknd\cstdisccont.h
+		tpldzentknd\cstpaymentterms.h = tpldzentknd\cstpaymentterms.h
+		tpldzentknd\cstprint.h = tpldzentknd\cstprint.h
+		tpldzentknd\customerrouting.h = tpldzentknd\customerrouting.h
+		tpldzentknd\debtlimit.h = tpldzentknd\debtlimit.h
+		tpldzentknd\dkkul.h = tpldzentknd\dkkul.h
+		tpldzentknd\dkkul_perl.h = tpldzentknd\dkkul_perl.h
+		tpldzentknd\kdbetriebsende.h = tpldzentknd\kdbetriebsende.h
+		tpldzentknd\kdkonditionsgruppe.h = tpldzentknd\kdkonditionsgruppe.h
+		tpldzentknd\kndausku.h = tpldzentknd\kndausku.h
+		tpldzentknd\kndlang.h = tpldzentknd\kndlang.h
+		tpldzentknd\kunde.h = tpldzentknd\kunde.h
+		tpldzentknd\kundeext.h = tpldzentknd\kundeext.h
+		tpldzentknd\kundekondi.h = tpldzentknd\kundekondi.h
+		tpldzentknd\kundelagerinfo.h = tpldzentknd\kundelagerinfo.h
+		tpldzentknd\kundeschalter.h = tpldzentknd\kundeschalter.h
+		tpldzentknd\linetoolong.c = tpldzentknd\linetoolong.c
+		tpldzentknd\makefile = tpldzentknd\makefile
+		tpldzentknd\payterm.h = tpldzentknd\payterm.h
+		tpldzentknd\tourplantag.h = tpldzentknd\tourplantag.h
+		tpldzentknd\tpldzentknd.cxx = tpldzentknd\tpldzentknd.cxx
+		tpldzentknd\tpldzentknd.h = tpldzentknd\tpldzentknd.h
+		tpldzentknd\zeitarten.h = tpldzentknd\zeitarten.h
+		tpldzentknd\zeitstempel.c = tpldzentknd\zeitstempel.c
+		tpldzentknd\zeitstempel.h = tpldzentknd\zeitstempel.h
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tpldvseauftrag", "tpldvseauftrag", "{CB3F9DB5-8842-4812-8F7F-9C58F554CAA1}"
+	ProjectSection(SolutionItems) = preProject
+		tpldvseauftrag\kdauftragprolink.h = tpldvseauftrag\kdauftragprolink.h
+		tpldvseauftrag\makefile = tpldvseauftrag\makefile
+		tpldvseauftrag\orderremarks.h = tpldvseauftrag\orderremarks.h
+		tpldvseauftrag\tpldvseauftrag.cxx = tpldvseauftrag\tpldvseauftrag.cxx
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tpldtour", "tpldtour", "{A58D69A4-3B11-404A-8DAC-829D0A0B3E54}"
+	ProjectSection(SolutionItems) = preProject
+		tpldtour\dktur.h = tpldtour\dktur.h
+		tpldtour\makefile = tpldtour\makefile
+		tpldtour\tour.h = tpldtour\tour.h
+		tpldtour\tourplanwoche.h = tpldtour\tourplanwoche.h
+		tpldtour\tpldtour.cxx = tpldtour\tpldtour.cxx
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "loadartcom", "loadartcom", "{7C3267F1-6575-4985-852E-ED621846C58D}"
+	ProjectSection(SolutionItems) = preProject
+		loadartcom\artcompack.h = loadartcom\artcompack.h
+		loadartcom\cpvalidityperiod.h = loadartcom\cpvalidityperiod.h
+		loadartcom\loadartcom.cxx = loadartcom\loadartcom.cxx
+		loadartcom\makefile = loadartcom\makefile
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "loadarticlecodes", "loadarticlecodes", "{A6B5DA38-82F3-42ED-8A09-04A3C04F3435}"
+	ProjectSection(SolutionItems) = preProject
+		loadarticlecodes\loadarticlecodes.cxx = loadarticlecodes\loadarticlecodes.cxx
+		loadarticlecodes\makefile = loadarticlecodes\makefile
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "loadarticlecodeseanzdp", "loadarticlecodeseanzdp", "{9FCD55D4-A847-47B0-ADED-25E8DD1B7796}"
+	ProjectSection(SolutionItems) = preProject
+		loadarticlecodeseanzdp\loadarticlecodeseanzdp.cxx = loadarticlecodeseanzdp\loadarticlecodeseanzdp.cxx
+		loadarticlecodeseanzdp\makefile = loadarticlecodeseanzdp\makefile
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tpldreimp", "tpldreimp", "{9ABD8D78-CC4F-4159-B9EF-B487541C48DB}"
+	ProjectSection(SolutionItems) = preProject
+		tpldreimp\artikelreimport.h = tpldreimp\artikelreimport.h
+		tpldreimp\dkris.h = tpldreimp\dkris.h
+		tpldreimp\makefile = tpldreimp\makefile
+		tpldreimp\tpldreimp.cxx = tpldreimp\tpldreimp.cxx
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "common", "common", "{0DF4CD52-6291-489F-8A07-6DB2034E8772}"
+	ProjectSection(SolutionItems) = preProject
+		common\articlecodes.h = common\articlecodes.h
+		common\csc_load_version.h = common\csc_load_version.h
+		common\customerrouting.h = common\customerrouting.h
+		common\versioninfo.h = common\versioninfo.h
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "delkdkritik", "delkdkritik", "{45A9C72F-6E85-4B84-81AE-2B89B3D373C5}"
+	ProjectSection(SolutionItems) = preProject
+		delkdkritik\delkdkritik.cxx = delkdkritik\delkdkritik.cxx
+		delkdkritik\makefile = delkdkritik\makefile
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_scripts", "_scripts", "{D503397F-755A-4BAA-AF95-6520CFC0E3E5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "proc", "proc", "{E267AE98-54EA-43FF-9503-892EA0F5101C}"
+	ProjectSection(SolutionItems) = preProject
+		_scripts\proc\cremaonoff = _scripts\proc\cremaonoff
+		_scripts\proc\csc_deleteCstInvoiceData.option = _scripts\proc\csc_deleteCstInvoiceData.option
+		_scripts\proc\csc_deleteCstInvoiceData.sh = _scripts\proc\csc_deleteCstInvoiceData.sh
+		_scripts\proc\csc_deleteInactiveUsers.option = _scripts\proc\csc_deleteInactiveUsers.option
+		_scripts\proc\csc_deleteInactiveUsers.sh = _scripts\proc\csc_deleteInactiveUsers.sh
+		_scripts\proc\csc_deleteNachlieferPos.option = _scripts\proc\csc_deleteNachlieferPos.option
+		_scripts\proc\csc_deleteNachlieferPos.sh = _scripts\proc\csc_deleteNachlieferPos.sh
+		_scripts\proc\debtlimit.option = _scripts\proc\debtlimit.option
+		_scripts\proc\debtlimit.sh = _scripts\proc\debtlimit.sh
+		_scripts\proc\debtlimit.sh_hr = _scripts\proc\debtlimit.sh_hr
+		_scripts\proc\debtlimit.sh_rs = _scripts\proc\debtlimit.sh_rs
+		_scripts\proc\delkdkritik.option = _scripts\proc\delkdkritik.option
+		_scripts\proc\delkdkritik.sh = _scripts\proc\delkdkritik.sh
+		_scripts\proc\delvb27.sh = _scripts\proc\delvb27.sh
+		_scripts\proc\filldeliveryadvicedata.sh = _scripts\proc\filldeliveryadvicedata.sh
+		_scripts\proc\loadartcom.option = _scripts\proc\loadartcom.option
+		_scripts\proc\loadartcom.sh = _scripts\proc\loadartcom.sh
+		_scripts\proc\loadarticlecodes.option = _scripts\proc\loadarticlecodes.option
+		_scripts\proc\loadarticlecodes.sh = _scripts\proc\loadarticlecodes.sh
+		_scripts\proc\loadarticlecodesean.option = _scripts\proc\loadarticlecodesean.option
+		_scripts\proc\loadarticlecodesean.sh = _scripts\proc\loadarticlecodesean.sh
+		_scripts\proc\loadarticlecodeseanzdp.option = _scripts\proc\loadarticlecodeseanzdp.option
+		_scripts\proc\loadarticlecodeseanzdp.sh = _scripts\proc\loadarticlecodeseanzdp.sh
+		_scripts\proc\loadarticleinfo.option = _scripts\proc\loadarticleinfo.option
+		_scripts\proc\loadarticleinfo.sh = _scripts\proc\loadarticleinfo.sh
+		_scripts\proc\loadchainlimit.option = _scripts\proc\loadchainlimit.option
+		_scripts\proc\loadchainlimit.sh = _scripts\proc\loadchainlimit.sh
+		_scripts\proc\loadcharge.option = _scripts\proc\loadcharge.option
+		_scripts\proc\loadcharge.sh = _scripts\proc\loadcharge.sh
+		_scripts\proc\loadconditions.option = _scripts\proc\loadconditions.option
+		_scripts\proc\loadconditions.sh = _scripts\proc\loadconditions.sh
+		_scripts\proc\loadcstcalcavp.option = _scripts\proc\loadcstcalcavp.option
+		_scripts\proc\loadcstcalcavp.sh = _scripts\proc\loadcstcalcavp.sh
+		_scripts\proc\loadcstdiscacc.option = _scripts\proc\loadcstdiscacc.option
+		_scripts\proc\loadcstdiscacc.sh = _scripts\proc\loadcstdiscacc.sh
+		_scripts\proc\loadcstpharmgrp.option = _scripts\proc\loadcstpharmgrp.option
+		_scripts\proc\loadcstpharmgrp.sh = _scripts\proc\loadcstpharmgrp.sh
+		_scripts\proc\loadcustgroups.option = _scripts\proc\loadcustgroups.option
+		_scripts\proc\loadcustgroups.sh = _scripts\proc\loadcustgroups.sh
+		_scripts\proc\loaddealvol.option = _scripts\proc\loaddealvol.option
+		_scripts\proc\loaddealvol.sh = _scripts\proc\loaddealvol.sh
+		_scripts\proc\loaddebtlimit.option = _scripts\proc\loaddebtlimit.option
+		_scripts\proc\loaddebtlimit.sh = _scripts\proc\loaddebtlimit.sh
+		_scripts\proc\loaddeliverynotes.option = _scripts\proc\loaddeliverynotes.option
+		_scripts\proc\loaddeliverynotes.sh = _scripts\proc\loaddeliverynotes.sh
+		_scripts\proc\loaddkkaa.option = _scripts\proc\loaddkkaa.option
+		_scripts\proc\loaddkkaa.sh = _scripts\proc\loaddkkaa.sh
+		_scripts\proc\loaddkopo.option = _scripts\proc\loaddkopo.option
+		_scripts\proc\loaddkopo.sh = _scripts\proc\loaddkopo.sh
+		_scripts\proc\loaddktmd.option = _scripts\proc\loaddktmd.option
+		_scripts\proc\loaddktmd.sh = _scripts\proc\loaddktmd.sh
+		_scripts\proc\loaddrivers.option = _scripts\proc\loaddrivers.option
+		_scripts\proc\loaddrivers.sh = _scripts\proc\loaddrivers.sh
+		_scripts\proc\loadgeneralcalcavp.option = _scripts\proc\loadgeneralcalcavp.option
+		_scripts\proc\loadgeneralcalcavp.sh = _scripts\proc\loadgeneralcalcavp.sh
+		_scripts\proc\loadibtbrancharticleconfig.option = _scripts\proc\loadibtbrancharticleconfig.option
+		_scripts\proc\loadibtbrancharticleconfig.sh = _scripts\proc\loadibtbrancharticleconfig.sh
+		_scripts\proc\loadimexpermission.option = _scripts\proc\loadimexpermission.option
+		_scripts\proc\loadimexpermission.sh = _scripts\proc\loadimexpermission.sh
+		_scripts\proc\loadpayterm.option = _scripts\proc\loadpayterm.option
+		_scripts\proc\loadpayterm.sh = _scripts\proc\loadpayterm.sh
+		_scripts\proc\loadpromoquota.option = _scripts\proc\loadpromoquota.option
+		_scripts\proc\loadpromoquota.sh = _scripts\proc\loadpromoquota.sh
+		_scripts\proc\loadpromotion.option = _scripts\proc\loadpromotion.option
+		_scripts\proc\loadpromotion.sh = _scripts\proc\loadpromotion.sh
+		_scripts\proc\loadpromotionscale.option = _scripts\proc\loadpromotionscale.option
+		_scripts\proc\loadpromotionscale.sh = _scripts\proc\loadpromotionscale.sh
+		_scripts\proc\loadpseudotours.option = _scripts\proc\loadpseudotours.option
+		_scripts\proc\loadpseudotours.sh = _scripts\proc\loadpseudotours.sh
+		_scripts\proc\loadquotabyfile.option = _scripts\proc\loadquotabyfile.option
+		_scripts\proc\loadquotabyfile.sh = _scripts\proc\loadquotabyfile.sh
+		_scripts\proc\loadrange.option = _scripts\proc\loadrange.option
+		_scripts\proc\loadrange.sh = _scripts\proc\loadrange.sh
+		_scripts\proc\loadroutecheck.option = _scripts\proc\loadroutecheck.option
+		_scripts\proc\loadroutecheck.sh = _scripts\proc\loadroutecheck.sh
+		_scripts\proc\loadroutes.option = _scripts\proc\loadroutes.option
+		_scripts\proc\loadroutes.sh = _scripts\proc\loadroutes.sh
+		_scripts\proc\loadrouting.option = _scripts\proc\loadrouting.option
+		_scripts\proc\loadrouting.sh = _scripts\proc\loadrouting.sh
+		_scripts\proc\loadroutingms.option = _scripts\proc\loadroutingms.option
+		_scripts\proc\loadroutingms.sh = _scripts\proc\loadroutingms.sh
+		_scripts\proc\loadsalesman.option = _scripts\proc\loadsalesman.option
+		_scripts\proc\loadsalesman.sh = _scripts\proc\loadsalesman.sh
+		_scripts\proc\loadservices.option = _scripts\proc\loadservices.option
+		_scripts\proc\loadservices.sh = _scripts\proc\loadservices.sh
+		_scripts\proc\loadshortlist.option = _scripts\proc\loadshortlist.option
+		_scripts\proc\loadshortlist.sh = _scripts\proc\loadshortlist.sh
+		_scripts\proc\loadsupport.option = _scripts\proc\loadsupport.option
+		_scripts\proc\loadsupport.sh = _scripts\proc\loadsupport.sh
+		_scripts\proc\loadtempquota.option = _scripts\proc\loadtempquota.option
+		_scripts\proc\loadtempquota.sh = _scripts\proc\loadtempquota.sh
+		_scripts\proc\loadworkingdayscalendar.option = _scripts\proc\loadworkingdayscalendar.option
+		_scripts\proc\loadworkingdayscalendar.sh = _scripts\proc\loadworkingdayscalendar.sh
+		_scripts\proc\resetquota.option = _scripts\proc\resetquota.option
+		_scripts\proc\resetquota.sh = _scripts\proc\resetquota.sh
+		_scripts\proc\setarticlecategory.option = _scripts\proc\setarticlecategory.option
+		_scripts\proc\setarticlecategory.sh = _scripts\proc\setarticlecategory.sh
+		_scripts\proc\tpldanrufplan.option = _scripts\proc\tpldanrufplan.option
+		_scripts\proc\tpldanrufplan.sh = _scripts\proc\tpldanrufplan.sh
+		_scripts\proc\tpldant.option = _scripts\proc\tpldant.option
+		_scripts\proc\tpldant.sh = _scripts\proc\tpldant.sh
+		_scripts\proc\tpldartindex.option = _scripts\proc\tpldartindex.option
+		_scripts\proc\tpldartindex.sh = _scripts\proc\tpldartindex.sh
+		_scripts\proc\tpldarttext.option = _scripts\proc\tpldarttext.option
+		_scripts\proc\tpldarttext.sh = _scripts\proc\tpldarttext.sh
+		_scripts\proc\tpldauftr.option = _scripts\proc\tpldauftr.option
+		_scripts\proc\tpldauftr.sh = _scripts\proc\tpldauftr.sh
+		_scripts\proc\tplddkkui.option = _scripts\proc\tplddkkui.option
+		_scripts\proc\tplddkkui.sh = _scripts\proc\tplddkkui.sh
+		_scripts\proc\tplddrnat.option = _scripts\proc\tplddrnat.option
+		_scripts\proc\tplddrnat.sh = _scripts\proc\tplddrnat.sh
+		_scripts\proc\tpldhipath.option = _scripts\proc\tpldhipath.option
+		_scripts\proc\tpldhipath.sh = _scripts\proc\tpldhipath.sh
+		_scripts\proc\tpldhipath2.option = _scripts\proc\tpldhipath2.option
+		_scripts\proc\tpldhipath2.sh = _scripts\proc\tpldhipath2.sh
+		_scripts\proc\tpldlokalart.option = _scripts\proc\tpldlokalart.option
+		_scripts\proc\tpldlokalart.sh = _scripts\proc\tpldlokalart.sh
+		_scripts\proc\tpldreakauft.option = _scripts\proc\tpldreakauft.option
+		_scripts\proc\tpldreakauft.sh = _scripts\proc\tpldreakauft.sh
+		_scripts\proc\tpldreimp.option = _scripts\proc\tpldreimp.option
+		_scripts\proc\tpldreimp.sh = _scripts\proc\tpldreimp.sh
+		_scripts\proc\tpldtour.option = _scripts\proc\tpldtour.option
+		_scripts\proc\tpldtour.sh = _scripts\proc\tpldtour.sh
+		_scripts\proc\tpldvseauftrag.option = _scripts\proc\tpldvseauftrag.option
+		_scripts\proc\tpldvseauftrag.sh = _scripts\proc\tpldvseauftrag.sh
+		_scripts\proc\tpldzentknd.option = _scripts\proc\tpldzentknd.option
+		_scripts\proc\tpldzentknd.sh = _scripts\proc\tpldzentknd.sh
+		_scripts\proc\tpldzentral.option = _scripts\proc\tpldzentral.option
+		_scripts\proc\tpldzentral.sh = _scripts\proc\tpldzentral.sh
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "vars", "vars", "{CCB85535-8AAC-429D-800D-2FF45E418EDB}"
+	ProjectSection(SolutionItems) = preProject
+		_scripts\vars\debtlimit.vars.hr.prod = _scripts\vars\debtlimit.vars.hr.prod
+		_scripts\vars\debtlimit.vars.hr.test = _scripts\vars\debtlimit.vars.hr.test
+		_scripts\vars\debtlimit.vars.rs.prod = _scripts\vars\debtlimit.vars.rs.prod
+		_scripts\vars\debtlimit.vars.rs.test = _scripts\vars\debtlimit.vars.rs.test
+		_scripts\vars\delartikelkonto.vars.at = _scripts\vars\delartikelkonto.vars.at
+		_scripts\vars\delartikelkonto.vars.bg = _scripts\vars\delartikelkonto.vars.bg
+		_scripts\vars\delartikelkonto.vars.ch = _scripts\vars\delartikelkonto.vars.ch
+		_scripts\vars\delartikelkonto.vars.de = _scripts\vars\delartikelkonto.vars.de
+		_scripts\vars\delartikelkonto.vars.de.test = _scripts\vars\delartikelkonto.vars.de.test
+		_scripts\vars\delartikelkonto.vars.fr = _scripts\vars\delartikelkonto.vars.fr
+		_scripts\vars\delartikelkonto.vars.hr = _scripts\vars\delartikelkonto.vars.hr
+		_scripts\vars\delartikelkonto.vars.pat = _scripts\vars\delartikelkonto.vars.pat
+		_scripts\vars\delartikelkonto.vars.pch = _scripts\vars\delartikelkonto.vars.pch
+		_scripts\vars\delartikelkonto.vars.pfr = _scripts\vars\delartikelkonto.vars.pfr
+		_scripts\vars\delartikelkonto.vars.rs = _scripts\vars\delartikelkonto.vars.rs
+		_scripts\vars\loadpseudotours.vars = _scripts\vars\loadpseudotours.vars
+		_scripts\vars\loadquotabyfile.vars = _scripts\vars\loadquotabyfile.vars
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "bin", "bin", "{027BF181-05C7-45AB-9B34-49244E6C0767}"
+	ProjectSection(SolutionItems) = preProject
+		_scripts\bin\csc_deleteCstInvoiceData.bin = _scripts\bin\csc_deleteCstInvoiceData.bin
+		_scripts\bin\csc_deleteInactiveUsers.bin = _scripts\bin\csc_deleteInactiveUsers.bin
+		_scripts\bin\csc_deleteNachlieferPos.bin = _scripts\bin\csc_deleteNachlieferPos.bin
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "loadarticlecodesean", "loadarticlecodesean", "{322CBEA3-3E55-4EA9-94D3-9C8588EF00EF}"
+	ProjectSection(SolutionItems) = preProject
+		loadarticlecodesean\loadarticlecodesean.cxx = loadarticlecodesean\loadarticlecodesean.cxx
+		loadarticlecodesean\makefile = loadarticlecodesean\makefile
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "loadarticlelppr", "loadarticlelppr", "{99B54E13-04C4-4EA4-905D-01DA45D85CD4}"
+	ProjectSection(SolutionItems) = preProject
+		loadarticlelppr\articlelpprcomb.h = loadarticlelppr\articlelpprcomb.h
+		loadarticlelppr\loadarticlelppr.cxx = loadarticlelppr\loadarticlelppr.cxx
+		loadarticlelppr\lpprreimb.h = loadarticlelppr\lpprreimb.h
+		loadarticlelppr\makefile = loadarticlelppr\makefile
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "loadchainlimit", "loadchainlimit", "{6EFB26A0-97F6-4356-AA14-BBA3C80A4C9C}"
+	ProjectSection(SolutionItems) = preProject
+		loadchainlimit\debtlimit.h = loadchainlimit\debtlimit.h
+		loadchainlimit\dkket.h = loadchainlimit\dkket.h
+		loadchainlimit\loadchainlimit.cxx = loadchainlimit\loadchainlimit.cxx
+		loadchainlimit\makefile = loadchainlimit\makefile
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "loadcharge", "loadcharge", "{E1272CED-DDB6-459E-B416-D0CCF6421843}"
+	ProjectSection(SolutionItems) = preProject
+		loadcharge\articlecharge.h = loadcharge\articlecharge.h
+		loadcharge\dscha.h = loadcharge\dscha.h
+		loadcharge\loadcharge.cxx = loadcharge\loadcharge.cxx
+		loadcharge\makefile = loadcharge\makefile
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "loadconditions", "loadconditions", "{3DC95F41-B47C-4884-8359-47C0F702E822}"
+	ProjectSection(SolutionItems) = preProject
+		loadconditions\customersurcharge.h = loadconditions\customersurcharge.h
+		loadconditions\lddiscount.h = loadconditions\lddiscount.h
+		loadconditions\loadconditions.cxx = loadconditions\loadconditions.cxx
+		loadconditions\makefile = loadconditions\makefile
+		loadconditions\zdiscount.h = loadconditions\zdiscount.h
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "loadcstcalcavp", "loadcstcalcavp", "{1481CCFD-0AC7-4711-9238-430B556BB0DF}"
+	ProjectSection(SolutionItems) = preProject
+		loadcstcalcavp\cstcalcavp.h = loadcstcalcavp\cstcalcavp.h
+		loadcstcalcavp\dkkwb.h = loadcstcalcavp\dkkwb.h
+		loadcstcalcavp\loadcstcalcavp.cxx = loadcstcalcavp\loadcstcalcavp.cxx
+		loadcstcalcavp\makefile = loadcstcalcavp\makefile
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "loadcstdiscacc", "loadcstdiscacc", "{EA00A85F-CC95-426F-93B3-B9A20C29FE23}"
+	ProjectSection(SolutionItems) = preProject
+		loadcstdiscacc\cstdiscacc.h = loadcstdiscacc\cstdiscacc.h
+		loadcstdiscacc\dkrks.h = loadcstdiscacc\dkrks.h
+		loadcstdiscacc\loadcstdiscacc.cxx = loadcstdiscacc\loadcstdiscacc.cxx
+		loadcstdiscacc\makefile = loadcstdiscacc\makefile
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "loadcstpharmgrp", "loadcstpharmgrp", "{B66E35D7-8E40-417C-9470-50E8FC77303D}"
+	ProjectSection(SolutionItems) = preProject
+		loadcstpharmgrp\customerpharmacygr.h = loadcstpharmgrp\customerpharmacygr.h
+		loadcstpharmgrp\dkkeg.h = loadcstpharmgrp\dkkeg.h
+		loadcstpharmgrp\loadcstpharmgrp.cxx = loadcstpharmgrp\loadcstpharmgrp.cxx
+		loadcstpharmgrp\makefile = loadcstpharmgrp\makefile
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "loadcstshort", "loadcstshort", "{455BACE7-A839-4A0B-A4D8-54E44F4127A2}"
+	ProjectSection(SolutionItems) = preProject
+		loadcstshort\cstdiscountcont.h = loadcstshort\cstdiscountcont.h
+		loadcstshort\dkksa.h = loadcstshort\dkksa.h
+		loadcstshort\loadcstshort.cxx = loadcstshort\loadcstshort.cxx
+		loadcstshort\makefile = loadcstshort\makefile
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "loadcustgroups", "loadcustgroups", "{99641EC8-978A-4F9F-957B-591CD8C1D3AD}"
+	ProjectSection(SolutionItems) = preProject
+		loadcustgroups\custgrpflagtypes.h = loadcustgroups\custgrpflagtypes.h
+		loadcustgroups\customergroup.h = loadcustgroups\customergroup.h
+		loadcustgroups\customergrpflags.h = loadcustgroups\customergrpflags.h
+		loadcustgroups\loadcustgroups.cxx = loadcustgroups\loadcustgroups.cxx
+		loadcustgroups\makefile = loadcustgroups\makefile
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "loaddealvol", "loaddealvol", "{D137529B-DEDA-408C-A468-692F3CD798C9}"
+	ProjectSection(SolutionItems) = preProject
+		loaddealvol\dealervolume.h = loaddealvol\dealervolume.h
+		loaddealvol\dkdum.h = loaddealvol\dkdum.h
+		loaddealvol\loaddealvol.cxx = loaddealvol\loaddealvol.cxx
+		loaddealvol\makefile = loaddealvol\makefile
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "loaddebtlimit", "loaddebtlimit", "{9C5A5379-9B36-4533-8130-769978B09756}"
+	ProjectSection(SolutionItems) = preProject
+		loaddebtlimit\debtlimit.h = loaddebtlimit\debtlimit.h
+		loaddebtlimit\dkops.h = loaddebtlimit\dkops.h
+		loaddebtlimit\loaddebtlimit.cxx = loaddebtlimit\loaddebtlimit.cxx
+		loaddebtlimit\makefile = loaddebtlimit\makefile
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "__Solution Items", "__Solution Items", "{75C4926D-86F5-4141-B8B4-6C04BB23F4FD}"
+	ProjectSection(SolutionItems) = preProject
+		build.xml = build.xml
+		export.sh = export.sh
+		installwss.sh = installwss.sh
+		ivy.xml = ivy.xml
+		makefile = makefile
+		makevars.inc = makevars.inc
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "loaddkkaa", "loaddkkaa", "{C14431C9-57AA-43EF-9A09-763591BDF788}"
+	ProjectSection(SolutionItems) = preProject
+		loaddkkaa\dkkaa.h = loaddkkaa\dkkaa.h
+		loaddkkaa\ldauftragartkd.h = loaddkkaa\ldauftragartkd.h
+		loaddkkaa\loaddkkaa.cxx = loaddkkaa\loaddkkaa.cxx
+		loaddkkaa\makefile = loaddkkaa\makefile
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "loaddkopo", "loaddkopo", "{E81F5059-BCAB-485D-9459-F7441EE0096A}"
+	ProjectSection(SolutionItems) = preProject
+		loaddkopo\cstpaymentlist.h = loaddkopo\cstpaymentlist.h
+		loaddkopo\dkopo.h = loaddkopo\dkopo.h
+		loaddkopo\loaddkopo.cxx = loaddkopo\loaddkopo.cxx
+		loaddkopo\makefile = loaddkopo\makefile
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "loaddktmd", "loaddktmd", "{4D96ED98-E44A-4ADC-BC24-F90165F8B225}"
+	ProjectSection(SolutionItems) = preProject
+		loaddktmd\dktmd.h = loaddktmd\dktmd.h
+		loaddktmd\loaddktmd.cxx = loaddktmd\loaddktmd.cxx
+		loaddktmd\makefile = loaddktmd\makefile
+		loaddktmd\transmedstoppingpoints.h = loaddktmd\transmedstoppingpoints.h
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "loaddrivers", "loaddrivers", "{3F2FD66F-93D1-4CCB-B8E5-EA166D97E456}"
+	ProjectSection(SolutionItems) = preProject
+		loaddrivers\dkfst.h = loaddrivers\dkfst.h
+		loaddrivers\driverlist.h = loaddrivers\driverlist.h
+		loaddrivers\loaddrivers.cxx = loaddrivers\loaddrivers.cxx
+		loaddrivers\makefile = loaddrivers\makefile
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tpld...", "tpld...", "{FA60F6AE-C702-4052-884F-3DC61D2D4895}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "load...", "load...", "{C701F077-7E06-4F57-A7EA-27E110E9253B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tpldlokalart", "tpldlokalart", "{876F4030-3CAC-46D9-BB44-09904F088DDF}"
+	ProjectSection(SolutionItems) = preProject
+		tpldlokalart\artalter.h = tpldlokalart\artalter.h
+		tpldlokalart\artikellokal.h = tpldlokalart\artikellokal.h
+		tpldlokalart\artnat.h = tpldlokalart\artnat.h
+		tpldlokalart\artort.h = tpldlokalart\artort.h
+		tpldlokalart\countrycodes.h = tpldlokalart\countrycodes.h
+		tpldlokalart\deakz.h = tpldlokalart\deakz.h
+		tpldlokalart\makefile = tpldlokalart\makefile
+		tpldlokalart\natrastaffeln.h = tpldlokalart\natrastaffeln.h
+		tpldlokalart\tabellen.h = tpldlokalart\tabellen.h
+		tpldlokalart\tpldlokalart.cxx = tpldlokalart\tpldlokalart.cxx
+		tpldlokalart\tpldlokalart.h = tpldlokalart\tpldlokalart.h
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tpldhipath2", "tpldhipath2", "{2E31BBAD-E645-47A7-8C44-A9B7EEAD2A3B}"
+	ProjectSection(SolutionItems) = preProject
+		tpldhipath2\customerroutingtable.cpp = tpldhipath2\customerroutingtable.cpp
+		tpldhipath2\customerroutingtable.h = tpldhipath2\customerroutingtable.h
+		tpldhipath2\customerroutingtablesql.cxx = tpldhipath2\customerroutingtablesql.cxx
+		tpldhipath2\date.cpp = tpldhipath2\date.cpp
+		tpldhipath2\date.h = tpldhipath2\date.h
+		tpldhipath2\define.h = tpldhipath2\define.h
+		tpldhipath2\kunde.cpp = tpldhipath2\kunde.cpp
+		tpldhipath2\kunde.h = tpldhipath2\kunde.h
+		tpldhipath2\kundesql.cxx = tpldhipath2\kundesql.cxx
+		tpldhipath2\macro.h = tpldhipath2\macro.h
+		tpldhipath2\makefile = tpldhipath2\makefile
+		tpldhipath2\persistence.cpp = tpldhipath2\persistence.cpp
+		tpldhipath2\persistence.h = tpldhipath2\persistence.h
+		tpldhipath2\persistencedb.cpp = tpldhipath2\persistencedb.cpp
+		tpldhipath2\persistencedb.h = tpldhipath2\persistencedb.h
+		tpldhipath2\persistencefile.cpp = tpldhipath2\persistencefile.cpp
+		tpldhipath2\persistencefile.h = tpldhipath2\persistencefile.h
+		tpldhipath2\scmdline.cpp = tpldhipath2\scmdline.cpp
+		tpldhipath2\scmdline.h = tpldhipath2\scmdline.h
+		tpldhipath2\slogfile.cpp = tpldhipath2\slogfile.cpp
+		tpldhipath2\slogfile.h = tpldhipath2\slogfile.h
+		tpldhipath2\sql.cxx = tpldhipath2\sql.cxx
+		tpldhipath2\sql.h = tpldhipath2\sql.h
+		tpldhipath2\structs.h = tpldhipath2\structs.h
+		tpldhipath2\tpldhipath.cpp = tpldhipath2\tpldhipath.cpp
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tpldhercode", "tpldhercode", "{70BFC8A8-6D3A-45C4-8869-91FC4BCED992}"
+	ProjectSection(SolutionItems) = preProject
+		tpldhercode\makefile = tpldhercode\makefile
+		tpldhercode\tpldhercode.cxx = tpldhercode\tpldhercode.cxx
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tpldean", "tpldean", "{F6B29E0F-EECE-4C3A-85C8-FDF6C04E60CC}"
+	ProjectSection(SolutionItems) = preProject
+		tpldean\artikelnummern.h = tpldean\artikelnummern.h
+		tpldean\makefile = tpldean\makefile
+		tpldean\tpldean.cxx = tpldean\tpldean.cxx
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tplddkkui", "tplddkkui", "{C87671FD-6AFA-4795-AE54-0E28E2077758}"
+	ProjectSection(SolutionItems) = preProject
+		tplddkkui\customerpharmacygr.h = tplddkkui\customerpharmacygr.h
+		tplddkkui\customerspecials.h = tplddkkui\customerspecials.h
+		tplddkkui\debtlimit.h = tplddkkui\debtlimit.h
+		tplddkkui\dkkui.h = tplddkkui\dkkui.h
+		tplddkkui\kundeschalter.h = tplddkkui\kundeschalter.h
+		tplddkkui\makefile = tplddkkui\makefile
+		tplddkkui\tplddkkui.cxx = tplddkkui\tplddkkui.cxx
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tpldauftr", "tpldauftr", "{404BEC1F-3E39-438B-A227-22C73D448B4F}"
+	ProjectSection(SolutionItems) = preProject
+		tpldauftr\akoeinheit.h = tpldauftr\akoeinheit.h
+		tpldauftr\cscorderflags.h = tpldauftr\cscorderflags.h
+		tpldauftr\discountcalcbase.h = tpldauftr\discountcalcbase.h
+		tpldauftr\discountcalclog.h = tpldauftr\discountcalclog.h
+		tpldauftr\dispoartikel.h = tpldauftr\dispoartikel.h
+		tpldauftr\kdauftrag.h = tpldauftr\kdauftrag.h
+		tpldauftr\kdauftragbem.h = tpldauftr\kdauftragbem.h
+		tpldauftr\kdauftragdebtrel.h = tpldauftr\kdauftragdebtrel.h
+		tpldauftr\kdauftragdiscacc.h = tpldauftr\kdauftragdiscacc.h
+		tpldauftr\kdauftragereignis.h = tpldauftr\kdauftragereignis.h
+		tpldauftr\kdauftragpartnerfunction.h = tpldauftr\kdauftragpartnerfunction.h
+		tpldauftr\kdauftragpos.h = tpldauftr\kdauftragpos.h
+		tpldauftr\kdauftragposchange.h = tpldauftr\kdauftragposchange.h
+		tpldauftr\kdauftragposcharge.h = tpldauftr\kdauftragposcharge.h
+		tpldauftr\kdauftragposereignis.h = tpldauftr\kdauftragposereignis.h
+		tpldauftr\kdauftragpospromo.h = tpldauftr\kdauftragpospromo.h
+		tpldauftr\kdauftragposrab.h = tpldauftr\kdauftragposrab.h
+		tpldauftr\kdauftragposrefund.h = tpldauftr\kdauftragposrefund.h
+		tpldauftr\kdauftragpostour.h = tpldauftr\kdauftragpostour.h
+		tpldauftr\kdauftragposxml.h = tpldauftr\kdauftragposxml.h
+		tpldauftr\kdauftragprolink.h = tpldauftr\kdauftragprolink.h
+		tpldauftr\kdauftragrechart.h = tpldauftr\kdauftragrechart.h
+		tpldauftr\kdauftragwerte.h = tpldauftr\kdauftragwerte.h
+		tpldauftr\kdauftragzusatz.h = tpldauftr\kdauftragzusatz.h
+		tpldauftr\kdauftrposrechart.h = tpldauftr\kdauftrposrechart.h
+		tpldauftr\kdverbund.h = tpldauftr\kdverbund.h
+		tpldauftr\kdverbundpos.h = tpldauftr\kdverbundpos.h
+		tpldauftr\kdverbundposrab.h = tpldauftr\kdverbundposrab.h
+		tpldauftr\makefile = tpldauftr\makefile
+		tpldauftr\oecustomercalls.h = tpldauftr\oecustomercalls.h
+		tpldauftr\orderpositiondiscount.h = tpldauftr\orderpositiondiscount.h
+		tpldauftr\orderrelationno.h = tpldauftr\orderrelationno.h
+		tpldauftr\orderremarks.h = tpldauftr\orderremarks.h
+		tpldauftr\tpldauftr.cxx = tpldauftr\tpldauftr.cxx
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tpldarttext", "tpldarttext", "{1D3F53B5-8D46-4CA9-AFE0-9746BEF88055}"
+	ProjectSection(SolutionItems) = preProject
+		tpldarttext\makefile = tpldarttext\makefile
+		tpldarttext\tpldarttext.cxx = tpldarttext\tpldarttext.cxx
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tpldartindex", "tpldartindex", "{E4CE1647-FA59-4B8D-BE22-C82AA5D0E61E}"
+	ProjectSection(SolutionItems) = preProject
+		tpldartindex\makefile = tpldartindex\makefile
+		tpldartindex\tpldartindex.cxx = tpldartindex\tpldartindex.cxx
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tpldanrufplan", "tpldanrufplan", "{DA3A5B3A-C718-4B22-880E-E45024E2C7BC}"
+	ProjectSection(SolutionItems) = preProject
+		tpldanrufplan\errorinternlog.c = tpldanrufplan\errorinternlog.c
+		tpldanrufplan\errorlog.h = tpldanrufplan\errorlog.h
+		tpldanrufplan\makefile = tpldanrufplan\makefile
+		tpldanrufplan\tpldanrufplan.cxx = tpldanrufplan\tpldanrufplan.cxx
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "loadean", "loadean", "{A1B5A73B-4348-4B14-9BFB-1BE4D46CB29D}"
+	ProjectSection(SolutionItems) = preProject
+		loadean\artikelnummern.h = loadean\artikelnummern.h
+		loadean\loadean.cxx = loadean\loadean.cxx
+		loadean\makefile = loadean\makefile
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "loadgeneralcalcavp", "loadgeneralcalcavp", "{E99DD620-3949-4C7C-ADA1-CC65072D78A7}"
+	ProjectSection(SolutionItems) = preProject
+		loadgeneralcalcavp\generalcalcavp.h = loadgeneralcalcavp\generalcalcavp.h
+		loadgeneralcalcavp\loadgeneralcalcavp.cxx = loadgeneralcalcavp\loadgeneralcalcavp.cxx
+		loadgeneralcalcavp\makefile = loadgeneralcalcavp\makefile
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "loadbrancharticleconfig", "loadbrancharticleconfig", "{F69BA6A6-3E5F-4369-AC0A-4F5CBDAF4235}"
+	ProjectSection(SolutionItems) = preProject
+		loadbrancharticleconfig\ibtbrancharticleconfig.h = loadbrancharticleconfig\ibtbrancharticleconfig.h
+		loadbrancharticleconfig\loadbrancharticleconfig.cxx = loadbrancharticleconfig\loadbrancharticleconfig.cxx
+		loadbrancharticleconfig\makefile = loadbrancharticleconfig\makefile
+		loadbrancharticleconfig\puibtbrancharticleconfig.h = loadbrancharticleconfig\puibtbrancharticleconfig.h
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "loadlppr", "loadlppr", "{3E5C97E3-5B13-4C33-ACC9-051C4A8D83AB}"
+	ProjectSection(SolutionItems) = preProject
+		loadlppr\loadlppr.cxx = loadlppr\loadlppr.cxx
+		loadlppr\lpprcode.h = loadlppr\lpprcode.h
+		loadlppr\makefile = loadlppr\makefile
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "setarticlecategory", "setarticlecategory", "{210AF178-9FC7-4691-B051-24D89FF5ACD8}"
+	ProjectSection(SolutionItems) = preProject
+		setarticlecategory\articlegrp.h = setarticlecategory\articlegrp.h
+		setarticlecategory\makefile = setarticlecategory\makefile
+		setarticlecategory\setarticlecategory.cxx = setarticlecategory\setarticlecategory.cxx
+		setarticlecategory\zarticlecategory.h = setarticlecategory\zarticlecategory.h
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "resetquota", "resetquota", "{44327182-B665-424C-B4CC-0D7CA34B1441}"
+	ProjectSection(SolutionItems) = preProject
+		resetquota\makefile = resetquota\makefile
+		resetquota\resetquota.cxx = resetquota\resetquota.cxx
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "loadmanufacturergroup", "loadmanufacturergroup", "{9F0A006B-38F3-4009-88D8-A45BF199DA2E}"
+	ProjectSection(SolutionItems) = preProject
+		loadmanufacturergroup\loadmanufacturergroup.cxx = loadmanufacturergroup\loadmanufacturergroup.cxx
+		loadmanufacturergroup\makefile = loadmanufacturergroup\makefile
+		loadmanufacturergroup\manufacturergroup.h = loadmanufacturergroup\manufacturergroup.h
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "loadordercriteria", "loadordercriteria", "{4C193758-93EC-4F89-B229-509DC2DF26CC}"
+	ProjectSection(SolutionItems) = preProject
+		loadordercriteria\loadordercriteria.cxx = loadordercriteria\loadordercriteria.cxx
+		loadordercriteria\makefile = loadordercriteria\makefile
+		loadordercriteria\ordercriteria.h = loadordercriteria\ordercriteria.h
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "loadpayterm", "loadpayterm", "{0F31EE1B-B7D2-42C9-A1E0-A26660C215E4}"
+	ProjectSection(SolutionItems) = preProject
+		loadpayterm\dkzbc.h = loadpayterm\dkzbc.h
+		loadpayterm\loadpayterm.cxx = loadpayterm\loadpayterm.cxx
+		loadpayterm\makefile = loadpayterm\makefile
+		loadpayterm\payterm.h = loadpayterm\payterm.h
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "loadpharmgrp", "loadpharmgrp", "{5451826C-3DA6-4A50-A421-3B0CC6E50D58}"
+	ProjectSection(SolutionItems) = preProject
+		loadpharmgrp\loadpharmgrp.cxx = loadpharmgrp\loadpharmgrp.cxx
+		loadpharmgrp\makefile = loadpharmgrp\makefile
+		loadpharmgrp\pharmgrp.h = loadpharmgrp\pharmgrp.h
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "loadpricehistory", "loadpricehistory", "{CCE50C6D-A820-4B42-84BA-70276D294F07}"
+	ProjectSection(SolutionItems) = preProject
+		loadpricehistory\loadpricehistory.cxx = loadpricehistory\loadpricehistory.cxx
+		loadpricehistory\makefile = loadpricehistory\makefile
+		loadpricehistory\pricehist.h = loadpricehistory\pricehist.h
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "loadpromoquota", "loadpromoquota", "{C939DF56-522E-49CB-9EC8-3565FEDAA830}"
+	ProjectSection(SolutionItems) = preProject
+		loadpromoquota\loadpromoquota.cxx = loadpromoquota\loadpromoquota.cxx
+		loadpromoquota\makefile = loadpromoquota\makefile
+		loadpromoquota\promotionquota.h = loadpromoquota\promotionquota.h
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "loadpromotion", "loadpromotion", "{D80848B9-5A2F-4C2F-80A7-B29D827B5319}"
+	ProjectSection(SolutionItems) = preProject
+		loadpromotion\loadpromotion.cxx = loadpromotion\loadpromotion.cxx
+		loadpromotion\makefile = loadpromotion\makefile
+		loadpromotion\promotions.h = loadpromotion\promotions.h
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "loadpromotionscale", "loadpromotionscale", "{C35D120D-E40C-4487-AFA6-35623C1C188F}"
+	ProjectSection(SolutionItems) = preProject
+		loadpromotionscale\loadpromotionscale.cxx = loadpromotionscale\loadpromotionscale.cxx
+		loadpromotionscale\makefile = loadpromotionscale\makefile
+		loadpromotionscale\promotionscale.h = loadpromotionscale\promotionscale.h
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "loadrange", "loadrange", "{97BC5884-97B1-4E62-BB68-B28F4C7995CA}"
+	ProjectSection(SolutionItems) = preProject
+		loadrange\discountgrp.h = loadrange\discountgrp.h
+		loadrange\discountgrpmem.h = loadrange\discountgrpmem.h
+		loadrange\loadrange.cxx = loadrange\loadrange.cxx
+		loadrange\makefile = loadrange\makefile
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "loadreimport", "loadreimport", "{DB9259C3-9688-46A3-8487-D85C960B5E13}"
+	ProjectSection(SolutionItems) = preProject
+		loadreimport\artikelreimport.h = loadreimport\artikelreimport.h
+		loadreimport\loadreimport.cxx = loadreimport\loadreimport.cxx
+		loadreimport\makefile = loadreimport\makefile
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "loadroutecheck", "loadroutecheck", "{15FEBA98-C906-4E91-88B3-B8F7260A4789}"
+	ProjectSection(SolutionItems) = preProject
+		loadroutecheck\controlling.h = loadroutecheck\controlling.h
+		loadroutecheck\loadroutecheck.cxx = loadroutecheck\loadroutecheck.cxx
+		loadroutecheck\makefile = loadroutecheck\makefile
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "loadroutes", "loadroutes", "{DEA18FAC-3EA0-49E6-8D87-88CFFC88C550}"
+	ProjectSection(SolutionItems) = preProject
+		loadroutes\custroutetimes.h = loadroutes\custroutetimes.h
+		loadroutes\custrouteweek.h = loadroutes\custrouteweek.h
+		loadroutes\dkktu.h = loadroutes\dkktu.h
+		loadroutes\loadroutes.cxx = loadroutes\loadroutes.cxx
+		loadroutes\makefile = loadroutes\makefile
+		loadroutes\potentialcustomertours.h = loadroutes\potentialcustomertours.h
+		loadroutes\routetimes.h = loadroutes\routetimes.h
+		loadroutes\tour.h = loadroutes\tour.h
+		loadroutes\tourplantag.h = loadroutes\tourplantag.h
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "loadrouting", "loadrouting", "{2592EDBC-2A6B-4C75-8A6E-DCFEE76B7CD8}"
+	ProjectSection(SolutionItems) = preProject
+		loadrouting\loadrouting.cxx = loadrouting\loadrouting.cxx
+		loadrouting\makefile = loadrouting\makefile
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "loadroutingms", "loadroutingms", "{2EC00E8A-5902-4547-80C8-C624FD5FB83F}"
+	ProjectSection(SolutionItems) = preProject
+		loadroutingms\loadroutingms.cxx = loadroutingms\loadroutingms.cxx
+		loadroutingms\makefile = loadroutingms\makefile
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "loadsalesman", "loadsalesman", "{F6CE4071-C867-4899-BBAF-D0B7193E01F6}"
+	ProjectSection(SolutionItems) = preProject
+		loadsalesman\dkvtr.h = loadsalesman\dkvtr.h
+		loadsalesman\loadsalesman.cxx = loadsalesman\loadsalesman.cxx
+		loadsalesman\makefile = loadsalesman\makefile
+		loadsalesman\salesman.h = loadsalesman\salesman.h
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "loadservices", "loadservices", "{394525E3-AA45-4766-B657-895A516FAD83}"
+	ProjectSection(SolutionItems) = preProject
+		loadservices\loadservices.cxx = loadservices\loadservices.cxx
+		loadservices\makefile = loadservices\makefile
+		loadservices\services.h = loadservices\services.h
+		loadservices\servicetypes.h = loadservices\servicetypes.h
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "loadshortlist", "loadshortlist", "{57182583-0D3D-48EA-B795-07450A8C8703}"
+	ProjectSection(SolutionItems) = preProject
+		loadshortlist\discountlist.h = loadshortlist\discountlist.h
+		loadshortlist\loadshortlist.cxx = loadshortlist\loadshortlist.cxx
+		loadshortlist\makefile = loadshortlist\makefile
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "loadtempquota", "loadtempquota", "{6BF09945-5C3D-404D-963E-DD1D11F05E00}"
+	ProjectSection(SolutionItems) = preProject
+		loadtempquota\loadtempquota.cxx = loadtempquota\loadtempquota.cxx
+		loadtempquota\makefile = loadtempquota\makefile
+		loadtempquota\quotatemp.h = loadtempquota\quotatemp.h
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "loadworkingdayscalendar", "loadworkingdayscalendar", "{C95709A9-9B4E-4F8A-A363-EE4A310754F2}"
+	ProjectSection(SolutionItems) = preProject
+		loadworkingdayscalendar\dkkal.h = loadworkingdayscalendar\dkkal.h
+		loadworkingdayscalendar\loadworkingdayscalendar.cxx = loadworkingdayscalendar\loadworkingdayscalendar.cxx
+		loadworkingdayscalendar\makefile = loadworkingdayscalendar\makefile
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tpldtest", "tpldtest", "{B18E7AB7-2D00-4F37-BD85-E492DA543571}"
+	ProjectSection(SolutionItems) = preProject
+		tpldtest\tpldtest.cxx = tpldtest\tpldtest.cxx
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "longtermlackloader", "longtermlackloader\longtermlackloader.vcxproj", "{6B0449E0-74BE-1014-9997-92A2DE8461E3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "activationarticle", "activationarticle", "{AB953256-3AA4-4908-90B5-4C48153DB7B2}"
+	ProjectSection(SolutionItems) = preProject
+		activationarticle\activationarticle.cxx = activationarticle\activationarticle.cxx
+		activationarticle\makefile = activationarticle\makefile
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "loademergencyrouting", "loademergencyrouting", "{4F1F1A4E-7CCA-4475-8C99-9A926E7EE5C6}"
+	ProjectSection(SolutionItems) = preProject
+		loademergencyrouting\loademergencyrouting.cxx = loademergencyrouting\loademergencyrouting.cxx
+		loademergencyrouting\makefile = loademergencyrouting\makefile
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "loadpricelist", "loadpricelist", "{DA6A6BA4-1223-4E95-B81C-736409865F7E}"
+	ProjectSection(SolutionItems) = preProject
+		loadpricelist\lddiscount.h = loadpricelist\lddiscount.h
+		loadpricelist\loadpricelist.cxx = loadpricelist\loadpricelist.cxx
+		loadpricelist\makefile = loadpricelist\makefile
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "loadpharmgrpvse", "loadpharmgrpvse", "{49556BF6-3D3B-4B68-8AAF-A6DA76DB3C63}"
+	ProjectSection(SolutionItems) = preProject
+		loadpharmgrpvse\loadpharmgrpvse.cxx = loadpharmgrpvse\loadpharmgrpvse.cxx
+		loadpharmgrpvse\makefile = loadpharmgrpvse\makefile
+		loadpharmgrpvse\pharmacygroups.h = loadpharmgrpvse\pharmacygroups.h
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "loadflyersubsequent", "loadflyersubsequent", "{75DE0E63-33F8-4E5F-B50C-76CBD7A05959}"
+	ProjectSection(SolutionItems) = preProject
+		loadflyersubsequent\csvparser.c = loadflyersubsequent\csvparser.c
+		loadflyersubsequent\csvparser.h = loadflyersubsequent\csvparser.h
+		loadflyersubsequent\loadflyersubsequent.cxx = loadflyersubsequent\loadflyersubsequent.cxx
+		loadflyersubsequent\makefile = loadflyersubsequent\makefile
+		loadflyersubsequent\nachlieferpos.h = loadflyersubsequent\nachlieferpos.h
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "loadpusupplier", "loadpusupplier", "{F15F620B-6E40-4B47-ABA0-345EFB3F091C}"
+	ProjectSection(SolutionItems) = preProject
+		loadpusupplier\loadpusupplier.cxx = loadpusupplier\loadpusupplier.cxx
+		loadpusupplier\makefile = loadpusupplier\makefile
+		loadpusupplier\pusupplier.h = loadpusupplier\pusupplier.h
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "loadtradegroup", "loadtradegroup", "{105A6ED9-6CA1-462E-BF47-061934ABFB2E}"
+	ProjectSection(SolutionItems) = preProject
+		loadtradegroup\loadtradegroup.cxx = loadtradegroup\loadtradegroup.cxx
+		loadtradegroup\makefile = loadtradegroup\makefile
+		loadtradegroup\tradegroup.h = loadtradegroup\tradegroup.h
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "loadnarcgroup", "loadnarcgroup", "{18105F86-ADF6-4E44-ABA8-B766E690CD22}"
+	ProjectSection(SolutionItems) = preProject
+		loadnarcgroup\loadnarcgroup.cxx = loadnarcgroup\loadnarcgroup.cxx
+		loadnarcgroup\makefile = loadnarcgroup\makefile
+		loadnarcgroup\narcgroup.h = loadnarcgroup\narcgroup.h
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "loadmanufacturer", "loadmanufacturer", "{8D0C0509-98FB-45D2-9FB6-EA9EA83CFFC0}"
+	ProjectSection(SolutionItems) = preProject
+		loadmanufacturer\loadmanufacturer.cxx = loadmanufacturer\loadmanufacturer.cxx
+		loadmanufacturer\makefile = loadmanufacturer\makefile
+		loadmanufacturer\manufacturer.h = loadmanufacturer\manufacturer.h
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "delartikelkonto", "delartikelkonto", "{372E6BF7-2477-4E70-89C3-39AF2833B86F}"
+	ProjectSection(SolutionItems) = preProject
+		delartikelkonto\delartikelkonto.cxx = delartikelkonto\delartikelkonto.cxx
+		delartikelkonto\makefile = delartikelkonto\makefile
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "loadcscbeskopfandposi", "loadcscbeskopfandposi", "{0668DCD6-7F31-4100-83CE-A61F14E32784}"
+	ProjectSection(SolutionItems) = preProject
+		loadcscbeskopfandposi\loadcscbeskopfandposi.cxx = loadcscbeskopfandposi\loadcscbeskopfandposi.cxx
+		loadcscbeskopfandposi\makefile = loadcscbeskopfandposi\makefile
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "loadnewquota", "loadnewquota", "{17645FB6-FE65-4A6F-BD3C-BFBEB6AEB17A}"
+	ProjectSection(SolutionItems) = preProject
+		loadnewquota\csvparser.h = loadnewquota\csvparser.h
+		loadnewquota\inputdata.h = loadnewquota\inputdata.h
+		loadnewquota\loadnewquota.cxx = loadnewquota\loadnewquota.cxx
+		loadnewquota\makefile = loadnewquota\makefile
+		loadnewquota\utils.h = loadnewquota\utils.h
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "delvaccinsubsequent", "delvaccinsubsequent", "{B59A9205-5110-47D8-8C19-9352B1A46F6B}"
+	ProjectSection(SolutionItems) = preProject
+		delvaccinsubsequent\delvaccinsubsequent = delvaccinsubsequent\delvaccinsubsequent
+		delvaccinsubsequent\delvaccinsubsequent.cxx = delvaccinsubsequent\delvaccinsubsequent.cxx
+		delvaccinsubsequent\makefile = delvaccinsubsequent\makefile
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "loadcscarticleprognosis", "loadcscarticleprognosis", "{A0776406-B846-4665-B662-D0DD2667C848}"
+	ProjectSection(SolutionItems) = preProject
+		loadcscarticleprognosis\loadcscarticleprognosis.cxx = loadcscarticleprognosis\loadcscarticleprognosis.cxx
+		loadcscarticleprognosis\makefile = loadcscarticleprognosis\makefile
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "loadcscbrancharticle", "loadcscbrancharticle", "{BCF80679-13C3-4498-9454-6A244F31646E}"
+	ProjectSection(SolutionItems) = preProject
+		loadcscbrancharticle\loadcscbrancharticle.cxx = loadcscbrancharticle\loadcscbrancharticle.cxx
+		loadcscbrancharticle\makefile = loadcscbrancharticle\makefile
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "loadpubranchsupplier", "loadpubranchsupplier", "{1BFB9D90-9D5D-41A2-84FE-A17E0E65966B}"
+	ProjectSection(SolutionItems) = preProject
+		loadpubranchsupplier\loadpubranchsupplier.cxx = loadpubranchsupplier\loadpubranchsupplier.cxx
+		loadpubranchsupplier\makefile = loadpubranchsupplier\makefile
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "loadcscpubatchorderpos", "loadcscpubatchorderpos", "{96C8B887-FBB5-488F-BFD3-11417B7E5980}"
+	ProjectSection(SolutionItems) = preProject
+		loadcscpubatchorderpos\loadcscpubatchorderpos.cxx = loadcscpubatchorderpos\loadcscpubatchorderpos.cxx
+		loadcscpubatchorderpos\makefile = loadcscpubatchorderpos\makefile
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "loadsupplier", "loadsupplier", "{92E01BE1-CD97-4B5E-85FF-5F686CEE7E05}"
+	ProjectSection(SolutionItems) = preProject
+		loadsupplier\loadsupplier.cxx = loadsupplier\loadsupplier.cxx
+		loadsupplier\makefile = loadsupplier\makefile
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6B0449E0-74BE-1014-9997-92A2DE8461E3}.Debug|x64.ActiveCfg = Debug|x64
+		{6B0449E0-74BE-1014-9997-92A2DE8461E3}.Debug|x64.Build.0 = Debug|x64
+		{6B0449E0-74BE-1014-9997-92A2DE8461E3}.Release|x64.ActiveCfg = Release|x64
+		{6B0449E0-74BE-1014-9997-92A2DE8461E3}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F4693C9D-5F21-41F0-817A-A61A0AFE63F0} = {C701F077-7E06-4F57-A7EA-27E110E9253B}
+		{0B2AD9C0-AE37-42F6-A640-28433D574FF7} = {FA60F6AE-C702-4052-884F-3DC61D2D4895}
+		{5CCF9710-61FF-4E3E-99B7-67F6B61A1230} = {FA60F6AE-C702-4052-884F-3DC61D2D4895}
+		{CB3F9DB5-8842-4812-8F7F-9C58F554CAA1} = {FA60F6AE-C702-4052-884F-3DC61D2D4895}
+		{A58D69A4-3B11-404A-8DAC-829D0A0B3E54} = {FA60F6AE-C702-4052-884F-3DC61D2D4895}
+		{7C3267F1-6575-4985-852E-ED621846C58D} = {C701F077-7E06-4F57-A7EA-27E110E9253B}
+		{A6B5DA38-82F3-42ED-8A09-04A3C04F3435} = {C701F077-7E06-4F57-A7EA-27E110E9253B}
+		{9FCD55D4-A847-47B0-ADED-25E8DD1B7796} = {C701F077-7E06-4F57-A7EA-27E110E9253B}
+		{9ABD8D78-CC4F-4159-B9EF-B487541C48DB} = {FA60F6AE-C702-4052-884F-3DC61D2D4895}
+		{E267AE98-54EA-43FF-9503-892EA0F5101C} = {D503397F-755A-4BAA-AF95-6520CFC0E3E5}
+		{CCB85535-8AAC-429D-800D-2FF45E418EDB} = {D503397F-755A-4BAA-AF95-6520CFC0E3E5}
+		{027BF181-05C7-45AB-9B34-49244E6C0767} = {D503397F-755A-4BAA-AF95-6520CFC0E3E5}
+		{322CBEA3-3E55-4EA9-94D3-9C8588EF00EF} = {C701F077-7E06-4F57-A7EA-27E110E9253B}
+		{99B54E13-04C4-4EA4-905D-01DA45D85CD4} = {C701F077-7E06-4F57-A7EA-27E110E9253B}
+		{6EFB26A0-97F6-4356-AA14-BBA3C80A4C9C} = {C701F077-7E06-4F57-A7EA-27E110E9253B}
+		{E1272CED-DDB6-459E-B416-D0CCF6421843} = {C701F077-7E06-4F57-A7EA-27E110E9253B}
+		{3DC95F41-B47C-4884-8359-47C0F702E822} = {C701F077-7E06-4F57-A7EA-27E110E9253B}
+		{1481CCFD-0AC7-4711-9238-430B556BB0DF} = {C701F077-7E06-4F57-A7EA-27E110E9253B}
+		{EA00A85F-CC95-426F-93B3-B9A20C29FE23} = {C701F077-7E06-4F57-A7EA-27E110E9253B}
+		{B66E35D7-8E40-417C-9470-50E8FC77303D} = {C701F077-7E06-4F57-A7EA-27E110E9253B}
+		{455BACE7-A839-4A0B-A4D8-54E44F4127A2} = {C701F077-7E06-4F57-A7EA-27E110E9253B}
+		{99641EC8-978A-4F9F-957B-591CD8C1D3AD} = {C701F077-7E06-4F57-A7EA-27E110E9253B}
+		{D137529B-DEDA-408C-A468-692F3CD798C9} = {C701F077-7E06-4F57-A7EA-27E110E9253B}
+		{9C5A5379-9B36-4533-8130-769978B09756} = {C701F077-7E06-4F57-A7EA-27E110E9253B}
+		{C14431C9-57AA-43EF-9A09-763591BDF788} = {C701F077-7E06-4F57-A7EA-27E110E9253B}
+		{E81F5059-BCAB-485D-9459-F7441EE0096A} = {C701F077-7E06-4F57-A7EA-27E110E9253B}
+		{4D96ED98-E44A-4ADC-BC24-F90165F8B225} = {C701F077-7E06-4F57-A7EA-27E110E9253B}
+		{3F2FD66F-93D1-4CCB-B8E5-EA166D97E456} = {C701F077-7E06-4F57-A7EA-27E110E9253B}
+		{876F4030-3CAC-46D9-BB44-09904F088DDF} = {FA60F6AE-C702-4052-884F-3DC61D2D4895}
+		{2E31BBAD-E645-47A7-8C44-A9B7EEAD2A3B} = {FA60F6AE-C702-4052-884F-3DC61D2D4895}
+		{70BFC8A8-6D3A-45C4-8869-91FC4BCED992} = {FA60F6AE-C702-4052-884F-3DC61D2D4895}
+		{F6B29E0F-EECE-4C3A-85C8-FDF6C04E60CC} = {FA60F6AE-C702-4052-884F-3DC61D2D4895}
+		{C87671FD-6AFA-4795-AE54-0E28E2077758} = {FA60F6AE-C702-4052-884F-3DC61D2D4895}
+		{404BEC1F-3E39-438B-A227-22C73D448B4F} = {FA60F6AE-C702-4052-884F-3DC61D2D4895}
+		{1D3F53B5-8D46-4CA9-AFE0-9746BEF88055} = {FA60F6AE-C702-4052-884F-3DC61D2D4895}
+		{E4CE1647-FA59-4B8D-BE22-C82AA5D0E61E} = {FA60F6AE-C702-4052-884F-3DC61D2D4895}
+		{DA3A5B3A-C718-4B22-880E-E45024E2C7BC} = {FA60F6AE-C702-4052-884F-3DC61D2D4895}
+		{A1B5A73B-4348-4B14-9BFB-1BE4D46CB29D} = {C701F077-7E06-4F57-A7EA-27E110E9253B}
+		{E99DD620-3949-4C7C-ADA1-CC65072D78A7} = {C701F077-7E06-4F57-A7EA-27E110E9253B}
+		{F69BA6A6-3E5F-4369-AC0A-4F5CBDAF4235} = {C701F077-7E06-4F57-A7EA-27E110E9253B}
+		{3E5C97E3-5B13-4C33-ACC9-051C4A8D83AB} = {C701F077-7E06-4F57-A7EA-27E110E9253B}
+		{9F0A006B-38F3-4009-88D8-A45BF199DA2E} = {C701F077-7E06-4F57-A7EA-27E110E9253B}
+		{4C193758-93EC-4F89-B229-509DC2DF26CC} = {C701F077-7E06-4F57-A7EA-27E110E9253B}
+		{0F31EE1B-B7D2-42C9-A1E0-A26660C215E4} = {C701F077-7E06-4F57-A7EA-27E110E9253B}
+		{5451826C-3DA6-4A50-A421-3B0CC6E50D58} = {C701F077-7E06-4F57-A7EA-27E110E9253B}
+		{CCE50C6D-A820-4B42-84BA-70276D294F07} = {C701F077-7E06-4F57-A7EA-27E110E9253B}
+		{C939DF56-522E-49CB-9EC8-3565FEDAA830} = {C701F077-7E06-4F57-A7EA-27E110E9253B}
+		{D80848B9-5A2F-4C2F-80A7-B29D827B5319} = {C701F077-7E06-4F57-A7EA-27E110E9253B}
+		{C35D120D-E40C-4487-AFA6-35623C1C188F} = {C701F077-7E06-4F57-A7EA-27E110E9253B}
+		{97BC5884-97B1-4E62-BB68-B28F4C7995CA} = {C701F077-7E06-4F57-A7EA-27E110E9253B}
+		{DB9259C3-9688-46A3-8487-D85C960B5E13} = {C701F077-7E06-4F57-A7EA-27E110E9253B}
+		{15FEBA98-C906-4E91-88B3-B8F7260A4789} = {C701F077-7E06-4F57-A7EA-27E110E9253B}
+		{DEA18FAC-3EA0-49E6-8D87-88CFFC88C550} = {C701F077-7E06-4F57-A7EA-27E110E9253B}
+		{2592EDBC-2A6B-4C75-8A6E-DCFEE76B7CD8} = {C701F077-7E06-4F57-A7EA-27E110E9253B}
+		{2EC00E8A-5902-4547-80C8-C624FD5FB83F} = {C701F077-7E06-4F57-A7EA-27E110E9253B}
+		{F6CE4071-C867-4899-BBAF-D0B7193E01F6} = {C701F077-7E06-4F57-A7EA-27E110E9253B}
+		{394525E3-AA45-4766-B657-895A516FAD83} = {C701F077-7E06-4F57-A7EA-27E110E9253B}
+		{57182583-0D3D-48EA-B795-07450A8C8703} = {C701F077-7E06-4F57-A7EA-27E110E9253B}
+		{6BF09945-5C3D-404D-963E-DD1D11F05E00} = {C701F077-7E06-4F57-A7EA-27E110E9253B}
+		{C95709A9-9B4E-4F8A-A363-EE4A310754F2} = {C701F077-7E06-4F57-A7EA-27E110E9253B}
+		{B18E7AB7-2D00-4F37-BD85-E492DA543571} = {FA60F6AE-C702-4052-884F-3DC61D2D4895}
+		{4F1F1A4E-7CCA-4475-8C99-9A926E7EE5C6} = {C701F077-7E06-4F57-A7EA-27E110E9253B}
+		{DA6A6BA4-1223-4E95-B81C-736409865F7E} = {C701F077-7E06-4F57-A7EA-27E110E9253B}
+		{49556BF6-3D3B-4B68-8AAF-A6DA76DB3C63} = {C701F077-7E06-4F57-A7EA-27E110E9253B}
+		{75DE0E63-33F8-4E5F-B50C-76CBD7A05959} = {C701F077-7E06-4F57-A7EA-27E110E9253B}
+		{F15F620B-6E40-4B47-ABA0-345EFB3F091C} = {C701F077-7E06-4F57-A7EA-27E110E9253B}
+		{105A6ED9-6CA1-462E-BF47-061934ABFB2E} = {C701F077-7E06-4F57-A7EA-27E110E9253B}
+		{18105F86-ADF6-4E44-ABA8-B766E690CD22} = {C701F077-7E06-4F57-A7EA-27E110E9253B}
+		{8D0C0509-98FB-45D2-9FB6-EA9EA83CFFC0} = {C701F077-7E06-4F57-A7EA-27E110E9253B}
+		{0668DCD6-7F31-4100-83CE-A61F14E32784} = {C701F077-7E06-4F57-A7EA-27E110E9253B}
+		{17645FB6-FE65-4A6F-BD3C-BFBEB6AEB17A} = {C701F077-7E06-4F57-A7EA-27E110E9253B}
+		{A0776406-B846-4665-B662-D0DD2667C848} = {C701F077-7E06-4F57-A7EA-27E110E9253B}
+		{BCF80679-13C3-4498-9454-6A244F31646E} = {C701F077-7E06-4F57-A7EA-27E110E9253B}
+		{1BFB9D90-9D5D-41A2-84FE-A17E0E65966B} = {C701F077-7E06-4F57-A7EA-27E110E9253B}
+		{96C8B887-FBB5-488F-BFD3-11417B7E5980} = {C701F077-7E06-4F57-A7EA-27E110E9253B}
+		{92E01BE1-CD97-4B5E-85FF-5F686CEE7E05} = {C701F077-7E06-4F57-A7EA-27E110E9253B}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F4652A31-8C9E-4493-AEFC-4AEFD2A5E10C}
+	EndGlobalSection
+EndGlobal

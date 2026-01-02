@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<articleCatalogueRequest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://salesweb.phoenix-ag.de/wsxmlcroatia/schemas/PhoenixArticleCatalogueRequest.xsd" language="de">
+ <client branchNumber="71" customerNumber="9999011"/>
+	<articles insertMasterData="yes">
+		<byArticleNumber articleNumber="655"/>
+		<byArticleNumber articleNumber="3990"/>
+		<byArticleNumber articleNumber="4009"/>
+		<byArticleNumber articleNumber="4015"/>
+		<byArticleNumber articleNumber="4038"/>
+		<byArticleNumber articleNumber="4067"/>
+		<byArticleNumber articleNumber="6936"/>
+		<byArticleNumber articleNumber="6965"/>
+		<byArticleNumber articleNumber="8585"/>
+		<byArticleNumber articleNumber="8616"/>
+		<byArticleNumber articleNumber="9372"/>
+		<byArticleNumber articleNumber="9745"/>
+		<byArticleNumber articleNumber="9952"/>
+		<byArticleNumber articleNumber="9969"/>
+		<byArticleNumber articleNumber="9975"/>
+	</articles>
+</articleCatalogueRequest>

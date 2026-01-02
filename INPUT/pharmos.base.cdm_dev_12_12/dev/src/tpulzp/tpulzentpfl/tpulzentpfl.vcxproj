@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{9D51F971-23DF-483C-9D39-BEF0E0FEDD41}</ProjectGuid>
+    <RootNamespace>tpulzentpfl</RootNamespace>
+    <Keyword>ManagedCProj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <CLRSupport>OldSyntax</CLRSupport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <CLRSupport>OldSyntax</CLRSupport>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <OutputFile>$(OutDir)$(ProjectName).exe</OutputFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AssemblyDebug>true</AssemblyDebug>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <OutputFile>$(OutDir)$(ProjectName).exe</OutputFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="src\cdb.cxx" />
+    <ClCompile Include="src\conv.c" />
+    <ClCompile Include="src\dezapdeb.c" />
+    <ClCompile Include="src\tpulconvert.c" />
+    <ClCompile Include="src\tpuldb.cxx" />
+    <ClCompile Include="src\tpulzentpfl.c" />
+    <ClCompile Include="src\zeitstempel.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\ARTKATG.H" />
+    <ClInclude Include="src\ARTVE.H" />
+    <ClInclude Include="src\cartcompack.h" />
+    <ClInclude Include="src\carticlecodes.h" />
+    <ClInclude Include="src\carticlelang.h" />
+    <ClInclude Include="src\carticletext.h" />
+    <ClInclude Include="src\ccpvalidityperiod.h" />
+    <ClInclude Include="src\cdb.h" />
+    <ClInclude Include="src\cdiscgrp.h" />
+    <ClInclude Include="src\cdiscgrpmem.h" />
+    <ClInclude Include="src\cdisclist.h" />
+    <ClInclude Include="src\cdiscmodel.h" />
+    <ClInclude Include="src\cdiscount.h" />
+    <ClInclude Include="src\cgaloart.h" />
+    <ClInclude Include="src\cgalocom.h" />
+    <ClInclude Include="src\cgalonam.h" />
+    <ClInclude Include="src\cgibatchentry.h" />
+    <ClInclude Include="src\cmonthdiscsort.h" />
+    <ClInclude Include="src\cobolbuf.h" />
+    <ClInclude Include="src\conv.h" />
+    <ClInclude Include="src\cpharmgrp.h" />
+    <ClInclude Include="src\cservices.h" />
+    <ClInclude Include="src\dezap.h" />
+    <ClInclude Include="src\dezapcheck.h" />
+    <ClInclude Include="src\dezapdepau.h" />
+    <ClInclude Include="src\dezapdkaco.h" />
+    <ClInclude Include="src\dezapdkaff.h" />
+    <ClInclude Include="src\dezapdkain.h" />
+    <ClInclude Include="src\dezapdkatx.h" />
+    <ClInclude Include="src\dezapdkaua.h" />
+    <ClInclude Include="src\dezapdkazb.h" />
+    <ClInclude Include="src\dezapdkcrr.h" />
+    <ClInclude Include="src\dezapdkean.h" />
+    <ClInclude Include="src\dezapdkegr.h" />
+    <ClInclude Include="src\dezapdkfok.h" />
+    <ClInclude Include="src\dezapdkghz.h" />
+    <ClInclude Include="src\dezapdkiwg.h" />
+    <ClInclude Include="src\dezapdkkgr.h" />
+    <ClInclude Include="src\dezapdklid.h" />
+    <ClInclude Include="src\dezapdklif.h" />
+    <ClInclude Include="src\dezapdklkr.h" />
+    <ClInclude Include="src\dezapdklkz.h" />
+    <ClInclude Include="src\dezapdkmrs.h" />
+    <ClInclude Include="src\dezapdkmvs.h" />
+    <ClInclude Include="src\dezapdkpro.h" />
+    <ClInclude Include="src\dezapdkrab.h" />
+    <ClInclude Include="src\dezapdkral.h" />
+    <ClInclude Include="src\dezapdkrbf.h" />
+    <ClInclude Include="src\dezapdkrgr.h" />
+    <ClInclude Include="src\dezapdkris.h" />
+    <ClInclude Include="src\dezapdkrpg.h" />
+    <ClInclude Include="src\dezapdkser.h" />
+    <ClInclude Include="src\dezapdksoa.h" />
+    <ClInclude Include="src\dezapdksps.h" />
+    <ClInclude Include="src\dezapdkste.h" />
+    <ClInclude Include="src\dezapdktgr.h" />
+    <ClInclude Include="src\dezapdkwgr.h" />
+    <ClInclude Include="src\dezapdkzab.h" />
+    <ClInclude Include="src\dezapdrram.h" />
+    <ClInclude Include="src\dezapean.h" />
+    <ClInclude Include="src\dezapzep.h" />
+    <ClInclude Include="src\EAN.H" />
+    <ClInclude Include="src\herstel.h" />
+    <ClInclude Include="src\herstel_dispo.h" />
+    <ClInclude Include="src\tpulconvert.h" />
+    <ClInclude Include="src\tpuldb.h" />
+    <ClInclude Include="src\tpulzentpfl.h" />
+    <ClInclude Include="src\ZAPFLEGE.H" />
+    <ClInclude Include="src\zartaustria.h" />
+    <ClInclude Include="src\zartbulgaria.h" />
+    <ClInclude Include="src\zartcroatia.h" />
+    <ClInclude Include="src\ZARTFEB2.H" />
+    <ClInclude Include="src\zartfrance.h" />
+    <ClInclude Include="src\ZARTIKEL.H" />
+    <ClInclude Include="src\ZARTPREI.H" />
+    <ClInclude Include="src\ZARTSEKB.H" />
+    <ClInclude Include="src\zartserbia.h" />
+    <ClInclude Include="src\zartswitzerland.h" />
+    <ClInclude Include="src\zartverk.h" />
+    <ClInclude Include="src\ZARTWG.H" />
+    <ClInclude Include="src\zautidemsperre.h" />
+    <ClInclude Include="src\zchargenrueckruf.h" />
+    <ClInclude Include="src\ZDKBTM.H" />
+    <ClInclude Include="src\ZDKTGR.H" />
+    <ClInclude Include="src\ZDKWGR.H" />
+    <ClInclude Include="src\ZDKWIR.H" />
+    <ClInclude Include="src\zeitstempel.h" />
+    <ClInclude Include="src\zgrppflege.h" />
+    <ClInclude Include="src\zpznpflege.h" />
+    <ClInclude Include="src\zrabgrp.h" />
+    <ClInclude Include="src\zzahlbed.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="makefile" />
+    <None Include="start.sh" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

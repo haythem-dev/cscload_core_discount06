@@ -1,0 +1,14 @@
+diff -ur a/build/cmake/DefineOptions.cmake b/build/cmake/DefineOptions.cmake
+--- a/build/cmake/DefineOptions.cmake	2019-12-17 11:51:10.608643200 +0100
++++ b/build/cmake/DefineOptions.cmake	2019-12-17 13:06:28.602928100 +0100
+@@ -17,6 +17,10 @@
+ # under the License.
+ #
+ 
++# load newer boost FindBoost
++set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/../../ext/boost/lib/cmake/Modules" ${CMAKE_MODULE_PATH})
++set(Boost_NO_SYSTEM_PATHS ON)
++set(Boost_ARCHITECTURE "-x64")
+ 
+ include(CMakeDependentOption)
+ 

@@ -1,0 +1,1537 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="DebugHipathNew|Win32">
+      <Configuration>DebugHipathNew</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ReleaseHipathNew|Win32">
+      <Configuration>ReleaseHipathNew</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{13AD56A8-20F1-45CC-BE84-84E0885562CE}</ProjectGuid>
+    <RootNamespace>AE</RootNamespace>
+    <SccProjectName />
+    <SccAuxPath />
+    <SccLocalPath />
+    <SccProvider />
+    <Keyword>MFCProj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseHipathNew|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>Static</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v100</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugHipathNew|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>Static</UseOfMfc>
+    <UseOfAtl>false</UseOfAtl>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v100</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>Static</UseOfMfc>
+    <UseOfAtl>false</UseOfAtl>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v100</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>Static</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v100</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseHipathNew|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='DebugHipathNew|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\WinRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\WinRel\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\WinDebug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\WinDebug\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='DebugHipathNew|Win32'">$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='DebugHipathNew|Win32'">$(Configuration)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='ReleaseHipathNew|Win32'">$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='ReleaseHipathNew|Win32'">$(Configuration)\</IntDir>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='DebugHipathNew|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='DebugHipathNew|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='DebugHipathNew|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='ReleaseHipathNew|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='ReleaseHipathNew|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='ReleaseHipathNew|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseHipathNew|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugHipathNew|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>Client_Server;idl;$(SolutionDir)..\..\aapserv;$(SolutionDir)..\..\pxdb\include;$(SolutionDir)..\..\pxverbund\include;$(SolutionDir)..\ext\boost\include;$(SolutionDir)..\ext\hdatum\include;$(SolutionDir)..\ext\hipath_old\HPPCProxyLib;$(SolutionDir)..\ext\pplib\include;$(SolutionDir)..\ext\servclnt\include;$(SolutionDir)..\ext\log4cplus\include</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_WIN32_WINNT=0x0502;_CRT_SECURE_NO_WARNINGS;NDEBUG;WIN32;_WINDOWS;BUF_DESC;TRANSCLASS;pxDATABASE_INFORMIX;LIBSCGMMULTILANG_STATIC;LIBSCGMCTRL_STATIC;LIBSCCDATE_STATIC;LIBSCCSTRING_STATIC;LIBSCCZLIB_STATIC;LIBSCSACCVDOO_STATIC;LIBSCSACCESS_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderOutputFile>.\WinRel/Ae.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>$(OutDir)</AssemblerListingLocation>
+      <ObjectFileName>$(OutDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(OutDir)Ae.pdb</ProgramDataBaseFileName>
+      <BrowseInformation>
+      </BrowseInformation>
+      <WarningLevel>Level4</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <CompileAs>Default</CompileAs>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>mpr.lib;winmm.lib;ppwin.lib;hdatum.lib;libscgmmultilang_static.lib;libscsvoodoo_static.lib;hppcproxy.lib;libscgmctrl_static.lib;libsccdate_static.lib;libsccstring_static.lib;libscczlib_static.lib;libscsaccvdoo_static.lib;libscsaccess_static.lib;rpcrt4.lib;log4cplus.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>$(SolutionDir)..\ext\boost\lib;$(SolutionDir)..\ext\hdatum\lib\$(Configuration);$(SolutionDir)..\ext\hipath_old\HPPCProxyLib\$(Configuration);$(SolutionDir)..\ext\pplib\lib\$(Configuration);$(SolutionDir)..\ext\servclnt\libstatic\$(Configuration);$(SolutionDir)..\ext\log4cplus\lib\$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ProgramDatabaseFile>$(OutDir)Ae.pdb</ProgramDatabaseFile>
+      <TargetMachine>MachineX86</TargetMachine>
+      <SubSystem>Windows</SubSystem>
+      <TerminalServerAware>false</TerminalServerAware>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Midl>
+      <TypeLibraryName>$(OutDir)Ae.tlb</TypeLibraryName>
+      <HeaderFileName>
+      </HeaderFileName>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0407</Culture>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\..\pxverbund\include</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <PostBuildEvent>
+      <Command>call $(SolutionDir)proc\copy-postbuild.bat $(ProjectName) $(Platform) $(Configuration) $(SolutionDir) $(OutDir)</Command>
+    </PostBuildEvent>
+    <PostBuildEvent>
+      <Message>call $(SolutionDir)proc\copy-postbuild.bat $(ProjectName) $(Platform) $(Configuration) $(SolutionDir) $(OutDir)</Message>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>Client_Server;idl;$(SolutionDir)..\..\aapserv;$(SolutionDir)..\..\pxdb\include;$(SolutionDir)..\..\pxverbund\include;$(SolutionDir)..\ext\boost\include;$(SolutionDir)..\ext\hdatum\include;$(SolutionDir)..\ext\hipath_old\HPPCProxyLib;$(SolutionDir)..\ext\pplib\include;$(SolutionDir)..\ext\servclnt\include;$(SolutionDir)..\ext\log4cplus\include</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_DEBUG;WIN32;_WINDOWS;BUF_DESC;TRANSCLASS;pxDATABASE_INFORMIX;LIBSCGMMULTILANG_STATIC;LIBSCGMCTRL_STATIC;LIBSCCDATE_STATIC;LIBSCCSTRING_STATIC;LIBSCCZLIB_STATIC;LIBSCSACCVDOO_STATIC;LIBSCSACCESS_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderOutputFile>$(OutDir)Ae.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>$(OutDir)</AssemblerListingLocation>
+      <ProgramDataBaseFileName>$(OutDir)$(ProjectName).pdb</ProgramDataBaseFileName>
+      <BrowseInformation>
+      </BrowseInformation>
+      <WarningLevel>Level4</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>mpr.lib;winmm.lib;ppwind.lib;hdatum.lib;libscgmmultilang_static.lib;libscsvoodoo_static.lib;hppcproxy.lib;libscgmctrl_static.lib;libsccdate_static.lib;libsccstring_static.lib;libscczlib_static.lib;libscsaccvdoo_static.lib;libscsaccess_static.lib;rpcrt4.lib;log4cplusD.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)..\ext\boost\lib;$(SolutionDir)..\ext\hdatum\lib\$(Configuration);$(SolutionDir)..\ext\hipath_old\HPPCProxyLib\$(Configuration);$(SolutionDir)..\ext\pplib\lib\$(Configuration);$(SolutionDir)..\ext\servclnt\libstatic\$(Configuration);$(SolutionDir)..\ext\log4cplus\lib\$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>libcmt;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)Ae.pdb</ProgramDatabaseFile>
+      <TargetMachine>MachineX86</TargetMachine>
+      <SubSystem>Windows</SubSystem>
+      <TerminalServerAware>false</TerminalServerAware>
+    </Link>
+    <Midl>
+      <TypeLibraryName>$(OutDir)Ae.tlb</TypeLibraryName>
+      <HeaderFileName>
+      </HeaderFileName>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0407</Culture>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\..\pxverbund\include</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <PostBuildEvent>
+      <Command>copy $(SolutionDir)\ini\ksc.ini $(OutDir) /Y</Command>
+    </PostBuildEvent>
+    <PostBuildEvent>
+      <Message>copy $(SolutionDir)\ini\ksc.ini $(OutDir) /Y</Message>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugHipathNew|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>Client_Server;idl;$(SolutionDir)..\..\aapserv;$(SolutionDir)..\..\pxdb\include;$(SolutionDir)..\..\pxverbund\include;$(SolutionDir)..\ext\boost\include;$(SolutionDir)..\ext\hdatum\include;$(SolutionDir)..\ext\hipath\HPPCProxyLib;$(SolutionDir)..\ext\pplib\include;$(SolutionDir)..\ext\servclnt\include;$(SolutionDir)..\ext\log4cplus\include</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_DEBUG;WIN32;_WINDOWS;BUF_DESC;TRANSCLASS;pxDATABASE_INFORMIX;LIBSCGMMULTILANG_STATIC;LIBSCGMCTRL_STATIC;LIBSCCDATE_STATIC;_NEWHIPATH;LIBSCCSTRING_STATIC;LIBSCCZLIB_STATIC;LIBSCSACCVDOO_STATIC;LIBSCSACCESS_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderOutputFile>$(OutDir)Ae.pch</PrecompiledHeaderOutputFile>
+      <BrowseInformation>
+      </BrowseInformation>
+      <WarningLevel>Level4</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+      <ProgramDataBaseFileName>$(IntDir)AE.pdb</ProgramDataBaseFileName>
+      <TreatWarningAsError>true</TreatWarningAsError>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>mpr.lib;winmm.lib;ppwind.lib;hdatum.lib;libscgmmultilang_static.lib;libscsvoodoo_static.lib;HPPCProxy.lib;libscgmctrl_static.lib;libsccdate_static.lib;libsccstring_static.lib;libscczlib_static.lib;libscsaccvdoo_static.lib;libscsaccess_static.lib;rpcrt4.lib;log4cplusd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)..\ext\boost\lib;$(SolutionDir)..\ext\hdatum\lib\Debug;$(SolutionDir)..\ext\hipath\HPPCProxyLib\Debug;$(SolutionDir)..\ext\pplib\lib\Debug;$(SolutionDir)..\ext\servclnt\libstatic\Debug;$(SolutionDir)..\ext\log4cplus\lib\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)Ae.pdb</ProgramDatabaseFile>
+      <TargetMachine>MachineX86</TargetMachine>
+      <TerminalServerAware>false</TerminalServerAware>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+    <Midl>
+      <TypeLibraryName>$(OutDir)Ae.tlb</TypeLibraryName>
+      <HeaderFileName>
+      </HeaderFileName>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0407</Culture>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\..\pxverbund\include</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <PostBuildEvent>
+      <Command>call $(SolutionDir)proc\copy-postbuild.bat $(ProjectName) $(Platform) $(Configuration) $(SolutionDir) $(OutDir)</Command>
+    </PostBuildEvent>
+    <PostBuildEvent>
+      <Message>call $(SolutionDir)proc\copy-postbuild.bat $(ProjectName) $(Platform) $(Configuration) $(SolutionDir) $(OutDir)</Message>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseHipathNew|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>Client_Server;idl;$(SolutionDir)..\..\aapserv;$(SolutionDir)..\..\pxdb\include;$(SolutionDir)..\..\pxverbund\include;$(SolutionDir)..\ext\boost\include;$(SolutionDir)..\ext\hdatum\include;$(SolutionDir)..\ext\hipath\HPPCProxyLib;$(SolutionDir)..\ext\pplib\include;$(SolutionDir)..\ext\servclnt\include;$(SolutionDir)..\ext\log4cplus\include</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_WIN32_WINNT=0x0502;WIN32;_WINDOWS;_CRT_SECURE_NO_WARNINGS;NDEBUG;AUFABFR;WIN32;_WINDOWS;BUF_DESC;TRANSCLASS;pxDATABASE_INFORMIX;LIBSCGMMULTILANG_STATIC;LIBSCGMCTRL_STATIC;LIBSCCDATE_STATIC;LIBSCCSTRING_STATIC;LIBSCCZLIB_STATIC;LIBSCSACCVDOO_STATIC;LIBSCSACCESS_STATIC;_NEWHIPATH;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <BrowseInformation>
+      </BrowseInformation>
+      <WarningLevel>Level4</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>mpr.lib;winmm.lib;ppwin.lib;hdatum.lib;libscgmmultilang_static.lib;libscsvoodoo_static.lib;HPPCProxy.lib;libscgmctrl_static.lib;libsccdate_static.lib;libsccstring_static.lib;libscczlib_static.lib;libscsaccvdoo_static.lib;libscsaccess_static.lib;rpcrt4.lib;log4cplus.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>$(SolutionDir)..\ext\boost\lib;$(SolutionDir)..\ext\hdatum\lib\Release;$(SolutionDir)..\ext\hipath\HPPCProxyLib\Release;$(SolutionDir)..\ext\pplib\lib\Release;$(SolutionDir)..\ext\servclnt\libstatic\Release;$(SolutionDir)..\ext\log4cplus\lib\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <TargetMachine>MachineX86</TargetMachine>
+      <SubSystem>Windows</SubSystem>
+      <TerminalServerAware>false</TerminalServerAware>
+      <ProgramDatabaseFile>$(OutDir)Ae.pdb</ProgramDatabaseFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Midl>
+      <TypeLibraryName>$(OutDir)Ae.tlb</TypeLibraryName>
+      <HeaderFileName>
+      </HeaderFileName>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0407</Culture>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\..\pxverbund\include</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <PostBuildEvent>
+      <Command>call $(SolutionDir)proc\copy-postbuild.bat $(ProjectName) $(Platform) $(Configuration) $(SolutionDir) $(OutDir)</Command>
+    </PostBuildEvent>
+    <PostBuildEvent>
+      <Message>call $(SolutionDir)proc\copy-postbuild.bat $(ProjectName) $(Platform) $(Configuration) $(SolutionDir) $(OutDir)</Message>
+    </PostBuildEvent>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\..\pxverbund\include</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="aaclasses.cpp" />
+    <ClCompile Include="AboutDlg.cpp" />
+    <ClCompile Include="ae.cpp" />
+    <ClCompile Include="aeconnection.cpp" />
+    <ClCompile Include="AeCopyCSV.cpp" />
+    <ClCompile Include="AeDoc.cpp" />
+    <ClCompile Include="AeFax.cpp" />
+    <ClCompile Include="AeFView.cpp" />
+    <ClCompile Include="AeKndNachl.cpp" />
+    <ClCompile Include="AeLogging.cpp" />
+    <ClCompile Include="AeAppModel.cpp" />
+    <ClCompile Include="AeAppPresenter.cpp" />
+    <ClCompile Include="CallbackStatusManager.cpp" />
+    <ClCompile Include="CDeleteReservation.cpp" />
+    <ClCompile Include="Country.cpp" />
+    <ClCompile Include="DAeStatusAe.cpp" />
+    <ClCompile Include="AeTrace.cpp" />
+    <ClCompile Include="AeUser.cpp" />
+    <ClCompile Include="AeView.cpp" />
+    <ClCompile Include="AIListctrl.cpp" />
+    <ClCompile Include="allg.cpp" />
+    <ClCompile Include="allgfktn.cpp" />
+    <ClCompile Include="AltFil.cpp" />
+    <ClCompile Include="ArtNotFound.cpp" />
+    <ClCompile Include="AufInfListctrl.cpp" />
+    <ClCompile Include="CPCallPlanChangeData.cpp" />
+    <ClCompile Include="CPCallPlanLoad.cpp" />
+    <ClCompile Include="CPCallPlanLoadListe.cpp" />
+    <ClCompile Include="CPCallPlanMaintenance.cpp" />
+    <ClCompile Include="CPCallPlanUndertake.cpp" />
+    <ClCompile Include="CPCustomerProperties.cpp" />
+    <ClCompile Include="CPCustomerTelNo.cpp" />
+    <ClCompile Include="CPPACallPlanDay.cpp" />
+    <ClCompile Include="CPRegionMaintenance.cpp" />
+    <ClCompile Include="CUCustomerTimes.cpp" />
+    <ClCompile Include="CUServicePlan.cpp" />
+    <ClCompile Include="CustomerGroups.cpp" />
+    <ClCompile Include="CUVacation.cpp" />
+    <ClCompile Include="DAeAnzFeiertage.cpp" />
+    <ClCompile Include="DAeAnzFrText.cpp" />
+    <ClCompile Include="DAeArtVerbundFiliale.cpp" />
+    <ClCompile Include="DAeCollOrderGrp.cpp" />
+    <ClCompile Include="DAeCSVImport.cpp" />
+    <ClCompile Include="DAeCSVImportLog.cpp" />
+    <ClCompile Include="DAeKundeVerbundFiliale.cpp" />
+    <ClCompile Include="DAeMailUser.cpp" />
+    <ClCompile Include="DAendFil.cpp" />
+    <ClCompile Include="DAeNotdienst.cpp" />
+    <ClCompile Include="DAeSammelAuft.cpp" />
+    <ClCompile Include="DAeUpdFeiertage.cpp" />
+    <ClCompile Include="DAltArt.cpp" />
+    <ClCompile Include="DAnzAeUser.cpp" />
+    <ClCompile Include="DArtDef.cpp" />
+    <ClCompile Include="DArtikelkonto.cpp" />
+    <ClCompile Include="DArtikelQuota.cpp" />
+    <ClCompile Include="DArtInf.cpp" />
+    <ClCompile Include="DataQueryHelper.cpp" />
+    <ClCompile Include="DataTypeHelper.cpp" />
+    <ClCompile Include="dateformatter.cpp" />
+    <ClCompile Include="datevalidator.cpp" />
+    <ClCompile Include="DAttachPartner.cpp" />
+    <ClCompile Include="DAufAuswahl.cpp" />
+    <ClCompile Include="DAufBear.cpp" />
+    <ClCompile Include="DAufDef.cpp" />
+    <ClCompile Include="DAufDefImpl.cpp" />
+    <ClCompile Include="DAufEnd.cpp" />
+    <ClCompile Include="DAufFrText.cpp" />
+    <ClCompile Include="DAufInf.cpp" />
+    <ClCompile Include="DAuftragartKd.cpp" />
+    <ClCompile Include="DAuftrEreign.cpp" />
+    <ClCompile Include="DAufTxt.cpp" />
+    <ClCompile Include="DAufWerte.cpp" />
+    <ClCompile Include="DAufZlBearb.cpp" />
+    <ClCompile Include="DAutrStat.cpp" />
+    <ClCompile Include="DBackRouting.cpp" />
+    <ClCompile Include="DBeilage.cpp" />
+    <ClCompile Include="DBenKen.cpp" />
+    <ClCompile Include="DBenKenn.cpp" />
+    <ClCompile Include="DBenKennAend.cpp" />
+    <ClCompile Include="DBenVwtng.cpp" />
+    <ClCompile Include="DBePosBearb.cpp" />
+    <ClCompile Include="DBePosBearbModel.cpp" />
+    <ClCompile Include="DBePosBearbPresenter.cpp" />
+    <ClCompile Include="DBestSB.cpp" />
+    <ClCompile Include="DBranchInfo.cpp" />
+    <ClCompile Include="DBTMLicense.cpp" />
+    <ClCompile Include="DCallbackFetch.cpp" />
+    <ClCompile Include="DCallbackItem.cpp" />
+    <ClCompile Include="DCallbackReason.cpp" />
+    <ClCompile Include="DCallbackRemarkEdit.cpp" />
+    <ClCompile Include="DCallbackRemarks.cpp" />
+    <ClCompile Include="DCallbackUpd.cpp" />
+    <ClCompile Include="DCallbackWork.cpp" />
+    <ClCompile Include="DChangeTour.cpp" />
+    <ClCompile Include="DCheckNachl.cpp" />
+    <ClCompile Include="DCheckOpenCallOrOrder.cpp" />
+    <ClCompile Include="DChooseFiliale.cpp" />
+    <ClCompile Include="DCollectiveOrders.cpp" />
+    <ClCompile Include="DCollectiveOrdersDE.cpp" />
+    <ClCompile Include="DConnect.cpp" />
+    <ClCompile Include="DCountDown.cpp" />
+    <ClCompile Include="DCountrCodes.cpp" />
+    <ClCompile Include="DCountryUpd.cpp" />
+    <ClCompile Include="DCstBranchInfoUpd.cpp" />
+    <ClCompile Include="DCstTours.cpp" />
+    <ClCompile Include="DCSVFormat.cpp" />
+    <ClCompile Include="DCustomerOrderCheck.cpp" />
+    <ClCompile Include="DCustomerRouting.cpp" />
+    <ClCompile Include="DCustomerRouting_Upd.cpp" />
+    <ClCompile Include="DddSpecialList.cpp" />
+    <ClCompile Include="DddSpecialUpd.cpp" />
+    <ClCompile Include="DDealerUmsatz.cpp" />
+    <ClCompile Include="DDelayedArt.cpp" />
+    <ClCompile Include="DDelayedCst.cpp" />
+    <ClCompile Include="DDelayedCstAll.cpp" />
+    <ClCompile Include="DDelayedCstUpd.cpp" />
+    <ClCompile Include="DDistressRouting.cpp" />
+    <ClCompile Include="DDruckAuftrag.cpp" />
+    <ClCompile Include="DEncloserTimes.cpp" />
+    <ClCompile Include="DExtraFahrt.cpp" />
+    <ClCompile Include="DExtraTourReasons.cpp" />
+    <ClCompile Include="DFilialpartner.cpp" />
+    <ClCompile Include="DForbidden.cpp" />
+    <ClCompile Include="DForbiddenUpd.cpp" />
+    <ClCompile Include="DHerstWahl.cpp" />
+    <ClCompile Include="DHPCallin.cpp" />
+    <ClCompile Include="DHPLogon.cpp" />
+    <ClCompile Include="DHPMakeCall.cpp" />
+    <ClCompile Include="DIbtBranches.cpp" />
+    <ClCompile Include="DInfAnzAuft.cpp" />
+    <ClCompile Include="DInfoListe.cpp" />
+    <ClCompile Include="DInfoUpdZ.cpp" />
+    <ClCompile Include="DKndInf.cpp" />
+    <ClCompile Include="DKndWahl.cpp" />
+    <ClCompile Include="DKommiChange.cpp" />
+    <ClCompile Include="DKontrPwd.cpp" />
+    <ClCompile Include="DKritik.cpp" />
+    <ClCompile Include="DKritikAnz.cpp" />
+    <ClCompile Include="DKritikErf.cpp" />
+    <ClCompile Include="DKritikUpd.cpp" />
+    <ClCompile Include="DLagerrevision.cpp" />
+    <ClCompile Include="DMailControl.cpp" />
+    <ClCompile Include="DMailMessage.cpp" />
+    <ClCompile Include="DMailNew.cpp" />
+    <ClCompile Include="DNachlBearb.cpp" />
+    <ClCompile Include="DNewCallback.cpp" />
+    <ClCompile Include="DNewUserInfo.cpp" />
+    <ClCompile Include="DOffAuftr.cpp" />
+    <ClCompile Include="DOffenAuft.cpp" />
+    <ClCompile Include="DOrderInformation.cpp" />
+    <ClCompile Include="DOrderInformation1.cpp" />
+    <ClCompile Include="DOrderInformation2.cpp" />
+    <ClCompile Include="DOrderInformationDetails1.cpp" />
+    <ClCompile Include="DOrderInformationDetails2.cpp" />
+    <ClCompile Include="DOrderInformationDetails3.cpp" />
+    <ClCompile Include="DOrderInformationDetails4.cpp" />
+    <ClCompile Include="DOrderInformationDetails5.cpp" />
+    <ClCompile Include="DOrderPeriod.cpp" />
+    <ClCompile Include="DOrderPeriodChg.cpp" />
+    <ClCompile Include="DOrderTypeManager.cpp" />
+    <ClCompile Include="DParAufArt.cpp" />
+    <ClCompile Include="DParAufBearb.cpp" />
+    <ClCompile Include="DParAufBearbErg.cpp" />
+    <ClCompile Include="DParAuftrEndZeit.cpp" />
+    <ClCompile Include="DParBuchArt.cpp" />
+    <ClCompile Include="DParKaBaKomb.cpp" />
+    <ClCompile Include="DParKoBehTyp.cpp" />
+    <ClCompile Include="DParKomArt.cpp" />
+    <ClCompile Include="DParKondGrp.cpp" />
+    <ClCompile Include="DParNachart.cpp" />
+    <ClCompile Include="DPlanAbweichung.cpp" />
+    <ClCompile Include="DPlanTag.cpp" />
+    <ClCompile Include="DProductPromo.cpp" />
+    <ClCompile Include="DPromoBuch.cpp" />
+    <ClCompile Include="DPromoQuota.cpp" />
+    <ClCompile Include="DPromotionen.cpp" />
+    <ClCompile Include="DPromoWahl.cpp" />
+    <ClCompile Include="DProtNachLief.cpp" />
+    <ClCompile Include="DQuotaKlasse.cpp" />
+    <ClCompile Include="DQuotaSum.cpp" />
+    <ClCompile Include="DRabattOrder.cpp" />
+    <ClCompile Include="DRangeDetails.cpp" />
+    <ClCompile Include="DRechteAa.cpp" />
+    <ClCompile Include="DReimport.cpp" />
+    <ClCompile Include="DReservationConfig.cpp" />
+    <ClCompile Include="DReserve.cpp" />
+    <ClCompile Include="DReserveAnz.cpp" />
+    <ClCompile Include="DRODefine.cpp" />
+    <ClCompile Include="DRoutBack.cpp" />
+    <ClCompile Include="DRrMessage.cpp" />
+    <ClCompile Include="DRrNotDone.cpp" />
+    <ClCompile Include="DRrShift.cpp" />
+    <ClCompile Include="DRrUnlock.cpp" />
+    <ClCompile Include="DSammelArt.cpp" />
+    <ClCompile Include="DSammelAufDef.cpp" />
+    <ClCompile Include="DSammelKnd.cpp" />
+    <ClCompile Include="DSeperateGrp.cpp" />
+    <ClCompile Include="DSeperateOrder.cpp" />
+    <ClCompile Include="DSeperatUpd.cpp" />
+    <ClCompile Include="DSepGrpCst.cpp" />
+    <ClCompile Include="DSeralog.cpp" />
+    <ClCompile Include="DServiceOrder.cpp" />
+    <ClCompile Include="DServicePos.cpp" />
+    <ClCompile Include="DServiceZinsen.cpp" />
+    <ClCompile Include="DShowProforma.cpp" />
+    <ClCompile Include="DShowRanges.cpp" />
+    <ClCompile Include="DSonderFahrt.cpp" />
+    <ClCompile Include="DSonderTouren.cpp" />
+    <ClCompile Include="DSprachAuswahl.cpp" />
+    <ClCompile Include="DStellerAnz.cpp" />
+    <ClCompile Include="DStockEntry.cpp" />
+    <ClCompile Include="DSubTypeSettings.cpp" />
+    <ClCompile Include="DSubTypesSettings.cpp" />
+    <ClCompile Include="DTelListUpd.cpp" />
+    <ClCompile Include="DTelNr.cpp" />
+    <ClCompile Include="DTenderOrder.cpp" />
+    <ClCompile Include="DTenderWahl.cpp" />
+    <ClCompile Include="DTourAnz.cpp" />
+    <ClCompile Include="DTourAusw.cpp" />
+    <ClCompile Include="DTourBearb.cpp" />
+    <ClCompile Include="DTourEtAend.cpp" />
+    <ClCompile Include="DTourSperr.cpp" />
+    <ClCompile Include="DTourUpd.cpp" />
+    <ClCompile Include="DUmsHercode.cpp" />
+    <ClCompile Include="DUpdDivision.cpp" />
+    <ClCompile Include="DUpdNachl.cpp" />
+    <ClCompile Include="DUpdPartner.cpp" />
+    <ClCompile Include="DUpdReason.cpp" />
+    <ClCompile Include="DUpdTime.cpp" />
+    <ClCompile Include="DUserInfo.cpp" />
+    <ClCompile Include="DVaVerbund.cpp" />
+    <ClCompile Include="DVbBuchen.cpp" />
+    <ClCompile Include="DVbLief.cpp" />
+    <ClCompile Include="DVerbBestaet.cpp" />
+    <ClCompile Include="DViewCstBranchInfo.cpp" />
+    <ClCompile Include="DViewKnd.cpp" />
+    <ClCompile Include="DViewPos.cpp" />
+    <ClCompile Include="DViewRabs.cpp" />
+    <ClCompile Include="DWannauswahl.cpp" />
+    <ClCompile Include="DWirkGruppe.cpp" />
+    <ClCompile Include="DZeitart.cpp" />
+    <ClCompile Include="EditDate.cpp" />
+    <ClCompile Include="EditTime.cpp" />
+    <ClCompile Include="Entsperr.cpp" />
+    <ClCompile Include="FCOrders.cpp" />
+    <ClCompile Include="IBTListctrl.cpp" />
+    <ClCompile Include="KCListctrl.cpp" />
+    <ClCompile Include="LetterMan.cpp" />
+    <ClCompile Include="ListCtrlHelper.cpp" />
+    <ClCompile Include="MainFrm.cpp" />
+    <ClCompile Include="MAufDef.cpp" />
+    <ClCompile Include="NMDProgress.cpp" />
+    <ClCompile Include="NMDText.cpp" />
+    <ClCompile Include="OrderPeriodData.cpp" />
+    <ClCompile Include="OrderType.cpp" />
+    <ClCompile Include="OrderTypeModel.cpp" />
+    <ClCompile Include="PageBrowser.cpp" />
+    <ClCompile Include="PageTabCtrl.cpp" />
+    <ClCompile Include="PageTabCtrlMultiLang.cpp" />
+    <ClCompile Include="ParameterChanges.cpp" />
+    <ClCompile Include="PCmn.cpp" />
+    <ClCompile Include="PLocalOptions.cpp" />
+    <ClCompile Include="PMListctrl.cpp" />
+    <ClCompile Include="ppCallPlanDeviceCheck.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='DebugHipathNew|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='DebugHipathNew|Win32'">pp_pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='DebugHipathNew|Win32'">./$(OutDir)pp.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">pp_pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">./$(OutDir)pp.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='ReleaseHipathNew|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='ReleaseHipathNew|Win32'">pp_pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='ReleaseHipathNew|Win32'">./$(OutDir)pp.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">pp_pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">./$(OutDir)pp.pch</PrecompiledHeaderOutputFile>
+    </ClCompile>
+    <ClCompile Include="ppCallPlanDeviceMaintenance.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='DebugHipathNew|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='DebugHipathNew|Win32'">pp_pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='DebugHipathNew|Win32'">./$(OutDir)pp.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">pp_pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">./$(OutDir)pp.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='ReleaseHipathNew|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='ReleaseHipathNew|Win32'">pp_pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='ReleaseHipathNew|Win32'">./$(OutDir)pp.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">pp_pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">./$(OutDir)pp.pch</PrecompiledHeaderOutputFile>
+    </ClCompile>
+    <ClCompile Include="ppCallPlanLoad.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='DebugHipathNew|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='DebugHipathNew|Win32'">pp_pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='DebugHipathNew|Win32'">./$(OutDir)pp.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">pp_pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">./$(OutDir)pp.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='ReleaseHipathNew|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='ReleaseHipathNew|Win32'">pp_pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='ReleaseHipathNew|Win32'">./$(OutDir)pp.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">pp_pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">./$(OutDir)pp.pch</PrecompiledHeaderOutputFile>
+    </ClCompile>
+    <ClCompile Include="ppCallPlanParameter.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='DebugHipathNew|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='DebugHipathNew|Win32'">pp_pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='DebugHipathNew|Win32'">./$(OutDir)pp.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">pp_pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">./$(OutDir)pp.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='ReleaseHipathNew|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='ReleaseHipathNew|Win32'">pp_pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='ReleaseHipathNew|Win32'">./$(OutDir)pp.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">pp_pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">./$(OutDir)pp.pch</PrecompiledHeaderOutputFile>
+    </ClCompile>
+    <ClCompile Include="ppCallPlanUndertake.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='DebugHipathNew|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='DebugHipathNew|Win32'">pp_pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='DebugHipathNew|Win32'">./$(OutDir)pp.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">pp_pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">./$(OutDir)pp.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='ReleaseHipathNew|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='ReleaseHipathNew|Win32'">pp_pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='ReleaseHipathNew|Win32'">./$(OutDir)pp.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">pp_pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">./$(OutDir)pp.pch</PrecompiledHeaderOutputFile>
+    </ClCompile>
+    <ClCompile Include="ppCheckOrderExist.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='DebugHipathNew|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='DebugHipathNew|Win32'">pp_pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='DebugHipathNew|Win32'">./$(OutDir)pp.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">pp_pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">./$(OutDir)pp.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='ReleaseHipathNew|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='ReleaseHipathNew|Win32'">pp_pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='ReleaseHipathNew|Win32'">./$(OutDir)pp.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">pp_pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">./$(OutDir)pp.pch</PrecompiledHeaderOutputFile>
+    </ClCompile>
+    <ClCompile Include="ppCheckRecallProcess.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='DebugHipathNew|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='DebugHipathNew|Win32'">pp_pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='DebugHipathNew|Win32'">./$(OutDir)pp.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">pp_pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">./$(OutDir)pp.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='ReleaseHipathNew|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='ReleaseHipathNew|Win32'">pp_pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='ReleaseHipathNew|Win32'">./$(OutDir)pp.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">pp_pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">./$(OutDir)pp.pch</PrecompiledHeaderOutputFile>
+    </ClCompile>
+    <ClCompile Include="ppCustomerCallPlan.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='DebugHipathNew|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='DebugHipathNew|Win32'">pp_pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='DebugHipathNew|Win32'">./$(OutDir)pp.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">pp_pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">./$(OutDir)pp.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='ReleaseHipathNew|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='ReleaseHipathNew|Win32'">pp_pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='ReleaseHipathNew|Win32'">./$(OutDir)pp.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">pp_pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">./$(OutDir)pp.pch</PrecompiledHeaderOutputFile>
+    </ClCompile>
+    <ClCompile Include="ppCustomerCallPlanDay.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='DebugHipathNew|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='DebugHipathNew|Win32'">pp_pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='DebugHipathNew|Win32'">./$(OutDir)pp.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">pp_pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">./$(OutDir)pp.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='ReleaseHipathNew|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='ReleaseHipathNew|Win32'">pp_pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='ReleaseHipathNew|Win32'">./$(OutDir)pp.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">pp_pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">./$(OutDir)pp.pch</PrecompiledHeaderOutputFile>
+    </ClCompile>
+    <ClCompile Include="ppCustomerCallPlanDayHist.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='DebugHipathNew|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='DebugHipathNew|Win32'">pp_pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='DebugHipathNew|Win32'">./$(OutDir)pp.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">pp_pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">./$(OutDir)pp.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='ReleaseHipathNew|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='ReleaseHipathNew|Win32'">pp_pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='ReleaseHipathNew|Win32'">./$(OutDir)pp.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">pp_pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">./$(OutDir)pp.pch</PrecompiledHeaderOutputFile>
+    </ClCompile>
+    <ClCompile Include="ppCustomerCallPlanTour.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='DebugHipathNew|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='DebugHipathNew|Win32'">pp_pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='DebugHipathNew|Win32'">./$(OutDir)pp.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">pp_pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">./$(OutDir)pp.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='ReleaseHipathNew|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='ReleaseHipathNew|Win32'">pp_pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='ReleaseHipathNew|Win32'">./$(OutDir)pp.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">pp_pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">./$(OutDir)pp.pch</PrecompiledHeaderOutputFile>
+    </ClCompile>
+    <ClCompile Include="ppCustomerDisplay.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='DebugHipathNew|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='DebugHipathNew|Win32'">pp_pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='DebugHipathNew|Win32'">./$(OutDir)pp.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">pp_pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">./$(OutDir)pp.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='ReleaseHipathNew|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='ReleaseHipathNew|Win32'">pp_pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='ReleaseHipathNew|Win32'">./$(OutDir)pp.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">pp_pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">./$(OutDir)pp.pch</PrecompiledHeaderOutputFile>
+    </ClCompile>
+    <ClCompile Include="ppCustomerEmergencyServicePlan.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='DebugHipathNew|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='DebugHipathNew|Win32'">pp_pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='DebugHipathNew|Win32'">./$(OutDir)pp.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">pp_pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">./$(OutDir)pp.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='ReleaseHipathNew|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='ReleaseHipathNew|Win32'">pp_pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='ReleaseHipathNew|Win32'">./$(OutDir)pp.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">pp_pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">./$(OutDir)pp.pch</PrecompiledHeaderOutputFile>
+    </ClCompile>
+    <ClCompile Include="ppCustomerVacation.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='DebugHipathNew|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='DebugHipathNew|Win32'">pp_pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='DebugHipathNew|Win32'">./$(OutDir)pp.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">pp_pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">./$(OutDir)pp.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='ReleaseHipathNew|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='ReleaseHipathNew|Win32'">pp_pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='ReleaseHipathNew|Win32'">./$(OutDir)pp.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">pp_pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">./$(OutDir)pp.pch</PrecompiledHeaderOutputFile>
+    </ClCompile>
+    <ClCompile Include="ppDataTypes.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='ReleaseHipathNew|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='DebugHipathNew|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="ppDCallPlanDeviceCheck.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='DebugHipathNew|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='DebugHipathNew|Win32'">pp_pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='DebugHipathNew|Win32'">./$(OutDir)pp.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">pp_pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">./$(OutDir)pp.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='ReleaseHipathNew|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='ReleaseHipathNew|Win32'">pp_pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='ReleaseHipathNew|Win32'">./$(OutDir)pp.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">pp_pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">./$(OutDir)pp.pch</PrecompiledHeaderOutputFile>
+    </ClCompile>
+    <ClCompile Include="ppDCallPlanDeviceMaintenance.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='DebugHipathNew|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='DebugHipathNew|Win32'">pp_pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='DebugHipathNew|Win32'">./$(OutDir)pp.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">pp_pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">./$(OutDir)pp.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='ReleaseHipathNew|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='ReleaseHipathNew|Win32'">pp_pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='ReleaseHipathNew|Win32'">./$(OutDir)pp.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">pp_pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">./$(OutDir)pp.pch</PrecompiledHeaderOutputFile>
+    </ClCompile>
+    <ClCompile Include="ppDCallPlanLoad.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='DebugHipathNew|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='DebugHipathNew|Win32'">pp_pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='DebugHipathNew|Win32'">./$(OutDir)pp.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">pp_pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">./$(OutDir)pp.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='ReleaseHipathNew|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='ReleaseHipathNew|Win32'">pp_pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='ReleaseHipathNew|Win32'">./$(OutDir)pp.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">pp_pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">./$(OutDir)pp.pch</PrecompiledHeaderOutputFile>
+    </ClCompile>
+    <ClCompile Include="ppDCallPlanParameter.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='DebugHipathNew|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='DebugHipathNew|Win32'">pp_pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='DebugHipathNew|Win32'">./$(OutDir)pp.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">pp_pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">./$(OutDir)pp.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='ReleaseHipathNew|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='ReleaseHipathNew|Win32'">pp_pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='ReleaseHipathNew|Win32'">./$(OutDir)pp.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">pp_pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">./$(OutDir)pp.pch</PrecompiledHeaderOutputFile>
+    </ClCompile>
+    <ClCompile Include="ppDCheckOrderExist.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='DebugHipathNew|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='DebugHipathNew|Win32'">pp_pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='DebugHipathNew|Win32'">./$(OutDir)pp.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">pp_pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">./$(OutDir)pp.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='ReleaseHipathNew|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='ReleaseHipathNew|Win32'">pp_pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='ReleaseHipathNew|Win32'">./$(OutDir)pp.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">pp_pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">./$(OutDir)pp.pch</PrecompiledHeaderOutputFile>
+    </ClCompile>
+    <ClCompile Include="ppDCustomerCallPlan.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='DebugHipathNew|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='DebugHipathNew|Win32'">pp_pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='DebugHipathNew|Win32'">./$(OutDir)pp.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">pp_pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">./$(OutDir)pp.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='ReleaseHipathNew|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='ReleaseHipathNew|Win32'">pp_pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='ReleaseHipathNew|Win32'">./$(OutDir)pp.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">pp_pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">./$(OutDir)pp.pch</PrecompiledHeaderOutputFile>
+    </ClCompile>
+    <ClCompile Include="ppDCustomerCallPlanDay.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='DebugHipathNew|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='DebugHipathNew|Win32'">pp_pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='DebugHipathNew|Win32'">./$(OutDir)pp.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">pp_pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">./$(OutDir)pp.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='ReleaseHipathNew|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='ReleaseHipathNew|Win32'">pp_pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='ReleaseHipathNew|Win32'">./$(OutDir)pp.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">pp_pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">./$(OutDir)pp.pch</PrecompiledHeaderOutputFile>
+    </ClCompile>
+    <ClCompile Include="ppDCustomerCallPlanDayHist.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='DebugHipathNew|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='DebugHipathNew|Win32'">pp_pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='DebugHipathNew|Win32'">./$(OutDir)pp.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">pp_pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">./$(OutDir)pp.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='ReleaseHipathNew|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='ReleaseHipathNew|Win32'">pp_pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='ReleaseHipathNew|Win32'">./$(OutDir)pp.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">pp_pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">./$(OutDir)pp.pch</PrecompiledHeaderOutputFile>
+    </ClCompile>
+    <ClCompile Include="ppDCustomerCallPlanTour.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='DebugHipathNew|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='DebugHipathNew|Win32'">pp_pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='DebugHipathNew|Win32'">./$(OutDir)pp.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">pp_pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">./$(OutDir)pp.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='ReleaseHipathNew|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='ReleaseHipathNew|Win32'">pp_pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='ReleaseHipathNew|Win32'">./$(OutDir)pp.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">pp_pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">./$(OutDir)pp.pch</PrecompiledHeaderOutputFile>
+    </ClCompile>
+    <ClCompile Include="ppDCustomerDisplay.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='DebugHipathNew|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='DebugHipathNew|Win32'">pp_pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='DebugHipathNew|Win32'">./$(OutDir)pp.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">pp_pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">./$(OutDir)pp.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='ReleaseHipathNew|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='ReleaseHipathNew|Win32'">pp_pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='ReleaseHipathNew|Win32'">./$(OutDir)pp.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">pp_pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">./$(OutDir)pp.pch</PrecompiledHeaderOutputFile>
+    </ClCompile>
+    <ClCompile Include="ppDCustomerEmergencyServicePlan.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='DebugHipathNew|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='DebugHipathNew|Win32'">pp_pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='DebugHipathNew|Win32'">./$(OutDir)pp.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">pp_pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">./$(OutDir)pp.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='ReleaseHipathNew|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='ReleaseHipathNew|Win32'">pp_pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='ReleaseHipathNew|Win32'">./$(OutDir)pp.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">pp_pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">./$(OutDir)pp.pch</PrecompiledHeaderOutputFile>
+    </ClCompile>
+    <ClCompile Include="ppDCustomerVacation.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='DebugHipathNew|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='DebugHipathNew|Win32'">pp_pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='DebugHipathNew|Win32'">./$(OutDir)pp.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">pp_pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">./$(OutDir)pp.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='ReleaseHipathNew|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='ReleaseHipathNew|Win32'">pp_pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='ReleaseHipathNew|Win32'">./$(OutDir)pp.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">pp_pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">./$(OutDir)pp.pch</PrecompiledHeaderOutputFile>
+    </ClCompile>
+    <ClCompile Include="ppDRegion.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='DebugHipathNew|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='DebugHipathNew|Win32'">pp_pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='DebugHipathNew|Win32'">./$(OutDir)pp.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">pp_pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">./$(OutDir)pp.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='ReleaseHipathNew|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='ReleaseHipathNew|Win32'">pp_pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='ReleaseHipathNew|Win32'">./$(OutDir)pp.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">pp_pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">./$(OutDir)pp.pch</PrecompiledHeaderOutputFile>
+    </ClCompile>
+    <ClCompile Include="ppError.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='ReleaseHipathNew|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='DebugHipathNew|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="PPListctrl.cpp" />
+    <ClCompile Include="ppPrint.cpp" />
+    <ClCompile Include="ppRegion.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='ReleaseHipathNew|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='DebugHipathNew|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="ppSaleCenter.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='ReleaseHipathNew|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='DebugHipathNew|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="ppTime.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='ReleaseHipathNew|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='DebugHipathNew|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="pp_pch.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">pp_pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OutDir)pp.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='DebugHipathNew|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='DebugHipathNew|Win32'">pp_pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='DebugHipathNew|Win32'">$(OutDir)pp.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">pp_pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\WinRel/pp.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='ReleaseHipathNew|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='ReleaseHipathNew|Win32'">pp_pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='ReleaseHipathNew|Win32'">$(IntDir)pp.pch</PrecompiledHeaderOutputFile>
+    </ClCompile>
+    <ClCompile Include="PriceType.cpp" />
+    <ClCompile Include="PRListctrl.cpp" />
+    <ClCompile Include="ProCenter.cpp" />
+    <ClCompile Include="q_crypt.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='ReleaseHipathNew|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='DebugHipathNew|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="RangeListctrl.cpp" />
+    <ClCompile Include="ROListctrl.cpp" />
+    <ClCompile Include="SalesBindingListCtrl.cpp" />
+    <ClCompile Include="ServiceListctrl.cpp" />
+    <ClCompile Include="SOListctrl.cpp" />
+    <ClCompile Include="SplashWnd.cpp" />
+    <ClCompile Include="StaticBmp.cpp" />
+    <ClCompile Include="StaticRun.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='DebugHipathNew|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='ReleaseHipathNew|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <MultiProcessorCompilation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</MultiProcessorCompilation>
+    </ClCompile>
+    <ClCompile Include="TabPage.cpp" />
+    <ClCompile Include="TabPageMultiLang.cpp" />
+    <ClCompile Include="timeformatter.cpp" />
+    <ClCompile Include="timevalidator.cpp" />
+    <ClCompile Include="TListctrl.cpp" />
+    <ClCompile Include="TourListctrl.cpp" />
+    <ClCompile Include="VacationListctrl.cpp" />
+    <ClCompile Include="Weekday.cpp" />
+    <ClCompile Include="WeLaEk.cpp" />
+    <ClCompile Include="DShowRebates.cpp" />
+    <ClCompile Include="DCremaMail.cpp" />
+    <ClCompile Include="yesnoformatter.cpp" />
+    <ClCompile Include="yesnovalidator.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="AE.RC">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='DebugHipathNew|Win32'">$(SolutionDir)ae;$(OUTDIR);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)ae;$(OUTDIR);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='ReleaseHipathNew|Win32'">$(SolutionDir)ae;$(OUTDIR);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)ae;$(OUTDIR);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="aaclasses.h" />
+    <ClInclude Include="AboutDlg.h" />
+    <ClInclude Include="ae.h" />
+    <ClInclude Include="AeAppProperty.h" />
+    <ClInclude Include="aeconnection.h" />
+    <ClInclude Include="AeCopyCSV.h" />
+    <ClInclude Include="AeDoc.h" />
+    <ClInclude Include="AeFax.h" />
+    <ClInclude Include="AeFView.h" />
+    <ClInclude Include="AeKndNachl.h" />
+    <ClInclude Include="AeLogging.h" />
+    <ClInclude Include="AeAppModel.h" />
+    <ClInclude Include="AeOutputs.h" />
+    <ClInclude Include="AeAppPresenter.h" />
+    <ClInclude Include="ArtInfData.h" />
+    <ClInclude Include="CallbackStatusManager.h" />
+    <ClInclude Include="CDeleteReservation.h" />
+    <ClInclude Include="Client_Server\aarufpl.h" />
+    <ClInclude Include="Client_Server\aatour.h" />
+    <ClInclude Include="Client_Server\aepwd.h" />
+    <ClInclude Include="Client_Server\cprztype.h" />
+    <ClInclude Include="Client_Server\dadedb.h" />
+    <ClInclude Include="Client_Server\druckpara.h" />
+    <ClInclude Include="Client_Server\invoicesettings.h" />
+    <ClInclude Include="Client_Server\koplist.h" />
+    <ClInclude Include="Client_Server\nachlprot.h" />
+    <ClInclude Include="Client_Server\ordervalues.h" />
+    <ClInclude Include="Client_Server\rabattorder.h" />
+    <ClInclude Include="Client_Server\rangelist.h" />
+    <ClInclude Include="Client_Server\rebateprice.h" />
+    <ClInclude Include="Client_Server\seralog.h" />
+    <ClInclude Include="Client_Server\tm.h" />
+    <ClInclude Include="Client_Server\usertexte.h" />
+    <ClInclude Include="Client_Server\vbcount.h" />
+    <ClInclude Include="Client_Server\vblief.h" />
+    <ClInclude Include="Client_Server\verbundbestand.h" />
+    <ClInclude Include="Client_Server\zeitart.h" />
+    <ClInclude Include="ColumnsTypes.h" />
+    <ClInclude Include="Country.h" />
+    <ClInclude Include="DAeStatusAe.h" />
+    <ClInclude Include="aetexte.h" />
+    <ClInclude Include="AeTrace.h" />
+    <ClInclude Include="AeUser.h" />
+    <ClInclude Include="AeView.h" />
+    <ClInclude Include="AIListctrl.h" />
+    <ClInclude Include="allg.h" />
+    <ClInclude Include="AltFil.h" />
+    <ClInclude Include="ArtNotFound.h" />
+    <ClInclude Include="AufInfListctrl.h" />
+    <ClInclude Include="CPCallPlanChangeData.h" />
+    <ClInclude Include="CPCallPlanLoad.h" />
+    <ClInclude Include="CPCallPlanLoadListe.h" />
+    <ClInclude Include="CPCallPlanMaintenance.h" />
+    <ClInclude Include="CPCallPlanUndertake.h" />
+    <ClInclude Include="CPCustomerProperties.h" />
+    <ClInclude Include="CPCustomerTelNo.h" />
+    <ClInclude Include="CPPACallPlanDay.h" />
+    <ClInclude Include="CPRegionMaintenance.h" />
+    <ClInclude Include="CUCustomerTimes.h" />
+    <ClInclude Include="CUServicePlan.h" />
+    <ClInclude Include="CustomerGroups.h" />
+    <ClInclude Include="CUVacation.h" />
+    <ClInclude Include="DAeAnzFeiertage.h" />
+    <ClInclude Include="DAeAnzFrText.h" />
+    <ClInclude Include="DAeArtVerbundFiliale.h" />
+    <ClInclude Include="DAeCollOrderGrp.h" />
+    <ClInclude Include="DAeCSVImport.h" />
+    <ClInclude Include="DAeCSVImportLog.h" />
+    <ClInclude Include="DAeKundeVerbundFiliale.h" />
+    <ClInclude Include="DAeMailUser.h" />
+    <ClInclude Include="DAendFil.h" />
+    <ClInclude Include="DAeNotdienst.h" />
+    <ClInclude Include="DAeSammelAuft.h" />
+    <ClInclude Include="DAeUpdFeiertage.h" />
+    <ClInclude Include="DAltArt.h" />
+    <ClInclude Include="DAnzAeUser.h" />
+    <ClInclude Include="DArtDef.h" />
+    <ClInclude Include="DArtikelkonto.h" />
+    <ClInclude Include="DArtikelQuota.h" />
+    <ClInclude Include="DArtInf.h" />
+    <ClInclude Include="DataQueryHelper.h" />
+    <ClInclude Include="DataTypeHelper.h" />
+    <ClInclude Include="dateformatter.h" />
+    <ClInclude Include="datevalidator.h" />
+    <ClInclude Include="DAttachPartner.h" />
+    <ClInclude Include="DAufAuswahl.h" />
+    <ClInclude Include="DAufBear.h" />
+    <ClInclude Include="DAufDef.h" />
+    <ClInclude Include="DAufDefImpl.h" />
+    <ClInclude Include="DAufEnd.h" />
+    <ClInclude Include="DAufFrText.h" />
+    <ClInclude Include="DAufInf.h" />
+    <ClInclude Include="DAuftragartKd.h" />
+    <ClInclude Include="DAuftrEreign.h" />
+    <ClInclude Include="DAufTxt.h" />
+    <ClInclude Include="DAufWerte.h" />
+    <ClInclude Include="DAufZlBearb.h" />
+    <ClInclude Include="DAutrStat.h" />
+    <ClInclude Include="DBackRouting.h" />
+    <ClInclude Include="DBeilage.h" />
+    <ClInclude Include="DBenKen.h" />
+    <ClInclude Include="DBenKenn.h" />
+    <ClInclude Include="DBenKennAend.h" />
+    <ClInclude Include="DBenVwtng.h" />
+    <ClInclude Include="DBePosBearb.h" />
+    <ClInclude Include="DBePosBearbData.h" />
+    <ClInclude Include="DBePosBearbModel.h" />
+    <ClInclude Include="DBePosBearbModelIF.h" />
+    <ClInclude Include="DBePosBearbPresenter.h" />
+    <ClInclude Include="DBestSB.h" />
+    <ClInclude Include="DBranchInfo.h" />
+    <ClInclude Include="DBTMLicense.h" />
+    <ClInclude Include="DCallbackFetch.h" />
+    <ClInclude Include="DCallbackItem.h" />
+    <ClInclude Include="DCallbackReason.h" />
+    <ClInclude Include="DCallbackRemarkEdit.h" />
+    <ClInclude Include="DCallbackRemarks.h" />
+    <ClInclude Include="DCallbackUpd.h" />
+    <ClInclude Include="DCallbackWork.h" />
+    <ClInclude Include="DChangeTour.h" />
+    <ClInclude Include="DCheckNachl.h" />
+    <ClInclude Include="DCheckOpenCallOrOrder.h" />
+    <ClInclude Include="DChooseFiliale.h" />
+    <ClInclude Include="DCollectiveOrders.h" />
+    <ClInclude Include="DCollectiveOrdersDE.h" />
+    <ClInclude Include="DConnect.h" />
+    <ClInclude Include="DCountDown.h" />
+    <ClInclude Include="DCountrCodes.h" />
+    <ClInclude Include="DCountryUpd.h" />
+    <ClInclude Include="DCstBranchInfoUpd.h" />
+    <ClInclude Include="DCstTours.h" />
+    <ClInclude Include="DCSVFormat.h" />
+    <ClInclude Include="DCustomerOrderCheck.h" />
+    <ClInclude Include="DCustomerRouting.h" />
+    <ClInclude Include="DCustomerRouting_Upd.h" />
+    <ClInclude Include="DddSpecialList.h" />
+    <ClInclude Include="DddSpecialUpd.h" />
+    <ClInclude Include="DDealerUmsatz.h" />
+    <ClInclude Include="DDelayedArt.h" />
+    <ClInclude Include="DDelayedCst.h" />
+    <ClInclude Include="DDelayedCstAll.h" />
+    <ClInclude Include="DDelayedCstUpd.h" />
+    <ClInclude Include="DDistressRouting.h" />
+    <ClInclude Include="DDruckAuftrag.h" />
+    <ClInclude Include="DEncloserTimes.h" />
+    <ClInclude Include="DExtraFahrt.h" />
+    <ClInclude Include="DExtraTourReasons.h" />
+    <ClInclude Include="DFilialpartner.h" />
+    <ClInclude Include="DForbidden.h" />
+    <ClInclude Include="DForbiddenUpd.h" />
+    <ClInclude Include="DHerstWahl.h" />
+    <ClInclude Include="DHPCallin.h" />
+    <ClInclude Include="DHPLogon.h" />
+    <ClInclude Include="DHPMakeCall.h" />
+    <ClInclude Include="DIbtBranches.h" />
+    <ClInclude Include="DInfAnzAuft.h" />
+    <ClInclude Include="DInfoListe.h" />
+    <ClInclude Include="DInfoUpdZ.h" />
+    <ClInclude Include="DKndInf.h" />
+    <ClInclude Include="DKndWahl.h" />
+    <ClInclude Include="DKommiChange.h" />
+    <ClInclude Include="DKontrPwd.h" />
+    <ClInclude Include="DKritik.h" />
+    <ClInclude Include="DKritikAnz.h" />
+    <ClInclude Include="DKritikErf.h" />
+    <ClInclude Include="DKritikUpd.h" />
+    <ClInclude Include="DLagerrevision.h" />
+    <ClInclude Include="DMailControl.h" />
+    <ClInclude Include="DMailMessage.h" />
+    <ClInclude Include="DMailNew.h" />
+    <ClInclude Include="DNachlBearb.h" />
+    <ClInclude Include="DNewCallback.h" />
+    <ClInclude Include="DNewUserInfo.h" />
+    <ClInclude Include="DOffAuftr.h" />
+    <ClInclude Include="DOffenAuft.h" />
+    <ClInclude Include="DOrderInformation.h" />
+    <ClInclude Include="DOrderInformation1.h" />
+    <ClInclude Include="DOrderInformation2.h" />
+    <ClInclude Include="DOrderInformationDetails1.h" />
+    <ClInclude Include="DOrderInformationDetails2.h" />
+    <ClInclude Include="DOrderInformationDetails3.h" />
+    <ClInclude Include="DOrderInformationDetails4.h" />
+    <ClInclude Include="DOrderInformationDetails5.h" />
+    <ClInclude Include="DOrderPeriod.h" />
+    <ClInclude Include="DOrderPeriodChg.h" />
+    <ClInclude Include="DOrderTypeManager.h" />
+    <ClInclude Include="DParAufArt.h" />
+    <ClInclude Include="DParAufBearb.h" />
+    <ClInclude Include="DParAufBearbErg.h" />
+    <ClInclude Include="DParAuftrEndZeit.h" />
+    <ClInclude Include="DParBuchArt.h" />
+    <ClInclude Include="DParKaBaKomb.h" />
+    <ClInclude Include="DParKoBehTyp.h" />
+    <ClInclude Include="DParKomArt.h" />
+    <ClInclude Include="DParKondGrp.h" />
+    <ClInclude Include="DParNachart.h" />
+    <ClInclude Include="DPlanAbweichung.h" />
+    <ClInclude Include="DPlanTag.h" />
+    <ClInclude Include="DProductPromo.h" />
+    <ClInclude Include="DPromoBuch.h" />
+    <ClInclude Include="DPromoQuota.h" />
+    <ClInclude Include="DPromotionen.h" />
+    <ClInclude Include="DPromoWahl.h" />
+    <ClInclude Include="DProtNachLief.h" />
+    <ClInclude Include="DQuotaKlasse.h" />
+    <ClInclude Include="DQuotaSum.h" />
+    <ClInclude Include="DRabattOrder.h" />
+    <ClInclude Include="DRangeDetails.h" />
+    <ClInclude Include="DRechteAa.h" />
+    <ClInclude Include="DReimport.h" />
+    <ClInclude Include="DReservationConfig.h" />
+    <ClInclude Include="DReserve.h" />
+    <ClInclude Include="DReserveAnz.h" />
+    <ClInclude Include="DRODefine.h" />
+    <ClInclude Include="DRoutBack.h" />
+    <ClInclude Include="DRrMessage.h" />
+    <ClInclude Include="DRrNotDone.h" />
+    <ClInclude Include="DRrShift.h" />
+    <ClInclude Include="DRrUnlock.h" />
+    <ClInclude Include="DSammelArt.h" />
+    <ClInclude Include="DSammelAufDef.h" />
+    <ClInclude Include="DSammelKnd.h" />
+    <ClInclude Include="DSeperateGrp.h" />
+    <ClInclude Include="DSeperateOrder.h" />
+    <ClInclude Include="DSeperatUpd.h" />
+    <ClInclude Include="DSepGrpCst.h" />
+    <ClInclude Include="DSeralog.h" />
+    <ClInclude Include="DServiceOrder.h" />
+    <ClInclude Include="DServicePos.h" />
+    <ClInclude Include="DServiceZinsen.h" />
+    <ClInclude Include="DShowProforma.h" />
+    <ClInclude Include="DShowRanges.h" />
+    <ClInclude Include="DSonderFahrt.h" />
+    <ClInclude Include="DSonderTouren.h" />
+    <ClInclude Include="DSprachAuswahl.h" />
+    <ClInclude Include="DStellerAnz.h" />
+    <ClInclude Include="DStockEntry.h" />
+    <ClInclude Include="DSubTypeSettings.h" />
+    <ClInclude Include="DSubTypesSettings.h" />
+    <ClInclude Include="DTelListUpd.h" />
+    <ClInclude Include="DTelNr.h" />
+    <ClInclude Include="DTenderOrder.h" />
+    <ClInclude Include="DTenderWahl.h" />
+    <ClInclude Include="DTourAnz.h" />
+    <ClInclude Include="DTourAusw.h" />
+    <ClInclude Include="DTourBearb.h" />
+    <ClInclude Include="DTourEtAend.h" />
+    <ClInclude Include="DTourSperr.h" />
+    <ClInclude Include="DTourUpd.h" />
+    <ClInclude Include="DUmsHercode.h" />
+    <ClInclude Include="DUpdDivision.h" />
+    <ClInclude Include="DUpdNachl.h" />
+    <ClInclude Include="DUpdPartner.h" />
+    <ClInclude Include="DUpdReason.h" />
+    <ClInclude Include="DUpdTime.h" />
+    <ClInclude Include="DUserInfo.h" />
+    <ClInclude Include="DVaVerbund.h" />
+    <ClInclude Include="DVbBuchen.h" />
+    <ClInclude Include="DVbLief.h" />
+    <ClInclude Include="DVerbBestaet.h" />
+    <ClInclude Include="DViewCstBranchInfo.h" />
+    <ClInclude Include="DViewKnd.h" />
+    <ClInclude Include="DViewPos.h" />
+    <ClInclude Include="DViewRabs.h" />
+    <ClInclude Include="DWannauswahl.h" />
+    <ClInclude Include="DWirkGruppe.h" />
+    <ClInclude Include="DZeitart.h" />
+    <ClInclude Include="EditDate.h" />
+    <ClInclude Include="Entsperr.h" />
+    <ClInclude Include="FCOrders.h" />
+    <ClInclude Include="GetNextPhoneCall.h" />
+    <ClInclude Include="IAeAppModel.h" />
+    <ClInclude Include="IBTListctrl.h" />
+    <ClInclude Include="IBTListctrlDefines.h" />
+    <ClInclude Include="IOrderTypeModel.h" />
+    <ClInclude Include="KCListctrl.h" />
+    <ClInclude Include="LetterMan.h" />
+    <ClInclude Include="ListCtrlHelper.h" />
+    <ClInclude Include="MainFrm.h" />
+    <ClInclude Include="allgfktn.h" />
+    <ClInclude Include="MAufDef.h" />
+    <ClInclude Include="NMDProgress.h" />
+    <ClInclude Include="NMDText.h" />
+    <ClInclude Include="OrderPeriodData.h" />
+    <ClInclude Include="OrderType.h" />
+    <ClInclude Include="OrderTypeModel.h" />
+    <ClInclude Include="PageBrowser.h" />
+    <ClInclude Include="PageTabCtrl.h" />
+    <ClInclude Include="PageTabCtrlMultiLang.h" />
+    <ClInclude Include="ParameterChanges.h" />
+    <ClInclude Include="PCmn.h" />
+    <ClInclude Include="PLocalOptions.h" />
+    <ClInclude Include="PMListctrl.h" />
+    <ClInclude Include="ppCallPlanDeviceCheck.h" />
+    <ClInclude Include="ppCallPlanDeviceMaintenance.h" />
+    <ClInclude Include="ppCallPlanEvents.h" />
+    <ClInclude Include="ppCallPlanLoad.h" />
+    <ClInclude Include="ppCallPlanParameter.h" />
+    <ClInclude Include="ppCallPlanUndertake.h" />
+    <ClInclude Include="ppCheckOrderExist.h" />
+    <ClInclude Include="ppCheckRecallProcess.h" />
+    <ClInclude Include="ppCustomerCallPlan.h" />
+    <ClInclude Include="ppCustomerCallPlanDay.h" />
+    <ClInclude Include="ppCustomerCallPlanDayHist.h" />
+    <ClInclude Include="ppCustomerCallPlanTour.h" />
+    <ClInclude Include="ppCustomerDisplay.h" />
+    <ClInclude Include="ppCustomerEmergencyServicePlan.h" />
+    <ClInclude Include="ppCustomerTourplanDay.h" />
+    <ClInclude Include="ppCustomerVacation.h" />
+    <ClInclude Include="ppDataTypes.h" />
+    <ClInclude Include="ppError.h" />
+    <ClInclude Include="ppDadeScroll.h" />
+    <ClInclude Include="EditTime.h" />
+    <ClInclude Include="haustab.h" />
+    <ClInclude Include="PPListctrl.h" />
+    <ClInclude Include="pp_pch.h" />
+    <ClInclude Include="ppPrint.h" />
+    <ClInclude Include="ppRegion.h" />
+    <ClInclude Include="ppSaleCenter.h" />
+    <ClInclude Include="ppTime.h" />
+    <ClInclude Include="PriceType.h" />
+    <ClInclude Include="PRListctrl.h" />
+    <ClInclude Include="ProCenter.h" />
+    <ClInclude Include="Property.h" />
+    <ClInclude Include="RangeListctrl.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="ROListctrl.h" />
+    <ClInclude Include="SalesBindingListCtrl.h" />
+    <ClInclude Include="ServiceListctrl.h" />
+    <ClInclude Include="SOListctrl.h" />
+    <ClInclude Include="SplashWnd.h" />
+    <ClInclude Include="StaticBmp.h" />
+    <ClInclude Include="StaticRun.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="TabPage.h" />
+    <ClInclude Include="TabPageMultiLang.h" />
+    <ClInclude Include="texte.h" />
+    <ClInclude Include="timeformatter.h" />
+    <ClInclude Include="timevalidator.h" />
+    <ClInclude Include="TListctrl.h" />
+    <ClInclude Include="TourListctrl.h" />
+    <ClInclude Include="VacationListctrl.h" />
+    <ClInclude Include="version.h" />
+    <ClInclude Include="Weekday.h" />
+    <ClInclude Include="WeLaEk.h" />
+    <ClInclude Include="yesnoformatter.h" />
+    <ClInclude Include="yesnovalidator.h" />
+    <ClInclude Include="q_crypt.h" />
+    <ClInclude Include="DShowRebates.h" />
+    <ClInclude Include="DCremaMail.h" />
+    <ClInclude Include="idl\AE_i.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\ini\ACC\KSC.INI" />
+    <None Include="..\ini\KSC.ini" />
+    <None Include="..\ini\PROD\KSC.INI" />
+    <None Include="..\ini\TEST\KSC.INI" />
+    <None Include="multilang\aebg_source.txt" />
+    <None Include="multilang\aefr_fr.txt" />
+    <None Include="multilang\aefr_source.txt" />
+    <None Include="multilang\aehr_source.txt" />
+    <None Include="multilang\aers_source.txt" />
+    <None Include="multilang\ae_bg.txt" />
+    <None Include="multilang\ae_ch.txt" />
+    <None Include="multilang\ae_en.txt" />
+    <None Include="multilang\ae_fr.txt" />
+    <None Include="multilang\ae_hr.txt" />
+    <None Include="multilang\ae_rs.txt" />
+    <None Include="multilang\ppErrorMsg.000" />
+    <None Include="multilang\ppErrorMsg.001" />
+    <None Include="res\AA.ICO" />
+    <None Include="resource.hm" />
+    <None Include="res\ae.ico" />
+    <None Include="res\AE.RC2" />
+    <None Include="res\AE.rgs" />
+    <None Include="res\AEDOC.ICO" />
+    <None Include="res\BITGREEN.BMP" />
+    <None Include="res\BITMAP1.BMP" />
+    <None Include="res\BITMAP_A.BMP" />
+    <None Include="res\BITMAP_D.BMP" />
+    <None Include="res\BITMAP_F.BMP" />
+    <None Include="res\BITMAP_H.BMP" />
+    <None Include="res\BITMAP_I.BMP" />
+    <None Include="res\BITMAP_N.BMP" />
+    <None Include="res\BITMAP_S.BMP" />
+    <None Include="res\BITMAP_T.BMP" />
+    <None Include="res\BITMAP_V.BMP" />
+    <None Include="res\BITMAP_W.BMP" />
+    <None Include="res\BMP00001.BMP" />
+    <None Include="res\BMP00002.BMP" />
+    <None Include="res\BMP00003.BMP" />
+    <None Include="res\BMPWARN.BMP" />
+    <None Include="res\HINWEIS.BMP" />
+    <None Include="res\ICO00001.ICO" />
+    <None Include="res\ICO00002.ICO" />
+    <None Include="res\ICO00003.ICO" />
+    <None Include="res\ICO00004.ICO" />
+    <None Include="res\ICO00005.ICO" />
+    <None Include="res\ICO00006.ICO" />
+    <None Include="res\ICO00007.ICO" />
+    <None Include="res\ICO00008.ICO" />
+    <None Include="res\ICO00009.ICO" />
+    <None Include="res\ICO00010.ICO" />
+    <None Include="res\ICO00011.ICO" />
+    <None Include="res\ICO00012.ICO" />
+    <None Include="res\ICO00013.ICO" />
+    <None Include="res\ICO00014.ICO" />
+    <None Include="res\ICO00015.ICO" />
+    <None Include="res\ICO00016.ICO" />
+    <None Include="res\ICO00017.ICO" />
+    <None Include="res\ICO00018.ICO" />
+    <None Include="res\ICO00019.ICO" />
+    <None Include="res\ICO00020.ICO" />
+    <None Include="res\ICO00021.ICO" />
+    <None Include="res\ICO00022.ICO" />
+    <None Include="res\ico00023.ico" />
+    <None Include="res\ico00024.ico" />
+    <None Include="res\ico00025.ico" />
+    <None Include="res\ico00026.ico" />
+    <None Include="res\ico00027.ico" />
+    <None Include="res\ico00028.ico" />
+    <None Include="res\ico00029.ico" />
+    <None Include="res\ico00030.ico" />
+    <None Include="res\ico00031.ico" />
+    <None Include="res\ico00032.ico" />
+    <None Include="res\ico00033.ico" />
+    <None Include="res\ico00034.ico" />
+    <None Include="res\ico00035.ico" />
+    <None Include="res\ico00036.ico" />
+    <None Include="res\ico00037.ico" />
+    <None Include="res\ico00038.ico" />
+    <None Include="res\ico00039.ico" />
+    <None Include="res\ico00040.ico" />
+    <None Include="res\ico00041.ico" />
+    <None Include="res\ico00042.ico" />
+    <None Include="RES\ICO00043.ICO" />
+    <None Include="RES\ICO00044.ICO" />
+    <None Include="RES\ICO00045.ICO" />
+    <None Include="RES\ICO00046.ICO" />
+    <None Include="RES\ICO00047.ICO" />
+    <None Include="RES\ICO00048.ICO" />
+    <None Include="res\ICON1.ICO" />
+    <None Include="res\ICON2.ICO" />
+    <None Include="res\icon3.ico" />
+    <None Include="res\icon4.ico" />
+    <None Include="RES\ICON5.ICO" />
+    <None Include="RES\ICON6.ICO" />
+    <None Include="res\ICON_ACH.ICO" />
+    <None Include="res\ICON_ALP.ICO" />
+    <None Include="res\icon_cha.ico" />
+    <None Include="res\ICON_DOP.ICO" />
+    <None Include="RES\ICON_HQ.ICO" />
+    <None Include="RES\ICON_IBT_WAIT.ICO" />
+    <None Include="res\ICON_IS_.ICO" />
+    <None Include="res\icon_kue.ico" />
+    <None Include="res\icon_lag.ico" />
+    <None Include="res\ICON_NOA.ICO" />
+    <None Include="res\ICON_NOT.ICO" />
+    <None Include="res\icon_pts.ico" />
+    <None Include="res\icon_quo.ico" />
+    <None Include="res\ICON_TOU.ICO" />
+    <None Include="RES\ICON_WAI.ICO" />
+    <None Include="res\ICO_KUEHL_MITTEL.ICO" />
+    <None Include="res\ICO_KUEHL_ULTRA.ICO" />
+    <None Include="res\ICO_MDR.ICO" />
+    <None Include="res\ICO_TFG.ICO" />
+    <None Include="res\ProCenter.rgs" />
+    <None Include="res\SPLSH16.BMP" />
+    <None Include="res\TOOLBAR.BMP" />
+    <None Include="res\TOOLBAR1.BMP" />
+    <None Include="res\WAITIBT.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Midl Include="AE.idl">
+      <GenerateStublessProxies Condition="'$(Configuration)|$(Platform)'=='DebugHipathNew|Win32'">true</GenerateStublessProxies>
+      <HeaderFileName Condition="'$(Configuration)|$(Platform)'=='DebugHipathNew|Win32'">AE_i.h</HeaderFileName>
+      <InterfaceIdentifierFileName Condition="'$(Configuration)|$(Platform)'=='DebugHipathNew|Win32'">AE_i.c</InterfaceIdentifierFileName>
+      <GenerateStublessProxies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</GenerateStublessProxies>
+      <HeaderFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AE_i.h</HeaderFileName>
+      <InterfaceIdentifierFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AE_i.c</InterfaceIdentifierFileName>
+      <GenerateStublessProxies Condition="'$(Configuration)|$(Platform)'=='ReleaseHipathNew|Win32'">true</GenerateStublessProxies>
+      <HeaderFileName Condition="'$(Configuration)|$(Platform)'=='ReleaseHipathNew|Win32'">AE_i.h</HeaderFileName>
+      <InterfaceIdentifierFileName Condition="'$(Configuration)|$(Platform)'=='ReleaseHipathNew|Win32'">AE_i.c</InterfaceIdentifierFileName>
+      <GenerateStublessProxies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</GenerateStublessProxies>
+      <HeaderFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AE_i.h</HeaderFileName>
+      <InterfaceIdentifierFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AE_i.c</InterfaceIdentifierFileName>
+      <DllDataFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </DllDataFileName>
+      <TypeLibraryName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\$(OutDir)Ae.tlb</TypeLibraryName>
+      <OutputDirectory Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)idl</OutputDirectory>
+      <OutputDirectory Condition="'$(Configuration)|$(Platform)'=='DebugHipathNew|Win32'">$(ProjectDir)idl</OutputDirectory>
+      <OutputDirectory Condition="'$(Configuration)|$(Platform)'=='ReleaseHipathNew|Win32'">$(ProjectDir)idl</OutputDirectory>
+      <OutputDirectory Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ProjectDir)idl</OutputDirectory>
+      <TypeLibraryName Condition="'$(Configuration)|$(Platform)'=='DebugHipathNew|Win32'">..\$(OutDir)Ae.tlb</TypeLibraryName>
+      <TypeLibraryName Condition="'$(Configuration)|$(Platform)'=='ReleaseHipathNew|Win32'">..\$(OutDir)Ae.tlb</TypeLibraryName>
+      <TypeLibraryName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\$(OutDir)Ae.tlb</TypeLibraryName>
+    </Midl>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="Ae.rc" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

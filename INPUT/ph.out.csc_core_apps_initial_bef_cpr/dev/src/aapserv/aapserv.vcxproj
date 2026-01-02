@@ -1,0 +1,280 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{586680A8-5C59-4EDE-BD88-E1378D3F7EA4}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+    <RunCodeAnalysis Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</RunCodeAnalysis>
+    <RunCodeAnalysis Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</RunCodeAnalysis>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <EmbedManifest>false</EmbedManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <EmbedManifest>false</EmbedManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;__ONLY_DISTRIBUTE__;__CPLUS__;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <AdditionalIncludeDirectories>$(SolutionDir)cxxtools\include;$(SolutionDir)pxdb\include;$(SolutionDir)pxverbund\include;$(SolutionDir)libumk\include;$(SolutionDir)libcsc;$(SolutionDir)aapserv;$(SolutionDir)aapserv\win32dade;$(SolutionDir)..\ext\pplib\include;$(SolutionDir)..\ext\pplib\include\pplib;$(SolutionDir)..\ext\boost\include;$(SolutionDir)..\ext\ssuk\basar\include;$(SolutionDir)..\ext\log4cplus\include;$(SolutionDir)..\ext\liblockmanager\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <EnablePREfast>false</EnablePREfast>
+      <ProgramDataBaseFileName>$(TargetDir)$(TargetName).pdb</ProgramDataBaseFileName>
+      <DisableSpecificWarnings>4996</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)aapserv.pdb</ProgramDatabaseFile>
+      <SubSystem>Console</SubSystem>
+      <AdditionalLibraryDirectories>$(SolutionDir)..\ext\liblockmanager\lib\$(Configuration);$(SolutionDir)..\ext\cxxtools\lib\$(Configuration);$(SolutionDir)..\ext\pplib\lib\$(Configuration);$(SolutionDir)..\ext\tcaccess_libraries\lib\x86;$(SolutionDir)..\ext\hdatum\lib\$(Configuration);$(SolutionDir)..\ext\log4cplus\lib\$(Configuration);$(SolutionDir)..\ext\boost\lib;$(SolutionDir)..\ext\ssuk\basar\lib\$(Configuration);$(SolutionDir)$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>ws2_32.lib;Rpcrt4.lib;cxxtools.lib;liblockmanager.lib;tcaapi.lib;tca.lib;log4cplusd.lib;libbasarcmnutil.lib;libbasardbsql.lib;pxdb.lib;pxverbund.lib;libcsc.lib;aapservinf.lib;hdatum.lib;ppwin.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <IgnoreSpecificDefaultLibraries>MSVCRT;LIBCMTD</IgnoreSpecificDefaultLibraries>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;__ONLY_DISTRIBUTE__;__CPLUS__;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <AdditionalIncludeDirectories>$(SolutionDir)cxxtools\include;$(SolutionDir)pxdb\include;$(SolutionDir)pxverbund\include;$(SolutionDir)libumk\include;$(SolutionDir)libcsc;$(SolutionDir)aapserv;$(SolutionDir)aapserv\win32dade;$(SolutionDir)..\ext\pplib\include;$(SolutionDir)..\ext\pplib\include\pplib;$(SolutionDir)..\ext\boost\include;$(SolutionDir)..\ext\ssuk\basar\include;$(SolutionDir)..\ext\log4cplus\include;$(SolutionDir)..\ext\liblockmanager\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <EnablePREfast>false</EnablePREfast>
+      <ProgramDataBaseFileName>$(TargetDir)$(TargetName).pdb</ProgramDataBaseFileName>
+      <DisableSpecificWarnings>4996</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)aapserv.pdb</ProgramDatabaseFile>
+      <SubSystem>Console</SubSystem>
+      <AdditionalLibraryDirectories>$(SolutionDir)..\ext\liblockmanager\lib\$(Configuration);$(SolutionDir)..\ext\cxxtools\lib\$(Configuration);$(SolutionDir)..\ext\pplib\lib\$(Configuration);$(SolutionDir)..\ext\tcaccess_libraries\lib\$(Platform);$(SolutionDir)..\ext\hdatum\lib\$(Configuration);$(SolutionDir)..\ext\log4cplus\lib\$(Configuration);$(SolutionDir)..\ext\boost\lib;$(SolutionDir)..\ext\ssuk\basar\lib\$(Configuration);$(SolutionDir)$(Platform)\$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>ws2_32.lib;Rpcrt4.lib;cxxtools.lib;liblockmanager.lib;tcaapi.lib;tca.lib;log4cplusd.lib;libbasarcmnutil.lib;libbasardbsql.lib;pxdb.lib;pxverbund.lib;libcsc.lib;ppwin.lib;aapservinf.lib;hdatum.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <IgnoreSpecificDefaultLibraries>MSVCRT;LIBCMTD</IgnoreSpecificDefaultLibraries>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;__ONLY_DISTRIBUTE__;__CPLUS__;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <AdditionalIncludeDirectories>$(SolutionDir)cxxtools\include;$(SolutionDir)pxdb\include;$(SolutionDir)pxverbund\include;$(SolutionDir)libumk\include;$(SolutionDir)libcsc;$(SolutionDir)aapserv;$(SolutionDir)aapserv\win32dade;$(SolutionDir)..\ext\pplib\include;$(SolutionDir)..\ext\pplib\include\pplib;$(SolutionDir)..\ext\boost\include;$(SolutionDir)..\ext\ssuk\basar\include;$(SolutionDir)..\ext\log4cplus\include;$(SolutionDir)..\ext\liblockmanager\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ProgramDataBaseFileName>$(TargetDir)$(TargetName).pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <AdditionalLibraryDirectories>$(SolutionDir)..\ext\liblockmanager\lib\$(Configuration);$(SolutionDir)..\ext\cxxtools\lib\$(Configuration);$(SolutionDir)..\ext\pplib\lib\$(Configuration);$(SolutionDir)..\ext\tcaccess_libraries\lib\x86;$(SolutionDir)..\ext\hdatum\lib\$(Configuration);$(SolutionDir)..\ext\log4cplus\lib\$(Configuration);$(SolutionDir)..\ext\boost\lib;$(SolutionDir)..\ext\ssuk\basar\lib\$(Configuration);$(SolutionDir)$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>ws2_32.lib;Rpcrt4.lib;cxxtools.lib;liblockmanager.lib;tcaapi.lib;tca.lib;log4cplus.lib;libbasarcmnutil.lib;libbasardbsql.lib;pxdb.lib;pxverbund.lib;libcsc.lib;ppwin_dynMFC.lib;aapservinf.lib;hdatum.lib;ppwin.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <IgnoreSpecificDefaultLibraries>LIBCMT</IgnoreSpecificDefaultLibraries>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;__ONLY_DISTRIBUTE__;__CPLUS__;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <AdditionalIncludeDirectories>$(SolutionDir)cxxtools\include;$(SolutionDir)pxdb\include;$(SolutionDir)pxverbund\include;$(SolutionDir)libumk\include;$(SolutionDir)libcsc;$(SolutionDir)aapserv;$(SolutionDir)aapserv\win32dade;$(SolutionDir)..\ext\pplib\include;$(SolutionDir)..\ext\pplib\include\pplib;$(SolutionDir)..\ext\boost\include;$(SolutionDir)..\ext\ssuk\basar\include;$(SolutionDir)..\ext\log4cplus\include;$(SolutionDir)..\ext\liblockmanager\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ProgramDataBaseFileName>$(TargetDir)$(TargetName).pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <AdditionalLibraryDirectories>$(SolutionDir)..\ext\liblockmanager\lib\$(Configuration);$(SolutionDir)..\ext\cxxtools\lib\$(Configuration);$(SolutionDir)..\ext\pplib\lib\$(Configuration);$(SolutionDir)..\ext\tcaccess_libraries\lib\$(Platform);$(SolutionDir)..\ext\hdatum\lib\$(Configuration);$(SolutionDir)..\ext\log4cplus\lib\$(Configuration);$(SolutionDir)..\ext\boost\lib;$(SolutionDir)..\ext\ssuk\basar\lib\$(Configuration);$(SolutionDir)$(Platform)\$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>ws2_32.lib;Rpcrt4.lib;cxxtools.lib;liblockmanager.lib;tcaapi.lib;tca.lib;log4cplus.lib;libbasarcmnutil.lib;libbasardbsql.lib;pxdb.lib;pxverbund.lib;libcsc.lib;ppwin.lib;aapservinf.lib;hdatum.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <IgnoreSpecificDefaultLibraries>LIBCMT</IgnoreSpecificDefaultLibraries>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="aapsel.cpp" />
+    <ClCompile Include="aasera.c" />
+    <ClCompile Include="aasrv.cpp" />
+    <ClCompile Include="ausrvfkt.cpp" />
+    <ClCompile Include="cscorderimport.cpp" />
+    <ClCompile Include="cststockreservation.cpp" />
+    <ClCompile Include="sockmain.cpp" />
+    <ClCompile Include="version.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="aarufpl.h" />
+    <ClInclude Include="aasrv.h" />
+    <ClInclude Include="aasrvfkt.h" />
+    <ClInclude Include="aatour.h" />
+    <ClInclude Include="aeorderstat.h" />
+    <ClInclude Include="aepwd.h" />
+    <ClInclude Include="aetexte.h" />
+    <ClInclude Include="alterfil.h" />
+    <ClInclude Include="articleomg.h" />
+    <ClInclude Include="artikel.h" />
+    <ClInclude Include="artsel.h" />
+    <ClInclude Include="auftrag.h" />
+    <ClInclude Include="auftraginfo.h" />
+    <ClInclude Include="auftragsart.h" />
+    <ClInclude Include="ausrvfkt.h" />
+    <ClInclude Include="callback.h" />
+    <ClInclude Include="callbackmaillink.h" />
+    <ClInclude Include="callplan.h" />
+    <ClInclude Include="callplanday.h" />
+    <ClInclude Include="callplanmaintenance.h" />
+    <ClInclude Include="callplanundertake.h" />
+    <ClInclude Include="collectivorders.h" />
+    <ClInclude Include="controlling.h" />
+    <ClInclude Include="cremamailaddresses.h" />
+    <ClInclude Include="cscorderimport.h" />
+    <ClInclude Include="cscorderimportcsvcolumns.h" />
+    <ClInclude Include="cscorderimportcsvfile.h" />
+    <ClInclude Include="cscorderimportcsvformats.h" />
+    <ClInclude Include="cscorderimportfields.h" />
+    <ClInclude Include="cscreservationtypes.h" />
+    <ClInclude Include="cststockreservation.h" />
+    <ClInclude Include="customer.h" />
+    <ClInclude Include="dadedb.h" />
+    <ClInclude Include="deliveryadvicedocument.h" />
+    <ClInclude Include="deliveryadvicehead.h" />
+    <ClInclude Include="deliveryadviceline.h" />
+    <ClInclude Include="deliveryadvicelinedetails.h" />
+    <ClInclude Include="deliveryadvicelinediscounts.h" />
+    <ClInclude Include="deliveryadvicelineibtlink.h" />
+    <ClInclude Include="deliveryadvicelinereturn.h" />
+    <ClInclude Include="deliveryadviceremark.h" />
+    <ClInclude Include="deliveryadvicevattotals.h" />
+    <ClInclude Include="druckpara.h" />
+    <ClInclude Include="eilbotendruck.h" />
+    <ClInclude Include="fcorderssel.h" />
+    <ClInclude Include="filialpartner.h" />
+    <ClInclude Include="filinf.h" />
+    <ClInclude Include="hersteller.h" />
+    <ClInclude Include="invoicesettings.h" />
+    <ClInclude Include="kndsel.h" />
+    <ClInclude Include="koplist.h" />
+    <ClInclude Include="kritik.h" />
+    <ClInclude Include="kritikkopf.h" />
+    <ClInclude Include="kritikpos.h" />
+    <ClInclude Include="kritiksatz.h" />
+    <ClInclude Include="lieferinfo.h" />
+    <ClInclude Include="lockview.h" />
+    <ClInclude Include="mailsystem.h" />
+    <ClInclude Include="modemtab.h" />
+    <ClInclude Include="msv3.h" />
+    <ClInclude Include="nachlart.h" />
+    <ClInclude Include="nachlief.h" />
+    <ClInclude Include="nachlprot.h" />
+    <ClInclude Include="orders.h" />
+    <ClInclude Include="ordertypereservationconfig.h" />
+    <ClInclude Include="ordertypereservationconfigcpg.h" />
+    <ClInclude Include="ordervalues.h" />
+    <ClInclude Include="param.h" />
+    <ClInclude Include="parameterchangelog.h" />
+    <ClInclude Include="parameter_change_logging.h" />
+    <ClInclude Include="parameter_change_log_defs.h" />
+    <ClInclude Include="partikel.h" />
+    <ClInclude Include="passwd.h" />
+    <ClInclude Include="processcheck.h" />
+    <ClInclude Include="promo.h" />
+    <ClInclude Include="promoinfo.h" />
+    <ClInclude Include="rabattorder.h" />
+    <ClInclude Include="rangelist.h" />
+    <ClInclude Include="ranges.h" />
+    <ClInclude Include="rebateprice.h" />
+    <ClInclude Include="rufplan.h" />
+    <ClInclude Include="sendmail.h" />
+    <ClInclude Include="seralog.h" />
+    <ClInclude Include="serviceorder.h" />
+    <ClInclude Include="statistics.h" />
+    <ClInclude Include="supplinfo.h" />
+    <ClInclude Include="telview.h" />
+    <ClInclude Include="tender.h" />
+    <ClInclude Include="tm.h" />
+    <ClInclude Include="tourdelay.h" />
+    <ClInclude Include="touren.h" />
+    <ClInclude Include="usertexte.h" />
+    <ClInclude Include="vbbuch.h" />
+    <ClInclude Include="vbcount.h" />
+    <ClInclude Include="vblief.h" />
+    <ClInclude Include="verbundcheck.h" />
+    <ClInclude Include="win32dade\stdbool.h" />
+    <ClInclude Include="win32dade\unistd.h" />
+    <ClInclude Include="zeitart.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ini\zaapunix.cfg" />
+    <None Include="ini\zaasunix.cfg" />
+    <None Include="makefile" />
+    <None Include="makefile.win" />
+    <None Include="makefile.win64" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

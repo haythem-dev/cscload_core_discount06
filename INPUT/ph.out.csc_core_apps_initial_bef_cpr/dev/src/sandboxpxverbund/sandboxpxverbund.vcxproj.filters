@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="libsrc">
+      <UniqueIdentifier>{93DFA07D-D2F1-4F86-AFF1-A32B14025A8A}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="custom_test_reporter.h">
+      <Filter>libsrc</Filter>
+    </ClInclude>
+    <ClInclude Include="pxverbundincludes.h">
+      <Filter>libsrc</Filter>
+    </ClInclude>
+    <ClInclude Include="SessionUtil.h">
+      <Filter>libsrc</Filter>
+    </ClInclude>
+    <ClInclude Include="MocTour.h">
+      <Filter>libsrc</Filter>
+    </ClInclude>
+    <ClInclude Include="CommandLineParser.h">
+      <Filter>libsrc</Filter>
+    </ClInclude>
+    <ClInclude Include="MocCrema.h">
+      <Filter>libsrc</Filter>
+    </ClInclude>
+    <ClInclude Include="FixtureBase.h">
+      <Filter>libsrc</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="SessionUtil.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="test_article.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="test_connection.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="test_csccustomer.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="test_customerordertype.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="test_orderrelationno.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="test_paraauftragbearb.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="test_tourmanager.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="test_tourmasterdata.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="test_tours.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="test_vartikellokal.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="test_orderremarktypes.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="test_artikelpreis.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="test_customer.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="test_custstockreserved.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="test_order.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="test_clearreservation.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="test_aaorderclose.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="test_corpha.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="test_articlecharge.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="test_discount.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="test_articlequota.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="test_libcsc_callback.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="MocTour.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="CommandLineParser.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="test_libcsc_crema.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="MocCrema.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="test_phadex.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="test_libcsc_shipmenttracking.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="FixtureBase.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="test_libcsc_stockbooking.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="makefile" />
+    <None Include="run.sh" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="prompts.txt" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="aaordcl.cpp" />
+    <ClCompile Include="version.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="ini">
+      <UniqueIdentifier>{9dc7c67b-20c3-4c5b-9b2e-abbd31956c5e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ini\aaorderclose.R.cfg">
+      <Filter>ini</Filter>
+    </None>
+  </ItemGroup>
+</Project>

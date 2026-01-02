@@ -1,0 +1,2015 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35806.99 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "pxdb", "pxdb\pxdb.vcxproj", "{BD3BBA09-58EC-4556-B63C-92D704CCE142}"
+	ProjectSection(ProjectDependencies) = postProject
+		{875178FB-B935-410A-8979-57053947F842} = {875178FB-B935-410A-8979-57053947F842}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "pxverbund", "pxverbund\pxverbund.vcxproj", "{1C193DFC-5575-4830-892B-54BDAD6A583F}"
+	ProjectSection(ProjectDependencies) = postProject
+		{BD3BBA09-58EC-4556-B63C-92D704CCE142} = {BD3BBA09-58EC-4556-B63C-92D704CCE142}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libcsc", "libcsc\libcsc.vcxproj", "{23068FFE-D708-4B28-91B4-BC6E22E45E16}"
+	ProjectSection(ProjectDependencies) = postProject
+		{1C193DFC-5575-4830-892B-54BDAD6A583F} = {1C193DFC-5575-4830-892B-54BDAD6A583F}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "clearreservation", "clearreservation\clearreservation.vcxproj", "{81E8C5B2-C9BF-40E5-A38B-009C80C083BC}"
+	ProjectSection(ProjectDependencies) = postProject
+		{BD3BBA09-58EC-4556-B63C-92D704CCE142} = {BD3BBA09-58EC-4556-B63C-92D704CCE142}
+		{717FA083-FFA0-401C-B0D9-5413CB5C76DF} = {717FA083-FFA0-401C-B0D9-5413CB5C76DF}
+		{875178FB-B935-410A-8979-57053947F842} = {875178FB-B935-410A-8979-57053947F842}
+		{1C193DFC-5575-4830-892B-54BDAD6A583F} = {1C193DFC-5575-4830-892B-54BDAD6A583F}
+		{23068FFE-D708-4B28-91B4-BC6E22E45E16} = {23068FFE-D708-4B28-91B4-BC6E22E45E16}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "kscserver", "kscserver\kscserver.vcxproj", "{717FA083-FFA0-401C-B0D9-5413CB5C76DF}"
+	ProjectSection(ProjectDependencies) = postProject
+		{76D31225-6619-456C-80A6-8BA688524BEE} = {76D31225-6619-456C-80A6-8BA688524BEE}
+		{586680A8-5C59-4EDE-BD88-E1378D3F7EA4} = {586680A8-5C59-4EDE-BD88-E1378D3F7EA4}
+		{1C193DFC-5575-4830-892B-54BDAD6A583F} = {1C193DFC-5575-4830-892B-54BDAD6A583F}
+		{23068FFE-D708-4B28-91B4-BC6E22E45E16} = {23068FFE-D708-4B28-91B4-BC6E22E45E16}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "kscserverinf", "kscserver\kscserverinf.vcxproj", "{76D31225-6619-456C-80A6-8BA688524BEE}"
+	ProjectSection(ProjectDependencies) = postProject
+		{BD3BBA09-58EC-4556-B63C-92D704CCE142} = {BD3BBA09-58EC-4556-B63C-92D704CCE142}
+		{586680A8-5C59-4EDE-BD88-E1378D3F7EA4} = {586680A8-5C59-4EDE-BD88-E1378D3F7EA4}
+		{1C193DFC-5575-4830-892B-54BDAD6A583F} = {1C193DFC-5575-4830-892B-54BDAD6A583F}
+		{23068FFE-D708-4B28-91B4-BC6E22E45E16} = {23068FFE-D708-4B28-91B4-BC6E22E45E16}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "aaorderclose", "aaorderclose\aaorderclose.vcxproj", "{568EF34C-A601-48A3-9342-6A5BFFAC7B80}"
+	ProjectSection(ProjectDependencies) = postProject
+		{BD3BBA09-58EC-4556-B63C-92D704CCE142} = {BD3BBA09-58EC-4556-B63C-92D704CCE142}
+		{875178FB-B935-410A-8979-57053947F842} = {875178FB-B935-410A-8979-57053947F842}
+		{1C193DFC-5575-4830-892B-54BDAD6A583F} = {1C193DFC-5575-4830-892B-54BDAD6A583F}
+		{23068FFE-D708-4B28-91B4-BC6E22E45E16} = {23068FFE-D708-4B28-91B4-BC6E22E45E16}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libbatch", "csc_host_interface\libbatch\libbatch.vcxproj", "{E13F264C-8464-442D-9E8A-183B08E5C7D2}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libcsc_utils", "csc_host_interface\libcsc_utils\libcsc_utils.vcxproj", "{170857A8-3DFA-4EAD-98CF-51D64C16E558}"
+	ProjectSection(ProjectDependencies) = postProject
+		{BD3BBA09-58EC-4556-B63C-92D704CCE142} = {BD3BBA09-58EC-4556-B63C-92D704CCE142}
+		{E13F264C-8464-442D-9E8A-183B08E5C7D2} = {E13F264C-8464-442D-9E8A-183B08E5C7D2}
+		{1C193DFC-5575-4830-892B-54BDAD6A583F} = {1C193DFC-5575-4830-892B-54BDAD6A583F}
+		{23068FFE-D708-4B28-91B4-BC6E22E45E16} = {23068FFE-D708-4B28-91B4-BC6E22E45E16}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "csc_corpha", "csc_host_interface\csc_corpha\csc_corpha\csc_corpha.vcxproj", "{07DD608F-EBE1-4A05-B201-EEBC17037B84}"
+	ProjectSection(ProjectDependencies) = postProject
+		{BD3BBA09-58EC-4556-B63C-92D704CCE142} = {BD3BBA09-58EC-4556-B63C-92D704CCE142}
+		{E13F264C-8464-442D-9E8A-183B08E5C7D2} = {E13F264C-8464-442D-9E8A-183B08E5C7D2}
+		{170857A8-3DFA-4EAD-98CF-51D64C16E558} = {170857A8-3DFA-4EAD-98CF-51D64C16E558}
+		{1C193DFC-5575-4830-892B-54BDAD6A583F} = {1C193DFC-5575-4830-892B-54BDAD6A583F}
+		{23068FFE-D708-4B28-91B4-BC6E22E45E16} = {23068FFE-D708-4B28-91B4-BC6E22E45E16}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "csc_phabor", "csc_host_interface\csc_phabor\csc_phabor\csc_phabor.vcxproj", "{82880125-2FC7-466A-A3EE-06B3F8FD3A96}"
+	ProjectSection(ProjectDependencies) = postProject
+		{BD3BBA09-58EC-4556-B63C-92D704CCE142} = {BD3BBA09-58EC-4556-B63C-92D704CCE142}
+		{E13F264C-8464-442D-9E8A-183B08E5C7D2} = {E13F264C-8464-442D-9E8A-183B08E5C7D2}
+		{170857A8-3DFA-4EAD-98CF-51D64C16E558} = {170857A8-3DFA-4EAD-98CF-51D64C16E558}
+		{1C193DFC-5575-4830-892B-54BDAD6A583F} = {1C193DFC-5575-4830-892B-54BDAD6A583F}
+		{23068FFE-D708-4B28-91B4-BC6E22E45E16} = {23068FFE-D708-4B28-91B4-BC6E22E45E16}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "csc_phatra", "csc_host_interface\csc_phatra\csc_phatra\csc_phatra.vcxproj", "{3C8A42EB-0C42-4E4B-A8AB-427F5169FDF7}"
+	ProjectSection(ProjectDependencies) = postProject
+		{BD3BBA09-58EC-4556-B63C-92D704CCE142} = {BD3BBA09-58EC-4556-B63C-92D704CCE142}
+		{E13F264C-8464-442D-9E8A-183B08E5C7D2} = {E13F264C-8464-442D-9E8A-183B08E5C7D2}
+		{170857A8-3DFA-4EAD-98CF-51D64C16E558} = {170857A8-3DFA-4EAD-98CF-51D64C16E558}
+		{1C193DFC-5575-4830-892B-54BDAD6A583F} = {1C193DFC-5575-4830-892B-54BDAD6A583F}
+		{23068FFE-D708-4B28-91B4-BC6E22E45E16} = {23068FFE-D708-4B28-91B4-BC6E22E45E16}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "aapserv", "aapserv\aapserv.vcxproj", "{586680A8-5C59-4EDE-BD88-E1378D3F7EA4}"
+	ProjectSection(ProjectDependencies) = postProject
+		{BD3BBA09-58EC-4556-B63C-92D704CCE142} = {BD3BBA09-58EC-4556-B63C-92D704CCE142}
+		{85A90DEC-7A27-4BEF-BDC0-BE4539A3B317} = {85A90DEC-7A27-4BEF-BDC0-BE4539A3B317}
+		{875178FB-B935-410A-8979-57053947F842} = {875178FB-B935-410A-8979-57053947F842}
+		{1C193DFC-5575-4830-892B-54BDAD6A583F} = {1C193DFC-5575-4830-892B-54BDAD6A583F}
+		{23068FFE-D708-4B28-91B4-BC6E22E45E16} = {23068FFE-D708-4B28-91B4-BC6E22E45E16}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "aapservinf", "aapserv\aapservinf.vcxproj", "{85A90DEC-7A27-4BEF-BDC0-BE4539A3B317}"
+	ProjectSection(ProjectDependencies) = postProject
+		{BD3BBA09-58EC-4556-B63C-92D704CCE142} = {BD3BBA09-58EC-4556-B63C-92D704CCE142}
+		{1C193DFC-5575-4830-892B-54BDAD6A583F} = {1C193DFC-5575-4830-892B-54BDAD6A583F}
+		{23068FFE-D708-4B28-91B4-BC6E22E45E16} = {23068FFE-D708-4B28-91B4-BC6E22E45E16}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "sandboxpxverbund", "sandboxpxverbund\sandboxpxverbund.vcxproj", "{FCF3AF59-C437-43B5-B07E-BE8EFB1162A8}"
+	ProjectSection(ProjectDependencies) = postProject
+		{BD3BBA09-58EC-4556-B63C-92D704CCE142} = {BD3BBA09-58EC-4556-B63C-92D704CCE142}
+		{1C193DFC-5575-4830-892B-54BDAD6A583F} = {1C193DFC-5575-4830-892B-54BDAD6A583F}
+		{23068FFE-D708-4B28-91B4-BC6E22E45E16} = {23068FFE-D708-4B28-91B4-BC6E22E45E16}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "cxxtools", "cxxtools\cxxtools.vcxproj", "{875178FB-B935-410A-8979-57053947F842}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ibtorderimport", "ibtorderimport\ibtorderimport.vcxproj", "{0A7924B6-6D64-1014-B856-1A9E5588203F}"
+	ProjectSection(ProjectDependencies) = postProject
+		{BD3BBA09-58EC-4556-B63C-92D704CCE142} = {BD3BBA09-58EC-4556-B63C-92D704CCE142}
+		{E13F264C-8464-442D-9E8A-183B08E5C7D2} = {E13F264C-8464-442D-9E8A-183B08E5C7D2}
+		{170857A8-3DFA-4EAD-98CF-51D64C16E558} = {170857A8-3DFA-4EAD-98CF-51D64C16E558}
+		{875178FB-B935-410A-8979-57053947F842} = {875178FB-B935-410A-8979-57053947F842}
+		{1C193DFC-5575-4830-892B-54BDAD6A583F} = {1C193DFC-5575-4830-892B-54BDAD6A583F}
+		{23068FFE-D708-4B28-91B4-BC6E22E45E16} = {23068FFE-D708-4B28-91B4-BC6E22E45E16}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libcsc_deli", "csc_deli\libcsc_deli\libcsc_deli.vcxproj", "{30016D8F-7037-1014-980B-AB4141A31375}"
+	ProjectSection(ProjectDependencies) = postProject
+		{1C193DFC-5575-4830-892B-54BDAD6A583F} = {1C193DFC-5575-4830-892B-54BDAD6A583F}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "csc_deli", "csc_deli\csc_deli\csc_deli.vcxproj", "{30015DEA-7037-1014-980B-AB4141A31375}"
+	ProjectSection(ProjectDependencies) = postProject
+		{23068FFE-D708-4B28-91B4-BC6E22E45E16} = {23068FFE-D708-4B28-91B4-BC6E22E45E16}
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{78937A90-1E5D-43D0-AFE9-65E1E16E5405}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\README.md = ..\..\README.md
+		rmblanklines.cmd = rmblanklines.cmd
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libcscunittest", "libcscunittest\libcscunittest.vcxproj", "{BF577F8F-DD4C-4A89-A7C3-1C53961905B0}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "thrift", "thrift\thrift.vcxproj", "{97B7D036-20A2-4CD2-B158-09D97AA97859}"
+	ProjectSection(ProjectDependencies) = postProject
+		{81E8C5B2-C9BF-40E5-A38B-009C80C083BC} = {81E8C5B2-C9BF-40E5-A38B-009C80C083BC}
+		{1C193DFC-5575-4830-892B-54BDAD6A583F} = {1C193DFC-5575-4830-892B-54BDAD6A583F}
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A2D00FDA-1B97-48D8-A9E0-86E5F78984C3}"
+	ProjectSection(SolutionItems) = preProject
+		build.xml = build.xml
+		ivy.xml = ivy.xml
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "csc_phadex", "csc_host_interface\csc_phadex\csc_phadex.vcxproj", "{4E45E05A-6CC3-1014-9E3F-8461FFB45C6A}"
+	ProjectSection(ProjectDependencies) = postProject
+		{E13F264C-8464-442D-9E8A-183B08E5C7D2} = {E13F264C-8464-442D-9E8A-183B08E5C7D2}
+		{170857A8-3DFA-4EAD-98CF-51D64C16E558} = {170857A8-3DFA-4EAD-98CF-51D64C16E558}
+		{23068FFE-D708-4B28-91B4-BC6E22E45E16} = {23068FFE-D708-4B28-91B4-BC6E22E45E16}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "libcsc_codegenerator", "libcsc_codegenerator\libcsc_codegenerator.csproj", "{70C42513-9695-40A5-B79F-C71886EF473E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "thrift_codegenerator", "thrift_codegenerator\thrift_codegenerator.csproj", "{A029EF1B-E595-4275-AFAC-DF884E36BDB7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "proc", "proc", "{16C71EBC-7EDE-4F30-B535-E1A635EEB023}"
+	ProjectSection(SolutionItems) = preProject
+		proc\deploy_zdev.ps1 = proc\deploy_zdev.ps1
+		proc\export-legacy_idl.bat = proc\export-legacy_idl.bat
+		proc\export-thrift_idl.bat = proc\export-thrift_idl.bat
+		proc\export.bat = proc\export.bat
+		proc\export.sh = proc\export.sh
+		proc\export64.bat = proc\export64.bat
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "environment", "environment", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "batch", "batch", "{9F9889B4-3EE7-4E6B-A624-9C7FFBCEA81C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "server", "server", "{AB0C53AF-FEF8-41B2-8481-58FB0E09083F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "load", "load", "{422E1BA5-BB01-423B-9F0E-40199728DF1E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "unload", "unload", "{E6A9B9A5-E2FB-43F7-975C-E92FAD7ED790}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "bin", "bin", "{D2626934-C940-4E2D-B978-EA4F8D778D16}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "zdev21", "zdev21", "{D386E0BE-E38B-41AC-AF41-521773FAA9D2}"
+	ProjectSection(SolutionItems) = preProject
+		environment\batch\bin\zdev21\basar.config.xml = environment\batch\bin\zdev21\basar.config.xml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "zqas21", "zqas21", "{E2BF3ABD-4757-4C93-86C5-1F83AA5DCDDA}"
+	ProjectSection(SolutionItems) = preProject
+		environment\batch\bin\zqas21\basar.config.xml = environment\batch\bin\zqas21\basar.config.xml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ini", "ini", "{32291840-D0E7-446F-BC94-CD418BA8C1C3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "proc", "proc", "{6462E92E-1D51-4583-A1E2-4530BE14AEE2}"
+	ProjectSection(SolutionItems) = preProject
+		environment\batch\proc\aaordclose.option = environment\batch\proc\aaordclose.option
+		environment\batch\proc\aaordclose.sh = environment\batch\proc\aaordclose.sh
+		environment\batch\proc\basar.config.xml = environment\batch\proc\basar.config.xml
+		environment\batch\proc\clearreservation.option = environment\batch\proc\clearreservation.option
+		environment\batch\proc\clearreservation.sh = environment\batch\proc\clearreservation.sh
+		environment\batch\proc\csc_corpha.option = environment\batch\proc\csc_corpha.option
+		environment\batch\proc\csc_corpha.sh = environment\batch\proc\csc_corpha.sh
+		environment\batch\proc\csc_deli.option = environment\batch\proc\csc_deli.option
+		environment\batch\proc\csc_deli.sh = environment\batch\proc\csc_deli.sh
+		environment\batch\proc\csc_phabor.option = environment\batch\proc\csc_phabor.option
+		environment\batch\proc\csc_phabor.sh = environment\batch\proc\csc_phabor.sh
+		environment\batch\proc\csc_phadex.option = environment\batch\proc\csc_phadex.option
+		environment\batch\proc\csc_phadex.sh = environment\batch\proc\csc_phadex.sh
+		environment\batch\proc\csc_phatra.option = environment\batch\proc\csc_phatra.option
+		environment\batch\proc\csc_phatra.sh = environment\batch\proc\csc_phatra.sh
+		environment\batch\proc\csc_prune.option = environment\batch\proc\csc_prune.option
+		environment\batch\proc\csc_prune.pl = environment\batch\proc\csc_prune.pl
+		environment\batch\proc\csc_prune.sh = environment\batch\proc\csc_prune.sh
+		environment\batch\proc\ibtorderimport.option = environment\batch\proc\ibtorderimport.option
+		environment\batch\proc\ibtorderimport.sh = environment\batch\proc\ibtorderimport.sh
+		environment\batch\proc\vbordimport2.option = environment\batch\proc\vbordimport2.option
+		environment\batch\proc\vbordimport2.sh = environment\batch\proc\vbordimport2.sh
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ini", "ini", "{1E238717-9B23-47D9-8E42-A40C8DB28246}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "proc", "proc", "{D988E10E-A082-4EA7-B7E4-3D54CD3FB1B3}"
+	ProjectSection(SolutionItems) = preProject
+		environment\server\proc\cscservice.option = environment\server\proc\cscservice.option
+		environment\server\proc\cscservice.sh = environment\server\proc\cscservice.sh
+		environment\server\proc\cscservice70.option = environment\server\proc\cscservice70.option
+		environment\server\proc\cscservice70.sh = environment\server\proc\cscservice70.sh
+		environment\server\proc\cscservice71.option = environment\server\proc\cscservice71.option
+		environment\server\proc\cscservice71.sh = environment\server\proc\cscservice71.sh
+		environment\server\proc\cscservice72.option = environment\server\proc\cscservice72.option
+		environment\server\proc\cscservice72.sh = environment\server\proc\cscservice72.sh
+		environment\server\proc\cscservice73.option = environment\server\proc\cscservice73.option
+		environment\server\proc\cscservice73.sh = environment\server\proc\cscservice73.sh
+		environment\server\proc\cscservice74.option = environment\server\proc\cscservice74.option
+		environment\server\proc\cscservice74.sh = environment\server\proc\cscservice74.sh
+		environment\server\proc\cscservice75.option = environment\server\proc\cscservice75.option
+		environment\server\proc\cscservice75.sh = environment\server\proc\cscservice75.sh
+		environment\server\proc\cscservice76.option = environment\server\proc\cscservice76.option
+		environment\server\proc\cscservice76.sh = environment\server\proc\cscservice76.sh
+		environment\server\proc\cscservice77.option = environment\server\proc\cscservice77.option
+		environment\server\proc\cscservice77.sh = environment\server\proc\cscservice77.sh
+		environment\server\proc\cscserviceLN.option = environment\server\proc\cscserviceLN.option
+		environment\server\proc\cscserviceLN.sh = environment\server\proc\cscserviceLN.sh
+		environment\server\proc\kscserver.option = environment\server\proc\kscserver.option
+		environment\server\proc\kscserver.sh = environment\server\proc\kscserver.sh
+		environment\server\proc\kscserverLN.option = environment\server\proc\kscserverLN.option
+		environment\server\proc\kscserverLN.sh = environment\server\proc\kscserverLN.sh
+		environment\server\proc\kscserverXmlNord.option = environment\server\proc\kscserverXmlNord.option
+		environment\server\proc\kscserverXmlNord.sh = environment\server\proc\kscserverXmlNord.sh
+		environment\server\proc\zaapunix.option = environment\server\proc\zaapunix.option
+		environment\server\proc\zaapunix.sh = environment\server\proc\zaapunix.sh
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "vars", "vars", "{124EC909-1D7C-41A4-BB69-2523C121B5EF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "vars", "vars", "{C2E91269-9869-4A8A-ADD3-12F56478F156}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "vars", "vars", "{01EE9A1E-B7DD-4ACB-BE95-2DC8F65C937D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "vars", "vars", "{05929495-5EF2-42E2-B868-DE038BBA648F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "zdev21", "zdev21", "{DFD573DE-C9C7-4DAD-A859-6D748BA0E294}"
+	ProjectSection(SolutionItems) = preProject
+		environment\batch\vars\zdev21\csc_corpha.vars = environment\batch\vars\zdev21\csc_corpha.vars
+		environment\batch\vars\zdev21\csc_phabor.vars = environment\batch\vars\zdev21\csc_phabor.vars
+		environment\batch\vars\zdev21\csc_phadex.vars = environment\batch\vars\zdev21\csc_phadex.vars
+		environment\batch\vars\zdev21\csc_phatra.vars = environment\batch\vars\zdev21\csc_phatra.vars
+		environment\batch\vars\zdev21\csc_prune.vars = environment\batch\vars\zdev21\csc_prune.vars
+		environment\batch\vars\zdev21\ksc_batch_global.vars.at = environment\batch\vars\zdev21\ksc_batch_global.vars.at
+		environment\batch\vars\zdev21\ksc_batch_global.vars.bg = environment\batch\vars\zdev21\ksc_batch_global.vars.bg
+		environment\batch\vars\zdev21\ksc_batch_global.vars.ch = environment\batch\vars\zdev21\ksc_batch_global.vars.ch
+		environment\batch\vars\zdev21\ksc_batch_global.vars.de = environment\batch\vars\zdev21\ksc_batch_global.vars.de
+		environment\batch\vars\zdev21\ksc_batch_global.vars.fr = environment\batch\vars\zdev21\ksc_batch_global.vars.fr
+		environment\batch\vars\zdev21\ksc_batch_global.vars.hr = environment\batch\vars\zdev21\ksc_batch_global.vars.hr
+		environment\batch\vars\zdev21\ksc_batch_global.vars.pat = environment\batch\vars\zdev21\ksc_batch_global.vars.pat
+		environment\batch\vars\zdev21\ksc_batch_global.vars.pch = environment\batch\vars\zdev21\ksc_batch_global.vars.pch
+		environment\batch\vars\zdev21\ksc_batch_global.vars.pfr = environment\batch\vars\zdev21\ksc_batch_global.vars.pfr
+		environment\batch\vars\zdev21\ksc_batch_global.vars.rs = environment\batch\vars\zdev21\ksc_batch_global.vars.rs
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "zdev21", "zdev21", "{03A197E5-0726-420C-B604-ABB682B63896}"
+	ProjectSection(SolutionItems) = preProject
+		environment\load\vars\zdev21\ksc_load_global.vars.at = environment\load\vars\zdev21\ksc_load_global.vars.at
+		environment\load\vars\zdev21\ksc_load_global.vars.bg = environment\load\vars\zdev21\ksc_load_global.vars.bg
+		environment\load\vars\zdev21\ksc_load_global.vars.ch = environment\load\vars\zdev21\ksc_load_global.vars.ch
+		environment\load\vars\zdev21\ksc_load_global.vars.de = environment\load\vars\zdev21\ksc_load_global.vars.de
+		environment\load\vars\zdev21\ksc_load_global.vars.fr = environment\load\vars\zdev21\ksc_load_global.vars.fr
+		environment\load\vars\zdev21\ksc_load_global.vars.hr = environment\load\vars\zdev21\ksc_load_global.vars.hr
+		environment\load\vars\zdev21\ksc_load_global.vars.pat = environment\load\vars\zdev21\ksc_load_global.vars.pat
+		environment\load\vars\zdev21\ksc_load_global.vars.pch = environment\load\vars\zdev21\ksc_load_global.vars.pch
+		environment\load\vars\zdev21\ksc_load_global.vars.pfr = environment\load\vars\zdev21\ksc_load_global.vars.pfr
+		environment\load\vars\zdev21\ksc_load_global.vars.rs = environment\load\vars\zdev21\ksc_load_global.vars.rs
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "zdev21", "zdev21", "{95FE3C13-88C2-400C-A7AE-3714CC88046D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "zdev21", "zdev21", "{7A89EBCC-F30F-4242-88AB-12218EA2F8B8}"
+	ProjectSection(SolutionItems) = preProject
+		environment\unload\vars\zdev21\ksc_unload_global.vars.at = environment\unload\vars\zdev21\ksc_unload_global.vars.at
+		environment\unload\vars\zdev21\ksc_unload_global.vars.bg = environment\unload\vars\zdev21\ksc_unload_global.vars.bg
+		environment\unload\vars\zdev21\ksc_unload_global.vars.ch = environment\unload\vars\zdev21\ksc_unload_global.vars.ch
+		environment\unload\vars\zdev21\ksc_unload_global.vars.de = environment\unload\vars\zdev21\ksc_unload_global.vars.de
+		environment\unload\vars\zdev21\ksc_unload_global.vars.fr = environment\unload\vars\zdev21\ksc_unload_global.vars.fr
+		environment\unload\vars\zdev21\ksc_unload_global.vars.hr = environment\unload\vars\zdev21\ksc_unload_global.vars.hr
+		environment\unload\vars\zdev21\ksc_unload_global.vars.pat = environment\unload\vars\zdev21\ksc_unload_global.vars.pat
+		environment\unload\vars\zdev21\ksc_unload_global.vars.pch = environment\unload\vars\zdev21\ksc_unload_global.vars.pch
+		environment\unload\vars\zdev21\ksc_unload_global.vars.pfr = environment\unload\vars\zdev21\ksc_unload_global.vars.pfr
+		environment\unload\vars\zdev21\ksc_unload_global.vars.rs = environment\unload\vars\zdev21\ksc_unload_global.vars.rs
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "zqas21", "zqas21", "{E915D828-9FD1-43BB-916E-94BE17841264}"
+	ProjectSection(SolutionItems) = preProject
+		environment\batch\vars\zqas21\csc_corpha.vars = environment\batch\vars\zqas21\csc_corpha.vars
+		environment\batch\vars\zqas21\csc_phabor.vars = environment\batch\vars\zqas21\csc_phabor.vars
+		environment\batch\vars\zqas21\csc_phadex.vars = environment\batch\vars\zqas21\csc_phadex.vars
+		environment\batch\vars\zqas21\csc_phatra.vars = environment\batch\vars\zqas21\csc_phatra.vars
+		environment\batch\vars\zqas21\csc_prune.vars = environment\batch\vars\zqas21\csc_prune.vars
+		environment\batch\vars\zqas21\ksc_batch_global.vars.at = environment\batch\vars\zqas21\ksc_batch_global.vars.at
+		environment\batch\vars\zqas21\ksc_batch_global.vars.bg = environment\batch\vars\zqas21\ksc_batch_global.vars.bg
+		environment\batch\vars\zqas21\ksc_batch_global.vars.ch = environment\batch\vars\zqas21\ksc_batch_global.vars.ch
+		environment\batch\vars\zqas21\ksc_batch_global.vars.de = environment\batch\vars\zqas21\ksc_batch_global.vars.de
+		environment\batch\vars\zqas21\ksc_batch_global.vars.fr = environment\batch\vars\zqas21\ksc_batch_global.vars.fr
+		environment\batch\vars\zqas21\ksc_batch_global.vars.hr = environment\batch\vars\zqas21\ksc_batch_global.vars.hr
+		environment\batch\vars\zqas21\ksc_batch_global.vars.pat = environment\batch\vars\zqas21\ksc_batch_global.vars.pat
+		environment\batch\vars\zqas21\ksc_batch_global.vars.pch = environment\batch\vars\zqas21\ksc_batch_global.vars.pch
+		environment\batch\vars\zqas21\ksc_batch_global.vars.pfr = environment\batch\vars\zqas21\ksc_batch_global.vars.pfr
+		environment\batch\vars\zqas21\ksc_batch_global.vars.rs = environment\batch\vars\zqas21\ksc_batch_global.vars.rs
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "zqas21", "zqas21", "{0C9FF201-F366-4631-8C1C-55BD45A574E9}"
+	ProjectSection(SolutionItems) = preProject
+		environment\load\vars\zqas21\ksc_load_global.vars.at = environment\load\vars\zqas21\ksc_load_global.vars.at
+		environment\load\vars\zqas21\ksc_load_global.vars.bg = environment\load\vars\zqas21\ksc_load_global.vars.bg
+		environment\load\vars\zqas21\ksc_load_global.vars.ch = environment\load\vars\zqas21\ksc_load_global.vars.ch
+		environment\load\vars\zqas21\ksc_load_global.vars.de = environment\load\vars\zqas21\ksc_load_global.vars.de
+		environment\load\vars\zqas21\ksc_load_global.vars.fr = environment\load\vars\zqas21\ksc_load_global.vars.fr
+		environment\load\vars\zqas21\ksc_load_global.vars.hr = environment\load\vars\zqas21\ksc_load_global.vars.hr
+		environment\load\vars\zqas21\ksc_load_global.vars.pat = environment\load\vars\zqas21\ksc_load_global.vars.pat
+		environment\load\vars\zqas21\ksc_load_global.vars.pch = environment\load\vars\zqas21\ksc_load_global.vars.pch
+		environment\load\vars\zqas21\ksc_load_global.vars.pfr = environment\load\vars\zqas21\ksc_load_global.vars.pfr
+		environment\load\vars\zqas21\ksc_load_global.vars.rs = environment\load\vars\zqas21\ksc_load_global.vars.rs
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "zqas21", "zqas21", "{B5DAC4C1-A803-46C8-92B5-6936F0E03B51}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "zqas21", "zqas21", "{1E3A5CC0-ACCB-4A16-9282-C06AE2392266}"
+	ProjectSection(SolutionItems) = preProject
+		environment\unload\vars\zqas21\ksc_unload_global.vars.at = environment\unload\vars\zqas21\ksc_unload_global.vars.at
+		environment\unload\vars\zqas21\ksc_unload_global.vars.bg = environment\unload\vars\zqas21\ksc_unload_global.vars.bg
+		environment\unload\vars\zqas21\ksc_unload_global.vars.ch = environment\unload\vars\zqas21\ksc_unload_global.vars.ch
+		environment\unload\vars\zqas21\ksc_unload_global.vars.de = environment\unload\vars\zqas21\ksc_unload_global.vars.de
+		environment\unload\vars\zqas21\ksc_unload_global.vars.fr = environment\unload\vars\zqas21\ksc_unload_global.vars.fr
+		environment\unload\vars\zqas21\ksc_unload_global.vars.hr = environment\unload\vars\zqas21\ksc_unload_global.vars.hr
+		environment\unload\vars\zqas21\ksc_unload_global.vars.pat = environment\unload\vars\zqas21\ksc_unload_global.vars.pat
+		environment\unload\vars\zqas21\ksc_unload_global.vars.pch = environment\unload\vars\zqas21\ksc_unload_global.vars.pch
+		environment\unload\vars\zqas21\ksc_unload_global.vars.pfr = environment\unload\vars\zqas21\ksc_unload_global.vars.pfr
+		environment\unload\vars\zqas21\ksc_unload_global.vars.rs = environment\unload\vars\zqas21\ksc_unload_global.vars.rs
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ztst21", "ztst21", "{51F6FA87-6628-4BB4-A768-425AF428FFFE}"
+	ProjectSection(SolutionItems) = preProject
+		environment\batch\vars\ztst21\csc_corpha.vars = environment\batch\vars\ztst21\csc_corpha.vars
+		environment\batch\vars\ztst21\csc_phabor.vars = environment\batch\vars\ztst21\csc_phabor.vars
+		environment\batch\vars\ztst21\csc_phadex.vars = environment\batch\vars\ztst21\csc_phadex.vars
+		environment\batch\vars\ztst21\csc_phatra.vars = environment\batch\vars\ztst21\csc_phatra.vars
+		environment\batch\vars\ztst21\csc_prune.vars = environment\batch\vars\ztst21\csc_prune.vars
+		environment\batch\vars\ztst21\ksc_batch_global.vars.at = environment\batch\vars\ztst21\ksc_batch_global.vars.at
+		environment\batch\vars\ztst21\ksc_batch_global.vars.bg = environment\batch\vars\ztst21\ksc_batch_global.vars.bg
+		environment\batch\vars\ztst21\ksc_batch_global.vars.ch = environment\batch\vars\ztst21\ksc_batch_global.vars.ch
+		environment\batch\vars\ztst21\ksc_batch_global.vars.de = environment\batch\vars\ztst21\ksc_batch_global.vars.de
+		environment\batch\vars\ztst21\ksc_batch_global.vars.fr = environment\batch\vars\ztst21\ksc_batch_global.vars.fr
+		environment\batch\vars\ztst21\ksc_batch_global.vars.hr = environment\batch\vars\ztst21\ksc_batch_global.vars.hr
+		environment\batch\vars\ztst21\ksc_batch_global.vars.pat = environment\batch\vars\ztst21\ksc_batch_global.vars.pat
+		environment\batch\vars\ztst21\ksc_batch_global.vars.pch = environment\batch\vars\ztst21\ksc_batch_global.vars.pch
+		environment\batch\vars\ztst21\ksc_batch_global.vars.pfr = environment\batch\vars\ztst21\ksc_batch_global.vars.pfr
+		environment\batch\vars\ztst21\ksc_batch_global.vars.rs = environment\batch\vars\ztst21\ksc_batch_global.vars.rs
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ztst21", "ztst21", "{7077F9DC-AF9C-45A0-8C6D-9DAAA91B4CDD}"
+	ProjectSection(SolutionItems) = preProject
+		environment\load\vars\ztst21\ksc_load_global.vars.at = environment\load\vars\ztst21\ksc_load_global.vars.at
+		environment\load\vars\ztst21\ksc_load_global.vars.bg = environment\load\vars\ztst21\ksc_load_global.vars.bg
+		environment\load\vars\ztst21\ksc_load_global.vars.ch = environment\load\vars\ztst21\ksc_load_global.vars.ch
+		environment\load\vars\ztst21\ksc_load_global.vars.de = environment\load\vars\ztst21\ksc_load_global.vars.de
+		environment\load\vars\ztst21\ksc_load_global.vars.fr = environment\load\vars\ztst21\ksc_load_global.vars.fr
+		environment\load\vars\ztst21\ksc_load_global.vars.hr = environment\load\vars\ztst21\ksc_load_global.vars.hr
+		environment\load\vars\ztst21\ksc_load_global.vars.pat = environment\load\vars\ztst21\ksc_load_global.vars.pat
+		environment\load\vars\ztst21\ksc_load_global.vars.pch = environment\load\vars\ztst21\ksc_load_global.vars.pch
+		environment\load\vars\ztst21\ksc_load_global.vars.pfr = environment\load\vars\ztst21\ksc_load_global.vars.pfr
+		environment\load\vars\ztst21\ksc_load_global.vars.rs = environment\load\vars\ztst21\ksc_load_global.vars.rs
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ztst21", "ztst21", "{D27B0F39-08E1-4C9D-8F7C-0DD0C9DF74FC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ztst21", "ztst21", "{92C8C3EE-8671-4114-BCEF-1714DEB6C3B3}"
+	ProjectSection(SolutionItems) = preProject
+		environment\unload\vars\ztst21\ksc_unload_global.vars.at = environment\unload\vars\ztst21\ksc_unload_global.vars.at
+		environment\unload\vars\ztst21\ksc_unload_global.vars.bg = environment\unload\vars\ztst21\ksc_unload_global.vars.bg
+		environment\unload\vars\ztst21\ksc_unload_global.vars.ch = environment\unload\vars\ztst21\ksc_unload_global.vars.ch
+		environment\unload\vars\ztst21\ksc_unload_global.vars.de = environment\unload\vars\ztst21\ksc_unload_global.vars.de
+		environment\unload\vars\ztst21\ksc_unload_global.vars.fr = environment\unload\vars\ztst21\ksc_unload_global.vars.fr
+		environment\unload\vars\ztst21\ksc_unload_global.vars.hr = environment\unload\vars\ztst21\ksc_unload_global.vars.hr
+		environment\unload\vars\ztst21\ksc_unload_global.vars.pat = environment\unload\vars\ztst21\ksc_unload_global.vars.pat
+		environment\unload\vars\ztst21\ksc_unload_global.vars.pch = environment\unload\vars\ztst21\ksc_unload_global.vars.pch
+		environment\unload\vars\ztst21\ksc_unload_global.vars.pfr = environment\unload\vars\ztst21\ksc_unload_global.vars.pfr
+		environment\unload\vars\ztst21\ksc_unload_global.vars.rs = environment\unload\vars\ztst21\ksc_unload_global.vars.rs
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "prod", "prod", "{E1B8BB3E-3AAE-4BA5-8D68-B0BC9854F27A}"
+	ProjectSection(SolutionItems) = preProject
+		environment\batch\vars\prod\csc_corpha.vars = environment\batch\vars\prod\csc_corpha.vars
+		environment\batch\vars\prod\csc_phabor.vars = environment\batch\vars\prod\csc_phabor.vars
+		environment\batch\vars\prod\csc_phadex.vars = environment\batch\vars\prod\csc_phadex.vars
+		environment\batch\vars\prod\csc_phatra.vars = environment\batch\vars\prod\csc_phatra.vars
+		environment\batch\vars\prod\csc_prune.vars = environment\batch\vars\prod\csc_prune.vars
+		environment\batch\vars\prod\ksc_batch_global.vars.at = environment\batch\vars\prod\ksc_batch_global.vars.at
+		environment\batch\vars\prod\ksc_batch_global.vars.bg = environment\batch\vars\prod\ksc_batch_global.vars.bg
+		environment\batch\vars\prod\ksc_batch_global.vars.ch = environment\batch\vars\prod\ksc_batch_global.vars.ch
+		environment\batch\vars\prod\ksc_batch_global.vars.de = environment\batch\vars\prod\ksc_batch_global.vars.de
+		environment\batch\vars\prod\ksc_batch_global.vars.fr = environment\batch\vars\prod\ksc_batch_global.vars.fr
+		environment\batch\vars\prod\ksc_batch_global.vars.hr = environment\batch\vars\prod\ksc_batch_global.vars.hr
+		environment\batch\vars\prod\ksc_batch_global.vars.pat = environment\batch\vars\prod\ksc_batch_global.vars.pat
+		environment\batch\vars\prod\ksc_batch_global.vars.pch = environment\batch\vars\prod\ksc_batch_global.vars.pch
+		environment\batch\vars\prod\ksc_batch_global.vars.pfr = environment\batch\vars\prod\ksc_batch_global.vars.pfr
+		environment\batch\vars\prod\ksc_batch_global.vars.rs = environment\batch\vars\prod\ksc_batch_global.vars.rs
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "prod", "prod", "{D959C0A4-974D-4341-953D-CE661FA7B526}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "prod", "prod", "{FD099D0F-7A94-4492-BCB3-76E35591421F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "prod", "prod", "{79CC6531-A4B1-4C5F-B0F0-A711ED71B5DE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "zdev21", "zdev21", "{9C21300C-CAA6-48F1-8035-CF81B7B61822}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "zdev21", "zdev21", "{19911669-EB7A-411B-B55F-41F261E7B400}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "zqas21", "zqas21", "{451ECC52-2DD1-4D49-86BD-AE5D7DA2741A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "zqas21", "zqas21", "{421F9E97-E305-46C8-857B-E69B60915313}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ztst21", "ztst21", "{8CA73E3C-4929-46A6-881E-590A0BC9EB65}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ztst21", "ztst21", "{04094F90-2708-4174-B8D5-3F61CDE3E414}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "log4cplus", "log4cplus", "{EA24562F-3481-4A79-9CAD-29E3F4EA1888}"
+	ProjectSection(SolutionItems) = preProject
+		environment\batch\ini\prod\aaorderclose.R.cfg = environment\batch\ini\prod\aaorderclose.R.cfg
+		environment\batch\ini\prod\clearreservation.cfg = environment\batch\ini\prod\clearreservation.cfg
+		environment\batch\ini\prod\csc_corpha.cfg = environment\batch\ini\prod\csc_corpha.cfg
+		environment\batch\ini\prod\csc_deli.cfg = environment\batch\ini\prod\csc_deli.cfg
+		environment\batch\ini\prod\csc_phabor.cfg = environment\batch\ini\prod\csc_phabor.cfg
+		environment\batch\ini\prod\csc_phadex.cfg = environment\batch\ini\prod\csc_phadex.cfg
+		environment\batch\ini\prod\csc_phatra.cfg = environment\batch\ini\prod\csc_phatra.cfg
+		environment\batch\ini\prod\ibtorderimport.cfg = environment\batch\ini\prod\ibtorderimport.cfg
+		environment\batch\ini\prod\vborderimport2.cfg = environment\batch\ini\prod\vborderimport2.cfg
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "csc_corpha", "csc_corpha", "{F60B8E8F-64F2-43B8-96D1-1F3CA7ABB932}"
+	ProjectSection(SolutionItems) = preProject
+		environment\batch\ini\prod\csc_corpha.xml.at = environment\batch\ini\prod\csc_corpha.xml.at
+		environment\batch\ini\prod\csc_corpha.xml.bg = environment\batch\ini\prod\csc_corpha.xml.bg
+		environment\batch\ini\prod\csc_corpha.xml.ch = environment\batch\ini\prod\csc_corpha.xml.ch
+		environment\batch\ini\prod\csc_corpha.xml.de = environment\batch\ini\prod\csc_corpha.xml.de
+		environment\batch\ini\prod\csc_corpha.xml.fr = environment\batch\ini\prod\csc_corpha.xml.fr
+		environment\batch\ini\prod\csc_corpha.xml.hr = environment\batch\ini\prod\csc_corpha.xml.hr
+		environment\batch\ini\prod\csc_corpha.xml.pat = environment\batch\ini\prod\csc_corpha.xml.pat
+		environment\batch\ini\prod\csc_corpha.xml.pch = environment\batch\ini\prod\csc_corpha.xml.pch
+		environment\batch\ini\prod\csc_corpha.xml.pfr = environment\batch\ini\prod\csc_corpha.xml.pfr
+		environment\batch\ini\prod\csc_corpha.xml.rs = environment\batch\ini\prod\csc_corpha.xml.rs
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "csc_phabor", "csc_phabor", "{7B22ECC5-A947-4287-8B29-09F3B3D81858}"
+	ProjectSection(SolutionItems) = preProject
+		environment\batch\ini\prod\csc_phabor.xml.at = environment\batch\ini\prod\csc_phabor.xml.at
+		environment\batch\ini\prod\csc_phabor.xml.bg = environment\batch\ini\prod\csc_phabor.xml.bg
+		environment\batch\ini\prod\csc_phabor.xml.ch = environment\batch\ini\prod\csc_phabor.xml.ch
+		environment\batch\ini\prod\csc_phabor.xml.de = environment\batch\ini\prod\csc_phabor.xml.de
+		environment\batch\ini\prod\csc_phabor.xml.fr = environment\batch\ini\prod\csc_phabor.xml.fr
+		environment\batch\ini\prod\csc_phabor.xml.hr = environment\batch\ini\prod\csc_phabor.xml.hr
+		environment\batch\ini\prod\csc_phabor.xml.pat = environment\batch\ini\prod\csc_phabor.xml.pat
+		environment\batch\ini\prod\csc_phabor.xml.pch = environment\batch\ini\prod\csc_phabor.xml.pch
+		environment\batch\ini\prod\csc_phabor.xml.pfr = environment\batch\ini\prod\csc_phabor.xml.pfr
+		environment\batch\ini\prod\csc_phabor.xml.rs = environment\batch\ini\prod\csc_phabor.xml.rs
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "csc_phadex", "csc_phadex", "{301F7915-FA79-4165-B07F-7EB8E10A229C}"
+	ProjectSection(SolutionItems) = preProject
+		environment\batch\ini\prod\csc_phadex.xml.at = environment\batch\ini\prod\csc_phadex.xml.at
+		environment\batch\ini\prod\csc_phadex.xml.bg = environment\batch\ini\prod\csc_phadex.xml.bg
+		environment\batch\ini\prod\csc_phadex.xml.ch = environment\batch\ini\prod\csc_phadex.xml.ch
+		environment\batch\ini\prod\csc_phadex.xml.de = environment\batch\ini\prod\csc_phadex.xml.de
+		environment\batch\ini\prod\csc_phadex.xml.fr = environment\batch\ini\prod\csc_phadex.xml.fr
+		environment\batch\ini\prod\csc_phadex.xml.hr = environment\batch\ini\prod\csc_phadex.xml.hr
+		environment\batch\ini\prod\csc_phadex.xml.pat = environment\batch\ini\prod\csc_phadex.xml.pat
+		environment\batch\ini\prod\csc_phadex.xml.pch = environment\batch\ini\prod\csc_phadex.xml.pch
+		environment\batch\ini\prod\csc_phadex.xml.pfr = environment\batch\ini\prod\csc_phadex.xml.pfr
+		environment\batch\ini\prod\csc_phadex.xml.rs = environment\batch\ini\prod\csc_phadex.xml.rs
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "csc_phatra", "csc_phatra", "{B2EDA344-978F-4A4A-8EB5-6DDC5B7A031A}"
+	ProjectSection(SolutionItems) = preProject
+		environment\batch\ini\prod\csc_phatra.xml.at = environment\batch\ini\prod\csc_phatra.xml.at
+		environment\batch\ini\prod\csc_phatra.xml.bg = environment\batch\ini\prod\csc_phatra.xml.bg
+		environment\batch\ini\prod\csc_phatra.xml.ch = environment\batch\ini\prod\csc_phatra.xml.ch
+		environment\batch\ini\prod\csc_phatra.xml.de = environment\batch\ini\prod\csc_phatra.xml.de
+		environment\batch\ini\prod\csc_phatra.xml.fr = environment\batch\ini\prod\csc_phatra.xml.fr
+		environment\batch\ini\prod\csc_phatra.xml.hr = environment\batch\ini\prod\csc_phatra.xml.hr
+		environment\batch\ini\prod\csc_phatra.xml.pat = environment\batch\ini\prod\csc_phatra.xml.pat
+		environment\batch\ini\prod\csc_phatra.xml.pch = environment\batch\ini\prod\csc_phatra.xml.pch
+		environment\batch\ini\prod\csc_phatra.xml.pfr = environment\batch\ini\prod\csc_phatra.xml.pfr
+		environment\batch\ini\prod\csc_phatra.xml.rs = environment\batch\ini\prod\csc_phatra.xml.rs
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "log4cplus", "log4cplus", "{8D863B79-593D-4865-B638-EB62B7133EA0}"
+	ProjectSection(SolutionItems) = preProject
+		environment\batch\ini\zdev21\aaorderclose.R.cfg = environment\batch\ini\zdev21\aaorderclose.R.cfg
+		environment\batch\ini\zdev21\clearreservation.cfg = environment\batch\ini\zdev21\clearreservation.cfg
+		environment\batch\ini\zdev21\csc_corpha.cfg = environment\batch\ini\zdev21\csc_corpha.cfg
+		environment\batch\ini\zdev21\csc_phabor.cfg = environment\batch\ini\zdev21\csc_phabor.cfg
+		environment\batch\ini\zdev21\csc_phadex.cfg = environment\batch\ini\zdev21\csc_phadex.cfg
+		environment\batch\ini\zdev21\csc_phatra.cfg = environment\batch\ini\zdev21\csc_phatra.cfg
+		environment\batch\ini\zdev21\ibtorderimport.cfg = environment\batch\ini\zdev21\ibtorderimport.cfg
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "log4cplus", "log4cplus", "{0986C3AD-33B8-49DE-87A5-FBB7A5717A98}"
+	ProjectSection(SolutionItems) = preProject
+		environment\batch\ini\zqas21\aaorderclose.R.cfg = environment\batch\ini\zqas21\aaorderclose.R.cfg
+		environment\batch\ini\zqas21\clearreservation.cfg = environment\batch\ini\zqas21\clearreservation.cfg
+		environment\batch\ini\zqas21\csc_corpha.cfg = environment\batch\ini\zqas21\csc_corpha.cfg
+		environment\batch\ini\zqas21\csc_phabor.cfg = environment\batch\ini\zqas21\csc_phabor.cfg
+		environment\batch\ini\zqas21\csc_phadex.cfg = environment\batch\ini\zqas21\csc_phadex.cfg
+		environment\batch\ini\zqas21\csc_phatra.cfg = environment\batch\ini\zqas21\csc_phatra.cfg
+		environment\batch\ini\zqas21\ibtorderimport.cfg = environment\batch\ini\zqas21\ibtorderimport.cfg
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "log4cplus", "log4cplus", "{CE7223A6-DE89-46E9-8154-25E494210CC4}"
+	ProjectSection(SolutionItems) = preProject
+		environment\batch\ini\ztst21\aaorderclose.R.cfg = environment\batch\ini\ztst21\aaorderclose.R.cfg
+		environment\batch\ini\ztst21\clearreservation.cfg = environment\batch\ini\ztst21\clearreservation.cfg
+		environment\batch\ini\ztst21\csc_corpha.cfg = environment\batch\ini\ztst21\csc_corpha.cfg
+		environment\batch\ini\ztst21\csc_phabor.cfg = environment\batch\ini\ztst21\csc_phabor.cfg
+		environment\batch\ini\ztst21\csc_phadex.cfg = environment\batch\ini\ztst21\csc_phadex.cfg
+		environment\batch\ini\ztst21\csc_phatra.cfg = environment\batch\ini\ztst21\csc_phatra.cfg
+		environment\batch\ini\ztst21\ibtorderimport.cfg = environment\batch\ini\ztst21\ibtorderimport.cfg
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "aaordclose", "aaordclose", "{DB71EAC5-6CAE-452C-B24E-E8DAAC8EE9A4}"
+	ProjectSection(SolutionItems) = preProject
+		environment\batch\ini\zdev21\aaordclose.ini.at = environment\batch\ini\zdev21\aaordclose.ini.at
+		environment\batch\ini\zdev21\aaordclose.ini.bg = environment\batch\ini\zdev21\aaordclose.ini.bg
+		environment\batch\ini\zdev21\aaordclose.ini.ch = environment\batch\ini\zdev21\aaordclose.ini.ch
+		environment\batch\ini\zdev21\aaordclose.ini.de = environment\batch\ini\zdev21\aaordclose.ini.de
+		environment\batch\ini\zdev21\aaordclose.ini.fr = environment\batch\ini\zdev21\aaordclose.ini.fr
+		environment\batch\ini\zdev21\aaordclose.ini.hr = environment\batch\ini\zdev21\aaordclose.ini.hr
+		environment\batch\ini\zdev21\aaordclose.ini.pat = environment\batch\ini\zdev21\aaordclose.ini.pat
+		environment\batch\ini\zdev21\aaordclose.ini.pch = environment\batch\ini\zdev21\aaordclose.ini.pch
+		environment\batch\ini\zdev21\aaordclose.ini.pfr = environment\batch\ini\zdev21\aaordclose.ini.pfr
+		environment\batch\ini\zdev21\aaordclose.ini.rs = environment\batch\ini\zdev21\aaordclose.ini.rs
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "clearreservation", "clearreservation", "{75703D4C-445F-4702-8745-9B73CA16E7BE}"
+	ProjectSection(SolutionItems) = preProject
+		environment\batch\ini\zdev21\clearreservation.ini.at = environment\batch\ini\zdev21\clearreservation.ini.at
+		environment\batch\ini\zdev21\clearreservation.ini.bg = environment\batch\ini\zdev21\clearreservation.ini.bg
+		environment\batch\ini\zdev21\clearreservation.ini.ch = environment\batch\ini\zdev21\clearreservation.ini.ch
+		environment\batch\ini\zdev21\clearreservation.ini.de = environment\batch\ini\zdev21\clearreservation.ini.de
+		environment\batch\ini\zdev21\clearreservation.ini.fr = environment\batch\ini\zdev21\clearreservation.ini.fr
+		environment\batch\ini\zdev21\clearreservation.ini.hr = environment\batch\ini\zdev21\clearreservation.ini.hr
+		environment\batch\ini\zdev21\clearreservation.ini.pat = environment\batch\ini\zdev21\clearreservation.ini.pat
+		environment\batch\ini\zdev21\clearreservation.ini.pch = environment\batch\ini\zdev21\clearreservation.ini.pch
+		environment\batch\ini\zdev21\clearreservation.ini.pfr = environment\batch\ini\zdev21\clearreservation.ini.pfr
+		environment\batch\ini\zdev21\clearreservation.ini.rs = environment\batch\ini\zdev21\clearreservation.ini.rs
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "aaordclose", "aaordclose", "{081679D3-D054-4199-889C-02174E34CF8C}"
+	ProjectSection(SolutionItems) = preProject
+		environment\batch\ini\zqas21\aaordclose.ini.at = environment\batch\ini\zqas21\aaordclose.ini.at
+		environment\batch\ini\zqas21\aaordclose.ini.bg = environment\batch\ini\zqas21\aaordclose.ini.bg
+		environment\batch\ini\zqas21\aaordclose.ini.ch = environment\batch\ini\zqas21\aaordclose.ini.ch
+		environment\batch\ini\zqas21\aaordclose.ini.de = environment\batch\ini\zqas21\aaordclose.ini.de
+		environment\batch\ini\zqas21\aaordclose.ini.fr = environment\batch\ini\zqas21\aaordclose.ini.fr
+		environment\batch\ini\zqas21\aaordclose.ini.hr = environment\batch\ini\zqas21\aaordclose.ini.hr
+		environment\batch\ini\zqas21\aaordclose.ini.pat = environment\batch\ini\zqas21\aaordclose.ini.pat
+		environment\batch\ini\zqas21\aaordclose.ini.pch = environment\batch\ini\zqas21\aaordclose.ini.pch
+		environment\batch\ini\zqas21\aaordclose.ini.pfr = environment\batch\ini\zqas21\aaordclose.ini.pfr
+		environment\batch\ini\zqas21\aaordclose.ini.rs = environment\batch\ini\zqas21\aaordclose.ini.rs
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "clearreservation", "clearreservation", "{8D80BF58-4326-48B3-A71D-D0AE74E274ED}"
+	ProjectSection(SolutionItems) = preProject
+		environment\batch\ini\zqas21\clearreservation.ini.at = environment\batch\ini\zqas21\clearreservation.ini.at
+		environment\batch\ini\zqas21\clearreservation.ini.bg = environment\batch\ini\zqas21\clearreservation.ini.bg
+		environment\batch\ini\zqas21\clearreservation.ini.ch = environment\batch\ini\zqas21\clearreservation.ini.ch
+		environment\batch\ini\zqas21\clearreservation.ini.de = environment\batch\ini\zqas21\clearreservation.ini.de
+		environment\batch\ini\zqas21\clearreservation.ini.fr = environment\batch\ini\zqas21\clearreservation.ini.fr
+		environment\batch\ini\zqas21\clearreservation.ini.hr = environment\batch\ini\zqas21\clearreservation.ini.hr
+		environment\batch\ini\zqas21\clearreservation.ini.pat = environment\batch\ini\zqas21\clearreservation.ini.pat
+		environment\batch\ini\zqas21\clearreservation.ini.pch = environment\batch\ini\zqas21\clearreservation.ini.pch
+		environment\batch\ini\zqas21\clearreservation.ini.pfr = environment\batch\ini\zqas21\clearreservation.ini.pfr
+		environment\batch\ini\zqas21\clearreservation.ini.rs = environment\batch\ini\zqas21\clearreservation.ini.rs
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "csc_corpha", "csc_corpha", "{2A43E248-100E-4B9F-B61D-08329095C684}"
+	ProjectSection(SolutionItems) = preProject
+		environment\batch\ini\zqas21\csc_corpha.xml.at = environment\batch\ini\zqas21\csc_corpha.xml.at
+		environment\batch\ini\zqas21\csc_corpha.xml.bg = environment\batch\ini\zqas21\csc_corpha.xml.bg
+		environment\batch\ini\zqas21\csc_corpha.xml.ch = environment\batch\ini\zqas21\csc_corpha.xml.ch
+		environment\batch\ini\zqas21\csc_corpha.xml.de = environment\batch\ini\zqas21\csc_corpha.xml.de
+		environment\batch\ini\zqas21\csc_corpha.xml.fr = environment\batch\ini\zqas21\csc_corpha.xml.fr
+		environment\batch\ini\zqas21\csc_corpha.xml.hr = environment\batch\ini\zqas21\csc_corpha.xml.hr
+		environment\batch\ini\zqas21\csc_corpha.xml.pat = environment\batch\ini\zqas21\csc_corpha.xml.pat
+		environment\batch\ini\zqas21\csc_corpha.xml.pch = environment\batch\ini\zqas21\csc_corpha.xml.pch
+		environment\batch\ini\zqas21\csc_corpha.xml.pfr = environment\batch\ini\zqas21\csc_corpha.xml.pfr
+		environment\batch\ini\zqas21\csc_corpha.xml.rs = environment\batch\ini\zqas21\csc_corpha.xml.rs
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "csc_phabor", "csc_phabor", "{2A9B48D6-4C00-4772-B636-2F31AEDFA23B}"
+	ProjectSection(SolutionItems) = preProject
+		environment\batch\ini\zqas21\csc_phabor.xml.at = environment\batch\ini\zqas21\csc_phabor.xml.at
+		environment\batch\ini\zqas21\csc_phabor.xml.bg = environment\batch\ini\zqas21\csc_phabor.xml.bg
+		environment\batch\ini\zqas21\csc_phabor.xml.ch = environment\batch\ini\zqas21\csc_phabor.xml.ch
+		environment\batch\ini\zqas21\csc_phabor.xml.de = environment\batch\ini\zqas21\csc_phabor.xml.de
+		environment\batch\ini\zqas21\csc_phabor.xml.fr = environment\batch\ini\zqas21\csc_phabor.xml.fr
+		environment\batch\ini\zqas21\csc_phabor.xml.hr = environment\batch\ini\zqas21\csc_phabor.xml.hr
+		environment\batch\ini\zqas21\csc_phabor.xml.pat = environment\batch\ini\zqas21\csc_phabor.xml.pat
+		environment\batch\ini\zqas21\csc_phabor.xml.pch = environment\batch\ini\zqas21\csc_phabor.xml.pch
+		environment\batch\ini\zqas21\csc_phabor.xml.pfr = environment\batch\ini\zqas21\csc_phabor.xml.pfr
+		environment\batch\ini\zqas21\csc_phabor.xml.rs = environment\batch\ini\zqas21\csc_phabor.xml.rs
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "csc_phadex", "csc_phadex", "{89A2ED45-503B-43B0-B21E-DA87259EEF78}"
+	ProjectSection(SolutionItems) = preProject
+		environment\batch\ini\zqas21\csc_phadex.xml.at = environment\batch\ini\zqas21\csc_phadex.xml.at
+		environment\batch\ini\zqas21\csc_phadex.xml.bg = environment\batch\ini\zqas21\csc_phadex.xml.bg
+		environment\batch\ini\zqas21\csc_phadex.xml.ch = environment\batch\ini\zqas21\csc_phadex.xml.ch
+		environment\batch\ini\zqas21\csc_phadex.xml.de = environment\batch\ini\zqas21\csc_phadex.xml.de
+		environment\batch\ini\zqas21\csc_phadex.xml.fr = environment\batch\ini\zqas21\csc_phadex.xml.fr
+		environment\batch\ini\zqas21\csc_phadex.xml.hr = environment\batch\ini\zqas21\csc_phadex.xml.hr
+		environment\batch\ini\zqas21\csc_phadex.xml.pat = environment\batch\ini\zqas21\csc_phadex.xml.pat
+		environment\batch\ini\zqas21\csc_phadex.xml.pch = environment\batch\ini\zqas21\csc_phadex.xml.pch
+		environment\batch\ini\zqas21\csc_phadex.xml.pfr = environment\batch\ini\zqas21\csc_phadex.xml.pfr
+		environment\batch\ini\zqas21\csc_phadex.xml.rs = environment\batch\ini\zqas21\csc_phadex.xml.rs
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "csc_phatra", "csc_phatra", "{3952FC29-BBD0-4377-9364-6E587C71AE2A}"
+	ProjectSection(SolutionItems) = preProject
+		environment\batch\ini\zqas21\csc_phatra.xml.at = environment\batch\ini\zqas21\csc_phatra.xml.at
+		environment\batch\ini\zqas21\csc_phatra.xml.bg = environment\batch\ini\zqas21\csc_phatra.xml.bg
+		environment\batch\ini\zqas21\csc_phatra.xml.ch = environment\batch\ini\zqas21\csc_phatra.xml.ch
+		environment\batch\ini\zqas21\csc_phatra.xml.de = environment\batch\ini\zqas21\csc_phatra.xml.de
+		environment\batch\ini\zqas21\csc_phatra.xml.fr = environment\batch\ini\zqas21\csc_phatra.xml.fr
+		environment\batch\ini\zqas21\csc_phatra.xml.hr = environment\batch\ini\zqas21\csc_phatra.xml.hr
+		environment\batch\ini\zqas21\csc_phatra.xml.pat = environment\batch\ini\zqas21\csc_phatra.xml.pat
+		environment\batch\ini\zqas21\csc_phatra.xml.pch = environment\batch\ini\zqas21\csc_phatra.xml.pch
+		environment\batch\ini\zqas21\csc_phatra.xml.pfr = environment\batch\ini\zqas21\csc_phatra.xml.pfr
+		environment\batch\ini\zqas21\csc_phatra.xml.rs = environment\batch\ini\zqas21\csc_phatra.xml.rs
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "aaordclose", "aaordclose", "{1DE0EEBF-B7AB-43D8-AB23-8ED8D48CCE4F}"
+	ProjectSection(SolutionItems) = preProject
+		environment\batch\ini\ztst21\aaordclose.ini.at = environment\batch\ini\ztst21\aaordclose.ini.at
+		environment\batch\ini\ztst21\aaordclose.ini.bg = environment\batch\ini\ztst21\aaordclose.ini.bg
+		environment\batch\ini\ztst21\aaordclose.ini.ch = environment\batch\ini\ztst21\aaordclose.ini.ch
+		environment\batch\ini\ztst21\aaordclose.ini.de = environment\batch\ini\ztst21\aaordclose.ini.de
+		environment\batch\ini\ztst21\aaordclose.ini.fr = environment\batch\ini\ztst21\aaordclose.ini.fr
+		environment\batch\ini\ztst21\aaordclose.ini.hr = environment\batch\ini\ztst21\aaordclose.ini.hr
+		environment\batch\ini\ztst21\aaordclose.ini.pat = environment\batch\ini\ztst21\aaordclose.ini.pat
+		environment\batch\ini\ztst21\aaordclose.ini.pch = environment\batch\ini\ztst21\aaordclose.ini.pch
+		environment\batch\ini\ztst21\aaordclose.ini.pfr = environment\batch\ini\ztst21\aaordclose.ini.pfr
+		environment\batch\ini\ztst21\aaordclose.ini.rs = environment\batch\ini\ztst21\aaordclose.ini.rs
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "clearreservation", "clearreservation", "{C11E2166-CF68-408D-A3C2-0C39EA740169}"
+	ProjectSection(SolutionItems) = preProject
+		environment\batch\ini\ztst21\clearreservation.ini.at = environment\batch\ini\ztst21\clearreservation.ini.at
+		environment\batch\ini\ztst21\clearreservation.ini.bg = environment\batch\ini\ztst21\clearreservation.ini.bg
+		environment\batch\ini\ztst21\clearreservation.ini.ch = environment\batch\ini\ztst21\clearreservation.ini.ch
+		environment\batch\ini\ztst21\clearreservation.ini.de = environment\batch\ini\ztst21\clearreservation.ini.de
+		environment\batch\ini\ztst21\clearreservation.ini.fr = environment\batch\ini\ztst21\clearreservation.ini.fr
+		environment\batch\ini\ztst21\clearreservation.ini.hr = environment\batch\ini\ztst21\clearreservation.ini.hr
+		environment\batch\ini\ztst21\clearreservation.ini.pat = environment\batch\ini\ztst21\clearreservation.ini.pat
+		environment\batch\ini\ztst21\clearreservation.ini.pch = environment\batch\ini\ztst21\clearreservation.ini.pch
+		environment\batch\ini\ztst21\clearreservation.ini.pfr = environment\batch\ini\ztst21\clearreservation.ini.pfr
+		environment\batch\ini\ztst21\clearreservation.ini.rs = environment\batch\ini\ztst21\clearreservation.ini.rs
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "csc_corpha", "csc_corpha", "{F1423340-F0F3-4A87-BFAA-15C1006DE76B}"
+	ProjectSection(SolutionItems) = preProject
+		environment\batch\ini\ztst21\csc_corpha.xml.at = environment\batch\ini\ztst21\csc_corpha.xml.at
+		environment\batch\ini\ztst21\csc_corpha.xml.bg = environment\batch\ini\ztst21\csc_corpha.xml.bg
+		environment\batch\ini\ztst21\csc_corpha.xml.ch = environment\batch\ini\ztst21\csc_corpha.xml.ch
+		environment\batch\ini\ztst21\csc_corpha.xml.de = environment\batch\ini\ztst21\csc_corpha.xml.de
+		environment\batch\ini\ztst21\csc_corpha.xml.fr = environment\batch\ini\ztst21\csc_corpha.xml.fr
+		environment\batch\ini\ztst21\csc_corpha.xml.hr = environment\batch\ini\ztst21\csc_corpha.xml.hr
+		environment\batch\ini\ztst21\csc_corpha.xml.pat = environment\batch\ini\ztst21\csc_corpha.xml.pat
+		environment\batch\ini\ztst21\csc_corpha.xml.pch = environment\batch\ini\ztst21\csc_corpha.xml.pch
+		environment\batch\ini\ztst21\csc_corpha.xml.pfr = environment\batch\ini\ztst21\csc_corpha.xml.pfr
+		environment\batch\ini\ztst21\csc_corpha.xml.rs = environment\batch\ini\ztst21\csc_corpha.xml.rs
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "csc_phabor", "csc_phabor", "{C1AD0B86-08E8-4835-AE37-FDEE7F2DA693}"
+	ProjectSection(SolutionItems) = preProject
+		environment\batch\ini\ztst21\csc_phabor.xml.at = environment\batch\ini\ztst21\csc_phabor.xml.at
+		environment\batch\ini\ztst21\csc_phabor.xml.bg = environment\batch\ini\ztst21\csc_phabor.xml.bg
+		environment\batch\ini\ztst21\csc_phabor.xml.ch = environment\batch\ini\ztst21\csc_phabor.xml.ch
+		environment\batch\ini\ztst21\csc_phabor.xml.de = environment\batch\ini\ztst21\csc_phabor.xml.de
+		environment\batch\ini\ztst21\csc_phabor.xml.fr = environment\batch\ini\ztst21\csc_phabor.xml.fr
+		environment\batch\ini\ztst21\csc_phabor.xml.hr = environment\batch\ini\ztst21\csc_phabor.xml.hr
+		environment\batch\ini\ztst21\csc_phabor.xml.pat = environment\batch\ini\ztst21\csc_phabor.xml.pat
+		environment\batch\ini\ztst21\csc_phabor.xml.pch = environment\batch\ini\ztst21\csc_phabor.xml.pch
+		environment\batch\ini\ztst21\csc_phabor.xml.pfr = environment\batch\ini\ztst21\csc_phabor.xml.pfr
+		environment\batch\ini\ztst21\csc_phabor.xml.rs = environment\batch\ini\ztst21\csc_phabor.xml.rs
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "csc_phadex", "csc_phadex", "{C0B0D443-7B04-4F35-AAF3-BC894579E332}"
+	ProjectSection(SolutionItems) = preProject
+		environment\batch\ini\ztst21\csc_phadex.xml.at = environment\batch\ini\ztst21\csc_phadex.xml.at
+		environment\batch\ini\ztst21\csc_phadex.xml.bg = environment\batch\ini\ztst21\csc_phadex.xml.bg
+		environment\batch\ini\ztst21\csc_phadex.xml.ch = environment\batch\ini\ztst21\csc_phadex.xml.ch
+		environment\batch\ini\ztst21\csc_phadex.xml.de = environment\batch\ini\ztst21\csc_phadex.xml.de
+		environment\batch\ini\ztst21\csc_phadex.xml.fr = environment\batch\ini\ztst21\csc_phadex.xml.fr
+		environment\batch\ini\ztst21\csc_phadex.xml.hr = environment\batch\ini\ztst21\csc_phadex.xml.hr
+		environment\batch\ini\ztst21\csc_phadex.xml.pat = environment\batch\ini\ztst21\csc_phadex.xml.pat
+		environment\batch\ini\ztst21\csc_phadex.xml.pch = environment\batch\ini\ztst21\csc_phadex.xml.pch
+		environment\batch\ini\ztst21\csc_phadex.xml.pfr = environment\batch\ini\ztst21\csc_phadex.xml.pfr
+		environment\batch\ini\ztst21\csc_phadex.xml.rs = environment\batch\ini\ztst21\csc_phadex.xml.rs
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "csc_phatra", "csc_phatra", "{E3383856-9452-4465-A3F2-20D8C2BBEA72}"
+	ProjectSection(SolutionItems) = preProject
+		environment\batch\ini\ztst21\csc_phatra.xml.at = environment\batch\ini\ztst21\csc_phatra.xml.at
+		environment\batch\ini\ztst21\csc_phatra.xml.bg = environment\batch\ini\ztst21\csc_phatra.xml.bg
+		environment\batch\ini\ztst21\csc_phatra.xml.ch = environment\batch\ini\ztst21\csc_phatra.xml.ch
+		environment\batch\ini\ztst21\csc_phatra.xml.de = environment\batch\ini\ztst21\csc_phatra.xml.de
+		environment\batch\ini\ztst21\csc_phatra.xml.fr = environment\batch\ini\ztst21\csc_phatra.xml.fr
+		environment\batch\ini\ztst21\csc_phatra.xml.hr = environment\batch\ini\ztst21\csc_phatra.xml.hr
+		environment\batch\ini\ztst21\csc_phatra.xml.pat = environment\batch\ini\ztst21\csc_phatra.xml.pat
+		environment\batch\ini\ztst21\csc_phatra.xml.pch = environment\batch\ini\ztst21\csc_phatra.xml.pch
+		environment\batch\ini\ztst21\csc_phatra.xml.pfr = environment\batch\ini\ztst21\csc_phatra.xml.pfr
+		environment\batch\ini\ztst21\csc_phatra.xml.rs = environment\batch\ini\ztst21\csc_phatra.xml.rs
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "log4cplus", "log4cplus", "{CCD1D040-499F-41ED-A8E2-A75AE8F30C93}"
+	ProjectSection(SolutionItems) = preProject
+		environment\server\ini\prod\cscservice.cfg = environment\server\ini\prod\cscservice.cfg
+		environment\server\ini\prod\kscserver.cfg = environment\server\ini\prod\kscserver.cfg
+		environment\server\ini\prod\zaapunix.cfg = environment\server\ini\prod\zaapunix.cfg
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "log4cplus", "log4cplus", "{E64A37A0-D255-406C-9934-381CB99F1DD9}"
+	ProjectSection(SolutionItems) = preProject
+		environment\server\ini\zdev21\cscservice.cfg = environment\server\ini\zdev21\cscservice.cfg
+		environment\server\ini\zdev21\kscserver.cfg = environment\server\ini\zdev21\kscserver.cfg
+		environment\server\ini\zdev21\zaapunix.cfg = environment\server\ini\zdev21\zaapunix.cfg
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "log4cplus", "log4cplus", "{7BEE822E-0E69-4812-B2DB-888B894BD083}"
+	ProjectSection(SolutionItems) = preProject
+		environment\server\ini\zqas21\cscservice.cfg = environment\server\ini\zqas21\cscservice.cfg
+		environment\server\ini\zqas21\kscserver.cfg = environment\server\ini\zqas21\kscserver.cfg
+		environment\server\ini\zqas21\zaapunix.cfg = environment\server\ini\zqas21\zaapunix.cfg
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "log4cplus", "log4cplus", "{4F3E0BBC-A26E-45FE-BAE7-160DC4958D52}"
+	ProjectSection(SolutionItems) = preProject
+		environment\server\ini\ztst21\cscservice.cfg = environment\server\ini\ztst21\cscservice.cfg
+		environment\server\ini\ztst21\kscserver.cfg = environment\server\ini\ztst21\kscserver.cfg
+		environment\server\ini\ztst21\zaapunix.cfg = environment\server\ini\ztst21\zaapunix.cfg
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "aasunix", "aasunix", "{D07B407B-8E45-4478-B4E9-7962C17AB4A8}"
+	ProjectSection(SolutionItems) = preProject
+		environment\server\ini\ztst21\aasunix.ini.at = environment\server\ini\ztst21\aasunix.ini.at
+		environment\server\ini\ztst21\aasunix.ini.bg = environment\server\ini\ztst21\aasunix.ini.bg
+		environment\server\ini\ztst21\aasunix.ini.ch = environment\server\ini\ztst21\aasunix.ini.ch
+		environment\server\ini\ztst21\aasunix.ini.de = environment\server\ini\ztst21\aasunix.ini.de
+		environment\server\ini\ztst21\aasunix.ini.fr = environment\server\ini\ztst21\aasunix.ini.fr
+		environment\server\ini\ztst21\aasunix.ini.hr = environment\server\ini\ztst21\aasunix.ini.hr
+		environment\server\ini\ztst21\aasunix.ini.pat = environment\server\ini\ztst21\aasunix.ini.pat
+		environment\server\ini\ztst21\aasunix.ini.pch = environment\server\ini\ztst21\aasunix.ini.pch
+		environment\server\ini\ztst21\aasunix.ini.pfr = environment\server\ini\ztst21\aasunix.ini.pfr
+		environment\server\ini\ztst21\aasunix.ini.rs = environment\server\ini\ztst21\aasunix.ini.rs
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "aasunix", "aasunix", "{B0DCA7E1-1B30-4CAD-B0A7-265CFF3958CC}"
+	ProjectSection(SolutionItems) = preProject
+		environment\server\ini\zqas21\aasunix.ini.at = environment\server\ini\zqas21\aasunix.ini.at
+		environment\server\ini\zqas21\aasunix.ini.bg = environment\server\ini\zqas21\aasunix.ini.bg
+		environment\server\ini\zqas21\aasunix.ini.ch = environment\server\ini\zqas21\aasunix.ini.ch
+		environment\server\ini\zqas21\aasunix.ini.de = environment\server\ini\zqas21\aasunix.ini.de
+		environment\server\ini\zqas21\aasunix.ini.fr = environment\server\ini\zqas21\aasunix.ini.fr
+		environment\server\ini\zqas21\aasunix.ini.hr = environment\server\ini\zqas21\aasunix.ini.hr
+		environment\server\ini\zqas21\aasunix.ini.pat = environment\server\ini\zqas21\aasunix.ini.pat
+		environment\server\ini\zqas21\aasunix.ini.pch = environment\server\ini\zqas21\aasunix.ini.pch
+		environment\server\ini\zqas21\aasunix.ini.pfr = environment\server\ini\zqas21\aasunix.ini.pfr
+		environment\server\ini\zqas21\aasunix.ini.rs = environment\server\ini\zqas21\aasunix.ini.rs
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "aasunix", "aasunix", "{F85ADBE8-BA4A-405B-AD1D-664204ACD387}"
+	ProjectSection(SolutionItems) = preProject
+		environment\server\ini\zdev21\aasunix.ini.at = environment\server\ini\zdev21\aasunix.ini.at
+		environment\server\ini\zdev21\aasunix.ini.bg = environment\server\ini\zdev21\aasunix.ini.bg
+		environment\server\ini\zdev21\aasunix.ini.ch = environment\server\ini\zdev21\aasunix.ini.ch
+		environment\server\ini\zdev21\aasunix.ini.de = environment\server\ini\zdev21\aasunix.ini.de
+		environment\server\ini\zdev21\aasunix.ini.fr = environment\server\ini\zdev21\aasunix.ini.fr
+		environment\server\ini\zdev21\aasunix.ini.hr = environment\server\ini\zdev21\aasunix.ini.hr
+		environment\server\ini\zdev21\aasunix.ini.pat = environment\server\ini\zdev21\aasunix.ini.pat
+		environment\server\ini\zdev21\aasunix.ini.pch = environment\server\ini\zdev21\aasunix.ini.pch
+		environment\server\ini\zdev21\aasunix.ini.pfr = environment\server\ini\zdev21\aasunix.ini.pfr
+		environment\server\ini\zdev21\aasunix.ini.rs = environment\server\ini\zdev21\aasunix.ini.rs
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "cscservice", "cscservice", "{B16BE4AB-A222-4C2A-8817-1F45CD967C36}"
+	ProjectSection(SolutionItems) = preProject
+		environment\server\ini\prod\cscservice.ini.70 = environment\server\ini\prod\cscservice.ini.70
+		environment\server\ini\prod\cscservice.ini.71 = environment\server\ini\prod\cscservice.ini.71
+		environment\server\ini\prod\cscservice.ini.72 = environment\server\ini\prod\cscservice.ini.72
+		environment\server\ini\prod\cscservice.ini.73 = environment\server\ini\prod\cscservice.ini.73
+		environment\server\ini\prod\cscservice.ini.74 = environment\server\ini\prod\cscservice.ini.74
+		environment\server\ini\prod\cscservice.ini.75 = environment\server\ini\prod\cscservice.ini.75
+		environment\server\ini\prod\cscservice.ini.76 = environment\server\ini\prod\cscservice.ini.76
+		environment\server\ini\prod\cscservice.ini.77 = environment\server\ini\prod\cscservice.ini.77
+		environment\server\ini\prod\cscservice.ini.at = environment\server\ini\prod\cscservice.ini.at
+		environment\server\ini\prod\cscservice.ini.bg = environment\server\ini\prod\cscservice.ini.bg
+		environment\server\ini\prod\cscservice.ini.ch = environment\server\ini\prod\cscservice.ini.ch
+		environment\server\ini\prod\cscservice.ini.de = environment\server\ini\prod\cscservice.ini.de
+		environment\server\ini\prod\cscservice.ini.fr = environment\server\ini\prod\cscservice.ini.fr
+		environment\server\ini\prod\cscservice.ini.hr = environment\server\ini\prod\cscservice.ini.hr
+		environment\server\ini\prod\cscservice.ini.LN = environment\server\ini\prod\cscservice.ini.LN
+		environment\server\ini\prod\cscservice.ini.pat = environment\server\ini\prod\cscservice.ini.pat
+		environment\server\ini\prod\cscservice.ini.pch = environment\server\ini\prod\cscservice.ini.pch
+		environment\server\ini\prod\cscservice.ini.pfr = environment\server\ini\prod\cscservice.ini.pfr
+		environment\server\ini\prod\cscservice.ini.rs = environment\server\ini\prod\cscservice.ini.rs
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "cscservice", "cscservice", "{F4210199-5690-451B-AA01-0292A94C1C34}"
+	ProjectSection(SolutionItems) = preProject
+		environment\server\ini\zdev21\cscservice.ini.at = environment\server\ini\zdev21\cscservice.ini.at
+		environment\server\ini\zdev21\cscservice.ini.bg = environment\server\ini\zdev21\cscservice.ini.bg
+		environment\server\ini\zdev21\cscservice.ini.ch = environment\server\ini\zdev21\cscservice.ini.ch
+		environment\server\ini\zdev21\cscservice.ini.de = environment\server\ini\zdev21\cscservice.ini.de
+		environment\server\ini\zdev21\cscservice.ini.de4 = environment\server\ini\zdev21\cscservice.ini.de4
+		environment\server\ini\zdev21\cscservice.ini.fr = environment\server\ini\zdev21\cscservice.ini.fr
+		environment\server\ini\zdev21\cscservice.ini.hr = environment\server\ini\zdev21\cscservice.ini.hr
+		environment\server\ini\zdev21\cscservice.ini.pat = environment\server\ini\zdev21\cscservice.ini.pat
+		environment\server\ini\zdev21\cscservice.ini.pch = environment\server\ini\zdev21\cscservice.ini.pch
+		environment\server\ini\zdev21\cscservice.ini.pfr = environment\server\ini\zdev21\cscservice.ini.pfr
+		environment\server\ini\zdev21\cscservice.ini.rs = environment\server\ini\zdev21\cscservice.ini.rs
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "cscservice", "cscservice", "{11339DB1-E83F-4F90-95D8-43EC7603234C}"
+	ProjectSection(SolutionItems) = preProject
+		environment\server\ini\zqas21\cscservice.ini.at = environment\server\ini\zqas21\cscservice.ini.at
+		environment\server\ini\zqas21\cscservice.ini.bg = environment\server\ini\zqas21\cscservice.ini.bg
+		environment\server\ini\zqas21\cscservice.ini.ch = environment\server\ini\zqas21\cscservice.ini.ch
+		environment\server\ini\zqas21\cscservice.ini.de = environment\server\ini\zqas21\cscservice.ini.de
+		environment\server\ini\zqas21\cscservice.ini.fr = environment\server\ini\zqas21\cscservice.ini.fr
+		environment\server\ini\zqas21\cscservice.ini.hr = environment\server\ini\zqas21\cscservice.ini.hr
+		environment\server\ini\zqas21\cscservice.ini.pat = environment\server\ini\zqas21\cscservice.ini.pat
+		environment\server\ini\zqas21\cscservice.ini.pch = environment\server\ini\zqas21\cscservice.ini.pch
+		environment\server\ini\zqas21\cscservice.ini.pfr = environment\server\ini\zqas21\cscservice.ini.pfr
+		environment\server\ini\zqas21\cscservice.ini.rs = environment\server\ini\zqas21\cscservice.ini.rs
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "cscservice", "cscservice", "{D0DAD872-1392-4FA3-9DC3-EC65C8D7C74F}"
+	ProjectSection(SolutionItems) = preProject
+		environment\server\ini\ztst21\cscservice.ini.at = environment\server\ini\ztst21\cscservice.ini.at
+		environment\server\ini\ztst21\cscservice.ini.bg = environment\server\ini\ztst21\cscservice.ini.bg
+		environment\server\ini\ztst21\cscservice.ini.ch = environment\server\ini\ztst21\cscservice.ini.ch
+		environment\server\ini\ztst21\cscservice.ini.de = environment\server\ini\ztst21\cscservice.ini.de
+		environment\server\ini\ztst21\cscservice.ini.fr = environment\server\ini\ztst21\cscservice.ini.fr
+		environment\server\ini\ztst21\cscservice.ini.hr = environment\server\ini\ztst21\cscservice.ini.hr
+		environment\server\ini\ztst21\cscservice.ini.pat = environment\server\ini\ztst21\cscservice.ini.pat
+		environment\server\ini\ztst21\cscservice.ini.pch = environment\server\ini\ztst21\cscservice.ini.pch
+		environment\server\ini\ztst21\cscservice.ini.pfr = environment\server\ini\ztst21\cscservice.ini.pfr
+		environment\server\ini\ztst21\cscservice.ini.rs = environment\server\ini\ztst21\cscservice.ini.rs
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "kscserver", "kscserver", "{F07630F4-49E6-495C-82D6-7B028466E17F}"
+	ProjectSection(SolutionItems) = preProject
+		environment\server\ini\ztst21\kscserver.ini.at = environment\server\ini\ztst21\kscserver.ini.at
+		environment\server\ini\ztst21\kscserver.ini.bg = environment\server\ini\ztst21\kscserver.ini.bg
+		environment\server\ini\ztst21\kscserver.ini.ch = environment\server\ini\ztst21\kscserver.ini.ch
+		environment\server\ini\ztst21\kscserver.ini.de = environment\server\ini\ztst21\kscserver.ini.de
+		environment\server\ini\ztst21\kscserver.ini.fr = environment\server\ini\ztst21\kscserver.ini.fr
+		environment\server\ini\ztst21\kscserver.ini.hr = environment\server\ini\ztst21\kscserver.ini.hr
+		environment\server\ini\ztst21\kscserver.ini.pat = environment\server\ini\ztst21\kscserver.ini.pat
+		environment\server\ini\ztst21\kscserver.ini.pch = environment\server\ini\ztst21\kscserver.ini.pch
+		environment\server\ini\ztst21\kscserver.ini.pfr = environment\server\ini\ztst21\kscserver.ini.pfr
+		environment\server\ini\ztst21\kscserver.ini.rs = environment\server\ini\ztst21\kscserver.ini.rs
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "kscserver", "kscserver", "{68FFBD99-7348-4D3E-AC7F-0CD261AF1F59}"
+	ProjectSection(SolutionItems) = preProject
+		environment\server\ini\zqas21\kscserver.ini.at = environment\server\ini\zqas21\kscserver.ini.at
+		environment\server\ini\zqas21\kscserver.ini.bg = environment\server\ini\zqas21\kscserver.ini.bg
+		environment\server\ini\zqas21\kscserver.ini.ch = environment\server\ini\zqas21\kscserver.ini.ch
+		environment\server\ini\zqas21\kscserver.ini.de = environment\server\ini\zqas21\kscserver.ini.de
+		environment\server\ini\zqas21\kscserver.ini.fr = environment\server\ini\zqas21\kscserver.ini.fr
+		environment\server\ini\zqas21\kscserver.ini.hr = environment\server\ini\zqas21\kscserver.ini.hr
+		environment\server\ini\zqas21\kscserver.ini.pat = environment\server\ini\zqas21\kscserver.ini.pat
+		environment\server\ini\zqas21\kscserver.ini.pch = environment\server\ini\zqas21\kscserver.ini.pch
+		environment\server\ini\zqas21\kscserver.ini.pfr = environment\server\ini\zqas21\kscserver.ini.pfr
+		environment\server\ini\zqas21\kscserver.ini.rs = environment\server\ini\zqas21\kscserver.ini.rs
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "kscserver", "kscserver", "{887C16B7-F8E3-4DDE-8AA2-056A98D0D170}"
+	ProjectSection(SolutionItems) = preProject
+		environment\server\ini\zdev21\kscserver.ini.at = environment\server\ini\zdev21\kscserver.ini.at
+		environment\server\ini\zdev21\kscserver.ini.bg = environment\server\ini\zdev21\kscserver.ini.bg
+		environment\server\ini\zdev21\kscserver.ini.ch = environment\server\ini\zdev21\kscserver.ini.ch
+		environment\server\ini\zdev21\kscserver.ini.de = environment\server\ini\zdev21\kscserver.ini.de
+		environment\server\ini\zdev21\kscserver.ini.fr = environment\server\ini\zdev21\kscserver.ini.fr
+		environment\server\ini\zdev21\kscserver.ini.hr = environment\server\ini\zdev21\kscserver.ini.hr
+		environment\server\ini\zdev21\kscserver.ini.pat = environment\server\ini\zdev21\kscserver.ini.pat
+		environment\server\ini\zdev21\kscserver.ini.pch = environment\server\ini\zdev21\kscserver.ini.pch
+		environment\server\ini\zdev21\kscserver.ini.pfr = environment\server\ini\zdev21\kscserver.ini.pfr
+		environment\server\ini\zdev21\kscserver.ini.rs = environment\server\ini\zdev21\kscserver.ini.rs
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "kscserver", "kscserver", "{C13040F5-5D66-4591-AB6C-91F07E8860A9}"
+	ProjectSection(SolutionItems) = preProject
+		environment\server\ini\prod\kscserver.ini.LN = environment\server\ini\prod\kscserver.ini.LN
+		environment\server\ini\prod\kscserver.ini.XmlNord = environment\server\ini\prod\kscserver.ini.XmlNord
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tcaconfig", "tcaconfig", "{EE8CE81F-D481-46BA-A295-23EBB1815A67}"
+	ProjectSection(SolutionItems) = preProject
+		environment\server\ini\ztst21\tcaconfig22.ini = environment\server\ini\ztst21\tcaconfig22.ini
+		environment\server\ini\ztst21\tcaconfig23.ini = environment\server\ini\ztst21\tcaconfig23.ini
+		environment\server\ini\ztst21\tcaconfig24.ini = environment\server\ini\ztst21\tcaconfig24.ini
+		environment\server\ini\ztst21\tcaconfig25.ini = environment\server\ini\ztst21\tcaconfig25.ini
+		environment\server\ini\ztst21\tcaconfig26.ini = environment\server\ini\ztst21\tcaconfig26.ini
+		environment\server\ini\ztst21\tcaconfig28.ini = environment\server\ini\ztst21\tcaconfig28.ini
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tcaconfig", "tcaconfig", "{4A2FE9FB-846E-4C07-9AAE-DBABB0C00D64}"
+	ProjectSection(SolutionItems) = preProject
+		environment\server\ini\zqas21\tcaconfig22.ini = environment\server\ini\zqas21\tcaconfig22.ini
+		environment\server\ini\zqas21\tcaconfig23.ini = environment\server\ini\zqas21\tcaconfig23.ini
+		environment\server\ini\zqas21\tcaconfig24.ini = environment\server\ini\zqas21\tcaconfig24.ini
+		environment\server\ini\zqas21\tcaconfig25.ini = environment\server\ini\zqas21\tcaconfig25.ini
+		environment\server\ini\zqas21\tcaconfig26.ini = environment\server\ini\zqas21\tcaconfig26.ini
+		environment\server\ini\zqas21\tcaconfig28.ini = environment\server\ini\zqas21\tcaconfig28.ini
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tcaconfig", "tcaconfig", "{CE4A839B-E782-4BC6-BD57-A19B8B67B641}"
+	ProjectSection(SolutionItems) = preProject
+		environment\server\ini\zdev21\tcaconfig22.ini = environment\server\ini\zdev21\tcaconfig22.ini
+		environment\server\ini\zdev21\tcaconfig23.ini = environment\server\ini\zdev21\tcaconfig23.ini
+		environment\server\ini\zdev21\tcaconfig24.ini = environment\server\ini\zdev21\tcaconfig24.ini
+		environment\server\ini\zdev21\tcaconfig25.ini = environment\server\ini\zdev21\tcaconfig25.ini
+		environment\server\ini\zdev21\tcaconfig26.ini = environment\server\ini\zdev21\tcaconfig26.ini
+		environment\server\ini\zdev21\tcaconfig28.ini = environment\server\ini\zdev21\tcaconfig28.ini
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tcaconfig", "tcaconfig", "{4E8E6683-CE0D-4D0F-A131-D2A264CAFC7F}"
+	ProjectSection(SolutionItems) = preProject
+		environment\server\ini\prod\tcaconfig22.ini = environment\server\ini\prod\tcaconfig22.ini
+		environment\server\ini\prod\tcaconfig23.ini = environment\server\ini\prod\tcaconfig23.ini
+		environment\server\ini\prod\tcaconfig24.ini = environment\server\ini\prod\tcaconfig24.ini
+		environment\server\ini\prod\tcaconfig25.ini = environment\server\ini\prod\tcaconfig25.ini
+		environment\server\ini\prod\tcaconfig26.ini = environment\server\ini\prod\tcaconfig26.ini
+		environment\server\ini\prod\tcaconfig28.ini = environment\server\ini\prod\tcaconfig28.ini
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "cscservice", "cscservice", "{EB156C88-91E8-4185-B4C5-70FA583B0C27}"
+	ProjectSection(SolutionItems) = preProject
+		environment\server\vars\prod\cscservice.vars.at = environment\server\vars\prod\cscservice.vars.at
+		environment\server\vars\prod\cscservice.vars.bg = environment\server\vars\prod\cscservice.vars.bg
+		environment\server\vars\prod\cscservice.vars.ch = environment\server\vars\prod\cscservice.vars.ch
+		environment\server\vars\prod\cscservice.vars.de = environment\server\vars\prod\cscservice.vars.de
+		environment\server\vars\prod\cscservice.vars.fr = environment\server\vars\prod\cscservice.vars.fr
+		environment\server\vars\prod\cscservice.vars.hr = environment\server\vars\prod\cscservice.vars.hr
+		environment\server\vars\prod\cscservice.vars.pat = environment\server\vars\prod\cscservice.vars.pat
+		environment\server\vars\prod\cscservice.vars.pch = environment\server\vars\prod\cscservice.vars.pch
+		environment\server\vars\prod\cscservice.vars.pfr = environment\server\vars\prod\cscservice.vars.pfr
+		environment\server\vars\prod\cscservice.vars.rs = environment\server\vars\prod\cscservice.vars.rs
+		environment\server\vars\prod\cscservice70.vars = environment\server\vars\prod\cscservice70.vars
+		environment\server\vars\prod\cscservice71.vars = environment\server\vars\prod\cscservice71.vars
+		environment\server\vars\prod\cscservice72.vars = environment\server\vars\prod\cscservice72.vars
+		environment\server\vars\prod\cscservice73.vars = environment\server\vars\prod\cscservice73.vars
+		environment\server\vars\prod\cscservice74.vars = environment\server\vars\prod\cscservice74.vars
+		environment\server\vars\prod\cscservice75.vars = environment\server\vars\prod\cscservice75.vars
+		environment\server\vars\prod\cscservice76.vars = environment\server\vars\prod\cscservice76.vars
+		environment\server\vars\prod\cscservice77.vars = environment\server\vars\prod\cscservice77.vars
+		environment\server\vars\prod\cscserviceLN.vars = environment\server\vars\prod\cscserviceLN.vars
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "cscservice", "cscservice", "{DBE58588-F5E6-4E4B-896A-A70E56ED6B33}"
+	ProjectSection(SolutionItems) = preProject
+		environment\server\vars\zdev21\cscservice.vars.at = environment\server\vars\zdev21\cscservice.vars.at
+		environment\server\vars\zdev21\cscservice.vars.bg = environment\server\vars\zdev21\cscservice.vars.bg
+		environment\server\vars\zdev21\cscservice.vars.ch = environment\server\vars\zdev21\cscservice.vars.ch
+		environment\server\vars\zdev21\cscservice.vars.de = environment\server\vars\zdev21\cscservice.vars.de
+		environment\server\vars\zdev21\cscservice.vars.fr = environment\server\vars\zdev21\cscservice.vars.fr
+		environment\server\vars\zdev21\cscservice.vars.hr = environment\server\vars\zdev21\cscservice.vars.hr
+		environment\server\vars\zdev21\cscservice.vars.pat = environment\server\vars\zdev21\cscservice.vars.pat
+		environment\server\vars\zdev21\cscservice.vars.pch = environment\server\vars\zdev21\cscservice.vars.pch
+		environment\server\vars\zdev21\cscservice.vars.pfr = environment\server\vars\zdev21\cscservice.vars.pfr
+		environment\server\vars\zdev21\cscservice.vars.rs = environment\server\vars\zdev21\cscservice.vars.rs
+		environment\server\vars\zdev21\cscserviceLN.vars = environment\server\vars\zdev21\cscserviceLN.vars
+		environment\server\vars\zdev21\cscserviceLS.vars = environment\server\vars\zdev21\cscserviceLS.vars
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "cscservice", "cscservice", "{6C1B73EA-CA1E-40A2-BDFB-31B898071C61}"
+	ProjectSection(SolutionItems) = preProject
+		environment\server\vars\zqas21\cscservice.vars.at = environment\server\vars\zqas21\cscservice.vars.at
+		environment\server\vars\zqas21\cscservice.vars.bg = environment\server\vars\zqas21\cscservice.vars.bg
+		environment\server\vars\zqas21\cscservice.vars.ch = environment\server\vars\zqas21\cscservice.vars.ch
+		environment\server\vars\zqas21\cscservice.vars.de = environment\server\vars\zqas21\cscservice.vars.de
+		environment\server\vars\zqas21\cscservice.vars.fr = environment\server\vars\zqas21\cscservice.vars.fr
+		environment\server\vars\zqas21\cscservice.vars.hr = environment\server\vars\zqas21\cscservice.vars.hr
+		environment\server\vars\zqas21\cscservice.vars.pat = environment\server\vars\zqas21\cscservice.vars.pat
+		environment\server\vars\zqas21\cscservice.vars.pch = environment\server\vars\zqas21\cscservice.vars.pch
+		environment\server\vars\zqas21\cscservice.vars.pfr = environment\server\vars\zqas21\cscservice.vars.pfr
+		environment\server\vars\zqas21\cscservice.vars.rs = environment\server\vars\zqas21\cscservice.vars.rs
+		environment\server\vars\zqas21\cscserviceLN.vars = environment\server\vars\zqas21\cscserviceLN.vars
+		environment\server\vars\zqas21\cscserviceLS.vars = environment\server\vars\zqas21\cscserviceLS.vars
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "cscservice", "cscservice", "{3F1D01AB-AE2B-469E-9CAD-BCC72CFDB426}"
+	ProjectSection(SolutionItems) = preProject
+		environment\server\vars\ztst21\cscservice.vars.at = environment\server\vars\ztst21\cscservice.vars.at
+		environment\server\vars\ztst21\cscservice.vars.bg = environment\server\vars\ztst21\cscservice.vars.bg
+		environment\server\vars\ztst21\cscservice.vars.ch = environment\server\vars\ztst21\cscservice.vars.ch
+		environment\server\vars\ztst21\cscservice.vars.de = environment\server\vars\ztst21\cscservice.vars.de
+		environment\server\vars\ztst21\cscservice.vars.fr = environment\server\vars\ztst21\cscservice.vars.fr
+		environment\server\vars\ztst21\cscservice.vars.hr = environment\server\vars\ztst21\cscservice.vars.hr
+		environment\server\vars\ztst21\cscservice.vars.pat = environment\server\vars\ztst21\cscservice.vars.pat
+		environment\server\vars\ztst21\cscservice.vars.pch = environment\server\vars\ztst21\cscservice.vars.pch
+		environment\server\vars\ztst21\cscservice.vars.pfr = environment\server\vars\ztst21\cscservice.vars.pfr
+		environment\server\vars\ztst21\cscservice.vars.rs = environment\server\vars\ztst21\cscservice.vars.rs
+		environment\server\vars\ztst21\cscserviceLN.vars = environment\server\vars\ztst21\cscserviceLN.vars
+		environment\server\vars\ztst21\cscserviceLS.vars = environment\server\vars\ztst21\cscserviceLS.vars
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "kscserver", "kscserver", "{19C45705-E92C-41EB-8CA1-2D8F5EC81E32}"
+	ProjectSection(SolutionItems) = preProject
+		environment\server\vars\ztst21\kscserver.vars.at = environment\server\vars\ztst21\kscserver.vars.at
+		environment\server\vars\ztst21\kscserver.vars.bg = environment\server\vars\ztst21\kscserver.vars.bg
+		environment\server\vars\ztst21\kscserver.vars.ch = environment\server\vars\ztst21\kscserver.vars.ch
+		environment\server\vars\ztst21\kscserver.vars.de = environment\server\vars\ztst21\kscserver.vars.de
+		environment\server\vars\ztst21\kscserver.vars.fr = environment\server\vars\ztst21\kscserver.vars.fr
+		environment\server\vars\ztst21\kscserver.vars.hr = environment\server\vars\ztst21\kscserver.vars.hr
+		environment\server\vars\ztst21\kscserver.vars.pat = environment\server\vars\ztst21\kscserver.vars.pat
+		environment\server\vars\ztst21\kscserver.vars.pch = environment\server\vars\ztst21\kscserver.vars.pch
+		environment\server\vars\ztst21\kscserver.vars.pfr = environment\server\vars\ztst21\kscserver.vars.pfr
+		environment\server\vars\ztst21\kscserver.vars.rs = environment\server\vars\ztst21\kscserver.vars.rs
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "kscserver", "kscserver", "{7AAE8B80-D36C-483B-BFE9-DA0CAEF620E1}"
+	ProjectSection(SolutionItems) = preProject
+		environment\server\vars\zqas21\kscserver.vars.at = environment\server\vars\zqas21\kscserver.vars.at
+		environment\server\vars\zqas21\kscserver.vars.bg = environment\server\vars\zqas21\kscserver.vars.bg
+		environment\server\vars\zqas21\kscserver.vars.ch = environment\server\vars\zqas21\kscserver.vars.ch
+		environment\server\vars\zqas21\kscserver.vars.de = environment\server\vars\zqas21\kscserver.vars.de
+		environment\server\vars\zqas21\kscserver.vars.fr = environment\server\vars\zqas21\kscserver.vars.fr
+		environment\server\vars\zqas21\kscserver.vars.hr = environment\server\vars\zqas21\kscserver.vars.hr
+		environment\server\vars\zqas21\kscserver.vars.pat = environment\server\vars\zqas21\kscserver.vars.pat
+		environment\server\vars\zqas21\kscserver.vars.pch = environment\server\vars\zqas21\kscserver.vars.pch
+		environment\server\vars\zqas21\kscserver.vars.pfr = environment\server\vars\zqas21\kscserver.vars.pfr
+		environment\server\vars\zqas21\kscserver.vars.rs = environment\server\vars\zqas21\kscserver.vars.rs
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "kscserver", "kscserver", "{048CE699-87D6-4247-A1AA-AD958942407C}"
+	ProjectSection(SolutionItems) = preProject
+		environment\server\vars\prod\kscserver.vars.at = environment\server\vars\prod\kscserver.vars.at
+		environment\server\vars\prod\kscserver.vars.bg = environment\server\vars\prod\kscserver.vars.bg
+		environment\server\vars\prod\kscserver.vars.ch = environment\server\vars\prod\kscserver.vars.ch
+		environment\server\vars\prod\kscserver.vars.de = environment\server\vars\prod\kscserver.vars.de
+		environment\server\vars\prod\kscserver.vars.fr = environment\server\vars\prod\kscserver.vars.fr
+		environment\server\vars\prod\kscserver.vars.hr = environment\server\vars\prod\kscserver.vars.hr
+		environment\server\vars\prod\kscserver.vars.pat = environment\server\vars\prod\kscserver.vars.pat
+		environment\server\vars\prod\kscserver.vars.pch = environment\server\vars\prod\kscserver.vars.pch
+		environment\server\vars\prod\kscserver.vars.pfr = environment\server\vars\prod\kscserver.vars.pfr
+		environment\server\vars\prod\kscserver.vars.rs = environment\server\vars\prod\kscserver.vars.rs
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "kscserver", "kscserver", "{0421AB2D-D199-49CB-9ED5-A9742A1135C7}"
+	ProjectSection(SolutionItems) = preProject
+		environment\server\vars\zdev21\kscserver.vars.at = environment\server\vars\zdev21\kscserver.vars.at
+		environment\server\vars\zdev21\kscserver.vars.bg = environment\server\vars\zdev21\kscserver.vars.bg
+		environment\server\vars\zdev21\kscserver.vars.ch = environment\server\vars\zdev21\kscserver.vars.ch
+		environment\server\vars\zdev21\kscserver.vars.de = environment\server\vars\zdev21\kscserver.vars.de
+		environment\server\vars\zdev21\kscserver.vars.fr = environment\server\vars\zdev21\kscserver.vars.fr
+		environment\server\vars\zdev21\kscserver.vars.hr = environment\server\vars\zdev21\kscserver.vars.hr
+		environment\server\vars\zdev21\kscserver.vars.pat = environment\server\vars\zdev21\kscserver.vars.pat
+		environment\server\vars\zdev21\kscserver.vars.pch = environment\server\vars\zdev21\kscserver.vars.pch
+		environment\server\vars\zdev21\kscserver.vars.pfr = environment\server\vars\zdev21\kscserver.vars.pfr
+		environment\server\vars\zdev21\kscserver.vars.rs = environment\server\vars\zdev21\kscserver.vars.rs
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "zaapunix", "zaapunix", "{EDCFE0B3-89AC-4E15-9289-F2B809FDFD3E}"
+	ProjectSection(SolutionItems) = preProject
+		environment\server\vars\zdev21\zaapunix.vars.at = environment\server\vars\zdev21\zaapunix.vars.at
+		environment\server\vars\zdev21\zaapunix.vars.bg = environment\server\vars\zdev21\zaapunix.vars.bg
+		environment\server\vars\zdev21\zaapunix.vars.ch = environment\server\vars\zdev21\zaapunix.vars.ch
+		environment\server\vars\zdev21\zaapunix.vars.de = environment\server\vars\zdev21\zaapunix.vars.de
+		environment\server\vars\zdev21\zaapunix.vars.fr = environment\server\vars\zdev21\zaapunix.vars.fr
+		environment\server\vars\zdev21\zaapunix.vars.hr = environment\server\vars\zdev21\zaapunix.vars.hr
+		environment\server\vars\zdev21\zaapunix.vars.pat = environment\server\vars\zdev21\zaapunix.vars.pat
+		environment\server\vars\zdev21\zaapunix.vars.pch = environment\server\vars\zdev21\zaapunix.vars.pch
+		environment\server\vars\zdev21\zaapunix.vars.pfr = environment\server\vars\zdev21\zaapunix.vars.pfr
+		environment\server\vars\zdev21\zaapunix.vars.rs = environment\server\vars\zdev21\zaapunix.vars.rs
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "zaapunix", "zaapunix", "{98B06792-A733-4543-9E0E-C4A7679B45D3}"
+	ProjectSection(SolutionItems) = preProject
+		environment\server\vars\prod\zaapunix.vars.at = environment\server\vars\prod\zaapunix.vars.at
+		environment\server\vars\prod\zaapunix.vars.bg = environment\server\vars\prod\zaapunix.vars.bg
+		environment\server\vars\prod\zaapunix.vars.ch = environment\server\vars\prod\zaapunix.vars.ch
+		environment\server\vars\prod\zaapunix.vars.de = environment\server\vars\prod\zaapunix.vars.de
+		environment\server\vars\prod\zaapunix.vars.fr = environment\server\vars\prod\zaapunix.vars.fr
+		environment\server\vars\prod\zaapunix.vars.hr = environment\server\vars\prod\zaapunix.vars.hr
+		environment\server\vars\prod\zaapunix.vars.pat = environment\server\vars\prod\zaapunix.vars.pat
+		environment\server\vars\prod\zaapunix.vars.pch = environment\server\vars\prod\zaapunix.vars.pch
+		environment\server\vars\prod\zaapunix.vars.pfr = environment\server\vars\prod\zaapunix.vars.pfr
+		environment\server\vars\prod\zaapunix.vars.rs = environment\server\vars\prod\zaapunix.vars.rs
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "zaapunix", "zaapunix", "{98925390-3AF8-4EC7-AE2C-E84EB041A595}"
+	ProjectSection(SolutionItems) = preProject
+		environment\server\vars\zqas21\zaapunix.vars.at = environment\server\vars\zqas21\zaapunix.vars.at
+		environment\server\vars\zqas21\zaapunix.vars.bg = environment\server\vars\zqas21\zaapunix.vars.bg
+		environment\server\vars\zqas21\zaapunix.vars.ch = environment\server\vars\zqas21\zaapunix.vars.ch
+		environment\server\vars\zqas21\zaapunix.vars.de = environment\server\vars\zqas21\zaapunix.vars.de
+		environment\server\vars\zqas21\zaapunix.vars.fr = environment\server\vars\zqas21\zaapunix.vars.fr
+		environment\server\vars\zqas21\zaapunix.vars.hr = environment\server\vars\zqas21\zaapunix.vars.hr
+		environment\server\vars\zqas21\zaapunix.vars.pat = environment\server\vars\zqas21\zaapunix.vars.pat
+		environment\server\vars\zqas21\zaapunix.vars.pch = environment\server\vars\zqas21\zaapunix.vars.pch
+		environment\server\vars\zqas21\zaapunix.vars.pfr = environment\server\vars\zqas21\zaapunix.vars.pfr
+		environment\server\vars\zqas21\zaapunix.vars.rs = environment\server\vars\zqas21\zaapunix.vars.rs
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "zaapunix", "zaapunix", "{5EA0B98E-8CD3-4C5C-8F94-7959D03FDFEE}"
+	ProjectSection(SolutionItems) = preProject
+		environment\server\vars\ztst21\zaapunix.vars.at = environment\server\vars\ztst21\zaapunix.vars.at
+		environment\server\vars\ztst21\zaapunix.vars.bg = environment\server\vars\ztst21\zaapunix.vars.bg
+		environment\server\vars\ztst21\zaapunix.vars.ch = environment\server\vars\ztst21\zaapunix.vars.ch
+		environment\server\vars\ztst21\zaapunix.vars.de = environment\server\vars\ztst21\zaapunix.vars.de
+		environment\server\vars\ztst21\zaapunix.vars.fr = environment\server\vars\ztst21\zaapunix.vars.fr
+		environment\server\vars\ztst21\zaapunix.vars.hr = environment\server\vars\ztst21\zaapunix.vars.hr
+		environment\server\vars\ztst21\zaapunix.vars.pat = environment\server\vars\ztst21\zaapunix.vars.pat
+		environment\server\vars\ztst21\zaapunix.vars.pch = environment\server\vars\ztst21\zaapunix.vars.pch
+		environment\server\vars\ztst21\zaapunix.vars.pfr = environment\server\vars\ztst21\zaapunix.vars.pfr
+		environment\server\vars\ztst21\zaapunix.vars.rs = environment\server\vars\ztst21\zaapunix.vars.rs
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ksc_server_global", "ksc_server_global", "{B7004C79-F65B-453E-958E-F7A8A23261F9}"
+	ProjectSection(SolutionItems) = preProject
+		environment\server\vars\prod\ksc_server_global.vars.at = environment\server\vars\prod\ksc_server_global.vars.at
+		environment\server\vars\prod\ksc_server_global.vars.bg = environment\server\vars\prod\ksc_server_global.vars.bg
+		environment\server\vars\prod\ksc_server_global.vars.ch = environment\server\vars\prod\ksc_server_global.vars.ch
+		environment\server\vars\prod\ksc_server_global.vars.de = environment\server\vars\prod\ksc_server_global.vars.de
+		environment\server\vars\prod\ksc_server_global.vars.fr = environment\server\vars\prod\ksc_server_global.vars.fr
+		environment\server\vars\prod\ksc_server_global.vars.hr = environment\server\vars\prod\ksc_server_global.vars.hr
+		environment\server\vars\prod\ksc_server_global.vars.pat = environment\server\vars\prod\ksc_server_global.vars.pat
+		environment\server\vars\prod\ksc_server_global.vars.pch = environment\server\vars\prod\ksc_server_global.vars.pch
+		environment\server\vars\prod\ksc_server_global.vars.pfr = environment\server\vars\prod\ksc_server_global.vars.pfr
+		environment\server\vars\prod\ksc_server_global.vars.rs = environment\server\vars\prod\ksc_server_global.vars.rs
+		environment\server\vars\prod\ksc_server_global70.vars = environment\server\vars\prod\ksc_server_global70.vars
+		environment\server\vars\prod\ksc_server_global71.vars = environment\server\vars\prod\ksc_server_global71.vars
+		environment\server\vars\prod\ksc_server_global72.vars = environment\server\vars\prod\ksc_server_global72.vars
+		environment\server\vars\prod\ksc_server_global73.vars = environment\server\vars\prod\ksc_server_global73.vars
+		environment\server\vars\prod\ksc_server_global74.vars = environment\server\vars\prod\ksc_server_global74.vars
+		environment\server\vars\prod\ksc_server_global75.vars = environment\server\vars\prod\ksc_server_global75.vars
+		environment\server\vars\prod\ksc_server_global76.vars = environment\server\vars\prod\ksc_server_global76.vars
+		environment\server\vars\prod\ksc_server_global77.vars = environment\server\vars\prod\ksc_server_global77.vars
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ksc_server_global", "ksc_server_global", "{5929BF0A-412E-4403-B2A8-8CA2829B9B20}"
+	ProjectSection(SolutionItems) = preProject
+		environment\server\vars\zdev21\ksc_server_global.vars.at = environment\server\vars\zdev21\ksc_server_global.vars.at
+		environment\server\vars\zdev21\ksc_server_global.vars.bg = environment\server\vars\zdev21\ksc_server_global.vars.bg
+		environment\server\vars\zdev21\ksc_server_global.vars.ch = environment\server\vars\zdev21\ksc_server_global.vars.ch
+		environment\server\vars\zdev21\ksc_server_global.vars.de = environment\server\vars\zdev21\ksc_server_global.vars.de
+		environment\server\vars\zdev21\ksc_server_global.vars.fr = environment\server\vars\zdev21\ksc_server_global.vars.fr
+		environment\server\vars\zdev21\ksc_server_global.vars.hr = environment\server\vars\zdev21\ksc_server_global.vars.hr
+		environment\server\vars\zdev21\ksc_server_global.vars.pat = environment\server\vars\zdev21\ksc_server_global.vars.pat
+		environment\server\vars\zdev21\ksc_server_global.vars.pch = environment\server\vars\zdev21\ksc_server_global.vars.pch
+		environment\server\vars\zdev21\ksc_server_global.vars.pfr = environment\server\vars\zdev21\ksc_server_global.vars.pfr
+		environment\server\vars\zdev21\ksc_server_global.vars.rs = environment\server\vars\zdev21\ksc_server_global.vars.rs
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ksc_server_global", "ksc_server_global", "{D7829CF3-A444-4D87-9E16-84DE4D6E3BAC}"
+	ProjectSection(SolutionItems) = preProject
+		environment\server\vars\zqas21\ksc_server_global.vars.at = environment\server\vars\zqas21\ksc_server_global.vars.at
+		environment\server\vars\zqas21\ksc_server_global.vars.bg = environment\server\vars\zqas21\ksc_server_global.vars.bg
+		environment\server\vars\zqas21\ksc_server_global.vars.ch = environment\server\vars\zqas21\ksc_server_global.vars.ch
+		environment\server\vars\zqas21\ksc_server_global.vars.de = environment\server\vars\zqas21\ksc_server_global.vars.de
+		environment\server\vars\zqas21\ksc_server_global.vars.fr = environment\server\vars\zqas21\ksc_server_global.vars.fr
+		environment\server\vars\zqas21\ksc_server_global.vars.hr = environment\server\vars\zqas21\ksc_server_global.vars.hr
+		environment\server\vars\zqas21\ksc_server_global.vars.pat = environment\server\vars\zqas21\ksc_server_global.vars.pat
+		environment\server\vars\zqas21\ksc_server_global.vars.pch = environment\server\vars\zqas21\ksc_server_global.vars.pch
+		environment\server\vars\zqas21\ksc_server_global.vars.pfr = environment\server\vars\zqas21\ksc_server_global.vars.pfr
+		environment\server\vars\zqas21\ksc_server_global.vars.rs = environment\server\vars\zqas21\ksc_server_global.vars.rs
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ksc_server_global", "ksc_server_global", "{39183FC4-ACDD-414F-A876-04E74F22A894}"
+	ProjectSection(SolutionItems) = preProject
+		environment\server\vars\ztst21\ksc_server_global.vars.at = environment\server\vars\ztst21\ksc_server_global.vars.at
+		environment\server\vars\ztst21\ksc_server_global.vars.bg = environment\server\vars\ztst21\ksc_server_global.vars.bg
+		environment\server\vars\ztst21\ksc_server_global.vars.ch = environment\server\vars\ztst21\ksc_server_global.vars.ch
+		environment\server\vars\ztst21\ksc_server_global.vars.de = environment\server\vars\ztst21\ksc_server_global.vars.de
+		environment\server\vars\ztst21\ksc_server_global.vars.fr = environment\server\vars\ztst21\ksc_server_global.vars.fr
+		environment\server\vars\ztst21\ksc_server_global.vars.hr = environment\server\vars\ztst21\ksc_server_global.vars.hr
+		environment\server\vars\ztst21\ksc_server_global.vars.pat = environment\server\vars\ztst21\ksc_server_global.vars.pat
+		environment\server\vars\ztst21\ksc_server_global.vars.pch = environment\server\vars\ztst21\ksc_server_global.vars.pch
+		environment\server\vars\ztst21\ksc_server_global.vars.pfr = environment\server\vars\ztst21\ksc_server_global.vars.pfr
+		environment\server\vars\ztst21\ksc_server_global.vars.rs = environment\server\vars\ztst21\ksc_server_global.vars.rs
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		CscServiceOnly_Debug|Any CPU = CscServiceOnly_Debug|Any CPU
+		CscServiceOnly_Debug|Win32 = CscServiceOnly_Debug|Win32
+		CscServiceOnly_Debug|x64 = CscServiceOnly_Debug|x64
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Win32 = Debug|Win32
+		Debug|x64 = Debug|x64
+		Release|Any CPU = Release|Any CPU
+		Release|Win32 = Release|Win32
+		Release|x64 = Release|x64
+		Test|Any CPU = Test|Any CPU
+		Test|Win32 = Test|Win32
+		Test|x64 = Test|x64
+		UnitTest_Release|Any CPU = UnitTest_Release|Any CPU
+		UnitTest_Release|Win32 = UnitTest_Release|Win32
+		UnitTest_Release|x64 = UnitTest_Release|x64
+		UnitTest|Any CPU = UnitTest|Any CPU
+		UnitTest|Win32 = UnitTest|Win32
+		UnitTest|x64 = UnitTest|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BD3BBA09-58EC-4556-B63C-92D704CCE142}.CscServiceOnly_Debug|Any CPU.ActiveCfg = Debug|Win32
+		{BD3BBA09-58EC-4556-B63C-92D704CCE142}.CscServiceOnly_Debug|Win32.ActiveCfg = Debug|Win32
+		{BD3BBA09-58EC-4556-B63C-92D704CCE142}.CscServiceOnly_Debug|Win32.Build.0 = Debug|Win32
+		{BD3BBA09-58EC-4556-B63C-92D704CCE142}.CscServiceOnly_Debug|x64.ActiveCfg = Debug|x64
+		{BD3BBA09-58EC-4556-B63C-92D704CCE142}.CscServiceOnly_Debug|x64.Build.0 = Debug|x64
+		{BD3BBA09-58EC-4556-B63C-92D704CCE142}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{BD3BBA09-58EC-4556-B63C-92D704CCE142}.Debug|Win32.ActiveCfg = Debug|Win32
+		{BD3BBA09-58EC-4556-B63C-92D704CCE142}.Debug|Win32.Build.0 = Debug|Win32
+		{BD3BBA09-58EC-4556-B63C-92D704CCE142}.Debug|x64.ActiveCfg = Debug|x64
+		{BD3BBA09-58EC-4556-B63C-92D704CCE142}.Debug|x64.Build.0 = Debug|x64
+		{BD3BBA09-58EC-4556-B63C-92D704CCE142}.Release|Any CPU.ActiveCfg = Release|Win32
+		{BD3BBA09-58EC-4556-B63C-92D704CCE142}.Release|Win32.ActiveCfg = Release|Win32
+		{BD3BBA09-58EC-4556-B63C-92D704CCE142}.Release|Win32.Build.0 = Release|Win32
+		{BD3BBA09-58EC-4556-B63C-92D704CCE142}.Release|x64.ActiveCfg = Release|x64
+		{BD3BBA09-58EC-4556-B63C-92D704CCE142}.Release|x64.Build.0 = Release|x64
+		{BD3BBA09-58EC-4556-B63C-92D704CCE142}.Test|Any CPU.ActiveCfg = Release|x64
+		{BD3BBA09-58EC-4556-B63C-92D704CCE142}.Test|Win32.ActiveCfg = Release|Win32
+		{BD3BBA09-58EC-4556-B63C-92D704CCE142}.Test|Win32.Build.0 = Release|Win32
+		{BD3BBA09-58EC-4556-B63C-92D704CCE142}.Test|x64.ActiveCfg = Release|x64
+		{BD3BBA09-58EC-4556-B63C-92D704CCE142}.Test|x64.Build.0 = Release|x64
+		{BD3BBA09-58EC-4556-B63C-92D704CCE142}.UnitTest_Release|Any CPU.ActiveCfg = Release|x64
+		{BD3BBA09-58EC-4556-B63C-92D704CCE142}.UnitTest_Release|Win32.ActiveCfg = Release|Win32
+		{BD3BBA09-58EC-4556-B63C-92D704CCE142}.UnitTest_Release|Win32.Build.0 = Release|Win32
+		{BD3BBA09-58EC-4556-B63C-92D704CCE142}.UnitTest_Release|x64.ActiveCfg = Release|x64
+		{BD3BBA09-58EC-4556-B63C-92D704CCE142}.UnitTest_Release|x64.Build.0 = Release|x64
+		{BD3BBA09-58EC-4556-B63C-92D704CCE142}.UnitTest|Any CPU.ActiveCfg = Release|x64
+		{BD3BBA09-58EC-4556-B63C-92D704CCE142}.UnitTest|Win32.ActiveCfg = Release|Win32
+		{BD3BBA09-58EC-4556-B63C-92D704CCE142}.UnitTest|Win32.Build.0 = Release|Win32
+		{BD3BBA09-58EC-4556-B63C-92D704CCE142}.UnitTest|x64.ActiveCfg = Release|x64
+		{BD3BBA09-58EC-4556-B63C-92D704CCE142}.UnitTest|x64.Build.0 = Release|x64
+		{1C193DFC-5575-4830-892B-54BDAD6A583F}.CscServiceOnly_Debug|Any CPU.ActiveCfg = Debug|Win32
+		{1C193DFC-5575-4830-892B-54BDAD6A583F}.CscServiceOnly_Debug|Win32.ActiveCfg = CscService_only|Win32
+		{1C193DFC-5575-4830-892B-54BDAD6A583F}.CscServiceOnly_Debug|Win32.Build.0 = CscService_only|Win32
+		{1C193DFC-5575-4830-892B-54BDAD6A583F}.CscServiceOnly_Debug|x64.ActiveCfg = Debug|x64
+		{1C193DFC-5575-4830-892B-54BDAD6A583F}.CscServiceOnly_Debug|x64.Build.0 = Debug|x64
+		{1C193DFC-5575-4830-892B-54BDAD6A583F}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{1C193DFC-5575-4830-892B-54BDAD6A583F}.Debug|Win32.ActiveCfg = Debug|Win32
+		{1C193DFC-5575-4830-892B-54BDAD6A583F}.Debug|Win32.Build.0 = Debug|Win32
+		{1C193DFC-5575-4830-892B-54BDAD6A583F}.Debug|x64.ActiveCfg = Debug|x64
+		{1C193DFC-5575-4830-892B-54BDAD6A583F}.Debug|x64.Build.0 = Debug|x64
+		{1C193DFC-5575-4830-892B-54BDAD6A583F}.Release|Any CPU.ActiveCfg = Release|Win32
+		{1C193DFC-5575-4830-892B-54BDAD6A583F}.Release|Win32.ActiveCfg = Release|Win32
+		{1C193DFC-5575-4830-892B-54BDAD6A583F}.Release|Win32.Build.0 = Release|Win32
+		{1C193DFC-5575-4830-892B-54BDAD6A583F}.Release|x64.ActiveCfg = Release|x64
+		{1C193DFC-5575-4830-892B-54BDAD6A583F}.Release|x64.Build.0 = Release|x64
+		{1C193DFC-5575-4830-892B-54BDAD6A583F}.Test|Any CPU.ActiveCfg = Release|x64
+		{1C193DFC-5575-4830-892B-54BDAD6A583F}.Test|Win32.ActiveCfg = Release|Win32
+		{1C193DFC-5575-4830-892B-54BDAD6A583F}.Test|Win32.Build.0 = Release|Win32
+		{1C193DFC-5575-4830-892B-54BDAD6A583F}.Test|x64.ActiveCfg = Release|x64
+		{1C193DFC-5575-4830-892B-54BDAD6A583F}.Test|x64.Build.0 = Release|x64
+		{1C193DFC-5575-4830-892B-54BDAD6A583F}.UnitTest_Release|Any CPU.ActiveCfg = Release|x64
+		{1C193DFC-5575-4830-892B-54BDAD6A583F}.UnitTest_Release|Win32.ActiveCfg = Release|Win32
+		{1C193DFC-5575-4830-892B-54BDAD6A583F}.UnitTest_Release|Win32.Build.0 = Release|Win32
+		{1C193DFC-5575-4830-892B-54BDAD6A583F}.UnitTest_Release|x64.ActiveCfg = Release|x64
+		{1C193DFC-5575-4830-892B-54BDAD6A583F}.UnitTest_Release|x64.Build.0 = Release|x64
+		{1C193DFC-5575-4830-892B-54BDAD6A583F}.UnitTest|Any CPU.ActiveCfg = Release|x64
+		{1C193DFC-5575-4830-892B-54BDAD6A583F}.UnitTest|Win32.ActiveCfg = Release|Win32
+		{1C193DFC-5575-4830-892B-54BDAD6A583F}.UnitTest|Win32.Build.0 = Release|Win32
+		{1C193DFC-5575-4830-892B-54BDAD6A583F}.UnitTest|x64.ActiveCfg = Release|x64
+		{1C193DFC-5575-4830-892B-54BDAD6A583F}.UnitTest|x64.Build.0 = Release|x64
+		{23068FFE-D708-4B28-91B4-BC6E22E45E16}.CscServiceOnly_Debug|Any CPU.ActiveCfg = Debug|Win32
+		{23068FFE-D708-4B28-91B4-BC6E22E45E16}.CscServiceOnly_Debug|Win32.ActiveCfg = CscService_only|Win32
+		{23068FFE-D708-4B28-91B4-BC6E22E45E16}.CscServiceOnly_Debug|Win32.Build.0 = CscService_only|Win32
+		{23068FFE-D708-4B28-91B4-BC6E22E45E16}.CscServiceOnly_Debug|x64.ActiveCfg = Debug|x64
+		{23068FFE-D708-4B28-91B4-BC6E22E45E16}.CscServiceOnly_Debug|x64.Build.0 = Debug|x64
+		{23068FFE-D708-4B28-91B4-BC6E22E45E16}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{23068FFE-D708-4B28-91B4-BC6E22E45E16}.Debug|Win32.ActiveCfg = Debug|Win32
+		{23068FFE-D708-4B28-91B4-BC6E22E45E16}.Debug|Win32.Build.0 = Debug|Win32
+		{23068FFE-D708-4B28-91B4-BC6E22E45E16}.Debug|x64.ActiveCfg = Debug|x64
+		{23068FFE-D708-4B28-91B4-BC6E22E45E16}.Debug|x64.Build.0 = Debug|x64
+		{23068FFE-D708-4B28-91B4-BC6E22E45E16}.Release|Any CPU.ActiveCfg = Release|Win32
+		{23068FFE-D708-4B28-91B4-BC6E22E45E16}.Release|Win32.ActiveCfg = Release|Win32
+		{23068FFE-D708-4B28-91B4-BC6E22E45E16}.Release|Win32.Build.0 = Release|Win32
+		{23068FFE-D708-4B28-91B4-BC6E22E45E16}.Release|x64.ActiveCfg = Release|x64
+		{23068FFE-D708-4B28-91B4-BC6E22E45E16}.Release|x64.Build.0 = Release|x64
+		{23068FFE-D708-4B28-91B4-BC6E22E45E16}.Test|Any CPU.ActiveCfg = Release|x64
+		{23068FFE-D708-4B28-91B4-BC6E22E45E16}.Test|Win32.ActiveCfg = Release|Win32
+		{23068FFE-D708-4B28-91B4-BC6E22E45E16}.Test|Win32.Build.0 = Release|Win32
+		{23068FFE-D708-4B28-91B4-BC6E22E45E16}.Test|x64.ActiveCfg = Release|x64
+		{23068FFE-D708-4B28-91B4-BC6E22E45E16}.Test|x64.Build.0 = Release|x64
+		{23068FFE-D708-4B28-91B4-BC6E22E45E16}.UnitTest_Release|Any CPU.ActiveCfg = Release|x64
+		{23068FFE-D708-4B28-91B4-BC6E22E45E16}.UnitTest_Release|Win32.ActiveCfg = Release|Win32
+		{23068FFE-D708-4B28-91B4-BC6E22E45E16}.UnitTest_Release|Win32.Build.0 = Release|Win32
+		{23068FFE-D708-4B28-91B4-BC6E22E45E16}.UnitTest_Release|x64.ActiveCfg = Release|x64
+		{23068FFE-D708-4B28-91B4-BC6E22E45E16}.UnitTest_Release|x64.Build.0 = Release|x64
+		{23068FFE-D708-4B28-91B4-BC6E22E45E16}.UnitTest|Any CPU.ActiveCfg = Release|x64
+		{23068FFE-D708-4B28-91B4-BC6E22E45E16}.UnitTest|Win32.ActiveCfg = Release|Win32
+		{23068FFE-D708-4B28-91B4-BC6E22E45E16}.UnitTest|Win32.Build.0 = Release|Win32
+		{23068FFE-D708-4B28-91B4-BC6E22E45E16}.UnitTest|x64.ActiveCfg = Release|x64
+		{23068FFE-D708-4B28-91B4-BC6E22E45E16}.UnitTest|x64.Build.0 = Release|x64
+		{81E8C5B2-C9BF-40E5-A38B-009C80C083BC}.CscServiceOnly_Debug|Any CPU.ActiveCfg = Debug|Win32
+		{81E8C5B2-C9BF-40E5-A38B-009C80C083BC}.CscServiceOnly_Debug|Win32.ActiveCfg = Debug|Win32
+		{81E8C5B2-C9BF-40E5-A38B-009C80C083BC}.CscServiceOnly_Debug|x64.ActiveCfg = Debug|x64
+		{81E8C5B2-C9BF-40E5-A38B-009C80C083BC}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{81E8C5B2-C9BF-40E5-A38B-009C80C083BC}.Debug|Win32.ActiveCfg = Debug|Win32
+		{81E8C5B2-C9BF-40E5-A38B-009C80C083BC}.Debug|Win32.Build.0 = Debug|Win32
+		{81E8C5B2-C9BF-40E5-A38B-009C80C083BC}.Debug|x64.ActiveCfg = Debug|x64
+		{81E8C5B2-C9BF-40E5-A38B-009C80C083BC}.Debug|x64.Build.0 = Debug|x64
+		{81E8C5B2-C9BF-40E5-A38B-009C80C083BC}.Release|Any CPU.ActiveCfg = Release|Win32
+		{81E8C5B2-C9BF-40E5-A38B-009C80C083BC}.Release|Win32.ActiveCfg = Release|Win32
+		{81E8C5B2-C9BF-40E5-A38B-009C80C083BC}.Release|Win32.Build.0 = Release|Win32
+		{81E8C5B2-C9BF-40E5-A38B-009C80C083BC}.Release|x64.ActiveCfg = Release|x64
+		{81E8C5B2-C9BF-40E5-A38B-009C80C083BC}.Release|x64.Build.0 = Release|x64
+		{81E8C5B2-C9BF-40E5-A38B-009C80C083BC}.Test|Any CPU.ActiveCfg = Release|x64
+		{81E8C5B2-C9BF-40E5-A38B-009C80C083BC}.Test|Win32.ActiveCfg = Release|Win32
+		{81E8C5B2-C9BF-40E5-A38B-009C80C083BC}.Test|Win32.Build.0 = Release|Win32
+		{81E8C5B2-C9BF-40E5-A38B-009C80C083BC}.Test|x64.ActiveCfg = Release|x64
+		{81E8C5B2-C9BF-40E5-A38B-009C80C083BC}.Test|x64.Build.0 = Release|x64
+		{81E8C5B2-C9BF-40E5-A38B-009C80C083BC}.UnitTest_Release|Any CPU.ActiveCfg = Release|x64
+		{81E8C5B2-C9BF-40E5-A38B-009C80C083BC}.UnitTest_Release|Win32.ActiveCfg = Release|Win32
+		{81E8C5B2-C9BF-40E5-A38B-009C80C083BC}.UnitTest_Release|Win32.Build.0 = Release|Win32
+		{81E8C5B2-C9BF-40E5-A38B-009C80C083BC}.UnitTest_Release|x64.ActiveCfg = Release|x64
+		{81E8C5B2-C9BF-40E5-A38B-009C80C083BC}.UnitTest_Release|x64.Build.0 = Release|x64
+		{81E8C5B2-C9BF-40E5-A38B-009C80C083BC}.UnitTest|Any CPU.ActiveCfg = Release|x64
+		{81E8C5B2-C9BF-40E5-A38B-009C80C083BC}.UnitTest|Win32.ActiveCfg = Release|Win32
+		{81E8C5B2-C9BF-40E5-A38B-009C80C083BC}.UnitTest|Win32.Build.0 = Release|Win32
+		{81E8C5B2-C9BF-40E5-A38B-009C80C083BC}.UnitTest|x64.ActiveCfg = Release|x64
+		{81E8C5B2-C9BF-40E5-A38B-009C80C083BC}.UnitTest|x64.Build.0 = Release|x64
+		{717FA083-FFA0-401C-B0D9-5413CB5C76DF}.CscServiceOnly_Debug|Any CPU.ActiveCfg = Debug|Win32
+		{717FA083-FFA0-401C-B0D9-5413CB5C76DF}.CscServiceOnly_Debug|Win32.ActiveCfg = Debug|Win32
+		{717FA083-FFA0-401C-B0D9-5413CB5C76DF}.CscServiceOnly_Debug|x64.ActiveCfg = Debug|x64
+		{717FA083-FFA0-401C-B0D9-5413CB5C76DF}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{717FA083-FFA0-401C-B0D9-5413CB5C76DF}.Debug|Win32.ActiveCfg = Debug|Win32
+		{717FA083-FFA0-401C-B0D9-5413CB5C76DF}.Debug|Win32.Build.0 = Debug|Win32
+		{717FA083-FFA0-401C-B0D9-5413CB5C76DF}.Debug|x64.ActiveCfg = Debug|x64
+		{717FA083-FFA0-401C-B0D9-5413CB5C76DF}.Debug|x64.Build.0 = Debug|x64
+		{717FA083-FFA0-401C-B0D9-5413CB5C76DF}.Release|Any CPU.ActiveCfg = Release|Win32
+		{717FA083-FFA0-401C-B0D9-5413CB5C76DF}.Release|Win32.ActiveCfg = Release|Win32
+		{717FA083-FFA0-401C-B0D9-5413CB5C76DF}.Release|Win32.Build.0 = Release|Win32
+		{717FA083-FFA0-401C-B0D9-5413CB5C76DF}.Release|x64.ActiveCfg = Release|x64
+		{717FA083-FFA0-401C-B0D9-5413CB5C76DF}.Release|x64.Build.0 = Release|x64
+		{717FA083-FFA0-401C-B0D9-5413CB5C76DF}.Test|Any CPU.ActiveCfg = Release|x64
+		{717FA083-FFA0-401C-B0D9-5413CB5C76DF}.Test|Win32.ActiveCfg = Release|Win32
+		{717FA083-FFA0-401C-B0D9-5413CB5C76DF}.Test|Win32.Build.0 = Release|Win32
+		{717FA083-FFA0-401C-B0D9-5413CB5C76DF}.Test|x64.ActiveCfg = Release|x64
+		{717FA083-FFA0-401C-B0D9-5413CB5C76DF}.Test|x64.Build.0 = Release|x64
+		{717FA083-FFA0-401C-B0D9-5413CB5C76DF}.UnitTest_Release|Any CPU.ActiveCfg = Release|x64
+		{717FA083-FFA0-401C-B0D9-5413CB5C76DF}.UnitTest_Release|Win32.ActiveCfg = Release|Win32
+		{717FA083-FFA0-401C-B0D9-5413CB5C76DF}.UnitTest_Release|Win32.Build.0 = Release|Win32
+		{717FA083-FFA0-401C-B0D9-5413CB5C76DF}.UnitTest_Release|x64.ActiveCfg = Release|x64
+		{717FA083-FFA0-401C-B0D9-5413CB5C76DF}.UnitTest_Release|x64.Build.0 = Release|x64
+		{717FA083-FFA0-401C-B0D9-5413CB5C76DF}.UnitTest|Any CPU.ActiveCfg = Release|x64
+		{717FA083-FFA0-401C-B0D9-5413CB5C76DF}.UnitTest|Win32.ActiveCfg = Release|Win32
+		{717FA083-FFA0-401C-B0D9-5413CB5C76DF}.UnitTest|Win32.Build.0 = Release|Win32
+		{717FA083-FFA0-401C-B0D9-5413CB5C76DF}.UnitTest|x64.ActiveCfg = Release|x64
+		{717FA083-FFA0-401C-B0D9-5413CB5C76DF}.UnitTest|x64.Build.0 = Release|x64
+		{76D31225-6619-456C-80A6-8BA688524BEE}.CscServiceOnly_Debug|Any CPU.ActiveCfg = Debug|Win32
+		{76D31225-6619-456C-80A6-8BA688524BEE}.CscServiceOnly_Debug|Win32.ActiveCfg = Debug|Win32
+		{76D31225-6619-456C-80A6-8BA688524BEE}.CscServiceOnly_Debug|x64.ActiveCfg = Debug|x64
+		{76D31225-6619-456C-80A6-8BA688524BEE}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{76D31225-6619-456C-80A6-8BA688524BEE}.Debug|Win32.ActiveCfg = Debug|Win32
+		{76D31225-6619-456C-80A6-8BA688524BEE}.Debug|Win32.Build.0 = Debug|Win32
+		{76D31225-6619-456C-80A6-8BA688524BEE}.Debug|x64.ActiveCfg = Debug|x64
+		{76D31225-6619-456C-80A6-8BA688524BEE}.Debug|x64.Build.0 = Debug|x64
+		{76D31225-6619-456C-80A6-8BA688524BEE}.Release|Any CPU.ActiveCfg = Release|Win32
+		{76D31225-6619-456C-80A6-8BA688524BEE}.Release|Win32.ActiveCfg = Release|Win32
+		{76D31225-6619-456C-80A6-8BA688524BEE}.Release|Win32.Build.0 = Release|Win32
+		{76D31225-6619-456C-80A6-8BA688524BEE}.Release|x64.ActiveCfg = Release|x64
+		{76D31225-6619-456C-80A6-8BA688524BEE}.Release|x64.Build.0 = Release|x64
+		{76D31225-6619-456C-80A6-8BA688524BEE}.Test|Any CPU.ActiveCfg = Release|x64
+		{76D31225-6619-456C-80A6-8BA688524BEE}.Test|Win32.ActiveCfg = Release|Win32
+		{76D31225-6619-456C-80A6-8BA688524BEE}.Test|Win32.Build.0 = Release|Win32
+		{76D31225-6619-456C-80A6-8BA688524BEE}.Test|x64.ActiveCfg = Release|x64
+		{76D31225-6619-456C-80A6-8BA688524BEE}.Test|x64.Build.0 = Release|x64
+		{76D31225-6619-456C-80A6-8BA688524BEE}.UnitTest_Release|Any CPU.ActiveCfg = Release|x64
+		{76D31225-6619-456C-80A6-8BA688524BEE}.UnitTest_Release|Win32.ActiveCfg = Release|Win32
+		{76D31225-6619-456C-80A6-8BA688524BEE}.UnitTest_Release|Win32.Build.0 = Release|Win32
+		{76D31225-6619-456C-80A6-8BA688524BEE}.UnitTest_Release|x64.ActiveCfg = Release|x64
+		{76D31225-6619-456C-80A6-8BA688524BEE}.UnitTest_Release|x64.Build.0 = Release|x64
+		{76D31225-6619-456C-80A6-8BA688524BEE}.UnitTest|Any CPU.ActiveCfg = Release|x64
+		{76D31225-6619-456C-80A6-8BA688524BEE}.UnitTest|Win32.ActiveCfg = Release|Win32
+		{76D31225-6619-456C-80A6-8BA688524BEE}.UnitTest|Win32.Build.0 = Release|Win32
+		{76D31225-6619-456C-80A6-8BA688524BEE}.UnitTest|x64.ActiveCfg = Release|x64
+		{76D31225-6619-456C-80A6-8BA688524BEE}.UnitTest|x64.Build.0 = Release|x64
+		{568EF34C-A601-48A3-9342-6A5BFFAC7B80}.CscServiceOnly_Debug|Any CPU.ActiveCfg = Debug|Win32
+		{568EF34C-A601-48A3-9342-6A5BFFAC7B80}.CscServiceOnly_Debug|Win32.ActiveCfg = Debug|Win32
+		{568EF34C-A601-48A3-9342-6A5BFFAC7B80}.CscServiceOnly_Debug|x64.ActiveCfg = Debug|x64
+		{568EF34C-A601-48A3-9342-6A5BFFAC7B80}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{568EF34C-A601-48A3-9342-6A5BFFAC7B80}.Debug|Win32.ActiveCfg = Debug|Win32
+		{568EF34C-A601-48A3-9342-6A5BFFAC7B80}.Debug|Win32.Build.0 = Debug|Win32
+		{568EF34C-A601-48A3-9342-6A5BFFAC7B80}.Debug|x64.ActiveCfg = Debug|x64
+		{568EF34C-A601-48A3-9342-6A5BFFAC7B80}.Debug|x64.Build.0 = Debug|x64
+		{568EF34C-A601-48A3-9342-6A5BFFAC7B80}.Release|Any CPU.ActiveCfg = Release|Win32
+		{568EF34C-A601-48A3-9342-6A5BFFAC7B80}.Release|Win32.ActiveCfg = Release|Win32
+		{568EF34C-A601-48A3-9342-6A5BFFAC7B80}.Release|Win32.Build.0 = Release|Win32
+		{568EF34C-A601-48A3-9342-6A5BFFAC7B80}.Release|x64.ActiveCfg = Release|x64
+		{568EF34C-A601-48A3-9342-6A5BFFAC7B80}.Release|x64.Build.0 = Release|x64
+		{568EF34C-A601-48A3-9342-6A5BFFAC7B80}.Test|Any CPU.ActiveCfg = Release|x64
+		{568EF34C-A601-48A3-9342-6A5BFFAC7B80}.Test|Win32.ActiveCfg = Release|Win32
+		{568EF34C-A601-48A3-9342-6A5BFFAC7B80}.Test|Win32.Build.0 = Release|Win32
+		{568EF34C-A601-48A3-9342-6A5BFFAC7B80}.Test|x64.ActiveCfg = Release|x64
+		{568EF34C-A601-48A3-9342-6A5BFFAC7B80}.Test|x64.Build.0 = Release|x64
+		{568EF34C-A601-48A3-9342-6A5BFFAC7B80}.UnitTest_Release|Any CPU.ActiveCfg = Release|x64
+		{568EF34C-A601-48A3-9342-6A5BFFAC7B80}.UnitTest_Release|Win32.ActiveCfg = Release|Win32
+		{568EF34C-A601-48A3-9342-6A5BFFAC7B80}.UnitTest_Release|Win32.Build.0 = Release|Win32
+		{568EF34C-A601-48A3-9342-6A5BFFAC7B80}.UnitTest_Release|x64.ActiveCfg = Release|x64
+		{568EF34C-A601-48A3-9342-6A5BFFAC7B80}.UnitTest_Release|x64.Build.0 = Release|x64
+		{568EF34C-A601-48A3-9342-6A5BFFAC7B80}.UnitTest|Any CPU.ActiveCfg = Release|x64
+		{568EF34C-A601-48A3-9342-6A5BFFAC7B80}.UnitTest|Win32.ActiveCfg = Release|Win32
+		{568EF34C-A601-48A3-9342-6A5BFFAC7B80}.UnitTest|Win32.Build.0 = Release|Win32
+		{568EF34C-A601-48A3-9342-6A5BFFAC7B80}.UnitTest|x64.ActiveCfg = Release|x64
+		{568EF34C-A601-48A3-9342-6A5BFFAC7B80}.UnitTest|x64.Build.0 = Release|x64
+		{E13F264C-8464-442D-9E8A-183B08E5C7D2}.CscServiceOnly_Debug|Any CPU.ActiveCfg = Debug|Win32
+		{E13F264C-8464-442D-9E8A-183B08E5C7D2}.CscServiceOnly_Debug|Win32.ActiveCfg = Debug|Win32
+		{E13F264C-8464-442D-9E8A-183B08E5C7D2}.CscServiceOnly_Debug|x64.ActiveCfg = Debug|x64
+		{E13F264C-8464-442D-9E8A-183B08E5C7D2}.CscServiceOnly_Debug|x64.Build.0 = Debug|x64
+		{E13F264C-8464-442D-9E8A-183B08E5C7D2}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{E13F264C-8464-442D-9E8A-183B08E5C7D2}.Debug|Win32.ActiveCfg = Debug|Win32
+		{E13F264C-8464-442D-9E8A-183B08E5C7D2}.Debug|Win32.Build.0 = Debug|Win32
+		{E13F264C-8464-442D-9E8A-183B08E5C7D2}.Debug|x64.ActiveCfg = Debug|x64
+		{E13F264C-8464-442D-9E8A-183B08E5C7D2}.Debug|x64.Build.0 = Debug|x64
+		{E13F264C-8464-442D-9E8A-183B08E5C7D2}.Release|Any CPU.ActiveCfg = Release|Win32
+		{E13F264C-8464-442D-9E8A-183B08E5C7D2}.Release|Win32.ActiveCfg = Release|Win32
+		{E13F264C-8464-442D-9E8A-183B08E5C7D2}.Release|Win32.Build.0 = Release|Win32
+		{E13F264C-8464-442D-9E8A-183B08E5C7D2}.Release|x64.ActiveCfg = Release|x64
+		{E13F264C-8464-442D-9E8A-183B08E5C7D2}.Release|x64.Build.0 = Release|x64
+		{E13F264C-8464-442D-9E8A-183B08E5C7D2}.Test|Any CPU.ActiveCfg = Release|x64
+		{E13F264C-8464-442D-9E8A-183B08E5C7D2}.Test|Win32.ActiveCfg = Release|Win32
+		{E13F264C-8464-442D-9E8A-183B08E5C7D2}.Test|Win32.Build.0 = Release|Win32
+		{E13F264C-8464-442D-9E8A-183B08E5C7D2}.Test|x64.ActiveCfg = Release|x64
+		{E13F264C-8464-442D-9E8A-183B08E5C7D2}.Test|x64.Build.0 = Release|x64
+		{E13F264C-8464-442D-9E8A-183B08E5C7D2}.UnitTest_Release|Any CPU.ActiveCfg = Release|x64
+		{E13F264C-8464-442D-9E8A-183B08E5C7D2}.UnitTest_Release|Win32.ActiveCfg = Release|Win32
+		{E13F264C-8464-442D-9E8A-183B08E5C7D2}.UnitTest_Release|Win32.Build.0 = Release|Win32
+		{E13F264C-8464-442D-9E8A-183B08E5C7D2}.UnitTest_Release|x64.ActiveCfg = Release|x64
+		{E13F264C-8464-442D-9E8A-183B08E5C7D2}.UnitTest_Release|x64.Build.0 = Release|x64
+		{E13F264C-8464-442D-9E8A-183B08E5C7D2}.UnitTest|Any CPU.ActiveCfg = Release|x64
+		{E13F264C-8464-442D-9E8A-183B08E5C7D2}.UnitTest|Win32.ActiveCfg = Release|Win32
+		{E13F264C-8464-442D-9E8A-183B08E5C7D2}.UnitTest|Win32.Build.0 = Release|Win32
+		{E13F264C-8464-442D-9E8A-183B08E5C7D2}.UnitTest|x64.ActiveCfg = Release|x64
+		{E13F264C-8464-442D-9E8A-183B08E5C7D2}.UnitTest|x64.Build.0 = Release|x64
+		{170857A8-3DFA-4EAD-98CF-51D64C16E558}.CscServiceOnly_Debug|Any CPU.ActiveCfg = Debug|Win32
+		{170857A8-3DFA-4EAD-98CF-51D64C16E558}.CscServiceOnly_Debug|Win32.ActiveCfg = Debug|Win32
+		{170857A8-3DFA-4EAD-98CF-51D64C16E558}.CscServiceOnly_Debug|x64.ActiveCfg = Debug|x64
+		{170857A8-3DFA-4EAD-98CF-51D64C16E558}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{170857A8-3DFA-4EAD-98CF-51D64C16E558}.Debug|Win32.ActiveCfg = Debug|Win32
+		{170857A8-3DFA-4EAD-98CF-51D64C16E558}.Debug|Win32.Build.0 = Debug|Win32
+		{170857A8-3DFA-4EAD-98CF-51D64C16E558}.Debug|x64.ActiveCfg = Debug|x64
+		{170857A8-3DFA-4EAD-98CF-51D64C16E558}.Debug|x64.Build.0 = Debug|x64
+		{170857A8-3DFA-4EAD-98CF-51D64C16E558}.Release|Any CPU.ActiveCfg = Release|Win32
+		{170857A8-3DFA-4EAD-98CF-51D64C16E558}.Release|Win32.ActiveCfg = Release|Win32
+		{170857A8-3DFA-4EAD-98CF-51D64C16E558}.Release|Win32.Build.0 = Release|Win32
+		{170857A8-3DFA-4EAD-98CF-51D64C16E558}.Release|x64.ActiveCfg = Release|x64
+		{170857A8-3DFA-4EAD-98CF-51D64C16E558}.Release|x64.Build.0 = Release|x64
+		{170857A8-3DFA-4EAD-98CF-51D64C16E558}.Test|Any CPU.ActiveCfg = Release|x64
+		{170857A8-3DFA-4EAD-98CF-51D64C16E558}.Test|Win32.ActiveCfg = Release|Win32
+		{170857A8-3DFA-4EAD-98CF-51D64C16E558}.Test|Win32.Build.0 = Release|Win32
+		{170857A8-3DFA-4EAD-98CF-51D64C16E558}.Test|x64.ActiveCfg = Release|x64
+		{170857A8-3DFA-4EAD-98CF-51D64C16E558}.Test|x64.Build.0 = Release|x64
+		{170857A8-3DFA-4EAD-98CF-51D64C16E558}.UnitTest_Release|Any CPU.ActiveCfg = Release|x64
+		{170857A8-3DFA-4EAD-98CF-51D64C16E558}.UnitTest_Release|Win32.ActiveCfg = Release|Win32
+		{170857A8-3DFA-4EAD-98CF-51D64C16E558}.UnitTest_Release|Win32.Build.0 = Release|Win32
+		{170857A8-3DFA-4EAD-98CF-51D64C16E558}.UnitTest_Release|x64.ActiveCfg = Release|x64
+		{170857A8-3DFA-4EAD-98CF-51D64C16E558}.UnitTest_Release|x64.Build.0 = Release|x64
+		{170857A8-3DFA-4EAD-98CF-51D64C16E558}.UnitTest|Any CPU.ActiveCfg = Release|x64
+		{170857A8-3DFA-4EAD-98CF-51D64C16E558}.UnitTest|Win32.ActiveCfg = Release|Win32
+		{170857A8-3DFA-4EAD-98CF-51D64C16E558}.UnitTest|Win32.Build.0 = Release|Win32
+		{170857A8-3DFA-4EAD-98CF-51D64C16E558}.UnitTest|x64.ActiveCfg = Release|x64
+		{170857A8-3DFA-4EAD-98CF-51D64C16E558}.UnitTest|x64.Build.0 = Release|x64
+		{07DD608F-EBE1-4A05-B201-EEBC17037B84}.CscServiceOnly_Debug|Any CPU.ActiveCfg = Debug|Win32
+		{07DD608F-EBE1-4A05-B201-EEBC17037B84}.CscServiceOnly_Debug|Win32.ActiveCfg = Debug|Win32
+		{07DD608F-EBE1-4A05-B201-EEBC17037B84}.CscServiceOnly_Debug|x64.ActiveCfg = Debug|x64
+		{07DD608F-EBE1-4A05-B201-EEBC17037B84}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{07DD608F-EBE1-4A05-B201-EEBC17037B84}.Debug|Win32.ActiveCfg = Debug|Win32
+		{07DD608F-EBE1-4A05-B201-EEBC17037B84}.Debug|Win32.Build.0 = Debug|Win32
+		{07DD608F-EBE1-4A05-B201-EEBC17037B84}.Debug|x64.ActiveCfg = Debug|x64
+		{07DD608F-EBE1-4A05-B201-EEBC17037B84}.Debug|x64.Build.0 = Debug|x64
+		{07DD608F-EBE1-4A05-B201-EEBC17037B84}.Release|Any CPU.ActiveCfg = Release|Win32
+		{07DD608F-EBE1-4A05-B201-EEBC17037B84}.Release|Win32.ActiveCfg = Release|Win32
+		{07DD608F-EBE1-4A05-B201-EEBC17037B84}.Release|Win32.Build.0 = Release|Win32
+		{07DD608F-EBE1-4A05-B201-EEBC17037B84}.Release|x64.ActiveCfg = Release|x64
+		{07DD608F-EBE1-4A05-B201-EEBC17037B84}.Release|x64.Build.0 = Release|x64
+		{07DD608F-EBE1-4A05-B201-EEBC17037B84}.Test|Any CPU.ActiveCfg = Release|x64
+		{07DD608F-EBE1-4A05-B201-EEBC17037B84}.Test|Win32.ActiveCfg = Release|Win32
+		{07DD608F-EBE1-4A05-B201-EEBC17037B84}.Test|Win32.Build.0 = Release|Win32
+		{07DD608F-EBE1-4A05-B201-EEBC17037B84}.Test|x64.ActiveCfg = Release|x64
+		{07DD608F-EBE1-4A05-B201-EEBC17037B84}.Test|x64.Build.0 = Release|x64
+		{07DD608F-EBE1-4A05-B201-EEBC17037B84}.UnitTest_Release|Any CPU.ActiveCfg = Release|x64
+		{07DD608F-EBE1-4A05-B201-EEBC17037B84}.UnitTest_Release|Win32.ActiveCfg = Release|Win32
+		{07DD608F-EBE1-4A05-B201-EEBC17037B84}.UnitTest_Release|Win32.Build.0 = Release|Win32
+		{07DD608F-EBE1-4A05-B201-EEBC17037B84}.UnitTest_Release|x64.ActiveCfg = Release|x64
+		{07DD608F-EBE1-4A05-B201-EEBC17037B84}.UnitTest_Release|x64.Build.0 = Release|x64
+		{07DD608F-EBE1-4A05-B201-EEBC17037B84}.UnitTest|Any CPU.ActiveCfg = Release|x64
+		{07DD608F-EBE1-4A05-B201-EEBC17037B84}.UnitTest|Win32.ActiveCfg = Release|Win32
+		{07DD608F-EBE1-4A05-B201-EEBC17037B84}.UnitTest|Win32.Build.0 = Release|Win32
+		{07DD608F-EBE1-4A05-B201-EEBC17037B84}.UnitTest|x64.ActiveCfg = Release|x64
+		{07DD608F-EBE1-4A05-B201-EEBC17037B84}.UnitTest|x64.Build.0 = Release|x64
+		{82880125-2FC7-466A-A3EE-06B3F8FD3A96}.CscServiceOnly_Debug|Any CPU.ActiveCfg = Debug|Win32
+		{82880125-2FC7-466A-A3EE-06B3F8FD3A96}.CscServiceOnly_Debug|Win32.ActiveCfg = Debug|Win32
+		{82880125-2FC7-466A-A3EE-06B3F8FD3A96}.CscServiceOnly_Debug|x64.ActiveCfg = Debug|x64
+		{82880125-2FC7-466A-A3EE-06B3F8FD3A96}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{82880125-2FC7-466A-A3EE-06B3F8FD3A96}.Debug|Win32.ActiveCfg = Debug|Win32
+		{82880125-2FC7-466A-A3EE-06B3F8FD3A96}.Debug|Win32.Build.0 = Debug|Win32
+		{82880125-2FC7-466A-A3EE-06B3F8FD3A96}.Debug|x64.ActiveCfg = Debug|x64
+		{82880125-2FC7-466A-A3EE-06B3F8FD3A96}.Debug|x64.Build.0 = Debug|x64
+		{82880125-2FC7-466A-A3EE-06B3F8FD3A96}.Release|Any CPU.ActiveCfg = Release|Win32
+		{82880125-2FC7-466A-A3EE-06B3F8FD3A96}.Release|Win32.ActiveCfg = Release|Win32
+		{82880125-2FC7-466A-A3EE-06B3F8FD3A96}.Release|Win32.Build.0 = Release|Win32
+		{82880125-2FC7-466A-A3EE-06B3F8FD3A96}.Release|x64.ActiveCfg = Release|x64
+		{82880125-2FC7-466A-A3EE-06B3F8FD3A96}.Release|x64.Build.0 = Release|x64
+		{82880125-2FC7-466A-A3EE-06B3F8FD3A96}.Test|Any CPU.ActiveCfg = Release|x64
+		{82880125-2FC7-466A-A3EE-06B3F8FD3A96}.Test|Win32.ActiveCfg = Release|Win32
+		{82880125-2FC7-466A-A3EE-06B3F8FD3A96}.Test|Win32.Build.0 = Release|Win32
+		{82880125-2FC7-466A-A3EE-06B3F8FD3A96}.Test|x64.ActiveCfg = Release|x64
+		{82880125-2FC7-466A-A3EE-06B3F8FD3A96}.Test|x64.Build.0 = Release|x64
+		{82880125-2FC7-466A-A3EE-06B3F8FD3A96}.UnitTest_Release|Any CPU.ActiveCfg = Release|x64
+		{82880125-2FC7-466A-A3EE-06B3F8FD3A96}.UnitTest_Release|Win32.ActiveCfg = Release|Win32
+		{82880125-2FC7-466A-A3EE-06B3F8FD3A96}.UnitTest_Release|Win32.Build.0 = Release|Win32
+		{82880125-2FC7-466A-A3EE-06B3F8FD3A96}.UnitTest_Release|x64.ActiveCfg = Release|x64
+		{82880125-2FC7-466A-A3EE-06B3F8FD3A96}.UnitTest_Release|x64.Build.0 = Release|x64
+		{82880125-2FC7-466A-A3EE-06B3F8FD3A96}.UnitTest|Any CPU.ActiveCfg = Release|x64
+		{82880125-2FC7-466A-A3EE-06B3F8FD3A96}.UnitTest|Win32.ActiveCfg = Release|Win32
+		{82880125-2FC7-466A-A3EE-06B3F8FD3A96}.UnitTest|Win32.Build.0 = Release|Win32
+		{82880125-2FC7-466A-A3EE-06B3F8FD3A96}.UnitTest|x64.ActiveCfg = Release|x64
+		{82880125-2FC7-466A-A3EE-06B3F8FD3A96}.UnitTest|x64.Build.0 = Release|x64
+		{3C8A42EB-0C42-4E4B-A8AB-427F5169FDF7}.CscServiceOnly_Debug|Any CPU.ActiveCfg = Debug|Win32
+		{3C8A42EB-0C42-4E4B-A8AB-427F5169FDF7}.CscServiceOnly_Debug|Win32.ActiveCfg = Debug|Win32
+		{3C8A42EB-0C42-4E4B-A8AB-427F5169FDF7}.CscServiceOnly_Debug|x64.ActiveCfg = Debug|x64
+		{3C8A42EB-0C42-4E4B-A8AB-427F5169FDF7}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{3C8A42EB-0C42-4E4B-A8AB-427F5169FDF7}.Debug|Win32.ActiveCfg = Debug|Win32
+		{3C8A42EB-0C42-4E4B-A8AB-427F5169FDF7}.Debug|Win32.Build.0 = Debug|Win32
+		{3C8A42EB-0C42-4E4B-A8AB-427F5169FDF7}.Debug|x64.ActiveCfg = Debug|x64
+		{3C8A42EB-0C42-4E4B-A8AB-427F5169FDF7}.Debug|x64.Build.0 = Debug|x64
+		{3C8A42EB-0C42-4E4B-A8AB-427F5169FDF7}.Release|Any CPU.ActiveCfg = Release|Win32
+		{3C8A42EB-0C42-4E4B-A8AB-427F5169FDF7}.Release|Win32.ActiveCfg = Release|Win32
+		{3C8A42EB-0C42-4E4B-A8AB-427F5169FDF7}.Release|Win32.Build.0 = Release|Win32
+		{3C8A42EB-0C42-4E4B-A8AB-427F5169FDF7}.Release|x64.ActiveCfg = Release|x64
+		{3C8A42EB-0C42-4E4B-A8AB-427F5169FDF7}.Release|x64.Build.0 = Release|x64
+		{3C8A42EB-0C42-4E4B-A8AB-427F5169FDF7}.Test|Any CPU.ActiveCfg = Unit_Test_Debug|Win32
+		{3C8A42EB-0C42-4E4B-A8AB-427F5169FDF7}.Test|Win32.ActiveCfg = Release|Win32
+		{3C8A42EB-0C42-4E4B-A8AB-427F5169FDF7}.Test|Win32.Build.0 = Release|Win32
+		{3C8A42EB-0C42-4E4B-A8AB-427F5169FDF7}.Test|x64.ActiveCfg = Unit_Test_Debug|x64
+		{3C8A42EB-0C42-4E4B-A8AB-427F5169FDF7}.Test|x64.Build.0 = Unit_Test_Debug|x64
+		{3C8A42EB-0C42-4E4B-A8AB-427F5169FDF7}.UnitTest_Release|Any CPU.ActiveCfg = Unit_Test_Debug|Win32
+		{3C8A42EB-0C42-4E4B-A8AB-427F5169FDF7}.UnitTest_Release|Win32.ActiveCfg = Release|Win32
+		{3C8A42EB-0C42-4E4B-A8AB-427F5169FDF7}.UnitTest_Release|Win32.Build.0 = Release|Win32
+		{3C8A42EB-0C42-4E4B-A8AB-427F5169FDF7}.UnitTest_Release|x64.ActiveCfg = Release|x64
+		{3C8A42EB-0C42-4E4B-A8AB-427F5169FDF7}.UnitTest_Release|x64.Build.0 = Release|x64
+		{3C8A42EB-0C42-4E4B-A8AB-427F5169FDF7}.UnitTest|Any CPU.ActiveCfg = Unit_Test_Debug|Win32
+		{3C8A42EB-0C42-4E4B-A8AB-427F5169FDF7}.UnitTest|Win32.ActiveCfg = Unit_Test_Debug|Win32
+		{3C8A42EB-0C42-4E4B-A8AB-427F5169FDF7}.UnitTest|Win32.Build.0 = Unit_Test_Debug|Win32
+		{3C8A42EB-0C42-4E4B-A8AB-427F5169FDF7}.UnitTest|x64.ActiveCfg = Unit_Test_Debug|x64
+		{3C8A42EB-0C42-4E4B-A8AB-427F5169FDF7}.UnitTest|x64.Build.0 = Unit_Test_Debug|x64
+		{586680A8-5C59-4EDE-BD88-E1378D3F7EA4}.CscServiceOnly_Debug|Any CPU.ActiveCfg = Debug|Win32
+		{586680A8-5C59-4EDE-BD88-E1378D3F7EA4}.CscServiceOnly_Debug|Win32.ActiveCfg = Debug|Win32
+		{586680A8-5C59-4EDE-BD88-E1378D3F7EA4}.CscServiceOnly_Debug|x64.ActiveCfg = Debug|x64
+		{586680A8-5C59-4EDE-BD88-E1378D3F7EA4}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{586680A8-5C59-4EDE-BD88-E1378D3F7EA4}.Debug|Win32.ActiveCfg = Debug|Win32
+		{586680A8-5C59-4EDE-BD88-E1378D3F7EA4}.Debug|Win32.Build.0 = Debug|Win32
+		{586680A8-5C59-4EDE-BD88-E1378D3F7EA4}.Debug|x64.ActiveCfg = Debug|x64
+		{586680A8-5C59-4EDE-BD88-E1378D3F7EA4}.Debug|x64.Build.0 = Debug|x64
+		{586680A8-5C59-4EDE-BD88-E1378D3F7EA4}.Release|Any CPU.ActiveCfg = Release|Win32
+		{586680A8-5C59-4EDE-BD88-E1378D3F7EA4}.Release|Win32.ActiveCfg = Release|Win32
+		{586680A8-5C59-4EDE-BD88-E1378D3F7EA4}.Release|Win32.Build.0 = Release|Win32
+		{586680A8-5C59-4EDE-BD88-E1378D3F7EA4}.Release|x64.ActiveCfg = Release|x64
+		{586680A8-5C59-4EDE-BD88-E1378D3F7EA4}.Release|x64.Build.0 = Release|x64
+		{586680A8-5C59-4EDE-BD88-E1378D3F7EA4}.Test|Any CPU.ActiveCfg = Release|x64
+		{586680A8-5C59-4EDE-BD88-E1378D3F7EA4}.Test|Win32.ActiveCfg = Release|Win32
+		{586680A8-5C59-4EDE-BD88-E1378D3F7EA4}.Test|Win32.Build.0 = Release|Win32
+		{586680A8-5C59-4EDE-BD88-E1378D3F7EA4}.Test|x64.ActiveCfg = Release|x64
+		{586680A8-5C59-4EDE-BD88-E1378D3F7EA4}.Test|x64.Build.0 = Release|x64
+		{586680A8-5C59-4EDE-BD88-E1378D3F7EA4}.UnitTest_Release|Any CPU.ActiveCfg = Release|x64
+		{586680A8-5C59-4EDE-BD88-E1378D3F7EA4}.UnitTest_Release|Win32.ActiveCfg = Release|Win32
+		{586680A8-5C59-4EDE-BD88-E1378D3F7EA4}.UnitTest_Release|Win32.Build.0 = Release|Win32
+		{586680A8-5C59-4EDE-BD88-E1378D3F7EA4}.UnitTest_Release|x64.ActiveCfg = Release|x64
+		{586680A8-5C59-4EDE-BD88-E1378D3F7EA4}.UnitTest_Release|x64.Build.0 = Release|x64
+		{586680A8-5C59-4EDE-BD88-E1378D3F7EA4}.UnitTest|Any CPU.ActiveCfg = Release|x64
+		{586680A8-5C59-4EDE-BD88-E1378D3F7EA4}.UnitTest|Win32.ActiveCfg = Release|Win32
+		{586680A8-5C59-4EDE-BD88-E1378D3F7EA4}.UnitTest|Win32.Build.0 = Release|Win32
+		{586680A8-5C59-4EDE-BD88-E1378D3F7EA4}.UnitTest|x64.ActiveCfg = Release|x64
+		{586680A8-5C59-4EDE-BD88-E1378D3F7EA4}.UnitTest|x64.Build.0 = Release|x64
+		{85A90DEC-7A27-4BEF-BDC0-BE4539A3B317}.CscServiceOnly_Debug|Any CPU.ActiveCfg = Debug|Win32
+		{85A90DEC-7A27-4BEF-BDC0-BE4539A3B317}.CscServiceOnly_Debug|Win32.ActiveCfg = Debug|Win32
+		{85A90DEC-7A27-4BEF-BDC0-BE4539A3B317}.CscServiceOnly_Debug|x64.ActiveCfg = Debug|x64
+		{85A90DEC-7A27-4BEF-BDC0-BE4539A3B317}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{85A90DEC-7A27-4BEF-BDC0-BE4539A3B317}.Debug|Win32.ActiveCfg = Debug|Win32
+		{85A90DEC-7A27-4BEF-BDC0-BE4539A3B317}.Debug|Win32.Build.0 = Debug|Win32
+		{85A90DEC-7A27-4BEF-BDC0-BE4539A3B317}.Debug|x64.ActiveCfg = Debug|x64
+		{85A90DEC-7A27-4BEF-BDC0-BE4539A3B317}.Debug|x64.Build.0 = Debug|x64
+		{85A90DEC-7A27-4BEF-BDC0-BE4539A3B317}.Release|Any CPU.ActiveCfg = Release|Win32
+		{85A90DEC-7A27-4BEF-BDC0-BE4539A3B317}.Release|Win32.ActiveCfg = Release|Win32
+		{85A90DEC-7A27-4BEF-BDC0-BE4539A3B317}.Release|Win32.Build.0 = Release|Win32
+		{85A90DEC-7A27-4BEF-BDC0-BE4539A3B317}.Release|x64.ActiveCfg = Release|x64
+		{85A90DEC-7A27-4BEF-BDC0-BE4539A3B317}.Release|x64.Build.0 = Release|x64
+		{85A90DEC-7A27-4BEF-BDC0-BE4539A3B317}.Test|Any CPU.ActiveCfg = Release|x64
+		{85A90DEC-7A27-4BEF-BDC0-BE4539A3B317}.Test|Win32.ActiveCfg = Release|Win32
+		{85A90DEC-7A27-4BEF-BDC0-BE4539A3B317}.Test|Win32.Build.0 = Release|Win32
+		{85A90DEC-7A27-4BEF-BDC0-BE4539A3B317}.Test|x64.ActiveCfg = Release|x64
+		{85A90DEC-7A27-4BEF-BDC0-BE4539A3B317}.Test|x64.Build.0 = Release|x64
+		{85A90DEC-7A27-4BEF-BDC0-BE4539A3B317}.UnitTest_Release|Any CPU.ActiveCfg = Release|x64
+		{85A90DEC-7A27-4BEF-BDC0-BE4539A3B317}.UnitTest_Release|Win32.ActiveCfg = Release|Win32
+		{85A90DEC-7A27-4BEF-BDC0-BE4539A3B317}.UnitTest_Release|Win32.Build.0 = Release|Win32
+		{85A90DEC-7A27-4BEF-BDC0-BE4539A3B317}.UnitTest_Release|x64.ActiveCfg = Release|x64
+		{85A90DEC-7A27-4BEF-BDC0-BE4539A3B317}.UnitTest_Release|x64.Build.0 = Release|x64
+		{85A90DEC-7A27-4BEF-BDC0-BE4539A3B317}.UnitTest|Any CPU.ActiveCfg = Release|x64
+		{85A90DEC-7A27-4BEF-BDC0-BE4539A3B317}.UnitTest|Win32.ActiveCfg = Release|Win32
+		{85A90DEC-7A27-4BEF-BDC0-BE4539A3B317}.UnitTest|Win32.Build.0 = Release|Win32
+		{85A90DEC-7A27-4BEF-BDC0-BE4539A3B317}.UnitTest|x64.ActiveCfg = Release|x64
+		{85A90DEC-7A27-4BEF-BDC0-BE4539A3B317}.UnitTest|x64.Build.0 = Release|x64
+		{FCF3AF59-C437-43B5-B07E-BE8EFB1162A8}.CscServiceOnly_Debug|Any CPU.ActiveCfg = Debug|Win32
+		{FCF3AF59-C437-43B5-B07E-BE8EFB1162A8}.CscServiceOnly_Debug|Win32.ActiveCfg = Debug|Win32
+		{FCF3AF59-C437-43B5-B07E-BE8EFB1162A8}.CscServiceOnly_Debug|x64.ActiveCfg = Debug|x64
+		{FCF3AF59-C437-43B5-B07E-BE8EFB1162A8}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{FCF3AF59-C437-43B5-B07E-BE8EFB1162A8}.Debug|Win32.ActiveCfg = Debug|Win32
+		{FCF3AF59-C437-43B5-B07E-BE8EFB1162A8}.Debug|Win32.Build.0 = Debug|Win32
+		{FCF3AF59-C437-43B5-B07E-BE8EFB1162A8}.Debug|x64.ActiveCfg = Debug|x64
+		{FCF3AF59-C437-43B5-B07E-BE8EFB1162A8}.Debug|x64.Build.0 = Debug|x64
+		{FCF3AF59-C437-43B5-B07E-BE8EFB1162A8}.Release|Any CPU.ActiveCfg = Release|Win32
+		{FCF3AF59-C437-43B5-B07E-BE8EFB1162A8}.Release|Win32.ActiveCfg = Release|Win32
+		{FCF3AF59-C437-43B5-B07E-BE8EFB1162A8}.Release|Win32.Build.0 = Release|Win32
+		{FCF3AF59-C437-43B5-B07E-BE8EFB1162A8}.Release|x64.ActiveCfg = Release|x64
+		{FCF3AF59-C437-43B5-B07E-BE8EFB1162A8}.Release|x64.Build.0 = Release|x64
+		{FCF3AF59-C437-43B5-B07E-BE8EFB1162A8}.Test|Any CPU.ActiveCfg = Release|x64
+		{FCF3AF59-C437-43B5-B07E-BE8EFB1162A8}.Test|Win32.ActiveCfg = Release|Win32
+		{FCF3AF59-C437-43B5-B07E-BE8EFB1162A8}.Test|Win32.Build.0 = Release|Win32
+		{FCF3AF59-C437-43B5-B07E-BE8EFB1162A8}.Test|x64.ActiveCfg = Release|x64
+		{FCF3AF59-C437-43B5-B07E-BE8EFB1162A8}.Test|x64.Build.0 = Release|x64
+		{FCF3AF59-C437-43B5-B07E-BE8EFB1162A8}.UnitTest_Release|Any CPU.ActiveCfg = Release|x64
+		{FCF3AF59-C437-43B5-B07E-BE8EFB1162A8}.UnitTest_Release|Win32.ActiveCfg = Release|Win32
+		{FCF3AF59-C437-43B5-B07E-BE8EFB1162A8}.UnitTest_Release|Win32.Build.0 = Release|Win32
+		{FCF3AF59-C437-43B5-B07E-BE8EFB1162A8}.UnitTest_Release|x64.ActiveCfg = Release|x64
+		{FCF3AF59-C437-43B5-B07E-BE8EFB1162A8}.UnitTest_Release|x64.Build.0 = Release|x64
+		{FCF3AF59-C437-43B5-B07E-BE8EFB1162A8}.UnitTest|Any CPU.ActiveCfg = Release|x64
+		{FCF3AF59-C437-43B5-B07E-BE8EFB1162A8}.UnitTest|Win32.ActiveCfg = Release|Win32
+		{FCF3AF59-C437-43B5-B07E-BE8EFB1162A8}.UnitTest|Win32.Build.0 = Release|Win32
+		{FCF3AF59-C437-43B5-B07E-BE8EFB1162A8}.UnitTest|x64.ActiveCfg = Release|x64
+		{FCF3AF59-C437-43B5-B07E-BE8EFB1162A8}.UnitTest|x64.Build.0 = Release|x64
+		{875178FB-B935-410A-8979-57053947F842}.CscServiceOnly_Debug|Any CPU.ActiveCfg = Debug|Win32
+		{875178FB-B935-410A-8979-57053947F842}.CscServiceOnly_Debug|Win32.ActiveCfg = Debug|Win32
+		{875178FB-B935-410A-8979-57053947F842}.CscServiceOnly_Debug|Win32.Build.0 = Debug|Win32
+		{875178FB-B935-410A-8979-57053947F842}.CscServiceOnly_Debug|x64.ActiveCfg = Debug|x64
+		{875178FB-B935-410A-8979-57053947F842}.CscServiceOnly_Debug|x64.Build.0 = Debug|x64
+		{875178FB-B935-410A-8979-57053947F842}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{875178FB-B935-410A-8979-57053947F842}.Debug|Win32.ActiveCfg = Debug|Win32
+		{875178FB-B935-410A-8979-57053947F842}.Debug|Win32.Build.0 = Debug|Win32
+		{875178FB-B935-410A-8979-57053947F842}.Debug|x64.ActiveCfg = Debug|x64
+		{875178FB-B935-410A-8979-57053947F842}.Debug|x64.Build.0 = Debug|x64
+		{875178FB-B935-410A-8979-57053947F842}.Release|Any CPU.ActiveCfg = Release|Win32
+		{875178FB-B935-410A-8979-57053947F842}.Release|Win32.ActiveCfg = Release|Win32
+		{875178FB-B935-410A-8979-57053947F842}.Release|Win32.Build.0 = Release|Win32
+		{875178FB-B935-410A-8979-57053947F842}.Release|x64.ActiveCfg = Release|x64
+		{875178FB-B935-410A-8979-57053947F842}.Release|x64.Build.0 = Release|x64
+		{875178FB-B935-410A-8979-57053947F842}.Test|Any CPU.ActiveCfg = Release|x64
+		{875178FB-B935-410A-8979-57053947F842}.Test|Win32.ActiveCfg = Release|Win32
+		{875178FB-B935-410A-8979-57053947F842}.Test|Win32.Build.0 = Release|Win32
+		{875178FB-B935-410A-8979-57053947F842}.Test|x64.ActiveCfg = Release|x64
+		{875178FB-B935-410A-8979-57053947F842}.Test|x64.Build.0 = Release|x64
+		{875178FB-B935-410A-8979-57053947F842}.UnitTest_Release|Any CPU.ActiveCfg = Release|x64
+		{875178FB-B935-410A-8979-57053947F842}.UnitTest_Release|Win32.ActiveCfg = Release|Win32
+		{875178FB-B935-410A-8979-57053947F842}.UnitTest_Release|Win32.Build.0 = Release|Win32
+		{875178FB-B935-410A-8979-57053947F842}.UnitTest_Release|x64.ActiveCfg = Release|x64
+		{875178FB-B935-410A-8979-57053947F842}.UnitTest_Release|x64.Build.0 = Release|x64
+		{875178FB-B935-410A-8979-57053947F842}.UnitTest|Any CPU.ActiveCfg = Release|x64
+		{875178FB-B935-410A-8979-57053947F842}.UnitTest|Win32.ActiveCfg = Release|Win32
+		{875178FB-B935-410A-8979-57053947F842}.UnitTest|Win32.Build.0 = Release|Win32
+		{875178FB-B935-410A-8979-57053947F842}.UnitTest|x64.ActiveCfg = Release|x64
+		{875178FB-B935-410A-8979-57053947F842}.UnitTest|x64.Build.0 = Release|x64
+		{0A7924B6-6D64-1014-B856-1A9E5588203F}.CscServiceOnly_Debug|Any CPU.ActiveCfg = Debug|Win32
+		{0A7924B6-6D64-1014-B856-1A9E5588203F}.CscServiceOnly_Debug|Win32.ActiveCfg = Debug|Win32
+		{0A7924B6-6D64-1014-B856-1A9E5588203F}.CscServiceOnly_Debug|x64.ActiveCfg = Debug|x64
+		{0A7924B6-6D64-1014-B856-1A9E5588203F}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{0A7924B6-6D64-1014-B856-1A9E5588203F}.Debug|Win32.ActiveCfg = Debug|Win32
+		{0A7924B6-6D64-1014-B856-1A9E5588203F}.Debug|Win32.Build.0 = Debug|Win32
+		{0A7924B6-6D64-1014-B856-1A9E5588203F}.Debug|x64.ActiveCfg = Debug|x64
+		{0A7924B6-6D64-1014-B856-1A9E5588203F}.Debug|x64.Build.0 = Debug|x64
+		{0A7924B6-6D64-1014-B856-1A9E5588203F}.Release|Any CPU.ActiveCfg = Release|Win32
+		{0A7924B6-6D64-1014-B856-1A9E5588203F}.Release|Win32.ActiveCfg = Release|Win32
+		{0A7924B6-6D64-1014-B856-1A9E5588203F}.Release|Win32.Build.0 = Release|Win32
+		{0A7924B6-6D64-1014-B856-1A9E5588203F}.Release|x64.ActiveCfg = Release|x64
+		{0A7924B6-6D64-1014-B856-1A9E5588203F}.Release|x64.Build.0 = Release|x64
+		{0A7924B6-6D64-1014-B856-1A9E5588203F}.Test|Any CPU.ActiveCfg = Release|x64
+		{0A7924B6-6D64-1014-B856-1A9E5588203F}.Test|Win32.ActiveCfg = Release|Win32
+		{0A7924B6-6D64-1014-B856-1A9E5588203F}.Test|Win32.Build.0 = Release|Win32
+		{0A7924B6-6D64-1014-B856-1A9E5588203F}.Test|x64.ActiveCfg = Release|x64
+		{0A7924B6-6D64-1014-B856-1A9E5588203F}.Test|x64.Build.0 = Release|x64
+		{0A7924B6-6D64-1014-B856-1A9E5588203F}.UnitTest_Release|Any CPU.ActiveCfg = Release|x64
+		{0A7924B6-6D64-1014-B856-1A9E5588203F}.UnitTest_Release|Win32.ActiveCfg = Release|Win32
+		{0A7924B6-6D64-1014-B856-1A9E5588203F}.UnitTest_Release|Win32.Build.0 = Release|Win32
+		{0A7924B6-6D64-1014-B856-1A9E5588203F}.UnitTest_Release|x64.ActiveCfg = Release|x64
+		{0A7924B6-6D64-1014-B856-1A9E5588203F}.UnitTest_Release|x64.Build.0 = Release|x64
+		{0A7924B6-6D64-1014-B856-1A9E5588203F}.UnitTest|Any CPU.ActiveCfg = Release|x64
+		{0A7924B6-6D64-1014-B856-1A9E5588203F}.UnitTest|Win32.ActiveCfg = Release|Win32
+		{0A7924B6-6D64-1014-B856-1A9E5588203F}.UnitTest|Win32.Build.0 = Release|Win32
+		{0A7924B6-6D64-1014-B856-1A9E5588203F}.UnitTest|x64.ActiveCfg = Release|x64
+		{0A7924B6-6D64-1014-B856-1A9E5588203F}.UnitTest|x64.Build.0 = Release|x64
+		{30016D8F-7037-1014-980B-AB4141A31375}.CscServiceOnly_Debug|Any CPU.ActiveCfg = Debug|Win32
+		{30016D8F-7037-1014-980B-AB4141A31375}.CscServiceOnly_Debug|Win32.ActiveCfg = Debug|Win32
+		{30016D8F-7037-1014-980B-AB4141A31375}.CscServiceOnly_Debug|x64.ActiveCfg = Debug|x64
+		{30016D8F-7037-1014-980B-AB4141A31375}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{30016D8F-7037-1014-980B-AB4141A31375}.Debug|Win32.ActiveCfg = Debug|Win32
+		{30016D8F-7037-1014-980B-AB4141A31375}.Debug|Win32.Build.0 = Debug|Win32
+		{30016D8F-7037-1014-980B-AB4141A31375}.Debug|x64.ActiveCfg = Debug|x64
+		{30016D8F-7037-1014-980B-AB4141A31375}.Debug|x64.Build.0 = Debug|x64
+		{30016D8F-7037-1014-980B-AB4141A31375}.Release|Any CPU.ActiveCfg = Release|Win32
+		{30016D8F-7037-1014-980B-AB4141A31375}.Release|Win32.ActiveCfg = Release|Win32
+		{30016D8F-7037-1014-980B-AB4141A31375}.Release|Win32.Build.0 = Release|Win32
+		{30016D8F-7037-1014-980B-AB4141A31375}.Release|x64.ActiveCfg = Release|x64
+		{30016D8F-7037-1014-980B-AB4141A31375}.Release|x64.Build.0 = Release|x64
+		{30016D8F-7037-1014-980B-AB4141A31375}.Test|Any CPU.ActiveCfg = Release|x64
+		{30016D8F-7037-1014-980B-AB4141A31375}.Test|Win32.ActiveCfg = Release|Win32
+		{30016D8F-7037-1014-980B-AB4141A31375}.Test|Win32.Build.0 = Release|Win32
+		{30016D8F-7037-1014-980B-AB4141A31375}.Test|x64.ActiveCfg = Release|x64
+		{30016D8F-7037-1014-980B-AB4141A31375}.Test|x64.Build.0 = Release|x64
+		{30016D8F-7037-1014-980B-AB4141A31375}.UnitTest_Release|Any CPU.ActiveCfg = Release|x64
+		{30016D8F-7037-1014-980B-AB4141A31375}.UnitTest_Release|Win32.ActiveCfg = Release|Win32
+		{30016D8F-7037-1014-980B-AB4141A31375}.UnitTest_Release|Win32.Build.0 = Release|Win32
+		{30016D8F-7037-1014-980B-AB4141A31375}.UnitTest_Release|x64.ActiveCfg = Release|x64
+		{30016D8F-7037-1014-980B-AB4141A31375}.UnitTest_Release|x64.Build.0 = Release|x64
+		{30016D8F-7037-1014-980B-AB4141A31375}.UnitTest|Any CPU.ActiveCfg = Release|x64
+		{30016D8F-7037-1014-980B-AB4141A31375}.UnitTest|Win32.ActiveCfg = Release|Win32
+		{30016D8F-7037-1014-980B-AB4141A31375}.UnitTest|Win32.Build.0 = Release|Win32
+		{30016D8F-7037-1014-980B-AB4141A31375}.UnitTest|x64.ActiveCfg = Release|x64
+		{30016D8F-7037-1014-980B-AB4141A31375}.UnitTest|x64.Build.0 = Release|x64
+		{30015DEA-7037-1014-980B-AB4141A31375}.CscServiceOnly_Debug|Any CPU.ActiveCfg = Debug|Win32
+		{30015DEA-7037-1014-980B-AB4141A31375}.CscServiceOnly_Debug|Win32.ActiveCfg = Debug|Win32
+		{30015DEA-7037-1014-980B-AB4141A31375}.CscServiceOnly_Debug|x64.ActiveCfg = Debug|x64
+		{30015DEA-7037-1014-980B-AB4141A31375}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{30015DEA-7037-1014-980B-AB4141A31375}.Debug|Win32.ActiveCfg = Debug|Win32
+		{30015DEA-7037-1014-980B-AB4141A31375}.Debug|Win32.Build.0 = Debug|Win32
+		{30015DEA-7037-1014-980B-AB4141A31375}.Debug|x64.ActiveCfg = Debug|x64
+		{30015DEA-7037-1014-980B-AB4141A31375}.Debug|x64.Build.0 = Debug|x64
+		{30015DEA-7037-1014-980B-AB4141A31375}.Release|Any CPU.ActiveCfg = Release|Win32
+		{30015DEA-7037-1014-980B-AB4141A31375}.Release|Win32.ActiveCfg = Release|Win32
+		{30015DEA-7037-1014-980B-AB4141A31375}.Release|Win32.Build.0 = Release|Win32
+		{30015DEA-7037-1014-980B-AB4141A31375}.Release|x64.ActiveCfg = Release|x64
+		{30015DEA-7037-1014-980B-AB4141A31375}.Release|x64.Build.0 = Release|x64
+		{30015DEA-7037-1014-980B-AB4141A31375}.Test|Any CPU.ActiveCfg = Test|Win32
+		{30015DEA-7037-1014-980B-AB4141A31375}.Test|Win32.ActiveCfg = Test|Win32
+		{30015DEA-7037-1014-980B-AB4141A31375}.Test|Win32.Build.0 = Test|Win32
+		{30015DEA-7037-1014-980B-AB4141A31375}.Test|x64.ActiveCfg = Test|x64
+		{30015DEA-7037-1014-980B-AB4141A31375}.Test|x64.Build.0 = Test|x64
+		{30015DEA-7037-1014-980B-AB4141A31375}.UnitTest_Release|Any CPU.ActiveCfg = UnitTest_Release|Win32
+		{30015DEA-7037-1014-980B-AB4141A31375}.UnitTest_Release|Win32.ActiveCfg = UnitTest_Release|Win32
+		{30015DEA-7037-1014-980B-AB4141A31375}.UnitTest_Release|Win32.Build.0 = UnitTest_Release|Win32
+		{30015DEA-7037-1014-980B-AB4141A31375}.UnitTest_Release|x64.ActiveCfg = UnitTest_Release|x64
+		{30015DEA-7037-1014-980B-AB4141A31375}.UnitTest_Release|x64.Build.0 = UnitTest_Release|x64
+		{30015DEA-7037-1014-980B-AB4141A31375}.UnitTest|Any CPU.ActiveCfg = UnitTest|Win32
+		{30015DEA-7037-1014-980B-AB4141A31375}.UnitTest|Win32.ActiveCfg = UnitTest|Win32
+		{30015DEA-7037-1014-980B-AB4141A31375}.UnitTest|Win32.Build.0 = UnitTest|Win32
+		{30015DEA-7037-1014-980B-AB4141A31375}.UnitTest|x64.ActiveCfg = UnitTest|x64
+		{30015DEA-7037-1014-980B-AB4141A31375}.UnitTest|x64.Build.0 = UnitTest|x64
+		{BF577F8F-DD4C-4A89-A7C3-1C53961905B0}.CscServiceOnly_Debug|Any CPU.ActiveCfg = Debug|Win32
+		{BF577F8F-DD4C-4A89-A7C3-1C53961905B0}.CscServiceOnly_Debug|Win32.ActiveCfg = Debug|Win32
+		{BF577F8F-DD4C-4A89-A7C3-1C53961905B0}.CscServiceOnly_Debug|x64.ActiveCfg = Debug|x64
+		{BF577F8F-DD4C-4A89-A7C3-1C53961905B0}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{BF577F8F-DD4C-4A89-A7C3-1C53961905B0}.Debug|Win32.ActiveCfg = Debug|Win32
+		{BF577F8F-DD4C-4A89-A7C3-1C53961905B0}.Debug|Win32.Build.0 = Debug|Win32
+		{BF577F8F-DD4C-4A89-A7C3-1C53961905B0}.Debug|x64.ActiveCfg = Debug|x64
+		{BF577F8F-DD4C-4A89-A7C3-1C53961905B0}.Debug|x64.Build.0 = Debug|x64
+		{BF577F8F-DD4C-4A89-A7C3-1C53961905B0}.Release|Any CPU.ActiveCfg = Release|Win32
+		{BF577F8F-DD4C-4A89-A7C3-1C53961905B0}.Release|Win32.ActiveCfg = Release|Win32
+		{BF577F8F-DD4C-4A89-A7C3-1C53961905B0}.Release|Win32.Build.0 = Release|Win32
+		{BF577F8F-DD4C-4A89-A7C3-1C53961905B0}.Release|x64.ActiveCfg = Release|x64
+		{BF577F8F-DD4C-4A89-A7C3-1C53961905B0}.Release|x64.Build.0 = Release|x64
+		{BF577F8F-DD4C-4A89-A7C3-1C53961905B0}.Test|Any CPU.ActiveCfg = Release|x64
+		{BF577F8F-DD4C-4A89-A7C3-1C53961905B0}.Test|Win32.ActiveCfg = Release|Win32
+		{BF577F8F-DD4C-4A89-A7C3-1C53961905B0}.Test|Win32.Build.0 = Release|Win32
+		{BF577F8F-DD4C-4A89-A7C3-1C53961905B0}.Test|x64.ActiveCfg = Release|x64
+		{BF577F8F-DD4C-4A89-A7C3-1C53961905B0}.Test|x64.Build.0 = Release|x64
+		{BF577F8F-DD4C-4A89-A7C3-1C53961905B0}.UnitTest_Release|Any CPU.ActiveCfg = Release|x64
+		{BF577F8F-DD4C-4A89-A7C3-1C53961905B0}.UnitTest_Release|Win32.ActiveCfg = Release|Win32
+		{BF577F8F-DD4C-4A89-A7C3-1C53961905B0}.UnitTest_Release|Win32.Build.0 = Release|Win32
+		{BF577F8F-DD4C-4A89-A7C3-1C53961905B0}.UnitTest_Release|x64.ActiveCfg = Release|x64
+		{BF577F8F-DD4C-4A89-A7C3-1C53961905B0}.UnitTest_Release|x64.Build.0 = Release|x64
+		{BF577F8F-DD4C-4A89-A7C3-1C53961905B0}.UnitTest|Any CPU.ActiveCfg = Release|x64
+		{BF577F8F-DD4C-4A89-A7C3-1C53961905B0}.UnitTest|Win32.ActiveCfg = Release|Win32
+		{BF577F8F-DD4C-4A89-A7C3-1C53961905B0}.UnitTest|Win32.Build.0 = Release|Win32
+		{BF577F8F-DD4C-4A89-A7C3-1C53961905B0}.UnitTest|x64.ActiveCfg = Release|x64
+		{BF577F8F-DD4C-4A89-A7C3-1C53961905B0}.UnitTest|x64.Build.0 = Release|x64
+		{97B7D036-20A2-4CD2-B158-09D97AA97859}.CscServiceOnly_Debug|Any CPU.ActiveCfg = Debug|Win32
+		{97B7D036-20A2-4CD2-B158-09D97AA97859}.CscServiceOnly_Debug|Win32.ActiveCfg = CscService_only|Win32
+		{97B7D036-20A2-4CD2-B158-09D97AA97859}.CscServiceOnly_Debug|Win32.Build.0 = CscService_only|Win32
+		{97B7D036-20A2-4CD2-B158-09D97AA97859}.CscServiceOnly_Debug|x64.ActiveCfg = Debug|x64
+		{97B7D036-20A2-4CD2-B158-09D97AA97859}.CscServiceOnly_Debug|x64.Build.0 = Debug|x64
+		{97B7D036-20A2-4CD2-B158-09D97AA97859}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{97B7D036-20A2-4CD2-B158-09D97AA97859}.Debug|Win32.ActiveCfg = Debug|Win32
+		{97B7D036-20A2-4CD2-B158-09D97AA97859}.Debug|Win32.Build.0 = Debug|Win32
+		{97B7D036-20A2-4CD2-B158-09D97AA97859}.Debug|x64.ActiveCfg = Debug|x64
+		{97B7D036-20A2-4CD2-B158-09D97AA97859}.Debug|x64.Build.0 = Debug|x64
+		{97B7D036-20A2-4CD2-B158-09D97AA97859}.Release|Any CPU.ActiveCfg = Release|Win32
+		{97B7D036-20A2-4CD2-B158-09D97AA97859}.Release|Win32.ActiveCfg = Release|Win32
+		{97B7D036-20A2-4CD2-B158-09D97AA97859}.Release|Win32.Build.0 = Release|Win32
+		{97B7D036-20A2-4CD2-B158-09D97AA97859}.Release|x64.ActiveCfg = Release|x64
+		{97B7D036-20A2-4CD2-B158-09D97AA97859}.Release|x64.Build.0 = Release|x64
+		{97B7D036-20A2-4CD2-B158-09D97AA97859}.Test|Any CPU.ActiveCfg = Release|x64
+		{97B7D036-20A2-4CD2-B158-09D97AA97859}.Test|Win32.ActiveCfg = Release|Win32
+		{97B7D036-20A2-4CD2-B158-09D97AA97859}.Test|Win32.Build.0 = Release|Win32
+		{97B7D036-20A2-4CD2-B158-09D97AA97859}.Test|x64.ActiveCfg = Release|x64
+		{97B7D036-20A2-4CD2-B158-09D97AA97859}.Test|x64.Build.0 = Release|x64
+		{97B7D036-20A2-4CD2-B158-09D97AA97859}.UnitTest_Release|Any CPU.ActiveCfg = Release|x64
+		{97B7D036-20A2-4CD2-B158-09D97AA97859}.UnitTest_Release|Win32.ActiveCfg = Release|Win32
+		{97B7D036-20A2-4CD2-B158-09D97AA97859}.UnitTest_Release|Win32.Build.0 = Release|Win32
+		{97B7D036-20A2-4CD2-B158-09D97AA97859}.UnitTest_Release|x64.ActiveCfg = Release|x64
+		{97B7D036-20A2-4CD2-B158-09D97AA97859}.UnitTest_Release|x64.Build.0 = Release|x64
+		{97B7D036-20A2-4CD2-B158-09D97AA97859}.UnitTest|Any CPU.ActiveCfg = Release|x64
+		{97B7D036-20A2-4CD2-B158-09D97AA97859}.UnitTest|Win32.ActiveCfg = Release|Win32
+		{97B7D036-20A2-4CD2-B158-09D97AA97859}.UnitTest|Win32.Build.0 = Release|Win32
+		{97B7D036-20A2-4CD2-B158-09D97AA97859}.UnitTest|x64.ActiveCfg = Release|x64
+		{97B7D036-20A2-4CD2-B158-09D97AA97859}.UnitTest|x64.Build.0 = Release|x64
+		{4E45E05A-6CC3-1014-9E3F-8461FFB45C6A}.CscServiceOnly_Debug|Any CPU.ActiveCfg = Debug|Win32
+		{4E45E05A-6CC3-1014-9E3F-8461FFB45C6A}.CscServiceOnly_Debug|Win32.ActiveCfg = Debug|Win32
+		{4E45E05A-6CC3-1014-9E3F-8461FFB45C6A}.CscServiceOnly_Debug|x64.ActiveCfg = Debug|x64
+		{4E45E05A-6CC3-1014-9E3F-8461FFB45C6A}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{4E45E05A-6CC3-1014-9E3F-8461FFB45C6A}.Debug|Win32.ActiveCfg = Debug|Win32
+		{4E45E05A-6CC3-1014-9E3F-8461FFB45C6A}.Debug|Win32.Build.0 = Debug|Win32
+		{4E45E05A-6CC3-1014-9E3F-8461FFB45C6A}.Debug|x64.ActiveCfg = Debug|x64
+		{4E45E05A-6CC3-1014-9E3F-8461FFB45C6A}.Debug|x64.Build.0 = Debug|x64
+		{4E45E05A-6CC3-1014-9E3F-8461FFB45C6A}.Release|Any CPU.ActiveCfg = Release|Win32
+		{4E45E05A-6CC3-1014-9E3F-8461FFB45C6A}.Release|Win32.ActiveCfg = Release|Win32
+		{4E45E05A-6CC3-1014-9E3F-8461FFB45C6A}.Release|Win32.Build.0 = Release|Win32
+		{4E45E05A-6CC3-1014-9E3F-8461FFB45C6A}.Release|x64.ActiveCfg = Release|x64
+		{4E45E05A-6CC3-1014-9E3F-8461FFB45C6A}.Release|x64.Build.0 = Release|x64
+		{4E45E05A-6CC3-1014-9E3F-8461FFB45C6A}.Test|Any CPU.ActiveCfg = Test|Win32
+		{4E45E05A-6CC3-1014-9E3F-8461FFB45C6A}.Test|Win32.ActiveCfg = Test|Win32
+		{4E45E05A-6CC3-1014-9E3F-8461FFB45C6A}.Test|Win32.Build.0 = Test|Win32
+		{4E45E05A-6CC3-1014-9E3F-8461FFB45C6A}.Test|x64.ActiveCfg = Test|x64
+		{4E45E05A-6CC3-1014-9E3F-8461FFB45C6A}.Test|x64.Build.0 = Test|x64
+		{4E45E05A-6CC3-1014-9E3F-8461FFB45C6A}.UnitTest_Release|Any CPU.ActiveCfg = UnitTest_Release|Win32
+		{4E45E05A-6CC3-1014-9E3F-8461FFB45C6A}.UnitTest_Release|Win32.ActiveCfg = UnitTest_Release|Win32
+		{4E45E05A-6CC3-1014-9E3F-8461FFB45C6A}.UnitTest_Release|Win32.Build.0 = UnitTest_Release|Win32
+		{4E45E05A-6CC3-1014-9E3F-8461FFB45C6A}.UnitTest_Release|x64.ActiveCfg = UnitTest_Release|x64
+		{4E45E05A-6CC3-1014-9E3F-8461FFB45C6A}.UnitTest_Release|x64.Build.0 = UnitTest_Release|x64
+		{4E45E05A-6CC3-1014-9E3F-8461FFB45C6A}.UnitTest|Any CPU.ActiveCfg = UnitTest|Win32
+		{4E45E05A-6CC3-1014-9E3F-8461FFB45C6A}.UnitTest|Win32.ActiveCfg = UnitTest|Win32
+		{4E45E05A-6CC3-1014-9E3F-8461FFB45C6A}.UnitTest|Win32.Build.0 = UnitTest|Win32
+		{4E45E05A-6CC3-1014-9E3F-8461FFB45C6A}.UnitTest|x64.ActiveCfg = UnitTest|x64
+		{4E45E05A-6CC3-1014-9E3F-8461FFB45C6A}.UnitTest|x64.Build.0 = UnitTest|x64
+		{70C42513-9695-40A5-B79F-C71886EF473E}.CscServiceOnly_Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70C42513-9695-40A5-B79F-C71886EF473E}.CscServiceOnly_Debug|Win32.ActiveCfg = Debug|Any CPU
+		{70C42513-9695-40A5-B79F-C71886EF473E}.CscServiceOnly_Debug|x64.ActiveCfg = Debug|Any CPU
+		{70C42513-9695-40A5-B79F-C71886EF473E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70C42513-9695-40A5-B79F-C71886EF473E}.Debug|Win32.ActiveCfg = Debug|Any CPU
+		{70C42513-9695-40A5-B79F-C71886EF473E}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{70C42513-9695-40A5-B79F-C71886EF473E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70C42513-9695-40A5-B79F-C71886EF473E}.Release|Win32.ActiveCfg = Release|Any CPU
+		{70C42513-9695-40A5-B79F-C71886EF473E}.Release|x64.ActiveCfg = Release|Any CPU
+		{70C42513-9695-40A5-B79F-C71886EF473E}.Test|Any CPU.ActiveCfg = Release|Any CPU
+		{70C42513-9695-40A5-B79F-C71886EF473E}.Test|Win32.ActiveCfg = Debug|Any CPU
+		{70C42513-9695-40A5-B79F-C71886EF473E}.Test|x64.ActiveCfg = Debug|Any CPU
+		{70C42513-9695-40A5-B79F-C71886EF473E}.UnitTest_Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70C42513-9695-40A5-B79F-C71886EF473E}.UnitTest_Release|Win32.ActiveCfg = Release|Any CPU
+		{70C42513-9695-40A5-B79F-C71886EF473E}.UnitTest_Release|x64.ActiveCfg = Release|Any CPU
+		{70C42513-9695-40A5-B79F-C71886EF473E}.UnitTest|Any CPU.ActiveCfg = Release|Any CPU
+		{70C42513-9695-40A5-B79F-C71886EF473E}.UnitTest|Win32.ActiveCfg = Debug|Any CPU
+		{70C42513-9695-40A5-B79F-C71886EF473E}.UnitTest|x64.ActiveCfg = Debug|Any CPU
+		{A029EF1B-E595-4275-AFAC-DF884E36BDB7}.CscServiceOnly_Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A029EF1B-E595-4275-AFAC-DF884E36BDB7}.CscServiceOnly_Debug|Win32.ActiveCfg = Debug|Any CPU
+		{A029EF1B-E595-4275-AFAC-DF884E36BDB7}.CscServiceOnly_Debug|x64.ActiveCfg = Debug|Any CPU
+		{A029EF1B-E595-4275-AFAC-DF884E36BDB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A029EF1B-E595-4275-AFAC-DF884E36BDB7}.Debug|Win32.ActiveCfg = Debug|Any CPU
+		{A029EF1B-E595-4275-AFAC-DF884E36BDB7}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{A029EF1B-E595-4275-AFAC-DF884E36BDB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A029EF1B-E595-4275-AFAC-DF884E36BDB7}.Release|Win32.ActiveCfg = Release|Any CPU
+		{A029EF1B-E595-4275-AFAC-DF884E36BDB7}.Release|x64.ActiveCfg = Release|Any CPU
+		{A029EF1B-E595-4275-AFAC-DF884E36BDB7}.Test|Any CPU.ActiveCfg = Debug|Any CPU
+		{A029EF1B-E595-4275-AFAC-DF884E36BDB7}.Test|Win32.ActiveCfg = Debug|Any CPU
+		{A029EF1B-E595-4275-AFAC-DF884E36BDB7}.Test|x64.ActiveCfg = Debug|Any CPU
+		{A029EF1B-E595-4275-AFAC-DF884E36BDB7}.UnitTest_Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A029EF1B-E595-4275-AFAC-DF884E36BDB7}.UnitTest_Release|Win32.ActiveCfg = Release|Any CPU
+		{A029EF1B-E595-4275-AFAC-DF884E36BDB7}.UnitTest_Release|x64.ActiveCfg = Release|Any CPU
+		{A029EF1B-E595-4275-AFAC-DF884E36BDB7}.UnitTest|Any CPU.ActiveCfg = Debug|Any CPU
+		{A029EF1B-E595-4275-AFAC-DF884E36BDB7}.UnitTest|Win32.ActiveCfg = Debug|Any CPU
+		{A029EF1B-E595-4275-AFAC-DF884E36BDB7}.UnitTest|x64.ActiveCfg = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{70C42513-9695-40A5-B79F-C71886EF473E} = {78937A90-1E5D-43D0-AFE9-65E1E16E5405}
+		{A029EF1B-E595-4275-AFAC-DF884E36BDB7} = {78937A90-1E5D-43D0-AFE9-65E1E16E5405}
+		{16C71EBC-7EDE-4F30-B535-E1A635EEB023} = {A2D00FDA-1B97-48D8-A9E0-86E5F78984C3}
+		{02EA681E-C7D8-13C7-8484-4AC65E1B71E8} = {A2D00FDA-1B97-48D8-A9E0-86E5F78984C3}
+		{9F9889B4-3EE7-4E6B-A624-9C7FFBCEA81C} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{AB0C53AF-FEF8-41B2-8481-58FB0E09083F} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{422E1BA5-BB01-423B-9F0E-40199728DF1E} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{E6A9B9A5-E2FB-43F7-975C-E92FAD7ED790} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{D2626934-C940-4E2D-B978-EA4F8D778D16} = {9F9889B4-3EE7-4E6B-A624-9C7FFBCEA81C}
+		{D386E0BE-E38B-41AC-AF41-521773FAA9D2} = {D2626934-C940-4E2D-B978-EA4F8D778D16}
+		{E2BF3ABD-4757-4C93-86C5-1F83AA5DCDDA} = {D2626934-C940-4E2D-B978-EA4F8D778D16}
+		{32291840-D0E7-446F-BC94-CD418BA8C1C3} = {9F9889B4-3EE7-4E6B-A624-9C7FFBCEA81C}
+		{6462E92E-1D51-4583-A1E2-4530BE14AEE2} = {9F9889B4-3EE7-4E6B-A624-9C7FFBCEA81C}
+		{1E238717-9B23-47D9-8E42-A40C8DB28246} = {AB0C53AF-FEF8-41B2-8481-58FB0E09083F}
+		{D988E10E-A082-4EA7-B7E4-3D54CD3FB1B3} = {AB0C53AF-FEF8-41B2-8481-58FB0E09083F}
+		{124EC909-1D7C-41A4-BB69-2523C121B5EF} = {9F9889B4-3EE7-4E6B-A624-9C7FFBCEA81C}
+		{C2E91269-9869-4A8A-ADD3-12F56478F156} = {422E1BA5-BB01-423B-9F0E-40199728DF1E}
+		{01EE9A1E-B7DD-4ACB-BE95-2DC8F65C937D} = {AB0C53AF-FEF8-41B2-8481-58FB0E09083F}
+		{05929495-5EF2-42E2-B868-DE038BBA648F} = {E6A9B9A5-E2FB-43F7-975C-E92FAD7ED790}
+		{DFD573DE-C9C7-4DAD-A859-6D748BA0E294} = {124EC909-1D7C-41A4-BB69-2523C121B5EF}
+		{03A197E5-0726-420C-B604-ABB682B63896} = {C2E91269-9869-4A8A-ADD3-12F56478F156}
+		{95FE3C13-88C2-400C-A7AE-3714CC88046D} = {01EE9A1E-B7DD-4ACB-BE95-2DC8F65C937D}
+		{7A89EBCC-F30F-4242-88AB-12218EA2F8B8} = {05929495-5EF2-42E2-B868-DE038BBA648F}
+		{E915D828-9FD1-43BB-916E-94BE17841264} = {124EC909-1D7C-41A4-BB69-2523C121B5EF}
+		{0C9FF201-F366-4631-8C1C-55BD45A574E9} = {C2E91269-9869-4A8A-ADD3-12F56478F156}
+		{B5DAC4C1-A803-46C8-92B5-6936F0E03B51} = {01EE9A1E-B7DD-4ACB-BE95-2DC8F65C937D}
+		{1E3A5CC0-ACCB-4A16-9282-C06AE2392266} = {05929495-5EF2-42E2-B868-DE038BBA648F}
+		{51F6FA87-6628-4BB4-A768-425AF428FFFE} = {124EC909-1D7C-41A4-BB69-2523C121B5EF}
+		{7077F9DC-AF9C-45A0-8C6D-9DAAA91B4CDD} = {C2E91269-9869-4A8A-ADD3-12F56478F156}
+		{D27B0F39-08E1-4C9D-8F7C-0DD0C9DF74FC} = {01EE9A1E-B7DD-4ACB-BE95-2DC8F65C937D}
+		{92C8C3EE-8671-4114-BCEF-1714DEB6C3B3} = {05929495-5EF2-42E2-B868-DE038BBA648F}
+		{E1B8BB3E-3AAE-4BA5-8D68-B0BC9854F27A} = {124EC909-1D7C-41A4-BB69-2523C121B5EF}
+		{D959C0A4-974D-4341-953D-CE661FA7B526} = {01EE9A1E-B7DD-4ACB-BE95-2DC8F65C937D}
+		{FD099D0F-7A94-4492-BCB3-76E35591421F} = {32291840-D0E7-446F-BC94-CD418BA8C1C3}
+		{79CC6531-A4B1-4C5F-B0F0-A711ED71B5DE} = {1E238717-9B23-47D9-8E42-A40C8DB28246}
+		{9C21300C-CAA6-48F1-8035-CF81B7B61822} = {32291840-D0E7-446F-BC94-CD418BA8C1C3}
+		{19911669-EB7A-411B-B55F-41F261E7B400} = {1E238717-9B23-47D9-8E42-A40C8DB28246}
+		{451ECC52-2DD1-4D49-86BD-AE5D7DA2741A} = {32291840-D0E7-446F-BC94-CD418BA8C1C3}
+		{421F9E97-E305-46C8-857B-E69B60915313} = {1E238717-9B23-47D9-8E42-A40C8DB28246}
+		{8CA73E3C-4929-46A6-881E-590A0BC9EB65} = {32291840-D0E7-446F-BC94-CD418BA8C1C3}
+		{04094F90-2708-4174-B8D5-3F61CDE3E414} = {1E238717-9B23-47D9-8E42-A40C8DB28246}
+		{EA24562F-3481-4A79-9CAD-29E3F4EA1888} = {FD099D0F-7A94-4492-BCB3-76E35591421F}
+		{F60B8E8F-64F2-43B8-96D1-1F3CA7ABB932} = {FD099D0F-7A94-4492-BCB3-76E35591421F}
+		{7B22ECC5-A947-4287-8B29-09F3B3D81858} = {FD099D0F-7A94-4492-BCB3-76E35591421F}
+		{301F7915-FA79-4165-B07F-7EB8E10A229C} = {FD099D0F-7A94-4492-BCB3-76E35591421F}
+		{B2EDA344-978F-4A4A-8EB5-6DDC5B7A031A} = {FD099D0F-7A94-4492-BCB3-76E35591421F}
+		{8D863B79-593D-4865-B638-EB62B7133EA0} = {9C21300C-CAA6-48F1-8035-CF81B7B61822}
+		{0986C3AD-33B8-49DE-87A5-FBB7A5717A98} = {451ECC52-2DD1-4D49-86BD-AE5D7DA2741A}
+		{CE7223A6-DE89-46E9-8154-25E494210CC4} = {8CA73E3C-4929-46A6-881E-590A0BC9EB65}
+		{DB71EAC5-6CAE-452C-B24E-E8DAAC8EE9A4} = {9C21300C-CAA6-48F1-8035-CF81B7B61822}
+		{75703D4C-445F-4702-8745-9B73CA16E7BE} = {9C21300C-CAA6-48F1-8035-CF81B7B61822}
+		{081679D3-D054-4199-889C-02174E34CF8C} = {451ECC52-2DD1-4D49-86BD-AE5D7DA2741A}
+		{8D80BF58-4326-48B3-A71D-D0AE74E274ED} = {451ECC52-2DD1-4D49-86BD-AE5D7DA2741A}
+		{2A43E248-100E-4B9F-B61D-08329095C684} = {451ECC52-2DD1-4D49-86BD-AE5D7DA2741A}
+		{2A9B48D6-4C00-4772-B636-2F31AEDFA23B} = {451ECC52-2DD1-4D49-86BD-AE5D7DA2741A}
+		{89A2ED45-503B-43B0-B21E-DA87259EEF78} = {451ECC52-2DD1-4D49-86BD-AE5D7DA2741A}
+		{3952FC29-BBD0-4377-9364-6E587C71AE2A} = {451ECC52-2DD1-4D49-86BD-AE5D7DA2741A}
+		{1DE0EEBF-B7AB-43D8-AB23-8ED8D48CCE4F} = {8CA73E3C-4929-46A6-881E-590A0BC9EB65}
+		{C11E2166-CF68-408D-A3C2-0C39EA740169} = {8CA73E3C-4929-46A6-881E-590A0BC9EB65}
+		{F1423340-F0F3-4A87-BFAA-15C1006DE76B} = {8CA73E3C-4929-46A6-881E-590A0BC9EB65}
+		{C1AD0B86-08E8-4835-AE37-FDEE7F2DA693} = {8CA73E3C-4929-46A6-881E-590A0BC9EB65}
+		{C0B0D443-7B04-4F35-AAF3-BC894579E332} = {8CA73E3C-4929-46A6-881E-590A0BC9EB65}
+		{E3383856-9452-4465-A3F2-20D8C2BBEA72} = {8CA73E3C-4929-46A6-881E-590A0BC9EB65}
+		{CCD1D040-499F-41ED-A8E2-A75AE8F30C93} = {79CC6531-A4B1-4C5F-B0F0-A711ED71B5DE}
+		{E64A37A0-D255-406C-9934-381CB99F1DD9} = {19911669-EB7A-411B-B55F-41F261E7B400}
+		{7BEE822E-0E69-4812-B2DB-888B894BD083} = {421F9E97-E305-46C8-857B-E69B60915313}
+		{4F3E0BBC-A26E-45FE-BAE7-160DC4958D52} = {04094F90-2708-4174-B8D5-3F61CDE3E414}
+		{D07B407B-8E45-4478-B4E9-7962C17AB4A8} = {04094F90-2708-4174-B8D5-3F61CDE3E414}
+		{B0DCA7E1-1B30-4CAD-B0A7-265CFF3958CC} = {421F9E97-E305-46C8-857B-E69B60915313}
+		{F85ADBE8-BA4A-405B-AD1D-664204ACD387} = {19911669-EB7A-411B-B55F-41F261E7B400}
+		{B16BE4AB-A222-4C2A-8817-1F45CD967C36} = {79CC6531-A4B1-4C5F-B0F0-A711ED71B5DE}
+		{F4210199-5690-451B-AA01-0292A94C1C34} = {19911669-EB7A-411B-B55F-41F261E7B400}
+		{11339DB1-E83F-4F90-95D8-43EC7603234C} = {421F9E97-E305-46C8-857B-E69B60915313}
+		{D0DAD872-1392-4FA3-9DC3-EC65C8D7C74F} = {04094F90-2708-4174-B8D5-3F61CDE3E414}
+		{F07630F4-49E6-495C-82D6-7B028466E17F} = {04094F90-2708-4174-B8D5-3F61CDE3E414}
+		{68FFBD99-7348-4D3E-AC7F-0CD261AF1F59} = {421F9E97-E305-46C8-857B-E69B60915313}
+		{887C16B7-F8E3-4DDE-8AA2-056A98D0D170} = {19911669-EB7A-411B-B55F-41F261E7B400}
+		{C13040F5-5D66-4591-AB6C-91F07E8860A9} = {79CC6531-A4B1-4C5F-B0F0-A711ED71B5DE}
+		{EE8CE81F-D481-46BA-A295-23EBB1815A67} = {04094F90-2708-4174-B8D5-3F61CDE3E414}
+		{4A2FE9FB-846E-4C07-9AAE-DBABB0C00D64} = {421F9E97-E305-46C8-857B-E69B60915313}
+		{CE4A839B-E782-4BC6-BD57-A19B8B67B641} = {19911669-EB7A-411B-B55F-41F261E7B400}
+		{4E8E6683-CE0D-4D0F-A131-D2A264CAFC7F} = {79CC6531-A4B1-4C5F-B0F0-A711ED71B5DE}
+		{EB156C88-91E8-4185-B4C5-70FA583B0C27} = {D959C0A4-974D-4341-953D-CE661FA7B526}
+		{DBE58588-F5E6-4E4B-896A-A70E56ED6B33} = {95FE3C13-88C2-400C-A7AE-3714CC88046D}
+		{6C1B73EA-CA1E-40A2-BDFB-31B898071C61} = {B5DAC4C1-A803-46C8-92B5-6936F0E03B51}
+		{3F1D01AB-AE2B-469E-9CAD-BCC72CFDB426} = {D27B0F39-08E1-4C9D-8F7C-0DD0C9DF74FC}
+		{19C45705-E92C-41EB-8CA1-2D8F5EC81E32} = {D27B0F39-08E1-4C9D-8F7C-0DD0C9DF74FC}
+		{7AAE8B80-D36C-483B-BFE9-DA0CAEF620E1} = {B5DAC4C1-A803-46C8-92B5-6936F0E03B51}
+		{048CE699-87D6-4247-A1AA-AD958942407C} = {D959C0A4-974D-4341-953D-CE661FA7B526}
+		{0421AB2D-D199-49CB-9ED5-A9742A1135C7} = {95FE3C13-88C2-400C-A7AE-3714CC88046D}
+		{EDCFE0B3-89AC-4E15-9289-F2B809FDFD3E} = {95FE3C13-88C2-400C-A7AE-3714CC88046D}
+		{98B06792-A733-4543-9E0E-C4A7679B45D3} = {D959C0A4-974D-4341-953D-CE661FA7B526}
+		{98925390-3AF8-4EC7-AE2C-E84EB041A595} = {B5DAC4C1-A803-46C8-92B5-6936F0E03B51}
+		{5EA0B98E-8CD3-4C5C-8F94-7959D03FDFEE} = {D27B0F39-08E1-4C9D-8F7C-0DD0C9DF74FC}
+		{B7004C79-F65B-453E-958E-F7A8A23261F9} = {D959C0A4-974D-4341-953D-CE661FA7B526}
+		{5929BF0A-412E-4403-B2A8-8CA2829B9B20} = {95FE3C13-88C2-400C-A7AE-3714CC88046D}
+		{D7829CF3-A444-4D87-9E16-84DE4D6E3BAC} = {B5DAC4C1-A803-46C8-92B5-6936F0E03B51}
+		{39183FC4-ACDD-414F-A876-04E74F22A894} = {D27B0F39-08E1-4C9D-8F7C-0DD0C9DF74FC}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		Qt5Version = 5.2.0
+		SolutionGuid = {7FE1510E-A271-4912-A623-665AEE79F80A}
+	EndGlobalSection
+EndGlobal

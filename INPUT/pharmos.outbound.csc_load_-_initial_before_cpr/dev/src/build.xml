@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+
+<project name="csc_load" default="help" basedir="." xmlns:contrib="antlib:net.sf.antcontrib">
+  <taskdef name="xmltask" classname="com.oopsconsultancy.xmltask.ant.XmlTask" />
+
+  <!-- ====================================================== -->
+
+  <property name="settings_server" value="tfs-nexus" />
+  <property name="settings_version" value="3.0.0" />
+
+  <include>
+    <url url="http://${settings_server}:8081/repository/genesis/eu/phoenixgroup/buildenv_ivy/${settings_version}/macro.ant-${settings_version}.xml" />
+  </include>
+
+  <property name="qtversion"    value="5.2.0" />
+  <property name="projdir"      value="." />
+
+  <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+  <target name="help">
+    <displayHelp />
+  </target>
+
+  <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+  <target name="full" description="clean rebuild">
+    <buildMake path="${projdir}" mode="cleanall" />
+    <buildMake path="${projdir}" mode="dbg" />
+    <buildMake path="${projdir}" mode="rel" />
+  </target>
+
+  <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+  <target name="export" description="exporting and compressing created artifacts">
+    <!-- call export scripts -->
+    <buildScriptUnix path="." script="export.sh" />
+  </target>
+
+  <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+  <target name="retrieve">
+    <retrieve additional-config="compile" />
+  </target>
+
+  <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+  <target name="publish">
+    <publish />
+  </target>
+
+  <!-- ====================================================== -->
+</project>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CSCPlatformConsolidationToolConfig
+xsi:noNamespaceSchemaLocation="CSCPlatformConsolidationToolConfig.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Modus="Real" Environment="Test">
+	<Branches2BMoved Direction="South2North">
+		<Branch>81</Branch>
+		<Branch>82</Branch>
+	</Branches2BMoved>
+	<Applications>
+		<Application ApplicationVersion="v1.0">msv3</Application>
+		<Application ApplicationVersion="v2.0">msv3</Application>
+		<Application ApplicationVersion="">swimp</Application>
+	</Applications>
+	<Servers>
+		<Server>denu03ms0343</Server>
+		<Server>denu03ms0344</Server>
+		<Server>denu03ms0020</Server>
+	</Servers>
+	<Interfaces>
+		<MSV3v1Interfaces>
+			<MSV3v1Interface>bestellen-be</MSV3v1Interface>
+			<MSV3v1Interface>bestellstatusabfragen-be</MSV3v1Interface>
+			<MSV3v1Interface>ruecknahmeangebotanfordern-be</MSV3v1Interface>
+			<MSV3v1Interface>verbindungtesten-be</MSV3v1Interface>
+			<MSV3v1Interface>verfuegbarkeitanfragen-be</MSV3v1Interface>
+			<MSV3v1Interface>verfuegbarkeitanfragenbulk-be</MSV3v1Interface>
+			<MSV3v1Interface>vertragsdatenabfragen-be</MSV3v1Interface>
+		</MSV3v1Interfaces>
+		<MSV3v2Interfaces>
+			<MSV3v2Interface>bestellen-be</MSV3v2Interface>
+			<MSV3v2Interface>bestellstatusabfragen-be</MSV3v2Interface>
+			<MSV3v2Interface>dokumentAbfragen-be</MSV3v2Interface>
+			<MSV3v2Interface>lieferavis-be</MSV3v2Interface>
+			<MSV3v2Interface>retourenavis-be</MSV3v2Interface>
+			<MSV3v2Interface>ruecknahmeangebotanfordern-be</MSV3v2Interface>
+			<MSV3v2Interface>verbindungtesten-be</MSV3v2Interface>
+			<MSV3v2Interface>verfuegbarkeitanfragen-be</MSV3v2Interface>
+			<MSV3v2Interface>verfuegbarkeitanfragenbulk-be</MSV3v2Interface>
+			<MSV3v2Interface>vertragsdatenabfragen-be</MSV3v2Interface>
+		</MSV3v2Interfaces>
+		<SwimpInterfaces>
+			<SwimpInterface>sw-b-de-dn</SwimpInterface>
+			<SwimpInterface>sw-b-de-or</SwimpInterface>
+			<SwimpInterface>sw-b-de-pa</SwimpInterface>
+			<SwimpInterface>sw-b-de-sl</SwimpInterface>
+		</SwimpInterfaces>
+	</Interfaces>
+	<Paths>		
+        <BackupDir>C:\CSCPlatformConsolidation\TestMove\Backup</BackupDir>
+        <TempDir>C:\CSCPlatformConsolidation\TestMove\Temp</TempDir>
+	</Paths>
+</CSCPlatformConsolidationToolConfig>

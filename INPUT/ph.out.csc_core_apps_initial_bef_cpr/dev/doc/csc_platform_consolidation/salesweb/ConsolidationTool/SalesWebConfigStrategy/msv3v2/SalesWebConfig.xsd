@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Mit XMLSpy v2007 sp1 bearbeitet (http://www.altova.com) von C. Merkl (PHOENIX Pharmahandel AG & Co. KG) -->
+<!-- Mit XMLSpy v2007 sp1 bearbeitet (http://www.altova.com) von C. Merkl (PHOENIX Pharmahandel AG & Co. KG) -->
+<!-- Mit XMLSpy v2007 sp1 bearbeitet (http://www.altova.com) von C. Merkl (PHOENIX Pharmahandel AG & Co. KG) -->
+<!-- Mit XMLSpy v2007 sp1 bearbeitet (http://www.altova.com) von C. Merkl (PHOENIX Pharmahandel AG & Co. KG) -->
+<!-- Mit XMLSpy v2007 sp1 bearbeitet (http://www.altova.com) von C. Merkl (PHOENIX Pharmahandel AG & Co. KG) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:attribute name="SubmitDurationType">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:enumeration value="Mail"/>
+				<!--<xs:enumeration value="LogService"/>-->
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:attribute>
+	<xs:attribute name="Severity">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:enumeration value="None"/>
+				<xs:enumeration value="Debug"/>
+				<xs:enumeration value="Info"/>
+				<xs:enumeration value="Warn"/>
+				<xs:enumeration value="Error"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:attribute>
+	<xs:attribute name="Country">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:enumeration value="Empty"/>
+				<xs:enumeration value="Austria"/>
+				<xs:enumeration value="Bulgaria"/>
+				<xs:enumeration value="Croatia"/>
+				<xs:enumeration value="France"/>
+				<xs:enumeration value="Germany"/>
+				<xs:enumeration value="Serbia"/>
+				<xs:enumeration value="Switzerland"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:attribute>
+	<xs:attribute name="Language">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:enumeration value="Empty"/>
+				<xs:enumeration value="Bulgarian"/>
+				<xs:enumeration value="Croatian"/>
+				<xs:enumeration value="English"/>
+				<xs:enumeration value="French"/>
+				<xs:enumeration value="German"/>
+				<xs:enumeration value="Serbian"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:attribute>
+	<xs:element name="SalesWebConfig">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="General">
+					<xs:complexType>
+						<xs:attribute ref="Country" use="required"/>
+						<xs:attribute ref="Language" use="required"/>
+						<xs:attribute name="Domain" type="xs:string" use="optional" default="PHOENIXEXT"/>
+						<xs:attribute name="Pzn8Aktive" type="xs:boolean" use="optional" default="false"/>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="XmlValidation">
+					<xs:complexType>
+						<xs:attribute name="ValidateXML" type="xs:boolean" use="required"/>
+						<xs:attribute name="XsdPath" type="xs:string" use="required"/>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Smtp">
+					<xs:complexType>
+						<xs:attribute name="Server" type="xs:string" use="required"/>
+						<xs:attribute name="Port" type="xs:int" use="required"/>
+						<xs:attribute name="MailAddressTo" type="xs:string" use="required"/>
+						<xs:attribute name="MailAddressFrom" type="xs:string" use="required"/>
+					</xs:complexType>
+				</xs:element>
+				<xs:sequence>
+					<xs:element name="Frontend" minOccurs="0">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="BackendEndpoint">
+									<xs:complexType>
+										<xs:sequence>
+											<xs:element name="Branches">
+												<xs:complexType>
+													<xs:sequence>
+														<xs:element name="Branch" type="xs:int" maxOccurs="unbounded"/>
+													</xs:sequence>
+												</xs:complexType>
+											</xs:element>
+										</xs:sequence>
+										<xs:attribute name="Name" type="xs:string" use="required"/>
+										<xs:attribute name="Address" type="xs:string" use="required"/>
+									</xs:complexType>
+								</xs:element>
+								<xs:element name="SubmitDurations" minOccurs="0">
+									<xs:complexType>
+										<xs:sequence>
+											<xs:element name="User" minOccurs="0" maxOccurs="unbounded">
+												<xs:complexType>
+													<xs:attribute name="BranchNo" type="xs:int" use="required"/>
+													<xs:attribute name="Idf" type="xs:int" use="required"/>
+												</xs:complexType>
+											</xs:element>
+										</xs:sequence>
+										<xs:attribute name="Submit" type="xs:boolean" default="false"/>
+										<xs:attribute ref="SubmitDurationType" default="Mail"/>
+									</xs:complexType>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="Backend" minOccurs="0">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="Log">
+									<xs:complexType>
+										<xs:attribute name="ConnectionString" type="xs:string" use="required"/>
+										<xs:attribute name="QueuePath" type="xs:string" use="required"/>
+										<xs:attribute name="LogTableName" type="xs:string" use="required"/>
+										<xs:attribute ref="Severity" use="required"/>
+									</xs:complexType>
+								</xs:element>
+								<xs:element name="Blacklisting">
+									<xs:complexType>
+										<xs:sequence>
+											<xs:element name="Duration" minOccurs="0" maxOccurs="unbounded">
+												<xs:complexType>
+													<xs:attribute name="From" type="xs:string" use="optional" default="12:00:00"/>
+													<xs:attribute name="To" type="xs:string" use="optional" default="12:00:00"/>
+												</xs:complexType>
+											</xs:element>
+										</xs:sequence>
+										<xs:attribute name="MaxPosCount" type="xs:int" use="optional" default="65568"/>
+									</xs:complexType>
+								</xs:element>
+								<!--<xs:element name="IfxServers" minOccurs="0">
+									<xs:complexType>
+										<xs:sequence>
+											<xs:element name="IfxServer" maxOccurs="unbounded">
+												<xs:complexType>
+													<xs:sequence>
+														<xs:element name="Branches" minOccurs="0">
+															<xs:complexType>
+																<xs:sequence>
+																	<xs:element name="Branch" type="xs:int" minOccurs="0" maxOccurs="unbounded"/>
+																</xs:sequence>
+															</xs:complexType>
+														</xs:element>
+													</xs:sequence>
+													<xs:attribute name="Region" type="xs:string" use="required"/>
+													<xs:attribute name="ConnectionString" type="xs:string" use="required"/>
+													<xs:attribute name="DBLocale" type="xs:string" use="required"/>
+													<xs:attribute name="CultureInfo" type="xs:string" use="required"/>
+													<xs:attribute name="OverrideThreadCulture" type="xs:boolean" use="optional" default="false"/>
+													<xs:attribute name="InfoLevel" type="xs:string" use="optional"/>
+												</xs:complexType>
+											</xs:element>
+										</xs:sequence>
+									</xs:complexType>
+								</xs:element>
+								<xs:element name="KscServers" minOccurs="0">
+									<xs:complexType>
+										<xs:sequence>
+											<xs:element name="KscServer" maxOccurs="unbounded">
+												<xs:complexType>
+													<xs:sequence>
+														<xs:element name="Branches" minOccurs="0">
+															<xs:complexType>
+																<xs:sequence>
+																	<xs:element name="Branch" type="xs:int" minOccurs="0" maxOccurs="unbounded"/>
+																</xs:sequence>
+															</xs:complexType>
+														</xs:element>
+														<xs:element name="SCP" minOccurs="0">
+															<xs:complexType>
+																<xs:attribute name="SCPPath" type="xs:string" use="required"/>
+																<xs:attribute name="SCPUser" type="xs:string" use="required"/>
+																<xs:attribute name="SCPPassword" type="xs:string" use="required"/>
+															</xs:complexType>
+														</xs:element>
+													</xs:sequence>
+													<xs:attribute name="Region" type="xs:string" use="required"/>
+													<xs:attribute name="Encoding" type="xs:int" use="required"/>
+													<xs:attribute name="DeviceName" type="xs:string" use="required"/>
+													<xs:attribute name="Uid" type="xs:int" use="required"/>
+													<xs:attribute name="Port" type="xs:int" use="required"/>
+													<xs:attribute name="Server" type="xs:string" use="required"/>
+													<xs:attribute name="InfoLevel" type="xs:string" use="optional"/>
+													<xs:attribute name="StockLevelPath" type="xs:string" use="optional"/>
+												</xs:complexType>
+											</xs:element>
+										</xs:sequence>
+									</xs:complexType>
+								</xs:element>-->
+								<xs:element name="CSCServices" minOccurs="0">
+									<xs:complexType>
+										<xs:sequence>
+											<xs:element name="CSCService" maxOccurs="unbounded">
+												<xs:complexType>
+													<xs:sequence>
+														<xs:element name="Branches" minOccurs="0">
+															<xs:complexType>
+																<xs:sequence>
+																	<xs:element name="Branch" type="xs:int" minOccurs="0" maxOccurs="unbounded"/>
+																</xs:sequence>
+															</xs:complexType>
+														</xs:element>
+													</xs:sequence>
+													<xs:attribute name="Region" type="xs:string" use="required"/>
+													<xs:attribute name="Encoding" type="xs:int" use="required"/>
+													<xs:attribute name="DeviceName" type="xs:string" use="required"/>
+													<xs:attribute name="Uid" type="xs:int" use="required"/>
+													<xs:attribute name="Port" type="xs:int" use="required"/>
+													<xs:attribute name="Server" type="xs:string" use="required"/>
+													<xs:attribute name="Timeout" type="xs:int"/>
+													<xs:attribute name="InfoLevel" type="xs:string" use="optional"/>
+												</xs:complexType>
+											</xs:element>
+										</xs:sequence>
+									</xs:complexType>
+								</xs:element>
+								<xs:element name="RequestQueue">
+									<xs:complexType>
+										<xs:attribute name="QueuePath" type="xs:string" use="required"/>
+										<xs:attribute name="RequeueTimeSpanMinutes" type="xs:int" use="required"/>
+									</xs:complexType>
+								</xs:element>
+								<xs:element name="SpecialUsers">
+									<xs:complexType>
+										<xs:sequence>
+											<xs:element name="SpecialUser" maxOccurs="unbounded">
+												<xs:complexType>
+													<xs:simpleContent>
+														<xs:extension base="xs:string">
+															<xs:attribute name="SpecialUserTreatment" type="xs:boolean" use="optional"/>
+														</xs:extension>
+													</xs:simpleContent>
+												</xs:complexType>
+											</xs:element>
+										</xs:sequence>
+									</xs:complexType>
+								</xs:element>
+								<xs:element name="TestCustomers">
+									<xs:complexType>
+										<xs:sequence>
+											<xs:element ref="Customer" maxOccurs="unbounded"/>
+										</xs:sequence>
+									</xs:complexType>
+								</xs:element>
+								<xs:element name="BlackListedCustomers" minOccurs="0">
+									<xs:complexType>
+										<xs:sequence>
+											<xs:element ref="Customer" maxOccurs="unbounded"/>
+										</xs:sequence>
+									</xs:complexType>
+								</xs:element>
+								<xs:element name="AllowedBranches">
+									<xs:complexType>
+										<xs:sequence>
+											<xs:element name="Branch" minOccurs="0" maxOccurs="unbounded">
+												<xs:complexType>
+													<xs:attribute name="Number" type="xs:int" use="required"/>
+													<xs:attribute ref="Language" use="required"/>
+												</xs:complexType>
+											</xs:element>
+										</xs:sequence>
+									</xs:complexType>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Customer">
+		<xs:complexType>
+			<xs:attribute name="Number" type="xs:int" use="required"/>
+			<xs:attribute name="Branch" type="xs:int" use="optional"/>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

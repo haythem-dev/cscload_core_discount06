@@ -1,0 +1,676 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="DomainModules">
+      <UniqueIdentifier>{62cf2d2a-54bb-4c07-afda-3bd1875c7f1f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\PDX040RemoteProcedure">
+      <UniqueIdentifier>{9c67431b-53c5-44a1-99af-c4a63a975437}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\RecordTypes">
+      <UniqueIdentifier>{533b8d0b-c818-4705-bdd9-831c539b3208}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\RecordTypes\RecordTypeInterBranchInfo">
+      <UniqueIdentifier>{1995bd46-9751-4dba-b7da-1f6aca7f7266}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\RecordTypes\RecordTypeOrderLine">
+      <UniqueIdentifier>{6cbc79be-5b4f-414f-b662-2ce57a419ac5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\RecordTypes\RecordTypeOrderResponse">
+      <UniqueIdentifier>{c538ce3e-78e4-4996-a1a2-0bd2d68a372f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\RecordTypes\RecordTypeFormatter">
+      <UniqueIdentifier>{c54ae53d-8870-4cb6-83e9-5f6f196c3bbe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\RecordTypes\RecordTypeOrderText">
+      <UniqueIdentifier>{9b2c1183-b4d0-4f10-84b1-22e4ed8810bd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\RecordTypes\RecordTypeOrderHeader">
+      <UniqueIdentifier>{27827369-3b3a-422a-9430-8d0277a3322e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\RecordTypes\RecordTypeBase">
+      <UniqueIdentifier>{8b610262-d809-49be-81ad-25d0b21c15e4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\RecordTypes\RecordTypeOrderInfo">
+      <UniqueIdentifier>{fce66faf-f269-47ce-8c84-22c97e05283d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\RecordTypes\RecordTypeCollection">
+      <UniqueIdentifier>{6d499ee0-346a-4672-a473-f8f4a539dd35}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\RecordTypes\RecordTypeMSV3Info">
+      <UniqueIdentifier>{9cdffb24-777f-40fa-a69e-7af638841a34}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\RecordTypes\RecordTypeRemark">
+      <UniqueIdentifier>{e758c549-3486-491e-a7b4-6bd853c799a0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\CICSOrderDM">
+      <UniqueIdentifier>{12967da5-510e-48a7-93cf-30c99333381b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\CICSOrderDM\CICSOrderAccessorManager">
+      <UniqueIdentifier>{720d4700-4792-4af7-afe7-b9ba329c31d5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\CICSOrderDM\CICSOrderAccessorBase">
+      <UniqueIdentifier>{915d4181-2a6c-4208-b81c-4b7fda255433}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\CICSOrderDM\CICSOrderAccessorBase\Odd">
+      <UniqueIdentifier>{29fdb69c-4416-4c9d-817d-18a1fc96dae8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\CICSOrderDM\CICSOrderAccessorBase\Odd\Accessor">
+      <UniqueIdentifier>{be816dda-fb54-4303-8b5a-47f76e1dfccd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\CICSOrderDM\CICSOrderAccessorBase\Even">
+      <UniqueIdentifier>{48da3dcc-2974-4039-8293-f029b4075b0b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\CICSOrderDM\CICSOrderAccessorBase\Even\Accessor">
+      <UniqueIdentifier>{744d05e4-0f37-4c33-8d08-d5f34782b907}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\CICSOrderDM\CICSOrderAccessorBase\Responses">
+      <UniqueIdentifier>{cd35f3ef-3da1-4c5d-80f8-3986482b4acd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\CICSOrderDM\CICSOrderAccessorBase\Responses\Accessor">
+      <UniqueIdentifier>{b80b7082-6c82-4b59-a96c-059b1a922d12}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\ProcessOrderDM">
+      <UniqueIdentifier>{35ef1941-ab61-4109-bedb-932744b6daf6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\PXVerbund">
+      <UniqueIdentifier>{965174fe-75e1-4870-af26-3df486fcf50e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\PXVerbund\IPXVBServiceLocator">
+      <UniqueIdentifier>{a2eed2ac-2704-40b8-a52a-4605754c2bd9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\PXVerbund\PXVBComponentManager">
+      <UniqueIdentifier>{73b7f818-a988-4c6e-ae26-4886cb427272}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\PXVerbund\Session">
+      <UniqueIdentifier>{8e05882b-ea3e-44b9-b581-34e48c1106c7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\PXVerbund\Initializiation">
+      <UniqueIdentifier>{25c5d7a6-1ad4-489e-bd4f-584f765728f9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\PXVerbund\DBConnection">
+      <UniqueIdentifier>{8c102e1d-710d-48bd-bd25-50e2c4cb055a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\PXVerbund\PXVBTaskControl">
+      <UniqueIdentifier>{44e19108-ffc7-4fcf-8362-d96229b1d089}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\PXVerbund\PXVBOrderDM">
+      <UniqueIdentifier>{bc601f4e-0f27-4105-88ba-817113a7cac2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\PXVerbund\PXVBOrderDM\shared_ptr">
+      <UniqueIdentifier>{13d9f3e5-4332-48fe-b1fa-84fa1ecea5ba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\PXVerbund\PXVBOrderDM\PXVBOrderHeader">
+      <UniqueIdentifier>{4f32a73b-04d9-4b27-92f0-1916bdd8716a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\PXVerbund\PXVBOrderDM\PXVBOrderItem">
+      <UniqueIdentifier>{cb2dbf14-ccbb-46f9-bb99-13fa655e16f4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\PXVerbund\PXVBOrderDM\PackageLabelCollection">
+      <UniqueIdentifier>{cf993fe8-3e84-4ec4-a896-9d133d651b44}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\PXVerbund\PXVBOrderCollectionDM">
+      <UniqueIdentifier>{904e6b63-4cbb-44bd-8bbb-1970f1bc2f38}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\PXVerbund\OrderEntryParamChecker">
+      <UniqueIdentifier>{7a8ad953-f1e6-4a0b-9c75-927a6b7913ed}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\RemoteProcedureComponentManager">
+      <UniqueIdentifier>{4bdedd35-05c0-448c-ac5e-56bc48107aec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CommandLine">
+      <UniqueIdentifier>{74cbc43a-0292-4d7e-a2a4-e2c9498e4871}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AppSession">
+      <UniqueIdentifier>{f4619984-e9f1-4bad-8c3c-f0365512130b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Dateien">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="UseCases">
+      <UniqueIdentifier>{3427113e-34ec-4941-8b29-c5d935ddccb4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ApplControler">
+      <UniqueIdentifier>{b261afda-5e92-418e-85ea-fbea68752933}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\RecordTypes\RecordTypeDiscount">
+      <UniqueIdentifier>{009e4b61-7589-454a-80a0-0c1461976297}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\RecordTypes\RecordTypeIBTPickingData">
+      <UniqueIdentifier>{255a00ef-2d9f-42ca-b5c9-ec308c4e4ddc}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="pdx040remoteprocedure.h">
+      <Filter>DomainModules\PDX040RemoteProcedure</Filter>
+    </ClInclude>
+    <ClInclude Include="pdx040remoteprocedure_definitions.h">
+      <Filter>DomainModules\PDX040RemoteProcedure</Filter>
+    </ClInclude>
+    <ClInclude Include="recordtypeinterbranchinfo.h">
+      <Filter>DomainModules\RecordTypes\RecordTypeInterBranchInfo</Filter>
+    </ClInclude>
+    <ClInclude Include="recordtypeinterbranchinfo_definitions.h">
+      <Filter>DomainModules\RecordTypes\RecordTypeInterBranchInfo</Filter>
+    </ClInclude>
+    <ClInclude Include="recordtypeinterbranchinfoptr.h">
+      <Filter>DomainModules\RecordTypes\RecordTypeInterBranchInfo</Filter>
+    </ClInclude>
+    <ClInclude Include="recordtypeorderline.h">
+      <Filter>DomainModules\RecordTypes\RecordTypeOrderLine</Filter>
+    </ClInclude>
+    <ClInclude Include="recordtypeorderline_definitions.h">
+      <Filter>DomainModules\RecordTypes\RecordTypeOrderLine</Filter>
+    </ClInclude>
+    <ClInclude Include="recordtypeorderlineptr.h">
+      <Filter>DomainModules\RecordTypes\RecordTypeOrderLine</Filter>
+    </ClInclude>
+    <ClInclude Include="recordtypeorderresponse.h">
+      <Filter>DomainModules\RecordTypes\RecordTypeOrderResponse</Filter>
+    </ClInclude>
+    <ClInclude Include="recordtypeorderresponse_definitions.h">
+      <Filter>DomainModules\RecordTypes\RecordTypeOrderResponse</Filter>
+    </ClInclude>
+    <ClInclude Include="recordtypeorderresponseptr.h">
+      <Filter>DomainModules\RecordTypes\RecordTypeOrderResponse</Filter>
+    </ClInclude>
+    <ClInclude Include="recordtypeformatter.h">
+      <Filter>DomainModules\RecordTypes\RecordTypeFormatter</Filter>
+    </ClInclude>
+    <ClInclude Include="recordtypeordertext.h">
+      <Filter>DomainModules\RecordTypes\RecordTypeOrderText</Filter>
+    </ClInclude>
+    <ClInclude Include="recordtypeordertext_definitions.h">
+      <Filter>DomainModules\RecordTypes\RecordTypeOrderText</Filter>
+    </ClInclude>
+    <ClInclude Include="recordtypeordertextptr.h">
+      <Filter>DomainModules\RecordTypes\RecordTypeOrderText</Filter>
+    </ClInclude>
+    <ClInclude Include="recordtypeorderheader.h">
+      <Filter>DomainModules\RecordTypes\RecordTypeOrderHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="recordtypeorderheader_definitions.h">
+      <Filter>DomainModules\RecordTypes\RecordTypeOrderHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="recordtypeorderheaderptr.h">
+      <Filter>DomainModules\RecordTypes\RecordTypeOrderHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="recordtypebase.h">
+      <Filter>DomainModules\RecordTypes\RecordTypeBase</Filter>
+    </ClInclude>
+    <ClInclude Include="recordtypebase_definitions.h">
+      <Filter>DomainModules\RecordTypes\RecordTypeBase</Filter>
+    </ClInclude>
+    <ClInclude Include="recordtypebaseptr.h">
+      <Filter>DomainModules\RecordTypes\RecordTypeBase</Filter>
+    </ClInclude>
+    <ClInclude Include="recordtypeorderinfo.h">
+      <Filter>DomainModules\RecordTypes\RecordTypeOrderInfo</Filter>
+    </ClInclude>
+    <ClInclude Include="recordtypeorderinfo_definitions.h">
+      <Filter>DomainModules\RecordTypes\RecordTypeOrderInfo</Filter>
+    </ClInclude>
+    <ClInclude Include="recordtypeorderinfoptr.h">
+      <Filter>DomainModules\RecordTypes\RecordTypeOrderInfo</Filter>
+    </ClInclude>
+    <ClInclude Include="recordtypecollection.h">
+      <Filter>DomainModules\RecordTypes\RecordTypeCollection</Filter>
+    </ClInclude>
+    <ClInclude Include="recordtypecollectionptr.h">
+      <Filter>DomainModules\RecordTypes\RecordTypeCollection</Filter>
+    </ClInclude>
+    <ClInclude Include="recordtypemsv3info.h">
+      <Filter>DomainModules\RecordTypes\RecordTypeMSV3Info</Filter>
+    </ClInclude>
+    <ClInclude Include="recordtypemsv3info_definitions.h">
+      <Filter>DomainModules\RecordTypes\RecordTypeMSV3Info</Filter>
+    </ClInclude>
+    <ClInclude Include="recordtypemsv3infoptr.h">
+      <Filter>DomainModules\RecordTypes\RecordTypeMSV3Info</Filter>
+    </ClInclude>
+    <ClInclude Include="recordtyperemark.h">
+      <Filter>DomainModules\RecordTypes\RecordTypeRemark</Filter>
+    </ClInclude>
+    <ClInclude Include="recordtyperemark_definitions.h">
+      <Filter>DomainModules\RecordTypes\RecordTypeRemark</Filter>
+    </ClInclude>
+    <ClInclude Include="recordtyperemarkptr.h">
+      <Filter>DomainModules\RecordTypes\RecordTypeRemark</Filter>
+    </ClInclude>
+    <ClInclude Include="cicsorderdm.h">
+      <Filter>DomainModules\CICSOrderDM</Filter>
+    </ClInclude>
+    <ClInclude Include="cicsorderdmptr.h">
+      <Filter>DomainModules\CICSOrderDM</Filter>
+    </ClInclude>
+    <ClInclude Include="cicsrecord.h">
+      <Filter>DomainModules\CICSOrderDM</Filter>
+    </ClInclude>
+    <ClInclude Include="icicsorderdm.h">
+      <Filter>DomainModules\CICSOrderDM</Filter>
+    </ClInclude>
+    <ClInclude Include="icicsorderdmptr.h">
+      <Filter>DomainModules\CICSOrderDM</Filter>
+    </ClInclude>
+    <ClInclude Include="cicsorderaccessormanager.h">
+      <Filter>DomainModules\CICSOrderDM\CICSOrderAccessorManager</Filter>
+    </ClInclude>
+    <ClInclude Include="cicsorderaccessorbase.h">
+      <Filter>DomainModules\CICSOrderDM\CICSOrderAccessorBase</Filter>
+    </ClInclude>
+    <ClInclude Include="cicsorderaccessorbaseptr.h">
+      <Filter>DomainModules\CICSOrderDM\CICSOrderAccessorBase</Filter>
+    </ClInclude>
+    <ClInclude Include="cicsorderaccessorodd.h">
+      <Filter>DomainModules\CICSOrderDM\CICSOrderAccessorBase\Odd</Filter>
+    </ClInclude>
+    <ClInclude Include="cicsorderaccessoroddptr.h">
+      <Filter>DomainModules\CICSOrderDM\CICSOrderAccessorBase\Odd</Filter>
+    </ClInclude>
+    <ClInclude Include="dkotoacc.h">
+      <Filter>DomainModules\CICSOrderDM\CICSOrderAccessorBase\Odd\Accessor</Filter>
+    </ClInclude>
+    <ClInclude Include="dkotoacc_definitions.h">
+      <Filter>DomainModules\CICSOrderDM\CICSOrderAccessorBase\Odd\Accessor</Filter>
+    </ClInclude>
+    <ClInclude Include="cicsorderaccessoreven.h">
+      <Filter>DomainModules\CICSOrderDM\CICSOrderAccessorBase\Even</Filter>
+    </ClInclude>
+    <ClInclude Include="cicsorderaccessorevenptr.h">
+      <Filter>DomainModules\CICSOrderDM\CICSOrderAccessorBase\Even</Filter>
+    </ClInclude>
+    <ClInclude Include="dkoteacc.h">
+      <Filter>DomainModules\CICSOrderDM\CICSOrderAccessorBase\Even\Accessor</Filter>
+    </ClInclude>
+    <ClInclude Include="dkoteacc_definitions.h">
+      <Filter>DomainModules\CICSOrderDM\CICSOrderAccessorBase\Even\Accessor</Filter>
+    </ClInclude>
+    <ClInclude Include="cicsorderaccessorresponse.h">
+      <Filter>DomainModules\CICSOrderDM\CICSOrderAccessorBase\Responses</Filter>
+    </ClInclude>
+    <ClInclude Include="cicsorderaccessorresponseptr.h">
+      <Filter>DomainModules\CICSOrderDM\CICSOrderAccessorBase\Responses</Filter>
+    </ClInclude>
+    <ClInclude Include="cicsresponseacc.h">
+      <Filter>DomainModules\CICSOrderDM\CICSOrderAccessorBase\Responses\Accessor</Filter>
+    </ClInclude>
+    <ClInclude Include="cicsresponseacc_definitions.h">
+      <Filter>DomainModules\CICSOrderDM\CICSOrderAccessorBase\Responses\Accessor</Filter>
+    </ClInclude>
+    <ClInclude Include="ordertransformer.h">
+      <Filter>DomainModules\ProcessOrderDM</Filter>
+    </ClInclude>
+    <ClInclude Include="pvhx04_includes.h">
+      <Filter>DomainModules\PXVerbund</Filter>
+    </ClInclude>
+    <ClInclude Include="ipxvbservicelocator.h">
+      <Filter>DomainModules\PXVerbund\IPXVBServiceLocator</Filter>
+    </ClInclude>
+    <ClInclude Include="ipxvbservicelocatorptr.h">
+      <Filter>DomainModules\PXVerbund\IPXVBServiceLocator</Filter>
+    </ClInclude>
+    <ClInclude Include="pxvbcomponentmanager.h">
+      <Filter>DomainModules\PXVerbund\PXVBComponentManager</Filter>
+    </ClInclude>
+    <ClInclude Include="pxvbcomponentmanagerptr.h">
+      <Filter>DomainModules\PXVerbund\PXVBComponentManager</Filter>
+    </ClInclude>
+    <ClInclude Include="ipxvbsession.h">
+      <Filter>DomainModules\PXVerbund\Session</Filter>
+    </ClInclude>
+    <ClInclude Include="ipxvbsessionptr.h">
+      <Filter>DomainModules\PXVerbund\Session</Filter>
+    </ClInclude>
+    <ClInclude Include="pxvbsession.h">
+      <Filter>DomainModules\PXVerbund\Session</Filter>
+    </ClInclude>
+    <ClInclude Include="pxvbsessionptr.h">
+      <Filter>DomainModules\PXVerbund\Session</Filter>
+    </ClInclude>
+    <ClInclude Include="ipxvbinitialization.h">
+      <Filter>DomainModules\PXVerbund\Initializiation</Filter>
+    </ClInclude>
+    <ClInclude Include="ipxvbinitializationptr.h">
+      <Filter>DomainModules\PXVerbund\Initializiation</Filter>
+    </ClInclude>
+    <ClInclude Include="pxvbinitialization.h">
+      <Filter>DomainModules\PXVerbund\Initializiation</Filter>
+    </ClInclude>
+    <ClInclude Include="pxvbinitializationptr.h">
+      <Filter>DomainModules\PXVerbund\Initializiation</Filter>
+    </ClInclude>
+    <ClInclude Include="ipxvbdbconnection.h">
+      <Filter>DomainModules\PXVerbund\DBConnection</Filter>
+    </ClInclude>
+    <ClInclude Include="ipxvbdbconnectionptr.h">
+      <Filter>DomainModules\PXVerbund\DBConnection</Filter>
+    </ClInclude>
+    <ClInclude Include="pxvbdbconnection.h">
+      <Filter>DomainModules\PXVerbund\DBConnection</Filter>
+    </ClInclude>
+    <ClInclude Include="pxvbdbconnection_definitions.h">
+      <Filter>DomainModules\PXVerbund\DBConnection</Filter>
+    </ClInclude>
+    <ClInclude Include="pxvbdbconnectionptr.h">
+      <Filter>DomainModules\PXVerbund\DBConnection</Filter>
+    </ClInclude>
+    <ClInclude Include="pxvbdbtransactionlevelmapper.h">
+      <Filter>DomainModules\PXVerbund\DBConnection</Filter>
+    </ClInclude>
+    <ClInclude Include="ipxvbtaskcontrol.h">
+      <Filter>DomainModules\PXVerbund\PXVBTaskControl</Filter>
+    </ClInclude>
+    <ClInclude Include="ipxvbtaskcontrolptr.h">
+      <Filter>DomainModules\PXVerbund\PXVBTaskControl</Filter>
+    </ClInclude>
+    <ClInclude Include="pxtaskcontrolptr.h">
+      <Filter>DomainModules\PXVerbund\PXVBTaskControl</Filter>
+    </ClInclude>
+    <ClInclude Include="pxvbtaskcontrol.h">
+      <Filter>DomainModules\PXVerbund\PXVBTaskControl</Filter>
+    </ClInclude>
+    <ClInclude Include="pxvbtaskcontrolptr.h">
+      <Filter>DomainModules\PXVerbund\PXVBTaskControl</Filter>
+    </ClInclude>
+    <ClInclude Include="pxvborderdm.h">
+      <Filter>DomainModules\PXVerbund\PXVBOrderDM</Filter>
+    </ClInclude>
+    <ClInclude Include="pxvborderdm_definitions.h">
+      <Filter>DomainModules\PXVerbund\PXVBOrderDM</Filter>
+    </ClInclude>
+    <ClInclude Include="pxvborderdmptr.h">
+      <Filter>DomainModules\PXVerbund\PXVBOrderDM</Filter>
+    </ClInclude>
+    <ClInclude Include="pxartbaseptr.h">
+      <Filter>DomainModules\PXVerbund\PXVBOrderDM\shared_ptr</Filter>
+    </ClInclude>
+    <ClInclude Include="pxcustorderinfoptr.h">
+      <Filter>DomainModules\PXVerbund\PXVBOrderDM\shared_ptr</Filter>
+    </ClInclude>
+    <ClInclude Include="pxdeliveryposlistptr.h">
+      <Filter>DomainModules\PXVerbund\PXVBOrderDM\shared_ptr</Filter>
+    </ClInclude>
+    <ClInclude Include="pxdeliveryposptr.h">
+      <Filter>DomainModules\PXVerbund\PXVBOrderDM\shared_ptr</Filter>
+    </ClInclude>
+    <ClInclude Include="pxitemdiscountlistptr.h">
+      <Filter>DomainModules\PXVerbund\PXVBOrderDM\shared_ptr</Filter>
+    </ClInclude>
+    <ClInclude Include="pxnarccollectlistptr.h">
+      <Filter>DomainModules\PXVerbund\PXVBOrderDM\shared_ptr</Filter>
+    </ClInclude>
+    <ClInclude Include="pxordercalcmodeptr.h">
+      <Filter>DomainModules\PXVerbund\PXVBOrderDM\shared_ptr</Filter>
+    </ClInclude>
+    <ClInclude Include="pxorderdiscaccptr.h">
+      <Filter>DomainModules\PXVerbund\PXVBOrderDM\shared_ptr</Filter>
+    </ClInclude>
+    <ClInclude Include="pxorderitemlistptr.h">
+      <Filter>DomainModules\PXVerbund\PXVBOrderDM\shared_ptr</Filter>
+    </ClInclude>
+    <ClInclude Include="pxorderposcalcmodeptr.h">
+      <Filter>DomainModules\PXVerbund\PXVBOrderDM\shared_ptr</Filter>
+    </ClInclude>
+    <ClInclude Include="pxorderprolinkptr.h">
+      <Filter>DomainModules\PXVerbund\PXVBOrderDM\shared_ptr</Filter>
+    </ClInclude>
+    <ClInclude Include="pxorderptr.h">
+      <Filter>DomainModules\PXVerbund\PXVBOrderDM\shared_ptr</Filter>
+    </ClInclude>
+    <ClInclude Include="pxtextdocptr.h">
+      <Filter>DomainModules\PXVerbund\PXVBOrderDM\shared_ptr</Filter>
+    </ClInclude>
+    <ClInclude Include="pxvborderheader.h">
+      <Filter>DomainModules\PXVerbund\PXVBOrderDM\PXVBOrderHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="pxvborderheaderptr.h">
+      <Filter>DomainModules\PXVerbund\PXVBOrderDM\PXVBOrderHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="pxvborderitem.h">
+      <Filter>DomainModules\PXVerbund\PXVBOrderDM\PXVBOrderItem</Filter>
+    </ClInclude>
+    <ClInclude Include="pxvborderitemptr.h">
+      <Filter>DomainModules\PXVerbund\PXVBOrderDM\PXVBOrderItem</Filter>
+    </ClInclude>
+    <ClInclude Include="packagelabelcollection.h">
+      <Filter>DomainModules\PXVerbund\PXVBOrderDM\PackageLabelCollection</Filter>
+    </ClInclude>
+    <ClInclude Include="ipxvbordercollection.h">
+      <Filter>DomainModules\PXVerbund\PXVBOrderCollectionDM</Filter>
+    </ClInclude>
+    <ClInclude Include="ipxvbordercollectionptr.h">
+      <Filter>DomainModules\PXVerbund\PXVBOrderCollectionDM</Filter>
+    </ClInclude>
+    <ClInclude Include="pxvbordercollectiondm.h">
+      <Filter>DomainModules\PXVerbund\PXVBOrderCollectionDM</Filter>
+    </ClInclude>
+    <ClInclude Include="pxvbordercollectiondm_definitions.h">
+      <Filter>DomainModules\PXVerbund\PXVBOrderCollectionDM</Filter>
+    </ClInclude>
+    <ClInclude Include="ipxvborderentryparamchecker.h">
+      <Filter>DomainModules\PXVerbund\OrderEntryParamChecker</Filter>
+    </ClInclude>
+    <ClInclude Include="ipxvborderentryparamcheckerptr.h">
+      <Filter>DomainModules\PXVerbund\OrderEntryParamChecker</Filter>
+    </ClInclude>
+    <ClInclude Include="pxvborderentryparamchecker.h">
+      <Filter>DomainModules\PXVerbund\OrderEntryParamChecker</Filter>
+    </ClInclude>
+    <ClInclude Include="pxvborderentryparamcheckerptr.h">
+      <Filter>DomainModules\PXVerbund\OrderEntryParamChecker</Filter>
+    </ClInclude>
+    <ClInclude Include="iremoteprocedureservicelocator.h">
+      <Filter>DomainModules\RemoteProcedureComponentManager</Filter>
+    </ClInclude>
+    <ClInclude Include="iremoteprocedureservicelocatorptr.h">
+      <Filter>DomainModules\RemoteProcedureComponentManager</Filter>
+    </ClInclude>
+    <ClInclude Include="remoteprocedurecomponentmanager.h">
+      <Filter>DomainModules\RemoteProcedureComponentManager</Filter>
+    </ClInclude>
+    <ClInclude Include="remoteprocedurecomponentmanagerptr.h">
+      <Filter>DomainModules\RemoteProcedureComponentManager</Filter>
+    </ClInclude>
+    <ClInclude Include="appargs.h">
+      <Filter>CommandLine</Filter>
+    </ClInclude>
+    <ClInclude Include="csc_corphaappinitializer.h">
+      <Filter>CommandLine</Filter>
+    </ClInclude>
+    <ClInclude Include="csc_corphaappinitializerptr.h">
+      <Filter>CommandLine</Filter>
+    </ClInclude>
+    <ClInclude Include="csc_corphacmdlineevaluator.h">
+      <Filter>CommandLine</Filter>
+    </ClInclude>
+    <ClInclude Include="csc_corphacmdlineevaluatorptr.h">
+      <Filter>CommandLine</Filter>
+    </ClInclude>
+    <ClInclude Include="csc_corphacmdlineoption_definitions.h">
+      <Filter>CommandLine</Filter>
+    </ClInclude>
+    <ClInclude Include="appsession.h">
+      <Filter>AppSession</Filter>
+    </ClInclude>
+    <ClInclude Include="appsessionptr.h">
+      <Filter>AppSession</Filter>
+    </ClInclude>
+    <ClInclude Include="csc_corphauc.h">
+      <Filter>UseCases</Filter>
+    </ClInclude>
+    <ClInclude Include="csc_corphaappl.h">
+      <Filter>ApplControler</Filter>
+    </ClInclude>
+    <ClInclude Include="columnname_definitions.h" />
+    <ClInclude Include="csc_corpha_definitions.h" />
+    <ClInclude Include="csc_corpha_table_definitions.h" />
+    <ClInclude Include="property_definitions.h" />
+    <ClInclude Include="recordtypediscount.h">
+      <Filter>DomainModules\RecordTypes\RecordTypeDiscount</Filter>
+    </ClInclude>
+    <ClInclude Include="recordtypediscount_definitions.h">
+      <Filter>DomainModules\RecordTypes\RecordTypeDiscount</Filter>
+    </ClInclude>
+    <ClInclude Include="recordtypediscountptr.h">
+      <Filter>DomainModules\RecordTypes\RecordTypeDiscount</Filter>
+    </ClInclude>
+    <ClInclude Include="pxordervalidtransptr.h">
+      <Filter>DomainModules\PXVerbund\PXVBOrderDM\shared_ptr</Filter>
+    </ClInclude>
+    <ClInclude Include="recordtypeibtpickingdata.h">
+      <Filter>DomainModules\RecordTypes\RecordTypeIBTPickingData</Filter>
+    </ClInclude>
+    <ClInclude Include="recordtypeibtpickingdata_definitions.h">
+      <Filter>DomainModules\RecordTypes\RecordTypeIBTPickingData</Filter>
+    </ClInclude>
+    <ClInclude Include="recordtypeibtpickingdataptr.h">
+      <Filter>DomainModules\RecordTypes\RecordTypeIBTPickingData</Filter>
+    </ClInclude>
+    <ClInclude Include="stringtransformer.h">
+      <Filter>DomainModules\ProcessOrderDM</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="pdx040remoteprocedure.cpp">
+      <Filter>DomainModules\PDX040RemoteProcedure</Filter>
+    </ClCompile>
+    <ClCompile Include="recordtypeinterbranchinfo.cpp">
+      <Filter>DomainModules\RecordTypes\RecordTypeInterBranchInfo</Filter>
+    </ClCompile>
+    <ClCompile Include="recordtypeorderline.cpp">
+      <Filter>DomainModules\RecordTypes\RecordTypeOrderLine</Filter>
+    </ClCompile>
+    <ClCompile Include="recordtypeorderresponse.cpp">
+      <Filter>DomainModules\RecordTypes\RecordTypeOrderResponse</Filter>
+    </ClCompile>
+    <ClCompile Include="recordtypeformatter.cpp">
+      <Filter>DomainModules\RecordTypes\RecordTypeFormatter</Filter>
+    </ClCompile>
+    <ClCompile Include="recordtypeordertext.cpp">
+      <Filter>DomainModules\RecordTypes\RecordTypeOrderText</Filter>
+    </ClCompile>
+    <ClCompile Include="recordtypeorderheader.cpp">
+      <Filter>DomainModules\RecordTypes\RecordTypeOrderHeader</Filter>
+    </ClCompile>
+    <ClCompile Include="recordtypebase.cpp">
+      <Filter>DomainModules\RecordTypes\RecordTypeBase</Filter>
+    </ClCompile>
+    <ClCompile Include="recordtypeorderinfo.cpp">
+      <Filter>DomainModules\RecordTypes\RecordTypeOrderInfo</Filter>
+    </ClCompile>
+    <ClCompile Include="recordtypecollection.cpp">
+      <Filter>DomainModules\RecordTypes\RecordTypeCollection</Filter>
+    </ClCompile>
+    <ClCompile Include="recordtypemsv3info.cpp">
+      <Filter>DomainModules\RecordTypes\RecordTypeMSV3Info</Filter>
+    </ClCompile>
+    <ClCompile Include="recordtyperemark.cpp">
+      <Filter>DomainModules\RecordTypes\RecordTypeRemark</Filter>
+    </ClCompile>
+    <ClCompile Include="cicsorderdm.cpp">
+      <Filter>DomainModules\CICSOrderDM</Filter>
+    </ClCompile>
+    <ClCompile Include="cicsorderaccesormanager.cpp">
+      <Filter>DomainModules\CICSOrderDM\CICSOrderAccessorManager</Filter>
+    </ClCompile>
+    <ClCompile Include="cicsorderaccessorbase.cpp">
+      <Filter>DomainModules\CICSOrderDM\CICSOrderAccessorBase</Filter>
+    </ClCompile>
+    <ClCompile Include="cicsorderaccessorodd.cpp">
+      <Filter>DomainModules\CICSOrderDM\CICSOrderAccessorBase\Odd</Filter>
+    </ClCompile>
+    <ClCompile Include="dkotoacc.cpp">
+      <Filter>DomainModules\CICSOrderDM\CICSOrderAccessorBase\Odd\Accessor</Filter>
+    </ClCompile>
+    <ClCompile Include="cicsorderaccessoreven.cpp">
+      <Filter>DomainModules\CICSOrderDM\CICSOrderAccessorBase\Even</Filter>
+    </ClCompile>
+    <ClCompile Include="dkoteacc.cpp">
+      <Filter>DomainModules\CICSOrderDM\CICSOrderAccessorBase\Even\Accessor</Filter>
+    </ClCompile>
+    <ClCompile Include="cicsorderaccessorresponse.cpp">
+      <Filter>DomainModules\CICSOrderDM\CICSOrderAccessorBase\Responses</Filter>
+    </ClCompile>
+    <ClCompile Include="cicsresponseacc.cpp">
+      <Filter>DomainModules\CICSOrderDM\CICSOrderAccessorBase\Responses\Accessor</Filter>
+    </ClCompile>
+    <ClCompile Include="ordertransformer.cpp">
+      <Filter>DomainModules\ProcessOrderDM</Filter>
+    </ClCompile>
+    <ClCompile Include="pxvbcomponentmanager.cpp">
+      <Filter>DomainModules\PXVerbund\PXVBComponentManager</Filter>
+    </ClCompile>
+    <ClCompile Include="pxvbsession.cpp">
+      <Filter>DomainModules\PXVerbund\Session</Filter>
+    </ClCompile>
+    <ClCompile Include="pxvbinitialization.cpp">
+      <Filter>DomainModules\PXVerbund\Initializiation</Filter>
+    </ClCompile>
+    <ClCompile Include="pxvbdbconnection.cpp">
+      <Filter>DomainModules\PXVerbund\DBConnection</Filter>
+    </ClCompile>
+    <ClCompile Include="pxvbdbtransactionlevelmapper.cpp">
+      <Filter>DomainModules\PXVerbund\DBConnection</Filter>
+    </ClCompile>
+    <ClCompile Include="pxvbtaskcontrol.cpp">
+      <Filter>DomainModules\PXVerbund\PXVBTaskControl</Filter>
+    </ClCompile>
+    <ClCompile Include="pxvborderdm.cpp">
+      <Filter>DomainModules\PXVerbund\PXVBOrderDM</Filter>
+    </ClCompile>
+    <ClCompile Include="pxvborderheader.cpp">
+      <Filter>DomainModules\PXVerbund\PXVBOrderDM\PXVBOrderHeader</Filter>
+    </ClCompile>
+    <ClCompile Include="pxvborderitem.cpp">
+      <Filter>DomainModules\PXVerbund\PXVBOrderDM\PXVBOrderItem</Filter>
+    </ClCompile>
+    <ClCompile Include="packagelabelcollection.cpp">
+      <Filter>DomainModules\PXVerbund\PXVBOrderDM\PackageLabelCollection</Filter>
+    </ClCompile>
+    <ClCompile Include="pxvbordercollectiondm.cpp">
+      <Filter>DomainModules\PXVerbund\PXVBOrderCollectionDM</Filter>
+    </ClCompile>
+    <ClCompile Include="pxvborderentryparamchecker.cpp">
+      <Filter>DomainModules\PXVerbund\OrderEntryParamChecker</Filter>
+    </ClCompile>
+    <ClCompile Include="remoteprocedurecomponentmanager.cpp">
+      <Filter>DomainModules\RemoteProcedureComponentManager</Filter>
+    </ClCompile>
+    <ClCompile Include="csc_corphaappinitializer.cpp">
+      <Filter>CommandLine</Filter>
+    </ClCompile>
+    <ClCompile Include="csc_corphacmdlineevaluator.cpp">
+      <Filter>CommandLine</Filter>
+    </ClCompile>
+    <ClCompile Include="appsession.cpp">
+      <Filter>AppSession</Filter>
+    </ClCompile>
+    <ClCompile Include="csc_corphauc.cpp">
+      <Filter>UseCases</Filter>
+    </ClCompile>
+    <ClCompile Include="csc_corphaappl.cpp">
+      <Filter>ApplControler</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="recordtypediscount.cpp">
+      <Filter>DomainModules\RecordTypes\RecordTypeDiscount</Filter>
+    </ClCompile>
+    <ClCompile Include="version.c" />
+    <ClCompile Include="recordtypeibtpickingdata.cpp">
+      <Filter>DomainModules\RecordTypes\RecordTypeIBTPickingData</Filter>
+    </ClCompile>
+    <ClCompile Include="stringtransformer.cpp">
+      <Filter>DomainModules\ProcessOrderDM</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="appargs.inl">
+      <Filter>CommandLine</Filter>
+    </None>
+    <None Include="appsession.inl">
+      <Filter>AppSession</Filter>
+    </None>
+  </ItemGroup>
+</Project>

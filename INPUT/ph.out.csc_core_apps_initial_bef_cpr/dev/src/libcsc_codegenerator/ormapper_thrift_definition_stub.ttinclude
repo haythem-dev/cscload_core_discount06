@@ -1,0 +1,56 @@
+﻿<#
+// #############################################################
+// Thrift definition STUB
+// #############################################################
+#>
+
+// csc<#= ComponentNameLower #>.thrift ******************
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// <#= TypeName #>Request
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+struct <#= TypeName #>Request
+{
+    <# WriteThriftDefinitionLines(0, RequestInput); #>
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// <#= TypeName #>Response
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+<#
+var _thriftdefResponseItems = RequestOutputAsList ? (new Dictionary<string, string> { {$"{TypeName}_List", $"{TypeName}List"} }) : RequestOutput;
+#>
+
+struct <#= TypeName #>Response
+{
+    1:  optional cscbase.ReturnStruct   RetValue,
+    <# WriteThriftDefinitionLines(1, _thriftdefResponseItems); #>
+}
+
+<#
+if (RequestOutputAsList)
+{
+#>
+struct <#= TypeName #>
+{
+    <# WriteThriftDefinitionLines(0, RequestOutput); #>
+}
+
+typedef list<<#= TypeName #>> <#= TypeName #>List
+<#
+}
+#>
+
+
+
+
+
+// cscservice.thrift ******************
+
+    csc<#= ComponentNameLower #>.<#= TypeName #>Response
+        <#= RequestName #>(
+            1: csc<#= ComponentNameLower #>.<#= TypeName #>Request request,
+        ),
+
+<# SaveStub($"{TypeName}_thriftdefinitions.stub"); #>

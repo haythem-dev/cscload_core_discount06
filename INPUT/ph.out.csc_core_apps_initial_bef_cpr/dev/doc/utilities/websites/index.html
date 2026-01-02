@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+    <head>        
+        <title>PHOENIX Corporate IT - Outbound</title>        
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>                
+    </head>
+    <body style="background-color: rgb(0, 151, 117); font-family: Trebuchet MS;" >                            
+        <div class="jumbotron text-center shadow-sm p-4 mb-4">            
+            <h1><div style="text-transform: uppercase;">PHOENIX Corporate IT</div></h1>            
+            <h2>Outbound Logistics</h2>
+            <blockquote class="blockquote.text-capitalize">                
+                <p>                       
+                    <div class="row.text-center">THAT PERSON WHO HELPS OTHERS SIMPLY BECAUSE IT SHOULD OR MUST BE DONE,</div>
+                    <div class="row.text-center">AND BECAUSE IT IS THE RIGHT THING TO DO, IS INDEED WITHOUT A DOUBT, A REAL SUPERHERO.</div>
+                </p>
+                <footer class="blockquote-footer">STAN LEE</footer>
+            </blockquote>            
+        </div>              
+
+        <p>
+        <div class="container">            
+            <div class="table-responsive-sm">
+            <table class="table">
+                <thead class="thead-light">
+                    <tr>
+                        <th colspan="3"><div style="text-transform: uppercase;">CSC Utilities</div></th>                        
+                    </tr>
+                    <tr>
+                        <th>PROD</th>                                                
+                        <th>TEST</th>                        
+                        <th>QAS</th>                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td> <!-- PROD -->                            
+                            <div class="container">
+                                <div class="list-group">                                    
+                                    <a target="_blank" class="list-group-item list-group-item-action" href="./ksc_portscan/prod/index.php" data-toggle="tooltip" title="Portscan for CSC listener in PROD!">CSC Listener Portscan</a>                                    
+                                    <a target="_blank" class="list-group-item list-group-item-action" href="./csc_core_applications_version_overview/prod/index.php" data-toggle="tooltip" title="Version Overview for csc_core_applications in PROD!">CSCCoreApps Version Overview</a>                                                                                                                                                
+                                    <a target="_blank" class="list-group-item list-group-item-action" href="./cscbatches_version_overview/index.php" data-toggle="tooltip" title="Version Overview for CSCBatches in PROD!">CSCBatches Version Overview</a>
+                                    <a target="_blank" class="list-group-item list-group-item-action" href="./csc_cores/index.php" data-toggle="tooltip" title="Overview of coredumps on all outbound AIX servers!">CoreDump Overview</a>                                                                        
+                                </div>
+                            </div>
+                        </td>
+                        <td> <!-- TEST -->                                                         
+                            <div class="container">
+                                <div class="list-group">                                                    
+                                    <a target="_blank" class="list-group-item list-group-item-action" href="./ksc_portscan/dev/index.php" data-toggle="tooltip" title="Portscan for CSC listener on TEST (zdev21.phoenix.loc)!">CSC Listener Portscan</a>                                                                        
+                                    <a target="_blank" class="list-group-item list-group-item-action" href="./csc_core_applications_version_overview/dev/index.php" data-toggle="tooltip" title="Version Overview for csc_core_applications on TEST (zdev21.phoenix.loc)!">CSCCoreApps Version Overview</a>                                                                        
+                                    <a target="_blank" class="list-group-item list-group-item-action" href="./kscrefreshcicsconfiguration/index.php" data-toggle="tooltip" title="CSC CICS Configuration refresh for csc_corpha/csc_phabor/csc_phatra (zdev21.phoenix.loc)!">CSC CICS Connection Configuration</a>                                    
+                                </div>
+                            </div>                            
+                        </td> 
+                        <td> <!-- QAS --> 
+                            <div class="container">
+                                <div class="list-group">                                                    
+                                    <a target="_blank" class="list-group-item list-group-item-action" href="./ksc_portscan/qas/index.php" data-toggle="tooltip" title="Portscan for CSC listener on QAS (zqas21.phoenix.loc)!">CSC Listener Portscan</a>
+                                    <a target="_blank" class="list-group-item list-group-item-action" href="./csc_core_applications_version_overview/qas/index.php" data-toggle="tooltip" title="Version Overview for csc_core_applications on ACCEPTANCE (zqas21.phoenix.loc)!">CSCCoreApps Version Overview</a>                                                                    
+                                </div>
+                            </div>
+                        </td>                       
+                    </tr>
+                </tbody>             
+            </table>
+            </div>
+        </div>
+        </p>
+        
+        <p>
+        <div class="container">            
+            <div class="table-responsive-sm">
+            <table class="table">
+                <thead class="thead-light">
+                    <tr>
+                        <th colspan="3"><div style="text-transform: uppercase;">PHARMOS Utilities</div></th>                        
+                    </tr>
+                    <tr>
+                        <th>PROD</th>                                                
+                        <th>TEST</th>                        
+                        <!--<th>QAS</th>                        -->
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td> <!-- PROD -->                            
+                            <div class="container">
+                                <div class="list-group">                                                                                                            
+                                    <a target="_blank" class="list-group-item list-group-item-action" href="./tcaccess_portscan/index.php" data-toggle="tooltip" title="Port Scan to check available tcAccess listener for PROD!">tcAccess Listener Portscan</a>                                                                                                                                                
+                                </div>
+                            </div>
+                        </td>
+                        <td> <!-- TEST -->                                                         
+                            <div class="container">
+                                <div class="list-group">                                                                                                                            
+                                    <a target="_blank" class="list-group-item list-group-item-action" href="./test_cics_overview/index.php" data-toggle="tooltip" title="PHARMOS Test CICS overview for DEV!">PHARMOS Test-CICS Overview</a>                                                                                                        
+                                </div>
+                            </div>                            
+                        </td> 
+                        <!--
+                        <td>
+                            <div class="container">
+                                <div class="list-group">    
+                                    ...
+                                </div>
+                            </div>
+                        </td>                       
+                        -->
+                    </tr>
+                </tbody>             
+            </table>
+            </div>
+        </div>
+        </p>
+
+        <p>
+        <div class="container">            
+            <div class="table-responsive-sm">
+            <table class="table">
+                <thead class="thead-light">
+                    <tr>
+                        <th colspan="3"><div style="text-transform: uppercase;">SalesWeb/SWIMP/MSV3 Utilities</div></th>                        
+                    </tr>
+                    <tr>
+                        <th>PROD</th>                                                
+                        <th>TEST</th>                                                
+                        <th>DEV</th>       
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td> <!-- PROD -->                            
+                            <div class="container">
+                                <div class="list-group">                                                                                                            
+                                    <a target="_blank" class="list-group-item list-group-item-action" href="./salesweblog/index.php" data-toggle="tooltip" title="SalesWebLog">SalesWebLog</a>                                                                    
+                                    <a target="_blank" class="list-group-item list-group-item-action" href="./checkaccount/index.php" data-toggle="tooltip" title="Check authentication for SalesWeb/SWIMP/MSV3 Users!">SalesWeb Account Check</a>                                                                                                                                                                   
+                                    <a target="_blank" class="list-group-item list-group-item-action" href="./usercheck/index.php" data-toggle="tooltip" title="UserCheck">UserCheck</a>                                    
+                                    <a target="_blank" class="list-group-item list-group-item-action" href="./stockleveladmin/index.php" data-toggle="tooltip" title="StocklevelAdmin">StocklevelAdmin <span class="badge badge-info"> Use MSV3BulkPa! </span></a>                                    
+                                </div>
+                            </div>
+                        </td>
+                        <td> <!-- TEST -->                                                         
+                            <div class="container">
+                                <div class="list-group">                                                                                                                            
+                                    <a target="_blank" class="list-group-item list-group-item-action" href="./salestestlog/index.php" data-toggle="tooltip" title="SalesTestLog">SalesTestLog</a>
+                                    <a target="_blank" class="list-group-item list-group-item-action" href="./userchecktest/index.php" data-toggle="tooltip" title="UserCheck Test">UserCheckTest</a>
+                                </div>
+                            </div>                            
+                        </td> 
+                        <td> <!-- DEV -->                                                         
+                            <div class="container">
+                                <div class="list-group">                                                                                                                            
+                                    <a target="_blank" class="list-group-item list-group-item-action" href="./saleswebdevclient/index.php" data-toggle="tooltip" title="SalesWebDevClient">SalesWebDevClient</a>
+                                    <a target="_blank" class="list-group-item list-group-item-action" href="./xml/AT-AI/index.php" data-toggle="tooltip" title="ePharmGH AT-AI">Test-Client ePharmGH AT-AI</a>                                    
+                                    <a target="_blank" class="list-group-item list-group-item-action" href="./xml/AT-AO/index.php" data-toggle="tooltip" title="ePharmGH AT-AO">Test-Client ePharmGH AT-AO</a>                                                                        
+                                </div>
+                            </div>                            
+                        </td>                         
+                    </tr>
+                </tbody>             
+            </table>
+            </div>
+        </div>
+        </p>
+     
+        <!-- 
+        <p>
+        <div class="container">            
+            <div class="table-responsive-sm">            
+            <table class="table">
+                <thead class="thead-light">
+                    <tr>
+                        <th>TO BE TESTED / TO BE MOVED</th>                        
+                    </tr>
+                </thead>    
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="container">
+                                <div class="list-group">                                                                                                                                                                                                                                                                                                
+                                </div>
+                            </div>
+                        </td>                       
+                    </tr>
+                </tbody>                 
+            </table>        
+            </div>
+        </div>     
+        </p>
+        -->
+        <script>
+        $(document).ready( 
+            function()
+            {
+                $('[data-toggle="tooltip"]').tooltip();   
+            }
+        );
+        </script>        
+        
+    </body>
+</html>

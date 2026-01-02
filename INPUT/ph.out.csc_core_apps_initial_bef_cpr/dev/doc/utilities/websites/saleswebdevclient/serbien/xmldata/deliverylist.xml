@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DeliveryListRequest>
+	<requestparameter 		
+		branchno="84" 
+		customerno="21918" 		
+		date="2011-08-09" />
+</DeliveryListRequest>

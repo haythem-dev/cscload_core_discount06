@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="KSCClientDM">
+      <UniqueIdentifier>{b7a3b17f-18ce-40b2-a149-82566e542f13}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="KSCClientDM\Accessor">
+      <UniqueIdentifier>{ba3b39b8-8c0a-4428-85d0-a10d4a84e7cd}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="kscclientdm.h">
+      <Filter>KSCClientDM</Filter>
+    </ClInclude>
+    <ClInclude Include="kscclientdmexception.h">
+      <Filter>KSCClientDM</Filter>
+    </ClInclude>
+    <ClInclude Include="kscclientitemacc.h">
+      <Filter>KSCClientDM\Accessor</Filter>
+    </ClInclude>
+    <ClInclude Include="kscclientiteminfoacc.h">
+      <Filter>KSCClientDM\Accessor</Filter>
+    </ClInclude>
+    <ClInclude Include="kscclientorderinfoacc.h">
+      <Filter>KSCClientDM\Accessor</Filter>
+    </ClInclude>
+    <ClInclude Include="kscclientorderacc.h">
+      <Filter>KSCClientDM\Accessor</Filter>
+    </ClInclude>
+    <ClInclude Include="kscclientwrapper.h" />
+    <ClInclude Include="version.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="kscclientdm.cpp">
+      <Filter>KSCClientDM</Filter>
+    </ClCompile>
+    <ClCompile Include="kscclientdmexception.cpp">
+      <Filter>KSCClientDM</Filter>
+    </ClCompile>
+    <ClCompile Include="kscclientitemacc.cpp">
+      <Filter>KSCClientDM\Accessor</Filter>
+    </ClCompile>
+    <ClCompile Include="kscclientiteminfoacc.cpp">
+      <Filter>KSCClientDM\Accessor</Filter>
+    </ClCompile>
+    <ClCompile Include="kscclientorderacc.cpp">
+      <Filter>KSCClientDM\Accessor</Filter>
+    </ClCompile>
+    <ClCompile Include="kscclientorderinfoacc.cpp">
+      <Filter>KSCClientDM\Accessor</Filter>
+    </ClCompile>
+    <ClCompile Include="kscclientwrapper.cpp" />
+    <ClCompile Include="version.c" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<orderRequest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://salesweb.phoenix-ag.de/wsxmlgermany/schemas/PhoenixOrderDE.xsd">
+	<order>
+		<orderHeader customerNumber="9999005" branchNumber="05" referenceNumber="SWCl" callBackDesired="true"/>
+		<orderLine orderQuantity="8" interbranchTransferDesired="1" subsequentDeliveryDesired="1" articleRequirementPurchaseOrderDesired="1">
+			<articleCode>67458</articleCode>
+		</orderLine>
+		<orderLine orderQuantity="15">
+			<articleCode>10808</articleCode>
+		</orderLine>
+		<orderLine orderQuantity="2">
+			<EAN>1253763452234</EAN>
+		</orderLine>
+		<orderLine orderQuantity="2">
+			<articleCode>10760</articleCode>
+		</orderLine>
+	</order>
+</orderRequest>

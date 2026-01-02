@@ -1,0 +1,14 @@
+@INCLUDE               = cdm.doxyfile
+
+PROJECT_NAME           = "CDM Changelog for customers"
+OUTPUT_DIRECTORY       = ./codedocu/customer
+OUTPUT_LANGUAGE        = English
+LAYOUT_FILE            = DoxygenLayout.customer.xml
+INTERNAL_DOCS          = NO
+INPUT                  = ../ekzdp/ekzdp.cpp \
+                         ../zdputil/zdputil.cpp \
+						 ../zdpdruck/zdpdruck.cpp
+GENERATE_TODOLIST      = NO
+SHOW_FILES             = NO
+SHOW_NAMESPACES        = NO
+ENABLED_SECTIONS       = customer

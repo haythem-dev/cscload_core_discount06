@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<PricesAndDiscountsRequest>
+  <PricesAndDiscounts BranchNo="23" CustomerNo="17"/>
+</PricesAndDiscountsRequest>

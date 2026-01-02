@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CSCCommands xsi:noNamespaceSchemaLocation="CSCCommands.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Command Identifier="cscozek" CommandPath="/software/wss/[?C]/ksc/load/proc/"  Command="cscozek_neu.sh -vp" />			
+	<Command Identifier="cscbatchhistory" CommandPath="/software/wss/[?C]/ksc/load/proc/"  Command="cscbatchhistory.sh -vp" />		
+</CSCCommands>

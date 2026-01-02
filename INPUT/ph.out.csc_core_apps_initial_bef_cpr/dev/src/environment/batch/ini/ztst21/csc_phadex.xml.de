@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<KSCRefreshSettings>
+	<Country Country="DE">
+		<Settings>
+			<General PollInterval="3000" LogLevel="Errors" Test="false" BulkInsert="true" MaxSelect="40"/>
+			<SMTP Port="25" Host="10.156.80.21" SendMailFrom="kscrefreshtest@phoenixgroup.eu">
+				<Information eMail="kscrefresh@phoenixgroup.eu"/>
+				<Warnings eMail="kscrefresh@phoenixgroup.eu; a.egerer@phoenixgroup.eu"/>
+				<Errors eMail="cct@phoenixgroup.eu; kscrefresh@phoenixgroup.eu"/>
+			</SMTP>
+			<TCAccess TCATransaction="TCAS" TCAHost="PhoenixGeneric_west" ConnectionRetries="10" ConnectionWaitBeforeRetry="10000" Username="PHADEX" Password=""/>
+			<pxVerbund DeviceType="7" DeviceName="PHADEX" Computer="" LogMode="1" DataSource="ode21@ztst21_shm" MessageFile="/software/wss/de/ksc/batch/ini/message.txt"/>
+			<Informix ConnectionRetries="10" ConnectionWaitBeforeRetry="10000" IfxServiceName="53004" IfxHost="ztst21_tcp" IfxDataBase="ode21"/>
+		</Settings>
+		<Branches>
+			<Branch BranchNo="05">
+				<Settings>
+					<TCAccess IPAddress="10.242.5.219" Port="3205"/>
+					<pxVerbund LogFile="/software/wss/de/ksc/batch/log/05_csc_phadex.log" SystemLogFile="/software/wss/de/ksc/batch/log/05_csc_phadex_wss.log"/>
+				</Settings>
+			</Branch>
+			<Branch BranchNo="06">
+				<Settings>
+					<TCAccess IPAddress="10.242.5.219" Port="3206"/>
+					<pxVerbund LogFile="/software/wss/de/ksc/batch/log/06_csc_phadex.log" SystemLogFile="/software/wss/de/ksc/batch/log/06_csc_phadex_wss.log"/>
+				</Settings>
+			</Branch>
+			<Branch BranchNo="09">
+				<Settings>
+					<TCAccess IPAddress="10.242.5.219" Port="3209"/>
+					<pxVerbund LogFile="/software/wss/de/ksc/batch/log/09_csc_phadex.log" SystemLogFile="/software/wss/de/ksc/batch/log/09_csc_phadex_wss.log"/>
+				</Settings>
+			</Branch>
+			<Branch BranchNo="21">
+				<Settings>
+					<TCAccess IPAddress="10.242.5.219" Port="3221"/>
+					<pxVerbund LogFile="/software/wss/de/ksc/batch/log/21_csc_phadex.log" SystemLogFile="/software/wss/de/ksc/batch/log/21_csc_phadex_wss.log"/>
+				</Settings>
+			</Branch>
+			<Branch BranchNo="31">
+				<Settings>
+					<TCAccess IPAddress="10.242.5.219" Port="3231"/>
+					<pxVerbund LogFile="/software/wss/de/ksc/batch/log/31_csc_phadex.log" SystemLogFile="/software/wss/de/ksc/batch/log/31_csc_phadex_wss.log"/>
+				</Settings>
+			</Branch>
+			<Branch BranchNo="33">
+				<Settings>
+					<TCAccess IPAddress="10.242.5.219" Port="3233"/>
+					<pxVerbund LogFile="/software/wss/de/ksc/batch/log/33_csc_phadex.log" SystemLogFile="/software/wss/de/ksc/batch/log/33_csc_phadex_wss.log"/>
+				</Settings>
+			</Branch>
+			<Branch BranchNo="40">
+				<Settings>
+					<TCAccess IPAddress="10.242.5.219" Port="3240"/>
+					<pxVerbund LogFile="/software/wss/de/ksc/batch/log/40_csc_phadex.log" SystemLogFile="/software/wss/de/ksc/batch/log/40_csc_phadex_wss.log"/>
+				</Settings>
+			</Branch>
+			<Branch BranchNo="44">
+				<Settings>
+					<TCAccess IPAddress="10.242.5.219" Port="3244"/>
+					<pxVerbund LogFile="/software/wss/de/ksc/batch/log/44_csc_phadex.log" SystemLogFile="/software/wss/de/ksc/batch/log/44_csc_phadex_wss.log"/>
+				</Settings>
+			</Branch>
+			<Branch BranchNo="46">
+				<Settings>
+					<TCAccess IPAddress="10.242.5.219" Port="3246"/>
+					<pxVerbund LogFile="/software/wss/de/ksc/batch/log/46_csc_phadex.log" SystemLogFile="/software/wss/de/ksc/batch/log/46_csc_phadex_wss.log"/>
+				</Settings>
+			</Branch>
+			<Branch BranchNo="51">
+				<Settings>
+					<TCAccess IPAddress="10.242.5.219" Port="3251"/>
+					<pxVerbund LogFile="/software/wss/de/ksc/batch/log/51_csc_phadex.log" SystemLogFile="/software/wss/de/ksc/batch/log/51_csc_phadex_wss.log"/>
+				</Settings>
+			</Branch>
+			<Branch BranchNo="52">
+				<Settings>
+					<TCAccess IPAddress="10.242.5.219" Port="3252"/>
+					<pxVerbund LogFile="/software/wss/de/ksc/batch/log/52_csc_phadex.log" SystemLogFile="/software/wss/de/ksc/batch/log/52_csc_phadex_wss.log"/>
+				</Settings>
+			</Branch>
+			<Branch BranchNo="54">
+				<Settings>
+					<TCAccess IPAddress="10.242.5.219" Port="3254"/>
+					<pxVerbund LogFile="/software/wss/de/ksc/batch/log/54_csc_phadex.log" SystemLogFile="/software/wss/de/ksc/batch/log/54_csc_phadex_wss.log"/>
+				</Settings>
+			</Branch>
+			<Branch BranchNo="56">
+				<Settings>
+					<TCAccess IPAddress="10.242.5.219" Port="3256"/>
+					<pxVerbund LogFile="/software/wss/de/ksc/batch/log/56_csc_phadex.log" SystemLogFile="/software/wss/de/ksc/batch/log/56_csc_phadex_wss.log"/>
+				</Settings>
+			</Branch>
+			<Branch BranchNo="57">
+				<Settings>
+					<TCAccess IPAddress="10.242.5.219" Port="3257"/>
+					<pxVerbund LogFile="/software/wss/de/ksc/batch/log/57_csc_phadex.log" SystemLogFile="/software/wss/de/ksc/batch/log/57_csc_phadex_wss.log"/>
+				</Settings>
+			</Branch>
+			<Branch BranchNo="58">
+				<Settings>
+					<TCAccess IPAddress="10.242.5.219" Port="3258"/>
+					<pxVerbund LogFile="/software/wss/de/ksc/batch/log/58_csc_phadex.log" SystemLogFile="/software/wss/de/ksc/batch/log/58_csc_phadex_wss.log"/>
+				</Settings>
+			</Branch>
+			<Branch BranchNo="59">
+				<Settings>
+					<TCAccess IPAddress="10.242.5.219" Port="3259"/>
+					<pxVerbund LogFile="/software/wss/de/ksc/batch/log/59_csc_phadex.log" SystemLogFile="/software/wss/de/ksc/batch/log/59_csc_phadex_wss.log"/>
+				</Settings>
+			</Branch>
+			<Branch BranchNo="70">
+				<Settings>
+					<TCAccess IPAddress="10.242.5.219" Port="3270"/>
+					<pxVerbund LogFile="/software/wss/de/ksc/batch/log/70_csc_phadex.log" SystemLogFile="/software/wss/de/ksc/batch/log/70_csc_phadex_wss.log"/>
+				</Settings>
+			</Branch>
+			<Branch BranchNo="78">
+				<Settings>
+					<TCAccess IPAddress="10.242.5.219" Port="3278"/>
+					<pxVerbund LogFile="/software/wss/de/ksc/batch/log/78_csc_phadex.log" SystemLogFile="/software/wss/de/ksc/batch/log/78_csc_phadex_wss.log"/>
+				</Settings>
+			</Branch>
+			<Branch BranchNo="81">
+				<Settings>
+					<TCAccess IPAddress="10.242.5.219" Port="3281"/>
+					<pxVerbund LogFile="/software/wss/de/ksc/batch/log/81_csc_phadex.log" SystemLogFile="/software/wss/de/ksc/batch/log/81_csc_phadex_wss.log"/>
+				</Settings>
+			</Branch>
+			<Branch BranchNo="82">
+				<Settings>
+					<TCAccess IPAddress="10.242.5.219" Port="3282"/>
+					<pxVerbund LogFile="/software/wss/de/ksc/batch/log/82_csc_phadex.log" SystemLogFile="/software/wss/de/ksc/batch/log/82_csc_phadex_wss.log"/>
+				</Settings>
+			</Branch>
+		</Branches>
+	</Country>
+</KSCRefreshSettings>

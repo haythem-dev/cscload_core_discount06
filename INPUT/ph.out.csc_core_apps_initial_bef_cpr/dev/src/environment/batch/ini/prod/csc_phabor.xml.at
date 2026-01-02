@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<KSCRefreshSettings xsi:noNamespaceSchemaLocation="../KSCRefreshSettings.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Country Country="AT">
+		<Settings>
+			<General PollInterval="15000" LogLevel="Errors" Test="false"/>
+			<SMTP Port="25" Host="10.100.121.30" SendMailFrom="csc_phabor@phoenixgroup.eu">
+				<Information eMail="kscrefreshtest@phoenixgroup.eu"/>
+				<Warnings eMail="kscrefreshtest@phoenixgroup.eu"/>
+				<Errors eMail="int.dl-FU2ServiceDeskInfos@phoenixgroup.eu; kscrefreshtest@phoenixgroup.eu"/>
+			</SMTP>
+			<TCAccess IPAddress="129.210.15.61" TCATransaction="TCAS" TCAHost="PhoenixGeneric_west" ConnectionRetries="10" ConnectionWaitBeforeRetry="10000" Username="PHABOR" Password=""/>
+			<pxVerbund DeviceType="7" DeviceName="PHABOR" Computer="" LogMode="1"/>
+			<Informix IfxServiceName="53004" IfxHost="oat21_tcp" IfxDataBase="oat21" ConnectionRetries="10" ConnectionWaitBeforeRetry="10000"/>
+		</Settings>
+		<Branches>
+			<Branch BranchNo="61">
+				<Settings>
+					<TCAccess Port="3161"/>
+					<Informix IfxDataBase="oat21"/>
+					<pxVerbund DataSource="oat21@oat21_shm" LogFile="/software/wss/at/ksc/batch/log/61_csc_phabor.log" SystemLogFile="/software/wss/at/ksc/batch/log/61_csc_phabor_wws.log" MessageFile="/software/wss/at/ksc/batch/ini/message.txt"/>
+				</Settings>
+			</Branch>
+			<Branch BranchNo="62">
+				<Settings>
+					<TCAccess Port="3162"/>
+					<Informix IfxDataBase="oat21"/>
+					<pxVerbund DataSource="oat21@oat21_shm" LogFile="/software/wss/at/ksc/batch/log/62_csc_phabor.log" SystemLogFile="/software/wss/at/ksc/batch/log/62_csc_phabor_wws.log" MessageFile="/software/wss/at/ksc/batch/ini/message.txt"/>
+				</Settings>
+			</Branch>
+			<Branch BranchNo="63">
+				<Settings>
+					<TCAccess Port="3163"/>
+					<Informix IfxDataBase="oat21"/>
+					<pxVerbund DataSource="oat21@oat21_shm" LogFile="/software/wss/at/ksc/batch/log/63_csc_phabor.log" SystemLogFile="/software/wss/at/ksc/batch/log/63_csc_phabor_wws.log" MessageFile="/software/wss/at/ksc/batch/ini/message.txt"/>
+				</Settings>
+			</Branch>
+			<Branch BranchNo="64">
+				<Settings>
+					<TCAccess Port="3169"/>
+					<Informix IfxDataBase="oat21"/>
+					<pxVerbund DataSource="oat21@oat21_shm" LogFile="/software/wss/at/ksc/batch/log/64_csc_phabor.log" SystemLogFile="/software/wss/at/ksc/batch/log/64_csc_phabor_wws.log" MessageFile="/software/wss/at/ksc/batch/ini/message.txt"/>
+				</Settings>
+			</Branch>
+		</Branches>
+	</Country>
+</KSCRefreshSettings>

@@ -1,0 +1,384 @@
+﻿<#@ template debug="true" hostspecific="true" language="C#" #>
+<#@ assembly name="System" #>
+<#@ assembly name="System.Core" #>
+<#@ assembly name="Microsoft.CSharp" #>
+<#@ assembly name="Newtonsoft.Json" #>
+<#@ assembly name="envdte" #>
+<#@ import namespace="System" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="System.IO" #>
+<#@ import namespace="Newtonsoft.Json" #>
+<#@ import namespace="Newtonsoft.Json.Linq" #>
+<#@ import namespace="Microsoft.VisualStudio.TextTemplating" #>
+<#@ import namespace="EnvDTE" #>
+<#@ output extension=".txt" #>
+
+<#
+string guard = "";
+
+string templateDirectory = Path.GetDirectoryName(Host.TemplateFile);
+TemplateDirectory = Path.Combine(templateDirectory, "templates");
+
+var files = Directory.GetFiles(TemplateDirectory, "*.template");
+foreach (string file in files)
+{
+    GetInputValues(file);
+#>
+
+<#@ include file="ormapper_type_interface.ttinclude" #>
+
+<#@ include file="ormapper_type.ttinclude" #>
+
+<#
+if (RequestOutputAsList)
+{
+#>
+    <#@ include file="ormapper_type_collection.ttinclude" #>
+<#
+}
+#>
+
+<#@ include file="ormapper_mapper_base.ttinclude" #>
+
+<#@ include file="ormapper_mapper_sql.ttinclude" #>
+
+<#@ include file="ormapper_sql_statements_stub.ttinclude" #>
+
+<#@ include file="ormapper_repository_stub.ttinclude" #>
+
+<#@ include file="ormapper_thrift_handler_stub.ttinclude" #>
+
+<#@ include file="ormapper_thrift_cscserviceimplpxverbund_stub.ttinclude" #>
+
+<#@ include file="ormapper_thrift_cscservicebatchhandler_stub.ttinclude" #>
+
+<#@ include file="ormapper_thrift_definition_stub.ttinclude" #>
+
+<#@ include file="ormapper_makefile_stub.ttinclude" #>
+
+<#
+} // foreach (string file in files)
+#>
+
+
+
+
+
+<#+
+
+public class TypeMap
+{
+    private string _libcscType;
+    public string LibcscType
+    {
+        get { return _libcscType; }
+        set { _libcscType = EmptyStringToNull(value); }
+    }
+
+    private string _sqlResultsetGetterName;
+    public string SqlResultsetGetterName
+    {
+        get { return _sqlResultsetGetterName; }
+        set { _sqlResultsetGetterName = EmptyStringToNull(value); }
+    }
+
+    public bool SimpleType { get; set; }
+
+    private string _sqlInType;
+    public string SqlInType
+    {
+        get { return _sqlInType; }
+        set { _sqlInType = EmptyStringToNull(value); }
+    }
+
+    private string _sqlInTypeConverter;
+    public string SqlInTypeConverter
+    {
+        get { return _sqlInTypeConverter; }
+        set { _sqlInTypeConverter = EmptyStringToNull(value); }
+    }
+
+    private string _fromThriftTypeConverter;
+    public string FromThriftTypeConverter
+    {
+        get { return _fromThriftTypeConverter; }
+        set { _fromThriftTypeConverter = EmptyStringToNull(value); }
+    }
+
+    private string _toThriftTypeConverter;
+    public string ToThriftTypeConverter
+    {
+        get { return _toThriftTypeConverter; }
+        set { _toThriftTypeConverter = EmptyStringToNull(value); }
+    }
+
+    private string _thriftType;
+    public string ThriftType
+    {
+        get { return _thriftType; }
+        set { _thriftType = EmptyStringToNull(value); }
+    }
+
+    private string EmptyStringToNull(string value)
+    {
+        return string.IsNullOrWhiteSpace(value) ? null : value;
+    }
+}
+
+private Dictionary<string, TypeMap> _typeMap = new Dictionary<string, TypeMap>
+{
+    { "bool", new TypeMap { LibcscType = "Int16", SqlResultsetGetterName = "Int16", SimpleType = true } },
+    { "VarString", new TypeMap { SqlResultsetGetterName = "String", ThriftType = "string" } },
+    { "Date", new TypeMap { SqlInType = "Int32", SqlInTypeConverter = ".getDate()", FromThriftTypeConverter = "Helper::getBasarDateFromCscDate({0})", ThriftType = "cscbase.Date" } },
+    { "Decimal", new TypeMap { ToThriftTypeConverter = ".toFloat64()", ThriftType = "double" } },
+    { "Int64", new TypeMap { ThriftType = "i64" } },
+    { "Int32", new TypeMap { ThriftType = "i32" } },
+    { "Int16", new TypeMap { ThriftType = "i16" } },
+    { "Int8", new TypeMap { ThriftType = "i8" } },
+    { "Float64", new TypeMap { ThriftType = "double" } }
+};
+
+private string _targetDirectory;
+
+private string ComponentName { get; set; }
+private string TypeName { get; set; }
+private string Country { get; set; }
+private string AdditionalNamespace { get; set; }
+private string RequestName { get; set; }
+private Dictionary<string, string> RequestInput { get; set; }
+private Dictionary<string, string> RequestOutput { get; set; }
+private bool RequestOutputAsList { get; set; }
+
+private string _outputBaseDir;
+private string OutputBaseDir
+{
+    get
+    {
+        if (_outputBaseDir == null)
+        {
+            SetOutputBaseDirectory();
+        }
+        return _outputBaseDir;
+    }
+    set
+    {
+        _outputBaseDir = value;
+    }
+}
+
+private string TargetDirectory
+{
+    get
+    {
+        return string.IsNullOrEmpty(_targetDirectory) ? TypeName : _targetDirectory;
+    }
+    set
+    {
+        _targetDirectory = value;
+    }
+}
+
+private string TemplateDirectory { get; set; }
+
+private void GetInputValues(string file)
+{
+    string text = File.ReadAllText(file);
+    dynamic json = JsonConvert.DeserializeObject(text);
+
+    TypeName = json.typename.Value;
+    ComponentName = json.componentname.Value;
+    Country = json.country.Value;
+    AdditionalNamespace = json.additionalnamespace?.Value ?? string.Empty;
+    TargetDirectory = json.targetdirectory?.Value;
+    RequestName = json.method.name.Value;
+    RequestInput = ((JArray)json.method.input).ToDictionary(x => x["name"].ToString(), y => y["type"].ToString());
+    RequestOutput = ((JArray)json.method.output).ToDictionary(x => x["name"].ToString(), y => y["type"].ToString());
+    RequestOutputAsList = json.method.output_as_list.Value;
+}
+
+private string TypeNameFirstLower
+{
+    get { return FirstLetterToLower(TypeName); }
+}
+
+private string TypeNameLower
+{
+    get { return TypeName.ToLower(); }
+}
+
+private string ComponentNameLower
+{
+    get { return ComponentName.ToLower(); }
+}
+
+private string AdditionalNamespaceLower
+{
+    get { return AdditionalNamespace.ToLower(); }
+}
+
+private void SaveOutput(string outputFileName)
+{
+    SaveFile(OutputBaseDir, outputFileName);
+}
+
+private void SaveStub(string stubFileName)
+{
+    SaveFile(TemplateDirectory, stubFileName);
+}
+
+private void SaveFile(string baseDirectory, string fileName)
+{
+    string dir = Path.Combine(baseDirectory, ComponentName, AdditionalNamespace, TargetDirectory);
+
+    Directory.CreateDirectory(dir);
+
+    string filePath = Path.Combine(dir, fileName.ToLower());
+
+    string text = this.GenerationEnvironment.ToString();
+    text = text.Trim(new char[] { '\r', '\n' });
+    text = $"{text}\r\n";
+
+    File.WriteAllText(filePath, text); 
+
+    this.GenerationEnvironment.Remove(0, this.GenerationEnvironment.Length);
+}
+
+private string CreateGuard(string typetemplate)
+{
+    string type = string.Format(typetemplate, TypeName.ToUpper());
+    string additionalNamespace = string.IsNullOrEmpty(AdditionalNamespace) ? "" : $"_{AdditionalNamespace.ToUpper()}";
+    return $"GUARD_LIBCSC_{ComponentName.ToUpper()}{additionalNamespace}_{type}_H";
+}
+
+private void SetNamespaceIn()
+{
+    WriteLine( "namespace libcsc {");
+    WriteLine($"namespace {ComponentNameLower} {{");
+    if (!string.IsNullOrEmpty(AdditionalNamespace))
+    {
+        WriteLine($"namespace {AdditionalNamespaceLower} {{");
+    }
+}
+
+private void SetNamespaceOut()
+{
+    if (!string.IsNullOrEmpty(AdditionalNamespace))
+    {
+        WriteLine($"}} // end namespace {AdditionalNamespaceLower}");
+    }
+    WriteLine($"}} // end namespace {ComponentNameLower}");
+    WriteLine(  "} // end namespace libcsc");
+}
+
+private string FirstLetterToLower(string text)
+{
+    if (string.IsNullOrEmpty(text))
+    {
+        return text;
+    }
+    char first = char.ToLower(text[0]);
+    return $"{first}{text.Substring(1)}";
+}
+
+private TypeMap GetTypeMap(string basarTypeName)
+{
+    if (_typeMap.Keys.Contains(basarTypeName))
+    {
+        return _typeMap[basarTypeName];
+    }
+    return null;
+}
+
+private string GetResultsetGetterName(string basarTypeName)
+{
+    var typemap = GetTypeMap(basarTypeName);
+    return typemap?.SqlResultsetGetterName ?? basarTypeName; // ResultsetGetterName equals basarTypeName
+}
+
+private void SetOutputBaseDirectory()
+{
+    var serviceProvider = (IServiceProvider)this.Host;
+    var dte = (DTE)serviceProvider.GetCOMService(typeof(DTE));
+    var project = dte.Solution.Projects.Cast<Project>().Single(x => x.Name == "libcsc");
+    var projFilename = project.FileName;
+
+    OutputBaseDir = Path.GetDirectoryName(projFilename);
+}
+
+private void WriteAutoGeneratedComment()
+{
+    WriteLine("//------------------------------------------------------------------------------");
+    WriteLine("// <auto-generated>");
+    WriteLine("//     This code was generated by ormapper.tt template.");
+    WriteLine("//");
+    WriteLine("//     Manual changes to this file may cause unexpected behavior in your application.");
+    WriteLine("//     Manual changes to this file will be overwritten if the code is regenerated.");
+    WriteLine("// </auto-generated>");
+    WriteLine("//------------------------------------------------------------------------------");
+}
+
+private string GetBasarToSqlTypeConverter(string basarTypeName)
+{
+    var typemap = GetTypeMap(basarTypeName);
+    return typemap?.SqlInTypeConverter ?? string.Empty;
+}
+
+private string GetSqlType(string basarTypeName)
+{
+    var typemap = GetTypeMap(basarTypeName);
+    return typemap?.SqlInType ?? basarTypeName;
+}
+
+private string GetFullBasarType(string type)
+{
+    var typemap = GetTypeMap(type);
+    return (typemap?.SimpleType == true) ? type : $"basar::{type}";
+}
+
+private string GetFullLibCscType(string type)
+{
+    var typemap = GetTypeMap(type);
+    return $"libcsc::{typemap?.LibcscType ?? type}";
+}
+
+private string GetThriftToBasarTypeConverter(string basarTypeName, string parameterName)
+{
+    var typemap = GetTypeMap(basarTypeName);
+    return string.Format(typemap?.FromThriftTypeConverter ?? "{0}", parameterName);
+}
+
+private string GetBasarToThriftTypeConverter(string basarTypeName)
+{
+    var typemap = GetTypeMap(basarTypeName);
+    return typemap?.ToThriftTypeConverter ?? string.Empty;
+}
+
+private string GetThriftType(string basarTypeName)
+{
+    var typemap = GetTypeMap(basarTypeName);
+    return typemap?.ThriftType ?? basarTypeName;
+}
+
+private void WriteThriftDefinitionLines(int lastUsedIndex, Dictionary<string, string> items)
+{
+    int count = lastUsedIndex;
+    PushIndent("    ");
+    foreach (var item in items)
+    {
+        string index = $"{++count}:".PadRight(3, ' ');
+        string baseline = $"{index} optional {GetThriftType(item.Value)}".PadRight(35, ' ');
+        WriteLine($"{baseline} {item.Key},");
+    }
+    ClearIndent();
+}
+
+private void WriteInclude(string type)
+{
+    string additionalNamespace = string.IsNullOrEmpty(AdditionalNamespace) ? "" : $"/{AdditionalNamespace}";
+
+    WriteLine($"#include <{ComponentName}{additionalNamespace}/{TargetDirectory}/{type}.h>".ToLower());
+}
+
+#>

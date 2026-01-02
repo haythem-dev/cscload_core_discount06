@@ -1,0 +1,17 @@
+/dev/ext
+/dev/src/cdm.opensdf
+/dev/src/cdm.sdf
+debug/
+release/
+/dev/src/ipch
+*vcxproj.user
+*.suo
+build/
+Debug/
+Release/
+*.aps
+*.db
+*.opendb
+/ext
+dev/src/_ivy.xml
+dev/src/.vs/

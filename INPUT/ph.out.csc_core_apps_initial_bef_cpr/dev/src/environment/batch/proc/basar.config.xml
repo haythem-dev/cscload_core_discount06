@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+
+<!-- configuration for basar libraries -->
+<basar>
+
+	<!-- component libbasarproperty -->
+	<property>
+	
+		<!-- class PropertyTable_YIterator -->
+		<propertytable_yiterator>
+		
+			<!-- runtime check mode: CHK_NO_ITERATOR | CHK_ITERATOR -->
+			<!-- 
+			<checkmode>CHK_ITERATOR</checkmode>
+			-->
+		
+		</propertytable_yiterator>
+	
+	</property>
+
+	<!-- component libbasarlogin -->
+	<login>
+	
+		<!-- database server for connect to user admin -->
+		<dbserver>
+		
+			<!-- primary database server -->
+			<main>zdev21_tcp</main>
+			
+			<!-- secondary database server -->
+			<backup>zdev21_tcp</backup>
+			
+			<!-- Informix database server connection timeout in seconds -->
+			<!-- 
+			<timeout>12</timeout> 
+			-->
+				
+			<!-- additional Informix database server connection retries -->
+			<!-- 
+			<retry>3</retry> 
+			-->
+				
+			<!-- 
+			    Note:
+			    - these values represent N additional connection retries in T seconds
+			    - first connection attempt is made at 0 seconds
+			    - for additional info see IBM Informix Guide to SQL: Reference
+			-->
+		</dbserver>
+		
+		<!-- user admin database -->
+		<database>
+		
+			<!-- primary database -->
+			<main>zpcua1</main>
+			
+			<!-- secondary database -->
+			<backup>zpcua2</backup>
+			
+		</database>
+		
+	</login>
+	
+</basar>

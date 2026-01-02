@@ -1,0 +1,30 @@
+diff -ur a/lib/cpp/CMakeLists.txt b/lib/cpp/CMakeLists.txt
+--- a/lib/cpp/CMakeLists.txt	2019-08-02 08:07:04.000000000 +0200
++++ b/lib/cpp/CMakeLists.txt	2019-08-02 09:28:00.000000000 +0200
+@@ -17,7 +17,7 @@
+ # under the License.
+ #
+ 
+-include_directories(SYSTEM "${Boost_INCLUDE_DIRS}")
++include_directories("${Boost_INCLUDE_DIRS}")
+ include_directories(src)
+ 
+ # SYSLIBS contains libraries that need to be linked to all lib targets
+@@ -98,7 +101,7 @@
+        src/thrift/transport/TSSLSocket.cpp
+        src/thrift/transport/TSSLServerSocket.cpp
+     )
+-    include_directories(SYSTEM "${OPENSSL_INCLUDE_DIR}")
++    include_directories("${OPENSSL_INCLUDE_DIR}")
+     list(APPEND SYSLIBS "${OPENSSL_LIBRARIES}")
+ endif()
+ 
+@@ -172,7 +175,7 @@
+ 
+ if(WITH_LIBEVENT)
+     find_package(Libevent REQUIRED)  # Libevent comes with CMake support form upstream
+-    include_directories(SYSTEM ${LIBEVENT_INCLUDE_DIRS})
++    include_directories(${LIBEVENT_INCLUDE_DIRS})
+ 
+     ADD_LIBRARY_THRIFT(thriftnb ${thriftcppnb_SOURCES})
+     TARGET_LINK_LIBRARIES_THRIFT(thriftnb ${SYSLIBS} ${LIBEVENT_LIBRARIES})

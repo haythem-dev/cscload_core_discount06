@@ -1,0 +1,155 @@
+#!/usr/bin/ksh
+
+################################# database tables read ###################################
+#
+# This Script gets the stock on hand for a given branch.
+#
+# ATTENTION: There is a difference between branch 30 and branch 17 in the last but one 
+#            selected attribute ("WHEN l.verbundartikel" instead of "WHEN l.chargenartikel")
+#
+# The following database tables are needed:
+# artikelzentral
+# artikellokal
+
+VERSION=0.7
+
+################################# parameter ###################################
+# $1: -kscdb
+# $2: KSC database
+# $3: -branchno
+# $4: branchno
+# 
+# example for call of this script: stocklevel_fr._sh -kscdb zpos2fr -branchno 17
+
+################################# return codes ###################################
+# 0: ok
+# 1: wrong usage
+# 2: file not found
+
+################################## variables ######################################
+. $(dirname $0)/../vars/ksc_load_global.vars
+
+################################ adaptations #####################################
+#
+# ATTENTION: Do this AFTER including ksc_batch_global.vars!
+#
+
+################################# parameters ###################################
+### -version (Version):
+if [[ $1 = "-version" ]];then
+    echo  $(basename $0) version ${VERSION}
+    exit 0
+fi
+
+if (( ! 2 == $# ));then
+    echo "usage: $(basename $0) KSCDB BRANCHNO"
+    exit 1
+fi
+
+KSCDB=$2
+BRANCHNO=$4
+
+################################# general settings ###################################
+today=`date +%Y-%m-%d`
+FILELOG=${LOG_PATH}/$(basename $0).${today}.log
+RESULT_FILE="${DATA_PATH}/ppfstock_${BRANCHNO}_`date +'%Y%m%d_%H%M%S`.txt";
+
+################################ f_delete_old_files ################################
+#
+# loescht alle Files "ppfstock_*_<YEAR><MONTH>*.txt.Z" aus dem Vor-Vormonat.
+# Im März werden also die Files vom Januar geloescht, so dass immer ein voller Monat zur Verfuegung steht.
+# Im Januar wird nichts gelöscht und im Februar alle Files aus dem Vorjahr.
+function f_delete_old_files {
+  echo "*** f_delete_old_files" >>${FILELOG}
+
+  typeset -i month
+  typeset -i year
+ 
+  month=`echo $today | nawk -F'-' '{print $2}'`
+  year=`echo $today | nawk -F'-' '{print $1}'`
+
+  if (( 1 == ${month} ));then
+    return;
+  fi
+
+  if (( 2 == ${month} ));then
+    year=$year-1
+    echo "rm ${DATA_PATH}/ppfstock_??_${year}*.txt.Z" >>$FILELOG
+    rm ${DATA_PATH}/ppfstock_??_${year}*.txt.Z
+    return;
+  fi
+
+  month=month-2
+  month_str="${month}"
+  if (( ${month} < 10 ));then
+    month_str="0${month}"
+  fi
+
+  echo "rm ${DATA_PATH}/ppfstock_??_${year}${month_str}*.txt.Z" >>$FILELOG
+  rm ${DATA_PATH}/ppfstock_??_${year}${month_str}*.txt.Z
+} # f_delete_old_files
+
+################################# perform SQL ###################################
+#
+# Achtung! Es gab Abbrueche, die evt. darauf zurueckzufuehren sind, dass waehrend
+# des Unloads auf der Datenbank gearbeitet wird. Daher "set isolation dirty read;"
+blnDone=0
+
+if (( 17 == ${BRANCHNO} ));then
+  readonly SQLStatement="set isolation dirty read; unload to ${RESULT_FILE} \
+    SELECT LPAD( ac.article_code::VARCHAR(25), 25, '0' ) ||  \
+    LPAD( l.filialnr::VARCHAR(2), 2, '0' ) || \
+    TO_CHAR( CURRENT, '%Y%m%d' ) || \
+    TO_CHAR( CURRENT, '%H%M%S' ) || \
+    LPAD( l.bestand::VARCHAR(10), 10, '0' ) || \
+    CASE WHEN l.verbundartikel > 0 THEN  '1' ELSE '0' END || \
+    l.chargenartikel \
+    FROM artikelzentral z
+    INNER JOIN artikellokal l on l.artikel_nr = z.artikel_nr
+    INNER JOIN articlecodes ac on ac.articleno = z.artikel_nr and ac.preferred_flag=1
+    WHERE \
+    trunc( z.etartklasse1/512)-2*trunc( z.etartklasse1/(512*2)) = 0 \
+    and  trunc( z.etartschalter1/128)-2*trunc( z.etartschalter1/(128*2)) = 0 \
+    and  trunc( z.etartschalter1/64)-2*trunc( z.etartschalter1/(64*2)) = 0 \
+    and  trunc( z.etartschalter1/32)-2*trunc( z.etartschalter1/(32*2)) = 0 \
+    and  l.filialnr = ${BRANCHNO} \
+    and  lagerfachnr not in ('9NSFPLUS','1NSFPLUS','11NTPAS','9NSFPLUS');"
+  blnDone=1
+    #and  lagerfachnr not in ('9NSFPLUS','1NSFPLUS','11NTPAS','99999999','9NSFPLUS');"
+else
+  # alle anderen Branches ausser 17:
+  readonly SQLStatement="set isolation dirty read; unload to ${RESULT_FILE} \
+    SELECT LPAD( ac.article_code::VARCHAR(25), 25, '0' ) ||  \
+    LPAD( l.filialnr::VARCHAR(2), 2, '0' ) || \
+    TO_CHAR( CURRENT, '%Y%m%d' ) || \
+    TO_CHAR( CURRENT, '%H%M%S' ) || \
+    LPAD( l.bestand::VARCHAR(10), 10, '0' ) || \
+    CASE WHEN  l.verbundartikel > 0 \
+      THEN ( CASE WHEN l.chargenartikel > 0 THEN '0' ELSE '1' END ) \
+      ELSE '0' END || \
+    l.chargenartikel \
+    FROM artikelzentral z
+    INNER JOIN artikellokal l on l.artikel_nr = z.artikel_nr
+    INNER JOIN articlecodes ac on ac.articleno = z.artikel_nr and ac.preferred_flag=1
+    WHERE \
+    trunc( z.etartklasse1/512)-2*trunc( z.etartklasse1/(512*2)) = 0 \
+    and  trunc( z.etartschalter1/128)-2*trunc( z.etartschalter1/(128*2)) = 0 \
+    and  trunc( z.etartschalter1/64)-2*trunc( z.etartschalter1/(64*2)) = 0 \
+    and  trunc( z.etartschalter1/32)-2*trunc( z.etartschalter1/(32*2)) = 0 \
+    and  l.filialnr = ${BRANCHNO} \
+    and  lagerfachnr not in ('9NSFPLUS','1NSFPLUS','11NTPAS','99999999','9NSFPLUS');"
+  blnDone=1
+fi
+
+if (( 0 == ${blnDone} ));then
+  echo "Error: Nothing done!" 1>&2 2>>${FILELOG}
+  exit 1
+fi
+
+echo "${SQLStatement}"
+
+echo ${SQLStatement} | dbaccess ${KSCDB} 1>&2 2>>${FILELOG};
+
+f_delete_old_files
+exit 0
+

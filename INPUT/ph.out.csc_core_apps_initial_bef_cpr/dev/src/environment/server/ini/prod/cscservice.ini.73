@@ -1,0 +1,16 @@
+;
+;               Order Entry Server initialization parameters.
+;
+[Generic]
+MessageFile        = $INI_PATH/message.txt
+
+[Session]
+DataSource         = ode21@xml73
+DeviceName         = ZZZZ
+DeviceType         = 2
+Country            = DE
+
+[Thrift]
+Port               = 56673
+ForkLimit          = 30
+Encoding           = ISO-8859-15

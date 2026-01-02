@@ -1,0 +1,25 @@
+#ifndef GUARD_CSC_PHADEX_DOMMOD_TRANSACTION_RECORD_TYPE_ENUM_H
+#define GUARD_CSC_PHADEX_DOMMOD_TRANSACTION_RECORD_TYPE_ENUM_H
+
+namespace csc_phadex
+{
+namespace domMod
+{
+namespace phadexTransaction
+{
+enum TransactionRecordTypeEnum
+{
+	TRT_TENDER_CANCELLATION = 001,
+	TRT_NARCOTICS_PRINT_UPDATE = 002,
+	TRT_DELIVERY_INVOICE_CANCELLATION = 003,
+	TRT_DELIVERY_ADVICE_COMPLETED = 004,
+	TRT_BLOCKED_ARTICLES = 005,
+	TRT_DOCUMENT_PRINT_INFO = 006,
+	TRT_SAP_REFERENCE_NO = 007
+};
+
+} // end namespace phadexTransaction
+} // end namespace domMod
+} // end namespace csc_phadex
+
+#endif // GUARD_CSC_PHADEX_DOMMOD_TRANSACTION_RECORD_TYPE_ENUM_H

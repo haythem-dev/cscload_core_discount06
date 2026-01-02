@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+
+<project name="oe_kscclientwrapper" default="help" basedir=".">
+
+	<!-- ====================================================== -->
+	<property name="version" value="1.9.0" />
+
+	<include>
+		<url url="http://tfs-nexus.phoenix.loc:8081/repository/genesis/eu/phoenixgroup/buildenv_ivy/${version}/macro.ant-${version}.xml"/>
+	</include>
+
+	<property name="qtversion"    value="5.2.0"/>
+	<property name="projdir"      value="."/>
+	<property name="solutionfile" value="${projdir}/kscclientwrapper.sln"/>
+
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<target name="help">
+		<displayHelp/>
+	</target>
+
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<target name="full" description="clean rebuild">
+		<buildVS solution="${solutionfile}" mode="rebuild" config="Debug" Version="100" />
+		<buildVS solution="${solutionfile}" mode="rebuild" config="Release" Version="100" />
+
+		 <buildMake path="${projdir}" mode="cleanall"/>
+		<buildMake path="${projdir}" mode="dbg"/>
+		<buildMake path="${projdir}" mode="rel"/>
+	</target>
+
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<target name="incremental" description="only changed sources are built">
+		<buildVS solution="${solutionfile}" mode="build" config="Debug" Version="100" />
+		<buildVS solution="${solutionfile}" mode="build" config="Release" Version="100" />
+
+		<buildMake path="${projdir}" mode="dbg"/>
+		<buildMake path="${projdir}" mode="rel"/>
+	</target>
+
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<target name="export" description="exporting and compressing created artifacts">
+		<!-- to directory ${project.name}/trunk/export/${project.name} -->
+		<buildScriptWin  path="." script="export.bat"/>
+		<buildScriptUnix path="." script="export.sh" />
+	</target>
+
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<target name="retrieve">
+		<retrieve/>
+	</target>
+
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<target name="publish">
+		<publish/>
+	</target>
+	
+	<!-- ====================================================== -->
+</project>

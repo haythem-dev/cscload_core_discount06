@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<KSCRefreshSettings xsi:noNamespaceSchemaLocation="../../KSCRefreshSettings.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <Country Country="FR">
+        <Settings>
+            <General PollInterval="3000" LogLevel="Warnings" Test="false"/>
+            <SMTP Port="25" Host="10.156.80.21" SendMailFrom="kscrefreshtest@phoenixgroup.eu">
+                <Information eMail=""/>
+                <Warnings eMail=""/>
+                <Errors eMail="kscrefreshtest@phoenixgroup.eu"/>
+            </SMTP>
+            <TCAccess TCATransaction="TCAS" TCAHost="PhoenixGeneric_west" ConnectionRetries="10" ConnectionWaitBeforeRetry="10000" Username="CORPHA" Password=""/>
+            <pxVerbund DeviceType="7" DeviceName="PHATRA" Computer="" LogMode="1" DataSource="ofr21@zqas21_shm" MessageFile="/software/wss/fr/ksc/batch/ini/message.txt"/>
+            <Informix ConnectionRetries="10" ConnectionWaitBeforeRetry="10000" IfxServiceName="53004" IfxHost="zqas21_tcp" IfxDataBase="ofr21"/>
+        </Settings>
+        <Branches>
+            <Branch BranchNo="36">
+                <Settings>
+                    <TCAccess IPAddress="10.242.5.209" Port="3101"/>
+                    <pxVerbund LogFile="/software/wss/fr/ksc/batch/log/36_csc_phatra.log" SystemLogFile="/software/wss/fr/ksc/batch/log/36_csc_phatra_wws.log"/>
+                </Settings>
+            </Branch>
+            <Branch BranchNo="53">
+                <Settings>
+                    <TCAccess IPAddress="10.242.5.209" Port="3103"/>
+                    <pxVerbund LogFile="/software/wss/fr/ksc/batch/log/53_csc_phatra.log" SystemLogFile="/software/wss/fr/ksc/batch/log/53_csc_phatra_wws.log"/>
+                </Settings>
+            </Branch>
+            <Branch BranchNo="30">
+                <Settings>
+                    <TCAccess IPAddress="10.242.5.209" Port="3105"/>
+                    <pxVerbund LogFile="/software/wss/fr/ksc/batch/log/30_csc_phatra.log" SystemLogFile="/software/wss/fr/ksc/batch/log/30_csc_phatra_wws.log"/>
+                </Settings>
+            </Branch>
+            <Branch BranchNo="34">
+                <Settings>
+                    <TCAccess IPAddress="10.242.5.209" Port="3106"/>
+                    <pxVerbund LogFile="/software/wss/fr/ksc/batch/log/34_csc_phatra.log" SystemLogFile="/software/wss/fr/ksc/batch/log/34_csc_phatra_wws.log"/>
+                </Settings>
+            </Branch>
+            <Branch BranchNo="87">
+                <Settings>
+                    <TCAccess IPAddress="10.242.5.209" Port="3107"/>
+                    <pxVerbund LogFile="/software/wss/fr/ksc/batch/log/87_csc_phatra.log" SystemLogFile="/software/wss/fr/ksc/batch/log/87_csc_phatra_wws.log"/>
+                </Settings>
+            </Branch>
+        </Branches>
+    </Country>
+</KSCRefreshSettings>

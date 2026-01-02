@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<KSCRefreshSettings xsi:noNamespaceSchemaLocation="../../KSCRefreshSettings.xsd" xmlns:xsi="http:/www.w3.org/2001/XMLSchema-instance">
+	<Country Country="DE">
+		<Settings>
+			<General PollInterval="3000" LogLevel="Errors" Test="false" MaxSelectOrders="40" BulkInsert="true"/>
+			<SMTP Port="25" Host="10.100.121.30" SendMailFrom="csc_corpha@phoenixgroup.eu">
+				<Information eMail=""/>
+				<Warnings eMail=""/>
+				<Errors eMail="kscrefreshtest@phoenixgroup.eu"/>
+			</SMTP>
+			<TCAccess TCATransaction="TCAS" TCAHost="PhoenixGeneric_west" ConnectionRetries="10" ConnectionWaitBeforeRetry="10000" Username="CORPHA" Password=""/>
+			<pxVerbund DeviceType="7" DeviceName="CORPHA" Computer="" LogMode="1" DataSource="ode21@zdev21_shm" MessageFile="/software/wss/de/ksc/batch/ini/message.txt"/>
+			<Informix ConnectionRetries="10" ConnectionWaitBeforeRetry="10000" IfxServiceName="53004" IfxHost="zdev21_tcp" IfxDataBase="ode21"/>
+		</Settings>
+		<Branches>
+			<Branch BranchNo="05">
+				<Settings>
+					<TCAccess IPAddress="10.242.5.210" Port="3205"/>
+					<pxVerbund LogFile="/software/wss/de/ksc/batch/log/05_csc_corpha.log" SystemLogFile="/software/wss/de/ksc/batch/log/05_csc_corpha_wws.log"/>
+				</Settings>
+			</Branch>
+			<Branch BranchNo="06">
+				<Settings>
+					<TCAccess IPAddress="10.242.5.210" Port="3206"/>
+					<pxVerbund LogFile="/software/wss/de/ksc/batch/log/06_csc_corpha.log" SystemLogFile="/software/wss/de/ksc/batch/log/06_csc_corpha_wws.log"/>
+				</Settings>
+			</Branch>
+			<Branch BranchNo="08">
+				<Settings>
+					<TCAccess IPAddress="10.242.5.210" Port="3208"/>
+					<pxVerbund LogFile="/software/wss/de/ksc/batch/log/08_csc_corpha.log" SystemLogFile="/software/wss/de/ksc/batch/log/08_csc_corpha_wws.log"/>
+				</Settings>
+			</Branch>
+			<Branch BranchNo="09">
+				<Settings>
+					<TCAccess IPAddress="10.242.5.210" Port="3209"/>
+					<pxVerbund LogFile="/software/wss/de/ksc/batch/log/09_csc_corpha.log" SystemLogFile="/software/wss/de/ksc/batch/log/09_csc_corpha_wws.log"/>
+				</Settings>
+			</Branch>			
+			<Branch BranchNo="40">
+				<Settings>
+					<TCAccess IPAddress="10.242.5.210" Port="3240"/>
+					<pxVerbund LogFile="/software/wss/de/ksc/batch/log/40_csc_corpha.log" SystemLogFile="/software/wss/de/ksc/batch/log/40_csc_corpha_wws.log"/>
+				</Settings>
+			</Branch>			
+			<Branch BranchNo="51">
+				<Settings>
+					<TCAccess IPAddress="10.242.5.210" Port="3251"/>
+					<pxVerbund LogFile="/software/wss/de/ksc/batch/log/51_csc_corpha.log" SystemLogFile="/software/wss/de/ksc/batch/log/51_csc_corpha_wws.log"/>
+				</Settings>
+			</Branch>
+			<Branch BranchNo="54">
+				<Settings>
+					<TCAccess IPAddress="10.242.5.210" Port="3254"/>
+					<pxVerbund LogFile="/software/wss/de/ksc/batch/log/54_csc_corpha.log" SystemLogFile="/software/wss/de/ksc/batch/log/54_csc_corpha_wws.log"/>
+				</Settings>
+			</Branch>
+			<Branch BranchNo="57">
+				<Settings>
+					<TCAccess IPAddress="10.242.5.210" Port="3257"/>
+					<pxVerbund LogFile="/software/wss/de/ksc/batch/log/57_csc_corpha.log" SystemLogFile="/software/wss/de/ksc/batch/log/57_csc_corpha_wws.log"/>
+				</Settings>
+			</Branch>
+			<Branch BranchNo="78">
+				<Settings>
+					<TCAccess IPAddress="10.242.5.210" Port="3278"/>
+					<pxVerbund LogFile="/software/wss/de/ksc/batch/log/78_csc_corpha.log" SystemLogFile="/software/wss/de/ksc/batch/log/78_csc_corpha_wws.log"/>
+				</Settings>
+			</Branch>
+			<Branch BranchNo="81">
+				<Settings>
+					<TCAccess IPAddress="10.242.5.210" Port="3281"/>
+					<pxVerbund LogFile="/software/wss/de/ksc/batch/log/81_csc_corpha.log" SystemLogFile="/software/wss/de/ksc/batch/log/81_csc_corpha_wws.log"/>
+				</Settings>
+			</Branch>
+			<Branch BranchNo="82">
+				<Settings>
+					<TCAccess IPAddress="10.242.5.210" Port="3282"/>
+					<pxVerbund LogFile="/software/wss/de/ksc/batch/log/82_csc_corpha.log" SystemLogFile="/software/wss/de/ksc/batch/log/82_csc_corpha_wws.log"/>
+				</Settings>
+			</Branch>
+		</Branches>
+	</Country>
+</KSCRefreshSettings>

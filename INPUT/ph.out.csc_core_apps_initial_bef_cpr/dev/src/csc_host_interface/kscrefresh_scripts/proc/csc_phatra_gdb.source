@@ -1,0 +1,21 @@
+# set directories with source
+
+dir /software/home/s.heinle/marathon/orderentry/csc/csc_phatra/csc_phatra
+dir /software/home/s.heinle/marathon/orderentry/csc/csc_phatra/libbatch
+dir /software/home/s.heinle/marathon/orderentry/csc/csc_phatra/libcsc_utils
+
+dir /software/home/s.heinle/marathon/orderentry/cxxtools/libsrc
+dir /software/home/s.heinle/marathon/orderentry/cxxtools/include
+
+dir /software/home/s.heinle/marathon/orderentry/pxdb/libsrc
+dir /software/home/s.heinle/marathon/orderentry/pxdb/include
+
+dir /software/home/s.heinle/marathon/orderentry/pxverbund/libsrc
+dir /software/home/s.heinle/marathon/orderentry/pxverbund/include
+
+# fix breakpoint
+b main
+
+#record type RT & KD
+b recordtypetenderchangebase.cpp:45
+b recordtypetenderchangebase.cpp:89

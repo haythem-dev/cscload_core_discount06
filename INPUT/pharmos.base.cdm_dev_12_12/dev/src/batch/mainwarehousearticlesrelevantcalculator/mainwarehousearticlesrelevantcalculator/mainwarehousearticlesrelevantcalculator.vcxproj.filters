@@ -1,0 +1,875 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="UseCase">
+      <UniqueIdentifier>{DDA8E4FA-6BF8-1014-889A-F33741A31375}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UseCase\MainUC">
+      <UniqueIdentifier>{DDA8E5F5-6BF8-1014-889A-F33741A31375}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure">
+      <UniqueIdentifier>{DDA8E6F0-6BF8-1014-889A-F33741A31375}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\CommandLine">
+      <UniqueIdentifier>{DDA8E7C1-6BF8-1014-889A-F33741A31375}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\Login">
+      <UniqueIdentifier>{DDA8E88D-6BF8-1014-889A-F33741A31375}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\CommandLine\CmdLineOption">
+      <UniqueIdentifier>{DDA8E959-6BF8-1014-889A-F33741A31375}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\CommandLine\CmdLineEvaluator">
+      <UniqueIdentifier>{DDA8EA24-6BF8-1014-889A-F33741A31375}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ComponentManager">
+      <UniqueIdentifier>{DDA8EAEF-6BF8-1014-889A-F33741A31375}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ComponentManager\ApplCompMgr">
+      <UniqueIdentifier>{DDA8EBB9-6BF8-1014-889A-F33741A31375}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ComponentManager\ApplCompMgr\Interface">
+      <UniqueIdentifier>{DDA8EC85-6BF8-1014-889A-F33741A31375}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ComponentManager\ApplCompMgr\Interface\UseCaseGetter">
+      <UniqueIdentifier>{DDA8ED5B-6BF8-1014-889A-F33741A31375}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ComponentManager\ApplCompMgr\Impl">
+      <UniqueIdentifier>{DDA8EE29-6BF8-1014-889A-F33741A31375}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ComponentManager\InfrastructureCompMgr">
+      <UniqueIdentifier>{DDA8EEF7-6BF8-1014-889A-F33741A31375}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\Setup">
+      <UniqueIdentifier>{DDA8EFC3-6BF8-1014-889A-F33741A31375}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\Setup\Interface">
+      <UniqueIdentifier>{DDA8F10F-6BF8-1014-889A-F33741A31375}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\Setup\impl">
+      <UniqueIdentifier>{DDA8F264-6BF8-1014-889A-F33741A31375}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Mainwarehousearticlesrelevantcalculator">
+      <UniqueIdentifier>{DDA8F4BA-6BF8-1014-889A-F33741A31375}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Mainwarehousearticlesrelevantcalculator\ApplController">
+      <UniqueIdentifier>{DDA8F5D7-6BF8-1014-889A-F33741A31375}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MainwarehousearticlesrelevantcalculatorInfo">
+      <UniqueIdentifier>{DDA8F6DD-6BF8-1014-889A-F33741A31375}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Loggerpool">
+      <UniqueIdentifier>{a6eed13e-74e7-4280-92d8-3881ac536264}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Loggerpool\ConfigFile">
+      <UniqueIdentifier>{ffd20524-2667-4e1e-a581-878921779526}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\Accessor">
+      <UniqueIdentifier>{5a3484e8-3b90-44a6-9bad-35f3b4c0ab11}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Domain Module">
+      <UniqueIdentifier>{5f3b1eb4-2b1b-4382-8dac-5d88653e5bb3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Domain Module\Article">
+      <UniqueIdentifier>{04e0f8a2-2533-411d-963f-86c0e81f419d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\Accessor\AssignmentParameter">
+      <UniqueIdentifier>{bb321942-3e4a-4e6c-a3e0-c8f21c35b1c9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Domain Module\AssignmentParameter">
+      <UniqueIdentifier>{5d010f14-a307-4d60-89f7-f92979d7846a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\Accessor\ArticleCollection">
+      <UniqueIdentifier>{24aa0d78-a6b0-4ffd-a4b6-f98b289b4271}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\Accessor\StorageLocationSlot">
+      <UniqueIdentifier>{341168ef-a66b-4d07-a28e-47624040316c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Domain Module\RelevantRule">
+      <UniqueIdentifier>{de22bfa9-13d3-472f-8b0f-ec39954c5eaa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Domain Module\RelevantRule\Interface">
+      <UniqueIdentifier>{76896d59-a00c-4fe6-943a-ef42786600d8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Domain Module\RelevantRule\Rules">
+      <UniqueIdentifier>{2498ebf1-7073-4a70-abc5-abcbeb12d4f5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Exceptions">
+      <UniqueIdentifier>{74274745-1c45-435d-aebf-a8f79717dfe8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Domain Module\RelevantRule\RuleComposite">
+      <UniqueIdentifier>{519b1007-1f29-405a-8f24-e2ab58f02306}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\Interval">
+      <UniqueIdentifier>{77a01a5f-faba-4828-907e-547f72807263}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\DataProvider">
+      <UniqueIdentifier>{9cd1ef46-118c-408e-86de-c0a08086ec1f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\DataProvider\Interface">
+      <UniqueIdentifier>{ed986546-8b43-4ad7-bb74-6cc43a0e1871}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Domain Module\StorageLocation">
+      <UniqueIdentifier>{6330ef6f-68b1-42b5-bf3a-09d6e214d803}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Domain Module\StorageLocation\StorageLocationDM">
+      <UniqueIdentifier>{167845b0-f40d-41c8-abc3-fcfbe8514a2a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Domain Module\StorageLocation\StorageLocationDM\Impl">
+      <UniqueIdentifier>{51a7fb98-3e1e-4d37-a9ad-7c61c2ad28fe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Domain Module\StorageLocation\StorageLocationDM\Interface">
+      <UniqueIdentifier>{f5c33250-2eec-4d40-b338-1aac242acc2d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\DataProvider\PropertyRemapper">
+      <UniqueIdentifier>{7cbf34ea-ada2-4b79-a87d-545c8d69cff5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Domain Module\RelevantRule\DataProviderInterceptor">
+      <UniqueIdentifier>{33adc52e-2137-4708-a0be-c1b58677af20}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\DataProvider\Impl">
+      <UniqueIdentifier>{97440739-e1a5-4d7e-8c03-12ec1b863789}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\Accessor\Mainwarehouse">
+      <UniqueIdentifier>{6ac7c057-ce56-4c7e-98c8-a411fd1284ef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Domain Module\Mainwarehouse">
+      <UniqueIdentifier>{b9e0a47f-27b9-4abd-85b1-11f44130d736}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Domain Module\Mainwarehouse\MainwarehouseDM">
+      <UniqueIdentifier>{33ca48d8-7e6a-4dce-a259-3711fa416dc5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Domain Module\Mainwarehouse\MainwarehouseDM\Impl">
+      <UniqueIdentifier>{c50350ec-3cfe-45c9-9a42-3c43e7d415e0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Domain Module\Mainwarehouse\MainwarehouseDM\Interface">
+      <UniqueIdentifier>{f5bfcda4-1d5e-41e0-b8a8-61e4844a4a7d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Domain Module\RelevantRule\Comparator">
+      <UniqueIdentifier>{affceb70-1493-48e6-b0eb-a4361f9456f4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ComponentManager\ApplCompMgr\Factories">
+      <UniqueIdentifier>{7b402f7a-5d86-4e85-87aa-1b6dc77d921a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ComponentManager\ApplCompMgr\Factories\RelevantRule">
+      <UniqueIdentifier>{042656ef-8818-4caf-abcd-7e24ce96f2aa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ComponentManager\ApplCompMgr\Factories\RelevantRule\mainwarehousearticlesrelevantrule">
+      <UniqueIdentifier>{4f533b87-b3a8-444e-8982-4fb9b0136bdc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ComponentManager\ApplCompMgr\Factories\RelevantRule\Interface">
+      <UniqueIdentifier>{816470ee-a58f-4532-b5ba-c9f2ac8aefe5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Domain Module\AssignmentParameter\AssignmentParameterCollectionDM">
+      <UniqueIdentifier>{9615b8a5-d5a3-425b-bfe8-895c7ae25f9d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Domain Module\AssignmentParameter\AssignmentParameterCollectionDM\Impl">
+      <UniqueIdentifier>{36660e5c-7ad3-4fc5-a956-c0c9f4e72aac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Domain Module\AssignmentParameter\AssignmentParameterCollectionDM\Interface">
+      <UniqueIdentifier>{1d07caca-ca89-418d-8dcf-3a5ed5b1cf6d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ComponentManager\ApplCompMgr\Interface\StorageLocationSlotCheckerGetter">
+      <UniqueIdentifier>{876d2b90-c689-443a-9184-f38b953fc283}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\Accessor\AccessorBase">
+      <UniqueIdentifier>{d6fdb54f-23a3-4f1c-ba99-7184f97c5781}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\Accessor\AccessorBase\Conversion">
+      <UniqueIdentifier>{b6906109-f536-4064-ac17-20eae7a2fcbc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\Accessor\BranchArticleConfig">
+      <UniqueIdentifier>{d77d2ee9-3351-4e9c-b11d-f7c93228c7c0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\Accessor\Article">
+      <UniqueIdentifier>{8c6e13c0-4b19-49de-a021-dd92eacd2e19}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Domain Module\RelevantCalculator">
+      <UniqueIdentifier>{7da7fe6a-c3dc-490b-a229-5b710e5a36c8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Domain Module\RelevantCalculator\RelevantCalculatorDM">
+      <UniqueIdentifier>{274ca9ba-de26-4367-82d3-d8a9cab9405d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Domain Module\RelevantCalculator\RelevantCalculatorDM\Impl">
+      <UniqueIdentifier>{6fba6b4a-c4d1-4284-aaa9-37d888c5786c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Domain Module\RelevantCalculator\RelevantCalculatorDM\Interface">
+      <UniqueIdentifier>{b60b4124-a27a-4f3e-b28b-3f5be06e1a6e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UseCase\RelevantCalculatorUC">
+      <UniqueIdentifier>{a9b168be-f749-4eff-9585-3f7b344b6e9b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ComponentManager\ApplCompMgr\Factories\Article">
+      <UniqueIdentifier>{d33ed47e-0ab7-41a9-8f1d-60fe86d3a04a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ComponentManager\ApplCompMgr\Factories\Article\Interface">
+      <UniqueIdentifier>{bebaa2ba-eb40-4a0b-b59d-6c77c567a66a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ComponentManager\ApplCompMgr\Factories\Article\Impl">
+      <UniqueIdentifier>{8fdee893-67f8-4a78-8e69-28929a963599}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Domain Module\Article\BranchArticleConfig">
+      <UniqueIdentifier>{e90924fd-f383-461f-b33d-5d02623c2834}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Domain Module\Article\BranchArticleConfig\Interface">
+      <UniqueIdentifier>{43a25723-0014-43de-abad-d86788df2fa0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Domain Module\Article\BranchArticleConfig\BranchArticleConfigDM">
+      <UniqueIdentifier>{de22140c-57c5-43ed-a431-91f45324a1c4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Domain Module\Article\Article">
+      <UniqueIdentifier>{cf1e8be7-7eb8-4dbc-975e-021d7d87a44a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Domain Module\Article\Article\Interface">
+      <UniqueIdentifier>{98d9ea5d-ad3c-48b8-ae24-b0b1f79459ac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Domain Module\Article\Article\ArticleDM">
+      <UniqueIdentifier>{4ed95bda-f0ab-452b-b5d6-a4f5e46d287c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Domain Module\Article\ArticleCollection">
+      <UniqueIdentifier>{8304fdde-d03f-4f2d-9add-b20e8c880474}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Domain Module\Article\ArticleCollection\Interface">
+      <UniqueIdentifier>{9bb356ff-066f-45af-881f-250f687ac1be}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Domain Module\Article\ArticleCollection\ArticleCollectionDM">
+      <UniqueIdentifier>{3b605b3d-5274-4cbe-9270-200f6a898eed}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\DataType">
+      <UniqueIdentifier>{0a09b87e-0bc7-4ce6-921c-3f5b92ce1ab3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="proc">
+      <UniqueIdentifier>{22bb066f-6e6b-47b4-bfa2-f35235a4c31d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="unix">
+      <UniqueIdentifier>{57dcf28e-94de-4b23-9850-2f4921b17f90}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UseCase\AdmissionConsiderGroupsUC">
+      <UniqueIdentifier>{1a50efb8-028b-4153-afa3-883f297e2886}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Domain Module\AdmissionConsiderGroups">
+      <UniqueIdentifier>{f46b7c54-2905-45e2-aeaf-d8553dc71365}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Domain Module\AdmissionConsiderGroups\AdmissionConsiderGroupsDM">
+      <UniqueIdentifier>{575ae9e6-517c-42ad-9afe-094fcee4e6ee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Domain Module\AdmissionConsiderGroups\AdmissionConsiderGroupsDM\Impl">
+      <UniqueIdentifier>{01285a0a-af07-4cac-9550-8c2784f36597}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\Accessor\AdmissionGroups">
+      <UniqueIdentifier>{4707dac5-c4ac-4ced-bdca-bccef0a0cb12}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="usecase\mainuc.cpp">
+      <Filter>UseCase\MainUC</Filter>
+    </ClCompile>
+    <ClCompile Include="componentmanager\mainwarehousearticlesrelevantcalculatorapplcompmgr.cpp">
+      <Filter>ComponentManager\ApplCompMgr\Impl</Filter>
+    </ClCompile>
+    <ClCompile Include="componentmanager\mainwarehousearticlesrelevantcalculatorinfrastructurecompmgr.cpp">
+      <Filter>ComponentManager\InfrastructureCompMgr</Filter>
+    </ClCompile>
+    <ClCompile Include="infrastructure\cmdline\mainwarehousearticlesrelevantcalculatorcmdlineevaluator.cpp">
+      <Filter>Infrastructure\CommandLine\CmdLineEvaluator</Filter>
+    </ClCompile>
+    <ClCompile Include="infrastructure\cmdline\mainwarehousearticlesrelevantcalculatorcmdlineoptioncollection.cpp">
+      <Filter>Infrastructure\CommandLine\CmdLineOption</Filter>
+    </ClCompile>
+    <ClCompile Include="mainwarehousearticlesrelevantcalculator\main.cpp">
+      <Filter>Mainwarehousearticlesrelevantcalculator</Filter>
+    </ClCompile>
+    <ClCompile Include="mainwarehousearticlesrelevantcalculator\mainwarehousearticlesrelevantcalculatorapplctrl.cpp">
+      <Filter>Mainwarehousearticlesrelevantcalculator\ApplController</Filter>
+    </ClCompile>
+    <ClCompile Include="infrastructure\setup\mainwarehousearticlesrelevantcalculatorinfrastructuresetup.cpp">
+      <Filter>Infrastructure\Setup\impl</Filter>
+    </ClCompile>
+    <ClCompile Include="mainwarehousearticlesrelevantcalculatorinfo\mainwarehousearticlesrelevantcalculator_info.cpp">
+      <Filter>MainwarehousearticlesrelevantcalculatorInfo</Filter>
+    </ClCompile>
+    <ClCompile Include="loggerpool\mainwarehousearticlesrelevantcalculator_loggerpool.cpp">
+      <Filter>Loggerpool</Filter>
+    </ClCompile>
+    <ClCompile Include="infrastructure\accessor\article\articlecollectionacc.cpp">
+      <Filter>Infrastructure\Accessor\ArticleCollection</Filter>
+    </ClCompile>
+    <ClCompile Include="infrastructure\accessor\storagelocationslot\storagelocationslotacc.cpp">
+      <Filter>Infrastructure\Accessor\StorageLocationSlot</Filter>
+    </ClCompile>
+    <ClCompile Include="domainmodule\relevantrule\ruledescription.cpp">
+      <Filter>Domain Module\RelevantRule\Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="exceptions\ruleidoutofboundsexception.cpp">
+      <Filter>Exceptions</Filter>
+    </ClCompile>
+    <ClCompile Include="domainmodule\relevantrule\creationdate.cpp">
+      <Filter>Domain Module\RelevantRule\Rules</Filter>
+    </ClCompile>
+    <ClCompile Include="domainmodule\relevantrule\admissionpurchaseprognosis.cpp">
+      <Filter>Domain Module\RelevantRule\Rules</Filter>
+    </ClCompile>
+    <ClCompile Include="domainmodule\relevantrule\exclusionpurchaseprognosis.cpp">
+      <Filter>Domain Module\RelevantRule\Rules</Filter>
+    </ClCompile>
+    <ClCompile Include="domainmodule\relevantrule\withoutactivebinlocation.cpp">
+      <Filter>Domain Module\RelevantRule\Rules</Filter>
+    </ClCompile>
+    <ClCompile Include="domainmodule\relevantrule\narcotic.cpp">
+      <Filter>Domain Module\RelevantRule\Rules</Filter>
+    </ClCompile>
+    <ClCompile Include="domainmodule\relevantrule\consignment.cpp">
+      <Filter>Domain Module\RelevantRule\Rules</Filter>
+    </ClCompile>
+    <ClCompile Include="domainmodule\relevantrule\dangerous.cpp">
+      <Filter>Domain Module\RelevantRule\Rules</Filter>
+    </ClCompile>
+    <ClCompile Include="domainmodule\relevantrule\expensive.cpp">
+      <Filter>Domain Module\RelevantRule\Rules</Filter>
+    </ClCompile>
+    <ClCompile Include="domainmodule\relevantrule\batch.cpp">
+      <Filter>Domain Module\RelevantRule\Rules</Filter>
+    </ClCompile>
+    <ClCompile Include="domainmodule\relevantrule\cool.cpp">
+      <Filter>Domain Module\RelevantRule\Rules</Filter>
+    </ClCompile>
+    <ClCompile Include="domainmodule\relevantrule\registrable.cpp">
+      <Filter>Domain Module\RelevantRule\Rules</Filter>
+    </ClCompile>
+    <ClCompile Include="domainmodule\relevantrule\binlocationrange.cpp">
+      <Filter>Domain Module\RelevantRule\Rules</Filter>
+    </ClCompile>
+    <ClCompile Include="domainmodule\relevantrule\seasoncategory.cpp">
+      <Filter>Domain Module\RelevantRule\Rules</Filter>
+    </ClCompile>
+    <ClCompile Include="domainmodule\relevantrule\specialarticletype.cpp">
+      <Filter>Domain Module\RelevantRule\Rules</Filter>
+    </ClCompile>
+    <ClCompile Include="domainmodule\relevantrule\hazardoussubstance.cpp">
+      <Filter>Domain Module\RelevantRule\Rules</Filter>
+    </ClCompile>
+    <ClCompile Include="domainmodule\relevantrule\blockedarticle.cpp">
+      <Filter>Domain Module\RelevantRule\Rules</Filter>
+    </ClCompile>
+    <ClCompile Include="domainmodule\relevantrule\outoftradearticle.cpp">
+      <Filter>Domain Module\RelevantRule\Rules</Filter>
+    </ClCompile>
+    <ClCompile Include="domainmodule\relevantrule\nationalarticle.cpp">
+      <Filter>Domain Module\RelevantRule\Rules</Filter>
+    </ClCompile>
+    <ClCompile Include="domainmodule\relevantrule\fixmainwarehouselisting.cpp">
+      <Filter>Domain Module\RelevantRule\Rules</Filter>
+    </ClCompile>
+    <ClCompile Include="domainmodule\relevantrule\rulecomposite.cpp">
+      <Filter>Domain Module\RelevantRule\RuleComposite</Filter>
+    </ClCompile>
+    <ClCompile Include="infrastructure\dataprovider\basardbaspect_dataprovider.cpp">
+      <Filter>Infrastructure\DataProvider\Impl</Filter>
+    </ClCompile>
+    <ClCompile Include="domainmodule\storagelocation\storagelocationdm.cpp">
+      <Filter>Domain Module\StorageLocation\StorageLocationDM\Impl</Filter>
+    </ClCompile>
+    <ClCompile Include="exceptions\datanotfoundexception.cpp">
+      <Filter>Exceptions</Filter>
+    </ClCompile>
+    <ClCompile Include="infrastructure\dataprovider\propertyremapper.cpp">
+      <Filter>Infrastructure\DataProvider\PropertyRemapper</Filter>
+    </ClCompile>
+    <ClCompile Include="domainmodule\relevantrule\mainwarehousepropertyremapperinterceptor.cpp">
+      <Filter>Domain Module\RelevantRule\DataProviderInterceptor</Filter>
+    </ClCompile>
+    <ClCompile Include="infrastructure\accessor\mainwarehouse\mainwarehouseacc.cpp">
+      <Filter>Infrastructure\Accessor\Mainwarehouse</Filter>
+    </ClCompile>
+    <ClCompile Include="domainmodule\mainwarehouse\mainwarehousedm.cpp">
+      <Filter>Domain Module\Mainwarehouse\MainwarehouseDM\Impl</Filter>
+    </ClCompile>
+    <ClCompile Include="domainmodule\relevantrule\ruletoruledescriptioncomparator.h">
+      <Filter>Domain Module\RelevantRule\Comparator</Filter>
+    </ClCompile>
+    <ClCompile Include="componentmanager\mainwarehousearticlesrelevantrulefactory.cpp">
+      <Filter>ComponentManager\ApplCompMgr\Factories\RelevantRule\mainwarehousearticlesrelevantrule</Filter>
+    </ClCompile>
+    <ClCompile Include="infrastructure\accessor\assignmentparameter\mainwarehouseassignmentparameteracc.cpp">
+      <Filter>Infrastructure\Accessor\AssignmentParameter</Filter>
+    </ClCompile>
+    <ClCompile Include="exceptions\norulefoundexception.cpp">
+      <Filter>Exceptions</Filter>
+    </ClCompile>
+    <ClCompile Include="domainmodule\assignmentparameter\assignmentparametercollectiondm.cpp">
+      <Filter>Domain Module\AssignmentParameter\AssignmentParameterCollectionDM\Impl</Filter>
+    </ClCompile>
+    <ClCompile Include="domainmodule\article\mainwarehousearticlecollectiondm.cpp">
+      <Filter>Domain Module\Article\ArticleCollection\ArticleCollectionDM</Filter>
+    </ClCompile>
+    <ClCompile Include="domainmodule\article\brancharticleconfigdm.cpp">
+      <Filter>Domain Module\Article\BranchArticleConfig\BranchArticleConfigDM</Filter>
+    </ClCompile>
+    <ClCompile Include="infrastructure\accessor\accessorbase\accessorbase.cpp">
+      <Filter>Infrastructure\Accessor\AccessorBase</Filter>
+    </ClCompile>
+    <ClCompile Include="exceptions\methodnotfoundexception.cpp">
+      <Filter>Exceptions</Filter>
+    </ClCompile>
+    <ClCompile Include="infrastructure\accessor\accessorbase\sql2aspectresultinfomapper.cpp">
+      <Filter>Infrastructure\Accessor\AccessorBase\Conversion</Filter>
+    </ClCompile>
+    <ClCompile Include="infrastructure\accessor\brancharticleconfig\mainwarehousebrancharticleconfigacc.cpp">
+      <Filter>Infrastructure\Accessor\BranchArticleConfig</Filter>
+    </ClCompile>
+    <ClCompile Include="domainmodule\article\articledm.cpp">
+      <Filter>Domain Module\Article\Article\ArticleDM</Filter>
+    </ClCompile>
+    <ClCompile Include="domainmodule\relevantcalculator\relevantcalculatordm.cpp">
+      <Filter>Domain Module\RelevantCalculator\RelevantCalculatorDM\Impl</Filter>
+    </ClCompile>
+    <ClCompile Include="usecase\relevantcalculatoruc.cpp">
+      <Filter>UseCase\RelevantCalculatorUC</Filter>
+    </ClCompile>
+    <ClCompile Include="componentmanager\articlefactory.cpp">
+      <Filter>ComponentManager\ApplCompMgr\Factories\Article\Impl</Filter>
+    </ClCompile>
+    <ClCompile Include="infrastructure\datatype\trilean.cpp">
+      <Filter>Infrastructure\DataType</Filter>
+    </ClCompile>
+    <ClCompile Include="domainmodule\relevantrule\centralpurchaseblockedarticle.cpp">
+      <Filter>Domain Module\RelevantRule\Rules</Filter>
+    </ClCompile>
+    <ClCompile Include="infrastructure\interval\interval.cpp">
+      <Filter>Infrastructure\Interval</Filter>
+    </ClCompile>
+    <ClCompile Include="domainmodule\relevantrule\regionalarticle.cpp">
+      <Filter>Domain Module\RelevantRule\Rules</Filter>
+    </ClCompile>
+    <ClCompile Include="domainmodule\relevantrule\underdeliveryquota.cpp">
+      <Filter>Domain Module\RelevantRule\Rules</Filter>
+    </ClCompile>
+    <ClCompile Include="domainmodule\relevantrule\admissionoptionartrwe.cpp">
+      <Filter>Domain Module\RelevantRule\Rules</Filter>
+    </ClCompile>
+    <ClCompile Include="domainmodule\relevantrule\admissionconsidergroups.cpp">
+      <Filter>Domain Module\RelevantRule\Rules</Filter>
+    </ClCompile>
+    <ClCompile Include="usecase\admissionconsidergroupsuc.cpp">
+      <Filter>UseCase\AdmissionConsiderGroupsUC</Filter>
+    </ClCompile>
+    <ClCompile Include="domainmodule\admissionconsidergroups\admissionconsidergroupsdm.cpp">
+      <Filter>Domain Module\AdmissionConsiderGroups\AdmissionConsiderGroupsDM\Impl</Filter>
+    </ClCompile>
+    <ClCompile Include="infrastructure\accessor\admissiongroups\admissiongroups.cpp">
+      <Filter>Infrastructure\Accessor\AdmissionGroups</Filter>
+    </ClCompile>
+    <ClCompile Include="infrastructure\accessor\admissiongroups\admissiongroupcondition.cpp">
+      <Filter>Infrastructure\Accessor\AdmissionGroups</Filter>
+    </ClCompile>
+    <ClCompile Include="infrastructure\accessor\admissiongroups\admissiongrouptable.cpp">
+      <Filter>Infrastructure\Accessor\AdmissionGroups</Filter>
+    </ClCompile>
+    <ClCompile Include="usecase\cmnuc.cpp">
+      <Filter>UseCase</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="usecase\mainuc.h">
+      <Filter>UseCase\MainUC</Filter>
+    </ClInclude>
+    <ClInclude Include="usecase\mainucptr.h">
+      <Filter>UseCase\MainUC</Filter>
+    </ClInclude>
+    <ClInclude Include="componentmanager\iusecasegetter.h">
+      <Filter>ComponentManager\ApplCompMgr\Interface\UseCaseGetter</Filter>
+    </ClInclude>
+    <ClInclude Include="componentmanager\iusecasegetterptr.h">
+      <Filter>ComponentManager\ApplCompMgr\Interface\UseCaseGetter</Filter>
+    </ClInclude>
+    <ClInclude Include="componentmanager\mainwarehousearticlesrelevantcalculatorapplcompmgrptr.h">
+      <Filter>ComponentManager\ApplCompMgr\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="componentmanager\mainwarehousearticlesrelevantcalculatorapplcompmgr.h">
+      <Filter>ComponentManager\ApplCompMgr\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="componentmanager\mainwarehousearticlesrelevantcalculatorinfrastructurecompmgrptr.h">
+      <Filter>ComponentManager\InfrastructureCompMgr</Filter>
+    </ClInclude>
+    <ClInclude Include="componentmanager\mainwarehousearticlesrelevantcalculatorinfrastructurecompmgr.h">
+      <Filter>ComponentManager\InfrastructureCompMgr</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\login\login_definitions.h">
+      <Filter>Infrastructure\Login</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\cmdline\mainwarehousearticlesrelevantcalculatorcmdlineevaluator.h">
+      <Filter>Infrastructure\CommandLine\CmdLineEvaluator</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\cmdline\mainwarehousearticlesrelevantcalculatorcmdlineoption_definitions.h">
+      <Filter>Infrastructure\CommandLine\CmdLineOption</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\cmdline\mainwarehousearticlesrelevantcalculatorcmdlineoptioncollection.h">
+      <Filter>Infrastructure\CommandLine\CmdLineOption</Filter>
+    </ClInclude>
+    <ClInclude Include="mainwarehousearticlesrelevantcalculator\mainwarehousearticlesrelevantcalculatorapplctrl.h">
+      <Filter>Mainwarehousearticlesrelevantcalculator\ApplController</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\setup\mainwarehousearticlesrelevantcalculatorinfrastructuresetup.h">
+      <Filter>Infrastructure\Setup\impl</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\cmdline\mainwarehousearticlesrelevantcalculatorcmdlineevaluatorptr.h">
+      <Filter>Infrastructure\CommandLine\CmdLineEvaluator</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\setup\imainwarehousearticlesrelevantcalculatorlogingetter.h">
+      <Filter>Infrastructure\Setup\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\setup\imainwarehousearticlesrelevantcalculatorlogingetterptr.h">
+      <Filter>Infrastructure\Setup\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="mainwarehousearticlesrelevantcalculatorinfo\mainwarehousearticlesrelevantcalculator_info.h">
+      <Filter>MainwarehousearticlesrelevantcalculatorInfo</Filter>
+    </ClInclude>
+    <ClInclude Include="loggerpool\mainwarehousearticlesrelevantcalculator_loggerpool.h">
+      <Filter>Loggerpool</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\accessor\tables_definitions.h">
+      <Filter>Infrastructure\Accessor</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\mainwarehousearticlesrelevantcalculator_properties_definitions.h">
+      <Filter>Domain Module</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\accessor\article\articlecollectionacc.h">
+      <Filter>Infrastructure\Accessor\ArticleCollection</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\accessor\article\articlecollectionacc_definitions.h">
+      <Filter>Infrastructure\Accessor\ArticleCollection</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\article\iarticlecollectionfinder.h">
+      <Filter>Domain Module\Article\ArticleCollection\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\article\iarticlecollectionfinderptr.h">
+      <Filter>Domain Module\Article\ArticleCollection\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\accessor\storagelocationslot\storagelocationslotacc.h">
+      <Filter>Infrastructure\Accessor\StorageLocationSlot</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\accessor\storagelocationslot\storagelocationslotacc_definitions.h">
+      <Filter>Infrastructure\Accessor\StorageLocationSlot</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\relevantrule\irelevantrule.h">
+      <Filter>Domain Module\RelevantRule\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\relevantrule\irelevantruleptr.h">
+      <Filter>Domain Module\RelevantRule\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\relevantrule\ruledescription.h">
+      <Filter>Domain Module\RelevantRule\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="exceptions\ruleidoutofboundsexception.h">
+      <Filter>Exceptions</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\relevantrule\admissionpurchaseprognosis.h">
+      <Filter>Domain Module\RelevantRule\Rules</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\relevantrule\exclusionpurchaseprognosis.h">
+      <Filter>Domain Module\RelevantRule\Rules</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\relevantrule\withoutactivebinlocation.h">
+      <Filter>Domain Module\RelevantRule\Rules</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\relevantrule\narcotic.h">
+      <Filter>Domain Module\RelevantRule\Rules</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\relevantrule\creationdate.h">
+      <Filter>Domain Module\RelevantRule\Rules</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\relevantrule\consignment.h">
+      <Filter>Domain Module\RelevantRule\Rules</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\relevantrule\dangerous.h">
+      <Filter>Domain Module\RelevantRule\Rules</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\relevantrule\expensive.h">
+      <Filter>Domain Module\RelevantRule\Rules</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\relevantrule\batch.h">
+      <Filter>Domain Module\RelevantRule\Rules</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\relevantrule\cool.h">
+      <Filter>Domain Module\RelevantRule\Rules</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\relevantrule\registrable.h">
+      <Filter>Domain Module\RelevantRule\Rules</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\relevantrule\binlocationrange.h">
+      <Filter>Domain Module\RelevantRule\Rules</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\relevantrule\seasoncategory.h">
+      <Filter>Domain Module\RelevantRule\Rules</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\relevantrule\specialarticletype.h">
+      <Filter>Domain Module\RelevantRule\Rules</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\relevantrule\hazardoussubstance.h">
+      <Filter>Domain Module\RelevantRule\Rules</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\relevantrule\blockedarticle.h">
+      <Filter>Domain Module\RelevantRule\Rules</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\relevantrule\outoftradearticle.h">
+      <Filter>Domain Module\RelevantRule\Rules</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\relevantrule\nationalarticle.h">
+      <Filter>Domain Module\RelevantRule\Rules</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\relevantrule\fixmainwarehouselisting.h">
+      <Filter>Domain Module\RelevantRule\Rules</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\interval\interval.hpp">
+      <Filter>Infrastructure\Interval</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\relevantrule\rulecomposite.h">
+      <Filter>Domain Module\RelevantRule\RuleComposite</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\dataprovider\idataprovider.h">
+      <Filter>Infrastructure\DataProvider\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\dataprovider\idataproviderptr.h">
+      <Filter>Infrastructure\DataProvider\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\dataprovider\basardbaspect_dataprovider.h">
+      <Filter>Infrastructure\DataProvider\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\storagelocation\storagelocationdmptr.h">
+      <Filter>Domain Module\StorageLocation\StorageLocationDM\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\storagelocation\storagelocationdm.h">
+      <Filter>Domain Module\StorageLocation\StorageLocationDM\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="exceptions\datanotfoundexception.h">
+      <Filter>Exceptions</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\storagelocation\istoragelocationslotchecker.h">
+      <Filter>Domain Module\StorageLocation\StorageLocationDM\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\storagelocation\istoragelocationslotcheckerptr.h">
+      <Filter>Domain Module\StorageLocation\StorageLocationDM\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\dataprovider\propertyremapper.h">
+      <Filter>Infrastructure\DataProvider\PropertyRemapper</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\relevantrule\mainwarehousepropertyremapperinterceptor.h">
+      <Filter>Domain Module\RelevantRule\DataProviderInterceptor</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\relevantrule\mainwarehousepropertyremapperinterceptorptr.h">
+      <Filter>Domain Module\RelevantRule\DataProviderInterceptor</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\accessor\mainwarehouse\mainwarehouseacc.h">
+      <Filter>Infrastructure\Accessor\Mainwarehouse</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\accessor\mainwarehouse\mainwarehouseacc_definitions.h">
+      <Filter>Infrastructure\Accessor\Mainwarehouse</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\mainwarehouse\mainwarehousedm.h">
+      <Filter>Domain Module\Mainwarehouse\MainwarehouseDM\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\mainwarehouse\mainwarehousedmptr.h">
+      <Filter>Domain Module\Mainwarehouse\MainwarehouseDM\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\mainwarehouse\imainwarehousefinder.h">
+      <Filter>Domain Module\Mainwarehouse\MainwarehouseDM\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\mainwarehouse\imainwarehousefinderptr.h">
+      <Filter>Domain Module\Mainwarehouse\MainwarehouseDM\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\relevantrule\rulecompositeptr.h">
+      <Filter>Domain Module\RelevantRule\RuleComposite</Filter>
+    </ClInclude>
+    <ClInclude Include="componentmanager\mainwarehousearticlesrelevantrulefactoryptr.h">
+      <Filter>ComponentManager\ApplCompMgr\Factories\RelevantRule\mainwarehousearticlesrelevantrule</Filter>
+    </ClInclude>
+    <ClInclude Include="componentmanager\mainwarehousearticlesrelevantrulefactory.h">
+      <Filter>ComponentManager\ApplCompMgr\Factories\RelevantRule\mainwarehousearticlesrelevantrule</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\accessor\assignmentparameter\mainwarehouseassignmentparameteracc.h">
+      <Filter>Infrastructure\Accessor\AssignmentParameter</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\accessor\assignmentparameter\mainwarehouseassignmentparameteracc_definitions.h">
+      <Filter>Infrastructure\Accessor\AssignmentParameter</Filter>
+    </ClInclude>
+    <ClInclude Include="componentmanager\irelevantrulefactory.h">
+      <Filter>ComponentManager\ApplCompMgr\Factories\RelevantRule\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="componentmanager\irelevantrulefactoryptr.h">
+      <Filter>ComponentManager\ApplCompMgr\Factories\RelevantRule\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="exceptions\norulefoundexception.h">
+      <Filter>Exceptions</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\assignmentparameter\assignmentparametercollectiondm.h">
+      <Filter>Domain Module\AssignmentParameter\AssignmentParameterCollectionDM\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\assignmentparameter\assignmentparametercollectiondmptr.h">
+      <Filter>Domain Module\AssignmentParameter\AssignmentParameterCollectionDM\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\assignmentparameter\iassignmentparametercollection.h">
+      <Filter>Domain Module\AssignmentParameter\AssignmentParameterCollectionDM\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\assignmentparameter\iassignmentparametercollectionptr.h">
+      <Filter>Domain Module\AssignmentParameter\AssignmentParameterCollectionDM\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\article\mainwarehousearticlecollectiondmptr.h">
+      <Filter>Domain Module\Article\ArticleCollection\ArticleCollectionDM</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\article\mainwarehousearticlecollectiondm.h">
+      <Filter>Domain Module\Article\ArticleCollection\ArticleCollectionDM</Filter>
+    </ClInclude>
+    <ClInclude Include="componentmanager\istoragelocationslotcheckergetter.h">
+      <Filter>ComponentManager\ApplCompMgr\Interface\StorageLocationSlotCheckerGetter</Filter>
+    </ClInclude>
+    <ClInclude Include="componentmanager\istoragelocationslotcheckergetterptr.h">
+      <Filter>ComponentManager\ApplCompMgr\Interface\StorageLocationSlotCheckerGetter</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\article\brancharticleconfigdm.h">
+      <Filter>Domain Module\Article\BranchArticleConfig\BranchArticleConfigDM</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\article\brancharticleconfigdmptr.h">
+      <Filter>Domain Module\Article\BranchArticleConfig\BranchArticleConfigDM</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\accessor\accessorbase\accessmethodcaller.hpp">
+      <Filter>Infrastructure\Accessor\AccessorBase</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\accessor\accessorbase\accessorbase.h">
+      <Filter>Infrastructure\Accessor\AccessorBase</Filter>
+    </ClInclude>
+    <ClInclude Include="exceptions\methodnotfoundexception.h">
+      <Filter>Exceptions</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\accessor\accessorbase\sql2aspectresultinfomapper.h">
+      <Filter>Infrastructure\Accessor\AccessorBase\Conversion</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\accessor\brancharticleconfig\mainwarehousebrancharticleconfigacc.h">
+      <Filter>Infrastructure\Accessor\BranchArticleConfig</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\accessor\brancharticleconfig\mainwarehousebrancharticleconfigacc_definitions.h">
+      <Filter>Infrastructure\Accessor\BranchArticleConfig</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\article\iarticle.h">
+      <Filter>Domain Module\Article\Article\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\article\iarticleptr.h">
+      <Filter>Domain Module\Article\Article\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\article\articledm.h">
+      <Filter>Domain Module\Article\Article\ArticleDM</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\article\articledmptr.h">
+      <Filter>Domain Module\Article\Article\ArticleDM</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\article\iarticleconfigwriter.h">
+      <Filter>Domain Module\Article\BranchArticleConfig\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\accessor\article\brancharticleconfigacc_definitions.h">
+      <Filter>Infrastructure\Accessor\Article</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\relevantcalculator\relevantcalculatordm.h">
+      <Filter>Domain Module\RelevantCalculator\RelevantCalculatorDM\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\relevantcalculator\relevantcalculatordmptr.h">
+      <Filter>Domain Module\RelevantCalculator\RelevantCalculatorDM\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\article\iarticleconfigwriterptr.h">
+      <Filter>Domain Module\Article\BranchArticleConfig\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\relevantcalculator\irelevantcalculator.h">
+      <Filter>Domain Module\RelevantCalculator\RelevantCalculatorDM\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\relevantcalculator\irelevantcalculatorptr.h">
+      <Filter>Domain Module\RelevantCalculator\RelevantCalculatorDM\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="usecase\relevantcalculatoruc.h">
+      <Filter>UseCase\RelevantCalculatorUC</Filter>
+    </ClInclude>
+    <ClInclude Include="usecase\relevantcalculatorucptr.h">
+      <Filter>UseCase\RelevantCalculatorUC</Filter>
+    </ClInclude>
+    <ClInclude Include="componentmanager\iarticlefactory.h">
+      <Filter>ComponentManager\ApplCompMgr\Factories\Article\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="componentmanager\iarticlefactoryptr.h">
+      <Filter>ComponentManager\ApplCompMgr\Factories\Article\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="componentmanager\articlefactory.h">
+      <Filter>ComponentManager\ApplCompMgr\Factories\Article\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="componentmanager\articlefactoryptr.h">
+      <Filter>ComponentManager\ApplCompMgr\Factories\Article\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\datatype\trilean.h">
+      <Filter>Infrastructure\DataType</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\relevantrule\centralpurchaseblockedarticle.h">
+      <Filter>Domain Module\RelevantRule\Rules</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\accessor\assignmentparameter\assignmentparameteracc_definitions.h">
+      <Filter>Infrastructure\Accessor\AssignmentParameter</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\dataprovider\propertyremapperptr.h">
+      <Filter>Infrastructure\DataProvider\PropertyRemapper</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\relevantrule\regionalarticle.h">
+      <Filter>Domain Module\RelevantRule\Rules</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\relevantrule\underdeliveryquota.h">
+      <Filter>Domain Module\RelevantRule\Rules</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\relevantrule\admissionoptionartrwe.h">
+      <Filter>Domain Module\RelevantRule\Rules</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\relevantrule\admissionconsidergroups.h">
+      <Filter>Domain Module\RelevantRule\Rules</Filter>
+    </ClInclude>
+    <ClInclude Include="usecase\admissionconsidergroupsuc.h">
+      <Filter>UseCase\AdmissionConsiderGroupsUC</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\admissionconsidergroups\admissionconsidergroupsdm.h">
+      <Filter>Domain Module\AdmissionConsiderGroups\AdmissionConsiderGroupsDM\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\accessor\admissiongroups\admissiongroups.h">
+      <Filter>Infrastructure\Accessor\AdmissionGroups</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\accessor\admissiongroups\admissiongroupcondition.h">
+      <Filter>Infrastructure\Accessor\AdmissionGroups</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\accessor\admissiongroups\admissiongrouptable.h">
+      <Filter>Infrastructure\Accessor\AdmissionGroups</Filter>
+    </ClInclude>
+    <ClInclude Include="usecase\cmnuc.h">
+      <Filter>UseCase</Filter>
+    </ClInclude>
+    <ClInclude Include="usecase\admissionconsidergroupsucptr.h">
+      <Filter>UseCase\AdmissionConsiderGroupsUC</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="mainwarehousearticlesrelevantcalculator.cfg">
+      <Filter>Loggerpool\ConfigFile</Filter>
+    </None>
+    <None Include="unix\mainwarehousearticlesrelevantcalculator.option">
+      <Filter>proc</Filter>
+    </None>
+    <None Include="unix\mainwarehousearticlesrelevantcalculator.sh">
+      <Filter>proc</Filter>
+    </None>
+    <None Include="..\dbx.sh">
+      <Filter>unix</Filter>
+    </None>
+    <None Include="..\installwss.sh">
+      <Filter>unix</Filter>
+    </None>
+    <None Include="..\makefile">
+      <Filter>unix</Filter>
+    </None>
+    <None Include="..\makevars.inc">
+      <Filter>unix</Filter>
+    </None>
+    <None Include="..\start.sh">
+      <Filter>unix</Filter>
+    </None>
+  </ItemGroup>
+</Project>

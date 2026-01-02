@@ -1,0 +1,8 @@
+. /software/etc/profile_prz
+
+dbaccess ofr21 -<<%
+begin work;
+delete from customerrouting where branchno = 37;
+commit work;
+%
+

@@ -1,0 +1,208 @@
+###############################################################################################
+outbound side:
+--------------
+outbound QUERY01:
+============================================================================================
+SELECT tabname, owner, tabtype
+FROM systables 
+WHERE tabid > 99  -- Filter out system tables
+  AND tabtype IN ('T', 'V')  -- 'T'=Table, 'V'=View
+  AND LOWER(tabname) LIKE '%discount%';
+    
+
+  
+============================================================================================
+outbound Result QUERY01:
+tabname	owner	tabtype
+cstdiscountcont	informix                        	T
+discountlist	informix                        	T
+discountgrp	informix                        	T
+discountgrpmem	informix                        	T
+discountordertyp	informix                        	T
+discountpharmagrp	informix                        	T
+adiscountcalcbase	informix                        	T
+adiscountcalclog	informix                        	T
+aorderpositiondiscount	informix                        	T
+discountcalcbase	informix                        	T
+discountcalclog	informix                        	T
+orderpositiondiscount	informix                        	T
+orderpositiondiscountprocessed	informix                        	T
+ibtdiscountrequest	informix                        	T
+vcstdediscount	informix                        	V
+discount	informix                        	T
+
+============================================================================================
+outbound query02:
+SELECT tabname, owner, tabtype
+FROM systables 
+WHERE tabid > 99  -- Filter out system tables
+  AND tabtype IN ('T', 'V')  -- 'T'=Table, 'V'=View
+  AND LOWER(tabname) LIKE '%rebate%';
+  
+Result: 0 rows
+============================================================================================
+outbound query03:
+SELECT tabname, owner, tabtype
+FROM systables 
+WHERE tabid > 99  -- Filter out system tables
+  AND tabtype IN ('T', 'V')  -- 'T'=Table, 'V'=View
+  AND LOWER(tabname) LIKE '%quota%';
+  
+outbound Result query 03:
+-------------------------
+tabname	owner	tabtype
+articlequota	informix                        	T
+articlequotasave	informix                        	T
+articlequotatemp	informix                        	T
+maxarticlequota	informix                        	T
+promotionquota	informix                        	T
+promotionquotacst	informix                        	T
+varticlequota	informix                        	V
+
+============================================================================================
+outbound query04:
+SELECT tabname, owner, tabtype
+FROM systables 
+WHERE tabid > 99  -- Filter out system tables
+  AND tabtype IN ('T', 'V')  -- 'T'=Table, 'V'=View
+  AND LOWER(tabname) LIKE '%price%';
+  
+outbound query result 04:
+------------------------
+tabname	owner	tabtype
+pricehistory	informix                        	T
+articleoldprice	informix                        	T
+registersprices	informix                        	T
+nhifprices	informix                        	T
+
+============================================================================================
+outbound query05:
+SELECT tabname, owner, tabtype
+FROM systables 
+WHERE tabid > 99  -- Filter out system tables
+  AND tabtype IN ('T', 'V')  -- 'T'=Table, 'V'=View
+  AND LOWER(tabname) LIKE '%cst%';
+  
+outbound query result 05:
+------------------------
+tabname	owner	tabtype
+cstpaymentlist	informix                        	T
+acststockreserved	informix                        	T
+delayeddeliverycst	informix                        	T
+cststockreserved	informix                        	T
+cstdiscountcont	informix                        	T
+cstdiscacc	informix                        	T
+cstseporderartgrp	informix                        	T
+cstcalcavp	informix                        	T
+cstpaymentterms	informix                        	T
+cstprint	informix                        	T
+promotionquotacst	informix                        	T
+cstbranchinfo	informix                        	T
+cstinvoicedata	informix                        	T
+vcstdediscount	informix                        	V
+msv3cstinfo	informix                        	T
+msv3cstinfotype	informix                        	T
+
+###############################################################################################
+inbound side:
+-------------
+SELECT tabname, owner, tabtype
+FROM systables 
+WHERE tabid > 99  -- Filter out system tables
+  AND tabtype IN ('T', 'V')  -- 'T'=Table, 'V'=View
+  AND LOWER(tabname) LIKE '%discount%';
+ 
+============================================================================================
+result:
+-------
+tabname	owner	tabtype
+cdiscount	informix                        	T
+cdiscountmodes	informix                        	T
+cppediscounts	informix                        	T
+============================================================================================
+Query02:
+--------
+SELECT tabname, owner, tabtype
+FROM systables 
+WHERE tabid > 99  -- Filter out system tables
+  AND tabtype IN ('T', 'V')  -- 'T'=Table, 'V'=View
+  AND LOWER(tabname) LIKE '%rebate%';
+  
+Result query02:
+---------------
+tabname	owner	tabtype
+rebate	informix                        	T
+rebatesync	informix                        	T
+============================================================================================
+Query03:
+--------
+SELECT tabname, owner, tabtype
+FROM systables 
+WHERE tabid > 99  -- Filter out system tables
+  AND tabtype IN ('T', 'V')  -- 'T'=Table, 'V'=View
+  AND LOWER(tabname) LIKE '%quota%';
+  
+Result query03:
+---------------
+tabname	owner	tabtype
+pubvoquota	informix                        	T
+bdmpromotionquota	informix                        	T
+pumarkquota	informix                        	T
+pudistributedquota	informix                        	T
+puglobalquota	informix                        	T
+puorderedquota	informix                        	T
+orderquotaquantities	informix                        	T
+puundeliveryquota	informix                        	T
+
+============================================================================================
+Query04:
+--------
+SELECT tabname, owner, tabtype
+FROM systables 
+WHERE tabid > 99  -- Filter out system tables
+  AND tabtype IN ('T', 'V')  -- 'T'=Table, 'V'=View
+  AND LOWER(tabname) LIKE '%price%';
+
+Result query04:
+---------------  
+tabname	owner	tabtype
+ivcaveragepurchasepricevoucher	informix                        	T
+ivcaveragepurchasepricegilabel	informix                        	T
+ivcaveragepurchaseprice	informix                        	T
+ivcaveragepurchasepricemotiondata	informix                        	T
+ivcpharmacypurchaseprice	informix                        	T
+aprpricereductionitem	informix                        	T
+aprpricereductionitembranch	informix                        	T
+priceincreasemark	informix                        	T
+artstillactprice	informix                        	T
+aprpricereduction	informix                        	T
+aprpricereductionbranch	informix                        	T
+ivcaveragepurchasepriceexcludedcustomergroups	informix                        	T
+cpricevaliddelay	informix                        	T
+cartpriceext	informix                        	T
+ivcaveragepurchasepricelabeldifferences	informix                        	T
+ivcaveragepurchasepricenew	informix                        	T
+ivcaveragepurchasepricestockincreasedifferences	informix                        	T
+ivcaveragepurchasepriceidealchanges	informix                        	T
+ivcaveragepurchasepriceideal	informix                        	T
+ivcaveragepurchasepricefixedlabeldata	informix                        	T
+ivcaveragepurchasepricecostpriceevaluation	informix                        	T
+ivcaveragepurchasepricechanges	informix                        	T
+puorderofferpricecomparisontype	informix                        	T
+puorderofferpricesegmenttype	informix                        	T
+puarticlepricereductionsupplierprio	informix                        	T
+ivccausecodesforpricedifferences	informix                        	T
+cnhifprices	informix                        	T
+cregistersprices	informix                        	T
+cpricelistproc	informix                        	T
+cpricelist2pharmgrp	informix                        	T
+
+
+#####################################################################
+SELECT tabname, owner, tabtype
+FROM systables 
+WHERE tabid > 99  -- Filter out system tables
+  AND tabtype IN ('T', 'V')  -- 'T'=Table, 'V'=View
+  AND LOWER(tabname) LIKE '%accvse%';
+  
+  ====> gives 0rows for both inbound / outbound

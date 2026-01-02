@@ -1,0 +1,327 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="log4cplus">
+      <UniqueIdentifier>{9eec8f7f-44b9-46c7-8fe8-71ff0edfa6c7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Connection">
+      <UniqueIdentifier>{1e47312e-c5b0-41a0-9be4-1fcdc963c928}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Config">
+      <UniqueIdentifier>{55ec2160-9b23-49d1-8433-1ae3cb5f306b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Config\Exceptions">
+      <UniqueIdentifier>{8f722791-441d-41b4-8d34-5ab9067979d2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Mail">
+      <UniqueIdentifier>{c7be5a7d-5303-4fc6-a739-df323995998d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="XMLConfigReader">
+      <UniqueIdentifier>{895282a3-360d-4375-94d0-8faeeb085a0c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Logging">
+      <UniqueIdentifier>{bcf59d22-67a0-49a9-9993-8b69beaf3205}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="IRemoteProcedure">
+      <UniqueIdentifier>{4395d57a-a44d-49cb-b553-056a53be561d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RemoteProcedureCaller">
+      <UniqueIdentifier>{d1c95045-cd90-425e-9ec7-097f719152d2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RemoteProcedureCaller\Accessor">
+      <UniqueIdentifier>{c9ef5622-fb3c-4fce-843f-e73ff6e8e4f8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ConvHelper">
+      <UniqueIdentifier>{af366264-6f01-48f4-827a-99d24dacb650}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AppInitializer">
+      <UniqueIdentifier>{907dc512-e712-4284-b80d-e49975834d1e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Configuration">
+      <UniqueIdentifier>{8bf9ed14-8b4c-48e6-b687-34a54c750894}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SignalHandling">
+      <UniqueIdentifier>{30089baf-a9d0-4f63-9521-715a5e5a040d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="BulkInserter">
+      <UniqueIdentifier>{f1b1b019-db8d-47e6-b01b-f3ccc538a9e2}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="loggerpool.cpp">
+      <Filter>log4cplus</Filter>
+    </ClCompile>
+    <ClCompile Include="ifxconnection.cpp">
+      <Filter>Connection</Filter>
+    </ClCompile>
+    <ClCompile Include="tcaconnection.cpp">
+      <Filter>Connection</Filter>
+    </ClCompile>
+    <ClCompile Include="general.cpp">
+      <Filter>Config</Filter>
+    </ClCompile>
+    <ClCompile Include="informix.cpp">
+      <Filter>Config</Filter>
+    </ClCompile>
+    <ClCompile Include="kscserver.cpp">
+      <Filter>Config</Filter>
+    </ClCompile>
+    <ClCompile Include="pxverbund.cpp">
+      <Filter>Config</Filter>
+    </ClCompile>
+    <ClCompile Include="settings.cpp">
+      <Filter>Config</Filter>
+    </ClCompile>
+    <ClCompile Include="smtp.cpp">
+      <Filter>Config</Filter>
+    </ClCompile>
+    <ClCompile Include="tcaccess.cpp">
+      <Filter>Config</Filter>
+    </ClCompile>
+    <ClCompile Include="configException.cpp">
+      <Filter>Config\Exceptions</Filter>
+    </ClCompile>
+    <ClCompile Include="mail.cpp">
+      <Filter>Mail</Filter>
+    </ClCompile>
+    <ClCompile Include="xmlconfigreader.cpp">
+      <Filter>XMLConfigReader</Filter>
+    </ClCompile>
+    <ClCompile Include="csc_logger.cpp">
+      <Filter>Logging</Filter>
+    </ClCompile>
+    <ClCompile Include="appinitializerexception.cpp">
+      <Filter>Config\Exceptions</Filter>
+    </ClCompile>
+    <ClCompile Include="configdatainconsistantexception.cpp">
+      <Filter>Config\Exceptions</Filter>
+    </ClCompile>
+    <ClCompile Include="invalidstatuschangeexception.cpp">
+      <Filter>Config\Exceptions</Filter>
+    </ClCompile>
+    <ClCompile Include="mailexception.cpp">
+      <Filter>Config\Exceptions</Filter>
+    </ClCompile>
+    <ClCompile Include="methodcallnotsupportedexception.cpp">
+      <Filter>Config\Exceptions</Filter>
+    </ClCompile>
+    <ClCompile Include="missingdependencyinjectionexception.cpp">
+      <Filter>Config\Exceptions</Filter>
+    </ClCompile>
+    <ClCompile Include="notimplementedexception.cpp">
+      <Filter>Config\Exceptions</Filter>
+    </ClCompile>
+    <ClCompile Include="putenvfailedexception.cpp">
+      <Filter>Config\Exceptions</Filter>
+    </ClCompile>
+    <ClCompile Include="pxvbcomponentbadstateexception.cpp">
+      <Filter>Config\Exceptions</Filter>
+    </ClCompile>
+    <ClCompile Include="setupsignalhandlingexception.cpp">
+      <Filter>Config\Exceptions</Filter>
+    </ClCompile>
+    <ClCompile Include="softkillexception.cpp">
+      <Filter>Config\Exceptions</Filter>
+    </ClCompile>
+    <ClCompile Include="xmlreaderexception.cpp">
+      <Filter>Config\Exceptions</Filter>
+    </ClCompile>
+    <ClCompile Include="remoteprocedurecaller.cpp">
+      <Filter>RemoteProcedureCaller</Filter>
+    </ClCompile>
+    <ClCompile Include="remoteprocedureacc.cpp">
+      <Filter>RemoteProcedureCaller\Accessor</Filter>
+    </ClCompile>
+    <ClCompile Include="convhelper.cpp">
+      <Filter>ConvHelper</Filter>
+    </ClCompile>
+    <ClCompile Include="applxmlconfigwrapper.cpp">
+      <Filter>Configuration</Filter>
+    </ClCompile>
+    <ClCompile Include="csc_signalhandler.cpp">
+      <Filter>SignalHandling</Filter>
+    </ClCompile>
+    <ClCompile Include="signalhandlerbase.cpp">
+      <Filter>SignalHandling</Filter>
+    </ClCompile>
+    <ClCompile Include="bulkinserter.cpp">
+      <Filter>BulkInserter</Filter>
+    </ClCompile>
+    <ClCompile Include="formattingexception.cpp">
+      <Filter>Config\Exceptions</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="loggerpool.h">
+      <Filter>log4cplus</Filter>
+    </ClInclude>
+    <ClInclude Include="ifxconnection.h">
+      <Filter>Connection</Filter>
+    </ClInclude>
+    <ClInclude Include="tcaconnection.h">
+      <Filter>Connection</Filter>
+    </ClInclude>
+    <ClInclude Include="config_definitions.h">
+      <Filter>Config</Filter>
+    </ClInclude>
+    <ClInclude Include="general.h">
+      <Filter>Config</Filter>
+    </ClInclude>
+    <ClInclude Include="informix.h">
+      <Filter>Config</Filter>
+    </ClInclude>
+    <ClInclude Include="kscserver.h">
+      <Filter>Config</Filter>
+    </ClInclude>
+    <ClInclude Include="pxverbund.h">
+      <Filter>Config</Filter>
+    </ClInclude>
+    <ClInclude Include="settings.h">
+      <Filter>Config</Filter>
+    </ClInclude>
+    <ClInclude Include="smtp.h">
+      <Filter>Config</Filter>
+    </ClInclude>
+    <ClInclude Include="tcaccess.h">
+      <Filter>Config</Filter>
+    </ClInclude>
+    <ClInclude Include="configException.h">
+      <Filter>Config\Exceptions</Filter>
+    </ClInclude>
+    <ClInclude Include="imail.h">
+      <Filter>Mail</Filter>
+    </ClInclude>
+    <ClInclude Include="imailptr.h">
+      <Filter>Mail</Filter>
+    </ClInclude>
+    <ClInclude Include="mail.h">
+      <Filter>Mail</Filter>
+    </ClInclude>
+    <ClInclude Include="xmlconfigreader.h">
+      <Filter>XMLConfigReader</Filter>
+    </ClInclude>
+    <ClInclude Include="xmlconfigreaderptr.h">
+      <Filter>XMLConfigReader</Filter>
+    </ClInclude>
+    <ClInclude Include="csc_logger.h">
+      <Filter>Logging</Filter>
+    </ClInclude>
+    <ClInclude Include="icsc_logger.h">
+      <Filter>Logging</Filter>
+    </ClInclude>
+    <ClInclude Include="icsc_loggerptr.h">
+      <Filter>Logging</Filter>
+    </ClInclude>
+    <ClInclude Include="iloggable.h">
+      <Filter>Logging</Filter>
+    </ClInclude>
+    <ClInclude Include="iloggableptr.h">
+      <Filter>Logging</Filter>
+    </ClInclude>
+    <ClInclude Include="appinitializerexception.h">
+      <Filter>Config\Exceptions</Filter>
+    </ClInclude>
+    <ClInclude Include="configdatainconsistantexception.h">
+      <Filter>Config\Exceptions</Filter>
+    </ClInclude>
+    <ClInclude Include="invalidstatuschangeexception.h">
+      <Filter>Config\Exceptions</Filter>
+    </ClInclude>
+    <ClInclude Include="mailexception.h">
+      <Filter>Config\Exceptions</Filter>
+    </ClInclude>
+    <ClInclude Include="methodcallnotsupportedexception.h">
+      <Filter>Config\Exceptions</Filter>
+    </ClInclude>
+    <ClInclude Include="missingdependencyinjectionexception.h">
+      <Filter>Config\Exceptions</Filter>
+    </ClInclude>
+    <ClInclude Include="notimplementedexception.h">
+      <Filter>Config\Exceptions</Filter>
+    </ClInclude>
+    <ClInclude Include="putenvfailedexception.h">
+      <Filter>Config\Exceptions</Filter>
+    </ClInclude>
+    <ClInclude Include="pxvbcomponentbadstateexception.h">
+      <Filter>Config\Exceptions</Filter>
+    </ClInclude>
+    <ClInclude Include="setupsignalhandlingexception.h">
+      <Filter>Config\Exceptions</Filter>
+    </ClInclude>
+    <ClInclude Include="softkillexception.h">
+      <Filter>Config\Exceptions</Filter>
+    </ClInclude>
+    <ClInclude Include="xmlreaderexception.h">
+      <Filter>Config\Exceptions</Filter>
+    </ClInclude>
+    <ClInclude Include="iremoteprocedure.h">
+      <Filter>IRemoteProcedure</Filter>
+    </ClInclude>
+    <ClInclude Include="iremoteprocedureptr.h">
+      <Filter>IRemoteProcedure</Filter>
+    </ClInclude>
+    <ClInclude Include="iremoteprocedurecaller.h">
+      <Filter>RemoteProcedureCaller</Filter>
+    </ClInclude>
+    <ClInclude Include="iremoteprocedurecallerptr.h">
+      <Filter>RemoteProcedureCaller</Filter>
+    </ClInclude>
+    <ClInclude Include="remoteprocedurecaller.h">
+      <Filter>RemoteProcedureCaller</Filter>
+    </ClInclude>
+    <ClInclude Include="remoteprocedureresult.h">
+      <Filter>RemoteProcedureCaller</Filter>
+    </ClInclude>
+    <ClInclude Include="remoteprocedureacc.h">
+      <Filter>RemoteProcedureCaller\Accessor</Filter>
+    </ClInclude>
+    <ClInclude Include="remoteprocedureacc_definitions.h">
+      <Filter>RemoteProcedureCaller\Accessor</Filter>
+    </ClInclude>
+    <ClInclude Include="convhelper.h">
+      <Filter>ConvHelper</Filter>
+    </ClInclude>
+    <ClInclude Include="appinitializer.h">
+      <Filter>AppInitializer</Filter>
+    </ClInclude>
+    <ClInclude Include="icsc_cmdlineoption.h">
+      <Filter>AppInitializer</Filter>
+    </ClInclude>
+    <ClInclude Include="icsc_cmdlineoptionptr.h">
+      <Filter>AppInitializer</Filter>
+    </ClInclude>
+    <ClInclude Include="applxmlconfigwrapper.h">
+      <Filter>Configuration</Filter>
+    </ClInclude>
+    <ClInclude Include="iapplconfiguration.h">
+      <Filter>Configuration</Filter>
+    </ClInclude>
+    <ClInclude Include="iapplconfigurationptr.h">
+      <Filter>Configuration</Filter>
+    </ClInclude>
+    <ClInclude Include="csc_signalhandler.h">
+      <Filter>SignalHandling</Filter>
+    </ClInclude>
+    <ClInclude Include="externdef.h">
+      <Filter>SignalHandling</Filter>
+    </ClInclude>
+    <ClInclude Include="isignalreceiver.h">
+      <Filter>SignalHandling</Filter>
+    </ClInclude>
+    <ClInclude Include="signalhandlerbase.h">
+      <Filter>SignalHandling</Filter>
+    </ClInclude>
+    <ClInclude Include="bulkinserter.h">
+      <Filter>BulkInserter</Filter>
+    </ClInclude>
+    <ClInclude Include="ibulkinserter.h">
+      <Filter>BulkInserter</Filter>
+    </ClInclude>
+    <ClInclude Include="ibulkinserterptr.h">
+      <Filter>BulkInserter</Filter>
+    </ClInclude>
+    <ClInclude Include="formattingexception.h">
+      <Filter>Config\Exceptions</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

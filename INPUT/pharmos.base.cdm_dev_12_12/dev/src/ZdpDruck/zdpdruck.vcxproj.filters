@@ -1,0 +1,316 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{59fb25a2-4f4b-4c70-8ef5-b421e3b4fa7e}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{b43e0378-4111-4f85-b427-fdea206cd975}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{fa2409f5-020e-4989-b270-98fc3115df27}</UniqueIdentifier>
+      <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;cnt;rtf;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AmbliefView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Art7prozView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ArtblieView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ArthersView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ArtsperrView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ConSoVa3.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DatacarePreisaend.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DruckView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ElektroNeuanlagenView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ElektrowartView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GaldatAHView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GaldatNeuanlagenView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GetBranches.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GetRegion.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GhaenView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="hDynBuf.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="hDynSql.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="HerstellerNachHerstellerCodeView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="hGridMsgHnd.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="hPflegeView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="hSelectDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="hSqlFd.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="InkonsView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LineprotDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MainFrm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NemwartView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NemwliefView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NonemlieView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PerhabvkView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PerhoehView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RechteDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ServerDatum.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ServerDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="StdAfx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="UserDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ZdpDruck.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ZdpDruckDoc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ZdpDruckView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RwProfile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="ZdpDruck.rc">
+      <Filter>Source Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AmbliefView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Art7prozView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ArtblieView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ArthersView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ArtsperrView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ConSoVa3.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DatacarePreisaend.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DruckView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ElektroNeuanlagenView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ElektrowartView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FeldBreite.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GaldatAHView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GaldatNeuanlagenView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GetBranches.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GetRegion.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GhaenView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="hDynBuf.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="hDynSql.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="HerstellerNachHerstellerCodeView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="hGridMsgHnd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="hPflegeView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="hSelectDialog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="hSqlFd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="InkonsView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LineprotDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MainFrm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MenuNumbers.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NemwartView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NemwliefView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NonemlieView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PerhabvkView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PerhoehView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RechteDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ServerDatum.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ServerDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="StdAfx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="UserDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ViewNumbers.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ZdpDruck.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ZdpDruckDoc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ZdpDruckView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RwProfile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\bm_knoedel.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\bm_passw.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\bm_right.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\bm_ruebl.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\bm_suche.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\bm_voges.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\bm_vorbl.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\bmp00001.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\bmp00002.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\bmp00003.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\Toolbar.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\ZdpDruck.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\ZdpDruck.rc2">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\ZdpDruckDoc.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+</Project>

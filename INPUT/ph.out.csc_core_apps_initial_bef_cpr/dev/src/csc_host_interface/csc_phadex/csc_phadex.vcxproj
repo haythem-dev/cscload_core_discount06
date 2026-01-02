@@ -1,0 +1,811 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Test|Win32">
+      <Configuration>Test</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Test|x64">
+      <Configuration>Test</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="UnitTest_Release|Win32">
+      <Configuration>UnitTest_Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="UnitTest_Release|x64">
+      <Configuration>UnitTest_Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="UnitTest|Win32">
+      <Configuration>UnitTest</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="UnitTest|x64">
+      <Configuration>UnitTest</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{4E45E05A-6CC3-1014-9E3F-8461FFB45C6A}</ProjectGuid>
+    <RootNamespace>csc_phadex</RootNamespace>
+	<QTDIR>$(SolutionDir)..\ext\qt5</QTDIR>
+    <Keyword>Qt4VS</Keyword>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Test|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Test|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='UnitTest_Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='UnitTest_Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='UnitTest|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='UnitTest|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Test|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Test|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='UnitTest_Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='UnitTest_Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='UnitTest|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='UnitTest|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='UnitTest|Win32'">$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='UnitTest|Win32'">$(Configuration)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='UnitTest_Release|Win32'">$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='UnitTest_Release|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='UnitTest_Release|Win32'">false</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='UnitTest_Release|x64'">false</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Test|Win32'">$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Test|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Test|Win32'">false</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Test|x64'">false</LinkIncremental>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Test|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Test|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Test|Win32'" />
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Test|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Test|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Test|x64'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='UnitTest_Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='UnitTest_Release|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='UnitTest_Release|Win32'" />
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='UnitTest_Release|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='UnitTest_Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='UnitTest_Release|x64'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='UnitTest|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='UnitTest|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='UnitTest|Win32'" />
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='UnitTest|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='UnitTest|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='UnitTest|x64'" />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <EmbedManifest>false</EmbedManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <EmbedManifest>false</EmbedManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(SolutionDir).;$(SolutionDir)..\ext\ssuk\basar\include;$(SolutionDir)..\ext\boost\include;$(SolutionDir)..\ext\log4cplus\include;$(SolutionDir)..\ext\libutil\include;$(SolutionDir)..\ext\libutil\include\libutil;$(SolutionDir)..\ext\liblockmanager\include;$(SolutionDir)pxverbund\include;$(SolutionDir)cxxtools\include;$(QTDIR)\include;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtSql;.;$(SolutionDir)libcsc;$(SolutionDir)csc_host_interface\libcsc_utils;$(SolutionDir)csc_host_interface\libbatch;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_WIN32;WIN32;_DEBUG;_WINDOWS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <MultiProcessorCompilation>false</MultiProcessorCompilation>
+      <ProgramDataBaseFileName>$(TargetDir)$(TargetName).pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>cxxtools.lib;pxdb.lib;pxverbund.lib;libcsc.lib;libcsc_utils.lib;libutil.lib;libbasarcmnutil.lib;libbasardbaspect.lib;libbasarproperty.lib;libbasardbsql.lib;log4cplusd.lib;libbasarlogin.lib;libbasarappl.lib;libbasarguitie.lib;libbasarguiqt.lib;libbasarqtwidget.lib;qtmaind.lib;Qt5Cored.lib;Qt5Guid.lib;Qt5Widgetsd.lib;wsock32.lib;shell32.lib;Rpcrt4.lib;liblockmanager.lib;tcaapi.lib;tca.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(ProjectName).exe</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>$(SolutionDir)$(Configuration);$(SolutionDir)..\ext\libutil\lib\$(Configuration);$(SolutionDir)..\ext\ssuk\sharedlib\$(Configuration);$(SolutionDir)..\ext\ssuk\basar\lib\$(Configuration);$(SolutionDir)..\ext\log4cplus\lib\$(Configuration);$(SolutionDir)..\ext\liblockmanager\lib\$(Configuration);$(SolutionDir)..\ext\Boost\lib\;$(SolutionDir)..\ext\tcaccess_libraries\lib\x86;$(QTDIR)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <IgnoreSpecificDefaultLibraries>msvcrt.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)$(ProjectName).pdb</ProgramDatabaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <PostBuildEvent>
+      <Message>
+      </Message>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(SolutionDir).;$(SolutionDir)..\ext\ssuk\basar\include;$(SolutionDir)..\ext\boost\include;$(SolutionDir)..\ext\log4cplus\include;$(SolutionDir)..\ext\libutil\include;$(SolutionDir)..\ext\libutil\include\libutil;$(SolutionDir)..\ext\liblockmanager\include;$(SolutionDir)pxverbund\include;$(SolutionDir)cxxtools\include;$(QTDIR)\include;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtSql;.;$(SolutionDir)libcsc;$(SolutionDir)csc_host_interface\libcsc_utils;$(SolutionDir)csc_host_interface\libbatch;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_WIN32;WIN32;_DEBUG;_WINDOWS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <MultiProcessorCompilation>false</MultiProcessorCompilation>
+      <ProgramDataBaseFileName>$(TargetDir)$(TargetName).pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>cxxtools.lib;pxdb.lib;pxverbund.lib;libcsc.lib;libcsc_utils.lib;libutil.lib;libbasarcmnutil.lib;libbasardbaspect.lib;libbasarproperty.lib;libbasardbsql.lib;log4cplusd.lib;libbasarlogin.lib;libbasarappl.lib;libbasarguitie.lib;libbasarguiqt.lib;libbasarqtwidget.lib;qtmaind.lib;Qt5Cored.lib;Qt5Guid.lib;Qt5Widgetsd.lib;wsock32.lib;shell32.lib;Rpcrt4.lib;liblockmanager.lib;tcaapi.lib;tca.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(ProjectName).exe</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>$(SolutionDir)$(Platform)\$(Configuration);$(SolutionDir)..\ext\libutil\lib\$(Configuration);$(SolutionDir)..\ext\ssuk\sharedlib\$(Configuration);$(SolutionDir)..\ext\ssuk\basar\lib\$(Configuration);$(SolutionDir)..\ext\log4cplus\lib\$(Configuration);$(SolutionDir)..\ext\liblockmanager\lib\$(Configuration);$(SolutionDir)..\ext\Boost\lib\;$(SolutionDir)..\ext\tcaccess_libraries\lib\$(Platform);$(QTDIR)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <IgnoreSpecificDefaultLibraries>msvcrt.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)$(ProjectName).pdb</ProgramDatabaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <PostBuildEvent>
+      <Message>
+      </Message>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <OmitFramePointers>true</OmitFramePointers>
+      <AdditionalIncludeDirectories>$(SolutionDir).;$(SolutionDir)..\ext\ssuk\basar\include;$(SolutionDir)..\ext\boost\include;$(SolutionDir)..\ext\log4cplus\include;$(SolutionDir)..\ext\libutil\include;$(SolutionDir)..\ext\libutil\include\libutil;$(SolutionDir)..\ext\liblockmanager\include;$(SolutionDir)pxverbund\include;$(SolutionDir)cxxtools\include;$(QTDIR)\include;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtSql;.;$(SolutionDir)libcsc;$(SolutionDir)csc_host_interface\libcsc_utils;$(SolutionDir)csc_host_interface\libbatch;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_WIN32;WIN32;NDEBUG;_WINDOWS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>false</StringPooling>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+      <AssemblerListingLocation>.\$(OutDir)</AssemblerListingLocation>
+      <ObjectFileName>.\$(OutDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(TargetDir)$(TargetName).pdb</ProgramDataBaseFileName>
+      <WarningLevel>Level4</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <CompileAs>CompileAsCpp</CompileAs>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>cxxtools.lib;pxdb.lib;pxverbund.lib;libcsc.lib;libutil.lib;libbasarcmnutil.lib;libbasardbaspect.lib;libbasarproperty.lib;libbasardbsql.lib;log4cplus.lib;libbasarlogin.lib;libbasarappl.lib;libbasarguitie.lib;libbasarguiqt.lib;libbasarqtwidget.lib;qtmain.lib;Qt5Core.lib;Qt5Gui.lib;Qt5Widgets.lib;wsock32.lib;shell32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(ProjectName).exe</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>$(SolutionDir)$(Configuration);$(SolutionDir)..\ext\libutil\lib\$(Configuration);$(SolutionDir)..\ext\ssuk\sharedlib\$(Configuration);$(SolutionDir)..\ext\ssuk\basar\lib\$(Configuration);$(SolutionDir)..\ext\log4cplus\lib\$(Configuration);$(SolutionDir)..\ext\liblockmanager\lib\$(Configuration);$(SolutionDir)..\ext\Boost\lib\;$(SolutionDir)..\ext\tcaccess_libraries\lib\x86;$(QTDIR)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ModuleDefinitionFile>
+      </ModuleDefinitionFile>
+      <SubSystem>Console</SubSystem>
+      <OptimizeReferences>
+      </OptimizeReferences>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Message>
+      </Message>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(SolutionDir).;$(SolutionDir)..\ext\ssuk\basar\include;$(SolutionDir)..\ext\boost\include;$(SolutionDir)..\ext\log4cplus\include;$(SolutionDir)..\ext\libutil\include;$(SolutionDir)..\ext\libutil\include\libutil;$(SolutionDir)..\ext\liblockmanager\include;$(SolutionDir)pxverbund\include;$(SolutionDir)cxxtools\include;$(QTDIR)\include;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtSql;.;$(SolutionDir)libcsc;$(SolutionDir)csc_host_interface\libcsc_utils;$(SolutionDir)csc_host_interface\libbatch;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <ProgramDataBaseFileName>$(TargetDir)$(TargetName).pdb</ProgramDataBaseFileName>
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>cxxtools.lib;pxdb.lib;pxverbund.lib;libcsc_utils.lib;libcsc.lib;libutil.lib;libbasarcmnutil.lib;libbasardbaspect.lib;libbasarproperty.lib;libbasardbsql.lib;log4cplus.lib;libbasarlogin.lib;libbasarappl.lib;libbasarguitie.lib;libbasarguiqt.lib;libbasarqtwidget.lib;qtmain.lib;Qt5Core.lib;Qt5Gui.lib;Qt5Widgets.lib;wsock32.lib;shell32.lib;Rpcrt4.lib;liblockmanager.lib;tcaapi.lib;tca.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)$(Platform)\$(Configuration);$(SolutionDir)..\ext\libutil\lib\$(Configuration);$(SolutionDir)..\ext\ssuk\sharedlib\$(Configuration);$(SolutionDir)..\ext\ssuk\basar\lib\$(Configuration);$(SolutionDir)..\ext\log4cplus\lib\$(Configuration);$(SolutionDir)..\ext\liblockmanager\lib\$(Configuration);$(SolutionDir)..\ext\Boost\lib\;$(SolutionDir)..\ext\tcaccess_libraries\lib\$(Platform);$(QTDIR)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ModuleDefinitionFile>
+      </ModuleDefinitionFile>
+      <SubSystem>Console</SubSystem>
+      <OptimizeReferences>
+      </OptimizeReferences>
+    </Link>
+    <PostBuildEvent>
+      <Message>
+      </Message>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='UnitTest|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(SolutionDir).;$(SolutionDir)..\ext\ssuk\basar\include;$(SolutionDir)..\ext\boost\include;$(SolutionDir)..\ext\log4cplus\include;$(SolutionDir)..\ext\libutil\include;$(SolutionDir)..\ext\libutil\include\libutil;$(SolutionDir)..\ext\liblockmanager\include;$(SolutionDir)pxverbund\include;$(SolutionDir)cxxtools\include;$(QTDIR)\include;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtSql;.;$(SolutionDir)libcsc;$(SolutionDir)csc_host_interface\libcsc_utils;$(SolutionDir)csc_host_interface\libbatch;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+      <WarningLevel>Level4</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <PostBuildEvent>
+      <Message>Copy language and config file</Message>
+      <Command>xcopy /s /q /y $(ProjectDir)\multilang\*.qm $(TargetDir)\multilang\</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='UnitTest|x64'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(SolutionDir).;$(SolutionDir)..\ext\ssuk\basar\include;$(SolutionDir)..\ext\boost\include;$(SolutionDir)..\ext\log4cplus\include;$(SolutionDir)..\ext\libutil\include;$(SolutionDir)..\ext\libutil\include\libutil;$(SolutionDir)..\ext\liblockmanager\include;$(SolutionDir)pxverbund\include;$(SolutionDir)cxxtools\include;$(QTDIR)\include;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtSql;.;$(SolutionDir)libcsc;$(SolutionDir)csc_host_interface\libcsc_utils;$(SolutionDir)csc_host_interface\libbatch;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+      <WarningLevel>Level4</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <PostBuildEvent>
+      <Message>Copy language and config file</Message>
+      <Command>xcopy /s /q /y $(ProjectDir)\multilang\*.qm $(TargetDir)\multilang\</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='UnitTest_Release|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <OmitFramePointers>true</OmitFramePointers>
+      <AdditionalIncludeDirectories>$(SolutionDir).;$(SolutionDir)..\ext\ssuk\basar\include;$(SolutionDir)..\ext\boost\include;$(SolutionDir)..\ext\log4cplus\include;$(SolutionDir)..\ext\libutil\include;$(SolutionDir)..\ext\libutil\include\libutil;$(SolutionDir)..\ext\liblockmanager\include;$(SolutionDir)pxverbund\include;$(SolutionDir)cxxtools\include;$(QTDIR)\include;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtSql;.;$(SolutionDir)libcsc;$(SolutionDir)csc_host_interface\libcsc_utils;$(SolutionDir)csc_host_interface\libbatch;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <MinimalRebuild>false</MinimalRebuild>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <TreatWChar_tAsBuiltInType>false</TreatWChar_tAsBuiltInType>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <PrecompiledHeaderFile>commonheader.h</PrecompiledHeaderFile>
+      <AssemblerListingLocation>.\$(OutDir)</AssemblerListingLocation>
+      <ObjectFileName>.\$(OutDir)</ObjectFileName>
+      <ProgramDataBaseFileName>.\$(OutDir)</ProgramDataBaseFileName>
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>libbasarcmnutil.lib;libbasardbaspect.lib;libbasarproperty.lib;libbasardbsql.lib;log4cplus.lib;libbasarlogin.lib;libbasarappl.lib;libbasarguitie.lib;libbasarguiqt.lib;libbasarqtwidget.lib;qtmain.lib;QtCore4.lib;QtGui4.lib;QtSql4.lib;wsock32.lib;kscclient.lib;articlesupplierdm.lib;supplierdm.lib;utils.lib;lockingDM.lib;moduleDM.lib;changehistoryDM.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(ProjectName).exe</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>$(SolutionDir)$(Configuration);$(SolutionDir)..\ext\libutil\lib\$(Configuration);$(SolutionDir)..\ext\ssuk\sharedlib\$(Configuration);$(SolutionDir)..\ext\ssuk\basar\lib\$(Configuration);$(SolutionDir)..\ext\log4cplus\lib\$(Configuration);$(SolutionDir)..\ext\liblockmanager\lib\$(Configuration);$(SolutionDir)..\ext\Boost\lib\;$(SolutionDir)..\ext\tcaccess_libraries\lib\x86;$(QTDIR)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <ModuleDefinitionFile>
+      </ModuleDefinitionFile>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>
+      </OptimizeReferences>
+      <TargetMachine>NotSet</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Message>Copy language and config file</Message>
+      <Command>xcopy /s /q /y $(ProjectDir)\multilang\*.qm $(TargetDir)\multilang\</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='UnitTest_Release|x64'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <OmitFramePointers>true</OmitFramePointers>
+      <AdditionalIncludeDirectories>$(SolutionDir).;$(SolutionDir)..\ext\ssuk\basar\include;$(SolutionDir)..\ext\boost\include;$(SolutionDir)..\ext\log4cplus\include;$(SolutionDir)..\ext\libutil\include;$(SolutionDir)..\ext\libutil\include\libutil;$(SolutionDir)..\ext\liblockmanager\include;$(SolutionDir)pxverbund\include;$(SolutionDir)cxxtools\include;$(QTDIR)\include;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtSql;.;$(SolutionDir)libcsc;$(SolutionDir)csc_host_interface\libcsc_utils;$(SolutionDir)csc_host_interface\libbatch;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <MinimalRebuild>false</MinimalRebuild>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <TreatWChar_tAsBuiltInType>false</TreatWChar_tAsBuiltInType>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <PrecompiledHeaderFile>commonheader.h</PrecompiledHeaderFile>
+      <AssemblerListingLocation>.\$(OutDir)</AssemblerListingLocation>
+      <ObjectFileName>.\$(OutDir)</ObjectFileName>
+      <ProgramDataBaseFileName>.\$(OutDir)</ProgramDataBaseFileName>
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>libbasarcmnutil.lib;libbasardbaspect.lib;libbasarproperty.lib;libbasardbsql.lib;log4cplus.lib;libbasarlogin.lib;libbasarappl.lib;libbasarguitie.lib;libbasarguiqt.lib;libbasarqtwidget.lib;qtmain.lib;QtCore4.lib;QtGui4.lib;QtSql4.lib;wsock32.lib;kscclient.lib;articlesupplierdm.lib;supplierdm.lib;utils.lib;lockingDM.lib;moduleDM.lib;changehistoryDM.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(ProjectName).exe</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>$(SolutionDir)$(Configuration);$(SolutionDir)..\ext\libutil\lib\$(Configuration);$(SolutionDir)..\ext\ssuk\sharedlib\$(Configuration);$(SolutionDir)..\ext\ssuk\basar\lib\$(Configuration);$(SolutionDir)..\ext\log4cplus\lib\$(Configuration);$(SolutionDir)..\ext\liblockmanager\lib\$(Configuration);$(SolutionDir)..\ext\Boost\lib\;$(SolutionDir)..\ext\tcaccess_libraries\lib\x86;$(QTDIR)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <ModuleDefinitionFile>
+      </ModuleDefinitionFile>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>
+      </OptimizeReferences>
+    </Link>
+    <PostBuildEvent>
+      <Message>Copy language and config file</Message>
+      <Command>xcopy /s /q /y $(ProjectDir)\multilang\*.qm $(TargetDir)\multilang\</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Test|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <OmitFramePointers>true</OmitFramePointers>
+      <AdditionalIncludeDirectories>$(SolutionDir).;$(SolutionDir)..\ext\ssuk\basar\include;$(SolutionDir)..\ext\boost\include;$(SolutionDir)..\ext\log4cplus\include;$(SolutionDir)..\ext\libutil\include;$(SolutionDir)..\ext\libutil\include\libutil;$(SolutionDir)..\ext\liblockmanager\include;$(SolutionDir)pxverbund\include;$(SolutionDir)cxxtools\include;$(QTDIR)\include;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtSql;.;$(SolutionDir)libcsc;$(SolutionDir)csc_host_interface\libcsc_utils;$(SolutionDir)csc_host_interface\libbatch;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <MinimalRebuild>false</MinimalRebuild>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <TreatWChar_tAsBuiltInType>false</TreatWChar_tAsBuiltInType>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <PrecompiledHeaderFile>commonheader.h</PrecompiledHeaderFile>
+      <AssemblerListingLocation>.\$(OutDir)</AssemblerListingLocation>
+      <ObjectFileName>.\$(OutDir)</ObjectFileName>
+      <ProgramDataBaseFileName>.\$(OutDir)</ProgramDataBaseFileName>
+      <WarningLevel>Level4</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>libbasarcmnutil.lib;libbasardbaspect.lib;libbasarproperty.lib;libbasardbsql.lib;log4cplusd.lib;libbasarlogin.lib;libbasarappl.lib;libbasarguitie.lib;libbasarguiqt.lib;libbasarqtwidget.lib;qtmain.lib;QtCore4.lib;QtGui4.lib;QtSql4.lib;wsock32.lib;kscclient.lib;articlesupplierdm.lib;supplierdm.lib;utils.lib;lockingdm.lib;moduledm.lib;changehistorydm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(ProjectName).exe</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>$(SolutionDir)$(Configuration);$(SolutionDir)..\ext\libutil\lib\$(Configuration);$(SolutionDir)..\ext\ssuk\sharedlib\$(Configuration);$(SolutionDir)..\ext\ssuk\basar\lib\$(Configuration);$(SolutionDir)..\ext\log4cplus\lib\$(Configuration);$(SolutionDir)..\ext\liblockmanager\lib\$(Configuration);$(SolutionDir)..\ext\Boost\lib\;$(SolutionDir)..\ext\tcaccess_libraries\lib\x86;$(QTDIR)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <ModuleDefinitionFile>
+      </ModuleDefinitionFile>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>
+      </OptimizeReferences>
+      <TargetMachine>NotSet</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Message>Copy language and config file</Message>
+      <Command>xcopy /s /q /y $(ProjectDir)\multilang\*.qm $(TargetDir)\multilang\</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Test|x64'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <OmitFramePointers>true</OmitFramePointers>
+      <AdditionalIncludeDirectories>$(SolutionDir).;$(SolutionDir)..\ext\ssuk\basar\include;$(SolutionDir)..\ext\boost\include;$(SolutionDir)..\ext\log4cplus\include;$(SolutionDir)..\ext\libutil\include;$(SolutionDir)..\ext\libutil\include\libutil;$(SolutionDir)..\ext\liblockmanager\include;$(SolutionDir)pxverbund\include;$(SolutionDir)cxxtools\include;$(QTDIR)\include;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtSql;.;$(SolutionDir)libcsc;$(SolutionDir)csc_host_interface\libcsc_utils;$(SolutionDir)csc_host_interface\libbatch;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <MinimalRebuild>false</MinimalRebuild>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <TreatWChar_tAsBuiltInType>false</TreatWChar_tAsBuiltInType>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <PrecompiledHeaderFile>commonheader.h</PrecompiledHeaderFile>
+      <AssemblerListingLocation>.\$(OutDir)</AssemblerListingLocation>
+      <ObjectFileName>.\$(OutDir)</ObjectFileName>
+      <ProgramDataBaseFileName>.\$(OutDir)</ProgramDataBaseFileName>
+      <WarningLevel>Level4</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>libbasarcmnutil.lib;libbasardbaspect.lib;libbasarproperty.lib;libbasardbsql.lib;log4cplusd.lib;libbasarlogin.lib;libbasarappl.lib;libbasarguitie.lib;libbasarguiqt.lib;libbasarqtwidget.lib;qtmain.lib;QtCore4.lib;QtGui4.lib;QtSql4.lib;wsock32.lib;kscclient.lib;articlesupplierdm.lib;supplierdm.lib;utils.lib;lockingdm.lib;moduledm.lib;changehistorydm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(ProjectName).exe</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>$(SolutionDir)$(Configuration);$(SolutionDir)..\ext\libutil\lib\$(Configuration);$(SolutionDir)..\ext\ssuk\sharedlib\$(Configuration);$(SolutionDir)..\ext\ssuk\basar\lib\$(Configuration);$(SolutionDir)..\ext\log4cplus\lib\$(Configuration);$(SolutionDir)..\ext\liblockmanager\lib\$(Configuration);$(SolutionDir)..\ext\Boost\lib\;$(SolutionDir)..\ext\tcaccess_libraries\lib\x86;$(QTDIR)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <ModuleDefinitionFile>
+      </ModuleDefinitionFile>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>
+      </OptimizeReferences>
+    </Link>
+    <PostBuildEvent>
+      <Message>Copy language and config file</Message>
+      <Command>xcopy /s /q /y $(ProjectDir)\multilang\*.qm $(TargetDir)\multilang\</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuildStep Include="Resources\green_arrow_down.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Test|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Test|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnitTest_Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnitTest_Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnitTest|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnitTest|x64'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="Resources\green_arrow_up.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Test|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Test|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnitTest_Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnitTest_Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnitTest|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnitTest|x64'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="Resources\image1.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Test|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Test|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnitTest_Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnitTest_Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnitTest|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnitTest|x64'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="Resources\image2.png">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Test|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Test|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnitTest_Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnitTest_Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnitTest|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnitTest|x64'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="componentmanager\csc_phadexapplcompmgr.cpp" />
+    <ClCompile Include="componentmanager\csc_phadexinfrastructurecompmgr.cpp" />
+    <ClCompile Include="csc_phadex\csc_phadexapplctrl.cpp" />
+    <ClCompile Include="csc_phadex\version.c" />
+    <ClCompile Include="domainmodule\cicstransaction\cicstransactioncollectiondm.cpp" />
+    <ClCompile Include="domainmodule\cicstransaction\cicstransactiondm.cpp" />
+    <ClCompile Include="domainmodule\narcotics\narcoticsdm.cpp" />
+    <ClCompile Include="domainmodule\phadextransaction\phadextransactioncollectiondm.cpp" />
+    <ClCompile Include="domainmodule\phadextransaction\phadextransactiondm.cpp" />
+    <ClCompile Include="domainmodule\phadextransaction\transactionrecord\blockedarticlerecord\blockedarticlerecord.cpp" />
+    <ClCompile Include="domainmodule\phadextransaction\transactionrecord\deliverynotecancellation\deliverynotecancellation.cpp" />
+    <ClCompile Include="domainmodule\phadextransaction\transactionrecord\deliverynotecompleted\deliverynotecompleted.cpp" />
+    <ClCompile Include="domainmodule\phadextransaction\transactionrecord\documentprintinfo\documentprintinfo.cpp" />
+    <ClCompile Include="domainmodule\phadextransaction\transactionrecord\narcprintupdate\narcprintupdate.cpp" />
+    <ClCompile Include="domainmodule\phadextransaction\transactionrecord\sapreferencenorecord\sapreferencenorecord.cpp" />
+    <ClCompile Include="domainmodule\phadextransaction\transactionrecord\tenderinvoicecancellation\tenderinvoicecancellationrecord.cpp" />
+    <ClCompile Include="domainmodule\phadextransaction\transactionrecord\transactionrecordbase.cpp" />
+    <ClCompile Include="domainmodule\taskcontrol\taskcontroldm.cpp" />
+    <ClCompile Include="infrastructure\accessor\cicsdataacc.cpp" />
+    <ClCompile Include="infrastructure\accessor\narcoticsacc.cpp" />
+    <ClCompile Include="infrastructure\accessor\phadextransactionacc.cpp" />
+    <ClCompile Include="infrastructure\cmdline\csc_phadexcmdlineevaluator.cpp" />
+    <ClCompile Include="infrastructure\cmdline\csc_phadexcmdlineoptioncollection.cpp" />
+    <ClCompile Include="infrastructure\config\phadexxmlconfigreader.cpp" />
+    <ClCompile Include="infrastructure\config\xmlconfigreader.cpp" />
+    <ClCompile Include="infrastructure\parameter\dbparameter.cpp" />
+    <ClCompile Include="csc_phadex\main.cpp" />
+    <ClCompile Include="infrastructure\setup\csc_phadexinfrastructuresetup.cpp" />
+    <ClCompile Include="loggerpool\csc_phadex_loggerpool.cpp" />
+    <ClCompile Include="usecase\blockedarticleuc\blockedarticleuc.cpp" />
+    <ClCompile Include="usecase\deliverynotecancellationuc\deliverynotecancellationuc.cpp" />
+    <ClCompile Include="usecase\deliverynotecompleteduc\deliverynotecompleteduc.cpp" />
+    <ClCompile Include="usecase\documentprintinfouc\documentprintinfouc.cpp" />
+    <ClCompile Include="usecase\mainuc\mainuc.cpp" />
+    <ClCompile Include="usecase\narcprintupdateuc\narcprintupdateuc.cpp" />
+    <ClCompile Include="usecase\processuc\processuc.cpp" />
+    <ClCompile Include="usecase\processuc\transactionrecordmapper\transactionrecordmapper.cpp" />
+    <ClCompile Include="usecase\sapreferencenouc\sapreferencenouc.cpp" />
+    <ClCompile Include="usecase\tendercancellationuc\tendercancellationuc.cpp" />
+    <ClCompile Include="usecase\transferuc\transferuc.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="componentmanager\csc_phadexapplcompmgr.h" />
+    <ClInclude Include="componentmanager\csc_phadexapplcompmgrptr.h" />
+    <ClInclude Include="componentmanager\csc_phadexinfrastructurecompmgr.h" />
+    <ClInclude Include="componentmanager\csc_phadexinfrastructurecompmgrptr.h" />
+    <ClInclude Include="componentmanager\iusecasegetter.h" />
+    <ClInclude Include="componentmanager\iusecasegetterptr.h" />
+    <ClInclude Include="csc_phadex\csc_phadexapplctrl.h" />
+    <ClInclude Include="domainmodule\cicstransaction\cicstransactioncollectiondm.h" />
+    <ClInclude Include="domainmodule\cicstransaction\cicstransactioncollectiondmptr.h" />
+    <ClInclude Include="domainmodule\cicstransaction\cicstransactiondm.h" />
+    <ClInclude Include="domainmodule\cicstransaction\cicstransactiondmptr.h" />
+    <ClInclude Include="domainmodule\cicstransaction\icicstransaction.h" />
+    <ClInclude Include="domainmodule\cicstransaction\icicstransactioncollectionfinder.h" />
+    <ClInclude Include="domainmodule\cicstransaction\icicstransactioncollectionfinderptr.h" />
+    <ClInclude Include="domainmodule\cicstransaction\icicstransactionptr.h" />
+    <ClInclude Include="domainmodule\csc_phadex_properties_definitions.h" />
+    <ClInclude Include="domainmodule\dataconversionexception.h" />
+    <ClInclude Include="domainmodule\narcotics\inarcotics.h" />
+    <ClInclude Include="domainmodule\narcotics\inarcoticsptr.h" />
+    <ClInclude Include="domainmodule\narcotics\narcoticsdm.h" />
+    <ClInclude Include="domainmodule\narcotics\narcoticsdmptr.h" />
+    <ClInclude Include="domainmodule\phadexexception.h" />
+    <ClInclude Include="domainmodule\phadextransaction\iphadextransaction.h" />
+    <ClInclude Include="domainmodule\phadextransaction\iphadextransactioncollection.h" />
+    <ClInclude Include="domainmodule\phadextransaction\iphadextransactioncollectionptr.h" />
+    <ClInclude Include="domainmodule\phadextransaction\iphadextransactionptr.h" />
+    <ClInclude Include="domainmodule\phadextransaction\phadextransactioncollectiondm.h" />
+    <ClInclude Include="domainmodule\phadextransaction\phadextransactioncollectiondmptr.h" />
+    <ClInclude Include="domainmodule\phadextransaction\phadextransactiondm.h" />
+    <ClInclude Include="domainmodule\phadextransaction\phadextransactiondmptr.h" />
+    <ClInclude Include="domainmodule\phadextransaction\transactionrecord\blockedarticlerecord\blockedarticlerecord.h" />
+    <ClInclude Include="domainmodule\phadextransaction\transactionrecord\blockedarticlerecord\blockedarticlerecordptr.h" />
+    <ClInclude Include="domainmodule\phadextransaction\transactionrecord\blockedarticlerecord\iblockedarticlerecord.h" />
+    <ClInclude Include="domainmodule\phadextransaction\transactionrecord\blockedarticlerecord\iblockedarticlerecordptr.h" />
+    <ClInclude Include="domainmodule\phadextransaction\transactionrecord\deliverynotecancellation\deliverynotecancellation.h" />
+    <ClInclude Include="domainmodule\phadextransaction\transactionrecord\deliverynotecancellation\deliverynotecancellationptr.h" />
+    <ClInclude Include="domainmodule\phadextransaction\transactionrecord\deliverynotecancellation\ideliverynotecancellation.h" />
+    <ClInclude Include="domainmodule\phadextransaction\transactionrecord\deliverynotecancellation\ideliverynotecancellationptr.h" />
+    <ClInclude Include="domainmodule\phadextransaction\transactionrecord\deliverynotecompleted\deliverynotecompleted.h" />
+    <ClInclude Include="domainmodule\phadextransaction\transactionrecord\deliverynotecompleted\deliverynotecompletedptr.h" />
+    <ClInclude Include="domainmodule\phadextransaction\transactionrecord\deliverynotecompleted\ideliverynotecompleted.h" />
+    <ClInclude Include="domainmodule\phadextransaction\transactionrecord\deliverynotecompleted\ideliverynotecompletedptr.h" />
+    <ClInclude Include="domainmodule\phadextransaction\transactionrecord\documentprintinfo\documentprintinfo.h" />
+    <ClInclude Include="domainmodule\phadextransaction\transactionrecord\documentprintinfo\documentprintinfoptr.h" />
+    <ClInclude Include="domainmodule\phadextransaction\transactionrecord\documentprintinfo\idocumentprintinfo.h" />
+    <ClInclude Include="domainmodule\phadextransaction\transactionrecord\documentprintinfo\idocumentprintinfoptr.h" />
+    <ClInclude Include="domainmodule\phadextransaction\transactionrecord\itransactionrecord.h" />
+    <ClInclude Include="domainmodule\phadextransaction\transactionrecord\itransactionrecordptr.h" />
+    <ClInclude Include="domainmodule\phadextransaction\transactionrecord\narcprintupdate\inarcprintupdate.h" />
+    <ClInclude Include="domainmodule\phadextransaction\transactionrecord\narcprintupdate\inarcprintupdateptr.h" />
+    <ClInclude Include="domainmodule\phadextransaction\transactionrecord\narcprintupdate\narcprintupdate.h" />
+    <ClInclude Include="domainmodule\phadextransaction\transactionrecord\narcprintupdate\narcprintupdateptr.h" />
+    <ClInclude Include="domainmodule\phadextransaction\transactionrecord\sapreferencenorecord\isapreferencenorecord.h" />
+    <ClInclude Include="domainmodule\phadextransaction\transactionrecord\sapreferencenorecord\isapreferencenorecordptr.h" />
+    <ClInclude Include="domainmodule\phadextransaction\transactionrecord\sapreferencenorecord\sapreferencenorecord.h" />
+    <ClInclude Include="domainmodule\phadextransaction\transactionrecord\sapreferencenorecord\sapreferencenorecordptr.h" />
+    <ClInclude Include="domainmodule\phadextransaction\transactionrecord\tenderinvoicecancellation\itenderinvoicecancellationrecord.h" />
+    <ClInclude Include="domainmodule\phadextransaction\transactionrecord\tenderinvoicecancellation\itenderinvoicecancellationrecordptr.h" />
+    <ClInclude Include="domainmodule\phadextransaction\transactionrecord\tenderinvoicecancellation\tenderinvoicecancellationrecord.h" />
+    <ClInclude Include="domainmodule\phadextransaction\transactionrecord\tenderinvoicecancellation\tenderinvoicecancellationrecordptr.h" />
+    <ClInclude Include="domainmodule\phadextransaction\transactionrecord\transactionrecordbase.h" />
+    <ClInclude Include="domainmodule\phadextransaction\transactionrecord\transactionrecordtypeenum.h" />
+    <ClInclude Include="domainmodule\taskcontrol\itaskcontrol.h" />
+    <ClInclude Include="domainmodule\taskcontrol\itaskcontrolptr.h" />
+    <ClInclude Include="domainmodule\taskcontrol\taskcontroldm.h" />
+    <ClInclude Include="domainmodule\taskcontrol\taskcontroldmptr.h" />
+    <ClInclude Include="domainmodule\unknownrecordtypeexception.h" />
+    <ClInclude Include="infrastructure\accessor\cicsdataacc.h" />
+    <ClInclude Include="infrastructure\accessor\cicsdataacc_definitions.h" />
+    <ClInclude Include="infrastructure\accessor\narcoticsacc.h" />
+    <ClInclude Include="infrastructure\accessor\narcoticsacc_definitions.h" />
+    <ClInclude Include="infrastructure\accessor\phadextransactionacc.h" />
+    <ClInclude Include="infrastructure\accessor\phadextransactionacc_definitions.h" />
+    <ClInclude Include="infrastructure\cmdline\appargs.h" />
+    <ClInclude Include="infrastructure\cmdline\csc_phadexcmdlineevaluator.h" />
+    <ClInclude Include="infrastructure\cmdline\csc_phadexcmdlineevaluatorptr.h" />
+    <ClInclude Include="infrastructure\cmdline\csc_phadexcmdlineoptioncollection.h" />
+    <ClInclude Include="infrastructure\cmdline\csc_phadexcmdlineoption_definitions.h" />
+    <ClInclude Include="infrastructure\config\config.h" />
+    <ClInclude Include="infrastructure\config\phadexconfigstruct.h" />
+    <ClInclude Include="infrastructure\config\phadexxmlconfigreader.h" />
+    <ClInclude Include="infrastructure\config\xmlconfigreader.h" />
+    <ClInclude Include="infrastructure\login\login_definitions.h" />
+    <ClInclude Include="infrastructure\parameter\dbparameter.h" />
+    <ClInclude Include="infrastructure\parameter\dbparameterptr.h" />
+    <ClInclude Include="infrastructure\setup\csc_phadexinfrastructuresetup.h" />
+    <ClInclude Include="infrastructure\setup\csc_phadexinfrastructuresetupptr.h" />
+    <ClInclude Include="infrastructure\setup\icsc_phadexlogingetter.h" />
+    <ClInclude Include="infrastructure\setup\icsc_phadexlogingetterptr.h" />
+    <ClInclude Include="loggerpool\csc_phadex_loggerpool.h" />
+    <ClInclude Include="usecase\blockedarticleuc\blockedarticleuc.h" />
+    <ClInclude Include="usecase\blockedarticleuc\blockedarticleucptr.h" />
+    <ClInclude Include="usecase\blockedarticleuc\iblockedarticleuc.h" />
+    <ClInclude Include="usecase\blockedarticleuc\iblockedarticleucptr.h" />
+    <ClInclude Include="usecase\deliverynotecancellationuc\deliverynotecancellationuc.h" />
+    <ClInclude Include="usecase\deliverynotecancellationuc\deliverynotecancellationucptr.h" />
+    <ClInclude Include="usecase\deliverynotecancellationuc\ideliverynotecancellationuc.h" />
+    <ClInclude Include="usecase\deliverynotecancellationuc\ideliverynotecancellationucptr.h" />
+    <ClInclude Include="usecase\deliverynotecompleteduc\deliverynotecompleteduc.h" />
+    <ClInclude Include="usecase\deliverynotecompleteduc\deliverynotecompleteducptr.h" />
+    <ClInclude Include="usecase\deliverynotecompleteduc\ideliverynotecompleteduc.h" />
+    <ClInclude Include="usecase\deliverynotecompleteduc\ideliverynotecompleteducptr.h" />
+    <ClInclude Include="usecase\documentprintinfouc\documentprintinfouc.h" />
+    <ClInclude Include="usecase\documentprintinfouc\documentprintinfoucptr.h" />
+    <ClInclude Include="usecase\documentprintinfouc\idocumentprintinfouc.h" />
+    <ClInclude Include="usecase\documentprintinfouc\idocumentprintinfoucptr.h" />
+    <ClInclude Include="usecase\mainuc\mainuc.h" />
+    <ClInclude Include="usecase\mainuc\mainucptr.h" />
+    <ClInclude Include="usecase\narcprintupdateuc\inarcprintupdateuc.h" />
+    <ClInclude Include="usecase\narcprintupdateuc\inarcprintupdateucptr.h" />
+    <ClInclude Include="usecase\narcprintupdateuc\narcprintupdateuc.h" />
+    <ClInclude Include="usecase\narcprintupdateuc\narcprintupdateucptr.h" />
+    <ClInclude Include="usecase\processuc\processuc.h" />
+    <ClInclude Include="usecase\processuc\processucptr.h" />
+    <ClInclude Include="usecase\processuc\transactionrecordmapper\itransactionrecordmapper.h" />
+    <ClInclude Include="usecase\processuc\transactionrecordmapper\itransactionrecordmapperptr.h" />
+    <ClInclude Include="usecase\processuc\transactionrecordmapper\transactionrecordmapper.h" />
+    <ClInclude Include="usecase\processuc\transactionrecordmapper\transactionrecordmapperptr.h" />
+    <ClInclude Include="usecase\sapreferencenouc\isapreferencenouc.h" />
+    <ClInclude Include="usecase\sapreferencenouc\isapreferencenoucptr.h" />
+    <ClInclude Include="usecase\sapreferencenouc\sapreferencenouc.h" />
+    <ClInclude Include="usecase\sapreferencenouc\sapreferencenoucptr.h" />
+    <ClInclude Include="usecase\tendercancellationuc\itendercancellationuc.h" />
+    <ClInclude Include="usecase\tendercancellationuc\itendercancellationucptr.h" />
+    <ClInclude Include="usecase\tendercancellationuc\tendercancellationuc.h" />
+    <ClInclude Include="usecase\tendercancellationuc\tendercancellationucptr.h" />
+    <ClInclude Include="usecase\transferuc\itransferuc.h" />
+    <ClInclude Include="usecase\transferuc\itransferucptr.h" />
+    <ClInclude Include="usecase\transferuc\transferuc.h" />
+    <ClInclude Include="usecase\transferuc\transferucptr.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties QtVersion="4.4.3" Qt5Version_x0020_Win32="5.2.0" MocDir=".\viewconn\GeneratedFiles\$(ConfigurationName)" UicDir=".\viewconn\GeneratedFiles" RccDir=".\viewconn\GeneratedFiles" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

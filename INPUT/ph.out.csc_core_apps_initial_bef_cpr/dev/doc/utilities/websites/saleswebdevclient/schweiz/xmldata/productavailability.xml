@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<productAvailabilityRequest version="1.1">
+	<client number="9999011" password="DEMO"/>
+	<products>
+		<product number="0000000" quantity="1"/>
+		<product number="0003990" quantity="7"/>
+		<product number="0008616" quantity="11"/>
+		<product number="0004067" quantity="4"/>
+		<product number="0009969" quantity="3"/>
+	</products>
+</productAvailabilityRequest>

@@ -1,0 +1,78 @@
+###############################################################################################
+# HEADER-DATA 
+###############################################################################################
+#Author:        	Bischof Bjoern 
+#Creation-Date: 	19.07.2008
+#Creation-Time: 	19:43h
+#Purpose:           Maps the passed branch no to the corresponding informix server
+#Version:           2.0.0.3 2013-06-05 AIX
+###############################################################################################
+
+#====================================#
+# FUNCTION start_process
+#====================================#
+function get_ksc_infxsrv
+{
+	#-------------------------------------------------------------------------------------#
+	# LOCAL VARIABLES
+	#-------------------------------------------------------------------------------------#
+	local readonly _FUNCNAME="get_ksc_infxsrv";
+	local readonly _BRANCHNO=${1};	
+	local readonly _OK_RC=0;
+	local readonly _NO_PARAMETER_RC=1;	
+	local readonly _NO_NUMERIC_PARAMETER_RC=2;
+	local readonly _NO_VALID_BRANCHNO_RC=3;
+
+	#-------------------------------------------------------------------------------------#
+	# EVALUATION OF PARAMETER
+	#-------------------------------------------------------------------------------------#
+	if (( $# == 0 )) ; then 
+		echo "${_FUNCNAME} was called without any parameter!"; 
+		return ${_NO_PARAMETER_RC}; 
+	fi
+
+	#-------------------------------------------------------------------------------------#
+	# CHECKING IF PASSED PARAMETER IS NUMERIC
+	#-------------------------------------------------------------------------------------#
+	is_numeric "${_BRANCHNO}" "-NO_VERBOSE"
+	if (( 0 == $? )); then 
+		echo "${_FUNCNAME}: Passed first parameter <${_BRANCHNO}> was not numeric!"; 
+		return ${_NO_NUMERIC_PARAMETER_RC}; 		
+	fi
+	
+	#-------------------------------------------------------------------------------------#
+	# GETTING ABBREVIATION OF BRANCH / SALECENTER
+	#-------------------------------------------------------------------------------------#
+	local _server="onl_denu1zdev_tcp";
+
+	if [[ `hostname` != "DENU1ZDEV" ]];
+  	then
+		case ${_BRANCHNO} in
+       	 		05|5|06|08|09|6|8|9|21|31|33|40|44|46|51|52|54|56|57|58|59|70|78|81|82) 	_server="ode21_shm"
+       	                                                ;;
+       	 		30|32|34|35|36|37|38|39|47)  			_server="ofr21_shm"
+       	                                                ;;
+       	 		48|49)                          		_server="ofr21_shm"
+       	                                                ;;
+       	 		61|62|63|64)                    		_server="oat21_shm"
+       	                                                ;;
+       	 		71|72|73|74|75|77)              		_server="ohr21_shm"
+       	                                                ;;
+       	 	*)      echo "No valid branch no <${_BRANCHNO}> passed! Branch no could not be matched to a database!";
+                	return ${_NO_VALID_BRANCHNO_RC};
+                	;;
+	esac
+	fi
+
+	#-------------------------------------------------------------------------------------#
+	# IF SO SWITCHING TO EMERGENCY DATABASE
+	#-------------------------------------------------------------------------------------#								
+	if [[ "" != ${BACKUPFLAG} ]]; then
+		#_server=`echo ${_server} | sed 's/db1/dbe/g'`;
+		_server=`echo ${_server%%_*}${BACKUPFLAG}${_server#*_}`;
+	fi
+
+	echo ${_server};
+
+	return ${_OK_RC};
+}

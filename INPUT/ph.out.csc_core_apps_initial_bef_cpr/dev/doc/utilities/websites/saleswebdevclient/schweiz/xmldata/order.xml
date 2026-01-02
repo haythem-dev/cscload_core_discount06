@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<customerOrder xmlns="http://www.e-galexis.com/schemas/" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.e-galexis.com/schemas/ http://www.e-galexis.com/schemas/POS/customerOrder/customerOrder.xsd" 
+version="1.0" 
+productDescriptionDesired="true" 
+compressionDesired="true" language="de">  
+<client number="9999011" password="Yehewa23"/>  
+<orderHeader referenceNumber="SWCl"/>  
+<orderLines>    
+<productOrderLine orderQuantity="1"><pharmaCode id="0000655"/></productOrderLine>    
+<productOrderLine orderQuantity="2"><pharmaCode id="0003990"/></productOrderLine>    
+<productOrderLine orderQuantity="3"><pharmaCode id="0009975"/></productOrderLine>    
+<productOrderLine orderQuantity="4"><pharmaCode id="0008585"/></productOrderLine>    
+<productOrderLine orderQuantity="5"><pharmaCode id="0006936"/></productOrderLine>    
+</orderLines>
+</customerOrder>

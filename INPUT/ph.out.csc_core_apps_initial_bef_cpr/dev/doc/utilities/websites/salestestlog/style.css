@@ -1,0 +1,265 @@
+a:link { text-decoration:none; font-weight:bold; color:#e00000; }
+a:visited { text-decoration:none; font-weight:bold; color:#800000; }
+a:hover { text-decoration:none; font-weight:bold; background-color:#ff0; }
+a:active { text-decoration:none; font-weight:bold; background-color:#cff; }
+a:focus { text-decoration:none; font-weight:bold; background-color:#080; }
+
+body {
+ font-family: arial, helvetica;
+ color: #333366;
+ margin: 5;
+ padding: 5;
+}
+
+table {
+ margin: 0;
+ padding: 0;
+}
+
+.table_border {
+ border: 0px solid #333366;
+ border-collapse: collapse;
+ margin: 0;
+ padding: 0;
+}
+
+th {
+ background-color: #6599CB;
+ color: #000000;
+ border: 0;
+ margin: 0;
+ padding: 1;
+ border-bottom: #333366;
+ border-bottom-style: solid; 
+ border-bottom-width: 2;
+ border-left: #6599CB;
+}
+
+.th_border {
+ border: 1px solid #333366;
+ border-collapse: collapse;
+ background-color: #e0e0e0;
+ margin: 0;
+ padding: 1;
+}
+
+tr {
+ border: 0;
+ margin: 0;
+ padding: 0;
+}
+
+.tr_border {
+ border: 1px solid #333366;
+ border-collapse: collapse;
+ margin: 0;
+ padding: 0;
+}
+
+tr.normal
+{
+ border: 0;
+ margin: 0;
+ padding: 2;
+ cursor:hand;
+}
+
+tr.hover
+{
+ border: 0;
+ margin: 0;
+ padding: 2;
+ background-color: #bbddbb;
+ cursor:hand;
+}
+
+td {
+ border: 0;
+ margin: 0;
+ padding: 2;
+}
+
+.td_border {
+ border: 1px solid #000099;
+ border-collapse: collapse;
+ margin: 0;
+ padding: 2;
+}
+
+H1
+{
+    BORDER-RIGHT: #333366;
+    BORDER-TOP: #333366;
+    FONT-WEIGHT: lighter;
+    FONT-SIZE: 24pt;
+    BORDER-LEFT: #333366;
+    COLOR: #000099;
+    BORDER-BOTTOM: #333366;
+    FONT-FAMILY: arial, helvetica;
+    BACKGROUND-COLOR: transparent;
+    TEXT-DECORATION: none;
+    margin: 1px;
+
+}
+
+H2
+{
+    BORDER-RIGHT: #333366;
+    BORDER-TOP: #333366;
+    FONT-WEIGHT: lighter;
+    FONT-SIZE: 18pt;
+    BORDER-LEFT: #333366;
+    COLOR: #333366;
+    BORDER-BOTTOM: #333366;
+    FONT-FAMILY: arial, helvetica;
+    BACKGROUND-COLOR: transparent;
+    TEXT-DECORATION: none;
+    margin: 1px;
+}
+H3
+{
+    FONT-SIZE: 14pt;
+    FONT-WEIGHT: lighter;
+    FONT-FAMILY: arial, helvetica;
+    COLOR: #333366;
+    margin: 1px;
+}
+H4
+{
+    FONT-WEIGHT: bolder;
+    FONT-SIZE: 8pt;
+    TEXT-TRANSFORM: none;
+    COLOR: #333366;
+    FONT-FAMILY: arial, helvetica;
+    margin: 1px;
+    PADDING: 0pt;
+}
+H5
+{
+    FONT-WEIGHT: lighter;
+    FONT-SIZE: 10pt;
+    TEXT-TRANSFORM: none;
+    COLOR: #333366;
+    FONT-FAMILY: arial, helvetica;
+    margin: 1px;
+    PADDING: 0pt;
+}
+H6
+{
+    FONT-WEIGHT: lighter;
+    FONT-SIZE: 8pt;
+    COLOR: #A3C1E0;
+    FONT-FAMILY: arial, helvetica;
+    MARGIN: 0px;
+}
+hr { 
+  size: 1px;
+  height: 1px;
+  color: #333366;
+}
+INPUT {
+  font-family: arial, helvetica;
+  font-size: 12pt;
+  color: #333366;
+}
+.textareaA {
+  font-family: arial, helvetica;
+  font-size: 12pt;
+  font-align: left;
+  color: #000000;
+  background-color: #FFFFFF;
+  border: 0;
+  overflow: auto;
+  cursor: hand;
+}
+.textareaAover {
+  font-family: arial, helvetica;
+  font-size: 12pt;
+  font-align: left;
+  color: #333366;
+  background-color: #FFFFFF;
+  text-decoration: underline;
+  border: 0;
+  overflow: auto;
+  cursor: hand;
+}
+
+SELECT {
+  font-family: arial, helvetica;
+  font-size: 12pt;
+  color: #333366;
+}
+
+.ok_cell{
+  border: 1px solid #000000; 
+  background-color: #E6EFF8;
+}
+
+.not_cell{
+  border: 1px solid #999999;
+}
+legend {
+	font-family: arial;
+	color: 990000;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+
+.menu_body {
+	color: #000000; 
+	font-family: arial;
+	background: #E6EFF8;
+	overflow-x: hidden; 
+	overflow-y: auto;
+	margin: 0;
+	padding: 0;
+	scrollbar-face-color: #FFFFFF; 
+	scrollbar-highlight-color: #FFFFFF; 
+	scrollbar-shadow-color: #FFFFFF; 
+	scrollbar-3dlight-color: #92C2EA;
+	scrollbar-arrow-color: #333366; 
+	scrollbar-track-color: #D8EBF9; 
+	scrollbar-darkshadow-color: #92C2EA;
+}
+.menu_table { 
+	font-family: arial;
+	color: 000099;
+	font-size: 12px; 
+	margin: 0;
+	padding: 0;
+}
+
+<!--
+Input Fields in Tables
+-->
+.tbl_input {
+	font-family: arial, helvetica;
+	font-size: 12pt;
+	font-weight: bold;
+ 	color: #333366;
+ 	border-left-width: 0px; 
+ 	border-right-width: 0px; 
+ 	border-top-width: 0px; 
+ 	border-bottom-style: solid; 
+ 	border-bottom-width: 1px;
+ 	background-color: #E6EFF8;
+}
+.tbl_input_dark {
+	font-size: 12pt; 
+	text-indent: 0; 
+	line-height: 100%; 
+	float: left; 
+	border-style: solid; 
+	border-width: 0px; 
+	background-color: #E6EFF8
+}
+.tbl_input_light {
+	font-size: 12pt; 
+	text-indent: 0; 
+	line-height: 100%; 
+	float: left; 
+	border-style: solid; 
+	border-width: 0px; 
+	background-color: #F9F9F9
+}

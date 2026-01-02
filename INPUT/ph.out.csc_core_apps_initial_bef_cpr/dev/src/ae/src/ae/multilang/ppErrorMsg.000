@@ -1,0 +1,23 @@
+///////////////////////////////////////////////////////
+// english error-string file			             //
+///////////////////////////////////////////////////////
+
+// generic strings
+
+000 01	"succesful"
+000 02  "xxxxxxxx"
+000 03  "No data were initialized" 
+000 04  "Positioning outside of the list"
+000 05  "no record found"
+000 06  "Error with data base access"
+000 07  "Error in the data!"
+000 08  "row is locked!"
+000 09  "Record is already available"
+000 10  "No write authorizations exist"
+000 11  "no modification detedted"
+000 12	"Leg exceeding"
+000 13  "Transaction was started before"
+000 14  "no transaction started"
+000 15  "set is changed"
+000 15  "out of memory!"
+

@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+
+<project name="thrift" default="help" basedir="." xmlns:contrib="antlib:net.sf.antcontrib">
+  <!-- ====================================================== -->
+
+  <property name="settings_server" value="tfs-nexus"/>
+  <property name="settings_version" value="4.0.0"/>
+
+  <include>
+    <url url="http://${settings_server}:8081/repository/genesis/eu/phoenixgroup/buildenv_ivy/${settings_version}/macro.ant-${settings_version}.xml"/>
+  </include>
+
+  <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+  <target name="help">
+    <displayHelp/>
+  </target>
+
+  <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+  <target name="prepare" description="extract">
+    <buildScriptWin  path="." script="proc\prepare.bat" />
+    <buildScriptUnix path="." script="proc/prepare.sh" />
+  </target>
+
+  <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+  <target name="full" description="clean rebuild" depends="prepare">
+    <buildScriptWin  path="." script="proc\build.bat" />
+    <buildScriptUnix path="." script="proc/build.sh" />
+  </target>
+
+  <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+  <target name="incremental" description="incremental build">
+    <buildScriptWin  path="." script="proc\build.bat" />
+    <buildScriptUnix path="." script="proc/build.sh" />
+  </target>
+
+  <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+  <target name="export" description="exporting and compressing created artifacts">
+    <buildScriptWin  path="." script="proc\export.bat" />
+    <buildScriptUnix path="." script="proc/export.sh" />
+  </target>
+
+  <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+  <target name="retrieve">
+    <retrieve additional-config="compile"/>
+  </target>
+
+  <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+  <target name="publish">
+    <publish/>
+  </target>
+
+  <!-- ====================================================== -->
+</project>

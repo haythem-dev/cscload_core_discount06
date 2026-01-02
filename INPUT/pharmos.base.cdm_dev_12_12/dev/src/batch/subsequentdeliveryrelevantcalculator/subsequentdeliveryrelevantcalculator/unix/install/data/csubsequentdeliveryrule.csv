@@ -1,0 +1,8 @@
+3;CheckArticlePPEState;if zartikel.kontigent_ppe (CHAR1) = csubsequentdeliveryparam.value1 then subsequentdelivery = 1;
+4;CheckLimitedArticleState;if zartikel.kontigent_mengensteuerung (SMALLINT) = csubsequentdeliveryparam.value1 then subsequentdelivery = 1;
+5;CheckNarcoticArticleState;if zartikel.btm (CHAR[1]) = csubsequentdeliveryparam.value1 then subsequentdelivery = 1;
+6;CheckPeriodForDelivery;if zartikel.datum_lieferbar_ab > today minus csubsequentdeliveryparam.value1 and zartikel.datum_lieferbar_ab <= today plus csubsequentdeliveryparam.value2 then subsequentdelivery = 1;
+7;CheckArticleCoolingState;if zartikel.kuehlartikel <= csubsequentdeliveryparam.value1 then subsequentdelivery = 1;
+8;CheckArticleActiveStorageLocation;if csusbsequentdeliveryparam.value1 <= artikelf.lagerfachnr <= csusbsequentdeliveryparam.value2 then subsequentdelivery = 1;
+9;CheckOpenOrderQuantity;if artikelf.offene_bestmenge > csusbsequentdeliveryparam.value1 then subsequentdelivery = 1;
+10;CheckOpenOrderQuantityNotEffective;if artikelf.openorderqty_notefective > csusbsequentdeliveryparam.value1 then subsequentdelivery = 1;

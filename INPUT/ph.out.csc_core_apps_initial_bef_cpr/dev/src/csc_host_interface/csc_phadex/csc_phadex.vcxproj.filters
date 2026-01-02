@@ -1,0 +1,810 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="UseCase">
+      <UniqueIdentifier>{4E58C225-6CC3-1014-9E3F-8461FFB45C6A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UseCase\MainUC">
+      <UniqueIdentifier>{4E58C3D8-6CC3-1014-9E3F-8461FFB45C6A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure">
+      <UniqueIdentifier>{4E58C55D-6CC3-1014-9E3F-8461FFB45C6A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\CommandLine">
+      <UniqueIdentifier>{4E58C6D3-6CC3-1014-9E3F-8461FFB45C6A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\Login">
+      <UniqueIdentifier>{4E58C846-6CC3-1014-9E3F-8461FFB45C6A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\CommandLine\CmdLineOption">
+      <UniqueIdentifier>{4E58C9B1-6CC3-1014-9E3F-8461FFB45C6A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\CommandLine\CmdLineEvaluator">
+      <UniqueIdentifier>{4E58CB23-6CC3-1014-9E3F-8461FFB45C6A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ComponentManager">
+      <UniqueIdentifier>{4E58CC93-6CC3-1014-9E3F-8461FFB45C6A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ComponentManager\ApplCompMgr">
+      <UniqueIdentifier>{4E58CECB-6CC3-1014-9E3F-8461FFB45C6A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ComponentManager\ApplCompMgr\Interface">
+      <UniqueIdentifier>{4E58D05F-6CC3-1014-9E3F-8461FFB45C6A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ComponentManager\ApplCompMgr\Interface\UseCaseGetter">
+      <UniqueIdentifier>{4E58D1E6-6CC3-1014-9E3F-8461FFB45C6A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ComponentManager\ApplCompMgr\Impl">
+      <UniqueIdentifier>{4E58D354-6CC3-1014-9E3F-8461FFB45C6A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ComponentManager\InfrastructureCompMgr">
+      <UniqueIdentifier>{4E58D4C2-6CC3-1014-9E3F-8461FFB45C6A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\Setup">
+      <UniqueIdentifier>{4E58D62F-6CC3-1014-9E3F-8461FFB45C6A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\Setup\Interface">
+      <UniqueIdentifier>{4E58D7C4-6CC3-1014-9E3F-8461FFB45C6A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\Setup\impl">
+      <UniqueIdentifier>{4E58D92F-6CC3-1014-9E3F-8461FFB45C6A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\Parameter">
+      <UniqueIdentifier>{4E58DA9C-6CC3-1014-9E3F-8461FFB45C6A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Csc_phadex">
+      <UniqueIdentifier>{4E58DC95-6CC3-1014-9E3F-8461FFB45C6A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Csc_phadex\ApplController">
+      <UniqueIdentifier>{4E58DE7E-6CC3-1014-9E3F-8461FFB45C6A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Loggerpool">
+      <UniqueIdentifier>{970692c5-955b-42ca-ba41-a31f8816423c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\Config">
+      <UniqueIdentifier>{81832ceb-bdb5-4d4a-9de2-d5dc56b89c0c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\Accessor">
+      <UniqueIdentifier>{c8df30de-be59-4fc8-abd2-2f3ed7eba855}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModule">
+      <UniqueIdentifier>{58f46ca6-8b8f-4f0a-919b-84407930f0bc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\Accessor\DRKSC">
+      <UniqueIdentifier>{4c8be828-e452-4801-8baf-6553464f73f7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\Accessor\PhadexTransaction">
+      <UniqueIdentifier>{31a0098d-5d3f-448b-b886-5668140463d3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UseCase\TransferUC">
+      <UniqueIdentifier>{afa44d01-a2ad-4728-87b4-e04703f0e941}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModule\TaskControl">
+      <UniqueIdentifier>{724d6456-6f2d-4a06-89af-a52339e0cfdd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModule\TaskControl\Interface">
+      <UniqueIdentifier>{5bac2c4b-528f-4de9-8704-97a3c27f7f30}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModule\TaskControl\Impl">
+      <UniqueIdentifier>{73c86302-c300-42cd-a2b4-6650e261560b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UseCase\TransferUC\Interface">
+      <UniqueIdentifier>{8d14e951-750b-44a9-9347-6f52906fcf02}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UseCase\TransferUC\Impl">
+      <UniqueIdentifier>{0bbe61a5-2b07-49c9-907d-fe3d570912a2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UseCase\ProcessUC">
+      <UniqueIdentifier>{524220fa-74b8-42c4-8b92-dddc265975e0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModule\CICSTransaction">
+      <UniqueIdentifier>{80a38e18-669b-4587-8823-f8901a4b64c5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModule\CICSTransaction\CICSTransactionCollection">
+      <UniqueIdentifier>{78d0dc6a-67e2-4bd9-a0c4-b9a125dbf630}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModule\CICSTransaction\CICSTransactionCollection\Interface">
+      <UniqueIdentifier>{a988ee88-5f61-4555-8349-92765bcc1ffe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModule\CICSTransaction\CICSTransactionCollection\Impl">
+      <UniqueIdentifier>{207f3175-3692-4ab1-adec-a7b6ec925044}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModule\CICSTransaction\Interface">
+      <UniqueIdentifier>{c2b70b3a-e51e-4441-8765-32f90fcb8982}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModule\CICSTransaction\Impl">
+      <UniqueIdentifier>{6fa509d9-3c7f-4f37-9557-3b78f88a09e8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModule\PhadexTransaction">
+      <UniqueIdentifier>{51b4bf77-a89c-4fab-88b9-beb583f62ad6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModule\PhadexTransaction\Interface">
+      <UniqueIdentifier>{0c980b11-9c14-432b-be10-e07ee40a9060}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModule\PhadexTransaction\Impl">
+      <UniqueIdentifier>{f2598c64-e40f-495a-b643-36c82cc4ae84}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModule\PhadexTransaction\PhadexTransactionCollectionDM">
+      <UniqueIdentifier>{c3d5e873-d20e-4d59-a444-7458eec79fca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModule\PhadexTransaction\PhadexTransactionCollectionDM\Interface">
+      <UniqueIdentifier>{5ffdb217-77ee-495c-b910-1b23f8b4a272}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModule\PhadexTransaction\PhadexTransactionCollectionDM\Impl">
+      <UniqueIdentifier>{68c6051d-6d91-447d-b835-eb15d4bb5d15}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModule\PhadexTransaction\TransactionRecord">
+      <UniqueIdentifier>{105e4304-f75b-4b9d-bebe-f071d794a2cb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModule\PhadexTransaction\TransactionRecord\TenderInvoiceCancellation">
+      <UniqueIdentifier>{458215d4-5faa-4fc3-886f-bf9a2f0e2378}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModule\PhadexTransaction\TransactionRecord\Interface">
+      <UniqueIdentifier>{ff714ef4-a9f2-48c2-a2d0-1851fca824d8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModule\PhadexTransaction\TransactionRecord\Impl">
+      <UniqueIdentifier>{dd61c4c2-9a84-40fe-b108-35158e251423}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModule\PhadexTransaction\TransactionRecord\TenderInvoiceCancellation\Interface">
+      <UniqueIdentifier>{a92499b6-1296-4111-b108-9018ca8362d1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModule\PhadexTransaction\TransactionRecord\TenderInvoiceCancellation\Impl">
+      <UniqueIdentifier>{bd97d017-581a-4ff4-9047-faf04a07d31b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UseCase\ProcessUC\TransactionRecordMapper">
+      <UniqueIdentifier>{b9fe736a-2c70-4123-b7d5-204d901470fa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UseCase\ProcessUC\TransactionRecordMapper\Interface">
+      <UniqueIdentifier>{1d05c3eb-bf6f-413e-885c-d2f127f95a3b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UseCase\ProcessUC\TransactionRecordMapper\Impl">
+      <UniqueIdentifier>{546601c4-cbbe-473c-ac02-a8f5e8d8d224}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Exceptions">
+      <UniqueIdentifier>{33ce11f1-5705-4f5d-871e-53d1a827bd4f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UseCase\TenderCancellationUC">
+      <UniqueIdentifier>{1d45b43b-6bfc-4470-bfd6-ea3c471e3919}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UseCase\TenderCancellationUC\Impl">
+      <UniqueIdentifier>{d9e5ee2f-b0c8-4e4c-bb5a-3cc2ad96140d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UseCase\TenderCancellationUC\Interface">
+      <UniqueIdentifier>{25081fc5-476f-48e0-ab9d-a7a544c8f222}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModule\PhadexTransaction\TransactionRecord\NarcPrintUpdate">
+      <UniqueIdentifier>{b036f431-2075-4f1d-a404-adcee2c23388}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModule\PhadexTransaction\TransactionRecord\NarcPrintUpdate\Impl">
+      <UniqueIdentifier>{95385055-ebbb-4f11-89d2-15fc62a6ed73}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModule\PhadexTransaction\TransactionRecord\NarcPrintUpdate\Interface">
+      <UniqueIdentifier>{5fae4149-3f2e-42d9-8ac5-0fa83521acf3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModule\Narcotics">
+      <UniqueIdentifier>{1c810172-6b38-433c-b6ea-6919a88922b2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModule\Narcotics\Interface">
+      <UniqueIdentifier>{41033674-fba2-406b-b909-b6705129a217}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModule\Narcotics\Impl">
+      <UniqueIdentifier>{b5ee2e80-fc13-47a6-a87e-865360016bad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\Accessor\Narcotics">
+      <UniqueIdentifier>{f8806888-4d19-4aeb-9683-8230573d9cf1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UseCase\NarcPrintUpdateUC">
+      <UniqueIdentifier>{5ae6b565-b370-4670-b6bc-f51216d08b5a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UseCase\NarcPrintUpdateUC\Impl">
+      <UniqueIdentifier>{e8da4dd1-57ae-434a-8e23-275ebf034f9e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UseCase\NarcPrintUpdateUC\Interface">
+      <UniqueIdentifier>{0b9680ac-4e51-4738-8443-8c496b2d60cb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModule\PhadexTransaction\TransactionRecord\DeliveryNoteCompleted">
+      <UniqueIdentifier>{5fd72c38-701e-4234-884e-7a8f1086bfd2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModule\PhadexTransaction\TransactionRecord\DeliveryNoteCompleted\Impl">
+      <UniqueIdentifier>{1b88f31b-037e-4719-a5b1-f93840198901}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModule\PhadexTransaction\TransactionRecord\DeliveryNoteCompleted\Interface">
+      <UniqueIdentifier>{145fd694-7ae9-4247-a737-eafc23500cdd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UseCase\DeliveryNoteCompletedUC">
+      <UniqueIdentifier>{57d82d12-2098-4972-84f8-a27197166398}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UseCase\DeliveryNoteCompletedUC\Impl">
+      <UniqueIdentifier>{e46bd2c6-8f0a-4f75-8983-bc8c9e6f851c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UseCase\DeliveryNoteCompletedUC\Interface">
+      <UniqueIdentifier>{1ca05236-6476-4016-b64e-08b4d161954f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UseCase\DeliveryNoteCancellationUC">
+      <UniqueIdentifier>{d710c8ee-d222-4f11-9b37-87edfa2361b0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UseCase\DeliveryNoteCancellationUC\Impl">
+      <UniqueIdentifier>{d49c5f99-2288-41e5-ac51-8e6394a79a34}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UseCase\DeliveryNoteCancellationUC\Interface">
+      <UniqueIdentifier>{70cfcdcd-1dfe-4ee1-b6b9-fffc3ed04ea7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModule\PhadexTransaction\TransactionRecord\DeliveryNoteCancellation">
+      <UniqueIdentifier>{d2da1588-1435-4492-b9b0-ae40522604f2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModule\PhadexTransaction\TransactionRecord\DeliveryNoteCancellation\Impl">
+      <UniqueIdentifier>{99d9d620-016f-44a8-9c02-15587319f1d4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModule\PhadexTransaction\TransactionRecord\DeliveryNoteCancellation\Interface">
+      <UniqueIdentifier>{54569d94-c6a3-459f-8465-0cb53509b462}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModule\PhadexTransaction\TransactionRecord\BlockedArticleRecord">
+      <UniqueIdentifier>{31939316-8839-4ba4-b789-9203d6a1dcb9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModule\PhadexTransaction\TransactionRecord\BlockedArticleRecord\Impl">
+      <UniqueIdentifier>{77025a0f-54eb-480f-ad18-6136c688ad21}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModule\PhadexTransaction\TransactionRecord\BlockedArticleRecord\Interface">
+      <UniqueIdentifier>{86e1a515-ce4f-4d1c-8f02-5d164165f22a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UseCase\BlockedArticleUC">
+      <UniqueIdentifier>{95c0f6e1-0816-423d-88a2-6b7ee100a513}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UseCase\BlockedArticleUC\Impl">
+      <UniqueIdentifier>{0bf43efe-4c3d-4553-a8eb-04c133a50e05}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UseCase\BlockedArticleUC\Interface">
+      <UniqueIdentifier>{0765a678-90f5-44f2-8811-2d9529daffcb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UseCase\DocumentPrintInfo">
+      <UniqueIdentifier>{161bd977-c930-4134-a639-709d4963722a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UseCase\DocumentPrintInfo\Impl">
+      <UniqueIdentifier>{86536c99-fa82-44f7-a96c-d9bcb68c7888}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UseCase\DocumentPrintInfo\Interface">
+      <UniqueIdentifier>{f997f0ec-3b21-4f38-9930-315b29d8f106}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModule\PhadexTransaction\TransactionRecord\DocumentPrintInfo">
+      <UniqueIdentifier>{d0a7108c-dbe8-4cb7-abae-a5e7dcd3d0c3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModule\PhadexTransaction\TransactionRecord\DocumentPrintInfo\Impl">
+      <UniqueIdentifier>{14c8d406-14e7-434d-a9a3-167ba5e36445}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModule\PhadexTransaction\TransactionRecord\DocumentPrintInfo\Interface">
+      <UniqueIdentifier>{73b181d8-6a9c-4cfd-8bcb-83a23949b894}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UseCase\SAPReferenceNoUC">
+      <UniqueIdentifier>{7758bcdb-5f0c-4768-91a3-65b8c2942546}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UseCase\SAPReferenceNoUC\Impl">
+      <UniqueIdentifier>{d0ad56c4-757f-48bf-86e5-c0fe6bb534fa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UseCase\SAPReferenceNoUC\Interface">
+      <UniqueIdentifier>{728897b6-a460-4e57-b2e1-5493ff38f63a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModule\PhadexTransaction\TransactionRecord\SAPReferenceNoRecord">
+      <UniqueIdentifier>{f2029906-48fb-4c6e-9116-a2a86b4e3791}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModule\PhadexTransaction\TransactionRecord\SAPReferenceNoRecord\Impl">
+      <UniqueIdentifier>{3d077aed-3d43-4cac-b231-db1afe411735}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModule\PhadexTransaction\TransactionRecord\SAPReferenceNoRecord\Interface">
+      <UniqueIdentifier>{560de67c-8702-4cf0-be46-e20974febc3e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="csc_phadex\main.cpp">
+      <Filter>Csc_phadex</Filter>
+    </ClCompile>
+    <ClCompile Include="infrastructure\parameter\dbparameter.cpp">
+      <Filter>Infrastructure\Parameter</Filter>
+    </ClCompile>
+    <ClCompile Include="loggerpool\csc_phadex_loggerpool.cpp">
+      <Filter>Loggerpool</Filter>
+    </ClCompile>
+    <ClCompile Include="infrastructure\setup\csc_phadexinfrastructuresetup.cpp">
+      <Filter>Infrastructure\Setup\impl</Filter>
+    </ClCompile>
+    <ClCompile Include="componentmanager\csc_phadexapplcompmgr.cpp">
+      <Filter>ComponentManager\ApplCompMgr\Impl</Filter>
+    </ClCompile>
+    <ClCompile Include="componentmanager\csc_phadexinfrastructurecompmgr.cpp">
+      <Filter>ComponentManager\InfrastructureCompMgr</Filter>
+    </ClCompile>
+    <ClCompile Include="csc_phadex\csc_phadexapplctrl.cpp">
+      <Filter>Csc_phadex\ApplController</Filter>
+    </ClCompile>
+    <ClCompile Include="infrastructure\cmdline\csc_phadexcmdlineevaluator.cpp">
+      <Filter>Infrastructure\CommandLine\CmdLineEvaluator</Filter>
+    </ClCompile>
+    <ClCompile Include="infrastructure\cmdline\csc_phadexcmdlineoptioncollection.cpp">
+      <Filter>Infrastructure\CommandLine\CmdLineOption</Filter>
+    </ClCompile>
+    <ClCompile Include="infrastructure\config\xmlconfigreader.cpp">
+      <Filter>Infrastructure\Config</Filter>
+    </ClCompile>
+    <ClCompile Include="infrastructure\accessor\cicsdataacc.cpp">
+      <Filter>Infrastructure\Accessor\DRKSC</Filter>
+    </ClCompile>
+    <ClCompile Include="infrastructure\accessor\phadextransactionacc.cpp">
+      <Filter>Infrastructure\Accessor\PhadexTransaction</Filter>
+    </ClCompile>
+    <ClCompile Include="domainmodule\taskcontrol\taskcontroldm.cpp">
+      <Filter>DomainModule\TaskControl\Impl</Filter>
+    </ClCompile>
+    <ClCompile Include="domainmodule\cicstransaction\cicstransactioncollectiondm.cpp">
+      <Filter>DomainModule\CICSTransaction\CICSTransactionCollection\Impl</Filter>
+    </ClCompile>
+    <ClCompile Include="domainmodule\cicstransaction\cicstransactiondm.cpp">
+      <Filter>DomainModule\CICSTransaction\Impl</Filter>
+    </ClCompile>
+    <ClCompile Include="domainmodule\phadextransaction\phadextransactiondm.cpp">
+      <Filter>DomainModule\PhadexTransaction\Impl</Filter>
+    </ClCompile>
+    <ClCompile Include="domainmodule\phadextransaction\phadextransactioncollectiondm.cpp">
+      <Filter>DomainModule\PhadexTransaction\PhadexTransactionCollectionDM\Impl</Filter>
+    </ClCompile>
+    <ClCompile Include="usecase\mainuc\mainuc.cpp">
+      <Filter>UseCase\MainUC</Filter>
+    </ClCompile>
+    <ClCompile Include="usecase\processuc\processuc.cpp">
+      <Filter>UseCase\ProcessUC</Filter>
+    </ClCompile>
+    <ClCompile Include="usecase\transferuc\transferuc.cpp">
+      <Filter>UseCase\TransferUC\Impl</Filter>
+    </ClCompile>
+    <ClCompile Include="domainmodule\phadextransaction\transactionrecord\tenderinvoicecancellation\tenderinvoicecancellationrecord.cpp">
+      <Filter>DomainModule\PhadexTransaction\TransactionRecord\TenderInvoiceCancellation\Impl</Filter>
+    </ClCompile>
+    <ClCompile Include="domainmodule\phadextransaction\transactionrecord\transactionrecordbase.cpp">
+      <Filter>DomainModule\PhadexTransaction\TransactionRecord\Impl</Filter>
+    </ClCompile>
+    <ClCompile Include="usecase\processuc\transactionrecordmapper\transactionrecordmapper.cpp">
+      <Filter>UseCase\ProcessUC\TransactionRecordMapper\Impl</Filter>
+    </ClCompile>
+    <ClCompile Include="usecase\tendercancellationuc\tendercancellationuc.cpp">
+      <Filter>UseCase\TenderCancellationUC\Impl</Filter>
+    </ClCompile>
+    <ClCompile Include="infrastructure\config\phadexxmlconfigreader.cpp">
+      <Filter>Infrastructure\Config</Filter>
+    </ClCompile>
+    <ClCompile Include="domainmodule\phadextransaction\transactionrecord\narcprintupdate\narcprintupdate.cpp">
+      <Filter>DomainModule\PhadexTransaction\TransactionRecord\NarcPrintUpdate\Impl</Filter>
+    </ClCompile>
+    <ClCompile Include="domainmodule\Narcotics\narcoticsdm.cpp">
+      <Filter>DomainModule\Narcotics\Impl</Filter>
+    </ClCompile>
+    <ClCompile Include="infrastructure\accessor\narcoticsacc.cpp">
+      <Filter>Infrastructure\Accessor\Narcotics</Filter>
+    </ClCompile>
+    <ClCompile Include="usecase\NarcPrintUpdateUC\narcprintupdateuc.cpp">
+      <Filter>UseCase\NarcPrintUpdateUC\Impl</Filter>
+    </ClCompile>
+    <ClCompile Include="csc_phadex\version.c">
+      <Filter>Csc_phadex</Filter>
+    </ClCompile>
+    <ClCompile Include="domainmodule\phadextransaction\transactionrecord\deliverynotecompleted\deliverynotecompleted.cpp">
+      <Filter>DomainModule\PhadexTransaction\TransactionRecord\DeliveryNoteCompleted\Impl</Filter>
+    </ClCompile>
+    <ClCompile Include="usecase\deliverynotecompleteduc\deliverynotecompleteduc.cpp">
+      <Filter>UseCase\DeliveryNoteCompletedUC\Impl</Filter>
+    </ClCompile>
+    <ClCompile Include="usecase\deliverynotecancellationuc\deliverynotecancellationuc.cpp">
+      <Filter>UseCase\DeliveryNoteCancellationUC\Impl</Filter>
+    </ClCompile>
+    <ClCompile Include="domainmodule\phadextransaction\transactionrecord\deliverynotecancellation\deliverynotecancellation.cpp">
+      <Filter>DomainModule\PhadexTransaction\TransactionRecord\DeliveryNoteCancellation\Impl</Filter>
+    </ClCompile>
+    <ClCompile Include="usecase\blockedarticleuc\blockedarticleuc.cpp">
+      <Filter>UseCase\BlockedArticleUC\Impl</Filter>
+    </ClCompile>
+    <ClCompile Include="domainmodule\phadextransaction\transactionrecord\blockedarticlerecord\blockedarticlerecord.cpp">
+      <Filter>DomainModule\PhadexTransaction\TransactionRecord\BlockedArticleRecord\Impl</Filter>
+    </ClCompile>
+    <ClCompile Include="usecase\documentprintinfouc\documentprintinfouc.cpp">
+      <Filter>UseCase\DocumentPrintInfo\Impl</Filter>
+    </ClCompile>
+    <ClCompile Include="domainmodule\phadextransaction\transactionrecord\documentprintinfo\documentprintinfo.cpp">
+      <Filter>DomainModule\PhadexTransaction\TransactionRecord\DocumentPrintInfo\Impl</Filter>
+    </ClCompile>
+    <ClCompile Include="usecase\sapreferencenouc\sapreferencenouc.cpp">
+      <Filter>UseCase\SAPReferenceNoUC\Impl</Filter>
+    </ClCompile>
+    <ClCompile Include="domainmodule\phadextransaction\transactionrecord\sapreferencenorecord\sapreferencenorecord.cpp">
+      <Filter>DomainModule\PhadexTransaction\TransactionRecord\SAPReferenceNoRecord\Impl</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="componentmanager\iusecasegetter.h">
+      <Filter>ComponentManager\ApplCompMgr\Interface\UseCaseGetter</Filter>
+    </ClInclude>
+    <ClInclude Include="componentmanager\iusecasegetterptr.h">
+      <Filter>ComponentManager\ApplCompMgr\Interface\UseCaseGetter</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\login\login_definitions.h">
+      <Filter>Infrastructure\Login</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\parameter\dbparameter.h">
+      <Filter>Infrastructure\Parameter</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\parameter\dbparameterptr.h">
+      <Filter>Infrastructure\Parameter</Filter>
+    </ClInclude>
+    <ClInclude Include="loggerpool\csc_phadex_loggerpool.h">
+      <Filter>Loggerpool</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\setup\csc_phadexinfrastructuresetupptr.h">
+      <Filter>Infrastructure\Setup\impl</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\setup\csc_phadexinfrastructuresetup.h">
+      <Filter>Infrastructure\Setup\impl</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\setup\icsc_phadexlogingetter.h">
+      <Filter>Infrastructure\Setup\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\setup\icsc_phadexlogingetterptr.h">
+      <Filter>Infrastructure\Setup\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="componentmanager\csc_phadexapplcompmgr.h">
+      <Filter>ComponentManager\ApplCompMgr\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="componentmanager\csc_phadexapplcompmgrptr.h">
+      <Filter>ComponentManager\ApplCompMgr\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="componentmanager\csc_phadexinfrastructurecompmgr.h">
+      <Filter>ComponentManager\InfrastructureCompMgr</Filter>
+    </ClInclude>
+    <ClInclude Include="componentmanager\csc_phadexinfrastructurecompmgrptr.h">
+      <Filter>ComponentManager\InfrastructureCompMgr</Filter>
+    </ClInclude>
+    <ClInclude Include="csc_phadex\csc_phadexapplctrl.h">
+      <Filter>Csc_phadex\ApplController</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\cmdline\csc_phadexcmdlineevaluatorptr.h">
+      <Filter>Infrastructure\CommandLine\CmdLineEvaluator</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\cmdline\csc_phadexcmdlineevaluator.h">
+      <Filter>Infrastructure\CommandLine\CmdLineEvaluator</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\cmdline\csc_phadexcmdlineoption_definitions.h">
+      <Filter>Infrastructure\CommandLine\CmdLineOption</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\cmdline\csc_phadexcmdlineoptioncollection.h">
+      <Filter>Infrastructure\CommandLine\CmdLineOption</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\cmdline\appargs.h">
+      <Filter>Infrastructure\CommandLine\CmdLineEvaluator</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\config\xmlconfigreader.h">
+      <Filter>Infrastructure\Config</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\config\config.h">
+      <Filter>Infrastructure\Config</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\config\phadexxmlconfigreader.h">
+      <Filter>Infrastructure\Config</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\csc_phadex_properties_definitions.h">
+      <Filter>DomainModule</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\accessor\cicsdataacc_definitions.h">
+      <Filter>Infrastructure\Accessor\DRKSC</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\accessor\cicsdataacc.h">
+      <Filter>Infrastructure\Accessor\DRKSC</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\accessor\phadextransactionacc.h">
+      <Filter>Infrastructure\Accessor\PhadexTransaction</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\accessor\phadextransactionacc_definitions.h">
+      <Filter>Infrastructure\Accessor\PhadexTransaction</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\taskcontrol\itaskcontrol.h">
+      <Filter>DomainModule\TaskControl\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\taskcontrol\itaskcontrolptr.h">
+      <Filter>DomainModule\TaskControl\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\taskcontrol\taskcontroldmptr.h">
+      <Filter>DomainModule\TaskControl\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\taskcontrol\taskcontroldm.h">
+      <Filter>DomainModule\TaskControl\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\cicstransaction\icicstransactioncollectionfinder.h">
+      <Filter>DomainModule\CICSTransaction\CICSTransactionCollection\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\cicstransaction\icicstransactioncollectionfinderptr.h">
+      <Filter>DomainModule\CICSTransaction\CICSTransactionCollection\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\cicstransaction\cicstransactioncollectiondm.h">
+      <Filter>DomainModule\CICSTransaction\CICSTransactionCollection\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\cicstransaction\cicstransactioncollectiondmptr.h">
+      <Filter>DomainModule\CICSTransaction\CICSTransactionCollection\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\cicstransaction\icicstransactionptr.h">
+      <Filter>DomainModule\CICSTransaction\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\cicstransaction\icicstransaction.h">
+      <Filter>DomainModule\CICSTransaction\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\cicstransaction\cicstransactiondm.h">
+      <Filter>DomainModule\CICSTransaction\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\cicstransaction\cicstransactiondmptr.h">
+      <Filter>DomainModule\CICSTransaction\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\phadextransaction\iphadextransaction.h">
+      <Filter>DomainModule\PhadexTransaction\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\phadextransaction\iphadextransactionptr.h">
+      <Filter>DomainModule\PhadexTransaction\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\phadextransaction\phadextransactiondmptr.h">
+      <Filter>DomainModule\PhadexTransaction\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\phadextransaction\phadextransactiondm.h">
+      <Filter>DomainModule\PhadexTransaction\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\phadextransaction\phadextransactioncollectiondm.h">
+      <Filter>DomainModule\PhadexTransaction\PhadexTransactionCollectionDM\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\phadextransaction\phadextransactioncollectiondmptr.h">
+      <Filter>DomainModule\PhadexTransaction\PhadexTransactionCollectionDM\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\phadextransaction\iphadextransactioncollection.h">
+      <Filter>DomainModule\PhadexTransaction\PhadexTransactionCollectionDM\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\phadextransaction\iphadextransactioncollectionptr.h">
+      <Filter>DomainModule\PhadexTransaction\PhadexTransactionCollectionDM\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="usecase\mainuc\mainuc.h">
+      <Filter>UseCase\MainUC</Filter>
+    </ClInclude>
+    <ClInclude Include="usecase\mainuc\mainucptr.h">
+      <Filter>UseCase\MainUC</Filter>
+    </ClInclude>
+    <ClInclude Include="usecase\processuc\processuc.h">
+      <Filter>UseCase\ProcessUC</Filter>
+    </ClInclude>
+    <ClInclude Include="usecase\processuc\processucptr.h">
+      <Filter>UseCase\ProcessUC</Filter>
+    </ClInclude>
+    <ClInclude Include="usecase\transferuc\transferucptr.h">
+      <Filter>UseCase\TransferUC\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="usecase\transferuc\transferuc.h">
+      <Filter>UseCase\TransferUC\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="usecase\transferuc\itransferuc.h">
+      <Filter>UseCase\TransferUC\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="usecase\transferuc\itransferucptr.h">
+      <Filter>UseCase\TransferUC\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\phadextransaction\transactionrecord\itransactionrecord.h">
+      <Filter>DomainModule\PhadexTransaction\TransactionRecord\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\phadextransaction\transactionrecord\itransactionrecordptr.h">
+      <Filter>DomainModule\PhadexTransaction\TransactionRecord\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\phadextransaction\transactionrecord\transactionrecordtypeenum.h">
+      <Filter>DomainModule\PhadexTransaction\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\phadextransaction\transactionrecord\tenderinvoicecancellation\itenderinvoicecancellationrecord.h">
+      <Filter>DomainModule\PhadexTransaction\TransactionRecord\TenderInvoiceCancellation\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\phadextransaction\transactionrecord\tenderinvoicecancellation\itenderinvoicecancellationrecordptr.h">
+      <Filter>DomainModule\PhadexTransaction\TransactionRecord\TenderInvoiceCancellation\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\phadextransaction\transactionrecord\tenderinvoicecancellation\tenderinvoicecancellationrecord.h">
+      <Filter>DomainModule\PhadexTransaction\TransactionRecord\TenderInvoiceCancellation\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\phadextransaction\transactionrecord\transactionrecordbase.h">
+      <Filter>DomainModule\PhadexTransaction\TransactionRecord\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="usecase\processuc\transactionrecordmapper\itransactionrecordmapper.h">
+      <Filter>UseCase\ProcessUC\TransactionRecordMapper\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="usecase\processuc\transactionrecordmapper\itransactionrecordmapperptr.h">
+      <Filter>UseCase\ProcessUC\TransactionRecordMapper\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="usecase\processuc\transactionrecordmapper\transactionrecordmapper.h">
+      <Filter>UseCase\ProcessUC\TransactionRecordMapper\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\phadexexception.h">
+      <Filter>Exceptions</Filter>
+    </ClInclude>
+    <ClInclude Include="usecase\tendercancellationuc\tendercancellationuc.h">
+      <Filter>UseCase\TenderCancellationUC\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="usecase\tendercancellationuc\tendercancellationucptr.h">
+      <Filter>UseCase\TenderCancellationUC\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="usecase\tendercancellationuc\itendercancellationuc.h">
+      <Filter>UseCase\TenderCancellationUC\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="usecase\tendercancellationuc\itendercancellationucptr.h">
+      <Filter>UseCase\TenderCancellationUC\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\phadextransaction\transactionrecord\tenderinvoicecancellation\tenderinvoicecancellationrecordptr.h">
+      <Filter>DomainModule\PhadexTransaction\TransactionRecord\TenderInvoiceCancellation\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\unknownrecordtypeexception.h">
+      <Filter>Exceptions</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\dataconversionexception.h">
+      <Filter>Exceptions</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\config\phadexconfigstruct.h">
+      <Filter>Infrastructure\Config</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\phadextransaction\transactionrecord\narcprintupdate\narcprintupdate.h">
+      <Filter>DomainModule\PhadexTransaction\TransactionRecord\NarcPrintUpdate\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\phadextransaction\transactionrecord\narcprintupdate\narcprintupdateptr.h">
+      <Filter>DomainModule\PhadexTransaction\TransactionRecord\NarcPrintUpdate\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\phadextransaction\transactionrecord\narcprintupdate\inarcprintupdate.h">
+      <Filter>DomainModule\PhadexTransaction\TransactionRecord\NarcPrintUpdate\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\phadextransaction\transactionrecord\narcprintupdate\inarcprintupdateptr.h">
+      <Filter>DomainModule\PhadexTransaction\TransactionRecord\NarcPrintUpdate\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\Narcotics\inarcotics.h">
+      <Filter>DomainModule\Narcotics\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\Narcotics\inarcoticsptr.h">
+      <Filter>DomainModule\Narcotics\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\Narcotics\narcoticsdm.h">
+      <Filter>DomainModule\Narcotics\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\Narcotics\narcoticsdmptr.h">
+      <Filter>DomainModule\Narcotics\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\accessor\narcoticsacc.h">
+      <Filter>Infrastructure\Accessor\Narcotics</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\accessor\narcoticsacc_definitions.h">
+      <Filter>Infrastructure\Accessor\Narcotics</Filter>
+    </ClInclude>
+    <ClInclude Include="usecase\NarcPrintUpdateUC\inarcprintupdateuc.h">
+      <Filter>UseCase\NarcPrintUpdateUC\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="usecase\NarcPrintUpdateUC\inarcprintupdateucptr.h">
+      <Filter>UseCase\NarcPrintUpdateUC\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="usecase\NarcPrintUpdateUC\narcprintupdateuc.h">
+      <Filter>UseCase\NarcPrintUpdateUC\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="usecase\NarcPrintUpdateUC\narcprintupdateucptr.h">
+      <Filter>UseCase\NarcPrintUpdateUC\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="usecase\processuc\transactionrecordmapper\transactionrecordmapperptr.h">
+      <Filter>UseCase\ProcessUC\TransactionRecordMapper\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\phadextransaction\transactionrecord\deliverynotecompleted\ideliverynotecompleted.h">
+      <Filter>DomainModule\PhadexTransaction\TransactionRecord\DeliveryNoteCompleted\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\phadextransaction\transactionrecord\deliverynotecompleted\ideliverynotecompletedptr.h">
+      <Filter>DomainModule\PhadexTransaction\TransactionRecord\DeliveryNoteCompleted\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\phadextransaction\transactionrecord\deliverynotecompleted\deliverynotecompleted.h">
+      <Filter>DomainModule\PhadexTransaction\TransactionRecord\DeliveryNoteCompleted\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\phadextransaction\transactionrecord\deliverynotecompleted\deliverynotecompletedptr.h">
+      <Filter>DomainModule\PhadexTransaction\TransactionRecord\DeliveryNoteCompleted\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="usecase\deliverynotecompleteduc\deliverynotecompleteduc.h">
+      <Filter>UseCase\DeliveryNoteCompletedUC\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="usecase\deliverynotecompleteduc\deliverynotecompleteducptr.h">
+      <Filter>UseCase\DeliveryNoteCompletedUC\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="usecase\deliverynotecompleteduc\ideliverynotecompleteduc.h">
+      <Filter>UseCase\DeliveryNoteCompletedUC\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="usecase\deliverynotecompleteduc\ideliverynotecompleteducptr.h">
+      <Filter>UseCase\DeliveryNoteCompletedUC\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="usecase\deliverynotecancellationuc\deliverynotecancellationuc.h">
+      <Filter>UseCase\DeliveryNoteCancellationUC\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="usecase\deliverynotecancellationuc\deliverynotecancellationucptr.h">
+      <Filter>UseCase\DeliveryNoteCancellationUC\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="usecase\deliverynotecancellationuc\ideliverynotecancellationuc.h">
+      <Filter>UseCase\DeliveryNoteCancellationUC\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="usecase\deliverynotecancellationuc\ideliverynotecancellationucptr.h">
+      <Filter>UseCase\DeliveryNoteCancellationUC\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\phadextransaction\transactionrecord\deliverynotecancellation\deliverynotecancellation.h">
+      <Filter>DomainModule\PhadexTransaction\TransactionRecord\DeliveryNoteCancellation\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\phadextransaction\transactionrecord\deliverynotecancellation\deliverynotecancellationptr.h">
+      <Filter>DomainModule\PhadexTransaction\TransactionRecord\DeliveryNoteCancellation\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\phadextransaction\transactionrecord\deliverynotecancellation\ideliverynotecancellation.h">
+      <Filter>DomainModule\PhadexTransaction\TransactionRecord\DeliveryNoteCancellation\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\phadextransaction\transactionrecord\deliverynotecancellation\ideliverynotecancellationptr.h">
+      <Filter>DomainModule\PhadexTransaction\TransactionRecord\DeliveryNoteCancellation\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="usecase\blockedarticleuc\blockedarticleuc.h">
+      <Filter>UseCase\BlockedArticleUC\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="usecase\blockedarticleuc\blockedarticleucptr.h">
+      <Filter>UseCase\BlockedArticleUC\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="usecase\blockedarticleuc\iblockedarticleuc.h">
+      <Filter>UseCase\BlockedArticleUC\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="usecase\blockedarticleuc\iblockedarticleucptr.h">
+      <Filter>UseCase\BlockedArticleUC\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\phadextransaction\transactionrecord\blockedarticlerecord\blockedarticlerecord.h">
+      <Filter>DomainModule\PhadexTransaction\TransactionRecord\BlockedArticleRecord\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\phadextransaction\transactionrecord\blockedarticlerecord\blockedarticlerecordptr.h">
+      <Filter>DomainModule\PhadexTransaction\TransactionRecord\BlockedArticleRecord\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\phadextransaction\transactionrecord\blockedarticlerecord\iblockedarticlerecord.h">
+      <Filter>DomainModule\PhadexTransaction\TransactionRecord\BlockedArticleRecord\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\phadextransaction\transactionrecord\blockedarticlerecord\iblockedarticlerecordptr.h">
+      <Filter>DomainModule\PhadexTransaction\TransactionRecord\BlockedArticleRecord\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="usecase\documentprintinfouc\idocumentprintinfouc.h">
+      <Filter>UseCase\DocumentPrintInfo\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="usecase\documentprintinfouc\idocumentprintinfoucptr.h">
+      <Filter>UseCase\DocumentPrintInfo\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="usecase\documentprintinfouc\documentprintinfouc.h">
+      <Filter>UseCase\DocumentPrintInfo\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="usecase\documentprintinfouc\documentprintinfoucptr.h">
+      <Filter>UseCase\DocumentPrintInfo\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\phadextransaction\transactionrecord\documentprintinfo\idocumentprintinfo.h">
+      <Filter>DomainModule\PhadexTransaction\TransactionRecord\DocumentPrintInfo\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\phadextransaction\transactionrecord\documentprintinfo\idocumentprintinfoptr.h">
+      <Filter>DomainModule\PhadexTransaction\TransactionRecord\DocumentPrintInfo\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\phadextransaction\transactionrecord\documentprintinfo\documentprintinfo.h">
+      <Filter>DomainModule\PhadexTransaction\TransactionRecord\DocumentPrintInfo\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\phadextransaction\transactionrecord\documentprintinfo\documentprintinfoptr.h">
+      <Filter>DomainModule\PhadexTransaction\TransactionRecord\DocumentPrintInfo\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="usecase\sapreferencenouc\isapreferencenouc.h">
+      <Filter>UseCase\SAPReferenceNoUC\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="usecase\sapreferencenouc\isapreferencenoucptr.h">
+      <Filter>UseCase\SAPReferenceNoUC\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="usecase\sapreferencenouc\sapreferencenouc.h">
+      <Filter>UseCase\SAPReferenceNoUC\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="usecase\sapreferencenouc\sapreferencenoucptr.h">
+      <Filter>UseCase\SAPReferenceNoUC\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\phadextransaction\transactionrecord\sapreferencenorecord\isapreferencenorecord.h">
+      <Filter>DomainModule\PhadexTransaction\TransactionRecord\SAPReferenceNoRecord\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\phadextransaction\transactionrecord\sapreferencenorecord\isapreferencenorecordptr.h">
+      <Filter>DomainModule\PhadexTransaction\TransactionRecord\SAPReferenceNoRecord\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\phadextransaction\transactionrecord\sapreferencenorecord\sapreferencenorecord.h">
+      <Filter>DomainModule\PhadexTransaction\TransactionRecord\SAPReferenceNoRecord\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\phadextransaction\transactionrecord\sapreferencenorecord\sapreferencenorecordptr.h">
+      <Filter>DomainModule\PhadexTransaction\TransactionRecord\SAPReferenceNoRecord\Impl</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

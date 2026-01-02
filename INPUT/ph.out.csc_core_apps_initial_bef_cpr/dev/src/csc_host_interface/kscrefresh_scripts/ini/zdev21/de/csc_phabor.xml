@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<KSCRefreshSettings xsi:noNamespaceSchemaLocation="../../KSCRefreshSettings.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Country Country="DE">
+		<Settings>
+			<General PollInterval="15000" LogLevel="Information" Test="false"/>
+			<SMTP Port="25" Host="10.100.121.30" SendMailFrom="kscrefresh@phoenixgroup.eu">
+				<Information eMail=""/>
+				<Warnings eMail=""/>
+				<Errors eMail="kscrefreshtest@phoenixgroup.eu"/>
+			</SMTP>
+			<TCAccess TCATransaction="TCAS" TCAHost="PhoenixGeneric_west" ConnectionRetries="10" ConnectionWaitBeforeRetry="10000" Username="PHABOR" Password=""/>
+			<pxVerbund DeviceType="7" DeviceName="PHABOR" Computer="" LogMode="1" DataSource="ode21@zdev21_shm" MessageFile="/software/wss/de/ksc/batch/ini/message.txt"/>
+			<Informix ConnectionRetries="10" ConnectionWaitBeforeRetry="10000" IfxServiceName="53004" IfxHost="zdev21_tcp" IfxDataBase="ode21"/>
+		</Settings>
+		<Branches>
+			<Branch BranchNo="46">
+				<Settings>
+					<TCAccess IPAddress="10.242.5.210" Port="3102"/>
+					<pxVerbund LogFile="/software/wss/de/ksc/batch/log/46_csc_corpha.log" SystemLogFile="/software/wss/de/ksc/batch/log/46_csc_corpha_wws.log"/>
+				</Settings>
+			</Branch>
+		</Branches>
+	</Country>
+</KSCRefreshSettings>

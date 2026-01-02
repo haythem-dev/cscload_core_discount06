@@ -1,0 +1,150 @@
+/*(c)
+ ********************* PHARMX Customer Order Entry Server *********************
+
+pxpromotionquotacdst.hpp
+PROMOTIONQUOTACST class
+
+REVISION HISTORY
+
+16 Dec 2011 V1.00 REV 00 written by Ysbrand Bouma.
+*/
+
+#ifndef PXPROMOTIONQUOTACST_INC
+   #define PXPROMOTIONQUOTACST_INC
+
+#include "pxbase/pxrecord.hpp"
+
+struct tPROMOTIONQUOTACST;
+
+class pxPromotionQuotaCst : public pxDBRecord
+{
+
+public:
+
+// constructors:
+                pxPromotionQuotaCst(pxPromotionQuotaCst& src);
+                pxPromotionQuotaCst(pxSession *session);
+                pxPromotionQuotaCst(pxSession *session, tPROMOTIONQUOTACST& src);
+                pxPromotionQuotaCst(pxSession *session, const pxPromotionQuotaCst* src);
+                pxPromotionQuotaCst(pxSession *session, short BranchNo,
+                                                 short  PromotionNo, long CustomerNo);
+
+// destructor:
+                virtual  ~pxPromotionQuotaCst();
+/*@DS
+PUBLIC MEMBER OPERATORS
+*/
+    pxPromotionQuotaCst&   operator=(const pxPromotionQuotaCst& src);
+//  Assigns the values of 'src' to self and returns a reference to it.
+
+    pxPromotionQuotaCst&   operator=(const tPROMOTIONQUOTACST& src);
+//  Assigns the values of the record structure 'src' to self and returns a
+//  reference to self.
+
+
+/*@DS
+PUBLIC MEMBER FUNCTIONS
+*/
+    friend   pxPromotionQuotaCst&
+                Assign(pxPromotionQuotaCst& dest, const tPROMOTIONQUOTACST& src);
+    friend   tPROMOTIONQUOTACST&
+                Assign(tPROMOTIONQUOTACST& dest, const pxPromotionQuotaCst& src);
+
+    virtual  long    AddSoldQtyCst(const long q);
+    virtual  long    SubSoldQtyCst(const long q);
+
+
+    virtual  int      CompareTo(const nCollectable *that, void *p,
+                                const long lparm) const;
+
+    virtual  int     Get(DBAccessMode mode = cDBGET_READONLY);
+    virtual  int     Put();
+    virtual  int     Delete();
+
+    virtual  int     Read(const void *record);
+    virtual  int     ReadLock(const void *record);
+    virtual  int     Insert(const void *record);
+    virtual  int     Update(const void *record);
+    virtual  int     Delete(const void *record);
+
+// Update Fields
+
+//  Queries:
+    short          BranchNo()           {return BranchNo_             ;}
+    short          PromotionNo()        {return PromotionNo_          ;}
+    long           CustomerQuotaQty()   {return CustomerQuotaQty_     ;}
+    long           SoldQtyCst()         {return SoldQtyCst_           ;}
+    long           CustomerNo()         {return CustomerNo_           ;}
+    long           ArticleNo()          {return ArticleNo_            ;}
+
+// Set Methodes
+    void        SetCustomerQuotaQty( long qty )
+                { CustomerQuotaQty_  = qty; SetDirty();}
+    void        SetSoldQtyCst( long qty )
+                { SoldQtyCst_  = qty; SetDirty();}
+    void        SetArticleNo( long number )
+                { ArticleNo_  = number; SetDirty();}
+    void        ForceUpdate()       {SetActive();}
+
+
+protected:
+    void        Init();
+
+    short      BranchNo_           ;      // Branch Number
+    short      PromotionNo_        ;      // PromotionNo
+    long       CustomerQuotaQty_   ;      // Customer promotion Quota
+    long       SoldQtyCst_         ;      // SoldQtyCustomer
+    long       CustomerNo_         ;      // CustomerNo
+    long       ArticleNo_          ;      // Articlenumber
+
+
+private:
+    friend class pxPromotionQuotaCstList;
+};
+
+class pxPromotionQuotaCstList : public nDBRecordSet, public nDListCollect
+{
+
+public:
+
+//  constructors:
+                pxPromotionQuotaCstList(pxSession *session);
+//  destructor:
+                virtual ~pxPromotionQuotaCstList() {Clear();}
+//  member functions:
+                pxSession* Session()       { return (pxSession*) DataBase();}
+
+    size_t      Select ( const int  count = 50 );
+    size_t      Select ( const short BranchNo,
+                         const short PromotionNo,const long CustomerNo,
+                         const long  ArticleNo, const int   count  = 1000
+                       );
+// Some Queries
+    void        Clear()        {nDBRecordSet::Clear();}
+
+    pxPromotionQuotaCst* Find(const long ArticleNo );
+
+    virtual  nCollectable*
+                      AddToList(const void *record, const int row);
+    virtual  int     GetNext(const void* record, const int cursorid);
+    virtual  int     StartBrowse(const void *keys, const int cursorid);
+    virtual  int     EndBrowse(const int cursorid);
+
+
+protected:
+
+private:
+
+    friend class pxPromotionQuotaCstListIter;
+};
+
+class pxPromotionQuotaCstListIter : public nDListCollectIter
+{
+
+public:
+// constructors:
+    pxPromotionQuotaCstListIter(pxPromotionQuotaCstList& list) : nDListCollectIter(list) {;}
+// destructor:
+    virtual  ~pxPromotionQuotaCstListIter() {;}
+};
+#endif

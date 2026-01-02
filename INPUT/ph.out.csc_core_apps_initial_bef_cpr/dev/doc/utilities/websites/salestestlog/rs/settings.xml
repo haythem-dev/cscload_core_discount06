@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<salesweblog>
+	<logservice user="salesweblog" password="ST49fiUt" uri="urn:SalesWebLogServer"/>
+	<serverlist>
+		<server name="SalesTest" location="http://10.100.121.110:81/SalesWebLogService/SalesWebLogService.php"/>		
+	</serverlist>
+	<logdatabases>
+		<logdb name="ArticleCatalogue" dbname="swlog_rs_articlecatalogue_#DATE#_.db" dbnameerrors="swlog_rs_articlecatalogue_errors_#DATE#_.db"/>		
+		<logdb name="CheckOrderBuffer" dbname="swlog_rs_checkorderbuffer_#DATE#_.db" dbnameerrors="swlog_rs_checkorderbuffer_errors_#DATE#_.db"/>		
+		<logdb name="CreditLimit" dbname="swlog_rs_creditlimit_#DATE#_.db" dbnameerrors="swlog_rs_creditlimit_errors_#DATE#_.db"/>
+		<logdb name="DeliveryList" dbname="swlog_rs_deliverylist_#DATE#_.db" dbnameerrors="swlog_rs_deliverylist_errors_#DATE#_.db"/>
+		<logdb name="Orders" dbname="swlog_rs_order_#DATE#_.db" dbnameerrors="swlog_rs_order_errors_#DATE#_.db"/>
+		<logdb name="OrderInfo" dbname="swlog_rs_orderinfo_#DATE#_.db" dbnameerrors="swlog_rs_orderinfo_errors_#DATE#_.db"/>
+		<logdb name="Pharmacies" dbname="swlog_rs_pharmacies_#DATE#_.db" dbnameerrors="swlog_rs_pharmacies_errors_#DATE#_.db"/>
+		<logdb name="Prices" dbname="swlog_rs_prices_#DATE#_.db" dbnameerrors="swlog_rs_prices_errors_#DATE#_.db"/>
+		<logdb name="Products" dbname="swlog_rs_products_#DATE#_.db" dbnameerrors="swlog_rs_products_errors_#DATE#_.db"/>
+		<logdb name="StockLevel" dbname="swlog_rs_stocklevel_#DATE#_.db" dbnameerrors="swlog_rs_stocklevel_errors_#DATE#_.db"/>
+		<logdb name="TenderInfo" dbname="swlog_rs_tender_#DATE#_.db" dbnameerrors="swlog_rs_tender_errors_#DATE#_.db"/>
+	</logdatabases>
+	<branchlist>
+		<branch no="" name="All Branches"/>		
+		<branch no="84" name="Belgrad"/>
+		<branch no="03" name="Leskovac"/>
+		<branch no="85" name="NoviSad"/>										
+	</branchlist>
+</salesweblog>

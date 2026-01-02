@@ -1,0 +1,879 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="CscService_only|Win32">
+      <Configuration>CscService_only</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="CscService_only|x64">
+      <Configuration>CscService_only</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{1C193DFC-5575-4830-892B-54BDAD6A583F}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='CscService_only|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='CscService_only|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='CscService_only|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='CscService_only|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='CscService_only|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='CscService_only|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='CscService_only|Win32'" />
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='CscService_only|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='CscService_only|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='CscService_only|x64'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+    <RunCodeAnalysis Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</RunCodeAnalysis>
+    <RunCodeAnalysis Condition="'$(Configuration)|$(Platform)'=='CscService_only|Win32'">false</RunCodeAnalysis>
+    <RunCodeAnalysis Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</RunCodeAnalysis>
+    <RunCodeAnalysis Condition="'$(Configuration)|$(Platform)'=='CscService_only|x64'">false</RunCodeAnalysis>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>.\include;.\tcawrap;$(SolutionDir)cxxtools\include;$(SolutionDir)pxdb\include;$(SolutionDir)libcsc;$(SolutionDir)libumk\include;$(SolutionDir)..\ext\pplib\include;$(SolutionDir)..\ext\tcaccess_libraries\include;$(SolutionDir)..\ext\boost\include;$(SolutionDir)..\ext\ssuk\basar\include;$(SolutionDir)..\ext\log4cplus\include;$(SolutionDir)..\ext\liblockmanager\include;$(SolutionDir)..\ext\liblockmanager\include\liblockmanager;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <ProgramDataBaseFileName>$(TargetDir)$(TargetName).pdb</ProgramDataBaseFileName>
+      <EnablePREfast>false</EnablePREfast>
+    </ClCompile>
+    <Lib>
+      <SubSystem>Console</SubSystem>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='CscService_only|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>.\include;.\tcawrap;$(SolutionDir)\cxxtools\include;$(SolutionDir)\pxdb\include;$(SolutionDir)\libcsc;$(SolutionDir)\libumk\include;$(SolutionDir)..\ext\pplib\include;$(SolutionDir)..\ext\tcaccess_libraries\include;$(SolutionDir)..\ext\boost\include;$(SolutionDir)..\ext\ssuk\basar\include;$(SolutionDir)..\ext\log4cplus\include;$(SolutionDir)..\ext\liblockmanager\include;$(SolutionDir)..\ext\liblockmanager\include\liblockmanager;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <ProgramDataBaseFileName>$(TargetDir)$(TargetName).pdb</ProgramDataBaseFileName>
+      <EnablePREfast>false</EnablePREfast>
+    </ClCompile>
+    <Lib>
+      <SubSystem>Console</SubSystem>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>.\include;.\tcawrap;$(SolutionDir)cxxtools\include;$(SolutionDir)pxdb\include;$(SolutionDir)libcsc;$(SolutionDir)libumk\include;$(SolutionDir)..\ext\pplib\include;$(SolutionDir)..\ext\tcaccess_libraries\include;$(SolutionDir)..\ext\boost\include;$(SolutionDir)..\ext\ssuk\basar\include;$(SolutionDir)..\ext\log4cplus\include;$(SolutionDir)..\ext\liblockmanager\include;$(SolutionDir)..\ext\liblockmanager\include\liblockmanager;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <ProgramDataBaseFileName>$(TargetDir)$(TargetName).pdb</ProgramDataBaseFileName>
+      <EnablePREfast>false</EnablePREfast>
+    </ClCompile>
+    <Lib>
+      <SubSystem>Console</SubSystem>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='CscService_only|x64'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>.\include;.\tcawrap;$(SolutionDir)\cxxtools\include;$(SolutionDir)\pxdb\include;$(SolutionDir)\libcsc;$(SolutionDir)\libumk\include;$(SolutionDir)..\ext\pplib\include;$(SolutionDir)..\ext\tcaccess_libraries\include;$(SolutionDir)..\ext\ssuk\boost;$(SolutionDir)..\ext\ssuk\basar\include;$(SolutionDir)..\ext\ssuk\log4cplus\include;$(SolutionDir)..\ext\liblockmanager\include;$(SolutionDir)..\ext\liblockmanager\include\liblockmanager;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <ProgramDataBaseFileName>$(TargetDir)$(TargetName).pdb</ProgramDataBaseFileName>
+      <EnablePREfast>false</EnablePREfast>
+    </ClCompile>
+    <Lib>
+      <SubSystem>Console</SubSystem>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.\include;.\tcawrap;$(SolutionDir)cxxtools\include;$(SolutionDir)pxdb\include;$(SolutionDir)libcsc;$(SolutionDir)libumk\include;$(SolutionDir)..\ext\pplib\include;$(SolutionDir)..\ext\tcaccess_libraries\include;$(SolutionDir)..\ext\boost\include;$(SolutionDir)..\ext\ssuk\basar\include;$(SolutionDir)..\ext\log4cplus\include;$(SolutionDir)..\ext\liblockmanager\include;$(SolutionDir)..\ext\liblockmanager\include\liblockmanager;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <ProgramDataBaseFileName>$(TargetDir)$(TargetName).pdb</ProgramDataBaseFileName>
+      <DisableSpecificWarnings>26429;26433;26439;26440;26447;26455;26812;26814</DisableSpecificWarnings>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.\include;.\tcawrap;$(SolutionDir)cxxtools\include;$(SolutionDir)pxdb\include;$(SolutionDir)libcsc;$(SolutionDir)libumk\include;$(SolutionDir)..\ext\pplib\include;$(SolutionDir)..\ext\tcaccess_libraries\include;$(SolutionDir)..\ext\boost\include;$(SolutionDir)..\ext\ssuk\basar\include;$(SolutionDir)..\ext\log4cplus\include;$(SolutionDir)..\ext\liblockmanager\include;$(SolutionDir)..\ext\liblockmanager\include\liblockmanager;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <ProgramDataBaseFileName>$(TargetDir)$(TargetName).pdb</ProgramDataBaseFileName>
+      <DisableSpecificWarnings>26429;26433;26439;26440;26447;26455;26812;26814</DisableSpecificWarnings>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="libsrc\artaccnt.cpp" />
+    <ClCompile Include="libsrc\artalt.cpp" />
+    <ClCompile Include="libsrc\artaltl.cpp" />
+    <ClCompile Include="libsrc\artcompack.cpp" />
+    <ClCompile Include="libsrc\artdiscountinfo.cpp" />
+    <ClCompile Include="libsrc\artdispo.cpp" />
+    <ClCompile Include="libsrc\artean.cpp" />
+    <ClCompile Include="libsrc\artflagf.cpp" />
+    <ClCompile Include="libsrc\artflagm.cpp" />
+    <ClCompile Include="libsrc\artflags.cpp" />
+    <ClCompile Include="libsrc\articlecharge.cpp" />
+    <ClCompile Include="libsrc\articlecodes.cpp" />
+    <ClCompile Include="libsrc\articlegroup.cpp" />
+    <ClCompile Include="libsrc\articleinfo.cpp" />
+    <ClCompile Include="libsrc\articlelppr.cpp" />
+    <ClCompile Include="libsrc\articlepackunit.cpp" />
+    <ClCompile Include="libsrc\articlequota.cpp" />
+    <ClCompile Include="libsrc\articlesubstitutionutil.cpp" />
+    <ClCompile Include="libsrc\articletext.cpp" />
+    <ClCompile Include="libsrc\artoldprice.cpp" />
+    <ClCompile Include="libsrc\artprice.cpp" />
+    <ClCompile Include="libsrc\artpricl.cpp" />
+    <ClCompile Include="libsrc\artreservation.cpp" />
+    <ClCompile Include="libsrc\artrip.cpp" />
+    <ClCompile Include="libsrc\artspecialcond.cpp" />
+    <ClCompile Include="libsrc\artsto.cpp" />
+    <ClCompile Include="libsrc\artstol.cpp" />
+    <ClCompile Include="libsrc\avp.cpp" />
+    <ClCompile Include="libsrc\balancecollect.cpp" />
+    <ClCompile Include="libsrc\branch.cpp" />
+    <ClCompile Include="libsrc\calcavp.cpp" />
+    <ClCompile Include="libsrc\calcdiscount.cpp" />
+    <ClCompile Include="libsrc\calcdiscountutil.cpp" />
+    <ClCompile Include="libsrc\calcdiscpct.cpp" />
+    <ClCompile Include="libsrc\callbackcomponentmanager.cpp" />
+    <ClCompile Include="libsrc\computer.cpp" />
+    <ClCompile Include="libsrc\comtype.cpp" />
+    <ClCompile Include="libsrc\constimecollect.cpp" />
+    <ClCompile Include="libsrc\countrycodes.cpp" />
+    <ClCompile Include="libsrc\cpvalidityperiod.cpp" />
+    <ClCompile Include="libsrc\cremamail.cpp" />
+    <ClCompile Include="libsrc\cremamailhandler.cpp" />
+    <ClCompile Include="libsrc\cscbatchcheckorderpos.cpp" />
+    <ClCompile Include="libsrc\csccustomer.cpp" />
+    <ClCompile Include="libsrc\cstbase.cpp" />
+    <ClCompile Include="libsrc\cstbasel.cpp" />
+    <ClCompile Include="libsrc\cstbusy.cpp" />
+    <ClCompile Include="libsrc\cstcalcavp.cpp" />
+    <ClCompile Include="libsrc\cstdiscacc.cpp" />
+    <ClCompile Include="libsrc\cstgroup.cpp" />
+    <ClCompile Include="libsrc\cstordnr.cpp" />
+    <ClCompile Include="libsrc\cstotype.cpp" />
+    <ClCompile Include="libsrc\cstpaymentterms.cpp" />
+    <ClCompile Include="libsrc\cstprint.cpp" />
+    <ClCompile Include="libsrc\cstquery.cpp" />
+    <ClCompile Include="libsrc\cstroute.cpp" />
+    <ClCompile Include="libsrc\cstseporderartgrp.cpp" />
+    <ClCompile Include="libsrc\cstshortterms.cpp" />
+    <ClCompile Include="libsrc\cstterms.cpp" />
+    <ClCompile Include="libsrc\custbaseinformation.cpp" />
+    <ClCompile Include="libsrc\custdeldelivery.cpp" />
+    <ClCompile Include="libsrc\custdisccondition.cpp" />
+    <ClCompile Include="libsrc\custgrpflagtypes.cpp" />
+    <ClCompile Include="libsrc\custinfo.cpp" />
+    <ClCompile Include="libsrc\custnexttourid.cpp" />
+    <ClCompile Include="libsrc\customerbusinesshours.cpp" />
+    <ClCompile Include="libsrc\customerbusinesshourslist.cpp" />
+    <ClCompile Include="libsrc\customergroup.cpp" />
+    <ClCompile Include="libsrc\customergrpflags.cpp" />
+    <ClCompile Include="libsrc\customerorderlockentry.cpp" />
+    <ClCompile Include="libsrc\customerspecials.cpp" />
+    <ClCompile Include="libsrc\customersurcharge.cpp" />
+    <ClCompile Include="libsrc\customertour.cpp" />
+    <ClCompile Include="libsrc\customertourlist.cpp" />
+    <ClCompile Include="libsrc\custparkdelorder.cpp" />
+    <ClCompile Include="libsrc\custpharmgroup.cpp" />
+    <ClCompile Include="libsrc\custrouteconstime.cpp" />
+    <ClCompile Include="libsrc\custrouteweek.cpp" />
+    <ClCompile Include="libsrc\custrouting.cpp" />
+    <ClCompile Include="libsrc\custstockreserved.cpp" />
+    <ClCompile Include="libsrc\dealervolume.cpp" />
+    <ClCompile Include="libsrc\debitlimit.cpp" />
+    <ClCompile Include="libsrc\dellog.cpp" />
+    <ClCompile Include="libsrc\delpos.cpp" />
+    <ClCompile Include="libsrc\device.cpp" />
+    <ClCompile Include="libsrc\direct.cpp" />
+    <ClCompile Include="libsrc\discount.cpp" />
+    <ClCompile Include="libsrc\discountcalculation.cpp" />
+    <ClCompile Include="libsrc\discountordtyp.cpp" />
+    <ClCompile Include="libsrc\discountperformance.cpp" />
+    <ClCompile Include="libsrc\discountutil.cpp" />
+    <ClCompile Include="libsrc\dkrakbookordervaluestmt.cpp" />
+    <ClCompile Include="libsrc\dkrakcanceldeldeliveryorderstmt.cpp" />
+    <ClCompile Include="libsrc\dkrakinvoicelockedstmt.cpp" />
+    <ClCompile Include="libsrc\dkraklockstmt.cpp" />
+    <ClCompile Include="libsrc\dkrakprioritystmt.cpp" />
+    <ClCompile Include="libsrc\dkrakreleasechangestmt.cpp" />
+    <ClCompile Include="libsrc\dkrakreleasestmt.cpp" />
+    <ClCompile Include="libsrc\dkrakresult.cpp" />
+    <ClCompile Include="libsrc\dkrakstatement.cpp" />
+    <ClCompile Include="libsrc\dkrakusagestmt.cpp" />
+    <ClCompile Include="libsrc\donepromoquotas.cpp" />
+    <ClCompile Include="libsrc\emailhandler.cpp" />
+    <ClCompile Include="libsrc\emergencyservice.cpp" />
+    <ClCompile Include="libsrc\encloserscale.cpp" />
+    <ClCompile Include="libsrc\eventreason.cpp" />
+    <ClCompile Include="libsrc\fartikel.cpp" />
+    <ClCompile Include="libsrc\gblutil.cpp" />
+    <ClCompile Include="libsrc\generalcalcavp.cpp" />
+    <ClCompile Include="libsrc\goodsdelivery.cpp" />
+    <ClCompile Include="libsrc\holiday.cpp" />
+    <ClCompile Include="libsrc\iartikel.cpp" />
+    <ClCompile Include="libsrc\ibtassortmenttype.cpp" />
+    <ClCompile Include="libsrc\ibtbrancharticleconfig.cpp" />
+    <ClCompile Include="libsrc\ibtbranches.cpp" />
+    <ClCompile Include="libsrc\ibtbrancheslist.cpp" />
+    <ClCompile Include="libsrc\ibtrequesthandler.cpp" />
+    <ClCompile Include="libsrc\ibttype.cpp" />
+    <ClCompile Include="libsrc\invalidsessionexception.cpp" />
+    <ClCompile Include="libsrc\itemaddondiscount.cpp" />
+    <ClCompile Include="libsrc\itembatch.cpp" />
+    <ClCompile Include="libsrc\itm2pmos.cpp" />
+    <ClCompile Include="libsrc\itmaldel.cpp" />
+    <ClCompile Include="libsrc\itmalternate.cpp" />
+    <ClCompile Include="libsrc\itmartquota.cpp" />
+    <ClCompile Include="libsrc\itmattributes.cpp" />
+    <ClCompile Include="libsrc\itmauxsh.cpp" />
+    <ClCompile Include="libsrc\itmcalculatecharge.cpp" />
+    <ClCompile Include="libsrc\itmcalculation.cpp" />
+    <ClCompile Include="libsrc\itmcore.cpp" />
+    <ClCompile Include="libsrc\itmcreditlimit.cpp" />
+    <ClCompile Include="libsrc\itmdeldelivery.cpp" />
+    <ClCompile Include="libsrc\itmdiscount.cpp" />
+    <ClCompile Include="libsrc\itmdispo.cpp" />
+    <ClCompile Include="libsrc\itmentry.cpp" />
+    <ClCompile Include="libsrc\itmentryproforma.cpp" />
+    <ClCompile Include="libsrc\itmerror.cpp" />
+    <ClCompile Include="libsrc\itmibtnleveldelivery.cpp" />
+    <ClCompile Include="libsrc\itmibtsubstitution.cpp" />
+    <ClCompile Include="libsrc\itmibtutil.cpp" />
+    <ClCompile Include="libsrc\itmoverdrive.cpp" />
+    <ClCompile Include="libsrc\itmpackunit.cpp" />
+    <ClCompile Include="libsrc\itmprice.cpp" />
+    <ClCompile Include="libsrc\itmpromoquota.cpp" />
+    <ClCompile Include="libsrc\itmpromoscalemembers.cpp" />
+    <ClCompile Include="libsrc\itmquery.cpp" />
+    <ClCompile Include="libsrc\itmrange.cpp" />
+    <ClCompile Include="libsrc\itmrestdel.cpp" />
+    <ClCompile Include="libsrc\itmrollback.cpp" />
+    <ClCompile Include="libsrc\itmsepauxpos.cpp" />
+    <ClCompile Include="libsrc\itmsepcontainer.cpp" />
+    <ClCompile Include="libsrc\itmsepprisoutil.cpp" />
+    <ClCompile Include="libsrc\itmsepreferencenr.cpp" />
+    <ClCompile Include="libsrc\itmstock.cpp" />
+    <ClCompile Include="libsrc\itmtargetpromo.cpp" />
+    <ClCompile Include="libsrc\itmtargetpromoutil.cpp" />
+    <ClCompile Include="libsrc\itmtender.cpp" />
+    <ClCompile Include="libsrc\itmterms.cpp" />
+    <ClCompile Include="libsrc\itmundo.cpp" />
+    <ClCompile Include="libsrc\itmundoredoposrefund.cpp" />
+    <ClCompile Include="libsrc\itmundoredoutil.cpp" />
+    <ClCompile Include="libsrc\itmundoredubg.cpp" />
+    <ClCompile Include="libsrc\itmupdateibtpos.cpp" />
+    <ClCompile Include="libsrc\itmupdte.cpp" />
+    <ClCompile Include="libsrc\itmwritekdauftragposrefund.cpp" />
+    <ClCompile Include="libsrc\itmxmlentry.cpp" />
+    <ClCompile Include="libsrc\itmxmlutil.cpp" />
+    <ClCompile Include="libsrc\kdauftragdebtrel.cpp" />
+    <ClCompile Include="libsrc\kdauftragposinfo.cpp" />
+    <ClCompile Include="libsrc\kdauftragposrefund.cpp" />
+    <ClCompile Include="libsrc\logkdauftragposrab.cpp" />
+    <ClCompile Include="libsrc\manufacturergroup.cpp" />
+    <ClCompile Include="libsrc\martikel.cpp" />
+    <ClCompile Include="libsrc\martikelfr.cpp" />
+    <ClCompile Include="libsrc\msgger.cpp" />
+    <ClCompile Include="libsrc\msv3order.cpp" />
+    <ClCompile Include="libsrc\msv3orderlist.cpp" />
+    <ClCompile Include="libsrc\msv3orderlistiter.cpp" />
+    <ClCompile Include="libsrc\msv3postrestdelivery.cpp" />
+    <ClCompile Include="libsrc\narctransfer.cpp" />
+    <ClCompile Include="libsrc\number.cpp" />
+    <ClCompile Include="libsrc\oclparam.cpp" />
+    <ClCompile Include="libsrc\oeorigintypes.cpp" />
+    <ClCompile Include="libsrc\oeparam.cpp" />
+    <ClCompile Include="libsrc\oerestrictions.cpp" />
+    <ClCompile Include="libsrc\oerestrictiontypes.cpp" />
+    <ClCompile Include="libsrc\ord2pmos.cpp" />
+    <ClCompile Include="libsrc\ordaddonchargeitem.cpp" />
+    <ClCompile Include="libsrc\ordauxd.cpp" />
+    <ClCompile Include="libsrc\ordbase.cpp" />
+    <ClCompile Include="libsrc\ordbasel.cpp" />
+    <ClCompile Include="libsrc\ordbesttargetpromotion.cpp" />
+    <ClCompile Include="libsrc\ordcancelsumdayturnover.cpp" />
+    <ClCompile Include="libsrc\ordcancl.cpp" />
+    <ClCompile Include="libsrc\ordchcst.cpp" />
+    <ClCompile Include="libsrc\ordcheckdiscountlist.cpp" />
+    <ClCompile Include="libsrc\ordcheckpromovalidity.cpp" />
+    <ClCompile Include="libsrc\ordcheckrestdeliveryposlist.cpp" />
+    <ClCompile Include="libsrc\ordclose.cpp" />
+    <ClCompile Include="libsrc\ordclosedeliveryposatonce.cpp" />
+    <ClCompile Include="libsrc\ordcollectiv.cpp" />
+    <ClCompile Include="libsrc\ordcommonproformainvoice.cpp" />
+    <ClCompile Include="libsrc\ordcontainerlevel.cpp" />
+    <ClCompile Include="libsrc\ordcstdiscacc.cpp" />
+    <ClCompile Include="libsrc\ordcstdiscaccvse.cpp" />
+    <ClCompile Include="libsrc\ordcustcondition.cpp" />
+    <ClCompile Include="libsrc\orddaynightmerge.cpp" />
+    <ClCompile Include="libsrc\ordddprocessing.cpp" />
+    <ClCompile Include="libsrc\orddeldelivery.cpp" />
+    <ClCompile Include="libsrc\ordencloserscale.cpp" />
+    <ClCompile Include="libsrc\ordend.cpp" />
+    <ClCompile Include="libsrc\orderaseorderpositiondiscountentry.cpp" />
+    <ClCompile Include="libsrc\ordercalcmode.cpp" />
+    <ClCompile Include="libsrc\ordercriteria.cpp" />
+    <ClCompile Include="libsrc\orderdiscacc.cpp" />
+    <ClCompile Include="libsrc\orderperiod.cpp" />
+    <ClCompile Include="libsrc\orderperiodlist.cpp" />
+    <ClCompile Include="libsrc\orderperiodlistiter.cpp" />
+    <ClCompile Include="libsrc\orderposcalcmode.cpp" />
+    <ClCompile Include="libsrc\orderposchange.cpp" />
+    <ClCompile Include="libsrc\orderposevent.cpp" />
+    <ClCompile Include="libsrc\orderpospromo.cpp" />
+    <ClCompile Include="libsrc\orderprolink.cpp" />
+    <ClCompile Include="libsrc\orderrelationno.cpp" />
+    <ClCompile Include="libsrc\orderrelationnolist.cpp" />
+    <ClCompile Include="libsrc\orderrelationnotype.cpp" />
+    <ClCompile Include="libsrc\orderrelationnotypelist.cpp" />
+    <ClCompile Include="libsrc\orderremarks.cpp" />
+    <ClCompile Include="libsrc\orderremarkslist.cpp" />
+    <ClCompile Include="libsrc\orderremarktypes.cpp" />
+    <ClCompile Include="libsrc\orderremarktypeslist.cpp" />
+    <ClCompile Include="libsrc\orderxmlvalues.cpp" />
+    <ClCompile Include="libsrc\ordevent.cpp" />
+    <ClCompile Include="libsrc\ordibtutil.cpp" />
+    <ClCompile Include="libsrc\orditem.cpp" />
+    <ClCompile Include="libsrc\orditemproforma.cpp" />
+    <ClCompile Include="libsrc\orditemtemporary.cpp" />
+    <ClCompile Include="libsrc\ordlogitmdiscountvaluepct.cpp" />
+    <ClCompile Include="libsrc\ordmsv3.cpp" />
+    <ClCompile Include="libsrc\ordnarctransfer.cpp" />
+    <ClCompile Include="libsrc\ordopen.cpp" />
+    <ClCompile Include="libsrc\ordoverdrive.cpp" />
+    <ClCompile Include="libsrc\ordproformainvoice.cpp" />
+    <ClCompile Include="libsrc\ordpromotionquota.cpp" />
+    <ClCompile Include="libsrc\ordquery.cpp" />
+    <ClCompile Include="libsrc\ordrange.cpp" />
+    <ClCompile Include="libsrc\ordrangegroupcondition.cpp" />
+    <ClCompile Include="libsrc\ordrangegroupconditionutil.cpp" />
+    <ClCompile Include="libsrc\ordrangeutil.cpp" />
+    <ClCompile Include="libsrc\ordrecalculate.cpp" />
+    <ClCompile Include="libsrc\ordreleaserestdeliveryitems.cpp" />
+    <ClCompile Include="libsrc\ordroute.cpp" />
+    <ClCompile Include="libsrc\ordsepbigorder.cpp" />
+    <ClCompile Include="libsrc\ordsepcappositions.cpp" />
+    <ClCompile Include="libsrc\ordsepcontainer.cpp" />
+    <ClCompile Include="libsrc\ordsepibtbranch.cpp" />
+    <ClCompile Include="libsrc\ordseplistfive.cpp" />
+    <ClCompile Include="libsrc\ordsepmanufacturerpositions.cpp" />
+    <ClCompile Include="libsrc\ordseppositivlist.cpp" />
+    <ClCompile Include="libsrc\ordseppricetypes.cpp" />
+    <ClCompile Include="libsrc\ordseppriso.cpp" />
+    <ClCompile Include="libsrc\ordsepreferencenr.cpp" />
+    <ClCompile Include="libsrc\ordseptour.cpp" />
+    <ClCompile Include="libsrc\ordseputil.cpp" />
+    <ClCompile Include="libsrc\ordspecialomgrebatehandling.cpp" />
+    <ClCompile Include="libsrc\ordsplittibtpos.cpp" />
+    <ClCompile Include="libsrc\ordtargetpromo.cpp" />
+    <ClCompile Include="libsrc\ordtargetpromoutil.cpp" />
+    <ClCompile Include="libsrc\ordtaxvalues.cpp" />
+    <ClCompile Include="libsrc\ordtender.cpp" />
+    <ClCompile Include="libsrc\ordtype.cpp" />
+    <ClCompile Include="libsrc\ordutil.cpp" />
+    <ClCompile Include="libsrc\ordvalue.cpp" />
+    <ClCompile Include="libsrc\ordvdate.cpp" />
+    <ClCompile Include="libsrc\ordvtran.cpp" />
+    <ClCompile Include="libsrc\ordxmlutil.cpp" />
+    <ClCompile Include="libsrc\otcore.cpp" />
+    <ClCompile Include="libsrc\parameter.cpp" />
+    <ClCompile Include="libsrc\posparking.cpp" />
+    <ClCompile Include="libsrc\promotioncollect.cpp" />
+    <ClCompile Include="libsrc\promotionquota.cpp" />
+    <ClCompile Include="libsrc\promotionquotacst.cpp" />
+    <ClCompile Include="libsrc\promotions.cpp" />
+    <ClCompile Include="libsrc\promotionscale.cpp" />
+    <ClCompile Include="libsrc\pxcustomerflags.cpp" />
+    <ClCompile Include="libsrc\pxnhifprices.cpp" />
+    <ClCompile Include="libsrc\pxregistersprices.cpp" />
+    <ClCompile Include="libsrc\pxconstants.cpp" />
+    <ClCompile Include="libsrc\pxerrorloggable.cpp" />
+    <ClCompile Include="libsrc\pxlockaccessordecorator.cpp" />
+    <ClCompile Include="libsrc\pxlockaccessorerrorhandler.cpp" />
+    <ClCompile Include="libsrc\pxorder.cpp" />
+    <ClCompile Include="libsrc\pxorderitemtour.cpp" />
+    <ClCompile Include="libsrc\pxrecord.cpp" />
+    <ClCompile Include="libsrc\pxsessioninitialization.cpp" />
+    <ClCompile Include="libsrc\pxstockbooking.cpp" />
+    <ClCompile Include="libsrc\pxstockbulkinquiry.cpp" />
+    <ClCompile Include="libsrc\pxsuppldeliveryinfo.cpp" />
+    <ClCompile Include="libsrc\pxtransmissionresponse.cpp" />
+    <ClCompile Include="libsrc\range.cpp" />
+    <ClCompile Include="libsrc\rangecollect.cpp" />
+    <ClCompile Include="libsrc\rangecontrole.cpp" />
+    <ClCompile Include="libsrc\rangemember.cpp" />
+    <ClCompile Include="libsrc\rartikel.cpp" />
+    <ClCompile Include="libsrc\refnrcollect.cpp" />
+    <ClCompile Include="libsrc\rouplan.cpp" />
+    <ClCompile Include="libsrc\routeconstime.cpp" />
+    <ClCompile Include="libsrc\routeweek.cpp" />
+    <ClCompile Include="libsrc\salesman.cpp" />
+    <ClCompile Include="libsrc\seporderartgrp.cpp" />
+    <ClCompile Include="libsrc\services.cpp" />
+    <ClCompile Include="libsrc\session.cpp" />
+    <ClCompile Include="libsrc\sessionfactory.cpp" />
+    <ClCompile Include="libsrc\shuttlecustinfo.cpp" />
+    <ClCompile Include="libsrc\stktrans.cpp" />
+    <ClCompile Include="libsrc\stockentry.cpp" />
+    <ClCompile Include="libsrc\stockreceipt.cpp" />
+    <ClCompile Include="libsrc\stockreceiptutil.cpp" />
+    <ClCompile Include="libsrc\stockrev.cpp" />
+    <ClCompile Include="libsrc\subordertype.cpp" />
+    <ClCompile Include="libsrc\taskcntl.cpp" />
+    <ClCompile Include="libsrc\taxrates.cpp" />
+    <ClCompile Include="libsrc\taxtab.cpp" />
+    <ClCompile Include="libsrc\tcasession.cpp" />
+    <ClCompile Include="libsrc\tendercustomer.cpp" />
+    <ClCompile Include="libsrc\tenderhead.cpp" />
+    <ClCompile Include="libsrc\tenderpos.cpp" />
+    <ClCompile Include="libsrc\tenderprogress.cpp" />
+    <ClCompile Include="libsrc\timetype.cpp" />
+    <ClCompile Include="libsrc\toteinfo.cpp" />
+    <ClCompile Include="libsrc\tourassignmentutil.cpp" />
+    <ClCompile Include="libsrc\tourinfo.cpp" />
+    <ClCompile Include="libsrc\tourmanager.cpp" />
+    <ClCompile Include="libsrc\tourmasterdata.cpp" />
+    <ClCompile Include="libsrc\tourmasterdatalist.cpp" />
+    <ClCompile Include="libsrc\tourutil.cpp" />
+    <ClCompile Include="libsrc\txtdoc.cpp" />
+    <ClCompile Include="libsrc\valuescollect.cpp" />
+    <ClCompile Include="libsrc\vartikellokal.cpp" />
+    <ClCompile Include="libsrc\vartikellokallist.cpp" />
+    <ClCompile Include="libsrc\xmcore.cpp" />
+    <ClCompile Include="libsrc\xmitcntl.cpp" />
+    <ClCompile Include="libsrc\xmitem.cpp" />
+    <ClCompile Include="libsrc\xmlutil.cpp" />
+    <ClCompile Include="libsrc\xmorder.cpp" />
+    <ClCompile Include="libsrc\xmordermsv3.cpp" />
+    <ClCompile Include="libsrc\xmspecfu.cpp" />
+    <ClCompile Include="libsrc\xmsplittorder.cpp" />
+    <ClCompile Include="libsrc\xmsubordertype.cpp" />
+    <ClCompile Include="tcawrap\cics.c">
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='CscService_only|Win32'">_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='CscService_only|x64'">_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='CscService_only|Win32'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='CscService_only|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsCpp</CompileAs>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="tcawrap\connection.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='CscService_only|Win32'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='CscService_only|x64'">CompileAsCpp</CompileAs>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='CscService_only|Win32'">_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='CscService_only|x64'">_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsCpp</CompileAs>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="tcawrap\error.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='CscService_only|Win32'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='CscService_only|x64'">CompileAsCpp</CompileAs>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='CscService_only|Win32'">_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='CscService_only|x64'">_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsCpp</CompileAs>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="tcawrap\funccall.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='CscService_only|Win32'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='CscService_only|x64'">CompileAsCpp</CompileAs>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='CscService_only|Win32'">_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='CscService_only|x64'">_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsCpp</CompileAs>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="tcawrap\tcawrap.c">
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='CscService_only|Win32'">_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='CscService_only|x64'">_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\articleaccountinfo.hpp" />
+    <ClInclude Include="include\articlesubstitutionutil.hpp" />
+    <ClInclude Include="include\calcavp.h" />
+    <ClInclude Include="include\calcdiscpct.h" />
+    <ClInclude Include="include\cremamailhandler.h" />
+    <ClInclude Include="include\csccustomer.hpp" />
+    <ClInclude Include="include\customerbusinesshours.hpp" />
+    <ClInclude Include="include\customerbusinesshourslist.hpp" />
+    <ClInclude Include="include\customerorderlockentry.hpp" />
+    <ClInclude Include="include\customertour.hpp" />
+    <ClInclude Include="include\customertourlist.hpp" />
+    <ClInclude Include="include\emailhandler.h" />
+    <ClInclude Include="include\emergencyservice.h" />
+    <ClInclude Include="include\iarticlestockbooking.hpp" />
+    <ClInclude Include="include\ibtassortmenttype.h" />
+    <ClInclude Include="include\ibtbrancharticleconfig.h" />
+    <ClInclude Include="include\ibtbranches.hpp" />
+    <ClInclude Include="include\ibtbrancheslist.hpp" />
+    <ClInclude Include="include\ibtrequesthandler.h" />
+    <ClInclude Include="include\ibttype.hpp" />
+    <ClInclude Include="include\icallbackcomponentmanager.hpp" />
+    <ClInclude Include="include\icustomerflaggetter.h" />
+    <ClInclude Include="include\impl\callbackcomponentmanager.hpp" />
+    <ClInclude Include="include\inhifpricegetter.h" />
+    <ClInclude Include="include\iordertypegetter.h" />
+    <ClInclude Include="include\iregisterspricegetter.h" />
+    <ClInclude Include="include\pxartbaseptr.h" />
+    <ClInclude Include="include\pxartflg.hpp" />
+    <ClInclude Include="include\pxcustomerflags.hpp" />
+    <ClInclude Include="include\pxnhifprices.hpp" />
+    <ClInclude Include="include\pxregistersprices.hpp" />
+    <ClInclude Include="include\pxarticlequotaptr.h" />
+    <ClInclude Include="include\pxartvza.hpp" />
+    <ClInclude Include="include\pxbase\pxconstants.hpp" />
+    <ClInclude Include="include\pxbase\pxrecord.hpp" />
+    <ClInclude Include="include\pxcstbas.hpp" />
+    <ClInclude Include="include\pxcstot.hpp" />
+    <ClInclude Include="include\pxcustgrpflagtypes.hpp" />
+    <ClInclude Include="include\pxcustomergroup.hpp" />
+    <ClInclude Include="include\pxcustomergrpflags.hpp" />
+    <ClInclude Include="include\pxcustomerspecials.hpp" />
+    <ClInclude Include="include\pxdealervolume.hpp" />
+    <ClInclude Include="include\pxdebitlimit.hpp" />
+    <ClInclude Include="include\pxdevicetypeenum.hpp" />
+    <ClInclude Include="include\pxdiscount.hpp" />
+    <ClInclude Include="include\pxdiscountdef.h" />
+    <ClInclude Include="include\pxerrorloggable.hpp" />
+    <ClInclude Include="include\pxeventreason.hpp" />
+    <ClInclude Include="include\pxgeneralcalcavp.hpp" />
+    <ClInclude Include="include\pxgoodsdelivery.hpp" />
+    <ClInclude Include="include\pxholiday.hpp" />
+    <ClInclude Include="include\pxiartik.hpp" />
+    <ClInclude Include="include\pxitem.hpp" />
+    <ClInclude Include="include\pxitembatch.hpp" />
+    <ClInclude Include="include\pxitmdef.h" />
+    <ClInclude Include="include\pxkdauftragposinfo.hpp" />
+    <ClInclude Include="include\pxlockaccessordecorator.h" />
+    <ClInclude Include="include\pxlockaccessorerrorhandler.h" />
+    <ClInclude Include="include\pxmsv3order.hpp" />
+    <ClInclude Include="include\pxoeorigintypes.hpp" />
+    <ClInclude Include="include\pxoeparm.hpp" />
+    <ClInclude Include="include\pxoerestrictions.hpp" />
+    <ClInclude Include="include\pxoerestrictiontypes.hpp" />
+    <ClInclude Include="include\pxorddef.h" />
+    <ClInclude Include="include\pxorder.hpp" />
+    <ClInclude Include="include\pxorderentryparamptr.h" />
+    <ClInclude Include="include\pxorderitemtour.hpp" />
+    <ClInclude Include="include\pxorderperiod.hpp" />
+    <ClInclude Include="include\pxorderposevent.hpp" />
+    <ClInclude Include="include\pxorderrelationno.hpp" />
+    <ClInclude Include="include\pxorderrelationnotype.hpp" />
+    <ClInclude Include="include\pxorderremarks.hpp" />
+    <ClInclude Include="include\pxorderremarktypes.hpp" />
+    <ClInclude Include="include\pxordertransmitptr.h" />
+    <ClInclude Include="include\pxordervalues.hpp" />
+    <ClInclude Include="include\pxordevt.hpp" />
+    <ClInclude Include="include\pxordflg.hpp" />
+    <ClInclude Include="include\pxordpr_.hpp" />
+    <ClInclude Include="include\pxordtyp.hpp" />
+    <ClInclude Include="include\pxparameter.hpp" />
+    <ClInclude Include="include\pxpromotionscale.hpp" />
+    <ClInclude Include="include\pxroute.hpp" />
+    <ClInclude Include="include\pxsalesman.hpp" />
+    <ClInclude Include="include\pxservices.hpp" />
+    <ClInclude Include="include\pxsess.hpp" />
+    <ClInclude Include="include\pxsessioninitialization.h" />
+    <ClInclude Include="include\pxsessionptr.h" />
+    <ClInclude Include="include\pxstockbooking.hpp" />
+    <ClInclude Include="include\pxstockbulkinquiry.hpp" />
+    <ClInclude Include="include\pxsuppldeliveryinfo.hpp" />
+    <ClInclude Include="include\pxtaskcl.hpp" />
+    <ClInclude Include="include\pxtendercustomer.hpp" />
+    <ClInclude Include="include\pxtenderhead.hpp" />
+    <ClInclude Include="include\pxtenderpos.hpp" />
+    <ClInclude Include="include\pxtenderprogress.hpp" />
+    <ClInclude Include="include\pxtoteinfo.hpp" />
+    <ClInclude Include="include\pxtransmissionresponse.hpp" />
+    <ClInclude Include="include\pxtxtdoc.hpp" />
+    <ClInclude Include="include\pxvartikellokal.hpp" />
+    <ClInclude Include="include\pxvartikellokallist.hpp" />
+    <ClInclude Include="include\pxverbund_version.h" />
+    <ClInclude Include="include\pxxmit.hpp" />
+    <ClInclude Include="include\sessionfactory.h" />
+    <ClInclude Include="include\tourassignmentutil.hpp" />
+    <ClInclude Include="include\tourinfo.hpp" />
+    <ClInclude Include="include\tourmanager.hpp" />
+    <ClInclude Include="include\tourmasterdata.hpp" />
+    <ClInclude Include="include\tourmasterdatalist.hpp" />
+    <ClInclude Include="include\tourutil.hpp" />
+    <ClInclude Include="include\pxartacc.hpp" />
+    <ClInclude Include="include\pxartalt.hpp" />
+    <ClInclude Include="include\pxartbas.hpp" />
+    <ClInclude Include="include\pxartcls.hpp" />
+    <ClInclude Include="include\pxartcompack.hpp" />
+    <ClInclude Include="include\pxartdiscountinfo.hpp" />
+    <ClInclude Include="include\pxartdsp.hpp" />
+    <ClInclude Include="include\pxartean.hpp" />
+    <ClInclude Include="include\pxartflf.hpp" />
+    <ClInclude Include="include\pxartflm.hpp" />
+    <ClInclude Include="include\pxarticlecharge.hpp" />
+    <ClInclude Include="include\pxarticlecodes.hpp" />
+    <ClInclude Include="include\pxarticlegroup.hpp" />
+    <ClInclude Include="include\pxarticleinfo.hpp" />
+    <ClInclude Include="include\pxarticlelppr.hpp" />
+    <ClInclude Include="include\pxarticlequota.hpp" />
+    <ClInclude Include="include\pxarticletext.hpp" />
+    <ClInclude Include="include\pxartmas.hpp" />
+    <ClInclude Include="include\pxartmasfr.hpp" />
+    <ClInclude Include="include\pxartoldprice.hpp" />
+    <ClInclude Include="include\pxartpackunit.hpp" />
+    <ClInclude Include="include\pxartprc.hpp" />
+    <ClInclude Include="include\pxartrem.hpp" />
+    <ClInclude Include="include\pxartreservation.hpp" />
+    <ClInclude Include="include\pxartrip.hpp" />
+    <ClInclude Include="include\pxartspecialcond.hpp" />
+    <ClInclude Include="include\pxartsto.hpp" />
+    <ClInclude Include="include\pxbalancecollect.hpp" />
+    <ClInclude Include="include\pxbartik.hpp" />
+    <ClInclude Include="include\pxbranch.hpp" />
+    <ClInclude Include="include\pxcalcdiscount.hpp" />
+    <ClInclude Include="include\pxcomput.hpp" />
+    <ClInclude Include="include\pxcomtyp.hpp" />
+    <ClInclude Include="include\pxconstimecollect.hpp" />
+    <ClInclude Include="include\pxcountrycodes.hpp" />
+    <ClInclude Include="include\pxcpvalidityperiod.hpp" />
+    <ClInclude Include="include\pxcremamail.hpp" />
+    <ClInclude Include="include\pxcstbtm.hpp" />
+    <ClInclude Include="include\pxcstcalcavp.hpp" />
+    <ClInclude Include="include\pxcstdiscacc.hpp" />
+    <ClInclude Include="include\pxcstdiscaccdef.h" />
+    <ClInclude Include="include\pxcsterm.hpp" />
+    <ClInclude Include="include\pxcstgrp.hpp" />
+    <ClInclude Include="include\pxcstonr.hpp" />
+    <ClInclude Include="include\pxcstpaymentterms.hpp" />
+    <ClInclude Include="include\pxcstprint.hpp" />
+    <ClInclude Include="include\pxcstprm.hpp" />
+    <ClInclude Include="include\pxcstrou.hpp" />
+    <ClInclude Include="include\pxcstseporderartgrp.hpp" />
+    <ClInclude Include="include\pxcustbaseinformation.hpp" />
+    <ClInclude Include="include\pxcustdeldelivery.hpp" />
+    <ClInclude Include="include\pxcustdisccondition.hpp" />
+    <ClInclude Include="include\pxcustinf.hpp" />
+    <ClInclude Include="include\pxcustomersurcharge.hpp" />
+    <ClInclude Include="include\pxcustpharmgroup.hpp" />
+    <ClInclude Include="include\pxcustrouteconstime.hpp" />
+    <ClInclude Include="include\pxcustrouteweek.hpp" />
+    <ClInclude Include="include\pxcustrouting.hpp" />
+    <ClInclude Include="include\pxcuststockreserved.hpp" />
+    <ClInclude Include="include\pxdefs.hpp" />
+    <ClInclude Include="include\pxdellog.hpp" />
+    <ClInclude Include="include\pxdelpos.hpp" />
+    <ClInclude Include="include\pxdevice.hpp" />
+    <ClInclude Include="include\pxdirect.hpp" />
+    <ClInclude Include="include\pxdiscountordtyp.hpp" />
+    <ClInclude Include="include\pxdkrakresult.hpp" />
+    <ClInclude Include="include\pxdonepromoquotas.hpp" />
+    <ClInclude Include="include\pxencloserscale.hpp" />
+    <ClInclude Include="include\pxgoodsdeldefs.h" />
+    <ClInclude Include="include\pxholidaydef.h" />
+    <ClInclude Include="include\pxitemattributes.hpp" />
+    <ClInclude Include="include\pxitemdiscount.hpp" />
+    <ClInclude Include="include\pxkdauftragdebtrel.hpp" />
+    <ClInclude Include="include\pxkdauftragposrefund.hpp" />
+    <ClInclude Include="include\pxmanufacturergroup.hpp" />
+    <ClInclude Include="include\pxnarctransfer.hpp" />
+    <ClInclude Include="include\pxnumb.hpp" />
+    <ClInclude Include="include\pxocldef.h" />
+    <ClInclude Include="include\pxoclpar.hpp" />
+    <ClInclude Include="include\pxordercalcmode.hpp" />
+    <ClInclude Include="include\pxordercriteria.hpp" />
+    <ClInclude Include="include\pxorderdiscacc.hpp" />
+    <ClInclude Include="include\pxorderposcalcmode.hpp" />
+    <ClInclude Include="include\pxorderposchange.hpp" />
+    <ClInclude Include="include\pxorderpospromo.hpp" />
+    <ClInclude Include="include\pxorderprolink.hpp" />
+    <ClInclude Include="include\pxordtaxvalues.hpp" />
+    <ClInclude Include="include\pxordvtr.hpp" />
+    <ClInclude Include="include\pxotdef.h" />
+    <ClInclude Include="include\pxparameterdef.h" />
+    <ClInclude Include="include\pxposparking.hpp" />
+    <ClInclude Include="include\pxpromotioncollect.hpp" />
+    <ClInclude Include="include\pxpromotionquota.hpp" />
+    <ClInclude Include="include\pxpromotionquotacst.hpp" />
+    <ClInclude Include="include\pxpromotions.hpp" />
+    <ClInclude Include="include\pxrange.hpp" />
+    <ClInclude Include="include\pxrangecollect.hpp" />
+    <ClInclude Include="include\pxrangecontrol.hpp" />
+    <ClInclude Include="include\pxrangemember.hpp" />
+    <ClInclude Include="include\pxrefnrcollect.hpp" />
+    <ClInclude Include="include\pxrouteconstime.hpp" />
+    <ClInclude Include="include\pxroutedef.h" />
+    <ClInclude Include="include\pxrouteweek.hpp" />
+    <ClInclude Include="include\pxseporderartgrp.hpp" />
+    <ClInclude Include="include\pxshuttlecustinfo.hpp" />
+    <ClInclude Include="include\pxstkrev.hpp" />
+    <ClInclude Include="include\pxstktra.hpp" />
+    <ClInclude Include="include\pxstockentry.hpp" />
+    <ClInclude Include="include\pxsubordertype.hpp" />
+    <ClInclude Include="include\pxtaxrates.hpp" />
+    <ClInclude Include="include\pxtaxtab.hpp" />
+    <ClInclude Include="include\pxtcadef.h" />
+    <ClInclude Include="include\pxtcarecord.h" />
+    <ClInclude Include="include\pxtcasession.hpp" />
+    <ClInclude Include="include\pxttype.hpp" />
+    <ClInclude Include="include\pxvaluescollect.hpp" />
+    <ClInclude Include="include\pxxmldefs.h" />
+    <ClInclude Include="include\types\semikolon.h" />
+    <ClInclude Include="tcawrap\error.h" />
+    <ClInclude Include="tcawrap\tcawrap.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="files\frmsg.txt" />
+    <None Include="files\frmsgu.txt" />
+    <None Include="files\germsg.txt" />
+    <None Include="files\hsmsg.txt" />
+    <None Include="files\message.txt" />
+    <None Include="include\oeorigintypeenum.h" />
+    <None Include="include\types\articleinquiryperioddatetypeenum.inc" />
+    <None Include="include\types\batchstatusenum.inc" />
+    <None Include="include\types\bookingtypeenum.inc" />
+    <None Include="include\types\cremacloseenum.inc" />
+    <None Include="include\types\cremaemailtypeenum.inc" />
+    <None Include="include\types\cremauserlevelenum.inc" />
+    <None Include="include\types\critlevelenum.inc" />
+    <None Include="include\types\documenttypeenum.inc" />
+    <None Include="include\types\kindofdiscountenum.inc" />
+    <None Include="include\types\messagecodeenum.inc" />
+    <None Include="include\types\orderrelationnotypeenum.inc" />
+    <None Include="include\types\orderremarktypeenum.inc" />
+    <None Include="include\types\origintypeenum.inc" />
+    <None Include="include\types\paymentsfilterenum.inc" />
+    <None Include="include\types\pickingtypeenum.inc" />
+    <None Include="include\types\positiontypeenum.inc" />
+    <None Include="include\types\pricetypeenum.inc" />
+    <None Include="include\types\reservationtypeenum.inc" />
+    <None Include="include\types\returnacceptancecheckresultenum.inc" />
+    <None Include="include\types\returnreasonenum.inc" />
+    <None Include="include\types\returntypeenum.inc" />
+    <None Include="include\types\splittorigintypeenum.inc" />
+    <None Include="include\types\splitttypeenum.inc" />
+    <None Include="include\types\transactiontypeenum.inc" />
+    <None Include="include\types\xmlinfolevelenum.inc" />
+    <None Include="makefile" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

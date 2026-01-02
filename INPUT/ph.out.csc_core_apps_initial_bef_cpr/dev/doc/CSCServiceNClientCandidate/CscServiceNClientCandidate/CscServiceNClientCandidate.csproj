@@ -1,0 +1,283 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Pharmos.3rd_Party.Thrift.0.9.3.5\build\Pharmos.3rd_Party.Thrift.props" Condition="Exists('..\packages\Pharmos.3rd_Party.Thrift.0.9.3.5\build\Pharmos.3rd_Party.Thrift.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0DB77391-33EF-4BE6-BC82-9E8515D1DEE8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Phoenix</RootNamespace>
+    <AssemblyName>CscServiceNClientCandidate</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Thrift, Version=0.9.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Pharmos.3rd_Party.Thrift.0.9.3.5\lib\net40\Thrift.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CscDateTimeConverter.cs" />
+    <Compile Include="CscServiceClient.cs" />
+    <Compile Include="CscServiceConfig.cs" />
+    <Compile Include="CscServiceClientException.cs" />
+    <Compile Include="gen-csharp\Csc\Base\Address.cs" />
+    <Compile Include="gen-csharp\Csc\Base\BankAccount.cs" />
+    <Compile Include="gen-csharp\Csc\Base\BranchDetails.cs" />
+    <Compile Include="gen-csharp\Csc\Base\cscbase.Constants.cs" />
+    <Compile Include="gen-csharp\Csc\Base\CustomerDetails.cs" />
+    <Compile Include="gen-csharp\Csc\Base\Date.cs" />
+    <Compile Include="gen-csharp\Csc\Base\DateTime.cs" />
+    <Compile Include="gen-csharp\Csc\Base\ReturnStruct.cs" />
+    <Compile Include="gen-csharp\Csc\Base\SessionRequest.cs" />
+    <Compile Include="gen-csharp\Csc\Base\SessionResponse.cs" />
+    <Compile Include="gen-csharp\Csc\Base\Time.cs" />
+    <Compile Include="gen-csharp\Csc\Callback\CallbackDivisionInquiryRequest.cs" />
+    <Compile Include="gen-csharp\Csc\Callback\CallbackDivisionInquiryResponse.cs" />
+    <Compile Include="gen-csharp\Csc\Callback\CallbackDivisionInquiryResponseItem.cs" />
+    <Compile Include="gen-csharp\Csc\Callback\CallbackPosItem.cs" />
+    <Compile Include="gen-csharp\Csc\Callback\CallbackReasonInquiryRequest.cs" />
+    <Compile Include="gen-csharp\Csc\Callback\CallbackReasonInquiryResponse.cs" />
+    <Compile Include="gen-csharp\Csc\Callback\CallbackReasonInquiryResponseItem.cs" />
+    <Compile Include="gen-csharp\Csc\Callback\FindCallbacksRequest.cs" />
+    <Compile Include="gen-csharp\Csc\Callback\FindCallbacksResponse.cs" />
+    <Compile Include="gen-csharp\Csc\Callback\FindCallbacksResponseItem.cs" />
+    <Compile Include="gen-csharp\Csc\Callback\FindCustomersRequest.cs" />
+    <Compile Include="gen-csharp\Csc\Callback\FindCustomersResponse.cs" />
+    <Compile Include="gen-csharp\Csc\Callback\FindCustomersResponseItem.cs" />
+    <Compile Include="gen-csharp\Csc\Callback\GetCallbackDivisionAndReasonNameRequest.cs" />
+    <Compile Include="gen-csharp\Csc\Callback\GetCallbackDivisionAndReasonNameResponse.cs" />
+    <Compile Include="gen-csharp\Csc\Callback\GetCallbackRequest.cs" />
+    <Compile Include="gen-csharp\Csc\Callback\GetCallbackResponse.cs" />
+    <Compile Include="gen-csharp\Csc\Callback\NewCallbackCritPosRequest.cs" />
+    <Compile Include="gen-csharp\Csc\Callback\NewCallbackCritPosResponse.cs" />
+    <Compile Include="gen-csharp\Csc\Callback\NewCallbackRequest.cs" />
+    <Compile Include="gen-csharp\Csc\Callback\NewCallbackResponse.cs" />
+    <Compile Include="gen-csharp\Csc\Inquiry\ArticleAvailabilityBulkRangeRequest.cs" />
+    <Compile Include="gen-csharp\Csc\Inquiry\ArticleAvailabilityBulkRangeResponse.cs" />
+    <Compile Include="gen-csharp\Csc\Inquiry\ArticleAvailabilityBulkRequest.cs" />
+    <Compile Include="gen-csharp\Csc\Inquiry\ArticleAvailabilityBulkResponse.cs" />
+    <Compile Include="gen-csharp\Csc\Inquiry\ArticleAvailabilityPositionResponse.cs" />
+    <Compile Include="gen-csharp\Csc\Inquiry\ArticleInquiryPositionRequest.cs" />
+    <Compile Include="gen-csharp\Csc\Inquiry\ArticleInquiryRequest.cs" />
+    <Compile Include="gen-csharp\Csc\Inquiry\ArticleInquiryResponse.cs" />
+    <Compile Include="gen-csharp\Csc\Inquiry\ArticleReservationInfo.cs" />
+    <Compile Include="gen-csharp\Csc\Inquiry\ArticleStockBulkRequest.cs" />
+    <Compile Include="gen-csharp\Csc\Inquiry\ArticleStockBulkResponse.cs" />
+    <Compile Include="gen-csharp\Csc\Inquiry\ArticleStockDetailInfo.cs" />
+    <Compile Include="gen-csharp\Csc\Inquiry\ArticleStockDetailsRequest.cs" />
+    <Compile Include="gen-csharp\Csc\Inquiry\ArticleStockDetailsRequestData.cs" />
+    <Compile Include="gen-csharp\Csc\Inquiry\ArticleStockDetailsResponse.cs" />
+    <Compile Include="gen-csharp\Csc\Inquiry\ArticleStockPositionResponse.cs" />
+    <Compile Include="gen-csharp\Csc\Msv3\cscmsv3.Constants.cs" />
+    <Compile Include="gen-csharp\Csc\Msv3\Msv3ContractDataRequest.cs" />
+    <Compile Include="gen-csharp\Csc\Msv3\Msv3ContractDataResponse.cs" />
+    <Compile Include="gen-csharp\Csc\Msv3\Msv3OrderPeriod.cs" />
+    <Compile Include="gen-csharp\Csc\Msv3\Msv3OrderPeriodSpecialDay.cs" />
+    <Compile Include="gen-csharp\Csc\Msv3\Msv3OrderPostProcessingRequest.cs" />
+    <Compile Include="gen-csharp\Csc\Msv3\Msv3OrderPreparationRequest.cs" />
+    <Compile Include="gen-csharp\Csc\Msv3\Msv3OrderPreparationResponse.cs" />
+    <Compile Include="gen-csharp\Csc\Msv3\Msv3OrderStatusRequest.cs" />
+    <Compile Include="gen-csharp\Csc\Msv3\Msv3OrderStatusResponse.cs" />
+    <Compile Include="gen-csharp\Csc\Msv3\Msv3OrderTypeEnum.cs" />
+    <Compile Include="gen-csharp\Csc\Msv3\Msv3OrderTypeInformation.cs" />
+    <Compile Include="gen-csharp\Csc\Msv3\Msv3TransmissionPostProcessingRequest.cs" />
+    <Compile Include="gen-csharp\Csc\Msv3\Msv3TransmissionPreparationRequest.cs" />
+    <Compile Include="gen-csharp\Csc\Msv3\Msv3TransmissionPreparationResponse.cs" />
+    <Compile Include="gen-csharp\Csc\Msv3\XmlInfoLevelRequest.cs" />
+    <Compile Include="gen-csharp\Csc\Msv3\XmlInfoLevelResponse.cs" />
+    <Compile Include="gen-csharp\Csc\Order\ArticleInformation.cs" />
+    <Compile Include="gen-csharp\Csc\Order\CloseOrderRequest.cs" />
+    <Compile Include="gen-csharp\Csc\Order\CloseOrderResponse.cs" />
+    <Compile Include="gen-csharp\Csc\Order\DebtLimitStruct.cs" />
+    <Compile Include="gen-csharp\Csc\Order\NarcoticsLicenseStruct.cs" />
+    <Compile Include="gen-csharp\Csc\Order\OpenOrderRequest.cs" />
+    <Compile Include="gen-csharp\Csc\Order\OpenOrderResponse.cs" />
+    <Compile Include="gen-csharp\Csc\Order\OrderCloseMode.cs" />
+    <Compile Include="gen-csharp\Csc\Order\OrderPositionRequest.cs" />
+    <Compile Include="gen-csharp\Csc\Order\OrderPositionResponse.cs" />
+    <Compile Include="gen-csharp\Csc\Order\OrderRelationNumber.cs" />
+    <Compile Include="gen-csharp\Csc\Order\OrderValuesResponse.cs" />
+    <Compile Include="gen-csharp\Csc\Order\PlaceOrderRequest.cs" />
+    <Compile Include="gen-csharp\Csc\Order\PlaceOrderResponse.cs" />
+    <Compile Include="gen-csharp\Csc\Order\RebateOrderStruct.cs" />
+    <Compile Include="gen-csharp\Csc\Order\TourInformation.cs" />
+    <Compile Include="gen-csharp\Csc\Returns\ReturnsRequest.cs" />
+    <Compile Include="gen-csharp\Csc\Returns\ReturnsRequestHead.cs" />
+    <Compile Include="gen-csharp\Csc\Returns\ReturnsRequestPosition.cs" />
+    <Compile Include="gen-csharp\Csc\Returns\ReturnsResponse.cs" />
+    <Compile Include="gen-csharp\Csc\Returns\ReturnsResponseGroup.cs" />
+    <Compile Include="gen-csharp\Csc\Returns\ReturnsResponsePosition.cs" />
+    <Compile Include="gen-csharp\Csc\Service\CscServiceBase.cs" />
+    <Compile Include="gen-csharp\Csc\Service\CscServiceBatch.cs" />
+    <Compile Include="gen-csharp\Csc\Service\CscServiceOnline.cs" />
+    <Compile Include="gen-csharp\Csc\Test\ConnectionInfo.cs" />
+    <Compile Include="gen-csharp\Csc\Test\CountryEnum.cs" />
+    <Compile Include="gen-csharp\Csc\Test\csctest.Constants.cs" />
+    <Compile Include="gen-csharp\Csc\Test\DeveloperEnum.cs" />
+    <Compile Include="gen-csharp\Csc\Types\BatchStatusEnum.cs" />
+    <Compile Include="gen-csharp\Csc\Types\BookingTypeEnum.cs" />
+    <Compile Include="gen-csharp\Csc\Types\CritLevelEnum.cs" />
+    <Compile Include="gen-csharp\Csc\Types\KindOfDiscountEnum.cs" />
+    <Compile Include="gen-csharp\Csc\Types\MessageCodeEnum.cs" />
+    <Compile Include="gen-csharp\Csc\Types\OrderRelationNoTypeEnum.cs" />
+    <Compile Include="gen-csharp\Csc\Types\OrderRemarkTypeEnum.cs" />
+    <Compile Include="gen-csharp\Csc\Types\OriginTypeEnum.cs" />
+    <Compile Include="gen-csharp\Csc\Types\PickingTypeEnum.cs" />
+    <Compile Include="gen-csharp\Csc\Types\PositionTypeEnum.cs" />
+    <Compile Include="gen-csharp\Csc\Types\PriceTypeEnum.cs" />
+    <Compile Include="gen-csharp\Csc\Types\ReservationTypeEnum.cs" />
+    <Compile Include="gen-csharp\Csc\Types\ReturnAcceptanceCheckResultEnum.cs" />
+    <Compile Include="gen-csharp\Csc\Types\ReturnReasonEnum.cs" />
+    <Compile Include="gen-csharp\Csc\Types\ReturnTypeEnum.cs" />
+    <Compile Include="gen-csharp\Csc\Types\WeekDayEnum.cs" />
+    <Compile Include="gen-csharp\Csc\Types\XMLInfoLevelEnum.cs" />
+    <Compile Include="gen-csharp\Documents\BatchAdviceRequest.cs" />
+    <Compile Include="gen-csharp\Documents\BatchAdviceResponse.cs" />
+    <Compile Include="gen-csharp\Documents\ConfirmationRequestStatusEnum.cs" />
+    <Compile Include="gen-csharp\Documents\DeliveryAdvice.cs" />
+    <Compile Include="gen-csharp\Documents\DeliveryAdviceIdentifier.cs" />
+    <Compile Include="gen-csharp\Documents\DeliveryAdviceInformationFilter.cs" />
+    <Compile Include="gen-csharp\Documents\DeliveryAdviceKey.cs" />
+    <Compile Include="gen-csharp\Documents\DeliveryAdviceLine.cs" />
+    <Compile Include="gen-csharp\Documents\DeliveryAdviceLineDetail.cs" />
+    <Compile Include="gen-csharp\Documents\DeliveryAdviceLineDiscount.cs" />
+    <Compile Include="gen-csharp\Documents\DeliveryAdviceLineReturn.cs" />
+    <Compile Include="gen-csharp\Documents\DeliveryAdviceReceiveConfirmationRequest.cs" />
+    <Compile Include="gen-csharp\Documents\DeliveryAdviceReceiveConfirmationResponse.cs" />
+    <Compile Include="gen-csharp\Documents\DeliveryAdviceRemarks.cs" />
+    <Compile Include="gen-csharp\Documents\DeliveryAdviceSpecificRequest.cs" />
+    <Compile Include="gen-csharp\Documents\DeliveryAdvicesRequest.cs" />
+    <Compile Include="gen-csharp\Documents\DeliveryAdvicesResponse.cs" />
+    <Compile Include="gen-csharp\Documents\DeliveryAdviceTotals.cs" />
+    <Compile Include="gen-csharp\Documents\DeliveryAdviceUpdate.cs" />
+    <Compile Include="gen-csharp\Documents\DeliveryAdviceVatTotal.cs" />
+    <Compile Include="gen-csharp\Documents\GetDocumentInformationRequest.cs" />
+    <Compile Include="gen-csharp\Documents\GetDocumentInformationResponse.cs" />
+    <Compile Include="gen-csharp\Documents\SetDocumentInformationRequest.cs" />
+    <Compile Include="gen-csharp\Documents\SetDocumentInformationResponse.cs" />
+    <Compile Include="gen-csharp\Documents\TNTDeliveryInformationDataFilter.cs" />
+    <Compile Include="gen-csharp\Documents\TNTDeliveryInformationRequest.cs" />
+    <Compile Include="gen-csharp\Documents\TNTDeliveryInformationResponse.cs" />
+    <Compile Include="gen-csharp\Documents\TNTLineDetail.cs" />
+    <Compile Include="gen-csharp\Documents\TNTPackageInformation.cs" />
+    <Compile Include="gen-csharp\Documents\TNTTourInformation.cs" />
+    <Compile Include="gen-csharp\Documents\Types\DocumentTypeEnum.cs" />
+    <Compile Include="gen-csharp\Documents\UpdateDeliveryAdvicesRequest.cs" />
+    <Compile Include="gen-csharp\Documents\UpdateDeliveryAdvicesResponse.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="idl\cscbase.thrift" />
+    <None Include="idl\csccallback.thrift" />
+    <None Include="idl\cscinquiry.thrift" />
+    <None Include="idl\cscmsv3.thrift" />
+    <None Include="idl\cscorder.thrift" />
+    <None Include="idl\cscservice.thrift" />
+    <None Include="idl\csctest.thrift" />
+    <None Include="idl\csctypes.thrift" />
+    <None Include="idl\deliveryadvice.thrift" />
+    <None Include="idl\documentarchiveinformation.thrift" />
+    <None Include="idl\returns.thrift" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="idl\types\batchstatusenum.inc" />
+    <Content Include="idl\types\bookingtypeenum.inc" />
+    <Content Include="idl\types\critlevelenum.inc" />
+    <Content Include="idl\types\documenttypeenum.inc" />
+    <Content Include="idl\types\messagecodeenum.inc" />
+    <Content Include="idl\types\orderrelationnotypeenum.inc" />
+    <Content Include="idl\types\orderremarktypeenum.inc" />
+    <Content Include="idl\types\origintypeenum.inc" />
+    <Content Include="idl\types\pickingtypeenum.inc" />
+    <Content Include="idl\types\positiontypeenum.inc" />
+    <Content Include="idl\types\pricetypeenum.inc" />
+    <Content Include="idl\types\returnacceptancecheckresultenum.inc" />
+    <Content Include="idl\types\returnreasonenum.inc" />
+    <Content Include="idl\types\returntypeenum.inc" />
+    <Content Include="idl\types\weekdayenum.inc" />
+    <Content Include="idl\types\xmlinfolevelenum.inc" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Thrift>
+		call $(SolutionDir)packages\Pharmos.3rd_Party.Thrift.0.9.3.5\tools\thrift.cmd -strict -r -o $(ProjectDir) --gen csharp:serial,nullable $(ProjectDir)idl\returns.thrift
+        call $(SolutionDir)packages\Pharmos.3rd_Party.Thrift.0.9.3.5\tools\thrift.cmd -strict -r -o $(ProjectDir) --gen csharp:serial,nullable $(ProjectDir)idl\cscbase.thrift
+		call $(SolutionDir)packages\Pharmos.3rd_Party.Thrift.0.9.3.5\tools\thrift.cmd -strict -r -o $(ProjectDir) --gen csharp:serial,nullable $(ProjectDir)idl\deliveryadvice.thrift
+		call $(SolutionDir)packages\Pharmos.3rd_Party.Thrift.0.9.3.5\tools\thrift.cmd -strict -r -o $(ProjectDir) --gen csharp:serial,nullable $(ProjectDir)idl\documentarchiveinformation.thrift
+        call $(SolutionDir)packages\Pharmos.3rd_Party.Thrift.0.9.3.5\tools\thrift.cmd -strict -r -o $(ProjectDir) --gen csharp:serial,nullable $(ProjectDir)idl\csccallback.thrift
+        call $(SolutionDir)packages\Pharmos.3rd_Party.Thrift.0.9.3.5\tools\thrift.cmd -strict -r -o $(ProjectDir) --gen csharp:serial,nullable $(ProjectDir)idl\cscinquiry.thrift
+        call $(SolutionDir)packages\Pharmos.3rd_Party.Thrift.0.9.3.5\tools\thrift.cmd -strict -r -o $(ProjectDir) --gen csharp:serial,nullable $(ProjectDir)idl\cscmsv3.thrift
+        call $(SolutionDir)packages\Pharmos.3rd_Party.Thrift.0.9.3.5\tools\thrift.cmd -strict -r -o $(ProjectDir) --gen csharp:serial,nullable $(ProjectDir)idl\cscorder.thrift
+        call $(SolutionDir)packages\Pharmos.3rd_Party.Thrift.0.9.3.5\tools\thrift.cmd -strict -r -o $(ProjectDir) --gen csharp:serial,nullable $(ProjectDir)idl\cscservice.thrift
+        call $(SolutionDir)packages\Pharmos.3rd_Party.Thrift.0.9.3.5\tools\thrift.cmd -strict -r -o $(ProjectDir) --gen csharp:serial,nullable $(ProjectDir)idl\csctest.thrift
+        call $(SolutionDir)packages\Pharmos.3rd_Party.Thrift.0.9.3.5\tools\thrift.cmd -strict -r -o $(ProjectDir) --gen csharp:serial,nullable $(ProjectDir)idl\csctypes.thrift
+    </Thrift>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.-->
+  <Target Name="BeforeBuild">
+    <Exec Command="$(Thrift)" />
+    <ItemGroup>
+      <Compile Remove="gen-csharp\Csc\**\*.cs" />
+      <Compile Include="gen-csharp\Csc\**\*.cs" />
+      <Compile Remove="gen-csharp\documents\**\*.cs" />
+      <Compile Include="gen-csharp\documents\**\*.cs" />
+    </ItemGroup>
+  </Target>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Pharmos.3rd_Party.Thrift.0.9.3.5\build\Pharmos.3rd_Party.Thrift.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Pharmos.3rd_Party.Thrift.0.9.3.5\build\Pharmos.3rd_Party.Thrift.props'))" />
+  </Target>
+  <!--<Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

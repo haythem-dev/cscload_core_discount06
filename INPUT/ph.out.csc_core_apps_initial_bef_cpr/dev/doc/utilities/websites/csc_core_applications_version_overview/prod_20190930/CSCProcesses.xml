@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CSCProcesses xsi:noNamespaceSchemaLocation="CSCProcesses.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">	
+	<Country ShortName="at" ServerName="oat21" UserName="produser" Password="redR8-Wo3">			
+		<Process CommandIdentifier="aaorderclose" />		
+		<Process CommandIdentifier="clearreservation" />
+		<Process CommandIdentifier="corpha" />
+		<Process CommandIdentifier="deli"/>		
+		<Process CommandIdentifier="kscserver" />		
+		<Process CommandIdentifier="phabor" />
+		<Process CommandIdentifier="phadex" />
+		<Process CommandIdentifier="phatra" />
+		<Process CommandIdentifier="ibtorderimport" />
+		<Process CommandIdentifier="zaapunix" />
+		<Process CommandIdentifier="cscservice" />		
+	</Country>		
+	<Country ShortName="bg" ServerName="obg21" UserName="produser" Password="redR8-Wo3">		
+		<Process CommandIdentifier="aaorderclose" />
+		<Process CommandIdentifier="clearreservation" />
+		<Process CommandIdentifier="corpha" />		
+		<Process CommandIdentifier="kscserver" />	
+		<Process CommandIdentifier="phadex" />		
+		<Process CommandIdentifier="phatra" />		
+		<Process CommandIdentifier="ibtorderimport" />
+		<Process CommandIdentifier="zaapunix" />
+		<Process CommandIdentifier="cscservice" />		
+	</Country>		
+	<Country ShortName="ch" ServerName="och21" UserName="produser" Password="redR8-Wo3">		
+		<Process CommandIdentifier="aaorderclose" />		
+		<Process CommandIdentifier="clearreservation" />
+		<Process CommandIdentifier="corpha" />		
+		<Process CommandIdentifier="deli"/>
+		<Process CommandIdentifier="kscserver" />				
+		<Process CommandIdentifier="phabor" />		
+		<Process CommandIdentifier="phadex" />
+		<Process CommandIdentifier="phatra" />		
+		<Process CommandIdentifier="ibtorderimport" />
+		<Process CommandIdentifier="zaapunix" />
+		<Process CommandIdentifier="cscservice" />		
+	</Country>			
+	<Country ShortName="de" ServerName="ode21" UserName="produser" Password="redR8-Wo3">		
+		<Process CommandIdentifier="aaorderclose"/>		
+		<Process CommandIdentifier="clearreservation" />
+		<Process CommandIdentifier="corpha"/>
+		<Process CommandIdentifier="deli"/>
+		<Process CommandIdentifier="ibtorderimport"/>
+		<Process CommandIdentifier="kscserver" />		
+		<Process CommandIdentifier="phabor"/>
+		<Process CommandIdentifier="phadex" />		
+		<Process CommandIdentifier="phatra"/>		
+		<Process CommandIdentifier="zaapunix" />						
+		<Process CommandIdentifier="cscservice" />		
+	</Country>			
+	<Country ShortName="deXML" ServerName="ode23" UserName="produser" Password="redR8-Wo3">		
+		<Process CommandIdentifier="kscserverLN" />				
+		<Process CommandIdentifier="kscserverXmlNord" />				
+		<Process CommandIdentifier="cscserviceLN" />		
+	</Country>				
+	<Country ShortName="deXML2" ServerName="ode24" UserName="produser" Password="redR8-Wo3">		
+		<Process CommandIdentifier="kscserverLN" />		
+		<Process CommandIdentifier="kscserverXmlNord" />		
+		<Process CommandIdentifier="cscserviceLN" />		
+	</Country>					
+	<Country ShortName="fr" ServerName="ofr21" UserName="produser" Password="redR8-Wo3">		
+		<Process CommandIdentifier="aaorderclose"/>
+		<Process CommandIdentifier="clearreservation" />
+		<Process CommandIdentifier="corpha"/>		
+		<Process CommandIdentifier="kscserver" />				
+		<Process CommandIdentifier="phadex" />		
+		<Process CommandIdentifier="phatra"/>		
+		<Process CommandIdentifier="vbordimport2"/>
+		<Process CommandIdentifier="zaapunix" />
+		<Process CommandIdentifier="cscservice" />		
+	</Country>			
+	<Country ShortName="hr" ServerName="ohr21" UserName="produser" Password="redR8-Wo3">
+		<Process CommandIdentifier="aaorderclose" />
+		<Process CommandIdentifier="clearreservation" />
+		<Process CommandIdentifier="corpha" />		
+		<Process CommandIdentifier="kscserver" />				
+		<Process CommandIdentifier="phadex" />		
+		<Process CommandIdentifier="phatra" />
+		<Process CommandIdentifier="ibtorderimport" />		
+		<Process CommandIdentifier="zaapunix" />
+		<Process CommandIdentifier="cscservice" />		
+	</Country>				
+	<Country ShortName="rs" ServerName="ors21" UserName="produser" Password="redR8-Wo3">
+		<Process CommandIdentifier="aaorderclose" />
+		<Process CommandIdentifier="clearreservation" />
+		<Process CommandIdentifier="corpha" />		
+		<Process CommandIdentifier="kscserver" />				
+		<Process CommandIdentifier="phadex" />		
+		<Process CommandIdentifier="phatra" />
+		<Process CommandIdentifier="ibtorderimport" />		
+		<Process CommandIdentifier="zaapunix" />
+		<Process CommandIdentifier="cscservice" />		
+	</Country>						
+	<Country ShortName="pat" ServerName="oat21" UserName="produser" Password="redR8-Wo3">
+		<Process CommandIdentifier="aaorderclose" />		
+		<Process CommandIdentifier="clearreservation" />
+		<Process CommandIdentifier="corpha" />
+		<Process CommandIdentifier="kscserver" />		
+		<Process CommandIdentifier="phabor" />
+		<Process CommandIdentifier="phadex" />		
+		<Process CommandIdentifier="phatra" />
+		<Process CommandIdentifier="ibtorderimport" />
+		<Process CommandIdentifier="zaapunix" />
+		<Process CommandIdentifier="cscservice" />		
+	</Country>							
+	<Country ShortName="pch" ServerName="och21" UserName="produser" Password="redR8-Wo3">
+		<Process CommandIdentifier="aaorderclose" />
+		<Process CommandIdentifier="clearreservation" />
+		<Process CommandIdentifier="corpha" />		
+		<Process CommandIdentifier="kscserver" />				
+		<Process CommandIdentifier="phabor" />
+		<Process CommandIdentifier="phadex" />
+		<Process CommandIdentifier="phatra" />
+		<Process CommandIdentifier="ibtorderimport" />
+		<Process CommandIdentifier="zaapunix" />
+		<Process CommandIdentifier="cscservice" />		
+	</Country>						
+	<Country ShortName="pfr" ServerName="ofr21" UserName="produser" Password="redR8-Wo3">		
+		<Process CommandIdentifier="aaorderclose"/>				
+		<Process CommandIdentifier="corpha"/>
+		<Process CommandIdentifier="kscserver" />				
+		<Process CommandIdentifier="phabor"/>		
+		<Process CommandIdentifier="phadex" />		
+		<Process CommandIdentifier="phatra"/>		
+		<Process CommandIdentifier="vbordimport2"/>		
+		<Process CommandIdentifier="zaapunix" />
+		<Process CommandIdentifier="cscservice" />		
+	</Country>						
+</CSCProcesses>

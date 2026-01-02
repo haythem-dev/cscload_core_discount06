@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="CSCProcesses">
+		<xs:annotation>
+			<xs:documentation>Comment describing your root element</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Country" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Process" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:attribute name="CommandIdentifier" type="xs:string" use="required"/>
+									<xs:attribute name="BranchList" type="xs:string"/>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<xs:attribute name="ShortName" use="required">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:enumeration value="at"/>
+									<xs:enumeration value="bg"/>
+									<xs:enumeration value="ch"/>
+									<xs:enumeration value="de"/>
+									<xs:enumeration value="fr"/>
+									<xs:enumeration value="hr"/>
+									<xs:enumeration value="rs"/>
+									<xs:enumeration value="pat"/>
+									<xs:enumeration value="pch"/>
+									<xs:enumeration value="pfr"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
+						<xs:attribute name="ServerName" type="xs:string" use="required"/>
+						<xs:attribute name="UserName" type="xs:string" use="required"/>
+						<xs:attribute name="Password" type="xs:string" use="required"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

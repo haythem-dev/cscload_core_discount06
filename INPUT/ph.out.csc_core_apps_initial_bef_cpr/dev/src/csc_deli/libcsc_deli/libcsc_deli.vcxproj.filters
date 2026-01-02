@@ -1,0 +1,833 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Exception">
+      <UniqueIdentifier>{3025B9CB-7037-1014-980B-AB4141A31375}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure">
+      <UniqueIdentifier>{3025BAAB-7037-1014-980B-AB4141A31375}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\Accessor">
+      <UniqueIdentifier>{3025BB58-7037-1014-980B-AB4141A31375}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Domain Module">
+      <UniqueIdentifier>{3025BCBA-7037-1014-980B-AB4141A31375}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ComponentManager">
+      <UniqueIdentifier>{3025BDA6-7037-1014-980B-AB4141A31375}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ComponentManager\ApplCompMgr">
+      <UniqueIdentifier>{3025BE9C-7037-1014-980B-AB4141A31375}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ComponentManager\ApplCompMgr\Impl">
+      <UniqueIdentifier>{3025BF4E-7037-1014-980B-AB4141A31375}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Loggerpool">
+      <UniqueIdentifier>{3025BFF7-7037-1014-980B-AB4141A31375}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Loggerpool\ConfigFile">
+      <UniqueIdentifier>{3025C09F-7037-1014-980B-AB4141A31375}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="LibCsc_deliInfo">
+      <UniqueIdentifier>{3025C195-7037-1014-980B-AB4141A31375}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Domain Module\DebtLimit">
+      <UniqueIdentifier>{102404d9-bdfe-4be4-8985-716660c37e00}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Domain Module\DebtLimit\DebtLimitCollectionDM">
+      <UniqueIdentifier>{bc322a0c-926a-45cc-aa6f-09547fedf88c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Domain Module\DebtLimit\DebtLimitCollectionDM\Impl">
+      <UniqueIdentifier>{59e467d4-4e9e-4b54-b943-8c219d98a378}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Domain Module\DebtLimit\DebtLimitCollectionDM\Interface">
+      <UniqueIdentifier>{2044e786-1b74-426d-b4fe-e49d9bcd0f60}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Domain Module\CustomerInvoice">
+      <UniqueIdentifier>{3d77bfa0-e42f-47d6-8d49-2908dd57a27c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\CSV">
+      <UniqueIdentifier>{8c44d5da-ac45-4f47-9c3c-ac6b59ec25f5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\CSV\Impl">
+      <UniqueIdentifier>{b147a048-8bd2-489a-b83c-174d7253eb8c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\CSV\Exception">
+      <UniqueIdentifier>{3b69c2f9-7197-4e62-9f50-18da0e63df99}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Domain Module\Customer">
+      <UniqueIdentifier>{3f0e564b-5d63-4eac-8c7f-76af45af4d75}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Domain Module\Customer\CustomerDM">
+      <UniqueIdentifier>{507c3efc-0b75-4b88-b837-f5b7e9d18bf6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Domain Module\Customer\CustomerDM\Impl">
+      <UniqueIdentifier>{5b79700d-6afd-4f58-9577-7bcfe953894d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Domain Module\Customer\CustomerDM\Interface">
+      <UniqueIdentifier>{7d90aab1-ca7f-4c1f-a8ba-2585aa2a0866}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Domain Module\CustomerOrder">
+      <UniqueIdentifier>{c7dcbc4a-2ef0-497b-98b3-f9dc224073e5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Domain Module\CustomerOrder\CustomerOrderCollectionDM">
+      <UniqueIdentifier>{12d389f7-5b95-4fbc-9ca9-8df7c5735624}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Domain Module\CustomerOrder\CustomerOrderCollectionDM\Impl">
+      <UniqueIdentifier>{fe8e674c-5ef0-4ff7-a25b-c2e0f98a9507}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Domain Module\CustomerOrder\CustomerOrderCollectionDM\Interface">
+      <UniqueIdentifier>{1bfe3c89-5366-4e6d-bac3-354447d3da88}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\Accessor\AccessorBase">
+      <UniqueIdentifier>{aa230555-9c1d-4991-ae1e-ab1858d64c60}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Domain Module\CremaMail">
+      <UniqueIdentifier>{38adfc2a-a16a-4774-936b-7bb99ff9cbea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Domain Module\CremaMail\CremaMailCleanupDM">
+      <UniqueIdentifier>{d523b713-adcf-4060-b77a-4b1fb03ff81c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Domain Module\CremaMail\CremaMailCleanupDM\Impl">
+      <UniqueIdentifier>{981d0581-68fb-4e44-b412-345c54dd95fe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Domain Module\CremaMail\CremaMailCleanupDM\Interface">
+      <UniqueIdentifier>{613e9cfa-3193-47a9-99d8-907782e24024}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Domain Module\SAP">
+      <UniqueIdentifier>{17dad97e-f65b-4d52-ab03-75882efac8f1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Domain Module\SAP\Interface">
+      <UniqueIdentifier>{ff5e17bc-9a25-4e4f-b4de-46986bb0c42b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Domain Module\SAP\SAPLimitCollectionDM">
+      <UniqueIdentifier>{c5e8c1f0-fd38-410c-8b34-dbc2e660b0cd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Domain Module\SAP\SAPBalanceCollectionDM">
+      <UniqueIdentifier>{75587ce1-52b9-4677-a67f-208e61b06ddb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Domain Module\CustomerInvoice\CustomerInvoiceDM">
+      <UniqueIdentifier>{fdfa4e52-a13d-4e71-9a26-b0d14e6eac91}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Domain Module\CustomerInvoice\CustomerInvoiceDM\Impl">
+      <UniqueIdentifier>{48da900a-ea02-4fbb-b4b5-23e294fb9290}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Domain Module\CustomerInvoice\CustomerInvoiceDM\Interface">
+      <UniqueIdentifier>{ef153bf2-35d0-463b-9a86-266789710c56}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ComponentManager\ApplCompMgr\CustomerInvoiceFactory">
+      <UniqueIdentifier>{a3fa92a7-8c4c-46fb-a41c-9dadf9587471}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\Accessor\Customer">
+      <UniqueIdentifier>{a416a090-f11c-4a28-bb4f-7b37c2b2a26e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\Accessor\Customer\CustomerACC">
+      <UniqueIdentifier>{93703dd8-b2a1-41c4-aee7-8511254da2b2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\Accessor\CustomerInvoice">
+      <UniqueIdentifier>{d8700ba4-9a97-446a-9dc3-3c22a4867887}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\Accessor\CustomerInvoice\CustomerInvoiceACC">
+      <UniqueIdentifier>{966e1460-d430-4b7e-a258-d07b23492dba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ComponentManager\ApplCompMgr\CustomerInvoiceFactory\CustomerInvoiceConnectedFactory">
+      <UniqueIdentifier>{5fee1872-5d83-4c56-a242-827bebcf7d79}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ComponentManager\ApplCompMgr\CustomerInvoiceFactory\CustomerInvoiceConnectedFactory\Impl">
+      <UniqueIdentifier>{2ef761b9-ee6c-45ef-bd89-c5e6e23255b1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ComponentManager\ApplCompMgr\CustomerInvoiceFactory\CustomerInvoiceConnectedFactory\Interface">
+      <UniqueIdentifier>{0fcf3e56-da67-40da-9f1b-3e4a016ffdc1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Domain Module\DebtLimit\DebtLimitImportDM">
+      <UniqueIdentifier>{da915aa0-f999-4a29-aa17-5009f3d0f752}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Domain Module\DebtLimit\DebtLimitImportDM\Impl">
+      <UniqueIdentifier>{5edc9f4f-be48-4565-b9d2-5ae2d239002c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Domain Module\DebtLimit\DebtLimitImportDM\Interface">
+      <UniqueIdentifier>{2b42d297-bebd-4ec3-aa06-89764e945675}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Domain Module\DebtLimit\DebtLimitDM">
+      <UniqueIdentifier>{3c755ad2-3c76-47b5-9ced-d403c20d8d74}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Domain Module\DebtLimit\DebtLimitDM\Impl">
+      <UniqueIdentifier>{d71f3a74-4e3d-407b-bad2-977b650c97e2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Domain Module\DebtLimit\DebtLimitDM\Interface">
+      <UniqueIdentifier>{1c2145d1-aef5-47c9-bbee-c8ee1e0c4cb8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\Accessor\DebtLimit">
+      <UniqueIdentifier>{ee204ecc-7b04-4d96-9811-f26d0eaaf8bf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\Accessor\DebtLimit\DebtLimitCollectionACC">
+      <UniqueIdentifier>{031b0c33-77de-4ff5-b9fa-61fe0dafb9fa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\Accessor\DebtLimit\DebtLimitACC">
+      <UniqueIdentifier>{3024fb0c-c186-45b3-af47-c8691e8162ba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ComponentManager\ApplCompMgr\DebtLimitFactory">
+      <UniqueIdentifier>{b541e2b5-6385-4041-ab83-831a5086734d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\Accessor\CremaMail">
+      <UniqueIdentifier>{df0aafe5-e5c6-4d27-89fd-9b649054925a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\Accessor\CremaMail\CremaMailCleanupACC">
+      <UniqueIdentifier>{0adf985e-7d54-4e3b-89ba-c4c5ddb96f45}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\Accessor\SAP">
+      <UniqueIdentifier>{afa3bc7f-8b08-429f-8534-d13978c1ac5a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\Accessor\SAP\SAPBalanceCollectionACC">
+      <UniqueIdentifier>{dbc1b45b-4b6c-4fab-b658-14a5992499f0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\Accessor\SAP\SAPLimitCollectionACC">
+      <UniqueIdentifier>{51fca6cd-36c2-4549-93bf-90826b3eade2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\Accessor\CustomerOrder">
+      <UniqueIdentifier>{40043e94-86b3-4898-a5c0-856f48b5564b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\Accessor\CustomerOrder\CustomerOrderCollectionACC">
+      <UniqueIdentifier>{66564e1d-a339-4c65-93fa-036714179546}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Domain Module\Turnover">
+      <UniqueIdentifier>{bcc0f62d-8591-47a2-90c2-fbaf980abb08}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Domain Module\Turnover\TurnoverDM">
+      <UniqueIdentifier>{51126eff-f6bf-4825-8170-983951400537}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Domain Module\Turnover\TurnoverDM\Impl">
+      <UniqueIdentifier>{e4a1c24b-68af-45c2-a5d8-51c4680844fd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Domain Module\Turnover\TurnoverDM\Interface">
+      <UniqueIdentifier>{43a81186-3ecf-4150-a142-bcbe6a1a9578}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\Accessor\CustomerInvoice\CustomerInvoicingCollectionACC">
+      <UniqueIdentifier>{48bcaa02-0dec-4ad5-a275-18a9373bee00}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Domain Module\CustomerInvoice\CustomerInvoicingCollectionDM">
+      <UniqueIdentifier>{6e4bec68-93eb-4f08-9d69-c40122aa8f89}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Domain Module\CustomerInvoice\CustomerInvoicingCollectionDM\Impl">
+      <UniqueIdentifier>{7ee45831-de66-4acb-9a99-04f9edb0403d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Domain Module\CustomerInvoice\CustomerInvoicingCollectionDM\Interface">
+      <UniqueIdentifier>{a7caf484-e198-4e4b-a11c-c79595350cf1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\Accessor\CustomerInvoice\CustomerInvoiceCollectionACC">
+      <UniqueIdentifier>{36b1328a-59e5-476c-a5e7-f2afc5490f53}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\Parameter">
+      <UniqueIdentifier>{ddd22e42-5b4d-4f4b-a109-02bb613bf9f7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\Parameter\AccParameter">
+      <UniqueIdentifier>{49a23be0-709f-44fd-956e-341aebbc6ecb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\Parameter\AccParameter\Impl">
+      <UniqueIdentifier>{865b2e9d-411e-49aa-9c42-d96182ae0eb9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\Parameter\AccParameter\Interface">
+      <UniqueIdentifier>{da89970d-c729-40f3-bcd6-a7a64918d093}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ComponentManager\ApplCompMgr\Interface">
+      <UniqueIdentifier>{319949e4-2047-43df-8793-89d6b7ab0d76}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ComponentManager\ApplCompMgr\DebtLimitFactory\DebtLimitDisonnectedFactory">
+      <UniqueIdentifier>{3be41da8-2b76-43bd-bab3-f94948683572}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ComponentManager\ApplCompMgr\DebtLimitFactory\DebtLimitDisonnectedFactory\Impl">
+      <UniqueIdentifier>{917e6d14-2fea-42b9-9eb2-976c30b04a82}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ComponentManager\ApplCompMgr\DebtLimitFactory\DebtLimitDisonnectedFactory\Interface">
+      <UniqueIdentifier>{e08a083a-302e-453c-84dd-8dc1dccb8d14}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\Accessor\CustomerTurnover">
+      <UniqueIdentifier>{c9f67364-2e31-4b92-a6f4-fa903c43667e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\Accessor\CustomerTurnover\CustomerTurnoverCollectionACC">
+      <UniqueIdentifier>{3a0b2105-9f3a-4235-ab6a-e081a413e892}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Domain Module\Turnover\CustomerTurnoverCollectionDM">
+      <UniqueIdentifier>{248fa0ac-6b01-4737-90f6-4008b352e026}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Domain Module\Turnover\CustomerTurnoverCollectionDM\Impl">
+      <UniqueIdentifier>{95c89549-7a94-4bb0-bced-07077e9dbab5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Domain Module\Turnover\CustomerTurnoverCollectionDM\Interface">
+      <UniqueIdentifier>{759c15be-711f-464d-927a-3b9d0015ac70}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\Accessor\SAP\SAPCustomerTurnoverCollectionACC">
+      <UniqueIdentifier>{7144fd6d-39fa-4a90-bfc0-ae75303a6191}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Domain Module\SAP\SAPCustomerTurnoverCollectionDM">
+      <UniqueIdentifier>{74fee2ab-0323-483f-ab7d-0f213492c353}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Domain Module\Turnover\CustomerTurnoverExportDM">
+      <UniqueIdentifier>{c99811f8-1562-4a0b-a51c-68f34a5255f7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Domain Module\Turnover\CustomerTurnoverExportDM\Impl">
+      <UniqueIdentifier>{5fdaa8de-39d7-4c4e-8cf4-51a6df26ad7b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Domain Module\Turnover\CustomerTurnoverExportDM\Interface">
+      <UniqueIdentifier>{f0b2210b-422d-43ce-9524-e5b25551f91b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Domain Module\DebtLimit\DebtLimitMailDM">
+      <UniqueIdentifier>{3641f474-2b51-4283-87c7-07382566d815}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Domain Module\DebtLimit\DebtLimitMailDM\Impl">
+      <UniqueIdentifier>{47c99a16-ead5-499b-948b-442ca184b3e4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Domain Module\DebtLimit\DebtLimitMailDM\Interface">
+      <UniqueIdentifier>{c2e17245-0bae-49f3-8e9a-1f339371a212}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\ConnectionPool">
+      <UniqueIdentifier>{b97f6743-8cd2-467a-82e7-26b0c70bb5fa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\ConnectionPool\Impl">
+      <UniqueIdentifier>{e2503d1d-5b91-4c29-8dc1-15e283830542}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\ConnectionPool\Interface">
+      <UniqueIdentifier>{3b87e0dd-fb0f-49eb-8054-a649dc76b4df}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\Accessor\AccessorProxyUnionDecorator">
+      <UniqueIdentifier>{7b83d1ff-f5fb-44b9-81cf-3212277796bb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\Parameter\AreaMapper">
+      <UniqueIdentifier>{001a9e7e-460a-458f-9035-d9bd85edfae1}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="componentManager\libcsc_deliapplcompmgr.cpp">
+      <Filter>ComponentManager\ApplCompMgr\Impl</Filter>
+    </ClCompile>
+    <ClCompile Include="loggerpool\libcsc_deli_loggerpool.cpp">
+      <Filter>Loggerpool</Filter>
+    </ClCompile>
+    <ClCompile Include="libcsc_deliinfo\libcsc_deli_info.cpp">
+      <Filter>LibCsc_deliInfo</Filter>
+    </ClCompile>
+    <ClCompile Include="domainmodule\debtlimit\debtlimitcollectiondm.cpp">
+      <Filter>Domain Module\DebtLimit\DebtLimitCollectionDM\Impl</Filter>
+    </ClCompile>
+    <ClCompile Include="infrastructure\accessor\debtlimit\debtlimitcollectionacc.cpp">
+      <Filter>Infrastructure\Accessor\DebtLimit\DebtLimitCollectionACC</Filter>
+    </ClCompile>
+    <ClCompile Include="infrastructure\csvfile\csvfile.cpp">
+      <Filter>Infrastructure\CSV\Impl</Filter>
+    </ClCompile>
+    <ClCompile Include="infrastructure\csvfile\csvfileexception.cpp">
+      <Filter>Infrastructure\CSV\Exception</Filter>
+    </ClCompile>
+    <ClCompile Include="domainmodule\customer\customerdm.cpp">
+      <Filter>Domain Module\Customer\CustomerDM\Impl</Filter>
+    </ClCompile>
+    <ClCompile Include="infrastructure\accessor\customer\customeracc.cpp">
+      <Filter>Infrastructure\Accessor\Customer\CustomerACC</Filter>
+    </ClCompile>
+    <ClCompile Include="domainmodule\customerorder\customerordercollectiondm.cpp">
+      <Filter>Domain Module\CustomerOrder\CustomerOrderCollectionDM\Impl</Filter>
+    </ClCompile>
+    <ClCompile Include="infrastructure\accessor\customerorder\customerordercollectionacc.cpp">
+      <Filter>Infrastructure\Accessor\CustomerOrder\CustomerOrderCollectionACC</Filter>
+    </ClCompile>
+    <ClCompile Include="exception\methodnotfoundexception.cpp">
+      <Filter>Exception</Filter>
+    </ClCompile>
+    <ClCompile Include="infrastructure\accessor\accessorbase\accessorbase.cpp">
+      <Filter>Infrastructure\Accessor\AccessorBase</Filter>
+    </ClCompile>
+    <ClCompile Include="infrastructure\accessor\cremamail\cremamailcleanupacc.cpp">
+      <Filter>Infrastructure\Accessor\CremaMail\CremaMailCleanupACC</Filter>
+    </ClCompile>
+    <ClCompile Include="domainmodule\cremamail\cremamailcleanupdm.cpp">
+      <Filter>Domain Module\CremaMail\CremaMailCleanupDM\Impl</Filter>
+    </ClCompile>
+    <ClCompile Include="domainmodule\customerinvoice\customerinvoicedm.cpp">
+      <Filter>Domain Module\CustomerInvoice\CustomerInvoiceDM\Impl</Filter>
+    </ClCompile>
+    <ClCompile Include="infrastructure\accessor\customerinvoice\customerinvoiceacc.cpp">
+      <Filter>Infrastructure\Accessor\CustomerInvoice\CustomerInvoiceACC</Filter>
+    </ClCompile>
+    <ClCompile Include="componentmanager\customerinvoiceconnectedfactory.cpp">
+      <Filter>ComponentManager\ApplCompMgr\CustomerInvoiceFactory\CustomerInvoiceConnectedFactory\Impl</Filter>
+    </ClCompile>
+    <ClCompile Include="domainmodule\debtlimit\debtlimitimportdm.cpp">
+      <Filter>Domain Module\DebtLimit\DebtLimitImportDM\Impl</Filter>
+    </ClCompile>
+    <ClCompile Include="domainmodule\debtlimit\debtlimitdm.cpp">
+      <Filter>Domain Module\DebtLimit\DebtLimitDM\Impl</Filter>
+    </ClCompile>
+    <ClCompile Include="infrastructure\accessor\debtlimit\debtlimitacc.cpp">
+      <Filter>Infrastructure\Accessor\DebtLimit\DebtLimitACC</Filter>
+    </ClCompile>
+    <ClCompile Include="infrastructure\accessor\sap\sapbalancecollectionacc.cpp">
+      <Filter>Infrastructure\Accessor\SAP\SAPBalanceCollectionACC</Filter>
+    </ClCompile>
+    <ClCompile Include="infrastructure\accessor\sap\saplimitcollectionacc.cpp">
+      <Filter>Infrastructure\Accessor\SAP\SAPLimitCollectionACC</Filter>
+    </ClCompile>
+    <ClCompile Include="domainmodule\sap\saplimitcollectiondm.cpp">
+      <Filter>Domain Module\SAP\SAPLimitCollectionDM</Filter>
+    </ClCompile>
+    <ClCompile Include="domainmodule\sap\sapbalancecollectiondm.cpp">
+      <Filter>Domain Module\SAP\SAPBalanceCollectionDM</Filter>
+    </ClCompile>
+    <ClCompile Include="infrastructure\accessor\customerinvoice\customerinvoicingcollectionacc.cpp">
+      <Filter>Infrastructure\Accessor\CustomerInvoice\CustomerInvoicingCollectionACC</Filter>
+    </ClCompile>
+    <ClCompile Include="domainmodule\customerinvoice\customerinvoicingcollectiondm.cpp">
+      <Filter>Domain Module\CustomerInvoice\CustomerInvoicingCollectionDM\Impl</Filter>
+    </ClCompile>
+    <ClCompile Include="infrastructure\accessor\customerinvoice\customerinvoicecollectionacc.cpp">
+      <Filter>Infrastructure\Accessor\CustomerInvoice\CustomerInvoiceCollectionACC</Filter>
+    </ClCompile>
+    <ClCompile Include="domainmodule\turnover\turnoverdm.cpp">
+      <Filter>Domain Module\Turnover\TurnoverDM\Impl</Filter>
+    </ClCompile>
+    <ClCompile Include="exception\filenotfoundexception.cpp">
+      <Filter>Exception</Filter>
+    </ClCompile>
+    <ClCompile Include="infrastructure\parameter\accparameter.cpp">
+      <Filter>Infrastructure\Parameter\AccParameter\Impl</Filter>
+    </ClCompile>
+    <ClCompile Include="componentmanager\debtlimitdisconnectedfactory.cpp">
+      <Filter>ComponentManager\ApplCompMgr\DebtLimitFactory\DebtLimitDisonnectedFactory\Impl</Filter>
+    </ClCompile>
+    <ClCompile Include="infrastructure\accessor\customerturnover\customerturnovercollectionacc.cpp">
+      <Filter>Infrastructure\Accessor\CustomerTurnover\CustomerTurnoverCollectionACC</Filter>
+    </ClCompile>
+    <ClCompile Include="domainmodule\turnover\customerturnovercollectiondm.cpp">
+      <Filter>Domain Module\Turnover\CustomerTurnoverCollectionDM\Impl</Filter>
+    </ClCompile>
+    <ClCompile Include="infrastructure\accessor\sap\sapcustomerturnovercollectionacc.cpp">
+      <Filter>Infrastructure\Accessor\SAP\SAPCustomerTurnoverCollectionACC</Filter>
+    </ClCompile>
+    <ClCompile Include="infrastructure\csvfile\csvrow.cpp">
+      <Filter>Infrastructure\CSV\Impl</Filter>
+    </ClCompile>
+    <ClCompile Include="domainmodule\sap\sapcustomerturnovercollectiondm.cpp">
+      <Filter>Domain Module\SAP\SAPCustomerTurnoverCollectionDM</Filter>
+    </ClCompile>
+    <ClCompile Include="domainmodule\turnover\customerturnoverexportdm.cpp">
+      <Filter>Domain Module\Turnover\CustomerTurnoverExportDM\Impl</Filter>
+    </ClCompile>
+    <ClCompile Include="domainmodule\debtlimit\debtlimitmaildm.cpp">
+      <Filter>Domain Module\DebtLimit\DebtLimitMailDM\Impl</Filter>
+    </ClCompile>
+    <ClCompile Include="exception\duplicatenameexception.cpp">
+      <Filter>Exception</Filter>
+    </ClCompile>
+    <ClCompile Include="exception\namenotfoundexception.cpp">
+      <Filter>Exception</Filter>
+    </ClCompile>
+    <ClCompile Include="exception\dbconnectionexception.cpp">
+      <Filter>Exception</Filter>
+    </ClCompile>
+    <ClCompile Include="infrastructure\connectionpool\connectionpool.cpp">
+      <Filter>Infrastructure\ConnectionPool\Impl</Filter>
+    </ClCompile>
+    <ClCompile Include="infrastructure\accessor\accessordecorator\accessorproxyuniondecorator.cpp">
+      <Filter>Infrastructure\Accessor\AccessorProxyUnionDecorator</Filter>
+    </ClCompile>
+    <ClCompile Include="infrastructure\parameter\areamapper.cpp">
+      <Filter>Infrastructure\Parameter\AreaMapper</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="domainmodule\libcsc_deli_properties_definitions.h">
+      <Filter>Domain Module</Filter>
+    </ClInclude>
+    <ClInclude Include="componentManager\libcsc_deliapplcompmgr.h">
+      <Filter>ComponentManager\ApplCompMgr\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="componentManager\libcsc_deliapplcompmgrptr.h">
+      <Filter>ComponentManager\ApplCompMgr\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="loggerpool\libcsc_deli_loggerpool.h">
+      <Filter>Loggerpool</Filter>
+    </ClInclude>
+    <ClInclude Include="libcsc_deliinfo\libcsc_deli_info.h">
+      <Filter>LibCsc_deliInfo</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\debtlimit\debtlimitcollectiondm.h">
+      <Filter>Domain Module\DebtLimit\DebtLimitCollectionDM\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\debtlimit\debtlimitcollectiondmptr.h">
+      <Filter>Domain Module\DebtLimit\DebtLimitCollectionDM\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\accessor\debtlimit\debtlimitcollectionacc.h">
+      <Filter>Infrastructure\Accessor\DebtLimit\DebtLimitCollectionACC</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\accessor\debtlimit\debtlimitcollectionacc_definitions.h">
+      <Filter>Infrastructure\Accessor\DebtLimit\DebtLimitCollectionACC</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\csvfile\csvfile.h">
+      <Filter>Infrastructure\CSV\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\csvfile\csvfileexception.h">
+      <Filter>Infrastructure\CSV\Exception</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\customer\customerdm.h">
+      <Filter>Domain Module\Customer\CustomerDM\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\customer\customerdmptr.h">
+      <Filter>Domain Module\Customer\CustomerDM\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\accessor\customer\customeracc.h">
+      <Filter>Infrastructure\Accessor\Customer\CustomerACC</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\accessor\customer\customeracc_definitions.h">
+      <Filter>Infrastructure\Accessor\Customer\CustomerACC</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\customer\icustomerfinder.h">
+      <Filter>Domain Module\Customer\CustomerDM\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\customer\icustomerfinderptr.h">
+      <Filter>Domain Module\Customer\CustomerDM\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\customerorder\customerordercollectiondm.h">
+      <Filter>Domain Module\CustomerOrder\CustomerOrderCollectionDM\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\customerorder\customerordercollectiondmptr.h">
+      <Filter>Domain Module\CustomerOrder\CustomerOrderCollectionDM\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\accessor\customerorder\customerordercollectionacc.h">
+      <Filter>Infrastructure\Accessor\CustomerOrder\CustomerOrderCollectionACC</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\accessor\customerorder\customerordercollectionacc_definitions.h">
+      <Filter>Infrastructure\Accessor\CustomerOrder\CustomerOrderCollectionACC</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\accessor\accessorbase\accessmethodcaller.hpp">
+      <Filter>Infrastructure\Accessor\AccessorBase</Filter>
+    </ClInclude>
+    <ClInclude Include="exception\methodnotfoundexception.h">
+      <Filter>Exception</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\accessor\accessorbase\accessorbase.h">
+      <Filter>Infrastructure\Accessor\AccessorBase</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\accessor\cremamail\cremamailcleanupacc_definitions.h">
+      <Filter>Infrastructure\Accessor\CremaMail\CremaMailCleanupACC</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\accessor\cremamail\cremamailcleanupacc.h">
+      <Filter>Infrastructure\Accessor\CremaMail\CremaMailCleanupACC</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\customerorder\icustomerordercollectionfinder.h">
+      <Filter>Domain Module\CustomerOrder\CustomerOrderCollectionDM\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\customerorder\icustomerordercollectionfinderptr.h">
+      <Filter>Domain Module\CustomerOrder\CustomerOrderCollectionDM\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\cremamail\cremamailcleanupdm.h">
+      <Filter>Domain Module\CremaMail\CremaMailCleanupDM\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\cremamail\cremamailcleanupdmptr.h">
+      <Filter>Domain Module\CremaMail\CremaMailCleanupDM\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\sap\isapcollectionreader.h">
+      <Filter>Domain Module\SAP\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\sap\isapcollectionreaderptr.h">
+      <Filter>Domain Module\SAP\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\customerinvoice\customerinvoicedm.h">
+      <Filter>Domain Module\CustomerInvoice\CustomerInvoiceDM\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\customerinvoice\customerinvoicedmptr.h">
+      <Filter>Domain Module\CustomerInvoice\CustomerInvoiceDM\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\accessor\customerinvoice\customerinvoiceacc.h">
+      <Filter>Infrastructure\Accessor\CustomerInvoice\CustomerInvoiceACC</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\accessor\customerinvoice\customerinvoiceacc_definitions.h">
+      <Filter>Infrastructure\Accessor\CustomerInvoice\CustomerInvoiceACC</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\debtlimit\idebtlimitcollection.h">
+      <Filter>Domain Module\DebtLimit\DebtLimitCollectionDM\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\debtlimit\idebtlimitcollectionptr.h">
+      <Filter>Domain Module\DebtLimit\DebtLimitCollectionDM\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="componentmanager\customerinvoiceconnectedfactory.h">
+      <Filter>ComponentManager\ApplCompMgr\CustomerInvoiceFactory\CustomerInvoiceConnectedFactory\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="componentmanager\customerinvoiceconnectedfactoryptr.h">
+      <Filter>ComponentManager\ApplCompMgr\CustomerInvoiceFactory\CustomerInvoiceConnectedFactory\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="componentmanager\icustomerinvoiceconnectedfactory.h">
+      <Filter>ComponentManager\ApplCompMgr\CustomerInvoiceFactory\CustomerInvoiceConnectedFactory\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="componentmanager\icustomerinvoiceconnectedfactoryptr.h">
+      <Filter>ComponentManager\ApplCompMgr\CustomerInvoiceFactory\CustomerInvoiceConnectedFactory\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\debtlimit\debtlimitimportdm.h">
+      <Filter>Domain Module\DebtLimit\DebtLimitImportDM\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\debtlimit\debtlimitimportdmptr.h">
+      <Filter>Domain Module\DebtLimit\DebtLimitImportDM\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\debtlimit\debtlimitdm.h">
+      <Filter>Domain Module\DebtLimit\DebtLimitDM\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\debtlimit\debtlimitdmptr.h">
+      <Filter>Domain Module\DebtLimit\DebtLimitDM\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\accessor\debtlimit\debtlimitacc.h">
+      <Filter>Infrastructure\Accessor\DebtLimit\DebtLimitACC</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\accessor\debtlimit\debtlimitacc_definitions.h">
+      <Filter>Infrastructure\Accessor\DebtLimit\DebtLimitACC</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\debtlimit\idebtlimit.h">
+      <Filter>Domain Module\DebtLimit\DebtLimitDM\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\debtlimit\idebtlimitptr.h">
+      <Filter>Domain Module\DebtLimit\DebtLimitDM\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\accessor\sap\sapbalancecollectionacc.h">
+      <Filter>Infrastructure\Accessor\SAP\SAPBalanceCollectionACC</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\accessor\sap\sapbalancecollectionacc_definitions.h">
+      <Filter>Infrastructure\Accessor\SAP\SAPBalanceCollectionACC</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\accessor\sap\saplimitcollectionacc.h">
+      <Filter>Infrastructure\Accessor\SAP\SAPLimitCollectionACC</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\accessor\sap\saplimitcollectionacc_definitions.h">
+      <Filter>Infrastructure\Accessor\SAP\SAPLimitCollectionACC</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\sap\saplimitcollectiondmptr.h">
+      <Filter>Domain Module\SAP\SAPLimitCollectionDM</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\sap\saplimitcollectiondm.h">
+      <Filter>Domain Module\SAP\SAPLimitCollectionDM</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\sap\sapbalancecollectiondmptr.h">
+      <Filter>Domain Module\SAP\SAPBalanceCollectionDM</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\sap\sapbalancecollectiondm.h">
+      <Filter>Domain Module\SAP\SAPBalanceCollectionDM</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\accessor\customerinvoice\customerinvoicingcollectionacc.h">
+      <Filter>Infrastructure\Accessor\CustomerInvoice\CustomerInvoicingCollectionACC</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\accessor\customerinvoice\customerinvoicingcollectionacc_definitions.h">
+      <Filter>Infrastructure\Accessor\CustomerInvoice\CustomerInvoicingCollectionACC</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\customerinvoice\customerinvoicingcollectiondm.h">
+      <Filter>Domain Module\CustomerInvoice\CustomerInvoicingCollectionDM\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\customerinvoice\customerinvoicingcollectiondmptr.h">
+      <Filter>Domain Module\CustomerInvoice\CustomerInvoicingCollectionDM\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\customerinvoice\icustomerinvoicingcollection.h">
+      <Filter>Domain Module\CustomerInvoice\CustomerInvoicingCollectionDM\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\customerinvoice\icustomerinvoicingcollectionptr.h">
+      <Filter>Domain Module\CustomerInvoice\CustomerInvoicingCollectionDM\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\accessor\customerinvoice\customerinvoicecollectionacc.h">
+      <Filter>Infrastructure\Accessor\CustomerInvoice\CustomerInvoiceCollectionACC</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\accessor\customerinvoice\customerinvoicecollectionacc_definitions.h">
+      <Filter>Infrastructure\Accessor\CustomerInvoice\CustomerInvoiceCollectionACC</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\turnover\turnoverdm.h">
+      <Filter>Domain Module\Turnover\TurnoverDM\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\turnover\turnoverdmptr.h">
+      <Filter>Domain Module\Turnover\TurnoverDM\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\turnover\turnoverdm_definitions.h">
+      <Filter>Domain Module\Turnover\TurnoverDM\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\turnover\iturnoverfinder.h">
+      <Filter>Domain Module\Turnover\TurnoverDM\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\turnover\iturnoverfinderptr.h">
+      <Filter>Domain Module\Turnover\TurnoverDM\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\debtlimit\idebtlimitimporter.h">
+      <Filter>Domain Module\DebtLimit\DebtLimitImportDM\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\debtlimit\idebtlimitimporterptr.h">
+      <Filter>Domain Module\DebtLimit\DebtLimitImportDM\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="exception\filenotfoundexception.h">
+      <Filter>Exception</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\parameter\iaccparameter.h">
+      <Filter>Infrastructure\Parameter\AccParameter\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\parameter\iaccparameterptr.h">
+      <Filter>Infrastructure\Parameter\AccParameter\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\parameter\accparameter.h">
+      <Filter>Infrastructure\Parameter\AccParameter\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\parameter\accparameterptr.h">
+      <Filter>Infrastructure\Parameter\AccParameter\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\accessor\sap\sap_definitions.h">
+      <Filter>Infrastructure\Accessor\SAP</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\customerinvoice\icustomerinvoice.h">
+      <Filter>Domain Module\CustomerInvoice\CustomerInvoiceDM\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\customerinvoice\icustomerinvoiceptr.h">
+      <Filter>Domain Module\CustomerInvoice\CustomerInvoiceDM\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\customerinvoice\icustomerinvoiceflag.h">
+      <Filter>Domain Module\CustomerInvoice\CustomerInvoiceDM\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\customerinvoice\icustomerinvoiceflagptr.h">
+      <Filter>Domain Module\CustomerInvoice\CustomerInvoiceDM\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="componentmanager\icustomerinvoicegetter.h">
+      <Filter>ComponentManager\ApplCompMgr\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="componentmanager\icustomerinvoicegetterptr.h">
+      <Filter>ComponentManager\ApplCompMgr\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="componentmanager\debtlimitdisconnectedfactory.h">
+      <Filter>ComponentManager\ApplCompMgr\DebtLimitFactory\DebtLimitDisonnectedFactory\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="componentmanager\debtlimitdisconnectedfactoryptr.h">
+      <Filter>ComponentManager\ApplCompMgr\DebtLimitFactory\DebtLimitDisonnectedFactory\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="componentmanager\idebtlimitdisconnectedfactory.h">
+      <Filter>ComponentManager\ApplCompMgr\DebtLimitFactory\DebtLimitDisonnectedFactory\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="componentmanager\idebtlimitdisconnectedfactoryptr.h">
+      <Filter>ComponentManager\ApplCompMgr\DebtLimitFactory\DebtLimitDisonnectedFactory\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\accessor\customerturnover\customerturnovercollectionacc.h">
+      <Filter>Infrastructure\Accessor\CustomerTurnover\CustomerTurnoverCollectionACC</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\accessor\customerturnover\customerturnovercollectionacc_definitions.h">
+      <Filter>Infrastructure\Accessor\CustomerTurnover\CustomerTurnoverCollectionACC</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\turnover\customerturnovercollectiondm.h">
+      <Filter>Domain Module\Turnover\CustomerTurnoverCollectionDM\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\turnover\customerturnovercollectiondmptr.h">
+      <Filter>Domain Module\Turnover\CustomerTurnoverCollectionDM\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\accessor\sap\sapcustomerturnovercollectionacc.h">
+      <Filter>Infrastructure\Accessor\SAP\SAPCustomerTurnoverCollectionACC</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\accessor\sap\sapcustomerturnovercollectionacc_definitions.h">
+      <Filter>Infrastructure\Accessor\SAP\SAPCustomerTurnoverCollectionACC</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\csvfile\csviterator.h">
+      <Filter>Infrastructure\CSV\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\csvfile\csvrow.h">
+      <Filter>Infrastructure\CSV\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\sap\isapcollectionwriter.h">
+      <Filter>Domain Module\SAP\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\sap\isapcollectionwriterptr.h">
+      <Filter>Domain Module\SAP\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\sap\sapcustomerturnovercollectiondm.h">
+      <Filter>Domain Module\SAP\SAPCustomerTurnoverCollectionDM</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\sap\sapcustomerturnovercollectiondmptr.h">
+      <Filter>Domain Module\SAP\SAPCustomerTurnoverCollectionDM</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\turnover\customerturnoverexportdm.h">
+      <Filter>Domain Module\Turnover\CustomerTurnoverExportDM\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\turnover\customerturnoverexportdmptr.h">
+      <Filter>Domain Module\Turnover\CustomerTurnoverExportDM\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\turnover\icustomerturnovercollectionloader.h">
+      <Filter>Domain Module\Turnover\CustomerTurnoverCollectionDM\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\turnover\icustomerturnovercollectionloaderptr.h">
+      <Filter>Domain Module\Turnover\CustomerTurnoverCollectionDM\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\turnover\icustomerturnoverexporter.h">
+      <Filter>Domain Module\Turnover\CustomerTurnoverExportDM\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\turnover\icustomerturnoverexporterptr.h">
+      <Filter>Domain Module\Turnover\CustomerTurnoverExportDM\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\cremamail\icremamailcleanerptr.h">
+      <Filter>Domain Module\CremaMail\CremaMailCleanupDM\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\cremamail\icremamailcleaner.h">
+      <Filter>Domain Module\CremaMail\CremaMailCleanupDM\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\debtlimit\debtlimitmaildm.h">
+      <Filter>Domain Module\DebtLimit\DebtLimitMailDM\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\debtlimit\debtlimitmaildmptr.h">
+      <Filter>Domain Module\DebtLimit\DebtLimitMailDM\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\debtlimit\idebtlimitmailprocessor.h">
+      <Filter>Domain Module\DebtLimit\DebtLimitMailDM\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\debtlimit\idebtlimitmailprocessorptr.h">
+      <Filter>Domain Module\DebtLimit\DebtLimitMailDM\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\parameter\parameterkeys.h">
+      <Filter>Infrastructure\Parameter</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\debtlimit\pxcremamailhandlerptr.h">
+      <Filter>Domain Module\DebtLimit\DebtLimitMailDM\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="exception\duplicatenameexception.h">
+      <Filter>Exception</Filter>
+    </ClInclude>
+    <ClInclude Include="exception\namenotfoundexception.h">
+      <Filter>Exception</Filter>
+    </ClInclude>
+    <ClInclude Include="exception\dbconnectionexception.h">
+      <Filter>Exception</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\connectionpool\iconnectionpool.h">
+      <Filter>Infrastructure\ConnectionPool\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\connectionpool\idbconnectionfactoryconstptr.h">
+      <Filter>Infrastructure\ConnectionPool\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\connectionpool\iconnectionpoolgetter.h">
+      <Filter>Infrastructure\ConnectionPool\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\connectionpool\iconnectionpoolgetterptr.h">
+      <Filter>Infrastructure\ConnectionPool\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\connectionpool\iconnectionpoolptr.h">
+      <Filter>Infrastructure\ConnectionPool\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\connectionpool\idbconnectionfactory.h">
+      <Filter>Infrastructure\ConnectionPool\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\connectionpool\connectionpool.h">
+      <Filter>Infrastructure\ConnectionPool\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\connectionpool\connectionpoolptr.h">
+      <Filter>Infrastructure\ConnectionPool\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\accessor\accessordecorator\accessorproxyuniondecorator.h">
+      <Filter>Infrastructure\Accessor\AccessorProxyUnionDecorator</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\accessor\accessordecorator\accessorproxyuniondecoratorptr.h">
+      <Filter>Infrastructure\Accessor\AccessorProxyUnionDecorator</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\parameter\areamapper.h">
+      <Filter>Infrastructure\Parameter\AreaMapper</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\accessor\backup_settings.h">
+      <Filter>Infrastructure\Accessor</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="csc_deli.cfg">
+      <Filter>Loggerpool\ConfigFile</Filter>
+    </None>
+  </ItemGroup>
+</Project>

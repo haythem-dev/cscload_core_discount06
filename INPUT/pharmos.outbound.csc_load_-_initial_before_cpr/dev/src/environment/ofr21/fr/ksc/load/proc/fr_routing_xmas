@@ -1,0 +1,18 @@
+# qual
+. /software/etc/profile_prz
+
+dbaccess ofr21 -<<%
+begin work;
+update customerrouting set timeto = 1830 where branchno = 35 and 
+timeto > 1830 and weekday = 1;
+commit work;
+begin work;
+update customerrouting set timeto = 1830 where branchno = 37 and 
+timeto > 1845 and weekday = 1;
+commit work;
+begin work;
+update customerrouting set timeto = 1900 where branchno = 32 and
+timeto > 1900 and weekday = 1;
+commit work;
+%
+

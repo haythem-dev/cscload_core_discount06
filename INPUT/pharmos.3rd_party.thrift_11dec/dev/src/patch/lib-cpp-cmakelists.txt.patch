@@ -1,0 +1,10 @@
+--- a/lib/cpp/CMakeLists.txt	2019-01-04 23:22:49.000000000 +0100
++++ b/lib/cpp/CMakeLists.txt	2019-08-02 07:45:00.924044800 +0200
+@@ -35,6 +35,7 @@
+    src/thrift/concurrency/TimerManager.cpp
+    src/thrift/concurrency/Util.cpp
+    src/thrift/processor/PeekProcessor.cpp
++   src/thrift/protocol/BoostEncoder.cpp
+    src/thrift/protocol/TBase64Utils.cpp
+    src/thrift/protocol/TDebugProtocol.cpp
+    src/thrift/protocol/TJSONProtocol.cpp

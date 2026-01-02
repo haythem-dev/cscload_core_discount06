@@ -1,0 +1,12 @@
+diff -ur a/lib/cpp/src/thrift/transport/TServerTransport.h b/lib/cpp/src/thrift/transport/TServerTransport.h
+--- a/lib/cpp/src/thrift/transport/TServerTransport.h	2019-01-04 23:22:49.000000000 +0100
++++ b/lib/cpp/src/thrift/transport/TServerTransport.h	2019-10-15 07:50:25.734453000 +0200
+@@ -89,7 +89,7 @@
+   * @throw TTransportException If an error occurs
+   */
+ 
+-  virtual THRIFT_SOCKET getSocketFD() { return -1; }
++  virtual THRIFT_SOCKET getSocketFD() { return THRIFT_INVALID_SOCKET; }
+ 
+   /**
+    * Closes this transport such that future calls to accept will do nothing.

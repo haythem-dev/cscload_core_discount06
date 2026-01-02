@@ -1,0 +1,16 @@
+###############################################################################################
+# HEADER-DATA
+###############################################################################################
+#Author:            b.bischof                                                                                 
+#Creation-Date:     08.10.2019                                                                                
+#Creation-Time:     14:55                                                                                     
+#Creator:           generate_additional_vars_file - Version: 02.01.00.00                                      
+#Creation-Type:     ONLINE_SERVER_PROCEDURE                                                                   
+#Purpose:           Declares additional procedure specific variables read in from the procedure file          
+###############################################################################################
+
+#========================================================================================#
+# DECLARATION SECTION FOR ADDITIONAL VARIABLES
+#========================================================================================#
+ADDITIONAL_PARA="-areaid 2000"
+

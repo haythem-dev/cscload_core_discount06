@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="log4cplus">
+      <UniqueIdentifier>{e902f8ff-531d-439e-ac19-d6cea3d7f7b9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="unix">
+      <UniqueIdentifier>{48434d8e-16db-4a70-8509-0975d0ce112f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cmnutil">
+      <UniqueIdentifier>{32e0df66-234b-4405-8953-30bb1bd96d20}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cmdLine">
+      <UniqueIdentifier>{185a62c7-b248-4165-93fd-1f77a6dff678}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cmdLine\exceptions">
+      <UniqueIdentifier>{88cf807c-f06a-40d2-a99d-1bb3b3b4bd35}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dbconnection">
+      <UniqueIdentifier>{f3533713-f178-498b-b439-94e7a554323a}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="log_macros.h">
+      <Filter>log4cplus</Filter>
+    </ClInclude>
+    <ClInclude Include="loggerpool.h">
+      <Filter>log4cplus</Filter>
+    </ClInclude>
+    <ClInclude Include="classinfo_macros.h">
+      <Filter>cmnutil</Filter>
+    </ClInclude>
+    <ClInclude Include="libbatch_definitions.h">
+      <Filter>cmnutil</Filter>
+    </ClInclude>
+    <ClInclude Include="cmdlineconfiguration.h">
+      <Filter>cmdLine</Filter>
+    </ClInclude>
+    <ClInclude Include="cmdlineevaluator.h">
+      <Filter>cmdLine</Filter>
+    </ClInclude>
+    <ClInclude Include="cmdlineoption.h">
+      <Filter>cmdLine</Filter>
+    </ClInclude>
+    <ClInclude Include="cmdlineoption_definitions.h">
+      <Filter>cmdLine</Filter>
+    </ClInclude>
+    <ClInclude Include="cmdlineparser.h">
+      <Filter>cmdLine</Filter>
+    </ClInclude>
+    <ClInclude Include="cmdlineexception.h">
+      <Filter>cmdLine\exceptions</Filter>
+    </ClInclude>
+    <ClInclude Include="dbconnectionbase.h">
+      <Filter>dbconnection</Filter>
+    </ClInclude>
+    <ClInclude Include="dbconnectionbaseptr.h">
+      <Filter>dbconnection</Filter>
+    </ClInclude>
+    <ClInclude Include="accessorexecutionexception.h" />
+    <ClInclude Include="accessorinstancerefwrapper.h" />
+    <ClInclude Include="baseexception.h" />
+    <ClInclude Include="componentinitializeexception.h" />
+    <ClInclude Include="exceptionhandler.h" />
+    <ClInclude Include="executeerrorenum2stringmapper.h" />
+    <ClInclude Include="searchyiterator.h" />
+    <ClInclude Include="searchyiteratorptr.h" />
+    <ClInclude Include="transactionguard.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="loggerpool.cpp">
+      <Filter>log4cplus</Filter>
+    </ClCompile>
+    <ClCompile Include="cmdlineevaluator.cpp">
+      <Filter>cmdLine</Filter>
+    </ClCompile>
+    <ClCompile Include="cmdlineoption.cpp">
+      <Filter>cmdLine</Filter>
+    </ClCompile>
+    <ClCompile Include="cmdlineparser.cpp">
+      <Filter>cmdLine</Filter>
+    </ClCompile>
+    <ClCompile Include="cmdlineexception.cpp">
+      <Filter>cmdLine\exceptions</Filter>
+    </ClCompile>
+    <ClCompile Include="dbconnectionbase.cpp">
+      <Filter>dbconnection</Filter>
+    </ClCompile>
+    <ClCompile Include="accessorexecutionexception.cpp" />
+    <ClCompile Include="accessorinstancerefwrapper.cpp" />
+    <ClCompile Include="baseexception.cpp" />
+    <ClCompile Include="componentinitializeexception.cpp" />
+    <ClCompile Include="exceptionhandler.cpp" />
+    <ClCompile Include="executeerrorenum2stringmapper.cpp" />
+    <ClCompile Include="searchyiterator.cpp" />
+    <ClCompile Include="transactionguard.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="makefile">
+      <Filter>unix</Filter>
+    </None>
+    <None Include="dbconnectionbase.inl">
+      <Filter>dbconnection</Filter>
+    </None>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<articleCatalogueRequest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://salesweb.phoenix-ag.de/wsxmlgermany/schemas/PhoenixArticleCatalogueRequestDE.xsd">	
+	<client branchNumber="51" customerNumber="9999005"/>
+	<articles insertMasterData="yes">
+		<byArticleNumber articleNumber="2495052" requestedQuantity="200"/>
+		<byArticleNumber articleNumber="7621113" requestedQuantity="300"/>
+		<byArticleNumber articleNumber="831669" requestedQuantity="300"/>
+		<byArticleNumber articleNumber="78597"/>
+		<byArticleNumber articleNumber="3524436"/>
+		<byArticleNumber articleNumber="3648629"/>
+		<byEAN EAN="4103380854860"/>
+	</articles>
+	<browseRequest requestKey="no"/>
+</articleCatalogueRequest>

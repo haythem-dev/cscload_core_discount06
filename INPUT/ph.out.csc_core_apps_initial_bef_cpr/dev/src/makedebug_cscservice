@@ -1,0 +1,30 @@
+#! /usr/bin/ksh
+
+cd cxxtools
+make -j40
+
+if test $? -eq 0
+then
+ cd ../pxdb
+ make -j40
+
+ if test $? -eq 0
+ then
+  cd ../pxverbund
+  make -j40
+
+  if test $? -eq 0
+  then
+   cd ../libcsc
+   make -j40
+
+   if test $? -eq 0
+   then
+    cd ../thrift
+    make -j40
+   fi
+  fi
+ fi
+fi
+
+cd ../..

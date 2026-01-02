@@ -1,0 +1,858 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Mit XMLSpy v2007 sp1 bearbeitet (http://www.altova.com) von C. Merkl (PHOENIX Pharmahandel AG & Co. KG) -->
+<!-- Mit XMLSpy v2007 sp1 bearbeitet (http://www.altova.com) von C. Merkl (PHOENIX Pharmahandel AG & Co. KG) -->
+<!-- Mit XMLSpy v2007 sp1 bearbeitet (http://www.altova.com) von C. Merkl (PHOENIX Pharmahandel AG & Co. KG) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="PharmamlTypes_V1.0.xsd"/>
+	<xs:include schemaLocation="PharmamlLineTypes_V1.0.xsd"/>
+	<xs:include schemaLocation="PhoenixTypesFR.xsd"/>
+	<xs:element name="articleCatalogueRequest">
+		<xs:annotation>
+			<xs:documentation>This describes the format of an article catalogue request. If you post such a request against the salesweb application, you will receive information about the requested articles.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="PML_ENV_ATTRIBUTE" type="ctPML_ENV_ATTRIBUTE" minOccurs="0"/>
+				<xs:element name="PML_ENV_ENTETE" type="ctPML_ENV_ENTETE" minOccurs="0"/>
+				<xs:element name="PML_MESS_ENTETE" type="ctPML_MESS_ENTETE" minOccurs="0"/>
+				<xs:element name="PML_MESS_CORPS" type="ctPML_MESS_CORPS" minOccurs="0"/>
+				<xs:element ref="internal" minOccurs="0"/>
+				<xs:element ref="client"/>
+				<xs:element name="articles">
+					<xs:complexType>
+						<xs:choice maxOccurs="500">
+							<xs:element name="byArticleNumber">
+								<xs:annotation>
+									<xs:documentation>possibility to select the articles by the article number of the wholesaler</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:attribute name="articleNumber" type="Integer1to7Type" use="required">
+										<xs:annotation>
+											<xs:documentation>official pharmaceutical product identification code</xs:documentation>
+										</xs:annotation>
+									</xs:attribute>
+									<xs:attribute name="requestedQuantity" type="Integer1to5Type">
+										<xs:annotation>
+											<xs:documentation>requested Quantity. If the attribute is not set, we will always check the quantity one.</xs:documentation>
+										</xs:annotation>
+									</xs:attribute>
+									<xs:attribute name="lineNumber" type="xs:integer" use="optional">
+										<xs:annotation>
+											<xs:documentation>number of position in your order</xs:documentation>
+										</xs:annotation>
+									</xs:attribute>
+									<xs:attributeGroup ref="attgPmlLine_Produit"/>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="byEAN">
+								<xs:annotation>
+									<xs:documentation>possibility to select the articles by the European Account Number</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:attribute name="EAN" type="Integer1to13Type" use="required">
+										<xs:annotation>
+											<xs:documentation>European Account Number</xs:documentation>
+										</xs:annotation>
+									</xs:attribute>
+									<xs:attribute name="requestedQuantity" type="Integer1to5Type">
+										<xs:annotation>
+											<xs:documentation>requested Quantity. If the attribute is not set, we will always check the quantity one.</xs:documentation>
+										</xs:annotation>
+									</xs:attribute>
+									<xs:attribute name="lineNumber" type="xs:integer" use="optional">
+										<xs:annotation>
+											<xs:documentation>number of position in your order</xs:documentation>
+										</xs:annotation>
+									</xs:attribute>
+									<xs:attributeGroup ref="attgPmlLine_Produit"/>
+								</xs:complexType>
+							</xs:element>
+						</xs:choice>
+						<xs:attribute name="insertMasterData" type="yesNoType" use="optional">
+							<xs:annotation>
+								<xs:documentation>yes - you get master data information and availability information in the response</xs:documentation>
+								<xs:documentation>no - you get only availability information in the response</xs:documentation>
+							</xs:annotation>
+						</xs:attribute>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="language" type="languageType" use="optional" default="fr">
+				<xs:annotation>
+					<xs:documentation>this attribute defines which language will be used for warnings and error messages</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+			<xs:attribute name="version" use="optional" default="1.0">
+				<xs:annotation>
+					<xs:documentation>actual version is 1.0</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="1.0"/>
+						<xs:enumeration value="Test"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="articleCatalogueResponse">
+		<xs:annotation>
+			<xs:documentation>This describes the format of an article catalogue response. If you post a request against the salesweb application, you will receive information about the requested articles in this format.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:choice>
+				<xs:element ref="errorInformation"/>
+				<xs:sequence>
+					<xs:element name="PML_ENV_ATTRIBUTE" type="ctPML_ENV_ATTRIBUTE" minOccurs="0"/>
+					<xs:element name="PML_ENV_ENTETE" type="ctPML_ENV_ENTETE" minOccurs="0"/>
+					<xs:element name="PML_MESS_ENTETE" type="ctPML_MESS_ENTETE" minOccurs="0"/>
+					<xs:element name="PML_MESS_CORPS" type="ctPML_MESS_CORPS" minOccurs="0"/>
+					<xs:element ref="client"/>
+					<xs:element name="articles">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="article" minOccurs="0" maxOccurs="500">
+									<xs:complexType>
+										<xs:choice>
+											<xs:element ref="errorInformation"/>
+											<xs:sequence>
+												<xs:element name="articleAvailabilityData">
+													<xs:annotation>
+														<xs:documentation>availability information about the article</xs:documentation>
+													</xs:annotation>
+													<xs:complexType>
+														<xs:attribute name="availability" type="availabilityType" use="required">
+															<xs:annotation>
+																<xs:documentation>yes, if we have at least quantity 1 on stock. No, if we dont´t have this artcle on stock.</xs:documentation>
+																<xs:documentation>no, if the article is not on stock</xs:documentation>
+															</xs:annotation>
+														</xs:attribute>
+														<xs:attribute name="substituteArticleNumber" type="Integer1to7Type" use="optional">
+															<xs:annotation>
+																<xs:documentation>the requested article would be replaced by this article</xs:documentation>
+															</xs:annotation>
+														</xs:attribute>
+														<xs:attribute name="substituteArticleCode" type="Integer1to13Type" use="optional">
+															<xs:annotation>
+																<xs:documentation>the requested article would be replaced by this article</xs:documentation>
+															</xs:annotation>
+														</xs:attribute>
+													</xs:complexType>
+												</xs:element>
+												<xs:element name="quantities" minOccurs="0">
+													<xs:annotation>
+														<xs:documentation>information about quantities are only set for customers with level two or higher. </xs:documentation>
+													</xs:annotation>
+													<xs:complexType>
+														<xs:attribute name="immediatelyAvailableQuantity" type="Integer1to5Type" use="required">
+															<xs:annotation>
+																<xs:documentation>quantity that can be delivered immediately</xs:documentation>
+															</xs:annotation>
+														</xs:attribute>
+														<xs:attribute name="interbranchTransferQuantity" type="Integer1to5Type" use="optional">
+															<xs:annotation>
+																<xs:documentation>quantity that can be delivered by another PHOENIX location</xs:documentation>
+															</xs:annotation>
+														</xs:attribute>
+														<xs:attribute name="interbranchTransferBranch" type="Integer1to2Type" use="optional">
+															<xs:annotation>
+																<xs:documentation>branch which delivers the articles in case of interbranch</xs:documentation>
+															</xs:annotation>
+														</xs:attribute>
+														<xs:attribute name="subsequentDeliveryQuantity" type="Integer1to5Type" use="optional">
+															<xs:annotation>
+																<xs:documentation>quantity that can be delivered as soon as available</xs:documentation>
+															</xs:annotation>
+														</xs:attribute>
+														<xs:attribute name="articleRequirementPurchaseOrderQuantity" type="Integer1to5Type" use="optional">
+															<xs:annotation>
+																<xs:documentation>quantity that can be delivered after the goods have been received from the manufacturer, because this is a non-stock article</xs:documentation>
+															</xs:annotation>
+														</xs:attribute>
+														<xs:attribute name="lackQuantity" type="Integer1to5Type" use="optional">
+															<xs:annotation>
+																<xs:documentation>quantity that can´t be delivered</xs:documentation>
+															</xs:annotation>
+														</xs:attribute>
+														<xs:attribute name="lackReason" type="String0to4Type" use="optional">
+															<xs:annotation>
+																<xs:documentation>reason of the shortage e.g.
+1 - shortage at manufacturer
+H - only for hospitals</xs:documentation>
+															</xs:annotation>
+														</xs:attribute>
+														<xs:attribute name="lackReasonDesc" type="String0to50Type" use="optional">
+															<xs:annotation>
+																<xs:documentation>description of lackReason</xs:documentation>
+															</xs:annotation>
+														</xs:attribute>
+														<xs:attribute name="substituteLackReason" type="String0to4Type" use="optional">
+															<xs:annotation>
+																<xs:documentation>reason of the shortage e.g.
+1 - shortage at manufacturer
+H - only for hospitals</xs:documentation>
+															</xs:annotation>
+														</xs:attribute>
+														<xs:attribute name="substituteLackReasonDesc" type="String0to50Type" use="optional">
+															<xs:annotation>
+																<xs:documentation>description of lackReason</xs:documentation>
+															</xs:annotation>
+														</xs:attribute>
+														<xs:attribute name="reservedQuantity" type="Integer1to5Type" use="optional">
+															<xs:annotation>
+																<xs:documentation>this quantity is reserved for you for 30 minutes. Important: The reservation functionality is only active for customers with level three.</xs:documentation>
+															</xs:annotation>
+														</xs:attribute>
+														<xs:attribute name="tourDate" type="xs:date">
+															<xs:annotation>
+																<xs:documentation>date for the tour of the interbranch transfer delivery</xs:documentation>
+															</xs:annotation>
+														</xs:attribute>
+														<xs:attribute name="tourTime" type="xs:string">
+															<xs:annotation>
+																<xs:documentation>time for the tour of the interbranch transfer delivery</xs:documentation>
+															</xs:annotation>
+														</xs:attribute>
+														<xs:attribute name="interbranchTransferDate" type="xs:date">
+															<xs:annotation>
+																<xs:documentation>date for the tour of the interbranch transfer delivery</xs:documentation>
+															</xs:annotation>
+														</xs:attribute>
+														<xs:attribute name="interbranchTransferTime" type="xs:string">
+															<xs:annotation>
+																<xs:documentation>time for the tour of the interbranch transfer delivery</xs:documentation>
+															</xs:annotation>
+														</xs:attribute>
+													</xs:complexType>
+												</xs:element>
+												<xs:element name="articleMasterData" minOccurs="0">
+													<xs:complexType>
+														<xs:complexContent>
+															<xs:extension base="typeArticleMasterDataFR">
+																<xs:attribute name="invoicedPrice" type="xs:double">
+																	<xs:annotation>
+																		<xs:documentation>invoiced price (discounts deducted)</xs:documentation>
+																	</xs:annotation>
+																</xs:attribute>
+															</xs:extension>
+														</xs:complexContent>
+													</xs:complexType>
+												</xs:element>
+												<xs:element name="substituteArticleMasterData" minOccurs="0">
+													<xs:complexType>
+														<xs:complexContent>
+															<xs:extension base="typeArticleMasterDataFR">
+																<xs:attribute name="invoicedPrice" type="xs:double">
+																	<xs:annotation>
+																		<xs:documentation>invoiced price (discounts deducted)</xs:documentation>
+																	</xs:annotation>
+																</xs:attribute>
+															</xs:extension>
+														</xs:complexContent>
+													</xs:complexType>
+												</xs:element>
+											</xs:sequence>
+										</xs:choice>
+										<xs:attribute name="articleNumber" type="Integer1to7Type" use="optional">
+											<xs:annotation>
+												<xs:documentation>official pharmaceutical product identification code. Set if the article was requested by article number. This attribute is also set, if the article was reuested by EAN and a valid article number could be found.</xs:documentation>
+											</xs:annotation>
+										</xs:attribute>
+										<xs:attribute name="EAN" type="Integer1to13Type" use="optional">
+											<xs:annotation>
+												<xs:documentation>European Account Number. Set if the article was requested by EAN.</xs:documentation>
+											</xs:annotation>
+										</xs:attribute>
+										<xs:attribute name="requestedQuantity" type="Integer1to5Type" use="optional">
+											<xs:annotation>
+												<xs:documentation>requested Quantity. If the attribute is not set, we will always check the quantity one.</xs:documentation>
+											</xs:annotation>
+										</xs:attribute>
+										<xs:attribute name="lineNumber" type="xs:integer" use="optional">
+											<xs:annotation>
+												<xs:documentation>number of position in your order</xs:documentation>
+											</xs:annotation>
+										</xs:attribute>
+										<xs:attributeGroup ref="attgPmlLine_Produit"/>
+									</xs:complexType>
+								</xs:element>
+							</xs:sequence>
+							<xs:attribute name="insertMasterData" type="yesNoType" use="optional">
+								<xs:annotation>
+									<xs:documentation>yes - you get master data information and availability information in the response</xs:documentation>
+									<xs:documentation>no - you get only availability information in the response</xs:documentation>
+								</xs:annotation>
+							</xs:attribute>
+						</xs:complexType>
+					</xs:element>
+					<xs:element ref="tour" minOccurs="0"/>
+				</xs:sequence>
+			</xs:choice>
+			<xs:attribute name="language" type="languageType" use="optional" default="fr">
+				<xs:annotation>
+					<xs:documentation>this attribute defines which language will be used for warnings and error messages</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+			<xs:attribute name="version" use="optional" default="1.0">
+				<xs:annotation>
+					<xs:documentation>actual version is 1.0</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="1.0"/>
+						<xs:enumeration value="Test"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="orderRequest">
+		<xs:annotation>
+			<xs:documentation>Structure of an order request. If you post such a request against the salesweb application, your order will be placed in order entry system of the wholesaler (PHOENIX)</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="PML_ENV_ATTRIBUTE" type="ctPML_ENV_ATTRIBUTE" minOccurs="0"/>
+				<xs:element name="PML_ENV_ENTETE" type="ctPML_ENV_ENTETE" minOccurs="0"/>
+				<xs:element name="PML_MESS_ENTETE" type="ctPML_MESS_ENTETE" minOccurs="0"/>
+				<xs:element name="PML_MESS_CORPS" type="ctPML_MESS_CORPS" minOccurs="0"/>
+				<xs:element name="order" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>it is possible to transfer more than 1 order</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="orderHeader">
+								<xs:annotation>
+									<xs:documentation>basic data for the order</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:attribute name="customerNumber" type="Integer1to7Type" use="required">
+										<xs:annotation>
+											<xs:documentation source="customer number of the pharmacy">customer number of the pharmacy in the order entry system of the wholesaler (PHOENIX)</xs:documentation>
+										</xs:annotation>
+									</xs:attribute>
+									<xs:attribute name="branchNumber" type="Integer1to2Type" use="required">
+										<xs:annotation>
+											<xs:documentation>identifies the PHOENIX location</xs:documentation>
+										</xs:annotation>
+									</xs:attribute>
+									<xs:attribute name="referenceNumber" type="String1to40Type" use="required">
+										<xs:annotation>
+											<xs:documentation source="internal order number of the pharmacy">internal order number in the pharmacist´s system</xs:documentation>
+										</xs:annotation>
+									</xs:attribute>
+									<xs:attribute name="orderType" type="String2Type" use="optional">
+										<xs:annotation>
+											<xs:documentation>type of order e.g.
+NO, AU, GE, ...</xs:documentation>
+										</xs:annotation>
+									</xs:attribute>
+									<xs:attribute name="subOrderType" type="xs:string">
+										<xs:annotation>
+											<xs:documentation>sub type of order e.g. 060 for order type GE (=> GE060)</xs:documentation>
+										</xs:annotation>
+									</xs:attribute>
+									<xs:attribute name="desiredDeliveryDate" type="xs:date">
+										<xs:annotation>
+											<xs:documentation>desired delivery date of the customer (YYYY-MM-DD)</xs:documentation>
+										</xs:annotation>
+									</xs:attribute>
+									<xs:attribute name="isLaboratoryOrder" type="xs:boolean" use="optional" default="false">
+										<xs:annotation>
+											<xs:documentation source="Order is sent by laboratory instead of customer">Order is sent by laboratory instead of customer</xs:documentation>
+										</xs:annotation>
+									</xs:attribute>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="orderLine" maxOccurs="unbounded">
+								<xs:annotation>
+									<xs:documentation>position information for the order</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:annotation>
+										<xs:documentation>set invoice price (FAP)</xs:documentation>
+										<xs:documentation>set discount percentage</xs:documentation>
+										<xs:documentation>set base price (AVP)</xs:documentation>
+									</xs:annotation>
+									<xs:choice>
+										<xs:element name="byArticleNumber">
+											<xs:annotation>
+												<xs:documentation>possibility to set the articles by the article number of the wholesaler</xs:documentation>
+											</xs:annotation>
+											<xs:complexType>
+												<xs:attribute name="articleNumber" type="Integer1to7Type" use="required">
+													<xs:annotation>
+														<xs:documentation>official pharmaceutical product identification code</xs:documentation>
+													</xs:annotation>
+												</xs:attribute>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="byEAN">
+											<xs:annotation>
+												<xs:documentation>possibility to set the articles by the European Account Number</xs:documentation>
+											</xs:annotation>
+											<xs:complexType>
+												<xs:attribute name="EAN" type="Integer1to13Type" use="required">
+													<xs:annotation>
+														<xs:documentation>European Account Number</xs:documentation>
+													</xs:annotation>
+												</xs:attribute>
+											</xs:complexType>
+										</xs:element>
+									</xs:choice>
+									<xs:attribute name="orderQuantity" type="Integer1to5Type" use="required">
+										<xs:annotation>
+											<xs:documentation>ordered quantity</xs:documentation>
+										</xs:annotation>
+									</xs:attribute>
+									<xs:attribute name="OrderDiscount">
+										<xs:annotation>
+											<xs:documentation>an invoice discount for this line</xs:documentation>
+										</xs:annotation>
+										<xs:simpleType>
+											<xs:restriction base="xs:decimal">
+												<xs:minInclusive value="0"/>
+												<xs:fractionDigits value="2"/>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+									<xs:attributeGroup ref="attgPmlLine_Produit"/>
+									<xs:attribute name="interbranchTransferDesired" type="xs:boolean" use="optional" default="false">
+										<xs:annotation>
+											<xs:documentation>set this attribute, if phoenix may deliver this product from another phoenix location</xs:documentation>
+										</xs:annotation>
+									</xs:attribute>
+									<xs:attribute name="subsequentDeliveryDesired" type="xs:boolean" use="optional" default="false">
+										<xs:annotation>
+											<xs:documentation>set this attribute, if phoenix may deliver articles with shortage as soon as available </xs:documentation>
+										</xs:annotation>
+									</xs:attribute>
+									<xs:attribute name="articleRequirementPurchaseOrderDesired" type="xs:boolean" use="optional" default="false">
+										<xs:annotation>
+											<xs:documentation>set this attribute, if phoenix may order the product directly from the manufacturer for you</xs:documentation>
+										</xs:annotation>
+									</xs:attribute>
+									<xs:attribute name="partialQuantity" type="xs:boolean" use="optional" default="true">
+										<xs:annotation>
+											<xs:documentation>set this attribute, if you want partial quantities to be delivered</xs:documentation>
+										</xs:annotation>
+									</xs:attribute>
+									<xs:attribute name="lineNumber" type="Integer1to7Type" use="optional">
+										<xs:annotation>
+											<xs:documentation>number of position in your order</xs:documentation>
+										</xs:annotation>
+									</xs:attribute>
+									<xs:attribute name="FixPrice" type="xs:double" use="optional"/>
+									<xs:attribute name="FixDiscountPercentage" type="xs:double" use="optional"/>
+									<xs:attribute name="FixCatalogPrice" type="xs:double" use="optional"/>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="language" type="languageType" use="optional" default="fr">
+				<xs:annotation>
+					<xs:documentation>this attribute defines which language will be used for warnings and error messages</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+			<xs:attribute name="version" use="optional" default="1.0">
+				<xs:annotation>
+					<xs:documentation>actual version is 1.0</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="1.0"/>
+						<xs:enumeration value="Test"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="orderResponse">
+		<xs:annotation>
+			<xs:documentation>Structure of an order response. If you post a order request against the salesweb application, you will receive information about the ordered articles in this format.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:choice>
+				<xs:sequence>
+					<xs:element name="PML_ENV_ATTRIBUTE" type="ctPML_ENV_ATTRIBUTE" minOccurs="0"/>
+					<xs:element name="PML_ENV_ENTETE" type="ctPML_ENV_ENTETE" minOccurs="0"/>
+					<xs:element name="PML_MESS_ENTETE" type="ctPML_MESS_ENTETE" minOccurs="0"/>
+					<xs:element name="PML_MESS_CORPS" type="ctPML_MESS_CORPS" minOccurs="0"/>
+					<xs:element name="middleman" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>intermediate trader between wholesaler and pharmacy</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:attribute name="customerNumber" type="Integer1to7Type" use="required">
+								<xs:annotation>
+									<xs:documentation source="customer number of the middleman">customer number of the intermediate trader in the order entry system of the wholesaler (PHOENIX)</xs:documentation>
+								</xs:annotation>
+							</xs:attribute>
+							<xs:attribute name="branchNumber" type="Integer1to2Type" use="required">
+								<xs:annotation>
+									<xs:documentation>identifies the PHOENIX location</xs:documentation>
+								</xs:annotation>
+							</xs:attribute>
+							<xs:attribute name="referenceNumber" type="String1to40Type" use="required">
+								<xs:annotation>
+									<xs:documentation source="internal order number of the middleman">internal order number in the system of the intermediate trader</xs:documentation>
+								</xs:annotation>
+							</xs:attribute>
+							<xs:attribute name="invoicing" type="customerMiddlemanType" use="optional" default="middleMan">
+								<xs:annotation>
+									<xs:documentation source="billing to the customer or middleman ?">defines whether the invoice will be sent to the intermediate trader or to the pharmacy</xs:documentation>
+								</xs:annotation>
+							</xs:attribute>
+							<xs:attribute name="deliveryRecipient" type="customerMiddlemanType" use="optional" default="customer">
+								<xs:annotation>
+									<xs:documentation source="is receiver of delivery the customer or middleman ?">defines whether the goods will be delivered to the intermediate trader or directly to the pharmacy</xs:documentation>
+								</xs:annotation>
+							</xs:attribute>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="order" maxOccurs="unbounded">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="orderHeader">
+									<xs:annotation>
+										<xs:documentation>basic data for the order</xs:documentation>
+									</xs:annotation>
+									<xs:complexType>
+										<xs:attribute name="customerNumber" type="Integer1to7Type" use="required">
+											<xs:annotation>
+												<xs:documentation source="customer number of the pharmacy">customer number of the pharmacy in the order entry system of the wholesaler (PHOENIX)</xs:documentation>
+											</xs:annotation>
+										</xs:attribute>
+										<xs:attribute name="branchNumber" type="Integer1to2Type" use="required">
+											<xs:annotation>
+												<xs:documentation>identifies the PHOENIX location</xs:documentation>
+											</xs:annotation>
+										</xs:attribute>
+										<xs:attribute name="deliveryBranch" type="Integer1to2Type">
+											<xs:annotation>
+												<xs:documentation>identifies the PHOENIX location which delivers the articles, only set if not equal to the branchNumber</xs:documentation>
+											</xs:annotation>
+										</xs:attribute>
+										<xs:attribute name="referenceNumber" type="String1to40Type" use="required">
+											<xs:annotation>
+												<xs:documentation source="internal order number of the pharmacy">internal order number in the system of the pharmacy</xs:documentation>
+											</xs:annotation>
+										</xs:attribute>
+										<xs:attribute name="callBackDesired" type="xs:boolean" use="optional" default="false">
+											<xs:annotation>
+												<xs:documentation>set this attribute if you want to be called by order entry department</xs:documentation>
+											</xs:annotation>
+										</xs:attribute>
+										<xs:attribute name="orderType" type="String2Type" use="optional">
+											<xs:annotation>
+												<xs:documentation>type of order e.g. NO, AU, GE, ...</xs:documentation>
+											</xs:annotation>
+										</xs:attribute>
+										<xs:attribute name="subOrderType" type="xs:string">
+											<xs:annotation>
+												<xs:documentation>sub type of order e.g. 060 for order type GE (=> GE060)</xs:documentation>
+											</xs:annotation>
+										</xs:attribute>
+										<xs:attribute name="desiredDeliveryDate" type="xs:date">
+											<xs:annotation>
+												<xs:documentation>desired delivery date of the customer</xs:documentation>
+											</xs:annotation>
+										</xs:attribute>
+										<xs:attribute name="orderEntryRefNumber" type="Integer1to7Type" use="optional">
+											<xs:annotation>
+												<xs:documentation source="reference number of the order entry system of the wholesaler">order number in PHOENIX order entry system</xs:documentation>
+											</xs:annotation>
+										</xs:attribute>
+										<xs:attribute name="isLaboratoryOrder" type="xs:boolean" use="optional" default="false">
+											<xs:annotation>
+												<xs:documentation source="Order is sent by laboratory instead of customer">Order is sent by laboratory instead of customer</xs:documentation>
+											</xs:annotation>
+										</xs:attribute>
+										<xs:attribute name="RTBOrderNo">
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:minLength value="0"/>
+													<xs:maxLength value="9"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:attribute>
+										<xs:attribute name="BECustomerNo">
+											<xs:annotation>
+												<xs:documentation>5 characters</xs:documentation>
+											</xs:annotation>
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:maxLength value="5"/>
+													<xs:minLength value="1"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:attribute>
+										<xs:attribute name="BECustomerName">
+											<xs:annotation>
+												<xs:documentation>29 characters</xs:documentation>
+											</xs:annotation>
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:maxLength value="29"/>
+													<xs:minLength value="1"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:attribute>
+										<xs:attribute name="BECustomerStreet">
+											<xs:annotation>
+												<xs:documentation>29 characters</xs:documentation>
+											</xs:annotation>
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:maxLength value="29"/>
+													<xs:minLength value="1"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:attribute>
+										<xs:attribute name="BECustomerCity">
+											<xs:annotation>
+												<xs:documentation>29 characters</xs:documentation>
+											</xs:annotation>
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:maxLength value="29"/>
+													<xs:minLength value="1"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:attribute>
+										<xs:attribute name="BECustomerTVA">
+											<xs:annotation>
+												<xs:documentation>15 characters</xs:documentation>
+											</xs:annotation>
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:maxLength value="15"/>
+													<xs:minLength value="1"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:attribute>
+										<xs:attribute name="BECompanyCode">
+											<xs:annotation>
+												<xs:documentation>1 character company code</xs:documentation>
+											</xs:annotation>
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:maxLength value="1"/>
+													<xs:minLength value="1"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:attribute>
+										<xs:attribute name="BEBranchCode">
+											<xs:annotation>
+												<xs:documentation>1 character branch code</xs:documentation>
+											</xs:annotation>
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:maxLength value="1"/>
+													<xs:minLength value="1"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:attribute>
+										<xs:attribute name="BEOrderNo" type="xs:string">
+											<xs:annotation>
+												<xs:documentation>order number</xs:documentation>
+											</xs:annotation>
+										</xs:attribute>
+									</xs:complexType>
+								</xs:element>
+								<xs:choice>
+									<xs:element name="orderLine" maxOccurs="unbounded">
+										<xs:annotation>
+											<xs:documentation>position information for the order</xs:documentation>
+										</xs:annotation>
+										<xs:complexType>
+											<xs:sequence>
+												<xs:element name="orderLineResponse">
+													<xs:complexType>
+														<xs:sequence>
+															<xs:element name="articleInformation" type="typeArticleInformationFR" minOccurs="0"/>
+															<xs:element name="substituteArticleInformation" type="typeArticleInformationFR" minOccurs="0"/>
+														</xs:sequence>
+														<xs:attribute name="immediatelyDeliveryQuantity" type="Integer1to5Type" use="required">
+															<xs:annotation>
+																<xs:documentation>quantity that will be delivered immediately</xs:documentation>
+															</xs:annotation>
+														</xs:attribute>
+														<xs:attribute name="interbranchTransferQuantity" type="Integer1to5Type" use="optional" default="0">
+															<xs:annotation>
+																<xs:documentation>quantity that will be delivered by another PHOENIX location</xs:documentation>
+															</xs:annotation>
+														</xs:attribute>
+														<xs:attribute name="subsequentDeliveryQuantity" type="Integer1to5Type" use="optional" default="0">
+															<xs:annotation>
+																<xs:documentation>quantity that will be delivered as soon as available </xs:documentation>
+															</xs:annotation>
+														</xs:attribute>
+														<xs:attribute name="articleRequirementPurchaseOrderQuantity" type="Integer1to5Type" use="optional" default="0">
+															<xs:annotation>
+																<xs:documentation>quantity that will be delivered after the goods have been received from the manufacturer, because this is a non-stock article</xs:documentation>
+															</xs:annotation>
+														</xs:attribute>
+														<xs:attribute name="lackQuantity" type="Integer1to5Type" use="optional" default="0">
+															<xs:annotation>
+																<xs:documentation>quantity that cannot be delivered</xs:documentation>
+															</xs:annotation>
+														</xs:attribute>
+														<xs:attribute name="lackReason" type="String0to5Type" use="optional">
+															<xs:annotation>
+																<xs:documentation>reason of the shortage e.g.
+1 - shortage at manufacturer
+H - only for hospitals</xs:documentation>
+															</xs:annotation>
+														</xs:attribute>
+														<xs:attribute name="lackReasonDesc" type="String0to50Type">
+															<xs:annotation>
+																<xs:documentation>description of lackReason</xs:documentation>
+															</xs:annotation>
+														</xs:attribute>
+														<xs:attribute name="substituteLackReason" type="String0to5Type" use="optional">
+															<xs:annotation>
+																<xs:documentation>reason of the shortage e.g.
+1 - shortage at manufacturer
+H - only for hospitals</xs:documentation>
+															</xs:annotation>
+														</xs:attribute>
+														<xs:attribute name="substituteLackReasonDesc" type="String0to50Type" use="optional">
+															<xs:annotation>
+																<xs:documentation>description of lackReason</xs:documentation>
+															</xs:annotation>
+														</xs:attribute>
+														<xs:attribute name="substituteArticleNumber" type="Integer1to7Type" use="optional">
+															<xs:annotation>
+																<xs:documentation>the ordered article was replaced by this article</xs:documentation>
+															</xs:annotation>
+														</xs:attribute>
+														<xs:attribute name="substituteArticleCode" type="Integer1to13Type" use="optional">
+															<xs:annotation>
+																<xs:documentation>the ordered article was replaced by this article</xs:documentation>
+															</xs:annotation>
+														</xs:attribute>
+														<xs:attribute name="interbranchTransferBranch" type="Integer1to2Type">
+															<xs:annotation>
+																<xs:documentation>branch which delivers the articles in case of interbranch</xs:documentation>
+															</xs:annotation>
+														</xs:attribute>
+														<xs:attribute name="invoicedPrice" type="xs:double">
+															<xs:annotation>
+																<xs:documentation>invoiced price (discounts deducted)</xs:documentation>
+															</xs:annotation>
+														</xs:attribute>
+														<xs:attribute name="tourDate" type="xs:date">
+															<xs:annotation>
+																<xs:documentation>date for the tour of the interbranch transfer delivery</xs:documentation>
+															</xs:annotation>
+														</xs:attribute>
+														<xs:attribute name="tourTime" type="xs:string">
+															<xs:annotation>
+																<xs:documentation>time for the tour of the interbranch transfer delivery</xs:documentation>
+															</xs:annotation>
+														</xs:attribute>
+														<xs:attribute name="interbranchTransferDate" type="xs:date">
+															<xs:annotation>
+																<xs:documentation>date for the tour of the interbranch transfer delivery</xs:documentation>
+															</xs:annotation>
+														</xs:attribute>
+														<xs:attribute name="interbranchTransferTime" type="xs:string">
+															<xs:annotation>
+																<xs:documentation>time for the tour of the interbranch transfer delivery</xs:documentation>
+															</xs:annotation>
+														</xs:attribute>
+													</xs:complexType>
+												</xs:element>
+												<xs:element ref="errorInformation" minOccurs="0"/>
+											</xs:sequence>
+											<xs:attribute name="articleNumber" type="Integer1to7Type" use="optional">
+												<xs:annotation>
+													<xs:documentation>official pharmaceutical product identification code. Set if the article was requested by article number. This attribute is also set, if the article was reuested by EAN and a valid article number could be found.</xs:documentation>
+												</xs:annotation>
+											</xs:attribute>
+											<xs:attribute name="EAN" type="Integer1to13Type" use="optional">
+												<xs:annotation>
+													<xs:documentation>European Account Number. Set if the article was requested by EAN.</xs:documentation>
+												</xs:annotation>
+											</xs:attribute>
+											<xs:attribute name="orderQuantity" type="Integer1to5Type" use="required">
+												<xs:annotation>
+													<xs:documentation>ordered quantity</xs:documentation>
+												</xs:annotation>
+											</xs:attribute>
+											<xs:attribute name="OrderDiscount">
+												<xs:annotation>
+													<xs:documentation>an invoice discount for this line</xs:documentation>
+												</xs:annotation>
+												<xs:simpleType>
+													<xs:restriction base="xs:decimal">
+														<xs:minInclusive value="0"/>
+														<xs:fractionDigits value="2"/>
+													</xs:restriction>
+												</xs:simpleType>
+											</xs:attribute>
+											<xs:attributeGroup ref="attgPmlLine_Produit"/>
+											<xs:attribute name="interbranchTransferDesired" type="xs:boolean" use="optional" default="false">
+												<xs:annotation>
+													<xs:documentation>set this attribute, if phoenix may deliver this product from another PHOENIX location</xs:documentation>
+												</xs:annotation>
+											</xs:attribute>
+											<xs:attribute name="subsequentDeliveryDesired" type="xs:boolean" use="optional" default="false">
+												<xs:annotation>
+													<xs:documentation>set this attribute, if PHOENIX may deliver articles with shortage as soon as available </xs:documentation>
+												</xs:annotation>
+											</xs:attribute>
+											<xs:attribute name="articleRequirementPurchaseOrderDesired" type="xs:boolean" use="optional" default="false">
+												<xs:annotation>
+													<xs:documentation>set this attribute, if PHOENIX may order the product directly from the manufacturer for you</xs:documentation>
+												</xs:annotation>
+											</xs:attribute>
+											<xs:attribute name="partialQuantity" type="xs:boolean" use="optional" default="true">
+												<xs:annotation>
+													<xs:documentation>set this attribute, if you want partial quantities to be delivered</xs:documentation>
+												</xs:annotation>
+											</xs:attribute>
+											<xs:attribute name="lineNumber" type="Integer1to7Type" use="optional">
+												<xs:annotation>
+													<xs:documentation>number of position in your order</xs:documentation>
+												</xs:annotation>
+											</xs:attribute>
+											<xs:attribute name="FixPrice" type="xs:double" use="optional"/>
+											<xs:attribute name="FixDiscountPercentage" type="xs:double" use="optional"/>
+											<xs:attribute name="FixCatalogPrice" type="xs:double" use="optional"/>
+											<xs:attribute name="cscOrderNo" type="xs:long"/>
+											<xs:attribute name="cscOrderLineNo" type="xs:long"/>
+										</xs:complexType>
+									</xs:element>
+									<xs:element ref="errorInformation"/>
+								</xs:choice>
+								<xs:element ref="tour" minOccurs="0"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+				<xs:element ref="errorInformation"/>
+			</xs:choice>
+			<xs:attribute name="language" type="languageType" use="optional" default="fr">
+				<xs:annotation>
+					<xs:documentation>this attribute defines which language will be used for warnings and error messages</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+			<xs:attribute name="version" use="optional" default="1.0">
+				<xs:annotation>
+					<xs:documentation>actual version is 1.0</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="1.0"/>
+						<xs:enumeration value="Test"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

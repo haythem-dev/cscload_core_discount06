@@ -1,0 +1,11 @@
+. /software/etc/profile_prz
+
+dbaccess ofr21 -<<%
+begin work;
+update artikellokal set bestand = bestand + bestandreserviert,
+bestandreserviert = 0
+where filialnr in (41,53,68,75)
+and bestandreserviert > 0;
+commit work;
+%
+

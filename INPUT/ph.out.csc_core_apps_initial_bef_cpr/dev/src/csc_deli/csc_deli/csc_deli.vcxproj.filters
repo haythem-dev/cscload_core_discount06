@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Multilang">
+      <UniqueIdentifier>{3027B03C-7037-1014-980B-AB4141A31375}</UniqueIdentifier>
+      <Extensions>ts</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="UseCase">
+      <UniqueIdentifier>{3027B123-7037-1014-980B-AB4141A31375}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UseCase\MainUC">
+      <UniqueIdentifier>{3027B1D0-7037-1014-980B-AB4141A31375}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure">
+      <UniqueIdentifier>{3027B27E-7037-1014-980B-AB4141A31375}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\CommandLine">
+      <UniqueIdentifier>{3027B328-7037-1014-980B-AB4141A31375}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\Login">
+      <UniqueIdentifier>{3027B3D2-7037-1014-980B-AB4141A31375}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\CommandLine\CmdLineOption">
+      <UniqueIdentifier>{3027B47A-7037-1014-980B-AB4141A31375}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\CommandLine\CmdLineEvaluator">
+      <UniqueIdentifier>{3027B525-7037-1014-980B-AB4141A31375}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ComponentManager">
+      <UniqueIdentifier>{3027B5CE-7037-1014-980B-AB4141A31375}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ComponentManager\ApplCompMgr">
+      <UniqueIdentifier>{3027B70F-7037-1014-980B-AB4141A31375}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ComponentManager\ApplCompMgr\Interface">
+      <UniqueIdentifier>{3027B7BE-7037-1014-980B-AB4141A31375}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ComponentManager\ApplCompMgr\Interface\UseCaseGetter">
+      <UniqueIdentifier>{3027B869-7037-1014-980B-AB4141A31375}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ComponentManager\ApplCompMgr\Impl">
+      <UniqueIdentifier>{3027B914-7037-1014-980B-AB4141A31375}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ComponentManager\InfrastructureCompMgr">
+      <UniqueIdentifier>{3027B9BD-7037-1014-980B-AB4141A31375}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Csc_deli">
+      <UniqueIdentifier>{3027BD36-7037-1014-980B-AB4141A31375}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Csc_deli\ApplController">
+      <UniqueIdentifier>{3027BE1C-7037-1014-980B-AB4141A31375}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Csc_deliInfo">
+      <UniqueIdentifier>{3027BEF1-7037-1014-980B-AB4141A31375}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\Setup">
+      <UniqueIdentifier>{e6137d1e-1bf1-4dd1-8f56-e20264b5b84b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\Setup\Impl">
+      <UniqueIdentifier>{ee7b23fd-d1f6-40e2-9586-8d7bf8d1f1a1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\Setup\Interface">
+      <UniqueIdentifier>{c2fe2efc-5402-414b-ab09-d38e7de9a611}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UseCase\DebtLimitBatchUC">
+      <UniqueIdentifier>{028e32f5-9da2-48aa-a252-6a3dab957997}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\Parameter">
+      <UniqueIdentifier>{5f0af677-8bb8-4380-b6d2-94f4f84bf884}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="usecase\mainuc.cpp">
+      <Filter>UseCase\MainUC</Filter>
+    </ClCompile>
+    <ClCompile Include="componentmanager\csc_deliapplcompmgr.cpp">
+      <Filter>ComponentManager\ApplCompMgr\Impl</Filter>
+    </ClCompile>
+    <ClCompile Include="componentmanager\csc_deliinfrastructurecompmgr.cpp">
+      <Filter>ComponentManager\InfrastructureCompMgr</Filter>
+    </ClCompile>
+    <ClCompile Include="infrastructure\cmdline\csc_delicmdlineevaluator.cpp">
+      <Filter>Infrastructure\CommandLine\CmdLineEvaluator</Filter>
+    </ClCompile>
+    <ClCompile Include="infrastructure\cmdline\csc_delicmdlineoptioncollection.cpp">
+      <Filter>Infrastructure\CommandLine\CmdLineOption</Filter>
+    </ClCompile>
+    <ClCompile Include="csc_deli\main.cpp">
+      <Filter>Csc_deli</Filter>
+    </ClCompile>
+    <ClCompile Include="csc_deli\csc_deliapplctrl.cpp">
+      <Filter>Csc_deli\ApplController</Filter>
+    </ClCompile>
+    <ClCompile Include="csc_deliinfo\csc_deli_info.cpp">
+      <Filter>Csc_deliInfo</Filter>
+    </ClCompile>
+    <ClCompile Include="infrastructure\setup\csc_deliinfrastructuresetup.cpp">
+      <Filter>Infrastructure\Setup\Impl</Filter>
+    </ClCompile>
+    <ClCompile Include="usecase\debtlimitbatchuc.cpp">
+      <Filter>UseCase\DebtLimitBatchUC</Filter>
+    </ClCompile>
+    <ClCompile Include="infrastructure\parameter\dbparametergateway.cpp">
+      <Filter>Infrastructure\Parameter</Filter>
+    </ClCompile>
+    <ClCompile Include="csc_deli\version.c">
+      <Filter>Csc_deli</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="usecase\mainuc.h">
+      <Filter>UseCase\MainUC</Filter>
+    </ClInclude>
+    <ClInclude Include="usecase\mainucptr.h">
+      <Filter>UseCase\MainUC</Filter>
+    </ClInclude>
+    <ClInclude Include="componentmanager\iusecasegetter.h">
+      <Filter>ComponentManager\ApplCompMgr\Interface\UseCaseGetter</Filter>
+    </ClInclude>
+    <ClInclude Include="componentmanager\iusecasegetterptr.h">
+      <Filter>ComponentManager\ApplCompMgr\Interface\UseCaseGetter</Filter>
+    </ClInclude>
+    <ClInclude Include="componentmanager\csc_deliapplcompmgrptr.h">
+      <Filter>ComponentManager\ApplCompMgr\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="componentmanager\csc_deliapplcompmgr.h">
+      <Filter>ComponentManager\ApplCompMgr\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="componentmanager\csc_deliinfrastructurecompmgrptr.h">
+      <Filter>ComponentManager\InfrastructureCompMgr</Filter>
+    </ClInclude>
+    <ClInclude Include="componentmanager\csc_deliinfrastructurecompmgr.h">
+      <Filter>ComponentManager\InfrastructureCompMgr</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\login\login_definitions.h">
+      <Filter>Infrastructure\Login</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\cmdline\csc_delicmdlineevaluator.h">
+      <Filter>Infrastructure\CommandLine\CmdLineEvaluator</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\cmdline\csc_delicmdlineoption_definitions.h">
+      <Filter>Infrastructure\CommandLine\CmdLineOption</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\cmdline\csc_delicmdlineoptioncollection.h">
+      <Filter>Infrastructure\CommandLine\CmdLineOption</Filter>
+    </ClInclude>
+    <ClInclude Include="csc_deli\csc_deliapplctrl.h">
+      <Filter>Csc_deli\ApplController</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\cmdline\csc_delicmdlineevaluatorptr.h">
+      <Filter>Infrastructure\CommandLine\CmdLineEvaluator</Filter>
+    </ClInclude>
+    <ClInclude Include="csc_deliinfo\csc_deli_info.h">
+      <Filter>Csc_deliInfo</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\setup\csc_deliinfrastructuresetupptr.h">
+      <Filter>Infrastructure\Setup\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\setup\csc_deliinfrastructuresetup.h">
+      <Filter>Infrastructure\Setup\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\setup\icsc_delilogingetter.h">
+      <Filter>Infrastructure\Setup\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\setup\icsc_delilogingetterptr.h">
+      <Filter>Infrastructure\Setup\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="usecase\debtlimitbatchuc.h">
+      <Filter>UseCase\DebtLimitBatchUC</Filter>
+    </ClInclude>
+    <ClInclude Include="usecase\debtlimitbatchucptr.h">
+      <Filter>UseCase\DebtLimitBatchUC</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\parameter\dbparametergateway.h">
+      <Filter>Infrastructure\Parameter</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\parameter\dbparametergatewayptr.h">
+      <Filter>Infrastructure\Parameter</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\cmdline\csc_delicmdlineevaluatorconstptr.h">
+      <Filter>Infrastructure\CommandLine\CmdLineEvaluator</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="multilang\csc_deli_de.ts">
+      <Filter>Multilang</Filter>
+    </CustomBuild>
+  </ItemGroup>
+</Project>

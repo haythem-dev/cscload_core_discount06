@@ -1,0 +1,39 @@
+<!--
+   Licensed to the Apache Software Foundation (ASF) under one
+   or more contributor license agreements.  See the NOTICE file
+   distributed with this work for additional information
+   regarding copyright ownership.  The ASF licenses this file
+   to you under the Apache License, Version 2.0 (the
+   "License"); you may not use this file except in compliance
+   with the License.  You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing,
+   software distributed under the License is distributed on an
+   "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+   KIND, either express or implied.  See the License for the
+   specific language governing permissions and limitations
+   under the License.    
+-->
+<ivy-module version="2.0" xmlns:e="http://ant.apache.org/ivy/extra">
+    <info organisation="eu.phoenixgroup" module="kscclient" revision="01.02.03.00-${platform}"/>
+	
+	<configurations>
+        <conf name="win32"/>
+        <conf name="win64"/>
+        <conf name="aix"/>
+        <conf name="compile" visibility="private"/>
+	</configurations>
+	
+	<publications>
+        <artifact type="zip" ext="zip" name="kscclient" conf="win32,win64"/>
+        <artifact type="zip" ext="tar.gz" name="kscclient" conf="aix"/>
+	</publications>
+
+    <dependencies>
+        <dependency org="eu.phoenixgroup" name="csc_core_applications" rev="11.03.19.09-${platform}" conf="compile->legacy_idl"/>
+        <dependency org="eu.phoenixgroup" name="pplib" rev="01.01.05.03-${platform}" />
+    </dependencies>
+
+</ivy-module>

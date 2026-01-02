@@ -1,0 +1,25 @@
+#! /usr/bin/ksh
+set -x
+cd $(dirname $0)/../bin
+
+pwd
+
+$(basename $0) $*
+rc=$?
+if [[ $rc -ne 0 ]]
+then
+   echo "$(basename $0) mit Fehler $rc abgebrochen"
+   exit $rc
+fi
+
+if [[ $2 -eq 53 ]]
+then
+   FIL=99
+else
+   FIL=$2
+fi
+
+mv dezap${FIL}.dat ~
+rc=$?
+
+exit $rc

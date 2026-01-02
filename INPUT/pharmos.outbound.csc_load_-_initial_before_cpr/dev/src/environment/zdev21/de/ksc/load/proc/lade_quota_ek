@@ -1,0 +1,28 @@
+. /software/etc/profile_prz
+
+
+CURR_DATE=`date +"%y.%m.%d"`;
+TIME_STAMP=`date +"%d.%m.%y-%H:%M:%S"`;
+LOG_FILE=$WSS/de/ksc/load/log/lade_quota_ek.$CURR_DATE.log
+
+echo $TIME_STAMP Start >>$LOG_FILE 
+
+
+if [[ $# -ne 1 ]]
+then
+   echo "Pfad und Datei muss angegeben werden!"
+   echo $TIME_STAMP No File >>$LOG_FILE 
+   echo $TIME_STAMP Stop >>$LOG_FILE 
+   exit 1
+fi
+
+DATEI=$1
+
+#load from /transfer/ksc/data/kontingente/kontingente.txt delimiter ';' insert into articlequotatemp;
+dbaccess ode21 -<<%
+begin work;
+load from ${DATEI} delimiter ';' insert into articlequotatemp;
+commit work;
+%
+
+echo $TIME_STAMP Stop >>$LOG_FILE 

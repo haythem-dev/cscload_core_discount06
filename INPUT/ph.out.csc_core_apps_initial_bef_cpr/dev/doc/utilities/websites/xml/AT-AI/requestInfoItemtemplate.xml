@@ -1,0 +1,5 @@
+	<InfoItem PosId="#POSID#" Quantity="#QTY#">
+		<ItemId Type="#TYPE#" Id="#ID#"/>
+	</InfoItem>
+
+	

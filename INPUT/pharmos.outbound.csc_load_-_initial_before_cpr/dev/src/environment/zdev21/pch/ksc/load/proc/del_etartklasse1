@@ -1,0 +1,9 @@
+. /software/etc/profile_prz
+
+dbaccess och21pre -<<%
+begin work;
+update artikelzentral set etartklasse1 = 0;
+commit work;
+%
+
+

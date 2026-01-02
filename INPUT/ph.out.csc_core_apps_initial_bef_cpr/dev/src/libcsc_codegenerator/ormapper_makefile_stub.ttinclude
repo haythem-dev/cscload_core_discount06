@@ -1,0 +1,17 @@
+﻿<#
+// #############################################################
+// makefile
+// #############################################################
+#>
+
+<#
+    string additionalNamespace_mf = string.IsNullOrEmpty(AdditionalNamespace) ? "" : $"/{AdditionalNamespaceLower}";
+#>
+
+#---------------------------------------------------------------------------------
+# source directories
+#---------------------------------------------------------------------------------
+
+	<#= TargetDirectory.ToLower() #><#= additionalNamespace_mf #>/<#= TypeNameLower #> \
+
+<# SaveStub($"{TypeName}_makefile.stub"); #>

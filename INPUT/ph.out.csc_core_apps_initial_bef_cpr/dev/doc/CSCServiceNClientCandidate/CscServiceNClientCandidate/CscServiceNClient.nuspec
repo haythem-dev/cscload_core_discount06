@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Pharmos.Outbound.Base.CscServiceNClient</id>
+    <version>$version$</version>
+    <authors>$author$</authors>
+    <owners>$author$</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>$description$</description>
+    <releaseNotes>inital release</releaseNotes>
+    <copyright>$copyright$</copyright>
+    <tags>phoenix outbound cscservice</tags>
+  </metadata>
+</package>

@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{70C42513-9695-40A5-B79F-C71886EF473E}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>libcsc_codegenerator</RootNamespace>
+    <AssemblyName>libcsc_codegenerator</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="ormapper.txt">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ormapper.tt</DependentUpon>
+    </Content>
+    <Content Include="ormapper_makefile_stub.txt">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ormapper_makefile_stub.ttinclude</DependentUpon>
+    </Content>
+    <Content Include="ormapper_repository_stub.txt">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ormapper_repository_stub.ttinclude</DependentUpon>
+    </Content>
+    <Content Include="ormapper_sql_statements_stub.txt">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ormapper_sql_statements_stub.ttinclude</DependentUpon>
+    </Content>
+    <Content Include="ormapper_thrift_cscserviceimplpxverbund_stub.txt">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ormapper_thrift_cscserviceimplpxverbund_stub.ttinclude</DependentUpon>
+    </Content>
+    <Content Include="ormapper_thrift_definition_stub.txt">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ormapper_thrift_definition_stub.ttinclude</DependentUpon>
+    </Content>
+    <Content Include="ormapper_thrift_handler_stub.txt">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ormapper_thrift_handler_stub.ttinclude</DependentUpon>
+    </Content>
+    <None Include="app.config" />
+    <None Include="ormapper_thrift_cscserviceimplpxverbund_stub.ttinclude">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ormapper_thrift_cscserviceimplpxverbund_stub.txt</LastGenOutput>
+    </None>
+    <None Include="ormapper_thrift_definition_stub.ttinclude">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ormapper_thrift_definition_stub.txt</LastGenOutput>
+    </None>
+    <None Include="ormapper_repository_stub.ttinclude">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ormapper_repository_stub.txt</LastGenOutput>
+    </None>
+    <None Include="ormapper_thrift_cscservicebatchhandler_stub.ttinclude">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ormapper_thrift_cscservicebatchhandler_stub.cs</LastGenOutput>
+    </None>
+    <None Include="ormapper_thrift_handler_stub.ttinclude">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ormapper_thrift_handler_stub.txt</LastGenOutput>
+    </None>
+    <None Include="ormapper_sql_statements_stub.ttinclude">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ormapper_sql_statements_stub.txt</LastGenOutput>
+    </None>
+    <None Include="ormapper_mapper_sql.ttinclude">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ormapper_mapper_sql.cs</LastGenOutput>
+    </None>
+    <None Include="ormapper_mapper_base.ttinclude">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ormapper_mapper_base.cs</LastGenOutput>
+    </None>
+    <None Include="ormapper_makefile_stub.ttinclude">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ormapper_makefile_stub.txt</LastGenOutput>
+    </None>
+    <None Include="ormapper_type_collection.ttinclude">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ormapper_type_collection.cs</LastGenOutput>
+    </None>
+    <None Include="ormapper_type_interface.ttinclude">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ormapper_type_interface.cs</LastGenOutput>
+    </None>
+    <None Include="ormapper_type.ttinclude">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ormapper_type.cs</LastGenOutput>
+    </None>
+    <Content Include="ormapper.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ormapper.txt</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="templates\crema.template" />
+    <None Include="templates\crema.template_CremaOrder" />
+    <None Include="templates\crema.template_GuiData" />
+    <None Include="templates\crema.template_LastDecision" />
+    <None Include="templates\crema.template_MailData" />
+    <None Include="templates\crema.template_OrderData" />
+    <None Include="templates\crema.template_Reason" />
+    <None Include="templates\crema.template_UserSuggestion" />
+    <None Include="templates\customer_Tours.template" />
+    <None Include="templates\discountaccount.template" />
+    <None Include="templates\paymentconditions.template" />
+    <None Include="templates\pricesanddiscounts.template" />
+    <None Include="templates\taxrates.template" />
+    <None Include="templates\promotions.template" />
+    <None Include="templates\orderstatus.template" />
+    <None Include="templates\changedquantities.template" />
+    <None Include="templates\routes.template" />
+    <None Include="templates\turnover.template" />
+    <None Include="templates\payments.template" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ormapper_mapper_base.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ormapper_mapper_base.ttinclude</DependentUpon>
+    </Compile>
+    <Compile Include="ormapper_mapper_sql.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ormapper_mapper_sql.ttinclude</DependentUpon>
+    </Compile>
+    <Compile Include="ormapper_thrift_cscservicebatchhandler_stub.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ormapper_thrift_cscservicebatchhandler_stub.ttinclude</DependentUpon>
+    </Compile>
+    <Compile Include="ormapper_type.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ormapper_type.ttinclude</DependentUpon>
+    </Compile>
+    <Compile Include="ormapper_type_collection.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ormapper_type_collection.ttinclude</DependentUpon>
+    </Compile>
+    <Compile Include="ormapper_type_interface.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ormapper_type_interface.ttinclude</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

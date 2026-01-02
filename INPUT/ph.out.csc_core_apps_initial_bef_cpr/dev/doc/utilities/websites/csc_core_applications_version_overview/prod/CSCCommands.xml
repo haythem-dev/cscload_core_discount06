@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CSCCommands xsi:noNamespaceSchemaLocation="CSCCommands.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Command Identifier="aaorderclose" 		CommandPath="/software/wss/[?C]/ksc/batch/proc/"  Command="aaordclose.sh -vp" />	
+	<Command Identifier="bytecdrvr"    		CommandPath="/software/wss/[?C]/ksc/server/proc/" Command="bytecdrvr.sh -vp" />	
+	<Command Identifier="clearreservation" 	CommandPath="/software/wss/[?C]/ksc/batch/proc/"  Command="clearreservation.sh -vp" />	
+	<Command Identifier="corpha"   	   		CommandPath="/software/wss/[?C]/ksc/batch/proc/"  Command="csc_corpha.sh -vp" />		
+	<Command Identifier="deli"   	   		CommandPath="/software/wss/[?C]/ksc/batch/proc/"  Command="csc_deli.sh -vp" />			
+	<Command Identifier="hmkdrvr"    		CommandPath="/software/wss/[?C]/ksc/server/proc/" Command="hmkdrvr.sh -vp" />	
+	<Command Identifier="ibtorderimport"	CommandPath="/software/wss/[?C]/ksc/batch/proc/"  Command="ibtorderimport.sh -vp" />			
+	<Command Identifier="kscserver"    		CommandPath="/software/wss/[?C]/ksc/server/proc/" Command="kscserver.sh -vp" />
+	<Command Identifier="kscserverLN"    	CommandPath="/software/wss/[?C]/ksc/server/proc/" Command="kscserverLN.sh -vp" />
+	<!--<Command Identifier="kscserverLS"    	CommandPath="/software/wss/[?C]/ksc/server/proc/" Command="kscserverLS.sh -vp" />-->
+	<Command Identifier="kscserverXmlNord"  CommandPath="/software/wss/[?C]/ksc/server/proc/" Command="kscserverXmlNord.sh -vp" />
+	<!--<Command Identifier="kscserverXmlSued"  CommandPath="/software/wss/[?C]/ksc/server/proc/" Command="kscserverXmlSued.sh -vp" />-->
+	<Command Identifier="phabor"       		CommandPath="/software/wss/[?C]/ksc/batch/proc/"  Command="csc_phabor.sh -vp" />	
+	<Command Identifier="phadex"       		CommandPath="/software/wss/[?C]/ksc/batch/proc/"  Command="csc_phadex.sh -vp" />	
+	<Command Identifier="phatra"       		CommandPath="/software/wss/[?C]/ksc/batch/proc/"  Command="csc_phatra.sh -vp" />	
+	<Command Identifier="umkdrvr"           CommandPath="/software/wss/[?C]/ksc/server/proc/" Command="umkdrvr.sh -vp" />
+	<Command Identifier="vbordimport"  		CommandPath="/software/wss/[?C]/ksc/batch/proc/"  Command="vbordimport.sh -vp" />	
+	<Command Identifier="vbordimport2" 		CommandPath="/software/wss/[?C]/ksc/batch/proc/"  Command="vbordimport2.sh -vp" />	
+	<Command Identifier="zaapunix"     		CommandPath="/software/wss/[?C]/ksc/server/proc/" Command="zaapunix.sh -vp" />
+	<Command Identifier="zaasunix"     		CommandPath="/software/wss/[?C]/ksc/server/proc/" Command="zaasunix.sh -vp" />
+	<Command Identifier="cscservice"     	CommandPath="/software/wss/[?C]/ksc/server/proc/" Command="cscservice.sh -vp" />
+	<Command Identifier="cscserviceLN"     	CommandPath="/software/wss/[?C]/ksc/server/proc/" Command="cscserviceLN.sh -vp" />
+    <Command Identifier="cscservice70"     	CommandPath="/software/wss/[?C]/ksc/server/proc/" Command="cscservice70.sh -vp" />
+    <Command Identifier="cscservice71"     	CommandPath="/software/wss/[?C]/ksc/server/proc/" Command="cscservice71.sh -vp" />
+    <Command Identifier="cscservice72"     	CommandPath="/software/wss/[?C]/ksc/server/proc/" Command="cscservice72.sh -vp" />
+    <Command Identifier="cscservice73"     	CommandPath="/software/wss/[?C]/ksc/server/proc/" Command="cscservice73.sh -vp" />
+    <Command Identifier="cscservice74"     	CommandPath="/software/wss/[?C]/ksc/server/proc/" Command="cscservice74.sh -vp" />
+    <Command Identifier="cscservice75"     	CommandPath="/software/wss/[?C]/ksc/server/proc/" Command="cscservice75.sh -vp" />
+    <Command Identifier="cscservice76"     	CommandPath="/software/wss/[?C]/ksc/server/proc/" Command="cscservice76.sh -vp" />
+    <Command Identifier="cscservice77"     	CommandPath="/software/wss/[?C]/ksc/server/proc/" Command="cscservice77.sh -vp" />
+	<!--<Command Identifier="cscserviceLS"     	CommandPath="/software/wss/[?C]/ksc/server/proc/" Command="cscserviceLS.sh -vp" />-->
+</CSCCommands>

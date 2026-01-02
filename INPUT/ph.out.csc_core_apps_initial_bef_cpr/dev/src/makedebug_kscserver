@@ -1,0 +1,17 @@
+#! /usr/bin/ksh
+
+cd cxxtools
+make -j40
+cd ../pxdb
+make -j40
+cd ../pxverbund
+make -j40
+cd ../libcsc
+make -j40
+
+cd ../kscserver
+make -j40
+
+
+cd ../..
+

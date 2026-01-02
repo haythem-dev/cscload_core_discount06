@@ -1,0 +1,31 @@
+diff -ur a/lib/cpp/src/thrift/transport/THttpServer.cpp b/lib/cpp/src/thrift/transport/THttpServer.cpp
+--- a/lib/cpp/src/thrift/transport/THttpServer.cpp	2019-08-02 08:07:04.000000000 +0200
++++ b/lib/cpp/src/thrift/transport/THttpServer.cpp	2019-08-02 09:39:17.000000000 +0200
+@@ -28,6 +28,27 @@
+   #include <Shlwapi.h>
+ #endif
+ 
++#ifdef _AIX
++//code stolen from https://github.com/SpiderLabs/ModSecurity/blob/master/apache2/msc_util.c :)
++char* strcasestr(const char* haystack, const char* needle) {
++    char aux, lower_aux;
++    int length;
++
++    if ((aux = *needle++) != 0) {
++        aux = (char)tolower((unsigned char)aux);
++        length = strlen(needle);
++        do {
++            do {
++                if ((lower_aux = *haystack++) == 0)
++                    return NULL;
++            } while ((char)tolower((unsigned char)lower_aux) != aux);
++        } while (strncasecmp(haystack, needle, length) != 0);
++        haystack--;
++    }
++    return ((char *)haystack);
++}
++#endif // !_AIX
++
+ using std::string;
+ 
+ namespace apache {

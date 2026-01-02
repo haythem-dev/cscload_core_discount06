@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Mit XMLSpy v2007 sp1 bearbeitet (http://www.altova.com) von C. Merkl (PHOENIX Pharmahandel AG & Co. KG) -->
+<!-- Mit XMLSpy v2007 sp1 bearbeitet (http://www.altova.com) von C. Merkl (PHOENIX Pharmahandel AG & Co. KG) -->
+<!-- Mit XMLSpy v2007 sp1 bearbeitet (http://www.altova.com) von C. Merkl (PHOENIX Pharmahandel AG & Co. KG) -->
+<!-- Mit XMLSpy v2007 sp1 bearbeitet (http://www.altova.com) von C. Merkl (PHOENIX Pharmahandel AG & Co. KG) -->
+<!-- Mit XMLSpy v2007 sp1 bearbeitet (http://www.altova.com) von C. Merkl (PHOENIX Pharmahandel AG & Co. KG) -->
+<!-- Mit XMLSpy v2007 sp1 bearbeitet (http://www.altova.com) von C. Merkl (PHOENIX Pharmahandel AG & Co. KG) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="KSCRefreshSettings">
+		<xs:annotation>
+			<xs:documentation>Schema for XML configuration file for csc_phatra, csc_phabor and csc_corpha.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Country" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="Settings" type="SettingsType" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>Country specific configuration. Will be overwritten by interface specific configurations or branch specific configurations.</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="Branches">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="Branch" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:all>
+													<xs:element name="Settings" type="SettingsType"/>
+												</xs:all>
+												<xs:attribute name="BranchNo" type="xs:int" use="required"/>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:all>
+						<xs:attribute name="Country" type="CountryType" use="required">
+							<xs:annotation>
+								<xs:documentation>For documentation purposes the country should be available in the configuration files. The following values are possible: AT, BG, CH, DE, FR, HR, RS.</xs:documentation>
+							</xs:annotation>
+						</xs:attribute>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:simpleType name="CountryType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="AT"/>
+			<xs:enumeration value="BG"/>
+			<xs:enumeration value="CH"/>
+			<xs:enumeration value="DE"/>
+			<xs:enumeration value="FR"/>
+			<xs:enumeration value="HR"/>
+			<xs:enumeration value="RS"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="IPAddressType">
+		<xs:restriction base="xs:string"/>
+	</xs:simpleType>
+	<xs:simpleType name="TCAHostType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="PhoenixGeneric_west"/>
+			<xs:enumeration value="PhoenixGeneric_cyr"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="TCAccessType">
+		<xs:attribute name="TCAHost" type="TCAHostType">
+			<xs:annotation>
+				<xs:documentation>e.g. PhoenixGeneric_west</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="IPAddress">
+			<xs:annotation>
+				<xs:documentation>IP address of the CICS´s host.</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="IPAddressType"/>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="Port" type="xs:int">
+			<xs:annotation>
+				<xs:documentation>Port for the branch specific TCAccess listener.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="TCATransaction" type="xs:string">
+			<xs:annotation>
+				<xs:documentation>e.g. TCAS</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="Username" type="xs:string"/>
+		<xs:attribute name="Password" type="xs:string"/>
+		<xs:attribute name="ConnectionRetries" type="xs:int" default="5">
+			<xs:annotation>
+				<xs:documentation>Max. Anzahl Verbindungversuche bis zum Error-Alerting</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="ConnectionWaitBeforeRetry" type="xs:int" default="5">
+			<xs:annotation>
+				<xs:documentation>Zeit bis zum nächsten Connect-Versuch in Sekunden</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="InformixType">
+		<xs:attribute name="IfxHost" type="xs:string">
+			<xs:annotation>
+				<xs:documentation>e.g. db1_zdev1_tcp</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="IfxDataBase" type="xs:string">
+			<xs:annotation>
+				<xs:documentation>e.g. zpos6bg</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="IfxServiceName" type="xs:string">
+			<xs:annotation>
+				<xs:documentation>UEBERFLUESSIG e.g. sdb1_tcp</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="ConnectionRetries" type="xs:int" default="5">
+			<xs:annotation>
+				<xs:documentation>Max. Anzahl Verbindungversuche bis zum Error-Alerting</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="ConnectionWaitBeforeRetry" type="xs:int" default="5">
+			<xs:annotation>
+				<xs:documentation>Zeit bis zum nächsten Connect-Versuch in Sekunden</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="KSCServerType">
+		<xs:attribute name="KSCHost" type="xs:string">
+			<xs:annotation>
+				<xs:documentation>e.g. zdev1</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="Port" type="xs:int"/>
+		<xs:attribute name="TerminalName">
+			<xs:annotation>
+				<xs:documentation>TerminalName which is used  to place orders.</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:length value="3"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="FinishOrderType" use="optional" default="CL">
+			<xs:annotation>
+				<xs:documentation>e.g. CL for close order, ZU for delay order, ST for cancel order</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="CL"/>
+					<xs:enumeration value="ZU"/>
+					<xs:enumeration value="ST"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="pxVerbundType">
+		<xs:attribute name="MessageFile" type="xs:string">
+			<xs:annotation>
+				<xs:documentation>e.g. $INI_PATH/message.txt</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="LogFile" type="xs:string">
+			<xs:annotation>
+				<xs:documentation>e.g. $LOG_PATH/pvhx0123.log</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="SystemLogFile" type="xs:string">
+			<xs:annotation>
+				<xs:documentation>e.g. $LOG_PATH/wws.log</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="LogMode" type="xs:int">
+			<xs:annotation>
+				<xs:documentation>e.g. 1</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="Computer" type="xs:string"/>
+		<xs:attribute name="DataSource" type="xs:string">
+			<xs:annotation>
+				<xs:documentation>e.g. zpos3bg@db1_zdev1_shm</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="DeviceName" type="xs:string">
+			<xs:annotation>
+				<xs:documentation>e.g. PVHX01</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="DeviceType" type="xs:int">
+			<xs:annotation>
+				<xs:documentation>e.g. 7</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="SMTPType">
+		<xs:all>
+			<xs:element name="Information" minOccurs="0">
+				<xs:complexType>
+					<xs:attribute name="eMail" type="xs:string" use="required"/>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="Warnings" minOccurs="0">
+				<xs:complexType>
+					<xs:attribute name="eMail" type="xs:string" use="required"/>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="Errors" minOccurs="0">
+				<xs:complexType>
+					<xs:attribute name="eMail" type="xs:string" use="required"/>
+				</xs:complexType>
+			</xs:element>
+		</xs:all>
+		<xs:attribute name="Host" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>IP address or host name of the SMTP server</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="Port" type="xs:int" use="required"/>
+		<xs:attribute name="Username" type="xs:string"/>
+		<xs:attribute name="Password" type="xs:string"/>
+		<xs:attribute name="SendMailFrom" type="xs:string"/>
+	</xs:complexType>
+	<xs:complexType name="SettingsType">
+		<xs:all>
+			<xs:element name="General" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>General configuration.</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:attribute name="PollInterval" type="xs:int">
+						<xs:annotation>
+							<xs:documentation>Interval for polling in seconds.</xs:documentation>
+						</xs:annotation>
+					</xs:attribute>
+					<xs:attribute name="LogLevel">
+						<xs:annotation>
+							<xs:documentation>Controls the log details.</xs:documentation>
+						</xs:annotation>
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:enumeration value="Information"/>
+								<xs:enumeration value="Warnings"/>
+								<xs:enumeration value="Errors"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:attribute>
+					<xs:attribute name="Test" type="xs:boolean" default="false"/>
+					<xs:attribute name="MaxSelectOrders" type="xs:int" default="40"/>
+					<xs:attribute name="BulkInsert" type="xs:boolean" default="false"/>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="Informix" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Configuration for the database connection to the order entry database.</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:complexContent>
+						<xs:extension base="InformixType"/>
+					</xs:complexContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="SMTP" type="SMTPType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Configuration of the mail server.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="TCAccess" type="TCAccessType" minOccurs="0"/>
+			<xs:element name="pxVerbund" type="pxVerbundType"/>
+		</xs:all>
+	</xs:complexType>
+	<xs:complexType name="InterfacesType">
+		<xs:sequence>
+			<xs:element name="Interface" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:all>
+						<xs:element name="Settings" type="SettingsType" minOccurs="0"/>
+					</xs:all>
+					<xs:attribute name="InterfaceName" use="required">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:enumeration value="csc_phatra"/>
+								<xs:enumeration value="csc_phabor"/>
+								<xs:enumeration value="csc_corpha"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:attribute>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

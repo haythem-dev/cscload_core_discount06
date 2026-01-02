@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<OrderStatusRequest>  
+  <client BranchNo="23" CustomerNo="3020836"/>  
+  <order orderDate="2011-08-25" orderNo="92394"/>  
+</OrderStatusRequest>

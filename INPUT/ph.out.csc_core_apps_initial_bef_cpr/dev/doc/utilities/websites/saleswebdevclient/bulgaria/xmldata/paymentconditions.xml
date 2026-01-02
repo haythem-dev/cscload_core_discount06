@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PaymentConditionsRequest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="D:\SubVersion\salesweb\phpscripts\wsxmlbulgaria\schemas\paymentconditions\PaymentConditionsRequest.xsd">
+	<Client BranchNo="23" CustomerNo="3000064"/>
+</PaymentConditionsRequest>

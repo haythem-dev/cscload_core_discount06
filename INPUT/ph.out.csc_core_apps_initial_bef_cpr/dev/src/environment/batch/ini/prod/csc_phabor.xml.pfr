@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<KSCRefreshSettings xsi:noNamespaceSchemaLocation="KSCRefreshSettings.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Country Country="FR">
+		<Settings>
+			<General PollInterval="15000" LogLevel="Errors" Test="false" />
+			<SMTP Port="25" Host="10.100.121.30" SendMailFrom="csc_phabor_fr@phoenixgroup.eu">
+				<Information eMail="kscrefresh@phoenixgroup.eu" />
+				<Warnings eMail="kscrefresh@phoenixgroup.eu; a.egerer@phoenixgroup.eu" />
+				<Errors eMail="int.dl-FU2ServiceDeskInfos@phoenixgroup.eu; kscrefresh@phoenixgroup.eu; a.egerer@phoenixgroup.eu" />
+			</SMTP>
+			<TCAccess TCATransaction="TCAS" TCAHost="PhoenixGeneric_west" ConnectionRetries="10" ConnectionWaitBeforeRetry="10000" Username="PHABOR" Password="" />
+			<pxVerbund DeviceType="7" DeviceName="PHABOR" Computer="" LogMode="1" DataSource="ofr21pre@ofr21_shm" MessageFile="/software/wss/pfr/ksc/batch/ini/message.txt" />
+			<Informix ConnectionRetries="10" ConnectionWaitBeforeRetry="10000" IfxServiceName="53004" IfxHost="ofr21_tcp" IfxDataBase="ofr21pre" />
+		</Settings>
+		<Branches>
+			<Branch BranchNo="43">
+				<Settings>
+					<TCAccess IPAddress="129.210.15.36" Port="3143" />
+				</Settings>
+			</Branch>
+			<Branch BranchNo="48">
+				<Settings>
+					<TCAccess IPAddress="129.210.15.36" Port="3148" />
+				</Settings>
+			</Branch>
+		</Branches>
+	</Country>
+</KSCRefreshSettings>

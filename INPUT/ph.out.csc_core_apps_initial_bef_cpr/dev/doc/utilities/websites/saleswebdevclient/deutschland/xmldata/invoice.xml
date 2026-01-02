@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<invoiceRequest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://salesweb.phoenix-ag.de/wsxmlgermany/schemas/PhoenixInvoiceRequestDE.xsd" language="de">
+	<invoices>
+		<client branchNumber="05" customerNumber="9999005"/>
+		<byPeriod dateFrom="2006-05-11" dateTo="2006-05-30" requestStatus="all"/>
+	</invoices>
+</invoiceRequest>

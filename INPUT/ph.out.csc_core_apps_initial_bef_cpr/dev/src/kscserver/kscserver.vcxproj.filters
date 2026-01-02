@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="ini">
+      <UniqueIdentifier>{ec149c55-b23c-4f58-9be1-63488835bebc}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="articleinfostruct.h" />
+    <ClInclude Include="articleinquiry.h" />
+    <ClInclude Include="articleinquirybulk.h" />
+    <ClInclude Include="kscsrv.h" />
+    <ClInclude Include="kscsrvdata.h" />
+    <ClInclude Include="kscsrvfkt.h" />
+    <ClInclude Include="lackdefines.h" />
+    <ClInclude Include="seralog.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="kscpsel.cpp" />
+    <ClCompile Include="version.c" />
+    <ClCompile Include="kscsrv.cpp" />
+    <ClCompile Include="lackdefines.c" />
+    <ClCompile Include="sockmain.cpp" />
+    <ClCompile Include="seralog.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ini\kscserver.cfg">
+      <Filter>ini</Filter>
+    </None>
+  </ItemGroup>
+</Project>

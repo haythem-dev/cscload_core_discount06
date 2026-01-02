@@ -1,0 +1,346 @@
+#!/bin/bash
+
+#
+# Variables
+#
+
+#set -x
+
+DEBUG=0
+
+INIFILE="LogfileWatchdog.ini"
+DATFILE=""
+RUNTIME=86400
+SLEEPTIME=300
+OUTPUT=0
+RUN=0
+
+E_MAIL_TO=""
+E_MAIL_CC=""
+E_MAIL_SUBJECT=""
+E_MAIL_CONTENT="====================================================="
+
+LOGFILE_FULLPATHNAME=""
+SCAN=""
+GREP=""
+
+RESULT=""
+HISTORY=""
+
+#
+# Procedures
+#
+
+init_global()
+{
+   E_MAIL_TO=`more $INIFILE|egrep "\[E-MAIL-TO\]"`
+   E_MAIL_TO=${E_MAIL_TO#*:}
+   E_MAIL_CC=`more $INIFILE|egrep "\[E-MAIL-CC\]"`
+   E_MAIL_CC=${E_MAIL_CC#*:}
+   E_MAIL_SUBJECT=`more $INIFILE|egrep "\[E-MAIL-SUBJECT\]"`
+   E_MAIL_SUBJECT=${E_MAIL_SUBJECT#*:}
+
+   if [ "$DEBUG" == "1" ]
+   then
+      echo ----------------------------------------------------------
+      echo INI-File: $INIFILE
+      echo init_lobal value E_MAIL_TO: $E_MAIL_TO
+      echo init_lobal value E_MAIL_CC: $E_MAIL_CC
+      echo init_lobal value E_MAIL_SUBJECT: $E_MAIL_SUBJECT
+      echo ----------------------------------------------------------
+   fi
+}
+
+init_logfile()
+{
+   if [ "$DEBUG" == "1" ]
+   then
+      echo init_logfile Logfile $1
+   fi
+
+   LOGFILE_FULLPATHNAME=`more $INIFILE|egrep "\[LOGFILE-$1-FULLPATHNAME\]"`
+   LOGFILE_FULLPATHNAME=${LOGFILE_FULLPATHNAME#*:}
+
+   if [ "$DEBUG" == "1" ]
+   then
+      echo init_scan value LOGFILE_FULLPATHNAME: $LOGFILE_FULLPATHNAME
+      echo ----------------------------------------------------------
+   fi
+}
+
+init_scan()
+{
+   if [ "$DEBUG" == "1" ]
+   then
+      echo init_scan Logfile $1 Scan $2
+   fi
+
+   SCAN=`more $INIFILE|egrep "Scan-$1-$2:"`
+   SCAN=${SCAN#*:}
+
+   if [ "$DEBUG" == "1" ]
+   then
+      echo init_scan value SCAN: $SCAN
+      echo ----------------------------------------------------------
+   fi
+}
+
+init_grep()
+{
+   if [ "$DEBUG" == "1" ]
+   then
+      echo init_grep Logfile $1 Grep $2
+   fi
+
+   GREP=`more $INIFILE|egrep "Grep-$1-$2:"`
+   GREP=${GREP#*:}
+
+   if [ "$DEBUG" == "1" ]
+   then
+      echo init_grep value GREP: $GREP
+      echo ----------------------------------------------------------
+   fi
+}
+
+load_history()
+{
+   HISTORY=`more "$DATFILE".dat`
+}
+
+save_history()
+{
+   echo $HISTORY >> "$DATFILE".dat
+}
+
+
+#
+# Main
+#
+
+# Load the user defined parameters
+while [[ $# > 0 ]]
+do
+   case "$1" in
+
+      -i)
+         INIFILE="$2"
+         shift
+         ;;
+
+      -r)
+         RUNTIME="$2"
+         shift
+         ;;
+
+      -s)
+         SLEEPTIME="$2"
+         shift
+         ;;
+
+      -o)
+         OUTPUT="$2"
+         shift
+         ;;
+
+      -h|--help|*)
+         echo "Usage:"
+         echo " [-i Init-File]                       Default: LogfileWatchdog.ini"
+         echo " [-r Runtime in sec]                  Default: 86400 (1 day) - Then script stops."
+         echo " [-s Sleeptime in sec]                Default: 300 (5 min)   - Then new scan."
+         echo " [-o Output (0 = Mail / 1 = Screen)]  Default: 0 (Mail)      - Only 1 pass for screen output."
+         echo " --help"
+         exit 0
+         ;;
+   esac
+   shift
+done
+
+if [ "$DEBUG" == "1" ]
+then
+   echo "i: $INIFILE"
+   echo "r: $RUNTIME"
+   echo "s: $SLEEPTIME"
+   echo "o: $OUTPUT"
+fi
+
+if ! [ -f "$INIFILE" ]
+then
+   echo Inifile does not exist
+   exit 1
+fi
+
+DATFILE=${INIFILE/\/ini\//\/data\/}
+
+init_global
+
+if [ -f ""$DATFILE".dat" ]
+then
+   load_history
+fi
+
+while [ true ]
+do
+   E_MAIL_CONTENT=""
+   UPDATE=0
+
+   i=1
+
+   while [ true ]
+   do
+      init_logfile $i
+
+      if [ "$LOGFILE_FULLPATHNAME" == "" ]
+      then
+         break;
+      fi
+
+      if [ -f "$LOGFILE_FULLPATHNAME" ]
+      then
+
+         j=1
+
+         while [ true ]
+         do
+            init_scan $i $j
+
+            if [ "$SCAN" == "" ]
+            then
+               break;
+            fi
+
+            RESULT=""
+
+            if [ "$OUTPUT" == "0" ]
+            then
+               RESULT=`grep "$SCAN" "$LOGFILE_FULLPATHNAME"`
+            else
+               grep "$SCAN" "$LOGFILE_FULLPATHNAME"
+            fi
+
+            if [ "$RESULT" != "" ]
+            then
+
+               if ! [ -f ""$DATFILE".S."$i"-"$j".dat" ]
+               then
+                  echo $RESULT >> "$DATFILE".S."$i"-"$j".dat
+               fi
+
+               FIRSTFOUND=`more "$DATFILE".S."$i"-"$j".dat`
+
+               # Das ist die umstaendliche Methode um evtl. CRLF loszuwerden,
+               # damit die nachfolgenden if-Abfragen funktionieren.
+               # Vielleicht geht es auch anders/besser.
+               TMP=""
+               TMP=`echo $TMP" ""$RESULT"`
+               TMP=`echo $TMP" "`
+
+               if [[ "$TMP" != *"$FIRSTFOUND"* ]];
+               then
+                  eval `rm "$DATFILE"*.dat`
+                  echo $RESULT >> "$DATFILE".S."$i"-"$j".dat
+                  HISTORY=""
+               fi
+
+               if [[ "$HISTORY" != *"$TMP"* ]];
+               then
+                  UPDATE=1
+                  E_MAIL_CONTENT=`echo $E_MAIL_CONTENT Scan nach "$SCAN" returns: "$RESULT"`
+                  E_MAIL_CONTENT=`echo $E_MAIL_CONTENT "====================================================="`
+               fi
+            fi
+
+            j=`expr $j + 1`
+
+         done
+
+         k=1
+
+         while [ true ]
+         do
+            init_grep $i $k
+
+            if [ "$GREP" == "" ]
+            then
+               break;
+            fi
+
+            RESULT=""
+
+            if [ "$OUTPUT" == "0" ]
+            then
+               RESULT=`eval $GREP`
+            else
+               eval "$GREP"
+            fi
+
+            if [ "$RESULT" != "" ]
+            then
+
+               if ! [ -f ""$DATFILE".G."$i"-"$k".dat" ]
+               then
+                  echo $RESULT >> "$DATFILE".G."$i"-"$k".dat
+               fi
+
+               FIRSTFOUND=`more "$DATFILE".G."$i"-"$k".dat`
+
+               TMP=""
+               TMP=`echo $TMP" ""$RESULT"`
+               TMP=`echo $TMP" "`
+
+               if [[ "$TMP" != *"$FIRSTFOUND"* ]];
+               then
+                  eval `rm "$DATFILE"*.dat`
+                  echo $RESULT >> "$DATFILE".G."$i"-"$k".dat
+                  HISTORY=""
+               fi
+
+               if [[ $HISTORY != *"$TMP"* ]];
+               then
+                  UPDATE=1
+                  E_MAIL_CONTENT=`echo $E_MAIL_CONTENT GREP-$i-$k returns: "$RESULT"`
+                  E_MAIL_CONTENT=`echo $E_MAIL_CONTENT "====================================================="`
+               fi
+            fi
+
+            k=`expr $k + 1`
+
+         done
+
+         if [ "$DEBUG" == "1" ]
+         then
+            echo !END of scan $i.Logfile!
+         fi
+      fi
+
+      i=`expr $i + 1`
+
+   done
+
+   if [ "$OUTPUT" == "1" ]
+   then
+      break
+   fi
+
+   if [ "$UPDATE" == "1" ]
+   then
+      HISTORY=`echo "$HISTORY" "$E_MAIL_CONTENT"`
+      save_history
+      SENDER=`whoami`
+      (echo "Subject: "$E_MAIL_SUBJECT""; echo; echo "$E_MAIL_CONTENT") | sendmail -f "$SENDER"@phoenixgroup.eu $E_MAIL_TO $E_MAIL_CC
+   fi
+
+   if [ "$RUN" -ge "$RUNTIME" ]
+   then
+      exit 0
+   fi
+
+   sleep "$SLEEPTIME"
+
+   RUN=`expr $RUN + $SLEEPTIME`
+
+   if [ "$DEBUG" == "1" ]
+   then
+      echo "Still alive! (Run since $RUN sec)"
+   fi
+
+done

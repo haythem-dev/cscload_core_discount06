@@ -1,0 +1,546 @@
+#!/usr/bin/ksh
+
+###################################### Description #######################################
+#
+# This Script loads all discounts for all articles of all customers and all branches into
+# database table cucosbulgaria. Only cash and gross profit discounts that are granted on 
+# a base quantity of 1 are stored. So, be aware of missing the following discounts 
+# for example:
+# - rebates in kind
+# - discounts based on a quanitiy of 2 or higher 
+# - discounts based on a value
+# - ...
+#
+##########################################################################################
+
+# To do:
+# 1) Kunden als XML-Kunden kennzeichnen in Kundenstamm
+#
+
+############################## Parameter and Return codes ################################
+#
+# Parameter:
+# $1: KSC database
+# example for call of this script: cucosbulgaria._sh -kscdb zpos3bg
+#
+# Return codes:
+# 0: ok
+# 1: wrong usage
+
+
+################################ Adaptations #####################################
+export INFORMIXDIR=$(dirname $INFORMIXDIR) #cuts the last sub directory
+
+################################# general settings ###################################
+TODAY=`date +%Y-%m-%d`
+FILELOG=${LOG_PATH}/$(basename $0).${TODAY}.log
+FILEBRANCHES=${DATA_PATH}/cucos_branches.txt
+TEMPTABLE1=temp_cucos1;
+
+####################################### Version ##########################################
+#
+##########################################################################################
+VERSION=4.4.1.0_branch_xmlinfolevel_branch25
+echo "$(basename $0) $VERSION" >>$FILELOG
+echo "$0 $*" >>$FILELOG
+
+################################# check parameter ###################################
+### -version (Version):
+if [[ $1 = "-version" ]];then
+        echo ${0} version ${VERSION}
+        exit 0
+fi
+
+if [[ ! $1 = "-kscdb" ]];then
+        echo "usage: $(basename $0) -kscdb KSCDB"
+        exit 1
+fi
+KSCDB=$2
+
+################################ f_db_dest_env ################################
+function f_db_dest_env {
+  country=$1
+
+  if [[ "bg" = "${country}" ]] ; then
+    export CLIENT_LOCALE=bg_bg.8859-5
+    export DB_LOCALE=bg_bg.8859-5
+    export DBMONEY=.
+    export DBDATE="MDY4/"
+    export GL_DATE=%m/%d/%iY
+  else
+    unset CLIENT_LOCALE
+    unset DB_LOCALE
+    export DBMONEY=,
+    unset DBDATE
+    unset GL_DATE
+  fi
+} # f_db_dest_env
+
+
+################################# f_prepararing ###################################
+function f_prepararing {
+  echo "`date +'[%H:%M:%S]'` *** f_prepararing" >>${FILELOG}
+
+  f_db_dest_env bg
+
+
+  # fetch branch numbers:
+  sql_statement1="unload to ${FILEBRANCHES} delimiter ' ' select filialnr from filiale;"
+  echo "$sql_statement1" >>${FILELOG}
+
+  # truncate table cucosbulgaria:
+  sql_statement2="truncate table cucosbulgaria;"
+  echo "$sql_statement1" >>${FILELOG}
+
+  # truncate table cucosbulgaria_temp:
+  sql_statement3="truncate table cucosbulgaria_temp;"
+  echo "$sql_statement1" >>${FILELOG}
+
+dbaccess ${KSCDB} >>${FILELOG} 2>&1 <<%
+$sql_statement1
+$sql_statement2
+$sql_statement3
+%
+
+} # f_prepararing 
+
+################################# f_lock_cucosbulgaria_for_salesweb ###################################
+function f_lock_cucosbulgaria_for_salesweb {
+  echo "`date +'[%H:%M:%S]'` *** f_lock_cucosbulgaria_for_salesweb" >>${FILELOG}
+
+  # set lock for salesweb:
+  sql_statement1="delete from parameter where filialnr=$BRANCHNO and programmname='cucosbulgaria' and parametername='available';"
+  echo "$sql_statement1" >>${FILELOG}
+
+dbaccess ${KSCDB} >>${FILELOG} 2>&1 <<%
+$sql_statement1
+%
+
+} # f_lock_cucosbulgaria_for_salesweb
+
+################################# f_getDiscountsByCascade ###################################
+#
+# Hole alle Rabatte mit zugehoerigem Kaskadenlevel:
+#
+function f_getDiscountsByCascade {
+
+  echo "`date +'[%H:%M:%S]'` *** f_getDiscountsByCascade" >>${FILELOG}
+
+  # urspruengli. COndition:  and (d.discountvaluepct<>0 or d.grossprofitpct<>0) 
+  # musste geaendert werden, weil es Artikel gibt mit Rabatt=0
+  WHERE_COND_STD="
+      d.branchno=$BRANCHNO
+      and d.discounttype=0
+      and d.promotion_no=0
+      and d.discountqty=0
+      and d.baseqty=1"
+#  WHERE_COND_CUSTOMER="
+#      and d.customerno!=0
+#      and k.xmlinfolevel=2 --XML-Kunde"
+  WHERE_COND_CUSTOMER="
+      and d.customerno!=0"
+#  WHERE_COND_PHGR="
+#      and d.customerno=0
+#      and k.xmlinfolevel=2 --XML-Kunde
+#      and d.pharmacygroupid<>'000'"
+  WHERE_COND_PHGR="
+      and d.customerno=0
+      and d.pharmacygroupid<>'000'"
+#  WHERE_COND_ALL_CUSTOMERS="
+#      and d.customerno=0
+#      and k.xmlinfolevel=2 --XML-Kunde
+#      and d.pharmacygroupid='000'"
+  WHERE_COND_ALL_CUSTOMERS="
+      and d.customerno=0
+      and d.pharmacygroupid='000'"
+
+  # Cascade 1 (Kunde)
+  sql_cascade1_1="insert into cucosbulgaria_temp (branchno, customerno, articleno, sellingmode, discountpercent, cascade, grossprofitpct)
+    select d.branchno, d.customerno, d.articleno, d.discountspec, d.discountvaluepct, 11, d.grossprofitpct
+    from discount d
+    inner join kunde k on k.vertriebszentrumnr=d.branchno and k.idfnr=d.customerno
+    inner join artikellokal al on al.filialnr=d.branchno and al.artikel_nr=d.articleno
+    inner join artikelpreis ap on ap.artikel_nr=d.articleno and ((d.discountspec=0 and ap.preis_typ=0) or (d.discountspec=8 and ap.preis_typ=0) or (d.discountspec=9 and ap.preis_typ=1))
+    where 
+      $WHERE_COND_STD
+      $WHERE_COND_CUSTOMER
+      and d.articleno<>0
+      and d.discountgrpno=0;"
+
+  echo "sql_cascade1_1=$sql_cascade1_1" >>${FILELOG}
+
+  # Cascade 1 (EK-Gruppe)
+  sql_cascade1_2="insert into cucosbulgaria_temp (branchno, customerno, articleno, sellingmode, discountpercent, cascade, grossprofitpct)
+    select d.branchno, cphgr.customerno, d.articleno, d.discountspec, d.discountvaluepct, 12, d.grossprofitpct
+    from discount d
+    inner join customerpharmacygr cphgr on cphgr.branchno= d.branchno and cphgr.pharmacygroupid= d.pharmacygroupid
+    inner join kunde k on k.vertriebszentrumnr=cphgr.branchno and k.idfnr=cphgr.customerno
+    inner join artikellokal al on al.filialnr=d.branchno and al.artikel_nr=d.articleno
+    inner join artikelpreis ap on ap.artikel_nr=d.articleno and ((d.discountspec=0 and ap.preis_typ=0) or (d.discountspec=8 and ap.preis_typ=0) or (d.discountspec=9 and ap.preis_typ=1))
+    where 
+      $WHERE_COND_STD
+      $WHERE_COND_PHGR
+      and d.articleno<>0
+      and d.discountgrpno=0;"
+  
+  echo "sql_cascade1_2=$sql_cascade1_2" >>${FILELOG}
+
+
+  # Cascade 1 (alle Kunden und EK-Gruppen)
+  sql_cascade1_3="insert into cucosbulgaria_temp (branchno, customerno, articleno, sellingmode, discountpercent, cascade, grossprofitpct)
+    select d.branchno, k.idfnr, d.articleno, d.discountspec, d.discountvaluepct, 13, d.grossprofitpct
+    from discount d
+    inner join artikellokal al on al.filialnr=d.branchno and al.artikel_nr=d.articleno
+    inner join artikelpreis ap on ap.artikel_nr=d.articleno and ((d.discountspec=0 and ap.preis_typ=0) or (d.discountspec=8 and ap.preis_typ=0) or (d.discountspec=9 and ap.preis_typ=1))
+    inner join kunde k on k.vertriebszentrumnr=d.branchno and k.idfnr not in 
+      (select customerno from customerpharmacygr where branchno=d.branchno and 
+        (pharmacygroupid=d.pharmgrpexcluded or pharmacygroupid=d.pharmgrpexcl_2 
+        or pharmacygroupid=d.pharmgrpexcl_3))
+    where 
+      $WHERE_COND_STD
+      $WHERE_COND_ALL_CUSTOMERS
+      and d.articleno<>0
+      and d.discountgrpno=0;"
+
+  echo "sql_cascade1_3=$sql_cascade1_3" >>${FILELOG}
+
+  # Cascade 2 (Kunde)
+  sql_cascade2_1="insert into cucosbulgaria_temp (branchno, customerno, articleno, sellingmode, discountpercent, cascade, grossprofitpct)
+    select d.branchno, d.customerno, az.artikel_nr, d.discountspec, d.discountvaluepct, 21, d.grossprofitpct
+    from discount d
+    inner join kunde k on k.vertriebszentrumnr=d.branchno and k.idfnr=d.customerno
+    inner join artikelzentral az on az.hersteller_nr=d.manufacturerno
+    inner join artikellokal al on al.filialnr=d.branchno and al.artikel_nr=az.artikel_nr
+    inner join artikelpreis ap on ap.artikel_nr=az.artikel_nr and ((d.discountspec=0 and ap.preis_typ=0) or (d.discountspec=8 and ap.preis_typ=0) or (d.discountspec=9 and ap.preis_typ=1))
+    where 
+      $WHERE_COND_STD
+      $WHERE_COND_CUSTOMER
+      and d.manufacturerno<>0
+      and (d.artcategoryno=0 or d.artcategoryno in (select artcategoryno from articlegroup where articleno= d.articleno))
+      and d.discountgrpno=0;"
+
+  echo "sql_cascade2_1=$sql_cascade2_1" >>${FILELOG}
+
+  # Cascade 2 (EK-Gruppe)
+  sql_cascade2_2="insert into cucosbulgaria_temp (branchno, customerno, articleno, sellingmode, discountpercent, cascade, grossprofitpct)
+    select d.branchno, cphgr.customerno, az.artikel_nr, d.discountspec, d.discountvaluepct, 22, d.grossprofitpct
+    from discount d
+    inner join customerpharmacygr cphgr on cphgr.branchno= d.branchno and cphgr.pharmacygroupid= d.pharmacygroupid
+    inner join kunde k on k.vertriebszentrumnr=cphgr.branchno and k.idfnr=cphgr.customerno
+    inner join artikelzentral az on az.hersteller_nr=d.manufacturerno
+    inner join artikellokal al on al.filialnr=d.branchno and al.artikel_nr=az.artikel_nr
+    inner join artikelpreis ap on ap.artikel_nr=az.artikel_nr and ((d.discountspec=0 and ap.preis_typ=0) or (d.discountspec=8 and ap.preis_typ=0) or (d.discountspec=9 and ap.preis_typ=1))
+    where 
+      $WHERE_COND_STD
+      $WHERE_COND_PHGR
+      and d.manufacturerno<>0
+      and (d.artcategoryno=0 or d.artcategoryno in (select artcategoryno from articlegroup where articleno= d.articleno))
+      and d.discountgrpno=0;"
+
+  echo "sql_cascade2_2=$sql_cascade2_2" >>${FILELOG}
+
+  # Cascade 2 (alle Kunden und EK-Gruppen)
+  sql_cascade2_3="insert into cucosbulgaria_temp (branchno, customerno, articleno, sellingmode, discountpercent, cascade, grossprofitpct)
+    select d.branchno, k.idfnr, az.artikel_nr, d.discountspec, d.discountvaluepct, 23, d.grossprofitpct
+    from discount d
+    inner join artikelzentral az on az.hersteller_nr=d.manufacturerno
+    inner join artikellokal al on al.filialnr=d.branchno and al.artikel_nr=az.artikel_nr
+    inner join artikelpreis ap on ap.artikel_nr=az.artikel_nr and ((d.discountspec=0 and ap.preis_typ=0) or (d.discountspec=8 and ap.preis_typ=0) or (d.discountspec=9 and ap.preis_typ=1))
+    inner join kunde k on k.vertriebszentrumnr=d.branchno and k.idfnr not in 
+      (select customerno from customerpharmacygr where branchno=d.branchno and 
+        (pharmacygroupid=d.pharmgrpexcluded or pharmacygroupid=d.pharmgrpexcl_2 
+        or pharmacygroupid=d.pharmgrpexcl_3))
+    where 
+      $WHERE_COND_STD
+      $WHERE_COND_ALL_CUSTOMERS
+      and d.manufacturerno<>0
+      and (d.artcategoryno=0 or d.artcategoryno in (select artcategoryno from articlegroup where articleno= d.articleno))
+      and d.discountgrpno=0;"
+
+  echo "sql_cascade2_3=$sql_cascade2_3" >>${FILELOG}
+
+  # Cascade 3 (Kunde)
+  sql_cascade3_1="insert into cucosbulgaria_temp (branchno, customerno, articleno, sellingmode, discountpercent, cascade, grossprofitpct)
+    select d.branchno, d.customerno, dgrmem.articleno, d.discountspec, d.discountvaluepct, 31, d.grossprofitpct
+    from discount d
+    inner join kunde k on k.vertriebszentrumnr=d.branchno and k.idfnr=d.customerno
+    inner join discountgrp dgrp on dgrp.branchno=d.branchno and dgrp.discountgrpno=d.discountgrpno
+    inner join discountgrpmem dgrmem on dgrmem.branchno=d.branchno and dgrmem.discountgrpno=d.discountgrpno
+    inner join artikellokal al on al.filialnr=d.branchno and al.artikel_nr=dgrmem.articleno
+    inner join artikelpreis ap on ap.artikel_nr=dgrmem.articleno and ((d.discountspec=0 and ap.preis_typ=0) or (d.discountspec=8 and ap.preis_typ=0) or (d.discountspec=9 and ap.preis_typ=1))
+    where 
+      $WHERE_COND_STD
+      $WHERE_COND_CUSTOMER
+      and (d.artcategoryno=0 or d.artcategoryno in (select artcategoryno from articlegroup where articleno= d.articleno))
+      and d.discountgrpno<>0
+      and dgrp.discountgrptype=1;"
+
+  echo "sql_cascade3_1=$sql_cascade3_1" >>${FILELOG}
+
+  # Cascade 3 (EK-Gruppe)
+  sql_cascade3_2="insert into cucosbulgaria_temp (branchno, customerno, articleno, sellingmode, discountpercent, cascade, grossprofitpct)
+    select d.branchno, cphgr.customerno, dgrmem.articleno, d.discountspec, d.discountvaluepct, 32, d.grossprofitpct
+    from discount d
+    inner join customerpharmacygr cphgr on cphgr.branchno= d.branchno and cphgr.pharmacygroupid= d.pharmacygroupid
+    inner join kunde k on k.vertriebszentrumnr=cphgr.branchno and k.idfnr=cphgr.customerno
+    inner join discountgrp dgrp on dgrp.branchno=d.branchno and dgrp.discountgrpno=d.discountgrpno
+    inner join discountgrpmem dgrmem on dgrmem.branchno=d.branchno and dgrmem.discountgrpno=d.discountgrpno
+    inner join artikellokal al on al.filialnr=d.branchno and al.artikel_nr=dgrmem.articleno
+    inner join artikelpreis ap on ap.artikel_nr=dgrmem.articleno and ((d.discountspec=0 and ap.preis_typ=0) or (d.discountspec=8 and ap.preis_typ=0) or (d.discountspec=9 and ap.preis_typ=1))
+    where 
+      $WHERE_COND_STD
+      $WHERE_COND_PHGR
+      and (d.artcategoryno=0 or d.artcategoryno in (select artcategoryno from articlegroup where articleno= d.articleno))
+      and d.discountgrpno<>0
+      and dgrp.discountgrptype=1;"
+      
+  echo "sql_cascade3_2=$sql_cascade3_2" >>${FILELOG}
+
+  # Cascade 3 (alle Kunden und EK-Gruppen)
+  sql_cascade3_3="insert into cucosbulgaria_temp (branchno, customerno, articleno, sellingmode, discountpercent, cascade, grossprofitpct)
+    select d.branchno, k.idfnr, dgrmem.articleno, d.discountspec, d.discountvaluepct, 33, d.grossprofitpct
+    from discount d
+    inner join discountgrp dgrp on dgrp.branchno=d.branchno and dgrp.discountgrpno=d.discountgrpno
+    inner join discountgrpmem dgrmem on dgrmem.branchno=d.branchno and dgrmem.discountgrpno=d.discountgrpno
+    inner join artikellokal al on al.filialnr=d.branchno and al.artikel_nr=dgrmem.articleno
+    inner join artikelpreis ap on ap.artikel_nr=dgrmem.articleno and ((d.discountspec=0 and ap.preis_typ=0) or (d.discountspec=8 and ap.preis_typ=0) or (d.discountspec=9 and ap.preis_typ=1))
+    inner join kunde k on k.vertriebszentrumnr=d.branchno and k.idfnr not in 
+      (select customerno from customerpharmacygr where branchno=d.branchno and 
+        (pharmacygroupid=d.pharmgrpexcluded or pharmacygroupid=d.pharmgrpexcl_2 
+        or pharmacygroupid=d.pharmgrpexcl_3))
+    where 
+      $WHERE_COND_STD
+      $WHERE_COND_ALL_CUSTOMERS
+      and (d.artcategoryno=0 or d.artcategoryno in (select artcategoryno from articlegroup where articleno= d.articleno))
+      and d.discountgrpno<>0
+      and dgrp.discountgrptype=1;"
+
+  echo "sql_cascade3_3)=$sql_cascade3_3" >>${FILELOG}
+
+  # Cascade 4 (Kunde)
+  sql_cascade4_1="insert into cucosbulgaria_temp (branchno, customerno, articleno, sellingmode, discountpercent, cascade, grossprofitpct)
+    select d.branchno, d.customerno, agrp.articleno, d.discountspec, d.discountvaluepct, 41, d.grossprofitpct
+    from discount d
+    inner join kunde k on k.vertriebszentrumnr=d.branchno and k.idfnr=d.customerno
+    inner join articlegroup agrp on agrp.artcategoryno=d.artcategoryno
+    inner join artikellokal al on al.filialnr=d.branchno and al.artikel_nr=agrp.articleno
+    inner join artikelpreis ap on ap.artikel_nr=agrp.articleno and ((d.discountspec=0 and ap.preis_typ=0) or (d.discountspec=8 and ap.preis_typ=0) or (d.discountspec=9 and ap.preis_typ=1))
+    where 
+      $WHERE_COND_STD
+      $WHERE_COND_CUSTOMER
+      and d.discountgrpno=0
+      and d.artcategoryno<>0;"
+
+  echo "sql_cascade4_1=$sql_cascade4_1" >>${FILELOG}
+
+  # Cascade 4 (EK-Gruppe)
+  sql_cascade4_2="insert into cucosbulgaria_temp (branchno, customerno, articleno, sellingmode, discountpercent, cascade, grossprofitpct)
+    select d.branchno, cphgr.customerno, agrp.articleno, d.discountspec, d.discountvaluepct, 42, d.grossprofitpct
+    from discount d
+    inner join customerpharmacygr cphgr on cphgr.branchno= d.branchno and cphgr.pharmacygroupid= d.pharmacygroupid
+    inner join kunde k on k.vertriebszentrumnr=cphgr.branchno and k.idfnr=cphgr.customerno
+    inner join articlegroup agrp on agrp.artcategoryno=d.artcategoryno
+    inner join artikellokal al on al.filialnr=d.branchno and al.artikel_nr=agrp.articleno
+    inner join artikelpreis ap on ap.artikel_nr=agrp.articleno and ((d.discountspec=0 and ap.preis_typ=0) or (d.discountspec=8 and ap.preis_typ=0) or (d.discountspec=9 and ap.preis_typ=1))
+    where 
+      $WHERE_COND_STD
+      $WHERE_COND_PHGR
+      and d.discountgrpno=0
+      and d.artcategoryno<>0;"
+      
+  echo "sql_cascade4_2=$sql_cascade4_2" >>${FILELOG}
+
+  # Cascade 4 (alle Kunden und EK-Gruppen)
+  sql_cascade4_3="insert into cucosbulgaria_temp (branchno, customerno, articleno, sellingmode, discountpercent, cascade, grossprofitpct)
+    select d.branchno, k.idfnr, agrp.articleno, d.discountspec, d.discountvaluepct, 43, d.grossprofitpct
+    from discount d
+    inner join articlegroup agrp on agrp.artcategoryno=d.artcategoryno
+    inner join artikellokal al on al.filialnr=d.branchno and al.artikel_nr=agrp.articleno
+    inner join artikelpreis ap on ap.artikel_nr=agrp.articleno and ((d.discountspec=0 and ap.preis_typ=0) or (d.discountspec=8 and ap.preis_typ=0) or (d.discountspec=9 and ap.preis_typ=1))
+    inner join kunde k on k.vertriebszentrumnr=d.branchno and k.idfnr not in 
+      (select customerno from customerpharmacygr where branchno=d.branchno and 
+        (pharmacygroupid=d.pharmgrpexcluded or pharmacygroupid=d.pharmgrpexcl_2 
+        or pharmacygroupid=d.pharmgrpexcl_3))
+    where 
+      $WHERE_COND_STD
+      $WHERE_COND_ALL_CUSTOMERS
+      and d.discountgrpno=0
+      and d.artcategoryno<>0;"
+      
+  echo "sql_cascade4_3=$sql_cascade4_3" >>${FILELOG}
+
+  # Cascade 5 (Kunde)
+  sql_cascade5_1="insert into cucosbulgaria_temp (branchno, customerno, articleno, sellingmode, discountpercent, cascade, grossprofitpct)
+    select d.branchno, d.customerno, d.articleno, d.discountspec, d.discountvaluepct, 50, d.grossprofitpct
+    from discount d
+    inner join kunde k on k.vertriebszentrumnr=d.branchno and k.idfnr=d.customerno
+    where 
+      $WHERE_COND_STD
+      $WHERE_COND_CUSTOMER
+      and d.articleno= 0
+      and d.manufacturerno=0
+      and d.discountgrpno=0
+      and d.artcategoryno=0;"
+      
+  echo "sql_cascade5_1=$sql_cascade5_1" >>${FILELOG}
+
+  # Cascade 6 (EK-Gruppe)
+  sql_cascade6_1="insert into cucosbulgaria_temp (branchno, customerno, articleno, sellingmode, discountpercent, cascade, grossprofitpct)
+    select d.branchno, cphgr.customerno, d.articleno, d.discountspec, d.discountvaluepct, 60, d.grossprofitpct
+    from discount d
+    inner join customerpharmacygr cphgr on cphgr.branchno= d.branchno and cphgr.pharmacygroupid= d.pharmacygroupid
+    inner join kunde k on k.vertriebszentrumnr=cphgr.branchno and k.idfnr=cphgr.customerno
+    where 
+      $WHERE_COND_STD
+      $WHERE_COND_PHGR
+      and d.articleno= 0
+      and d.manufacturerno=0
+      and d.discountgrpno=0
+      and d.artcategoryno=0;"
+      
+  echo "sql_cascade6_1=$sql_cascade6_1" >>${FILELOG}
+
+dbaccess ${KSCDB} >>${FILELOG} 2>&1 <<DBACCESS_BLOCK
+
+-- Cascade 1
+$sql_cascade1_1
+$sql_cascade1_2
+$sql_cascade1_3
+
+-- Cascade 2
+$sql_cascade2_1
+$sql_cascade2_2
+$sql_cascade2_3
+
+-- Cascade 3
+$sql_cascade3_1
+$sql_cascade3_2
+$sql_cascade3_3
+
+-- Cascade 4
+$sql_cascade4_1
+$sql_cascade4_2
+$sql_cascade4_3
+
+-- Cascade 5
+$sql_cascade5_1
+
+-- Cascade 6
+$sql_cascade6_1
+
+DBACCESS_BLOCK
+
+} # f_getDiscountsByCascade
+
+################################ f_expand_sellingmode0_and_removeDuplicates ###################################
+#
+# Filter nach Datensaetzen, die 1 mal, 2 mal, ... in cucosbulgaria_temp vorkommen:
+#
+function f_expand_sellingmode0_and_removeDuplicates {
+  echo "`date +'[%H:%M:%S]'` *** f_expand_sellingmode0_and_removeDuplicates - 1" >>${FILELOG}
+
+  ATTRIBUTES="c1.branchno, c1.customerno, c1.articleno, c1.sellingmode, c1.discountpercent, c1.cascade, c1.grossprofitpct,-1"
+
+  echo "Indices in cucosbulgaria ausschalten:" >>${FILELOG}
+  sql_statement1="SET INDEXES FOR cucosbulgaria DISABLED;"
+  echo "sql_statement1=$sql_statement1" >>${FILELOG}
+
+  echo "0er Saetze als 9er Saetze einfuegen (duplizieren):" >>${FILELOG}
+  sql_statement2="insert into cucosbulgaria_temp 
+    select branchno, customerno, articleno, 9 as sellingmode, discountpercent, cascade, grossprofitpct 
+      from cucosbulgaria_temp where branchno=$BRANCHNO and sellingmode=0;"
+  echo "sql_statement2=$sql_statement2" >>${FILELOG}
+
+  echo "0er Saetze nach Duplizieren in 8er Saetze aendern:" >>${FILELOG}
+  sql_statement3="update cucosbulgaria_temp set sellingmode=8 where branchno=$BRANCHNO and sellingmode=0;"
+  echo "sql_statement3=$sql_statement3" >>${FILELOG}
+
+  echo "Ein- und mehrdeutige DS (branchno + customerno + articleno + sellingmode) in cucosbulgaria uebernehmen:" >>${FILELOG}
+  sql_statement5="insert into cucosbulgaria select $ATTRIBUTES
+    from (
+      select c1.branchno, c1.customerno, c1.articleno, c1.sellingmode, min(c1.cascade) as cascade
+        from cucosbulgaria_temp c1
+        inner join cucosbulgaria_temp c3 
+          on c1.branchno=c3.branchno and c1.customerno=c3.customerno and c1.articleno=c3.articleno and c1.sellingmode=c3.sellingmode
+        group by c1.branchno, c1.customerno, c1.articleno, c1.sellingmode
+    ) as master
+    left outer join cucosbulgaria_temp c1
+      on master.branchno=c1.branchno and master.customerno=c1.customerno and master.articleno=c1.articleno and master.sellingmode=c1.sellingmode and master.cascade=c1.cascade;"
+  echo "sql_statement5=$sql_statement5" >>${FILELOG}
+
+  echo "Indices in cucosbulgaria wieder einschalten:" >>${FILELOG}
+  sql_statement6="SET INDEXES FOR cucosbulgaria ENABLED;"
+  echo "sql_statement6=$sql_statement6" >>${FILELOG}
+
+dbaccess ${KSCDB} 1>/dev/null 2>>$FILELOG <<DBACCESS_BLOCK
+$sql_statement1
+$sql_statement2
+$sql_statement3
+$sql_statement5
+$sql_statement6
+DBACCESS_BLOCK
+
+  echo "`date +'[%H:%M:%S]'` *** f_expand_sellingmode0_and_removeDuplicates - 2" >>${FILELOG}
+
+  # Loesche alle Rabatte, die fuer einen speziellen Kd. gelten, fuer die es aber hoeher priore Rabatte fuer alle Kd. gibt:
+  sql_statement7="select c1.branchno, c1.customerno, c1.articleno, c1.sellingmode, c1.cascade 
+    from cucosbulgaria c1 
+    inner join cucosbulgaria c2 on c2.branchno=c1.branchno and c2.articleno=c1.articleno 
+      and c2.sellingmode=c1.sellingmode and c2.cascade<c1.cascade
+    where c1.branchno=$BRANCHNO and c1.customerno!=0 and c2.customerno=0
+    into temp $TEMPTABLE1;"
+  echo "sql_statement7=$sql_statement7" >>${FILELOG}
+
+  sql_statement8="CREATE INDEX i_temp_cucos1_1 ON $TEMPTABLE1 (branchno, articleno, sellingmode, cascade);"
+  echo "sql_statement8=$sql_statement8" >>${FILELOG}
+
+  sql_statement9="delete from cucosbulgaria where exists 
+    (select * from $TEMPTABLE1 where cucosbulgaria.branchno=$TEMPTABLE1.branchno 
+      and cucosbulgaria.articleno=$TEMPTABLE1.articleno 
+      and cucosbulgaria.sellingmode=$TEMPTABLE1.sellingmode 
+      and cucosbulgaria.cascade=$TEMPTABLE1.cascade);"
+  echo "sql_statement9=$sql_statement9" >>${FILELOG}
+
+  sql_statement10="drop table $TEMPTABLE1;"
+  echo "sql_statement10=$sql_statement10" >>${FILELOG}
+
+dbaccess ${KSCDB} 1>/dev/null 2>>$FILELOG <<DBACCESS_BLOCK
+$sql_statement7
+$sql_statement8
+$sql_statement9
+$sql_statement10
+DBACCESS_BLOCK
+
+} # f_expand_sellingmode0_and_removeDuplicates 
+
+######################################## main ############################################
+#
+##########################################################################################
+
+  f_prepararing
+
+# Aufruf nur fuer Branch 23:
+BRANCHNO=23
+f_lock_cucosbulgaria_for_salesweb
+echo "`date +'[%H:%M:%S]'` start processing branchno ${BRANCHNO}" 2>&1 | tee -a ${FILELOG}
+f_getDiscountsByCascade
+f_expand_sellingmode0_and_removeDuplicates
+
+BRANCHNO=25
+echo "`date +'[%H:%M:%S]'` start processing branchno ${BRANCHNO}" 2>&1 | tee -a ${FILELOG}
+f_getDiscountsByCascade
+f_expand_sellingmode0_and_removeDuplicates
+
+exit 0
+
+  while read BRANCHNO
+  do
+  {
+    f_lock_cucosbulgaria_for_salesweb
+    echo "`date +'[%H:%M:%S]'` start processing branchno ${BRANCHNO}"  2>&1 | tee -a ${FILELOG}
+    f_getDiscountsByCascade
+    f_expand_sellingmode0_and_removeDuplicates
+  } done <${FILEBRANCHES}; # while read BRANCHNO
+
+  exit 0
+

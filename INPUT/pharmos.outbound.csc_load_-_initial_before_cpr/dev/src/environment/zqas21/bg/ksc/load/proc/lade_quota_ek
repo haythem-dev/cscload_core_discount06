@@ -1,0 +1,8 @@
+. /software/etc/profile_prz
+
+dbaccess obg21 -<<%
+begin work;
+load from /transfer/ksc/data/kontingente/kontingente.txt delimiter ';' insert into articlequotatemp;
+commit work;
+%
+

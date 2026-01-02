@@ -1,0 +1,71 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "kscclient", "kscclient.vcxproj", "{050F0FBD-B0D4-419A-AE02-6EC0238D6F8A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A761777C-5031-4B9D-869F-E14C538E2E6F}"
+	ProjectSection(SolutionItems) = preProject
+		build.xml = build.xml
+		proc\export.bat = proc\export.bat
+		proc\export.sh = proc\export.sh
+		proc\installdev.sh = proc\installdev.sh
+		ivy.xml = ivy.xml
+		makefile = makefile
+		makevars.inc = makevars.inc
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "test", "test\test.vcxproj", "{8FDFFA06-8400-4007-9F43-2B7C839B2E5D}"
+	ProjectSection(ProjectDependencies) = postProject
+		{050F0FBD-B0D4-419A-AE02-6EC0238D6F8A} = {050F0FBD-B0D4-419A-AE02-6EC0238D6F8A}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug SWIMP|Win32 = Debug SWIMP|Win32
+		Debug SWIMP|x64 = Debug SWIMP|x64
+		Debug|Win32 = Debug|Win32
+		Debug|x64 = Debug|x64
+		Release SWIMP|Win32 = Release SWIMP|Win32
+		Release SWIMP|x64 = Release SWIMP|x64
+		Release|Win32 = Release|Win32
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{050F0FBD-B0D4-419A-AE02-6EC0238D6F8A}.Debug SWIMP|Win32.ActiveCfg = Debug SWIMP|Win32
+		{050F0FBD-B0D4-419A-AE02-6EC0238D6F8A}.Debug SWIMP|Win32.Build.0 = Debug SWIMP|Win32
+		{050F0FBD-B0D4-419A-AE02-6EC0238D6F8A}.Debug SWIMP|x64.ActiveCfg = Debug SWIMP|x64
+		{050F0FBD-B0D4-419A-AE02-6EC0238D6F8A}.Debug SWIMP|x64.Build.0 = Debug SWIMP|x64
+		{050F0FBD-B0D4-419A-AE02-6EC0238D6F8A}.Debug|Win32.ActiveCfg = Debug|Win32
+		{050F0FBD-B0D4-419A-AE02-6EC0238D6F8A}.Debug|Win32.Build.0 = Debug|Win32
+		{050F0FBD-B0D4-419A-AE02-6EC0238D6F8A}.Debug|x64.ActiveCfg = Debug|x64
+		{050F0FBD-B0D4-419A-AE02-6EC0238D6F8A}.Debug|x64.Build.0 = Debug|x64
+		{050F0FBD-B0D4-419A-AE02-6EC0238D6F8A}.Release SWIMP|Win32.ActiveCfg = Release SWIMP|Win32
+		{050F0FBD-B0D4-419A-AE02-6EC0238D6F8A}.Release SWIMP|Win32.Build.0 = Release SWIMP|Win32
+		{050F0FBD-B0D4-419A-AE02-6EC0238D6F8A}.Release SWIMP|x64.ActiveCfg = Release SWIMP|x64
+		{050F0FBD-B0D4-419A-AE02-6EC0238D6F8A}.Release SWIMP|x64.Build.0 = Release SWIMP|x64
+		{050F0FBD-B0D4-419A-AE02-6EC0238D6F8A}.Release|Win32.ActiveCfg = Release|Win32
+		{050F0FBD-B0D4-419A-AE02-6EC0238D6F8A}.Release|Win32.Build.0 = Release|Win32
+		{050F0FBD-B0D4-419A-AE02-6EC0238D6F8A}.Release|x64.ActiveCfg = Release|x64
+		{050F0FBD-B0D4-419A-AE02-6EC0238D6F8A}.Release|x64.Build.0 = Release|x64
+		{8FDFFA06-8400-4007-9F43-2B7C839B2E5D}.Debug SWIMP|Win32.ActiveCfg = Debug|Win32
+		{8FDFFA06-8400-4007-9F43-2B7C839B2E5D}.Debug SWIMP|Win32.Build.0 = Debug|Win32
+		{8FDFFA06-8400-4007-9F43-2B7C839B2E5D}.Debug SWIMP|x64.ActiveCfg = Debug|x64
+		{8FDFFA06-8400-4007-9F43-2B7C839B2E5D}.Debug SWIMP|x64.Build.0 = Debug|x64
+		{8FDFFA06-8400-4007-9F43-2B7C839B2E5D}.Debug|Win32.ActiveCfg = Debug|Win32
+		{8FDFFA06-8400-4007-9F43-2B7C839B2E5D}.Debug|Win32.Build.0 = Debug|Win32
+		{8FDFFA06-8400-4007-9F43-2B7C839B2E5D}.Debug|x64.ActiveCfg = Debug|x64
+		{8FDFFA06-8400-4007-9F43-2B7C839B2E5D}.Debug|x64.Build.0 = Debug|x64
+		{8FDFFA06-8400-4007-9F43-2B7C839B2E5D}.Release SWIMP|Win32.ActiveCfg = Release|Win32
+		{8FDFFA06-8400-4007-9F43-2B7C839B2E5D}.Release SWIMP|Win32.Build.0 = Release|Win32
+		{8FDFFA06-8400-4007-9F43-2B7C839B2E5D}.Release SWIMP|x64.ActiveCfg = Release|x64
+		{8FDFFA06-8400-4007-9F43-2B7C839B2E5D}.Release SWIMP|x64.Build.0 = Release|x64
+		{8FDFFA06-8400-4007-9F43-2B7C839B2E5D}.Release|Win32.ActiveCfg = Release|Win32
+		{8FDFFA06-8400-4007-9F43-2B7C839B2E5D}.Release|Win32.Build.0 = Release|Win32
+		{8FDFFA06-8400-4007-9F43-2B7C839B2E5D}.Release|x64.ActiveCfg = Release|x64
+		{8FDFFA06-8400-4007-9F43-2B7C839B2E5D}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

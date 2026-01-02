@@ -1,0 +1,605 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="UseCases">
+      <UniqueIdentifier>{3a4446de-4d23-47ab-8e3d-b9c7abfb932a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="main">
+      <UniqueIdentifier>{91b0d457-e73d-42ea-9a88-99a60f8e80a4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="main\AppSession">
+      <UniqueIdentifier>{872bc84d-c7c8-4672-bd02-a7b7f2bcf598}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="main\CommandLine">
+      <UniqueIdentifier>{081f412d-a6c4-4817-be78-ff7db7ba15b5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="main\HeartBeat">
+      <UniqueIdentifier>{f5290ea8-102d-4b2a-bba9-5ca54b1c90c5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules">
+      <UniqueIdentifier>{390e4512-8f62-4729-a12d-7e85be1df470}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\common">
+      <UniqueIdentifier>{ca64b04e-49fd-45a3-ad94-6e6ae94ec60b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\BatchOrder">
+      <UniqueIdentifier>{98ecfa0b-5efe-47d9-af38-5d39a61965c9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\BatchOrder\PREPARATION">
+      <UniqueIdentifier>{666ef94b-78ba-404b-a8df-a172aaf5195e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\BatchOrder\PREPARATION\PDX050RemoteProcedure">
+      <UniqueIdentifier>{453f1b5f-c541-4a47-8248-65c913fbc3bf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\BatchOrder\PREPARATION\CICSBatchOrderHeadDM">
+      <UniqueIdentifier>{0110d62b-f30d-47c4-874f-ef6baf614ed6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\BatchOrder\PREPARATION\CICSBatchOrderHeadDM\Accessor">
+      <UniqueIdentifier>{1d4e750d-97b6-4ec2-8669-b6e0fba8c5e6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\BatchOrder\PREPARATION\CICSBatchOrderPosDM">
+      <UniqueIdentifier>{c8f7afe1-d2cd-46c6-9236-b6e060f56509}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\BatchOrder\PREPARATION\CICSBatchOrderPosDM\Accessor">
+      <UniqueIdentifier>{7828e72c-e0a6-4eca-841a-d1229349fe36}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\BatchOrder\PREPARATION\CICSBatchOrderDM">
+      <UniqueIdentifier>{12452968-30d1-4713-be9a-fe01e1c25e65}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\BatchOrder\CORE">
+      <UniqueIdentifier>{1b24d80e-ca9a-4cbd-8d53-6e0f524d4dbe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\BatchOrder\CORE\SearchDMBase">
+      <UniqueIdentifier>{053e9e39-45cf-44be-af64-0a5e3a1a2646}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\BatchOrder\CORE\BatchOrderDMBase">
+      <UniqueIdentifier>{520a0afa-76be-4184-9612-eddb6222eed6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\BatchOrder\CORE\BatchOrderCollection">
+      <UniqueIdentifier>{f3cd33db-703e-47bc-9bfc-94bb167ab25a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\BatchOrder\CORE\BatchOrder">
+      <UniqueIdentifier>{7d06da97-f384-4729-b975-03008c2ee041}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\BatchOrder\CORE\BatchOrderTransformer">
+      <UniqueIdentifier>{662f5864-46d0-4452-8c23-980b1abda9f9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\BatchOrder\PROCESSING">
+      <UniqueIdentifier>{b5c6df36-9918-4686-aabf-6731c92f766b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\BatchOrder\PROCESSING\BatchOrder">
+      <UniqueIdentifier>{db0fa0bc-7613-40c0-9dd5-116037169573}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\BatchOrder\PROCESSING\BatchOrder\BatchOrderHeadDM">
+      <UniqueIdentifier>{d3ac229b-7de7-423c-af82-74b1d0de63ad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\BatchOrder\PROCESSING\BatchOrder\BatchOrderHeadDM\Accessor">
+      <UniqueIdentifier>{3f668979-2729-4169-9484-2d91f3ee8204}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\BatchOrder\PROCESSING\BatchOrder\BatchOrderDM">
+      <UniqueIdentifier>{f57332e4-8689-437b-8870-1156ebf2e00b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\BatchOrder\PROCESSING\BatchOrder\BatchOrderPosDM">
+      <UniqueIdentifier>{4b8de25a-0746-4293-bce4-8dd90e91be86}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\BatchOrder\PROCESSING\BatchOrder\BatchOrderPosDM\Accessor">
+      <UniqueIdentifier>{edfd0275-5272-498e-a4be-42204294c1be}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\BatchOrder\PROCESSING\CSCOrder">
+      <UniqueIdentifier>{b3d4dfad-f92d-4703-b31f-b3ed3ba31195}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\BatchOrder\PROCESSING\CSCOrder\CSCBatchOrderDM">
+      <UniqueIdentifier>{b1ab8589-09ec-41a2-8900-662ce179d889}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\BatchOrder\PROCESSING\CSCOrder\CSCBatchOrderHeadDM">
+      <UniqueIdentifier>{7d07107e-dee6-49b2-bfe3-e8621aa57c23}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\BatchOrder\PROCESSING\CSCOrder\CSCBatchOrderPosDM">
+      <UniqueIdentifier>{86f6096d-e8d3-48dd-af33-e52890e33af9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\BatchOrder\UTIL">
+      <UniqueIdentifier>{91e2e1cb-04a4-4e26-a5e7-b1535c272bff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\BatchOrder\UTIL\ITransferKeyGetter">
+      <UniqueIdentifier>{71e5286b-4825-4700-8e47-9c974b3b7753}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\BatchOrder\UTIL\IBatchOrderGetter">
+      <UniqueIdentifier>{f95c0b21-7aeb-49c3-8a1c-f1f452e8cdf6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\BatchOrder\UTIL\IBatchOrderStatusUpdater">
+      <UniqueIdentifier>{c40fb1f3-2958-497a-b8ac-ad3a2b489148}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\BatchOrder\PXVERBUND">
+      <UniqueIdentifier>{84532c06-93aa-439d-8bfd-c0d0239f21cc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\BatchOrder\PXVERBUND\OrderEntryParamChecker">
+      <UniqueIdentifier>{cc379ed1-4315-4485-923a-772c80329c45}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\BatchOrder\PXVERBUND\OrderEntryParamChecker\PXVBOrderEntryParamChecker">
+      <UniqueIdentifier>{3af55770-1bee-4d29-a40a-79ada474f2b0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\BatchOrder\PXVERBUND\OrderEntryParamChecker\NullPXVBOrderEntryParamChecker">
+      <UniqueIdentifier>{d0e462d0-0287-49be-81b4-b0590ac01200}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\BatchOrder\PXVERBUND\Initialization">
+      <UniqueIdentifier>{d253dfb3-9bac-4735-b066-e9e826031023}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\BatchOrder\PXVERBUND\Initialization\PXVBInitialization">
+      <UniqueIdentifier>{8a9700bd-d885-4a82-9cde-56ca9b944428}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\BatchOrder\PXVERBUND\Initialization\NullPXVBInitialization">
+      <UniqueIdentifier>{83888299-b3d9-4ef1-a5af-041a7e39e435}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\BatchOrder\PXVERBUND\Session">
+      <UniqueIdentifier>{aaf02815-ea6e-4482-99c4-62efafd7a4a3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\BatchOrder\PXVERBUND\Session\PXVBSession">
+      <UniqueIdentifier>{2ca1bac3-d7be-4eec-aae4-d3b7dcda4303}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\BatchOrder\PXVERBUND\Session\NullPXVBSession">
+      <UniqueIdentifier>{8833d03e-9eba-4d66-b470-4ab0943db4bb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\BatchOrder\PXVERBUND\ComponentManager">
+      <UniqueIdentifier>{5d20bf7e-22b3-4187-a1b7-1c73715d3c2e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\BatchOrder\PXVERBUND\ComponentManager\PXVBComponentManager">
+      <UniqueIdentifier>{09e0d849-00d9-4a2e-ade4-73a13a41a281}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\BatchOrder\PXVERBUND\ComponentManager\PXVBComponentManager\shared_ptr">
+      <UniqueIdentifier>{7e267747-e113-45ba-ae74-eeb9b85c0288}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\BatchOrder\PXVERBUND\ComponentManager\NullPXVBComponentManager">
+      <UniqueIdentifier>{455c68a7-8ca3-439f-9c04-e160c94a8fe0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\BatchOrder\PXVERBUND\IPXVBServiceLocator">
+      <UniqueIdentifier>{3d9ef423-41ff-44c0-a64a-2271b684e718}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\BatchOrder\PXVERBUND\OrderTransmit">
+      <UniqueIdentifier>{e6a87178-3fd4-48f3-ac04-368ecf78815a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\BatchOrder\PXVERBUND\OrderTransmit\PXVBOrderTransmit">
+      <UniqueIdentifier>{983bcdd4-b2ba-47cc-8a0d-810fcbf26ecf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\BatchOrder\PXVERBUND\OrderTransmit\NullPXVBOrderTransmit">
+      <UniqueIdentifier>{3cb14f50-12d2-42a8-8d93-6ac19f2002ef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModules\InitParamsDM">
+      <UniqueIdentifier>{679ad552-3c9c-466b-9068-093353e4c51a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Exceptions">
+      <UniqueIdentifier>{10231cbc-fca7-4cfd-9494-8016241e13a0}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="csc_phaboruc.cpp">
+      <Filter>UseCases</Filter>
+    </ClCompile>
+    <ClCompile Include="csc_phaborappl.cpp">
+      <Filter>main</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>main</Filter>
+    </ClCompile>
+    <ClCompile Include="appsession.cpp">
+      <Filter>main\AppSession</Filter>
+    </ClCompile>
+    <ClCompile Include="csc_phaborappinitializer.cpp">
+      <Filter>main\CommandLine</Filter>
+    </ClCompile>
+    <ClCompile Include="csc_phaborcmdlineevaluator.cpp">
+      <Filter>main\CommandLine</Filter>
+    </ClCompile>
+    <ClCompile Include="csc_heartbeat.cpp">
+      <Filter>main\HeartBeat</Filter>
+    </ClCompile>
+    <ClCompile Include="cmndm.cpp">
+      <Filter>DomainModules\common</Filter>
+    </ClCompile>
+    <ClCompile Include="pdx050remoteprocedure.cpp">
+      <Filter>DomainModules\BatchOrder\PREPARATION\PDX050RemoteProcedure</Filter>
+    </ClCompile>
+    <ClCompile Include="cicsbatchorderheaddm.cpp">
+      <Filter>DomainModules\BatchOrder\PREPARATION\CICSBatchOrderHeadDM</Filter>
+    </ClCompile>
+    <ClCompile Include="dkbazkacc.cpp">
+      <Filter>DomainModules\BatchOrder\PREPARATION\CICSBatchOrderHeadDM\Accessor</Filter>
+    </ClCompile>
+    <ClCompile Include="cicsbatchorderposdm.cpp">
+      <Filter>DomainModules\BatchOrder\PREPARATION\CICSBatchOrderPosDM</Filter>
+    </ClCompile>
+    <ClCompile Include="dkbazpacc.cpp">
+      <Filter>DomainModules\BatchOrder\PREPARATION\CICSBatchOrderPosDM\Accessor</Filter>
+    </ClCompile>
+    <ClCompile Include="cicsbatchorderdm.cpp">
+      <Filter>DomainModules\BatchOrder\PREPARATION\CICSBatchOrderDM</Filter>
+    </ClCompile>
+    <ClCompile Include="searchdmbase.cpp">
+      <Filter>DomainModules\BatchOrder\CORE\SearchDMBase</Filter>
+    </ClCompile>
+    <ClCompile Include="batchorderdmbase.cpp">
+      <Filter>DomainModules\BatchOrder\CORE\BatchOrderDMBase</Filter>
+    </ClCompile>
+    <ClCompile Include="batchordercollection.cpp">
+      <Filter>DomainModules\BatchOrder\CORE\BatchOrderCollection</Filter>
+    </ClCompile>
+    <ClCompile Include="batchorder.cpp">
+      <Filter>DomainModules\BatchOrder\CORE\BatchOrder</Filter>
+    </ClCompile>
+    <ClCompile Include="batchordertransformer.cpp">
+      <Filter>DomainModules\BatchOrder\CORE\BatchOrderTransformer</Filter>
+    </ClCompile>
+    <ClCompile Include="batchorderheaddm.cpp">
+      <Filter>DomainModules\BatchOrder\PROCESSING\BatchOrder\BatchOrderHeadDM</Filter>
+    </ClCompile>
+    <ClCompile Include="pharmosbatchorderheadacc.cpp">
+      <Filter>DomainModules\BatchOrder\PROCESSING\BatchOrder\BatchOrderHeadDM\Accessor</Filter>
+    </ClCompile>
+    <ClCompile Include="batchorderdm.cpp">
+      <Filter>DomainModules\BatchOrder\PROCESSING\BatchOrder\BatchOrderDM</Filter>
+    </ClCompile>
+    <ClCompile Include="batchorderposdm.cpp">
+      <Filter>DomainModules\BatchOrder\PROCESSING\BatchOrder\BatchOrderPosDM</Filter>
+    </ClCompile>
+    <ClCompile Include="pharmosbatchorderposacc.cpp">
+      <Filter>DomainModules\BatchOrder\PROCESSING\BatchOrder\BatchOrderPosDM\Accessor</Filter>
+    </ClCompile>
+    <ClCompile Include="cscbatchorderdm.cpp">
+      <Filter>DomainModules\BatchOrder\PROCESSING\CSCOrder\CSCBatchOrderDM</Filter>
+    </ClCompile>
+    <ClCompile Include="cscbatchorderheaddm.cpp">
+      <Filter>DomainModules\BatchOrder\PROCESSING\CSCOrder\CSCBatchOrderHeadDM</Filter>
+    </ClCompile>
+    <ClCompile Include="cscbatchorderposdm.cpp">
+      <Filter>DomainModules\BatchOrder\PROCESSING\CSCOrder\CSCBatchOrderPosDM</Filter>
+    </ClCompile>
+    <ClCompile Include="pxvborderentryparamchecker.cpp">
+      <Filter>DomainModules\BatchOrder\PXVERBUND\OrderEntryParamChecker\PXVBOrderEntryParamChecker</Filter>
+    </ClCompile>
+    <ClCompile Include="nullpxvborderentryparamchecker.cpp">
+      <Filter>DomainModules\BatchOrder\PXVERBUND\OrderEntryParamChecker\NullPXVBOrderEntryParamChecker</Filter>
+    </ClCompile>
+    <ClCompile Include="pxvbinitialization.cpp">
+      <Filter>DomainModules\BatchOrder\PXVERBUND\Initialization\PXVBInitialization</Filter>
+    </ClCompile>
+    <ClCompile Include="nullpxvbinitialization.cpp">
+      <Filter>DomainModules\BatchOrder\PXVERBUND\Initialization\NullPXVBInitialization</Filter>
+    </ClCompile>
+    <ClCompile Include="pxvbsession.cpp">
+      <Filter>DomainModules\BatchOrder\PXVERBUND\Session\PXVBSession</Filter>
+    </ClCompile>
+    <ClCompile Include="nullpxvbsession.cpp">
+      <Filter>DomainModules\BatchOrder\PXVERBUND\Session\NullPXVBSession</Filter>
+    </ClCompile>
+    <ClCompile Include="pxvbcomponentmanager.cpp">
+      <Filter>DomainModules\BatchOrder\PXVERBUND\ComponentManager\PXVBComponentManager</Filter>
+    </ClCompile>
+    <ClCompile Include="nullpxvbcomponentmanager.cpp">
+      <Filter>DomainModules\BatchOrder\PXVERBUND\ComponentManager\NullPXVBComponentManager</Filter>
+    </ClCompile>
+    <ClCompile Include="pxvbordertransmit.cpp">
+      <Filter>DomainModules\BatchOrder\PXVERBUND\OrderTransmit\PXVBOrderTransmit</Filter>
+    </ClCompile>
+    <ClCompile Include="nullpxvbordertransmit.cpp">
+      <Filter>DomainModules\BatchOrder\PXVERBUND\OrderTransmit\NullPXVBOrderTransmit</Filter>
+    </ClCompile>
+    <ClCompile Include="version.c">
+      <Filter>main</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="csc_phaboruc.h">
+      <Filter>UseCases</Filter>
+    </ClInclude>
+    <ClInclude Include="columnname_definitions.h">
+      <Filter>main</Filter>
+    </ClInclude>
+    <ClInclude Include="csc_phabor_definitions.h">
+      <Filter>main</Filter>
+    </ClInclude>
+    <ClInclude Include="csc_phaborappl.h">
+      <Filter>main</Filter>
+    </ClInclude>
+    <ClInclude Include="property_definitions.h">
+      <Filter>main</Filter>
+    </ClInclude>
+    <ClInclude Include="appsession.h">
+      <Filter>main\AppSession</Filter>
+    </ClInclude>
+    <ClInclude Include="appsessionptr.h">
+      <Filter>main\AppSession</Filter>
+    </ClInclude>
+    <ClInclude Include="appargs.h">
+      <Filter>main\CommandLine</Filter>
+    </ClInclude>
+    <ClInclude Include="csc_phaborappinitializer.h">
+      <Filter>main\CommandLine</Filter>
+    </ClInclude>
+    <ClInclude Include="csc_phaborappinitializerptr.h">
+      <Filter>main\CommandLine</Filter>
+    </ClInclude>
+    <ClInclude Include="csc_phaborcmdlineevaluator.h">
+      <Filter>main\CommandLine</Filter>
+    </ClInclude>
+    <ClInclude Include="csc_phaborcmdlineevaluatorptr.h">
+      <Filter>main\CommandLine</Filter>
+    </ClInclude>
+    <ClInclude Include="csc_phaborcmdlineoption_definitions.h">
+      <Filter>main\CommandLine</Filter>
+    </ClInclude>
+    <ClInclude Include="csc_heartbeat.h">
+      <Filter>main\HeartBeat</Filter>
+    </ClInclude>
+    <ClInclude Include="icsc_heartbeat.h">
+      <Filter>main\HeartBeat</Filter>
+    </ClInclude>
+    <ClInclude Include="icsc_heartbeatptr.h">
+      <Filter>main\HeartBeat</Filter>
+    </ClInclude>
+    <ClInclude Include="csc_phabor_table_definitions.h">
+      <Filter>DomainModules</Filter>
+    </ClInclude>
+    <ClInclude Include="dmbase.h">
+      <Filter>DomainModules</Filter>
+    </ClInclude>
+    <ClInclude Include="cmndm.h">
+      <Filter>DomainModules\common</Filter>
+    </ClInclude>
+    <ClInclude Include="pdx050remoteprocedure.h">
+      <Filter>DomainModules\BatchOrder\PREPARATION\PDX050RemoteProcedure</Filter>
+    </ClInclude>
+    <ClInclude Include="pdx050remoteprocedure_definitions.h">
+      <Filter>DomainModules\BatchOrder\PREPARATION\PDX050RemoteProcedure</Filter>
+    </ClInclude>
+    <ClInclude Include="cicsbatchorderheaddm.h">
+      <Filter>DomainModules\BatchOrder\PREPARATION\CICSBatchOrderHeadDM</Filter>
+    </ClInclude>
+    <ClInclude Include="cicsbatchorderheaddmptr.h">
+      <Filter>DomainModules\BatchOrder\PREPARATION\CICSBatchOrderHeadDM</Filter>
+    </ClInclude>
+    <ClInclude Include="dkbazkacc.h">
+      <Filter>DomainModules\BatchOrder\PREPARATION\CICSBatchOrderHeadDM\Accessor</Filter>
+    </ClInclude>
+    <ClInclude Include="dkbazkacc_definitions.h">
+      <Filter>DomainModules\BatchOrder\PREPARATION\CICSBatchOrderHeadDM\Accessor</Filter>
+    </ClInclude>
+    <ClInclude Include="cicsbatchorderposdm.h">
+      <Filter>DomainModules\BatchOrder\PREPARATION\CICSBatchOrderPosDM</Filter>
+    </ClInclude>
+    <ClInclude Include="cicsbatchorderposdmptr.h">
+      <Filter>DomainModules\BatchOrder\PREPARATION\CICSBatchOrderPosDM</Filter>
+    </ClInclude>
+    <ClInclude Include="dkbazpacc.h">
+      <Filter>DomainModules\BatchOrder\PREPARATION\CICSBatchOrderPosDM\Accessor</Filter>
+    </ClInclude>
+    <ClInclude Include="dkbazpacc_definitions.h">
+      <Filter>DomainModules\BatchOrder\PREPARATION\CICSBatchOrderPosDM\Accessor</Filter>
+    </ClInclude>
+    <ClInclude Include="cicsbatchorderdm.h">
+      <Filter>DomainModules\BatchOrder\PREPARATION\CICSBatchOrderDM</Filter>
+    </ClInclude>
+    <ClInclude Include="cicsbatchorderdminitstruct.h">
+      <Filter>DomainModules\BatchOrder\PREPARATION\CICSBatchOrderDM</Filter>
+    </ClInclude>
+    <ClInclude Include="cicsbatchorderdmptr.h">
+      <Filter>DomainModules\BatchOrder\PREPARATION\CICSBatchOrderDM</Filter>
+    </ClInclude>
+    <ClInclude Include="searchdmbase.h">
+      <Filter>DomainModules\BatchOrder\CORE\SearchDMBase</Filter>
+    </ClInclude>
+    <ClInclude Include="searchdmbase_definitions.h">
+      <Filter>DomainModules\BatchOrder\CORE\SearchDMBase</Filter>
+    </ClInclude>
+    <ClInclude Include="searchdmbaseptr.h">
+      <Filter>DomainModules\BatchOrder\CORE\SearchDMBase</Filter>
+    </ClInclude>
+    <ClInclude Include="batchorderdmbase.h">
+      <Filter>DomainModules\BatchOrder\CORE\BatchOrderDMBase</Filter>
+    </ClInclude>
+    <ClInclude Include="batchorderdmbaseinitstruct.h">
+      <Filter>DomainModules\BatchOrder\CORE\BatchOrderDMBase</Filter>
+    </ClInclude>
+    <ClInclude Include="batchorderdmbaseptr.h">
+      <Filter>DomainModules\BatchOrder\CORE\BatchOrderDMBase</Filter>
+    </ClInclude>
+    <ClInclude Include="batchordercollection.h">
+      <Filter>DomainModules\BatchOrder\CORE\BatchOrderCollection</Filter>
+    </ClInclude>
+    <ClInclude Include="batchordercollectionptr.h">
+      <Filter>DomainModules\BatchOrder\CORE\BatchOrderCollection</Filter>
+    </ClInclude>
+    <ClInclude Include="batchorder.h">
+      <Filter>DomainModules\BatchOrder\CORE\BatchOrder</Filter>
+    </ClInclude>
+    <ClInclude Include="batchorderptr.h">
+      <Filter>DomainModules\BatchOrder\CORE\BatchOrder</Filter>
+    </ClInclude>
+    <ClInclude Include="batchordertransformer.h">
+      <Filter>DomainModules\BatchOrder\CORE\BatchOrderTransformer</Filter>
+    </ClInclude>
+    <ClInclude Include="batchordertransformerptr.h">
+      <Filter>DomainModules\BatchOrder\CORE\BatchOrderTransformer</Filter>
+    </ClInclude>
+    <ClInclude Include="batchorderheaddm.h">
+      <Filter>DomainModules\BatchOrder\PROCESSING\BatchOrder\BatchOrderHeadDM</Filter>
+    </ClInclude>
+    <ClInclude Include="batchorderheaddmptr.h">
+      <Filter>DomainModules\BatchOrder\PROCESSING\BatchOrder\BatchOrderHeadDM</Filter>
+    </ClInclude>
+    <ClInclude Include="pharmosbatchorderheadacc.h">
+      <Filter>DomainModules\BatchOrder\PROCESSING\BatchOrder\BatchOrderHeadDM\Accessor</Filter>
+    </ClInclude>
+    <ClInclude Include="pharmosbatchorderheadacc_definitions.h">
+      <Filter>DomainModules\BatchOrder\PROCESSING\BatchOrder\BatchOrderHeadDM\Accessor</Filter>
+    </ClInclude>
+    <ClInclude Include="batchorderdm.h">
+      <Filter>DomainModules\BatchOrder\PROCESSING\BatchOrder\BatchOrderDM</Filter>
+    </ClInclude>
+    <ClInclude Include="batchorderdm_definitions.h">
+      <Filter>DomainModules\BatchOrder\PROCESSING\BatchOrder\BatchOrderDM</Filter>
+    </ClInclude>
+    <ClInclude Include="batchorderdminitstruct.h">
+      <Filter>DomainModules\BatchOrder\PROCESSING\BatchOrder\BatchOrderDM</Filter>
+    </ClInclude>
+    <ClInclude Include="batchorderdmptr.h">
+      <Filter>DomainModules\BatchOrder\PROCESSING\BatchOrder\BatchOrderDM</Filter>
+    </ClInclude>
+    <ClInclude Include="batchorderposdm.h">
+      <Filter>DomainModules\BatchOrder\PROCESSING\BatchOrder\BatchOrderPosDM</Filter>
+    </ClInclude>
+    <ClInclude Include="batchorderposdmptr.h">
+      <Filter>DomainModules\BatchOrder\PROCESSING\BatchOrder\BatchOrderPosDM</Filter>
+    </ClInclude>
+    <ClInclude Include="pharmosbatchorderposacc.h">
+      <Filter>DomainModules\BatchOrder\PROCESSING\BatchOrder\BatchOrderPosDM\Accessor</Filter>
+    </ClInclude>
+    <ClInclude Include="pharmosbatchorderposacc_definitions.h">
+      <Filter>DomainModules\BatchOrder\PROCESSING\BatchOrder\BatchOrderPosDM\Accessor</Filter>
+    </ClInclude>
+    <ClInclude Include="icscorderobjectgetter.h">
+      <Filter>DomainModules\BatchOrder\PROCESSING\CSCOrder</Filter>
+    </ClInclude>
+    <ClInclude Include="icscorderobjectgetterptr.h">
+      <Filter>DomainModules\BatchOrder\PROCESSING\CSCOrder</Filter>
+    </ClInclude>
+    <ClInclude Include="cscbatchorderdm.h">
+      <Filter>DomainModules\BatchOrder\PROCESSING\CSCOrder\CSCBatchOrderDM</Filter>
+    </ClInclude>
+    <ClInclude Include="cscbatchorderdm_definitions.h">
+      <Filter>DomainModules\BatchOrder\PROCESSING\CSCOrder\CSCBatchOrderDM</Filter>
+    </ClInclude>
+    <ClInclude Include="cscbatchorderdmptr.h">
+      <Filter>DomainModules\BatchOrder\PROCESSING\CSCOrder\CSCBatchOrderDM</Filter>
+    </ClInclude>
+    <ClInclude Include="cscbatchorderheaddm.h">
+      <Filter>DomainModules\BatchOrder\PROCESSING\CSCOrder\CSCBatchOrderHeadDM</Filter>
+    </ClInclude>
+    <ClInclude Include="cscbatchorderheaddmptr.h">
+      <Filter>DomainModules\BatchOrder\PROCESSING\CSCOrder\CSCBatchOrderHeadDM</Filter>
+    </ClInclude>
+    <ClInclude Include="cscbatchorderposdm.h">
+      <Filter>DomainModules\BatchOrder\PROCESSING\CSCOrder\CSCBatchOrderPosDM</Filter>
+    </ClInclude>
+    <ClInclude Include="cscbatchorderposdmptr.h">
+      <Filter>DomainModules\BatchOrder\PROCESSING\CSCOrder\CSCBatchOrderPosDM</Filter>
+    </ClInclude>
+    <ClInclude Include="itransferkeygetter.h">
+      <Filter>DomainModules\BatchOrder\UTIL\ITransferKeyGetter</Filter>
+    </ClInclude>
+    <ClInclude Include="itransferkeygetterptr.h">
+      <Filter>DomainModules\BatchOrder\UTIL\ITransferKeyGetter</Filter>
+    </ClInclude>
+    <ClInclude Include="ibatchordergetter.h">
+      <Filter>DomainModules\BatchOrder\UTIL\IBatchOrderGetter</Filter>
+    </ClInclude>
+    <ClInclude Include="ibatchordergetterptr.h">
+      <Filter>DomainModules\BatchOrder\UTIL\IBatchOrderGetter</Filter>
+    </ClInclude>
+    <ClInclude Include="ibatchorderstatusupdater.h">
+      <Filter>DomainModules\BatchOrder\UTIL\IBatchOrderStatusUpdater</Filter>
+    </ClInclude>
+    <ClInclude Include="ibatchorderstatusupdaterptr.h">
+      <Filter>DomainModules\BatchOrder\UTIL\IBatchOrderStatusUpdater</Filter>
+    </ClInclude>
+    <ClInclude Include="ipxvborderentryparamchecker.h">
+      <Filter>DomainModules\BatchOrder\PXVERBUND\OrderEntryParamChecker</Filter>
+    </ClInclude>
+    <ClInclude Include="ipxvborderentryparamcheckerptr.h">
+      <Filter>DomainModules\BatchOrder\PXVERBUND\OrderEntryParamChecker</Filter>
+    </ClInclude>
+    <ClInclude Include="pxvborderentryparamchecker.h">
+      <Filter>DomainModules\BatchOrder\PXVERBUND\OrderEntryParamChecker\PXVBOrderEntryParamChecker</Filter>
+    </ClInclude>
+    <ClInclude Include="pxvborderentryparamcheckerptr.h">
+      <Filter>DomainModules\BatchOrder\PXVERBUND\OrderEntryParamChecker\PXVBOrderEntryParamChecker</Filter>
+    </ClInclude>
+    <ClInclude Include="nullpxvborderentryparamchecker.h">
+      <Filter>DomainModules\BatchOrder\PXVERBUND\OrderEntryParamChecker\NullPXVBOrderEntryParamChecker</Filter>
+    </ClInclude>
+    <ClInclude Include="ipxvbinitialization.h">
+      <Filter>DomainModules\BatchOrder\PXVERBUND\Initialization</Filter>
+    </ClInclude>
+    <ClInclude Include="ipxvbinitializationptr.h">
+      <Filter>DomainModules\BatchOrder\PXVERBUND\Initialization</Filter>
+    </ClInclude>
+    <ClInclude Include="pxvbinitialization.h">
+      <Filter>DomainModules\BatchOrder\PXVERBUND\Initialization\PXVBInitialization</Filter>
+    </ClInclude>
+    <ClInclude Include="pxvbinitializationptr.h">
+      <Filter>DomainModules\BatchOrder\PXVERBUND\Initialization\PXVBInitialization</Filter>
+    </ClInclude>
+    <ClInclude Include="nullpxvbinitialization.h">
+      <Filter>DomainModules\BatchOrder\PXVERBUND\Initialization\NullPXVBInitialization</Filter>
+    </ClInclude>
+    <ClInclude Include="ipxvbsession.h">
+      <Filter>DomainModules\BatchOrder\PXVERBUND\Session</Filter>
+    </ClInclude>
+    <ClInclude Include="ipxvbsessionptr.h">
+      <Filter>DomainModules\BatchOrder\PXVERBUND\Session</Filter>
+    </ClInclude>
+    <ClInclude Include="pxvbsession.h">
+      <Filter>DomainModules\BatchOrder\PXVERBUND\Session\PXVBSession</Filter>
+    </ClInclude>
+    <ClInclude Include="pxvbsessionptr.h">
+      <Filter>DomainModules\BatchOrder\PXVERBUND\Session\PXVBSession</Filter>
+    </ClInclude>
+    <ClInclude Include="nullpxvbsession.h">
+      <Filter>DomainModules\BatchOrder\PXVERBUND\Session\NullPXVBSession</Filter>
+    </ClInclude>
+    <ClInclude Include="pxvbcomponentmanager.h">
+      <Filter>DomainModules\BatchOrder\PXVERBUND\ComponentManager\PXVBComponentManager</Filter>
+    </ClInclude>
+    <ClInclude Include="pxvbcomponentmanagerptr.h">
+      <Filter>DomainModules\BatchOrder\PXVERBUND\ComponentManager\PXVBComponentManager</Filter>
+    </ClInclude>
+    <ClInclude Include="pxordertransmitptr.h">
+      <Filter>DomainModules\BatchOrder\PXVERBUND\ComponentManager\PXVBComponentManager\shared_ptr</Filter>
+    </ClInclude>
+    <ClInclude Include="nullpxvbcomponentmanager.h">
+      <Filter>DomainModules\BatchOrder\PXVERBUND\ComponentManager\NullPXVBComponentManager</Filter>
+    </ClInclude>
+    <ClInclude Include="nullpxvbcomponentmanagerptr.h">
+      <Filter>DomainModules\BatchOrder\PXVERBUND\ComponentManager\NullPXVBComponentManager</Filter>
+    </ClInclude>
+    <ClInclude Include="ipxvbservicelocator.h">
+      <Filter>DomainModules\BatchOrder\PXVERBUND\IPXVBServiceLocator</Filter>
+    </ClInclude>
+    <ClInclude Include="ipxvbservicelocatorptr.h">
+      <Filter>DomainModules\BatchOrder\PXVERBUND\IPXVBServiceLocator</Filter>
+    </ClInclude>
+    <ClInclude Include="ipxvbordertransmit.h">
+      <Filter>DomainModules\BatchOrder\PXVERBUND\OrderTransmit</Filter>
+    </ClInclude>
+    <ClInclude Include="ipxvbordertransmitptr.h">
+      <Filter>DomainModules\BatchOrder\PXVERBUND\OrderTransmit</Filter>
+    </ClInclude>
+    <ClInclude Include="pxvbordertransmit.h">
+      <Filter>DomainModules\BatchOrder\PXVERBUND\OrderTransmit\PXVBOrderTransmit</Filter>
+    </ClInclude>
+    <ClInclude Include="pxvbordertransmitptr.h">
+      <Filter>DomainModules\BatchOrder\PXVERBUND\OrderTransmit\PXVBOrderTransmit</Filter>
+    </ClInclude>
+    <ClInclude Include="nullpxvbordertransmit.h">
+      <Filter>DomainModules\BatchOrder\PXVERBUND\OrderTransmit\NullPXVBOrderTransmit</Filter>
+    </ClInclude>
+    <ClInclude Include="nullpxvbordertransmitptr.h">
+      <Filter>DomainModules\BatchOrder\PXVERBUND\OrderTransmit\NullPXVBOrderTransmit</Filter>
+    </ClInclude>
+    <ClInclude Include="initparamsdm.h">
+      <Filter>DomainModules\InitParamsDM</Filter>
+    </ClInclude>
+    <ClInclude Include="initparamsdmptr.h">
+      <Filter>DomainModules\InitParamsDM</Filter>
+    </ClInclude>
+    <ClInclude Include="orderprocessingexception.h">
+      <Filter>Exceptions</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="appsession.inl">
+      <Filter>main\AppSession</Filter>
+    </None>
+    <None Include="appargs.inl">
+      <Filter>main\CommandLine</Filter>
+    </None>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,940 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClInclude Include="gen-cpp\batchstatusenum_constants.h">
+      <Filter>gen-cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="gen-cpp\batchstatusenum_types.h">
+      <Filter>gen-cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="gen-cpp\bookingtypeenum_constants.h">
+      <Filter>gen-cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="gen-cpp\bookingtypeenum_types.h">
+      <Filter>gen-cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="gen-cpp\cscbase_constants.h">
+      <Filter>gen-cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="gen-cpp\cscbase_types.h">
+      <Filter>gen-cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="gen-cpp\cscinquiry_constants.h">
+      <Filter>gen-cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="gen-cpp\cscinquiry_types.h">
+      <Filter>gen-cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="gen-cpp\cscorder_constants.h">
+      <Filter>gen-cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="gen-cpp\cscorder_types.h">
+      <Filter>gen-cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="gen-cpp\cscservice_constants.h">
+      <Filter>gen-cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="gen-cpp\cscservice_types.h">
+      <Filter>gen-cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="gen-cpp\CscServiceBase.h">
+      <Filter>gen-cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="gen-cpp\CscServiceBatch.h">
+      <Filter>gen-cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="gen-cpp\CscServiceOnline.h">
+      <Filter>gen-cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="gen-cpp\csctest_constants.h">
+      <Filter>gen-cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="gen-cpp\csctest_types.h">
+      <Filter>gen-cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="gen-cpp\csctypes_constants.h">
+      <Filter>gen-cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="gen-cpp\csctypes_types.h">
+      <Filter>gen-cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="gen-cpp\origintypeenum_constants.h">
+      <Filter>gen-cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="gen-cpp\origintypeenum_types.h">
+      <Filter>gen-cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="gen-cpp\pickingtypeenum_constants.h">
+      <Filter>gen-cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="gen-cpp\pickingtypeenum_types.h">
+      <Filter>gen-cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="gen-cpp\positiontypeenum_constants.h">
+      <Filter>gen-cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="gen-cpp\positiontypeenum_types.h">
+      <Filter>gen-cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="gen-cpp\pricetypeenum_constants.h">
+      <Filter>gen-cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="gen-cpp\pricetypeenum_types.h">
+      <Filter>gen-cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="gen-cpp\critlevelenum_constants.h">
+      <Filter>gen-cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="gen-cpp\critlevelenum_types.h">
+      <Filter>gen-cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="gen-cpp\csccallback_constants.h">
+      <Filter>gen-cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="gen-cpp\csccallback_types.h">
+      <Filter>gen-cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="gen-cpp\cscmsv3_constants.h">
+      <Filter>gen-cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="gen-cpp\cscmsv3_types.h">
+      <Filter>gen-cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="gen-cpp\messagecodeenum_constants.h">
+      <Filter>gen-cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="gen-cpp\messagecodeenum_types.h">
+      <Filter>gen-cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="gen-cpp\xmlinfolevelenum_constants.h">
+      <Filter>gen-cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="gen-cpp\xmlinfolevelenum_types.h">
+      <Filter>gen-cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="gen-cpp\weekdayenum_constants.h">
+      <Filter>gen-cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="gen-cpp\weekdayenum_types.h">
+      <Filter>gen-cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="ithriftparameterproxy.h">
+      <Filter>src\ParameterProxy</Filter>
+    </ClInclude>
+    <ClInclude Include="ithriftparameterproxyptr.h">
+      <Filter>src\ParameterProxy</Filter>
+    </ClInclude>
+    <ClInclude Include="thriftparameterproxy.h">
+      <Filter>src\ParameterProxy</Filter>
+    </ClInclude>
+    <ClInclude Include="thriftparameterproxyptr.h">
+      <Filter>src\ParameterProxy</Filter>
+    </ClInclude>
+    <ClInclude Include="gen-cpp\documenttypeenum_constants.h">
+      <Filter>gen-cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="gen-cpp\documenttypeenum_types.h">
+      <Filter>gen-cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="gen-cpp\documentarchiveinformation_constants.h">
+      <Filter>gen-cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="gen-cpp\documentarchiveinformation_types.h">
+      <Filter>gen-cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="gen-cpp\deliveryadvice_constants.h">
+      <Filter>gen-cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="gen-cpp\deliveryadvice_types.h">
+      <Filter>gen-cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="gen-cpp\orderremarktypeenum_constants.h">
+      <Filter>gen-cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="gen-cpp\orderremarktypeenum_types.h">
+      <Filter>gen-cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="gen-cpp\returnacceptancecheckresultenum_constants.h">
+      <Filter>gen-cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="gen-cpp\returnacceptancecheckresultenum_types.h">
+      <Filter>gen-cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="gen-cpp\returnreasonenum_constants.h">
+      <Filter>gen-cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="gen-cpp\returnreasonenum_types.h">
+      <Filter>gen-cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="gen-cpp\returns_constants.h">
+      <Filter>gen-cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="gen-cpp\returns_types.h">
+      <Filter>gen-cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="gen-cpp\returntypeenum_constants.h">
+      <Filter>gen-cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="gen-cpp\returntypeenum_types.h">
+      <Filter>gen-cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="callbackhandler.h">
+      <Filter>src\Handler</Filter>
+    </ClInclude>
+    <ClInclude Include="callbackhandlerptr.h">
+      <Filter>src\Handler</Filter>
+    </ClInclude>
+    <ClInclude Include="documenthandler.h">
+      <Filter>src\Handler</Filter>
+    </ClInclude>
+    <ClInclude Include="inquirybulkhandler.h">
+      <Filter>src\Handler</Filter>
+    </ClInclude>
+    <ClInclude Include="inquiryhandler.h">
+      <Filter>src\Handler</Filter>
+    </ClInclude>
+    <ClInclude Include="documenthandlerptr.h">
+      <Filter>src\Handler</Filter>
+    </ClInclude>
+    <ClInclude Include="cscservicebasehandler.hpp">
+      <Filter>src\Infrastructure</Filter>
+    </ClInclude>
+    <ClInclude Include="cscserviceonlinehandler.hpp">
+      <Filter>src\Infrastructure</Filter>
+    </ClInclude>
+    <ClInclude Include="thrift_definitions.h">
+      <Filter>src\Infrastructure</Filter>
+    </ClInclude>
+    <ClInclude Include="thriftserverframework.h">
+      <Filter>src\Infrastructure</Filter>
+    </ClInclude>
+    <ClInclude Include="cscservicehelper.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="cscserviceimplpxverbund.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="inquirybulkhandlerptr.h">
+      <Filter>src\Handler</Filter>
+    </ClInclude>
+    <ClInclude Include="inquiryhandlerptr.h">
+      <Filter>src\Handler</Filter>
+    </ClInclude>
+    <ClInclude Include="returnshandler.h">
+      <Filter>src\Handler</Filter>
+    </ClInclude>
+    <ClInclude Include="returnshandlerptr.h">
+      <Filter>src\Handler</Filter>
+    </ClInclude>
+    <ClInclude Include="msv3handlerptr.h">
+      <Filter>src\Handler</Filter>
+    </ClInclude>
+    <ClInclude Include="msv3handler.h">
+      <Filter>src\Handler</Filter>
+    </ClInclude>
+    <ClInclude Include="orderhandler.h">
+      <Filter>src\Handler</Filter>
+    </ClInclude>
+    <ClInclude Include="orderhandlerptr.h">
+      <Filter>src\Handler</Filter>
+    </ClInclude>
+    <ClInclude Include="msv3orderlabelprocessor.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\pxverbund\include\types\semikolon.h">
+      <Filter>idl\types</Filter>
+    </ClInclude>
+    <ClInclude Include="gen-cpp\kindofdiscountenum_constants.h">
+      <Filter>gen-cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="gen-cpp\kindofdiscountenum_types.h">
+      <Filter>gen-cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="gen-cpp\orderrelationnotypeenum_constants.h">
+      <Filter>gen-cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="gen-cpp\orderrelationnotypeenum_types.h">
+      <Filter>gen-cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="gen-cpp\reservationtypeenum_constants.h">
+      <Filter>gen-cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="gen-cpp\reservationtypeenum_types.h">
+      <Filter>gen-cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="gen-cpp\languageenum_constants.h">
+      <Filter>gen-cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="gen-cpp\languageenum_types.h">
+      <Filter>gen-cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="gen-cpp\shipmenttracking_constants.h">
+      <Filter>gen-cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="gen-cpp\shipmenttracking_types.h">
+      <Filter>gen-cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="shipmenttrackinghandler.h">
+      <Filter>src\Handler</Filter>
+    </ClInclude>
+    <ClInclude Include="csclibtothrifthandlerbase.h">
+      <Filter>src\Handler</Filter>
+    </ClInclude>
+    <ClInclude Include="shipmenttrackinghandlerptr.h">
+      <Filter>src\Handler</Filter>
+    </ClInclude>
+    <ClInclude Include="gen-cpp\csccustomer_constants.h">
+      <Filter>gen-cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="customerhandler.h">
+      <Filter>src\Handler</Filter>
+    </ClInclude>
+    <ClInclude Include="customerhandlerptr.h">
+      <Filter>src\Handler</Filter>
+    </ClInclude>
+    <ClInclude Include="gen-cpp\articleInquiryperioddatetypeenum_types.h">
+      <Filter>gen-cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="gen-cpp\articleInquiryperioddatetypeenum_constants.h">
+      <Filter>gen-cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="cscservicebatchhandler.hpp">
+      <Filter>src\Handler</Filter>
+    </ClInclude>
+    <ClInclude Include="gen-cpp\csccustomer_types.h">
+      <Filter>gen-cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="gen-cpp\paymentsfilterenum_constants.h">
+      <Filter>gen-cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="gen-cpp\paymentsfilterenum_types.h">
+      <Filter>gen-cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="gen-cpp\crema_constants.h">
+      <Filter>gen-cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="gen-cpp\crema_types.h">
+      <Filter>gen-cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="cremahandler.h">
+      <Filter>src\Handler</Filter>
+    </ClInclude>
+    <ClInclude Include="cremahandlerptr.h">
+      <Filter>src\Handler</Filter>
+    </ClInclude>
+    <ClInclude Include="gen-cpp\cremaemailtypeenum_constants.h">
+      <Filter>gen-cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="gen-cpp\cremaemailtypeenum_types.h">
+      <Filter>gen-cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="gen-cpp\cremauserlevelenum_constants.h">
+      <Filter>gen-cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="gen-cpp\cremauserlevelenum_types.h">
+      <Filter>gen-cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="gen-cpp\cremacloseenum_constants.h">
+      <Filter>gen-cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="gen-cpp\cremacloseenum_types.h">
+      <Filter>gen-cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="thriftserverframeworkptr.h">
+      <Filter>src\Infrastructure</Filter>
+    </ClInclude>
+    <ClInclude Include="cscservice_definitions.h">
+      <Filter>src\Infrastructure</Filter>
+    </ClInclude>
+    <ClInclude Include="gen-cpp\narcoticsarchive_types.h">
+      <Filter>gen-cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="gen-cpp\transactiontypeenum_constants.h">
+      <Filter>gen-cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="gen-cpp\transactiontypeenum_types.h">
+      <Filter>gen-cpp</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="gen-cpp\batchstatusenum_constants.cpp">
+      <Filter>gen-cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="gen-cpp\batchstatusenum_types.cpp">
+      <Filter>gen-cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="gen-cpp\bookingtypeenum_constants.cpp">
+      <Filter>gen-cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="gen-cpp\bookingtypeenum_types.cpp">
+      <Filter>gen-cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="gen-cpp\cscbase_constants.cpp">
+      <Filter>gen-cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="gen-cpp\cscbase_types.cpp">
+      <Filter>gen-cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="gen-cpp\cscinquiry_constants.cpp">
+      <Filter>gen-cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="gen-cpp\cscinquiry_types.cpp">
+      <Filter>gen-cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="gen-cpp\cscorder_constants.cpp">
+      <Filter>gen-cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="gen-cpp\cscorder_types.cpp">
+      <Filter>gen-cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="gen-cpp\cscservice_constants.cpp">
+      <Filter>gen-cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="gen-cpp\cscservice_types.cpp">
+      <Filter>gen-cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="gen-cpp\CscServiceBase.cpp">
+      <Filter>gen-cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="gen-cpp\CscServiceBatch.cpp">
+      <Filter>gen-cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="gen-cpp\CscServiceOnline.cpp">
+      <Filter>gen-cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="gen-cpp\csctest_constants.cpp">
+      <Filter>gen-cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="gen-cpp\csctest_types.cpp">
+      <Filter>gen-cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="gen-cpp\csctypes_constants.cpp">
+      <Filter>gen-cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="gen-cpp\csctypes_types.cpp">
+      <Filter>gen-cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="gen-cpp\origintypeenum_constants.cpp">
+      <Filter>gen-cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="gen-cpp\origintypeenum_types.cpp">
+      <Filter>gen-cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="gen-cpp\pickingtypeenum_constants.cpp">
+      <Filter>gen-cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="gen-cpp\pickingtypeenum_types.cpp">
+      <Filter>gen-cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="gen-cpp\positiontypeenum_constants.cpp">
+      <Filter>gen-cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="gen-cpp\positiontypeenum_types.cpp">
+      <Filter>gen-cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="gen-cpp\pricetypeenum_constants.cpp">
+      <Filter>gen-cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="gen-cpp\pricetypeenum_types.cpp">
+      <Filter>gen-cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="gen-cpp\critlevelenum_types.cpp">
+      <Filter>gen-cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="gen-cpp\csccallback_constants.cpp">
+      <Filter>gen-cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="gen-cpp\csccallback_types.cpp">
+      <Filter>gen-cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="gen-cpp\critlevelenum_constants.cpp">
+      <Filter>gen-cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="gen-cpp\cscmsv3_constants.cpp">
+      <Filter>gen-cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="gen-cpp\cscmsv3_types.cpp">
+      <Filter>gen-cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="gen-cpp\messagecodeenum_constants.cpp">
+      <Filter>gen-cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="gen-cpp\messagecodeenum_types.cpp">
+      <Filter>gen-cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="gen-cpp\xmlinfolevelenum_constants.cpp">
+      <Filter>gen-cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="gen-cpp\xmlinfolevelenum_types.cpp">
+      <Filter>gen-cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="gen-cpp\weekdayenum_constants.cpp">
+      <Filter>gen-cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="gen-cpp\weekdayenum_types.cpp">
+      <Filter>gen-cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="thriftparameterproxy.cpp">
+      <Filter>src\ParameterProxy</Filter>
+    </ClCompile>
+    <ClCompile Include="gen-cpp\documenttypeenum_constants.cpp">
+      <Filter>gen-cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="gen-cpp\documenttypeenum_types.cpp">
+      <Filter>gen-cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="gen-cpp\documentarchiveinformation_constants.cpp">
+      <Filter>gen-cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="gen-cpp\documentarchiveinformation_types.cpp">
+      <Filter>gen-cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="gen-cpp\deliveryadvice_constants.cpp">
+      <Filter>gen-cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="gen-cpp\deliveryadvice_types.cpp">
+      <Filter>gen-cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="gen-cpp\orderremarktypeenum_constants.cpp">
+      <Filter>gen-cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="gen-cpp\orderremarktypeenum_types.cpp">
+      <Filter>gen-cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="gen-cpp\returnacceptancecheckresultenum_constants.cpp">
+      <Filter>gen-cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="gen-cpp\returnacceptancecheckresultenum_types.cpp">
+      <Filter>gen-cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="gen-cpp\returnreasonenum_constants.cpp">
+      <Filter>gen-cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="gen-cpp\returnreasonenum_types.cpp">
+      <Filter>gen-cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="gen-cpp\returns_constants.cpp">
+      <Filter>gen-cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="gen-cpp\returns_types.cpp">
+      <Filter>gen-cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="gen-cpp\returntypeenum_constants.cpp">
+      <Filter>gen-cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="gen-cpp\returntypeenum_types.cpp">
+      <Filter>gen-cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="callbackhandler.cpp">
+      <Filter>src\Handler</Filter>
+    </ClCompile>
+    <ClCompile Include="documenthandler.cpp">
+      <Filter>src\Handler</Filter>
+    </ClCompile>
+    <ClCompile Include="inquirybulkhandler.cpp">
+      <Filter>src\Handler</Filter>
+    </ClCompile>
+    <ClCompile Include="inquiryhandler.cpp">
+      <Filter>src\Handler</Filter>
+    </ClCompile>
+    <ClCompile Include="thriftserverframework.cpp">
+      <Filter>src\Infrastructure</Filter>
+    </ClCompile>
+    <ClCompile Include="cscservicehelper.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="cscserviceimplpxverbund.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="version.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="returnshandler.cpp">
+      <Filter>src\Handler</Filter>
+    </ClCompile>
+    <ClCompile Include="msv3handler.cpp">
+      <Filter>src\Handler</Filter>
+    </ClCompile>
+    <ClCompile Include="orderhandler.cpp">
+      <Filter>src\Handler</Filter>
+    </ClCompile>
+    <ClCompile Include="msv3orderlabelprocessor.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="gen-cpp\kindofdiscountenum_constants.cpp">
+      <Filter>gen-cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="gen-cpp\kindofdiscountenum_types.cpp">
+      <Filter>gen-cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="gen-cpp\orderrelationnotypeenum_constants.cpp">
+      <Filter>gen-cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="gen-cpp\orderrelationnotypeenum_types.cpp">
+      <Filter>gen-cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="gen-cpp\reservationtypeenum_constants.cpp">
+      <Filter>gen-cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="gen-cpp\reservationtypeenum_types.cpp">
+      <Filter>gen-cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="gen-cpp\languageenum_constants.cpp">
+      <Filter>gen-cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="gen-cpp\languageenum_types.cpp">
+      <Filter>gen-cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="gen-cpp\shipmenttracking_constants.cpp">
+      <Filter>gen-cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="gen-cpp\shipmenttracking_types.cpp">
+      <Filter>gen-cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="shipmenttrackinghandler.cpp">
+      <Filter>src\Handler</Filter>
+    </ClCompile>
+    <ClCompile Include="csclibtothrifthandlerbase.cpp">
+      <Filter>src\Handler</Filter>
+    </ClCompile>
+    <ClCompile Include="gen-cpp\csccustomer_constants.cpp">
+      <Filter>gen-cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="customerhandler.cpp">
+      <Filter>src\Handler</Filter>
+    </ClCompile>
+    <ClCompile Include="gen-cpp\articleInquiryperioddatetypeenum_constants.cpp">
+      <Filter>gen-cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="gen-cpp\articleInquiryperioddatetypeenum_types.cpp">
+      <Filter>gen-cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="gen-cpp\csccustomer_types.cpp">
+      <Filter>gen-cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="gen-cpp\paymentsfilterenum_constants.cpp">
+      <Filter>gen-cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="gen-cpp\paymentsfilterenum_types.cpp">
+      <Filter>gen-cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="gen-cpp\crema_constants.cpp">
+      <Filter>gen-cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="gen-cpp\crema_types.cpp">
+      <Filter>gen-cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="cremahandler.cpp">
+      <Filter>src\Handler</Filter>
+    </ClCompile>
+    <ClCompile Include="gen-cpp\cremaemailtypeenum_constants.cpp">
+      <Filter>gen-cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="gen-cpp\cremaemailtypeenum_types.cpp">
+      <Filter>gen-cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="gen-cpp\cremauserlevelenum_constants.cpp">
+      <Filter>gen-cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="gen-cpp\cremauserlevelenum_types.cpp">
+      <Filter>gen-cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="gen-cpp\cremacloseenum_constants.cpp">
+      <Filter>gen-cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="gen-cpp\cremacloseenum_types.cpp">
+      <Filter>gen-cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="gen-cpp\narcoticsarchive_types.cpp">
+      <Filter>gen-cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="gen-cpp\transactiontypeenum_constants.cpp">
+      <Filter>gen-cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="gen-cpp\transactiontypeenum_types.cpp">
+      <Filter>gen-cpp</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="idl">
+      <UniqueIdentifier>{6c9f5ee2-f61f-4820-b5b5-62f41804fbf7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="idl\types">
+      <UniqueIdentifier>{22691787-a627-470c-ad66-d026be7dfe4e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gen-cpp">
+      <UniqueIdentifier>{65d18785-1396-4139-83f5-7f0999de3ce4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{af0bc2f8-a0a6-4d45-9642-75c9181394a8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\ParameterProxy">
+      <UniqueIdentifier>{cb808b9c-7ca9-41f3-a752-82e88bf8c528}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Handler">
+      <UniqueIdentifier>{ee27df53-2ad6-43d3-bb6a-b750c7f550c8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="unix">
+      <UniqueIdentifier>{14e38733-e333-4e93-a2f5-510e3596fd57}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="unix\ini">
+      <UniqueIdentifier>{49111960-14b0-4bb6-b8de-71c500ae9baf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="unix\ini\zdev21">
+      <UniqueIdentifier>{d046cf66-527d-4d52-a1a4-f29e5b174311}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="unix\ini\prod">
+      <UniqueIdentifier>{6a86c5b9-8874-43f6-b6b7-63fd5814fa13}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="unix\proc">
+      <UniqueIdentifier>{d604eaa5-05e8-4c37-bcdc-1110f35c8496}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="unix\vars">
+      <UniqueIdentifier>{f0b11f2b-fd1b-4cea-b761-da59d827f6c8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Infrastructure">
+      <UniqueIdentifier>{33290100-dd92-4f2d-8c03-99daad7f71cb}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ini\cscservice.cfg">
+      <Filter>unix\ini</Filter>
+    </None>
+    <None Include="ini\zdev21\cscservice.ini.at">
+      <Filter>unix\ini\zdev21</Filter>
+    </None>
+    <None Include="ini\zdev21\cscservice.ini.bg">
+      <Filter>unix\ini\zdev21</Filter>
+    </None>
+    <None Include="ini\zdev21\cscservice.ini.ch">
+      <Filter>unix\ini\zdev21</Filter>
+    </None>
+    <None Include="ini\zdev21\cscservice.ini.de">
+      <Filter>unix\ini\zdev21</Filter>
+    </None>
+    <None Include="ini\zdev21\cscservice.ini.de4">
+      <Filter>unix\ini\zdev21</Filter>
+    </None>
+    <None Include="ini\zdev21\cscservice.ini.fr">
+      <Filter>unix\ini\zdev21</Filter>
+    </None>
+    <None Include="ini\zdev21\cscservice.ini.hr">
+      <Filter>unix\ini\zdev21</Filter>
+    </None>
+    <None Include="ini\zdev21\cscservice.ini.pat">
+      <Filter>unix\ini\zdev21</Filter>
+    </None>
+    <None Include="ini\zdev21\cscservice.ini.pch">
+      <Filter>unix\ini\zdev21</Filter>
+    </None>
+    <None Include="ini\zdev21\cscservice.ini.pfr">
+      <Filter>unix\ini\zdev21</Filter>
+    </None>
+    <None Include="ini\zdev21\cscservice.ini.rs">
+      <Filter>unix\ini\zdev21</Filter>
+    </None>
+    <None Include="proc\cscservice.option">
+      <Filter>unix\proc</Filter>
+    </None>
+    <None Include="proc\cscservice.sh">
+      <Filter>unix\proc</Filter>
+    </None>
+    <None Include="vars\cscservice.vars.at">
+      <Filter>unix\vars</Filter>
+    </None>
+    <None Include="vars\cscservice.vars.bg">
+      <Filter>unix\vars</Filter>
+    </None>
+    <None Include="vars\cscservice.vars.ch">
+      <Filter>unix\vars</Filter>
+    </None>
+    <None Include="vars\cscservice.vars.de">
+      <Filter>unix\vars</Filter>
+    </None>
+    <None Include="vars\cscservice.vars.de4">
+      <Filter>unix\vars</Filter>
+    </None>
+    <None Include="vars\cscservice.vars.fr">
+      <Filter>unix\vars</Filter>
+    </None>
+    <None Include="vars\cscservice.vars.hr">
+      <Filter>unix\vars</Filter>
+    </None>
+    <None Include="vars\cscservice.vars.pat">
+      <Filter>unix\vars</Filter>
+    </None>
+    <None Include="vars\cscservice.vars.pch">
+      <Filter>unix\vars</Filter>
+    </None>
+    <None Include="vars\cscservice.vars.pfr">
+      <Filter>unix\vars</Filter>
+    </None>
+    <None Include="vars\cscservice.vars.rs">
+      <Filter>unix\vars</Filter>
+    </None>
+    <None Include="ini\prod\cscservice.ini.at">
+      <Filter>unix\ini\prod</Filter>
+    </None>
+    <None Include="ini\prod\cscservice.ini.bg">
+      <Filter>unix\ini\prod</Filter>
+    </None>
+    <None Include="ini\prod\cscservice.ini.ch">
+      <Filter>unix\ini\prod</Filter>
+    </None>
+    <None Include="ini\prod\cscservice.ini.fr">
+      <Filter>unix\ini\prod</Filter>
+    </None>
+    <None Include="ini\prod\cscservice.ini.hr">
+      <Filter>unix\ini\prod</Filter>
+    </None>
+    <None Include="ini\prod\cscservice.ini.pat">
+      <Filter>unix\ini\prod</Filter>
+    </None>
+    <None Include="ini\prod\cscservice.ini.pch">
+      <Filter>unix\ini\prod</Filter>
+    </None>
+    <None Include="ini\prod\cscservice.ini.pfr">
+      <Filter>unix\ini\prod</Filter>
+    </None>
+    <None Include="ini\prod\cscservice.ini.rs">
+      <Filter>unix\ini\prod</Filter>
+    </None>
+    <None Include="..\pxverbund\include\types\batchstatusenum.inc">
+      <Filter>idl\types</Filter>
+    </None>
+    <None Include="..\pxverbund\include\types\bookingtypeenum.inc">
+      <Filter>idl\types</Filter>
+    </None>
+    <None Include="..\pxverbund\include\types\critlevelenum.inc">
+      <Filter>idl\types</Filter>
+    </None>
+    <None Include="..\pxverbund\include\types\messagecodeenum.inc">
+      <Filter>idl\types</Filter>
+    </None>
+    <None Include="..\pxverbund\include\types\origintypeenum.inc">
+      <Filter>idl\types</Filter>
+    </None>
+    <None Include="..\pxverbund\include\types\pickingtypeenum.inc">
+      <Filter>idl\types</Filter>
+    </None>
+    <None Include="..\pxverbund\include\types\positiontypeenum.inc">
+      <Filter>idl\types</Filter>
+    </None>
+    <None Include="..\pxverbund\include\types\pricetypeenum.inc">
+      <Filter>idl\types</Filter>
+    </None>
+    <None Include="..\pxverbund\include\types\xmlinfolevelenum.inc">
+      <Filter>idl\types</Filter>
+    </None>
+    <None Include="proc\cscserviceLN.option">
+      <Filter>unix\proc</Filter>
+    </None>
+    <None Include="proc\cscserviceLN.sh">
+      <Filter>unix\proc</Filter>
+    </None>
+    <None Include="vars\cscserviceLN.vars">
+      <Filter>unix\vars</Filter>
+    </None>
+    <None Include="ini\prod\cscservice.ini.de_north">
+      <Filter>unix\ini\prod</Filter>
+    </None>
+    <None Include="..\pxverbund\include\types\weekdayenum.inc">
+      <Filter>idl\types</Filter>
+    </None>
+    <None Include="ini\prod\cscservice.ini.LN">
+      <Filter>unix\ini\prod</Filter>
+    </None>
+    <None Include="idl\documentarchiveinformation.thrift">
+      <Filter>idl</Filter>
+    </None>
+    <None Include="..\pxverbund\include\types\documenttypeenum.inc">
+      <Filter>idl\types</Filter>
+    </None>
+    <None Include="..\pxverbund\include\types\orderremarktypeenum.inc">
+      <Filter>idl\types</Filter>
+    </None>
+    <None Include="idl\returns.thrift">
+      <Filter>idl</Filter>
+    </None>
+    <None Include="..\pxverbund\include\types\returnacceptancecheckresultenum.inc">
+      <Filter>idl\types</Filter>
+    </None>
+    <None Include="..\pxverbund\include\types\returnreasonenum.inc">
+      <Filter>idl\types</Filter>
+    </None>
+    <None Include="..\pxverbund\include\types\returntypeenum.inc">
+      <Filter>idl\types</Filter>
+    </None>
+    <None Include="..\pxverbund\include\types\orderrelationnotypeenum.inc">
+      <Filter>idl\types</Filter>
+    </None>
+    <None Include="..\pxverbund\include\types\transactiontypeenum.inc">
+      <Filter>idl\types</Filter>
+    </None>
+    <None Include="..\pxverbund\include\types\reservationtypeenum.inc">
+      <Filter>idl\types</Filter>
+    </None>
+    <None Include="..\pxverbund\include\types\languageenum.inc">
+      <Filter>idl\types</Filter>
+    </None>
+    <None Include="idl\shipmenttracking.thrift">
+      <Filter>idl</Filter>
+    </None>
+    <None Include="idl\csccustomer.thrift">
+      <Filter>idl</Filter>
+    </None>
+    <None Include="..\pxverbund\include\types\articleinquiryperioddatetypeenum.inc">
+      <Filter>idl\types</Filter>
+    </None>
+    <None Include="..\pxverbund\include\types\paymentsfilterenum.inc">
+      <Filter>idl\types</Filter>
+    </None>
+    <None Include="..\pxverbund\include\types\cremaemailtypeenum.inc">
+      <Filter>idl\types</Filter>
+    </None>
+    <None Include="..\pxverbund\include\types\cremauserlevelenum.inc">
+      <Filter>idl\types</Filter>
+    </None>
+    <None Include="..\pxverbund\include\types\cremacloseenum.inc">
+      <Filter>idl\types</Filter>
+    </None>
+    <None Include="idl\narcoticsarchive.thrift">
+      <Filter>idl</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="idl\cscbase.thrift">
+      <Filter>idl</Filter>
+    </CustomBuild>
+    <CustomBuild Include="idl\csccallback.thrift">
+      <Filter>idl</Filter>
+    </CustomBuild>
+    <CustomBuild Include="idl\cscinquiry.thrift">
+      <Filter>idl</Filter>
+    </CustomBuild>
+    <CustomBuild Include="idl\cscmsv3.thrift">
+      <Filter>idl</Filter>
+    </CustomBuild>
+    <CustomBuild Include="idl\cscorder.thrift">
+      <Filter>idl</Filter>
+    </CustomBuild>
+    <CustomBuild Include="idl\cscservice.thrift">
+      <Filter>idl</Filter>
+    </CustomBuild>
+    <CustomBuild Include="idl\csctest.thrift">
+      <Filter>idl</Filter>
+    </CustomBuild>
+    <CustomBuild Include="idl\csctypes.thrift">
+      <Filter>idl</Filter>
+    </CustomBuild>
+    <CustomBuild Include="idl\deliveryadvice.thrift">
+      <Filter>idl</Filter>
+    </CustomBuild>
+    <CustomBuild Include="idl\crema.thrift">
+      <Filter>idl</Filter>
+    </CustomBuild>
+  </ItemGroup>
+</Project>

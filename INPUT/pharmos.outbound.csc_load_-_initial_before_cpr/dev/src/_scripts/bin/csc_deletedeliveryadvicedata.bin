@@ -1,0 +1,117 @@
+##################################################################################################################################################
+# Script to delete deliveryadvicedata
+# Tim Junge
+# 14.09.2017
+# CHANGES:
+# 24.10.2018 SH added deliveryadvicelineibtlink and deliveryadvicelinereturn, changed deliveryadviceremarks to deliveryadviceremark
+# 06.06.2019 SH changed treatment of delete days, added new table deliveryadvicepaymentterms, dynamically determine branches to delete data for 
+##################################################################################################################################################
+
+##################################################################################################################################################
+## VARIABLES
+##################################################################################################################################################
+db=$1;
+days=$2;
+
+failed=0;
+typeset -i curDay
+typeset -i curMon
+typeset -i curYear
+curDay=`date +%d`
+curMon=`date +%m`
+curYear=`date +%Y`
+
+##################################################################################################################################################
+## AFFECTED BRANCHES
+##################################################################################################################################################
+BRANCHESGETQUERY="unload to 'deletedeliveryadvice_branches.unload' delimiter ' ' select distinct branchno from deliveryadvicehead;";
+dbaccess ${db} -<<%
+$BRANCHESGETQUERY
+%
+delbranches="$(echo "$(<deletedeliveryadvice_branches.unload)" | tr -d '\n')"
+rm deletedeliveryadvice_branches.unload
+
+##################################################################################################################################################
+## DELETE DATE FOR DELIVERYADVICES
+##################################################################################################################################################
+DATEGETQUERY="unload to 'deletedeliveryadvicedata.unload' delimiter ' ' select to_char(CURRENT - ${days} units day, '%Y%m%d')::int from systables where tabid=1;";
+dbaccess ${db} -<<%
+$DATEGETQUERY
+%
+deldate="$(echo "$(<deletedeliveryadvicedata.unload)" | tr -d '[:space:]')"
+rm deletedeliveryadvicedata.unload
+
+##################################################################################################################################################
+## DELETE DATE
+##################################################################################################################################################
+echo "Reorg deliveryadvice data older than ${days} days";
+echo "Reorg deliveryadvice data older than ${deldate}";
+echo "Reorg deliveryadvice data for branches: ${delbranches}";
+
+##################################################################################################################################################
+## DELETE PER BRANCH
+##################################################################################################################################################
+for i in ${delbranches}
+do
+
+DEL01="DELETE FROM deliveryadvicehead          WHERE branchno = ${i} AND deliveryadvicedate <= ${deldate};"
+DEL02="DELETE FROM deliveryadviceline          WHERE branchno = ${i} AND deliveryadvicedate <= ${deldate};"
+DEL03="DELETE FROM deliveryadvicelinedetails   WHERE branchno = ${i} AND deliveryadvicedate <= ${deldate};"
+DEL04="DELETE FROM deliveryadvicelinediscounts WHERE branchno = ${i} AND deliveryadvicedate <= ${deldate};"
+DEL05="DELETE FROM deliveryadvicelinereturn    WHERE branchno = ${i} AND deliveryadvicedate <= ${deldate};"
+DEL06="DELETE FROM deliveryadvicetotals        WHERE branchno = ${i} AND deliveryadvicedate <= ${deldate};"
+DEL07="DELETE FROM deliveryadvicevattotals     WHERE branchno = ${i} AND deliveryadvicedate <= ${deldate};"
+DEL08="DELETE FROM documentarchiveinfo         WHERE branchno = ${i} AND documentdate       <= ${deldate};"
+DEL09="DELETE FROM deliveryadvicelineibtlink   WHERE branchno = ${i} AND deliveryadvicedate <= ${deldate};"
+DEL10="DELETE FROM deliveryadviceremark        WHERE branchno = ${i} AND deliveryadvicedate <= ${deldate};"
+DEL11="DELETE FROM deliveryadvicepaymentterms  WHERE branchno = ${i} AND deliveryadvicedate <= ${deldate};"
+	
+echo "${DEL01}"
+echo "${DEL02}"
+echo "${DEL03}"
+echo "${DEL04}"
+echo "${DEL05}"
+echo "${DEL06}"
+echo "${DEL07}"
+echo "${DEL08}"
+echo "${DEL09}"
+echo "${DEL11}"
+
+dbaccess ${db} -<<%
+$DEL01
+$DEL02
+$DEL03
+$DEL04
+$DEL05
+$DEL06
+$DEL07
+$DEL08
+$DEL09
+$DEL11
+%
+if [[ $? -ne 0 ]]
+then
+	echo "Loeschen der deliveryadvice data tables nicht erfolgreich"		
+	failed=failed + 1
+fi
+	
+echo "${DEL10}"
+
+dbaccess ${db} -<<%
+$DEL10
+%
+if [[ $? -ne 0 ]]
+then
+	echo "Loeschen der deliveryadviceremark nicht erfolgreich"		
+	failed=failed + 1
+fi
+	
+done
+
+if [[ $failed -ne 0 ]]
+then
+	echo "csc_deletedeliveryadvicedate not successfull!!!"		
+	exit 99
+fi
+
+exit 0;

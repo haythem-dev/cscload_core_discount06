@@ -1,0 +1,86 @@
+﻿<#
+// #############################################################
+// Thrift handler STUB
+// #############################################################
+#>
+
+<#
+string _handlerRepoOutType;
+if (RequestOutputAsList)
+{
+    _handlerRepoOutType = $"{TypeName}Collection";
+}
+else
+{
+    _handlerRepoOutType = $"{TypeName}";
+}
+#>
+
+
+
+// HEADER ******************
+
+void process<#= TypeName #><#= Country #>(
+    csc::<#= ComponentNameLower #>::<#= TypeName #>Response& _return,
+    const ::csc::<#= ComponentNameLower #>::<#= TypeName #>Request& request);
+
+
+
+// SOURCE ******************
+
+<# WriteInclude($"{TypeName}"); #>
+
+
+void <#= ComponentName #>Handler::process<#= TypeName #><#= Country #>(
+    csc::<#= ComponentNameLower #>::<#= TypeName #>Response& _return,
+    const ::csc::<#= ComponentNameLower #>::<#= TypeName #>Request& request)
+{
+    libcsc::<#= ComponentNameLower #>::I<#= ComponentName #>RepositoryPtr repo = getSession()->get<#= ComponentName #>ComponentManager()->get<#= ComponentName #>Repository();
+
+    libcsc::<#= ComponentNameLower #>::<#= _handlerRepoOutType #>Ptr result = repo->find<#= TypeName #>(
+        <#= string.Join(", ", RequestInput.Select(x => GetThriftToBasarTypeConverter(x.Value, $"request.{x.Key}"))) #>);
+
+    _return.__set_RetValue(Helper::getReturnStructFromError(*getSession()));
+
+    if (result == NULL)
+    {
+        return;
+    }
+
+<#
+if (RequestOutputAsList)
+{
+#>
+    _return.__set_<#= TypeName #>_List(csc::<#= ComponentNameLower #>::<#= TypeName #>List());
+    libcsc::<#= ComponentNameLower #>::<#= TypeName #>Collection::const_iterator it = result->begin();
+    while (it != result->end())
+    {
+        csc::<#= ComponentNameLower #>::<#= TypeName #> <#= TypeNameFirstLower #>;
+        <#
+        PushIndent("        ");
+        foreach (var item in RequestOutput)
+        {
+            string converter = GetBasarToThriftTypeConverter(item.Value);
+            WriteLine($"{TypeNameFirstLower}.__set_{item.Key}((*it)->get{item.Key}(){converter});");
+        }
+        ClearIndent();
+        #>
+        _return.<#= TypeName #>_List.push_back(<#= TypeNameFirstLower #>);
+        ++it;
+    }
+<#
+}
+else
+{
+    PushIndent("    ");
+    foreach (var item in RequestOutput)
+    {
+        string converter = GetBasarToThriftTypeConverter(item.Value);
+        WriteLine($"_return.__set_{item.Key}(result->get{item.Key}(){converter});");
+    }
+    ClearIndent();
+}
+#>
+}
+
+<# SaveStub($"{TypeName}_Handler.stub"); #>

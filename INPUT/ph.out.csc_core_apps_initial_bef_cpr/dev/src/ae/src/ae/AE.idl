@@ -1,0 +1,46 @@
+
+	// AE.idl : IDL-Quellcode für AE.exe
+//
+// Diese Datei wird von dem Programm MIDL verarbeitet, um
+// die Typbibliothek (AE.tlb) und Marshalling-Code zu erstellen.
+import "oaidl.idl";
+import "ocidl.idl";
+	[
+		object,
+		uuid(F4F35C17-AEE5-45E5-87DA-41FBABAA4832),
+	
+		helpstring("IProCenter-Schnittstelle"),
+		pointer_default(unique)
+	]
+	interface IProCenter : IUnknown
+	{
+		[helpstring("Methode Start")] HRESULT Start();
+		[helpstring("Methode Logon")] HRESULT Logon(BSTR strAgentId, BSTR strPasswd, BSTR strExtension);
+		[helpstring("Methode MakeCall")] HRESULT MakeCall(BSTR strNumber);
+		[helpstring("Methode Stop")] HRESULT Stop();
+		[helpstring("Methode Logoff")] HRESULT Logoff();
+		[helpstring("Methode PauseStart")] HRESULT PauseStart();
+		[helpstring("Methode PauseStop")] HRESULT PauseStop();
+		[helpstring("Methode AcceptCall")] HRESULT AcceptCall();
+		[helpstring("Methode EndCall")] HRESULT EndCall();
+	};
+[
+	uuid(D5E79D49-9565-4362-9A59-494CCF58DE21),
+	version(1.0),
+	helpstring("AE 1.0 Typbibliothek")
+]
+library AELib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+	[
+		uuid(321958FE-44F0-4EC5-9AA4-4B9E9DAC034A),
+		helpstring("ProCenter Class")
+	]
+	coclass ProCenter
+	{
+		[default] interface IProCenter;
+	};
+};
+
+	

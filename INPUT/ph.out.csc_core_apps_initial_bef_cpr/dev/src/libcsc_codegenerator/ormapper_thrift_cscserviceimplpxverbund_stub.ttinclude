@@ -1,0 +1,22 @@
+﻿<#
+// #############################################################
+// Thrift cscserviceimplpxverbund STUB
+// #############################################################
+#>
+
+// HEADER ******************
+
+void process<#= TypeName #><#= Country #>(
+    csc::<#= ComponentNameLower #>::<#= TypeName #>Response& _return,
+    const ::csc::<#= ComponentNameLower #>::<#= TypeName #>Request& request);
+
+// SOURCE ******************
+
+void CscServiceImplPxVerbund::process<#= TypeName #><#= Country #>(
+    csc::<#= ComponentNameLower #>::<#= TypeName #>Response& _return,
+    const ::csc::<#= ComponentNameLower #>::<#= TypeName #>Request& request)
+{
+    get<#= ComponentName #>Handler()->process<#= TypeName #><#= Country #>(_return, request);
+}
+
+<# SaveStub($"{TypeName}_cscserviceimplpxverbund.stub"); #>

@@ -1,0 +1,1934 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="libsrc">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="include">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="TourDetermination">
+      <UniqueIdentifier>{fa3e5a47-0ec8-4eb4-b412-8a38d605b398}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TourDetermination\CustomerTour">
+      <UniqueIdentifier>{20935226-1905-45a3-9c65-6040ec8636d4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TourDetermination\TourMasterData">
+      <UniqueIdentifier>{1dc41527-e852-4982-8a91-c138dbd1dcd2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TourDetermination\TourUtil">
+      <UniqueIdentifier>{7e343d4f-0c25-4771-8c08-25c4e068c98d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TourDetermination\TourAssignmentUtil">
+      <UniqueIdentifier>{de1cf41e-a95c-40ce-8e14-9cc972eb5fbd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TourDetermination\TourManager">
+      <UniqueIdentifier>{2fde00df-6ec9-4805-9336-3b249f8ae1db}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TourDetermination\TourInfo">
+      <UniqueIdentifier>{163cd5d4-d39c-400d-90cb-6ba506b62344}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\pxbase">
+      <UniqueIdentifier>{7962572a-f661-441d-932c-b3794afe0233}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\types">
+      <UniqueIdentifier>{5e992d52-bafc-48cb-b692-5ace6f9fd904}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ComponentManagers">
+      <UniqueIdentifier>{cef25bf4-30a1-4462-be2b-6d8a25d84851}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ComponentManagers\impl">
+      <UniqueIdentifier>{13a33886-7664-49e2-ba77-d51b1084a24b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ComponentManagers\interface">
+      <UniqueIdentifier>{831cb83c-c188-4023-8b94-050f1bd92cec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="files">
+      <UniqueIdentifier>{f4c538ac-858d-4494-ba0c-6f90d637c1f5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TourDetermination\EmergencyService">
+      <UniqueIdentifier>{2308fcf3-5958-4357-9334-f481d3749be3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="tcawrap">
+      <UniqueIdentifier>{b96ea840-019d-40ac-becc-362178e55485}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ibtparallel">
+      <UniqueIdentifier>{c342f569-2654-4824-98d7-06a06b70970a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\Pricing">
+      <UniqueIdentifier>{4f1390f2-3534-455c-a31c-c24a85ed0c5f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="pxOrder">
+      <UniqueIdentifier>{ed790d8f-0596-40a3-a673-8744abfbd8c4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="pxOrder\pxOrderItem">
+      <UniqueIdentifier>{653cae37-4d7b-4c5f-8a08-c4d0332d0f7c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="pxOrder\pxOrderHead">
+      <UniqueIdentifier>{1f59b047-16da-4bad-af6b-2d73ee3385f0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="pxOrder\pxOrderItem\SubsequentDelivery">
+      <UniqueIdentifier>{6d61ec5f-6f44-4c0a-a674-02f3023c62b9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="pxOrder\pxOrderItem\Discount">
+      <UniqueIdentifier>{fad904fc-c311-48c8-9a51-6945fc5fd378}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="pxOrder\pxOrderItem\InterBranchTransfer">
+      <UniqueIdentifier>{ed984a4c-1631-4ea7-ae5d-92d36fcf2c44}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SubsequentDelilvery">
+      <UniqueIdentifier>{f8043e67-0b85-4dd7-b957-ed2b25893b17}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="libsrc\articlequota.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\articletext.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\artoldprice.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\artprice.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\artpricl.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\artreservation.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\artrip.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\artspecialcond.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\artsto.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\artstol.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\avp.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\balancecollect.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\branch.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\calcdiscountutil.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\cremamailhandler.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\cscbatchcheckorderpos.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\cstbase.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\cstbasel.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\cstotype.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\cstquery.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\cstshortterms.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\custgrpflagtypes.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\custnexttourid.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\customergroup.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\customergrpflags.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\custparkdelorder.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\dealervolume.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\debitlimit.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\emailhandler.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\encloserscale.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\eventreason.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\fartikel.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\gblutil.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\generalcalcavp.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\goodsdelivery.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\holiday.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\iartikel.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\itemaddondiscount.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\itm2pmos.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\itmaldel.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\itmalternate.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\itmartquota.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\itmauxsh.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\itmcalculatecharge.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\itmcalculation.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\itmcore.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\itmcreditlimit.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\itmdeldelivery.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\itmdispo.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\itmentry.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\itmentryproforma.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\itmerror.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\itmibtsubstitution.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\itmibtutil.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\itmoverdrive.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\itmpackunit.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\itmprice.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\itmpromoquota.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\itmpromoscalemembers.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\itmquery.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\itmrange.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\itmrestdel.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\itmrollback.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\itmsepauxpos.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\itmsepcontainer.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\itmsepprisoutil.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\itmsepreferencenr.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\itmstock.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\itmtargetpromo.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\itmtargetpromoutil.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\itmtender.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\itmterms.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\itmundo.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\itmundoredoutil.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\itmundoredubg.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\itmupdateibtpos.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\itmupdte.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\itmwritekdauftragposrefund.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\itmxmlentry.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\itmxmlutil.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\msv3order.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\msv3orderlist.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\msv3orderlistiter.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\narctransfer.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\number.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\oclparam.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\oeorigintypes.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\oeparam.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\oerestrictions.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\oerestrictiontypes.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\ord2pmos.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\ordaddonchargeitem.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\ordauxd.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\ordbase.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\ordbasel.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\ordbesttargetpromotion.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\ordcancelsumdayturnover.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\ordcancl.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\ordchcst.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\ordcheckdiscountlist.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\ordcheckpromovalidity.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\ordclose.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\ordcollectiv.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\ordcontainerlevel.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\ordcstdiscacc.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\ordcstdiscaccvse.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\ordcustcondition.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\orddaynightmerge.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\ordddprocessing.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\orddeldelivery.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\ordencloserscale.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\ordend.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\ordercalcmode.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\ordercriteria.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\orderdiscacc.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\orderperiod.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\orderperiodlist.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\orderperiodlistiter.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\orderposcalcmode.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\orderposchange.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\orderposevent.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\orderpospromo.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\orderprolink.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\orderremarks.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\orderremarkslist.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\orderremarktypes.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\orderremarktypeslist.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\orderxmlvalues.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\ordevent.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\ordibtutil.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\orditem.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\orditemproforma.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\orditemtemporary.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\ordmsv3.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\ordnarctransfer.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\ordopen.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\ordoverdrive.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\ordproformainvoice.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\ordpromotionquota.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\ordquery.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\ordrange.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\ordrangeutil.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\ordrecalculate.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\ordroute.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\ordsepbigorder.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\ordsepcappositions.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\ordsepcontainer.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\ordseplistfive.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\ordsepmanufacturerpositions.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\ordseppositivlist.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\ordseppricetypes.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\ordseppriso.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\ordsepreferencenr.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\ordseputil.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\ordsplittibtpos.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\ordtargetpromo.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\ordtargetpromoutil.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\ordtaxvalues.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\ordtender.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\ordtype.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\ordutil.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\ordvalue.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\ordvdate.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\ordvtran.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\ordxmlutil.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\otcore.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\parameter.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\posparking.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\promotioncollect.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\promotionquota.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\promotionquotacst.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\promotions.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\promotionscale.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\pxorder.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\pxorderitemtour.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\pxstockbooking.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\range.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\rangecollect.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\rangecontrole.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\rangemember.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\rartikel.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\refnrcollect.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\rouplan.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\routeconstime.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\routeweek.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\seporderartgrp.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\session.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\shuttlecustinfo.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\stktrans.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\stockentry.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\stockreceipt.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\stockreceiptutil.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\stockrev.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\subordertype.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\taskcntl.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\taxrates.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\taxtab.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tcasession.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tendercustomer.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tenderhead.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tenderpos.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tenderprogress.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\timetype.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\toteinfo.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\txtdoc.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\valuescollect.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\vartikellokal.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\xmcore.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\xmitcntl.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\xmitem.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\xmlutil.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\manufacturergroup.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\martikel.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\martikelfr.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\msgger.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\kdauftragdebtrel.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\kdauftragposrefund.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\itmattributes.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\itmdiscount.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\device.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\direct.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\discount.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\discountordtyp.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\discountperformance.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\discountutil.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\dkrakresult.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\donepromoquotas.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\calcdiscount.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\calcdiscpct.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\computer.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\comtype.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\constimecollect.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\countrycodes.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\cpvalidityperiod.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\cremamail.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\cstbusy.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\cstcalcavp.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\cstdiscacc.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\cstgroup.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\cstordnr.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\cstpaymentterms.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\cstprint.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\cstroute.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\cstseporderartgrp.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\cstterms.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\custbaseinformation.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\custdeldelivery.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\custdisccondition.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\custinfo.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\customersurcharge.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\custpharmgroup.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\custrouteconstime.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\custrouteweek.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\custrouting.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\custstockreserved.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\artaccnt.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\artalt.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\artaltl.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\artcompack.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\artdiscountinfo.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\artdispo.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\artean.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\artflagf.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\artflagm.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\artflags.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\articlecharge.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\articlecodes.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\articlegroup.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\articleinfo.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\articlelppr.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\articlepackunit.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\xmorder.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\xmordermsv3.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\xmspecfu.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\xmsplittorder.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\xmsubordertype.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\pxstockbulkinquiry.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\ordrangegroupcondition.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\ordrangegroupconditionutil.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\discountcalculation.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\csccustomer.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\customerbusinesshours.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\customerbusinesshourslist.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\ibtbranches.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\ibtbrancheslist.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\dkrakbookordervaluestmt.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\dkrakcanceldeldeliveryorderstmt.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\dkrakinvoicelockedstmt.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\dkraklockstmt.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\dkrakprioritystmt.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\dkrakreleasechangestmt.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\dkrakreleasestmt.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\dkrakstatement.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\dkrakusagestmt.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\itmundoredoposrefund.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\customerspecials.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\orderrelationnotypelist.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\orderrelationnotype.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\orderrelationnolist.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\orderrelationno.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\articlesubstitutionutil.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\ibttype.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\customertour.cpp">
+      <Filter>TourDetermination\CustomerTour</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\customertourlist.cpp">
+      <Filter>TourDetermination\CustomerTour</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tourmasterdata.cpp">
+      <Filter>TourDetermination\TourMasterData</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tourmasterdatalist.cpp">
+      <Filter>TourDetermination\TourMasterData</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tourutil.cpp">
+      <Filter>TourDetermination\TourUtil</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tourassignmentutil.cpp">
+      <Filter>TourDetermination\TourAssignmentUtil</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tourmanager.cpp">
+      <Filter>TourDetermination\TourManager</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tourinfo.cpp">
+      <Filter>TourDetermination\TourInfo</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\vartikellokallist.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\pxsessioninitialization.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\pxerrorloggable.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\msv3postrestdelivery.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\ordcheckrestdeliveryposlist.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\ordreleaserestdeliveryitems.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\logkdauftragposrab.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\ordlogitmdiscountvaluepct.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\kdauftragposinfo.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\salesman.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\sessionfactory.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\pxrecord.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\invalidsessionexception.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\pxconstants.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\ordseptour.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\pxsuppldeliveryinfo.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\customerorderlockentry.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\ordclosedeliveryposatonce.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\callbackcomponentmanager.cpp">
+      <Filter>ComponentManagers\impl</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\services.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\pxlockaccessorerrorhandler.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\pxlockaccessordecorator.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\emergencyservice.cpp">
+      <Filter>TourDetermination\EmergencyService</Filter>
+    </ClCompile>
+    <ClCompile Include="tcawrap\cics.c">
+      <Filter>tcawrap</Filter>
+    </ClCompile>
+    <ClCompile Include="tcawrap\connection.c">
+      <Filter>tcawrap</Filter>
+    </ClCompile>
+    <ClCompile Include="tcawrap\error.c">
+      <Filter>tcawrap</Filter>
+    </ClCompile>
+    <ClCompile Include="tcawrap\funccall.c">
+      <Filter>tcawrap</Filter>
+    </ClCompile>
+    <ClCompile Include="tcawrap\tcawrap.c">
+      <Filter>tcawrap</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\ibtrequesthandler.cpp">
+      <Filter>ibtparallel</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\ibtbrancharticleconfig.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\pxtransmissionresponse.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\ibtassortmenttype.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\itmibtnleveldelivery.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\ordcommonproformainvoice.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\itembatch.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\calcavp.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\ordsepibtbranch.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\orderaseorderpositiondiscountentry.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\ordspecialomgrebatehandling.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\pxregistersprices.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\pxnhifprices.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\delpos.cpp">
+      <Filter>SubsequentDelilvery</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\dellog.cpp">
+      <Filter>SubsequentDelilvery</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\pxcustomerflags.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\calcdiscpct.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxxmldefs.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxartacc.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxartalt.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxartbas.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxartcls.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxartcompack.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxartdiscountinfo.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxartdsp.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxartean.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxartflf.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxartflm.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxarticlecharge.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxarticlecodes.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxarticlegroup.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxarticleinfo.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxarticlelppr.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxarticlequota.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxarticletext.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxartmas.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxartmasfr.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxartoldprice.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxartpackunit.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxartprc.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxartrem.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxartreservation.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxartrip.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxartspecialcond.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxartsto.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxbalancecollect.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxbartik.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxbranch.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxcalcdiscount.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxcomput.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxcomtyp.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxconstimecollect.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxcountrycodes.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxcpvalidityperiod.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxcremamail.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxcstbtm.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxcstcalcavp.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxcstdiscacc.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxcstdiscaccdef.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxcsterm.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxcstgrp.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxcstonr.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxcstpaymentterms.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxcstprint.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxcstprm.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxcstrou.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxcstseporderartgrp.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxcustbaseinformation.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxcustdeldelivery.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxcustdisccondition.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxcustinf.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxcustomersurcharge.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxcustpharmgroup.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxcustrouteconstime.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxcustrouteweek.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxcustrouting.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxcuststockreserved.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxdefs.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxdevice.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxdirect.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxdiscountordtyp.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxdkrakresult.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxdonepromoquotas.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxencloserscale.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxgoodsdeldefs.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxholidaydef.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxitemattributes.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxitemdiscount.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxkdauftragdebtrel.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxkdauftragposrefund.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxmanufacturergroup.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxnarctransfer.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxnumb.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxocldef.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxoclpar.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxordercalcmode.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxordercriteria.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxorderdiscacc.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxorderposcalcmode.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxorderposchange.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxorderpospromo.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxorderprolink.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxordtaxvalues.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxordvtr.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxotdef.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxparameterdef.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxposparking.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxpromotioncollect.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxpromotionquota.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxpromotionquotacst.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxpromotions.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxrange.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxrangecollect.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxrangecontrol.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxrangemember.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxrefnrcollect.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxrouteconstime.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxroutedef.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxrouteweek.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxseporderartgrp.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxshuttlecustinfo.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxstkrev.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxstktra.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxstockentry.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxsubordertype.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxtaxrates.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxtaxtab.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxtcadef.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxtcarecord.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxtcasession.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxttype.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxvaluescollect.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\articleaccountinfo.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\cremamailhandler.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\emailhandler.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\iarticlestockbooking.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxartflg.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxartvza.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxcstbas.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxcstot.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxcustgrpflagtypes.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxcustomergroup.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxcustomergrpflags.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxdealervolume.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxdebitlimit.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxdiscount.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxdiscountdef.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxeventreason.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxgeneralcalcavp.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxgoodsdelivery.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxholiday.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxiartik.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxitem.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxitmdef.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxmsv3order.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxoeorigintypes.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxoeparm.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxoerestrictions.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxoerestrictiontypes.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxorddef.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxorder.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxorderperiod.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxorderposevent.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxorderremarks.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxorderremarktypes.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxordervalues.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxordevt.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxordflg.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxordpr_.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxordtyp.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxparameter.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxpromotionscale.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxroute.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxsess.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxstockbooking.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxtaskcl.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxtendercustomer.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxtenderhead.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxtenderpos.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxtenderprogress.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxtxtdoc.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxvartikellokal.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxxmit.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxtoteinfo.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxorderitemtour.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxstockbulkinquiry.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxverbund_version.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\csccustomer.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\customerbusinesshours.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\customerbusinesshourslist.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ibtbranches.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ibtbrancheslist.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxcustomerspecials.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxorderrelationnotype.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxorderrelationno.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\articlesubstitutionutil.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ibttype.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\customertourlist.hpp">
+      <Filter>TourDetermination\CustomerTour</Filter>
+    </ClInclude>
+    <ClInclude Include="include\customertour.hpp">
+      <Filter>TourDetermination\CustomerTour</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tourmasterdata.hpp">
+      <Filter>TourDetermination\TourMasterData</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tourmasterdatalist.hpp">
+      <Filter>TourDetermination\TourMasterData</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tourutil.hpp">
+      <Filter>TourDetermination\TourUtil</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tourassignmentutil.hpp">
+      <Filter>TourDetermination\TourAssignmentUtil</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tourmanager.hpp">
+      <Filter>TourDetermination\TourManager</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tourinfo.hpp">
+      <Filter>TourDetermination\TourInfo</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxvartikellokallist.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxsessioninitialization.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxerrorloggable.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxkdauftragposinfo.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxsalesman.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\sessionfactory.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxsessionptr.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxdevicetypeenum.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxbase\pxrecord.hpp">
+      <Filter>include\pxbase</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxbase\pxconstants.hpp">
+      <Filter>include\pxbase</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxsuppldeliveryinfo.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\customerorderlockentry.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\icallbackcomponentmanager.hpp">
+      <Filter>ComponentManagers\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="include\impl\callbackcomponentmanager.hpp">
+      <Filter>ComponentManagers\impl</Filter>
+    </ClInclude>
+    <ClInclude Include="include\types\semikolon.h">
+      <Filter>include\types</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxservices.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxlockaccessorerrorhandler.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxlockaccessordecorator.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\emergencyservice.h">
+      <Filter>TourDetermination\EmergencyService</Filter>
+    </ClInclude>
+    <ClInclude Include="tcawrap\error.h">
+      <Filter>tcawrap</Filter>
+    </ClInclude>
+    <ClInclude Include="tcawrap\tcawrap.h">
+      <Filter>tcawrap</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxorderentryparamptr.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ibtrequesthandler.h">
+      <Filter>ibtparallel</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ibtbrancharticleconfig.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxtransmissionresponse.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ibtassortmenttype.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxitembatch.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\calcavp.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxordertransmitptr.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxarticlequotaptr.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxartbaseptr.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxregistersprices.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxnhifprices.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\iregisterspricegetter.h">
+      <Filter>include\Pricing</Filter>
+    </ClInclude>
+    <ClInclude Include="include\icustomerflaggetter.h">
+      <Filter>include\Pricing</Filter>
+    </ClInclude>
+    <ClInclude Include="include\inhifpricegetter.h">
+      <Filter>include\Pricing</Filter>
+    </ClInclude>
+    <ClInclude Include="include\iordertypegetter.h">
+      <Filter>include\Pricing</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxdellog.hpp">
+      <Filter>SubsequentDelilvery</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxdelpos.hpp">
+      <Filter>SubsequentDelilvery</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxcustomerflags.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="makefile" />
+    <None Include="files\frmsg.txt">
+      <Filter>files</Filter>
+    </None>
+    <None Include="files\frmsgu.txt">
+      <Filter>files</Filter>
+    </None>
+    <None Include="files\germsg.txt">
+      <Filter>files</Filter>
+    </None>
+    <None Include="files\hsmsg.txt">
+      <Filter>files</Filter>
+    </None>
+    <None Include="files\message.txt">
+      <Filter>files</Filter>
+    </None>
+    <None Include="include\types\bookingtypeenum.inc">
+      <Filter>include\types</Filter>
+    </None>
+    <None Include="include\types\origintypeenum.inc">
+      <Filter>include\types</Filter>
+    </None>
+    <None Include="include\types\pickingtypeenum.inc">
+      <Filter>include\types</Filter>
+    </None>
+    <None Include="include\types\positiontypeenum.inc">
+      <Filter>include\types</Filter>
+    </None>
+    <None Include="include\types\pricetypeenum.inc">
+      <Filter>include\types</Filter>
+    </None>
+    <None Include="include\types\batchstatusenum.inc">
+      <Filter>include\types</Filter>
+    </None>
+    <None Include="include\types\critlevelenum.inc">
+      <Filter>include\types</Filter>
+    </None>
+    <None Include="include\types\messagecodeenum.inc">
+      <Filter>include\types</Filter>
+    </None>
+    <None Include="include\types\xmlinfolevelenum.inc">
+      <Filter>include\types</Filter>
+    </None>
+    <None Include="include\types\documenttypeenum.inc">
+      <Filter>include\types</Filter>
+    </None>
+    <None Include="include\types\orderremarktypeenum.inc">
+      <Filter>include\types</Filter>
+    </None>
+    <None Include="include\types\returntypeenum.inc">
+      <Filter>include\types</Filter>
+    </None>
+    <None Include="include\types\returnreasonenum.inc">
+      <Filter>include\types</Filter>
+    </None>
+    <None Include="include\types\returnacceptancecheckresultenum.inc">
+      <Filter>include\types</Filter>
+    </None>
+    <None Include="include\types\orderrelationnotypeenum.inc">
+      <Filter>include\types</Filter>
+    </None>
+    <None Include="include\oeorigintypeenum.h">
+      <Filter>include</Filter>
+    </None>
+    <None Include="include\types\reservationtypeenum.inc">
+      <Filter>include\types</Filter>
+    </None>
+    <None Include="include\types\splitttypeenum.inc">
+      <Filter>include\types</Filter>
+    </None>
+    <None Include="include\types\splittorigintypeenum.inc">
+      <Filter>include\types</Filter>
+    </None>
+    <None Include="include\types\kindofdiscountenum.inc">
+      <Filter>include\types</Filter>
+    </None>
+    <None Include="include\types\articleinquiryperioddatetypeenum.inc">
+      <Filter>include\types</Filter>
+    </None>
+    <None Include="include\types\paymentsfilterenum.inc">
+      <Filter>include\types</Filter>
+    </None>
+    <None Include="include\types\cremaemailtypeenum.inc">
+      <Filter>include\types</Filter>
+    </None>
+    <None Include="include\types\cremauserlevelenum.inc">
+      <Filter>include\types</Filter>
+    </None>
+    <None Include="include\types\cremacloseenum.inc">
+      <Filter>include\types</Filter>
+    </None>
+    <None Include="include\types\transactiontypeenum.inc">
+      <Filter>include\types</Filter>
+    </None>
+  </ItemGroup>
+</Project>

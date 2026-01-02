@@ -1,0 +1,484 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Mit XMLSpy v2007 sp1 bearbeitet (http://www.altova.com) von C. Merkl (PHOENIX Pharmahandel AG & Co. KG) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:annotation>
+		<xs:documentation>Comment describing your root element</xs:documentation>
+	</xs:annotation>
+	<xs:simpleType name="Integer1to2Type">
+		<xs:annotation>
+			<xs:documentation>integer 1 to 2 digits</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:nonNegativeInteger">
+			<xs:totalDigits value="2"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="Integer1to3Type">
+		<xs:annotation>
+			<xs:documentation>integer 1 to 3 digits</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:nonNegativeInteger">
+			<xs:totalDigits value="3"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="Integer1to5Type">
+		<xs:annotation>
+			<xs:documentation>integer 1 to 5 digits</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:nonNegativeInteger">
+			<xs:totalDigits value="5"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="Integer1to7Type">
+		<xs:annotation>
+			<xs:documentation>integer 1 to 7 digits</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:nonNegativeInteger">
+			<xs:totalDigits value="7"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="Integer1to13Type">
+		<xs:annotation>
+			<xs:documentation>integer 1 to 13 digits</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:nonNegativeInteger">
+			<xs:totalDigits value="13"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="Integer1to14Type">
+		<xs:annotation>
+			<xs:documentation>integer 1 to 14 digits</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:nonNegativeInteger">
+			<xs:totalDigits value="14"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="String1Type">
+		<xs:annotation>
+			<xs:documentation>string 1digit</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1"/>
+			<xs:maxLength value="1"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="String0to4Type">
+		<xs:annotation>
+			<xs:documentation>string 0 to 4 digits</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:minLength value="0"/>
+			<xs:maxLength value="4"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="String0to5Type">
+		<xs:annotation>
+			<xs:documentation>string 0 to 5 digits</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:minLength value="0"/>
+			<xs:maxLength value="5"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="String2Type">
+		<xs:annotation>
+			<xs:documentation>string 2 digits</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:minLength value="2"/>
+			<xs:maxLength value="2"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="String1to4Type">
+		<xs:annotation>
+			<xs:documentation>string 1 to 4 digits</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1"/>
+			<xs:maxLength value="4"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="String1to9Type">
+		<xs:annotation>
+			<xs:documentation>string 1 to 9 digits</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1"/>
+			<xs:maxLength value="9"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="String1to20Type">
+		<xs:annotation>
+			<xs:documentation>string 1 to 20 digits</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1"/>
+			<xs:maxLength value="20"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="String1to40Type">
+		<xs:annotation>
+			<xs:documentation>string 1 to 40 digits</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1"/>
+			<xs:maxLength value="40"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="String0to50Type">
+		<xs:annotation>
+			<xs:documentation>string 1 to 50 digits</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:minLength value="0"/>
+			<xs:maxLength value="50"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="yesNoType">
+		<xs:annotation>
+			<xs:documentation>possible content:
+yes
+no</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="yes"/>
+			<xs:enumeration value="no"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="customerMiddlemanType">
+		<xs:annotation>
+			<xs:documentation>possible content:
+customer
+middleman</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="customer"/>
+			<xs:enumeration value="middleMan"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="infoLevelType">
+		<xs:annotation>
+			<xs:documentation>possible content:1, 2, 3 </xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:nonNegativeInteger">
+			<xs:enumeration value="1"/>
+			<xs:enumeration value="2"/>
+			<xs:enumeration value="3"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="languageType">
+		<xs:annotation>
+			<xs:documentation>possible content:
+de - deutsch
+en - englisch
+fr - franzoesisch
+hr - kroatisch
+rs - serbisch</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="de"/>
+			<xs:enumeration value="hr"/>
+			<xs:enumeration value="fr"/>
+			<xs:enumeration value="en"/>
+			<xs:enumeration value="rs"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="requestStatus">
+		<xs:annotation>
+			<xs:documentation>possible content:
+reqested
+notRequested
+all</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="requested"/>
+			<xs:enumeration value="notRequested"/>
+			<xs:enumeration value="all"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="dateType1">
+		<xs:annotation>
+			<xs:documentation>possible content:
+creation
+change
+all</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="creation"/>
+			<xs:enumeration value="change"/>
+			<xs:enumeration value="all"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="browseStatus">
+		<xs:annotation>
+			<xs:documentation>possible content:
+more - there is more data that can be requested
+atEnd - there is no more data to request
+</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="more"/>
+			<xs:enumeration value="atEnd"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="availabilityType">
+		<xs:annotation>
+			<xs:documentation>possible content:
+yes - article is available
+no - article is not available</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="yes"/>
+			<xs:enumeration value="no"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="typeArticleInformationFR">
+		<xs:annotation>
+			<xs:documentation>type with article information attributes</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="unity" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>unity of the article</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="articleName" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>name of the article</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="pharmaceuticalForm" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>pharmaceutical form of the article</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="EAN" type="Integer1to13Type" use="optional">
+			<xs:annotation>
+				<xs:documentation>European Account Number</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="pharmacyPurchasePrice" type="xs:decimal" use="optional">
+			<xs:annotation>
+				<xs:documentation>normal purchase price for the pharmacy</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="customerPurchasePrice" type="xs:decimal" use="optional">
+			<xs:annotation>
+				<xs:documentation>customer specific price for the pharmacy (discounts deducted)</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="pharmacyRetailPrice" type="xs:decimal" use="optional">
+			<xs:annotation>
+				<xs:documentation>retail price</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="lpprPrice" type="xs:decimal" use="optional">
+			<xs:annotation>
+				<xs:documentation>LPPR/TFR price</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="personalizedPrice" type="xs:decimal" use="optional">
+			<xs:annotation>
+				<xs:documentation>personalized price</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="valueTFR" type="xs:decimal">
+			<xs:annotation>
+				<xs:documentation>refund amount TFR </xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="priceLPPR" type="xs:decimal">
+			<xs:annotation>
+				<xs:documentation>LPPR price</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="typeArticleMasterDataFR">
+		<xs:annotation>
+			<xs:documentation>master data information about the article</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="unity" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Unit of the article. For example "10 Pieces".</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="articleName" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Name of the article</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="pharmaceuticalForm" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Form of the article. For example "pills".</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="EAN" type="Integer1to13Type" use="optional">
+			<xs:annotation>
+				<xs:documentation>European Account Number</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="pharmacyPurchasePrice" type="xs:decimal">
+			<xs:annotation>
+				<xs:documentation>the normal purchase price a pharmacy has to pay</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="customerPurchasePrice" type="xs:decimal">
+			<xs:annotation>
+				<xs:documentation>customer specific price for the pharmacy (discounts deducted)</xs:documentation>
+				<xs:documentation>AEP - kundenspez. Rabatte</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="pharmacyRetailPrice" type="xs:decimal" use="optional">
+			<xs:annotation>
+				<xs:documentation>the normal sales price a customer of the pharmacy has to pay</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="lpprPrice" type="xs:decimal" use="optional">
+			<xs:annotation>
+				<xs:documentation>old field for LPPR/TFR price</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="personalizedPrice" type="xs:decimal" use="optional">
+			<xs:annotation>
+				<xs:documentation>personalized price</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="VAT" type="xs:decimal">
+			<xs:annotation>
+				<xs:documentation>VAT in percent</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="manufacturerName" type="xs:string">
+			<xs:annotation>
+				<xs:documentation>name of the manufacturer</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="dateOfUpdate" type="xs:date">
+			<xs:annotation>
+				<xs:documentation>is the date of the last change or the new plant of these article</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="valueTFR" type="xs:decimal">
+			<xs:annotation>
+				<xs:documentation>refund amount TFR </xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="priceLPPR" type="xs:decimal">
+			<xs:annotation>
+				<xs:documentation>LPPR price</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:element name="errorInformation">
+		<xs:annotation>
+			<xs:documentation>element will be set for error information</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:attribute name="code" type="String1to9Type" use="required">
+				<xs:annotation>
+					<xs:documentation>error code</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+			<xs:attribute name="message" type="xs:string" use="required">
+				<xs:annotation>
+					<xs:documentation>error text</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="internal">
+		<xs:annotation>
+			<xs:documentation>only for internal use of the wholesaler IT department</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:attribute name="id" type="xs:string" use="optional"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="client">
+		<xs:annotation>
+			<xs:documentation>customer data</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:attribute name="branchNumber" type="Integer1to2Type" use="required">
+				<xs:annotation>
+					<xs:documentation>identifies the PHOENIX location</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+			<xs:attribute name="customerNumber" type="Integer1to7Type" use="required">
+				<xs:annotation>
+					<xs:documentation>customer number of the pharmacy in the order entry system of the wholesaler (PHOENIX)</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="browseRequest">
+		<xs:annotation>
+			<xs:documentation>this element is used for messages that deliver content page by page</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:attribute name="requestKey" type="xs:string" use="required">
+				<xs:annotation>
+					<xs:documentation>put in the key of the last response to get the next page</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="browseResponse">
+		<xs:annotation>
+			<xs:documentation>used for messages that deliver content page by page</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:attribute name="page" type="browseStatus" use="required">
+				<xs:annotation>
+					<xs:documentation>atEnd - this is the last page
+more - there is more data to request</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+			<xs:attribute name="nextKey" type="xs:string" use="optional">
+				<xs:annotation>
+					<xs:documentation>use this key in the request for the next page</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="byPeriod">
+		<xs:annotation>
+			<xs:documentation>possibility to select by date</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:attribute name="dateType" type="dateType1" use="required">
+				<xs:annotation>
+					<xs:documentation>creation: date of creation
+change: date of change
+all: date of creation or date of change</xs:documentation>
+					<xs:documentation>change: date of changement of the article</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+			<xs:attribute name="dateFrom" type="xs:date" use="required">
+				<xs:annotation>
+					<xs:documentation>begin of the period</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+			<xs:attribute name="dateTo" type="xs:date" use="required">
+				<xs:annotation>
+					<xs:documentation>end of the period</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="tour">
+		<xs:annotation>
+			<xs:documentation>tour information</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:attribute name="time" type="xs:string" use="optional">
+				<xs:annotation>
+					<xs:documentation>identifies the tour the goods will be delivered</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+			<xs:attribute name="date" type="xs:date" use="optional">
+				<xs:annotation>
+					<xs:documentation>date of the tour</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

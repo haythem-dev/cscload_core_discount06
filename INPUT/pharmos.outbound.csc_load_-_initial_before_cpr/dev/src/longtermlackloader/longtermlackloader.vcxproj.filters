@@ -1,0 +1,207 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="UseCase">
+      <UniqueIdentifier>{6B18F942-74BE-1014-9997-92A2DE8461E3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UseCase\MainUC">
+      <UniqueIdentifier>{6B18FA06-74BE-1014-9997-92A2DE8461E3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure">
+      <UniqueIdentifier>{6B18FA86-74BE-1014-9997-92A2DE8461E3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\CommandLine">
+      <UniqueIdentifier>{6B18FAFA-74BE-1014-9997-92A2DE8461E3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\Login">
+      <UniqueIdentifier>{6B18FB6D-74BE-1014-9997-92A2DE8461E3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\CommandLine\CmdLineOption">
+      <UniqueIdentifier>{6B18FBE0-74BE-1014-9997-92A2DE8461E3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\CommandLine\CmdLineEvaluator">
+      <UniqueIdentifier>{6B18FC52-74BE-1014-9997-92A2DE8461E3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ComponentManager">
+      <UniqueIdentifier>{6B18FCC1-74BE-1014-9997-92A2DE8461E3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ComponentManager\ApplCompMgr">
+      <UniqueIdentifier>{6B18FD2F-74BE-1014-9997-92A2DE8461E3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ComponentManager\ApplCompMgr\Interface">
+      <UniqueIdentifier>{6B18FD9F-74BE-1014-9997-92A2DE8461E3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ComponentManager\ApplCompMgr\Interface\UseCaseGetter">
+      <UniqueIdentifier>{6B18FE0E-74BE-1014-9997-92A2DE8461E3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ComponentManager\ApplCompMgr\Impl">
+      <UniqueIdentifier>{6B18FE7C-74BE-1014-9997-92A2DE8461E3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ComponentManager\InfrastructureCompMgr">
+      <UniqueIdentifier>{6B18FEEA-74BE-1014-9997-92A2DE8461E3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\Setup">
+      <UniqueIdentifier>{6B18FF5B-74BE-1014-9997-92A2DE8461E3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\Setup\Interface">
+      <UniqueIdentifier>{6B18FFCB-74BE-1014-9997-92A2DE8461E3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\Setup\impl">
+      <UniqueIdentifier>{6B190039-74BE-1014-9997-92A2DE8461E3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\Parameter">
+      <UniqueIdentifier>{6B1900A7-74BE-1014-9997-92A2DE8461E3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Longtermlackloader">
+      <UniqueIdentifier>{6B19015E-74BE-1014-9997-92A2DE8461E3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Longtermlackloader\ApplController">
+      <UniqueIdentifier>{6B1901F1-74BE-1014-9997-92A2DE8461E3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="LongtermlackloaderVersion">
+      <UniqueIdentifier>{6B190285-74BE-1014-9997-92A2DE8461E3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\Loggerpool">
+      <UniqueIdentifier>{6B1902F6-74BE-1014-9997-92A2DE8461E3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\Accessor">
+      <UniqueIdentifier>{e4e4b245-640e-4fad-9682-8464003f6104}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\Accessor\LongTermLackPkg">
+      <UniqueIdentifier>{bcf93805-b941-4a07-a774-3b7c721ebccb}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="usecase\mainuc.cpp">
+      <Filter>UseCase\MainUC</Filter>
+    </ClCompile>
+    <ClCompile Include="componentmanager\longtermlackloaderapplcompmgr.cpp">
+      <Filter>ComponentManager\ApplCompMgr\Impl</Filter>
+    </ClCompile>
+    <ClCompile Include="componentmanager\longtermlackloaderinfrastructurecompmgr.cpp">
+      <Filter>ComponentManager\InfrastructureCompMgr</Filter>
+    </ClCompile>
+    <ClCompile Include="infrastructure\cmdline\longtermlackloadercmdlineevaluator.cpp">
+      <Filter>Infrastructure\CommandLine\CmdLineEvaluator</Filter>
+    </ClCompile>
+    <ClCompile Include="infrastructure\cmdline\longtermlackloadercmdlineoptioncollection.cpp">
+      <Filter>Infrastructure\CommandLine\CmdLineOption</Filter>
+    </ClCompile>
+    <ClCompile Include="longtermlackloader\main.cpp">
+      <Filter>Longtermlackloader</Filter>
+    </ClCompile>
+    <ClCompile Include="longtermlackloader\longtermlackloaderapplctrl.cpp">
+      <Filter>Longtermlackloader\ApplController</Filter>
+    </ClCompile>
+    <ClCompile Include="infrastructure\setup\longtermlackloaderinfrastructuresetup.cpp">
+      <Filter>Infrastructure\Setup\impl</Filter>
+    </ClCompile>
+    <ClCompile Include="infrastructure\parameter\dbparameter.cpp">
+      <Filter>Infrastructure\Parameter</Filter>
+    </ClCompile>
+    <ClCompile Include="infrastructure\loggerpool\longtermlackloader_loggerpool.cpp">
+      <Filter>Infrastructure\Loggerpool</Filter>
+    </ClCompile>
+    <ClCompile Include="infrastructure\accessor\longtermlackpgk\longtermlackacc.cpp">
+      <Filter>Infrastructure\Accessor\LongTermLackPkg</Filter>
+    </ClCompile>
+    <ClCompile Include="infrastructure\parameter\dbactionparameter.cpp">
+      <Filter>Infrastructure\Parameter</Filter>
+    </ClCompile>
+    <ClCompile Include="longtermlackloaderversion\longtermlackloader_version.cpp">
+      <Filter>LongtermlackloaderVersion</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="usecase\mainuc.h">
+      <Filter>UseCase\MainUC</Filter>
+    </ClInclude>
+    <ClInclude Include="usecase\mainucptr.h">
+      <Filter>UseCase\MainUC</Filter>
+    </ClInclude>
+    <ClInclude Include="componentmanager\iusecasegetter.h">
+      <Filter>ComponentManager\ApplCompMgr\Interface\UseCaseGetter</Filter>
+    </ClInclude>
+    <ClInclude Include="componentmanager\iusecasegetterptr.h">
+      <Filter>ComponentManager\ApplCompMgr\Interface\UseCaseGetter</Filter>
+    </ClInclude>
+    <ClInclude Include="componentmanager\longtermlackloaderapplcompmgrptr.h">
+      <Filter>ComponentManager\ApplCompMgr\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="componentmanager\longtermlackloaderapplcompmgr.h">
+      <Filter>ComponentManager\ApplCompMgr\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="componentmanager\longtermlackloaderinfrastructurecompmgrptr.h">
+      <Filter>ComponentManager\InfrastructureCompMgr</Filter>
+    </ClInclude>
+    <ClInclude Include="componentmanager\longtermlackloaderinfrastructurecompmgr.h">
+      <Filter>ComponentManager\InfrastructureCompMgr</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\login\login_definitions.h">
+      <Filter>Infrastructure\Login</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\cmdline\longtermlackloadercmdlineevaluator.h">
+      <Filter>Infrastructure\CommandLine\CmdLineEvaluator</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\cmdline\longtermlackloadercmdlineoption_definitions.h">
+      <Filter>Infrastructure\CommandLine\CmdLineOption</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\cmdline\longtermlackloadercmdlineoptioncollection.h">
+      <Filter>Infrastructure\CommandLine\CmdLineOption</Filter>
+    </ClInclude>
+    <ClInclude Include="longtermlackloader\longtermlackloaderapplctrl.h">
+      <Filter>Longtermlackloader\ApplController</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\setup\longtermlackloaderinfrastructuresetup.h">
+      <Filter>Infrastructure\Setup\impl</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\setup\longtermlackloaderinfrastructuresetupptr.h">
+      <Filter>Infrastructure\Setup\impl</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\cmdline\longtermlackloadercmdlineevaluatorptr.h">
+      <Filter>Infrastructure\CommandLine\CmdLineEvaluator</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\parameter\dbparameter.h">
+      <Filter>Infrastructure\Parameter</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\parameter\dbparameterptr.h">
+      <Filter>Infrastructure\Parameter</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\loggerpool\longtermlackloader_loggerpool.h">
+      <Filter>Infrastructure\Loggerpool</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\setup\ilongtermlackloaderdbconnectiongetter.h">
+      <Filter>Infrastructure\Setup\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\setup\ilongtermlackloaderdbconnectiongetterconstptr.h">
+      <Filter>Infrastructure\Setup\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\accessor\tables_definitions.h">
+      <Filter>Infrastructure\Accessor</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\accessor\longtermlackpgk\longtermlackacc.h">
+      <Filter>Infrastructure\Accessor\LongTermLackPkg</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\accessor\longtermlackpgk\longtermlackacc_definitions.h">
+      <Filter>Infrastructure\Accessor\LongTermLackPkg</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\accessor\properties_definitions.h">
+      <Filter>Infrastructure\Accessor</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\parameter\dbactionparameter.h">
+      <Filter>Infrastructure\Parameter</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\setup\ilongtermlackloaderlogingetter.h">
+      <Filter>Infrastructure\Setup\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\setup\ilongtermlackloaderlogingetterptr.h">
+      <Filter>Infrastructure\Setup\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="longtermlackloaderversion\longtermlackloader_version.h">
+      <Filter>LongtermlackloaderVersion</Filter>
+    </ClInclude>
+    <ClInclude Include="longtermlackloader\longtermlackloader_definitions.h">
+      <Filter>Longtermlackloader\ApplController</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

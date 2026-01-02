@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="include">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="libsrc">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\bitmap.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\clock.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\collect.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\database.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\date.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\dlistcol.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\error.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\gdlist.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\message.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\messagedefs.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\money.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ndefs.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\nntypes.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\nsecfile.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pdlist.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\string.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\time.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\zone.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="libsrc\bitmap.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\clock.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\date.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\dbcore.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\dbrec.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\dbrecset.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\dlistcol.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\error.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\gdlist.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\gdlistit.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\message.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\nsecfile.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\pdlist.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\string.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\string_.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\stringio.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\stringsb.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\time.cpp">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="makefile" />
+  </ItemGroup>
+</Project>

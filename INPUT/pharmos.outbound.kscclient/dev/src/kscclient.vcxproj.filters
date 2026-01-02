@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{6ea6fd79-5ade-4bce-bd4f-f4a80bf9d6ed}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;hpj;bat;for;f90</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{0ad09f9b-720a-49c7-9a50-77040d778b8a}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;fi;fd</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="callksc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="version.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="articleinfostruct.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="articleinfostructcode.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="articleinquiry.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="callksc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="orderdata.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="orderinfo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="articleinquirybulk.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="kscclient_version.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

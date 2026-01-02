@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<invoiceRequest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" language="de">
+	<invoices>
+		<client branchNumber="71" customerNumber="9999011"/>
+		<byPeriod dateFrom="2006-01-10" dateTo="2006-01-23" requestStatus="all"/>
+	</invoices>
+</invoiceRequest>

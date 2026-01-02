@@ -1,0 +1,22 @@
+﻿<#
+// #############################################################
+// Thrift cscservicebatchhandler STUB
+// #############################################################
+#>
+
+// HEADER ******************
+
+    void <#= RequestName #>(::csc::<#= ComponentNameLower #>::<#= TypeName #>Response& _return, const ::csc::<#= ComponentNameLower #>::<#= TypeName #>Request& request)
+    {
+        std::stringstream in;
+        in << "IN: " << request;
+        LOG4CPLUS_DEBUG(libcsc::LoggerPool::getLoggerSession(), in.str());
+
+        m_Impl->process<#= TypeName #><#= Country #>(_return, request);
+
+        std::stringstream out;
+        out << "OUT: " << _return;
+        LOG4CPLUS_DEBUG(libcsc::LoggerPool::getLoggerSession(), out.str());
+    }
+
+<# SaveStub($"{TypeName}_cscservicebatchhandler.stub"); #>

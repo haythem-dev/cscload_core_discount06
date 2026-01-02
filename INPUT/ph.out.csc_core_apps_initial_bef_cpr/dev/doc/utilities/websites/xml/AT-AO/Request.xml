@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ArgeOrderRequest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://salesweb.phoenix-ag.de/wsxmlaustria/schemas/ArgeOrderRequest.xsd" Version="3.00" Language="de">
+	<General RequestId="Test001" TimeStamp="2011-11-25T13:09:30">
+		<Customer Id="9999011" SoftwareId="A5"/>
+		<Supplier Id="PHO" Branch="61"/>
+	</General>
+	<Order OrderNumber="1" OrderDate="2011-11-25" >
+				<OrderItem PosId="1" Quantity="1">
+			<ItemId Type="PZN" Id="9975"/>
+		</OrderItem>
+	</Order>
+</ArgeOrderRequest>
+
+

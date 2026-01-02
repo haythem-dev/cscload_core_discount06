@@ -1,0 +1,56 @@
+<!--
+   Licensed to the Apache Software Foundation (ASF) under one
+   or more contributor license agreements.  See the NOTICE file
+   distributed with this work for additional information
+   regarding copyright ownership.  The ASF licenses this file
+   to you under the Apache License, Version 2.0 (the
+   "License"); you may not use this file except in compliance
+   with the License.  You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing,
+   software distributed under the License is distributed on an
+   "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+   KIND, either express or implied.  See the License for the
+   specific language governing permissions and limitations
+   under the License.
+-->
+<ivy-module version="2.0" xmlns:e="http://ant.apache.org/ivy/extra">
+  <info organisation="eu.phoenixgroup" module="csc_core_applications" revision="11.03.21.38-${platform}"/>
+
+  <configurations>
+    <conf name="win32" />
+    <conf name="win64" />
+    <conf name="aix" />
+    <conf name="thrift_idl"/>
+    <conf name="legacy_idl"/>
+    <conf name="compile" visibility="private" />
+  </configurations>
+
+  <publications>
+    <artifact name="csc_core_applications" type="zip" ext="tar.gz" conf="aix"/>
+    <artifact name="ae"                    type="zip"              conf="win32"/>
+    <artifact name="csc_service_idl"       type="zip"              conf="thrift_idl"/>
+    <artifact name="csc_legacy_idl"        type="zip"              conf="legacy_idl"/>
+  </publications>
+
+  <dependencies>
+    <dependency org="eu.phoenixgroup" name="pplib"              rev="01.01.04.04"                  conf="aix+compile->*"/>
+    <dependency org="eu.phoenixgroup" name="hdatum"             rev="01.01.00.01"                  conf="aix+compile->*"/>
+    <dependency org="eu.phoenixgroup" name="liblockmanager"     rev="01.00.06.00"                  conf="aix+compile->*"/>
+    <dependency org="eu.phoenixgroup" name="libutil"            rev="00.04.04.09_ssuk-01.12.01.01" conf="aix+compile->*"/>
+    <dependency org="org.apache"      name="thrift_vs2010"      rev="0.9.3_vc10_3"                 conf="aix+compile->*"/>
+    <dependency org="com.github"      name="unittestpp"         rev="2.0.0-6-${platform}"          conf="aix+compile->*"/>
+
+    <dependency org="eu.phoenixgroup" name="pplib"              rev="01.01.05.03-${platform}"                   conf="win32,win64+compile->*"/>
+    <dependency org="eu.phoenixgroup" name="hdatum"             rev="01.02.00.00-${platform}"                   conf="win32,win64+compile->*"/>
+    <dependency org="eu.phoenixgroup" name="liblockmanager"     rev="01.01.00.00-${platform}"                   conf="win32,win64+compile->*"/>
+    <dependency org="eu.phoenixgroup" name="libutil"            rev="00.04.06.00_ssuk-01.13.02.00-${platform}"  conf="win32,win64+compile->*"/>
+    <dependency org="org.apache"      name="thrift"             rev="0.12.0-2-${platform}"                      conf="win32,win64+compile->*"/>
+    <dependency org="org.openssl"     name="openssl"            rev="1.1.1b-12-${platform}"                     conf="win32,win64+compile->*"/>
+    <dependency org="com.github"      name="unittestpp"         rev="2.0.0-6-${platform}"                       conf="win32,win64+compile->*"/>
+    <dependency org="com.bossoftware" name="tcaccess_libraries" rev="08.00-SP20-4-win32"                        conf="win32,win64+compile->*"/>
+  </dependencies>
+
+</ivy-module>

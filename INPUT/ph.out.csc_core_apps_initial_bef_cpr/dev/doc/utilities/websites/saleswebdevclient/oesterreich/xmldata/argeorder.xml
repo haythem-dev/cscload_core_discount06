@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ArgeOrderRequest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://salesweb.phoenix-ag.de/wsxmlaustria/schemas/ArgeOrderRequest.xsd" Version="3.00" Language="de">
+	<General RequestId="B01" TimeStamp="2006-11-24T10:07:52">
+		<Customer Id="9999011" SoftwareId="A5"/>
+		<Supplier Id="PHO" Branch="61"/>
+	</General>
+	<Order OrderNumber="2" OrderDate="2006-11-24" InvoiceType="SingleInvoice">
+		<OrderItem PosId="1" Quantity="25">
+			<ItemId Type="PZN" Id="9975"/>
+			<DeliveryTerms SubsequentDelivery="No"/>
+			<ItemNoteCustomer Type="OrderAcceptanceInfo" Text="Mitteilung an"/>
+			<ItemNoteCustomer Type="OrderAcceptanceInfo" Text="Auftragsannahme"/>
+		</OrderItem>
+		<OrderItem PosId="2" Quantity="30">
+			<ItemId Type="PZN" Id="9969"/>
+			<ItemNoteCustomer Type="DeliverynoteInfo" Text="Text am Lieferschein"/>
+		</OrderItem>
+	</Order>
+	<Order OrderNumber="3" OrderDate="2006-11-24">
+		<OrderItem PosId="1" Quantity="5">
+			<ItemId Type="PZN" Id="9952"/>
+		</OrderItem>
+		<OrderItem PosId="2" Quantity="10">
+			<ItemId Type="PZN" Id="9745"/>
+		</OrderItem>
+		<OrderItem PosId="3" Quantity="5">
+			<ItemId Type="Barcode" Id="1253763452234"/>
+			<DeliveryTerms SubsequentDelivery="FromOtherDC"  DeliverySortGroup="S0"/>
+		</OrderItem>
+		<OrderItem PosId="4" Quantity="5">
+			<ItemId Type="PZN" Id="8616"/>
+			<DeliveryTerms DeliverySortGroup="S0"/>
+		</OrderItem>
+	</Order>
+	<Service CallbackDesired="true">
+		<ServiceItem Type="Microcard" Quantity="10"> 
+			<ItemId Type="PZN" Id="4067"/>
+		</ServiceItem>
+		<ServiceItem Type="Microcard" Quantity="10"> 
+			<ItemId Type="PZN" Id="4009"/>
+		</ServiceItem>
+		<ServiceItem Type="Microcard" Quantity="10"> 
+			<ItemId Type="PZN" Id="0"/>
+		</ServiceItem>
+	</Service>	
+</ArgeOrderRequest>

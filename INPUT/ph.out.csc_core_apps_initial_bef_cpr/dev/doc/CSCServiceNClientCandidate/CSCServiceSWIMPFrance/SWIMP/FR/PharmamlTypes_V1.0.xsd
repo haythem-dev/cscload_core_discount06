@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- J.F Brunot (PHOENIX Pharmahandel AG & Co. KG) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<!--Définition des types complexes ENVELOPPE ATTRIBUTE Pharmaml-->
+	<xs:complexType name="ctPML_ENV_ATTRIBUTE">
+		<xs:attribute name="Version_Protocole" use="optional">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:pattern value="\d{1,2}\.\d{1,2}\.\d{1,2}\.\d{1,2}"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="Nature_Action" use="optional">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="REQ_EMISSION"/>
+					<xs:enumeration value="REQ_RECEPTION"/>
+					<xs:enumeration value="REP_EMISSION"/>
+					<xs:enumeration value="REP_RECEPTION"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="Id_Logiciel" use="optional">
+			<xs:simpleType>
+				<xs:restriction base="xs:normalizedString">
+					<xs:minLength value="1"/>
+					<xs:maxLength value="30"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="Version_Logiciel" use="optional">
+			<xs:simpleType>
+				<xs:restriction base="xs:normalizedString">
+					<xs:minLength value="1"/>
+					<xs:maxLength value="10"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="Id_Moteur" use="optional">
+			<xs:simpleType>
+				<xs:restriction base="xs:normalizedString">
+					<xs:minLength value="1"/>
+					<xs:maxLength value="30"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="Version_Moteur" use="optional">
+			<xs:simpleType>
+				<xs:restriction base="xs:normalizedString">
+					<xs:minLength value="1"/>
+					<xs:maxLength value="10"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="Usage" use="optional">
+			<xs:annotation>
+				<xs:documentation>Indique nature production ou test du message</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:NMTOKEN">
+					<xs:length value="1"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:complexType>
+	<!--Définition des types complexes ENVELOPPE ENTETE Pharmaml-->
+	<xs:complexType name="ctPML_ENV_ENTETE">
+		<xs:sequence>
+			<xs:element name="EMETTEUR" minOccurs="0">
+				<xs:complexType>
+					<xs:attributeGroup ref="attgPML_ENV_Partenaire"/>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="RECEPTEUR" minOccurs="0">
+				<xs:complexType>
+					<xs:attributeGroup ref="attgPML_ENV_Partenaire"/>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="REF_MESSAGE" type="stPML_ENV_MessageId" minOccurs="0"/>
+			<xs:element name="EN_REPONSE_A" type="stPML_ENV_MessageId" minOccurs="0">
+				<xs:annotation>
+				    <xs:documentation>Obligatoire si message à l'initiative du répartiteur (=EMETTEUR) ou message ERREUR</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="DATE" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>date et heure d'émission du message à la précision seconde</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:dateTime">
+						<xs:pattern value=".+T[^Z+-\.]+"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<!--Définition des types simples  ENVELOPPE Pharmaml-->
+	<xs:simpleType name="stPML_ENV_MessageId">
+		<xs:restriction base="xs:normalizedString">
+			<xs:minLength value="1"/>
+			<xs:maxLength value="20"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!--Définition des groupes d'attribut ENVELOPPE Pharmaml-->
+	<xs:attributeGroup name="attgPML_ENV_Partenaire">
+		<xs:attribute name="Nature" use="optional">
+			<xs:simpleType>
+				<xs:restriction base="xs:NMTOKEN">
+					<xs:enumeration value="RE"/>
+					<xs:enumeration value="OF"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="Code" use="optional" default="00">
+			<xs:annotation>
+				<xs:documentation>Obligatoire si nature partenaire
+est RE (répartiteur), la valeur par défaut est utilisée pour partenaire OF (Officine)</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:NMTOKEN">
+					<xs:length value="2"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="Id_Officine" use="optional">
+			<xs:annotation>
+				<xs:documentation>Obligatoire pour l'officine et interdit pour le répartiteur</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:NMTOKEN">
+					<xs:minLength value="1"/>
+					<xs:maxLength value="20"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="Id_Repartiteur" use="optional">
+			<xs:annotation>
+				<xs:documentation>Interdit pour l'officine</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:NMTOKEN">
+					<xs:minLength value="1"/>
+					<xs:maxLength value="20"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="Id_Fournisseur" use="optional">
+			<xs:annotation>
+				<xs:documentation>Obligatoire pour le répartiteur et interdit pour l'officine </xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:NMTOKEN">
+					<xs:minLength value="1"/>
+					<xs:maxLength value="3"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="Id_Depot_Repartiteur" use="optional">
+			<xs:annotation>
+				<xs:documentation>Interdit pour l'officine</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:NMTOKEN">
+					<xs:minLength value="1"/>
+					<xs:maxLength value="2"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="Adresse" use="optional">
+			<xs:annotation>
+				<xs:documentation>Nom et adresse du partenaire</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:minLength value="1"/>
+					<xs:maxLength value="128"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:attributeGroup>
+	<!--Définition des types complexes MESSAGE ENTETE Pharmaml-->
+	<xs:complexType name="ctPML_MESS_ENTETE">
+		<xs:sequence>
+			<xs:element name="EMETTEUR" type="ctPML_MESS_Repartiteur"  minOccurs="0"/>
+			<xs:element name="DESTINATAIRE" type="ctPML_MESS_Officine" minOccurs="0"/>
+			<xs:element name="DATE" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Date et heure d'émission du message à la précision seconde</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:dateTime">
+						<xs:pattern value=".+T[^Z+-\.]+"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<!--Définition des types complexes  MESSAGE ENTETE Pharmaml-->
+	<xs:complexType name="ctPML_MESS_Officine">
+		<xs:attribute name="Nature_Partenaire"  use="optional" default="OF">
+			<xs:simpleType>
+				<xs:restriction base="stPML_MESS_CodePartenaire"/>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="Id_Client" use="optional">
+			<xs:simpleType>
+				<xs:restriction base="xs:NMTOKEN">
+					<xs:minLength value="1"/>
+					<xs:maxLength value="20"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="ctPML_MESS_Repartiteur">
+		<xs:attribute name="Nature_Partenaire" type="stPML_MESS_CodePartenaire" use="optional" default="RE"/>
+		<xs:attribute name="Code_Societe" use="optional">
+			<xs:annotation>
+				<xs:documentation>Code attribué au répartiteur par la SRP</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:NMTOKEN">
+					<xs:length value="2"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="Id_Repartiteur" use="optional">
+			<xs:simpleType>
+				<xs:restriction base="xs:NMTOKEN">
+					<xs:minLength value="1"/>
+					<xs:maxLength value="20"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="Id_Fournisseur"  use="optional">
+			<xs:simpleType>
+				<xs:restriction base="xs:NMTOKEN">
+					<xs:length value="3"/>
+					<xs:pattern value="[0-9][0-9][0-9]"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="Id_Depot_Repartiteur" use="optional">
+			<xs:simpleType>
+				<xs:restriction base="xs:NMTOKEN">
+					<xs:length value="2"/>
+					<xs:pattern value="[0-9][0-9]"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:complexType>
+	<!--Définition des types simples MESSAGE ENTETE Pharmaml-->
+	<xs:simpleType name="stPML_MESS_CodePartenaire">
+		<xs:restriction base="xs:NMTOKEN">
+			<xs:length value="2"/>
+			<xs:enumeration value="OF"/>
+			<xs:enumeration value="RE"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!--Définition des types complexes  MESSAGE CORPS Pharmaml-->
+	<xs:complexType name="ctPML_MESS_CORPS">
+		<xs:sequence>
+			<xs:element name="INFOS_LIVRAISON" type="ctPML_MESS_InformationsLivraison" minOccurs="0"/>
+		</xs:sequence>
+		<xs:attribute name="Ref_Doc_Client" use="optional">
+			<xs:simpleType>
+				<xs:restriction base="xs:NMTOKEN">
+					<xs:minLength value="1"/>
+					<xs:maxLength value="20"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="Ref_Rep_Repartiteur" use="optional">
+			<xs:simpleType>
+				<xs:restriction base="xs:NMTOKEN">
+					<xs:minLength value="1"/>
+					<xs:maxLength value="20"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attributeGroup ref="attgPML_MESS_Devise"/>
+		<xs:attributeGroup ref="attgPML_MESS_InfoCommande"/>
+	</xs:complexType>
+	<xs:complexType name="ctPML_MESS_InformationsLivraison">
+		<xs:sequence minOccurs="0">
+			<xs:element name="LIVREUR" minOccurs="0">
+				<xs:complexType>
+					<xs:attribute name="Societe" use="optional">
+						<xs:simpleType>
+							<xs:restriction base="xs:normalizedString">
+								<xs:minLength value="1"/>
+								<xs:maxLength value="30"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:attribute>
+					<xs:attribute name="Etablissement" use="optional">
+						<xs:simpleType>
+							<xs:restriction base="xs:normalizedString">
+								<xs:minLength value="1"/>
+								<xs:maxLength value="30"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:attribute>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="TOURNEE" minOccurs="0">
+				<xs:complexType>
+					<xs:attribute name="Reference" use="optional">
+						<xs:simpleType>
+							<xs:restriction base="xs:normalizedString">
+								<xs:minLength value="1"/>
+								<xs:maxLength value="20"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:attribute>
+					<xs:attribute name="Date" type="stPML_MESS_DateLocale" use="optional"/>
+					<xs:attribute name="Heure" type="stPML_MESS_HeureLocale" use="optional">
+						<xs:annotation>
+							<xs:documentation>Précision de l'heure de livraison est la minute</xs:documentation>
+						</xs:annotation>
+					</xs:attribute>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<!--Définition des groupes d'attribut MESSAGE CORPS Pharmaml -->
+	<xs:attributeGroup name="attgPML_MESS_Devise">
+		<xs:attribute name="Devise" type="stPML_MESS_Devise" use="optional" default="EUR"/>
+	</xs:attributeGroup>
+	<xs:attributeGroup name="attgPML_MESS_InfoCommande">
+		<xs:attribute name="Critere_Eclatement_Cde" use="optional">
+			<xs:simpleType>
+				<xs:restriction base="xs:NMTOKEN">
+					<xs:minLength value="1"/>
+					<xs:maxLength value="15"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="Code_Speciale" use="optional">
+			<xs:annotation>
+				<xs:documentation>Obligatoire si commande différente de normale sinon interdit</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:NMTOKEN">
+					<xs:minLength value="1"/>
+					<xs:maxLength value="15"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="Code_Offre" use="optional">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:minLength value="1"/>
+					<xs:maxLength value="15"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:attributeGroup>
+	<!--Définition des types simples MESSAGE CORPS Pharmaml-->
+	<xs:simpleType name="stPML_MESS_HeureLocale">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[0-2][0-9]:[0-5][0-9]"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="stPML_MESS_DateLocale">
+		<xs:restriction base="xs:date">
+			<xs:pattern value="[0-9][0-9][0-9][0-9]\-[0-9][0-9]\-[0-9][0-9]"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="stPML_MESS_Devise">
+		<xs:restriction base="xs:NMTOKEN">
+			<xs:length value="3"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

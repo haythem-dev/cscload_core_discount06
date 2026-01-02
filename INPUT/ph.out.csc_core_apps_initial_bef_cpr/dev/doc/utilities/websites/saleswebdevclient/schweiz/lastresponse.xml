@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!--DeliveryNote Response - created by Amedis-Ue AG-->
+<deliveryNotes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1">
+	<client number="9999011"/>
+	<deliveryNote number="839175">
+		<deliveryNoteError message="Lieferschein nicht gefunden"/>
+	</deliveryNote>
+	<deliveryNote number="841577">
+		<deliveryNoteError message="Lieferschein nicht gefunden"/>
+	</deliveryNote>
+	<deliveryNote number="123456">
+		<deliveryNoteError message="Lieferschein nicht gefunden"/>
+	</deliveryNote>
+</deliveryNotes>

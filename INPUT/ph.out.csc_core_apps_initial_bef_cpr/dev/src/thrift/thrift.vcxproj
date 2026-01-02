@@ -1,0 +1,635 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="CscService_only|Win32">
+      <Configuration>CscService_only</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="CscService_only|x64">
+      <Configuration>CscService_only</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{97B7D036-20A2-4CD2-B158-09D97AA97859}</ProjectGuid>
+    <RootNamespace>thrift</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='CscService_only|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='CscService_only|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='CscService_only|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='CscService_only|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <EmbedManifest>false</EmbedManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='CscService_only|Win32'">
+    <EmbedManifest>false</EmbedManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <EmbedManifest>false</EmbedManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='CscService_only|x64'">
+    <EmbedManifest>false</EmbedManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\ext\liblockmanager\include;$(SolutionDir)..\ext\boost\include;$(SolutionDir)..\ext\ssuk\basar\include;$(SolutionDir)..\ext\log4cplus\include;$(SolutionDir)..\ext\thrift\include;$(SolutionDir)cxxtools\include;$(SolutionDir)libcsc;$(SolutionDir)pxdb\include;$(SolutionDir)pxverbund\include;$(ProjectDir)gen-cpp;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_MBCS;WIN32;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>cxxtools.lib;libbasarcmnutil.lib;libbasardbsql.lib;libcsc.lib;liblockmanager.lib;log4cplusd.lib;thriftmdd.lib;pxdb.lib;pxverbund.lib;Rpcrt4.lib;libssl.lib;libcrypto.lib;tcaapi.lib;tca.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)..\ext\liblockmanager\lib\$(Configuration);$(SolutionDir)..\ext\log4cplus\lib\$(Configuration);$(SolutionDir)..\ext\boost\lib;$(SolutionDir)..\ext\ssuk\basar\lib\$(Configuration);$(SolutionDir)..\ext\tcaccess_libraries\lib\x86;$(SolutionDir)..\ext\thrift\lib;$(SolutionDir)..\ext\openssl\lib;$(SolutionDir)$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>MSVCRT</IgnoreSpecificDefaultLibraries>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='CscService_only|Win32'">
+    <ClCompile>
+      <WarningLevel>Level4</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\ext\liblockmanager\include;$(SolutionDir)..\ext\boost\include;$(SolutionDir)..\ext\ssuk\basar\include;$(SolutionDir)..\ext\log4cplus\include;$(SolutionDir)..\ext\thrift\include;$(SolutionDir)cxxtools\include;$(SolutionDir)libcsc;$(SolutionDir)pxdb\include;$(SolutionDir)pxverbund\include;$(ProjectDir)gen-cpp;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_MBCS;WIN32;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>cxxtools.lib;libbasarcmnutil.lib;libbasardbsql.lib;libcsc.lib;liblockmanager.lib;log4cplusd.lib;thriftmdd.lib;pxdb.lib;pxverbund.lib;Rpcrt4.lib;libssl.lib;libcrypto.lib;tcaapi.lib;tca.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)..\ext\liblockmanager\lib\$(Configuration);$(SolutionDir)..\ext\log4cplus\lib\$(Configuration);$(SolutionDir)..\ext\boost\lib;$(SolutionDir)..\ext\ssuk\basar\lib\$(Configuration);$(SolutionDir)..\ext\tcaccess_libraries\lib\x86;$(SolutionDir)..\ext\thrift\lib;$(SolutionDir)..\ext\openssl\lib;$(SolutionDir)$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>MSVCRT</IgnoreSpecificDefaultLibraries>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\ext\liblockmanager\include;$(SolutionDir)..\ext\boost\include;$(SolutionDir)..\ext\ssuk\basar\include;$(SolutionDir)..\ext\log4cplus\include;$(SolutionDir)..\ext\thrift\include;$(SolutionDir)cxxtools\include;$(SolutionDir)libcsc;$(SolutionDir)pxdb\include;$(SolutionDir)pxverbund\include;$(ProjectDir)gen-cpp;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_MBCS;WIN32;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <DisableSpecificWarnings>26439;26812</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>cxxtools.lib;libbasarcmnutil.lib;libbasardbsql.lib;libcsc.lib;liblockmanager.lib;log4cplusd.lib;thriftmdd.lib;pxdb.lib;pxverbund.lib;Rpcrt4.lib;libssl.lib;libcrypto.lib;tcaapi.lib;tca.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)..\ext\liblockmanager\lib\$(Configuration);$(SolutionDir)..\ext\log4cplus\lib\$(Configuration);$(SolutionDir)..\ext\boost\lib;$(SolutionDir)..\ext\ssuk\basar\lib\$(Configuration);$(SolutionDir)..\ext\tcaccess_libraries\lib\x64;$(SolutionDir)..\ext\thrift\lib;$(SolutionDir)..\ext\openssl\lib;$(SolutionDir)$(Platform)\$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>MSVCRT</IgnoreSpecificDefaultLibraries>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='CscService_only|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\ext\liblockmanager\include;$(SolutionDir)..\ext\ssuk\boost;$(SolutionDir)..\ext\ssuk\basar\include;$(SolutionDir)..\ext\ssuk\log4cplus\include;$(SolutionDir)..\ext\thrift_vs2010\cpp\include;$(SolutionDir)cxxtools\include;$(SolutionDir)libcsc;$(SolutionDir)pxdb\include;$(SolutionDir)pxverbund\include;$(ProjectDir)gen-cpp;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_MBCS;WIN32;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <DisableSpecificWarnings>26439;26812</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>cxxtools.lib;libbasarcmnutil.lib;libbasardbsql.lib;libcsc.lib;libeay32.lib;liblockmanager.lib;liblog4cplus.lib;libthrift.lib;pxdb.lib;pxverbund.lib;Rpcrt4.lib;ssleay32.lib;tcaapi.lib;tca.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)..\ext\liblockmanager\lib\$(Configuration);$(SolutionDir)..\ext\ssuk\log4cplus\lib\$(Configuration);$(SolutionDir)..\ext\ssuk\boost\lib;$(SolutionDir)..\ext\ssuk\basar\lib\$(Configuration);$(SolutionDir)..\ext\tcaccess_libraries\lib\x64;$(SolutionDir)..\ext\thrift_vs2010\cpp\lib\$(Configuration);$(SolutionDir)..\ext\openssl\openssl\lib;$(SolutionDir)$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>MSVCRT</IgnoreSpecificDefaultLibraries>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\ext\liblockmanager\include;$(SolutionDir)..\ext\boost\include;$(SolutionDir)..\ext\ssuk\basar\include;$(SolutionDir)..\ext\log4cplus\include;$(SolutionDir)..\ext\thrift\include;$(SolutionDir)cxxtools\include;$(SolutionDir)libcsc;$(SolutionDir)pxdb\include;$(SolutionDir)pxverbund\include;$(ProjectDir)gen-cpp;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_MBCS;WIN32;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>cxxtools.lib;libbasarcmnutil.lib;libbasardbsql.lib;libcsc.lib;liblockmanager.lib;log4cplus.lib;thriftmd.lib;pxdb.lib;pxverbund.lib;Rpcrt4.lib;libssl.lib;libcrypto.lib;tcaapi.lib;tca.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)..\ext\liblockmanager\lib\$(Configuration);$(SolutionDir)..\ext\log4cplus\lib\$(Configuration);$(SolutionDir)..\ext\boost\lib;$(SolutionDir)..\ext\ssuk\basar\lib\$(Configuration);$(SolutionDir)..\ext\tcaccess_libraries\lib\x86;$(SolutionDir)..\ext\thrift\lib;$(SolutionDir)..\ext\openssl\lib;$(SolutionDir)$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>MSVCRT</IgnoreSpecificDefaultLibraries>
+    </Link>
+    <PreBuildEvent>
+      <Command>
+      </Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\ext\liblockmanager\include;$(SolutionDir)..\ext\boost\include;$(SolutionDir)..\ext\ssuk\basar\include;$(SolutionDir)..\ext\log4cplus\include;$(SolutionDir)..\ext\thrift\include;$(SolutionDir)cxxtools\include;$(SolutionDir)libcsc;$(SolutionDir)pxdb\include;$(SolutionDir)pxverbund\include;$(ProjectDir)gen-cpp;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <DisableSpecificWarnings>26439;26812</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>cxxtools.lib;libbasarcmnutil.lib;libbasardbsql.lib;libcsc.lib;liblockmanager.lib;log4cplus.lib;thriftmd.lib;pxdb.lib;pxverbund.lib;Rpcrt4.lib;libssl.lib;libcrypto.lib;tcaapi.lib;tca.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)..\ext\liblockmanager\lib\$(Configuration);$(SolutionDir)..\ext\log4cplus\lib\$(Configuration);$(SolutionDir)..\ext\boost\lib;$(SolutionDir)..\ext\ssuk\basar\lib\$(Configuration);$(SolutionDir)..\ext\tcaccess_libraries\lib\$(Platform);$(SolutionDir)..\ext\thrift\lib;$(SolutionDir)..\ext\openssl\lib;$(SolutionDir)$(Platform)\$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+    <PreBuildEvent>
+      <Command>
+      </Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\pxverbund\include\types\semikolon.h" />
+    <ClInclude Include="callbackhandler.h" />
+    <ClInclude Include="callbackhandlerptr.h" />
+    <ClInclude Include="cremahandler.h" />
+    <ClInclude Include="cremahandlerptr.h" />
+    <ClInclude Include="csclibtothrifthandlerbase.h" />
+    <ClInclude Include="cscservicebasehandler.hpp" />
+    <ClInclude Include="cscservicebatchhandler.hpp" />
+    <ClInclude Include="cscservicehelper.h" />
+    <ClInclude Include="cscserviceimplpxverbund.h" />
+    <ClInclude Include="cscserviceonlinehandler.hpp" />
+    <ClInclude Include="cscservice_definitions.h" />
+    <ClInclude Include="customerhandler.h" />
+    <ClInclude Include="customerhandlerptr.h" />
+    <ClInclude Include="documenthandler.h" />
+    <ClInclude Include="documenthandlerptr.h" />
+    <ClInclude Include="gen-cpp\articleInquiryperioddatetypeenum_constants.h" />
+    <ClInclude Include="gen-cpp\articleInquiryperioddatetypeenum_types.h" />
+    <ClInclude Include="gen-cpp\batchstatusenum_constants.h" />
+    <ClInclude Include="gen-cpp\batchstatusenum_types.h" />
+    <ClInclude Include="gen-cpp\bookingtypeenum_constants.h" />
+    <ClInclude Include="gen-cpp\bookingtypeenum_types.h" />
+    <ClInclude Include="gen-cpp\cremacloseenum_constants.h" />
+    <ClInclude Include="gen-cpp\cremacloseenum_types.h" />
+    <ClInclude Include="gen-cpp\cremaemailtypeenum_constants.h" />
+    <ClInclude Include="gen-cpp\cremaemailtypeenum_types.h" />
+    <ClInclude Include="gen-cpp\cremauserlevelenum_constants.h" />
+    <ClInclude Include="gen-cpp\cremauserlevelenum_types.h" />
+    <ClInclude Include="gen-cpp\crema_constants.h" />
+    <ClInclude Include="gen-cpp\crema_types.h" />
+    <ClInclude Include="gen-cpp\critlevelenum_constants.h" />
+    <ClInclude Include="gen-cpp\critlevelenum_types.h" />
+    <ClInclude Include="gen-cpp\cscbase_constants.h" />
+    <ClInclude Include="gen-cpp\cscbase_types.h" />
+    <ClInclude Include="gen-cpp\csccallback_constants.h" />
+    <ClInclude Include="gen-cpp\csccallback_types.h" />
+    <ClInclude Include="gen-cpp\csccustomer_constants.h" />
+    <ClInclude Include="gen-cpp\csccustomer_types.h" />
+    <ClInclude Include="gen-cpp\deliveryadvice_constants.h" />
+    <ClInclude Include="gen-cpp\deliveryadvice_types.h" />
+    <ClInclude Include="gen-cpp\cscinquiry_constants.h" />
+    <ClInclude Include="gen-cpp\cscinquiry_types.h" />
+    <ClInclude Include="gen-cpp\cscmsv3_constants.h" />
+    <ClInclude Include="gen-cpp\cscmsv3_types.h" />
+    <ClInclude Include="gen-cpp\cscorder_constants.h" />
+    <ClInclude Include="gen-cpp\cscorder_types.h" />
+    <ClInclude Include="gen-cpp\CscServiceBase.h" />
+    <ClInclude Include="gen-cpp\CscServiceBatch.h" />
+    <ClInclude Include="gen-cpp\CscServiceOnline.h" />
+    <ClInclude Include="gen-cpp\cscservice_constants.h" />
+    <ClInclude Include="gen-cpp\cscservice_types.h" />
+    <ClInclude Include="gen-cpp\csctest_constants.h" />
+    <ClInclude Include="gen-cpp\csctest_types.h" />
+    <ClInclude Include="gen-cpp\csctypes_constants.h" />
+    <ClInclude Include="gen-cpp\csctypes_types.h" />
+    <ClInclude Include="gen-cpp\documentarchiveinformation_constants.h" />
+    <ClInclude Include="gen-cpp\documentarchiveinformation_types.h" />
+    <ClInclude Include="gen-cpp\documenttypeenum_constants.h" />
+    <ClInclude Include="gen-cpp\documenttypeenum_types.h" />
+    <ClInclude Include="gen-cpp\kindofdiscountenum_constants.h" />
+    <ClInclude Include="gen-cpp\kindofdiscountenum_types.h" />
+    <ClInclude Include="gen-cpp\languageenum_constants.h" />
+    <ClInclude Include="gen-cpp\languageenum_types.h" />
+    <ClInclude Include="gen-cpp\messagecodeenum_constants.h" />
+    <ClInclude Include="gen-cpp\messagecodeenum_types.h" />
+    <ClInclude Include="gen-cpp\narcoticsarchive_types.h" />
+    <ClInclude Include="gen-cpp\orderrelationnotypeenum_constants.h" />
+    <ClInclude Include="gen-cpp\orderrelationnotypeenum_types.h" />
+    <ClInclude Include="gen-cpp\orderremarktypeenum_constants.h" />
+    <ClInclude Include="gen-cpp\orderremarktypeenum_types.h" />
+    <ClInclude Include="gen-cpp\origintypeenum_constants.h" />
+    <ClInclude Include="gen-cpp\origintypeenum_types.h" />
+    <ClInclude Include="gen-cpp\paymentsfilterenum_constants.h" />
+    <ClInclude Include="gen-cpp\paymentsfilterenum_types.h" />
+    <ClInclude Include="gen-cpp\pickingtypeenum_constants.h" />
+    <ClInclude Include="gen-cpp\pickingtypeenum_types.h" />
+    <ClInclude Include="gen-cpp\positiontypeenum_constants.h" />
+    <ClInclude Include="gen-cpp\positiontypeenum_types.h" />
+    <ClInclude Include="gen-cpp\pricetypeenum_constants.h" />
+    <ClInclude Include="gen-cpp\pricetypeenum_types.h" />
+    <ClInclude Include="gen-cpp\reservationtypeenum_constants.h" />
+    <ClInclude Include="gen-cpp\reservationtypeenum_types.h" />
+    <ClInclude Include="gen-cpp\returnacceptancecheckresultenum_constants.h" />
+    <ClInclude Include="gen-cpp\returnacceptancecheckresultenum_types.h" />
+    <ClInclude Include="gen-cpp\returnreasonenum_constants.h" />
+    <ClInclude Include="gen-cpp\returnreasonenum_types.h" />
+    <ClInclude Include="gen-cpp\returns_constants.h" />
+    <ClInclude Include="gen-cpp\returns_types.h" />
+    <ClInclude Include="gen-cpp\returntypeenum_constants.h" />
+    <ClInclude Include="gen-cpp\returntypeenum_types.h" />
+    <ClInclude Include="gen-cpp\shipmenttracking_constants.h" />
+    <ClInclude Include="gen-cpp\shipmenttracking_types.h" />
+    <ClInclude Include="gen-cpp\transactiontypeenum_constants.h" />
+    <ClInclude Include="gen-cpp\transactiontypeenum_types.h" />
+    <ClInclude Include="gen-cpp\weekdayenum_constants.h" />
+    <ClInclude Include="gen-cpp\weekdayenum_types.h" />
+    <ClInclude Include="gen-cpp\xmlinfolevelenum_constants.h" />
+    <ClInclude Include="gen-cpp\xmlinfolevelenum_types.h" />
+    <ClInclude Include="inquirybulkhandler.h" />
+    <ClInclude Include="inquirybulkhandlerptr.h" />
+    <ClInclude Include="inquiryhandler.h" />
+    <ClInclude Include="inquiryhandlerptr.h" />
+    <ClInclude Include="ithriftparameterproxy.h" />
+    <ClInclude Include="ithriftparameterproxyptr.h" />
+    <ClInclude Include="msv3handler.h" />
+    <ClInclude Include="msv3handlerptr.h" />
+    <ClInclude Include="msv3orderlabelprocessor.h" />
+    <ClInclude Include="orderhandler.h" />
+    <ClInclude Include="orderhandlerptr.h" />
+    <ClInclude Include="returnshandler.h" />
+    <ClInclude Include="returnshandlerptr.h" />
+    <ClInclude Include="shipmenttrackinghandler.h" />
+    <ClInclude Include="shipmenttrackinghandlerptr.h" />
+    <ClInclude Include="thriftparameterproxy.h" />
+    <ClInclude Include="thriftparameterproxyptr.h" />
+    <ClInclude Include="thriftserverframework.h" />
+    <ClInclude Include="thriftserverframeworkptr.h" />
+    <ClInclude Include="thrift_definitions.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="callbackhandler.cpp" />
+    <ClCompile Include="cremahandler.cpp" />
+    <ClCompile Include="csclibtothrifthandlerbase.cpp" />
+    <ClCompile Include="cscservicehelper.cpp" />
+    <ClCompile Include="cscserviceimplpxverbund.cpp" />
+    <ClCompile Include="customerhandler.cpp" />
+    <ClCompile Include="documenthandler.cpp" />
+    <ClCompile Include="gen-cpp\articleInquiryperioddatetypeenum_constants.cpp" />
+    <ClCompile Include="gen-cpp\articleInquiryperioddatetypeenum_types.cpp" />
+    <ClCompile Include="gen-cpp\batchstatusenum_constants.cpp" />
+    <ClCompile Include="gen-cpp\batchstatusenum_types.cpp" />
+    <ClCompile Include="gen-cpp\bookingtypeenum_constants.cpp" />
+    <ClCompile Include="gen-cpp\bookingtypeenum_types.cpp" />
+    <ClCompile Include="gen-cpp\cremacloseenum_constants.cpp" />
+    <ClCompile Include="gen-cpp\cremacloseenum_types.cpp" />
+    <ClCompile Include="gen-cpp\cremaemailtypeenum_constants.cpp" />
+    <ClCompile Include="gen-cpp\cremaemailtypeenum_types.cpp" />
+    <ClCompile Include="gen-cpp\cremauserlevelenum_constants.cpp" />
+    <ClCompile Include="gen-cpp\cremauserlevelenum_types.cpp" />
+    <ClCompile Include="gen-cpp\crema_constants.cpp" />
+    <ClCompile Include="gen-cpp\crema_types.cpp" />
+    <ClCompile Include="gen-cpp\critlevelenum_constants.cpp" />
+    <ClCompile Include="gen-cpp\critlevelenum_types.cpp" />
+    <ClCompile Include="gen-cpp\cscbase_constants.cpp" />
+    <ClCompile Include="gen-cpp\cscbase_types.cpp" />
+    <ClCompile Include="gen-cpp\csccallback_constants.cpp" />
+    <ClCompile Include="gen-cpp\csccallback_types.cpp" />
+    <ClCompile Include="gen-cpp\csccustomer_constants.cpp" />
+    <ClCompile Include="gen-cpp\csccustomer_types.cpp" />
+    <ClCompile Include="gen-cpp\deliveryadvice_constants.cpp" />
+    <ClCompile Include="gen-cpp\deliveryadvice_types.cpp" />
+    <ClCompile Include="gen-cpp\cscinquiry_constants.cpp" />
+    <ClCompile Include="gen-cpp\cscinquiry_types.cpp" />
+    <ClCompile Include="gen-cpp\cscmsv3_constants.cpp" />
+    <ClCompile Include="gen-cpp\cscmsv3_types.cpp" />
+    <ClCompile Include="gen-cpp\cscorder_constants.cpp" />
+    <ClCompile Include="gen-cpp\cscorder_types.cpp" />
+    <ClCompile Include="gen-cpp\CscServiceBase.cpp" />
+    <ClCompile Include="gen-cpp\CscServiceBatch.cpp" />
+    <ClCompile Include="gen-cpp\CscServiceOnline.cpp" />
+    <ClCompile Include="gen-cpp\cscservice_constants.cpp" />
+    <ClCompile Include="gen-cpp\cscservice_types.cpp" />
+    <ClCompile Include="gen-cpp\csctest_constants.cpp" />
+    <ClCompile Include="gen-cpp\csctest_types.cpp" />
+    <ClCompile Include="gen-cpp\csctypes_constants.cpp" />
+    <ClCompile Include="gen-cpp\csctypes_types.cpp" />
+    <ClCompile Include="gen-cpp\documentarchiveinformation_constants.cpp" />
+    <ClCompile Include="gen-cpp\documentarchiveinformation_types.cpp" />
+    <ClCompile Include="gen-cpp\documenttypeenum_constants.cpp" />
+    <ClCompile Include="gen-cpp\documenttypeenum_types.cpp" />
+    <ClCompile Include="gen-cpp\kindofdiscountenum_constants.cpp" />
+    <ClCompile Include="gen-cpp\kindofdiscountenum_types.cpp" />
+    <ClCompile Include="gen-cpp\languageenum_constants.cpp" />
+    <ClCompile Include="gen-cpp\languageenum_types.cpp" />
+    <ClCompile Include="gen-cpp\messagecodeenum_constants.cpp" />
+    <ClCompile Include="gen-cpp\messagecodeenum_types.cpp" />
+    <ClCompile Include="gen-cpp\narcoticsarchive_types.cpp" />
+    <ClCompile Include="gen-cpp\orderrelationnotypeenum_constants.cpp" />
+    <ClCompile Include="gen-cpp\orderrelationnotypeenum_types.cpp" />
+    <ClCompile Include="gen-cpp\orderremarktypeenum_constants.cpp" />
+    <ClCompile Include="gen-cpp\orderremarktypeenum_types.cpp" />
+    <ClCompile Include="gen-cpp\origintypeenum_constants.cpp" />
+    <ClCompile Include="gen-cpp\origintypeenum_types.cpp" />
+    <ClCompile Include="gen-cpp\paymentsfilterenum_constants.cpp" />
+    <ClCompile Include="gen-cpp\paymentsfilterenum_types.cpp" />
+    <ClCompile Include="gen-cpp\pickingtypeenum_constants.cpp" />
+    <ClCompile Include="gen-cpp\pickingtypeenum_types.cpp" />
+    <ClCompile Include="gen-cpp\positiontypeenum_constants.cpp" />
+    <ClCompile Include="gen-cpp\positiontypeenum_types.cpp" />
+    <ClCompile Include="gen-cpp\pricetypeenum_constants.cpp" />
+    <ClCompile Include="gen-cpp\pricetypeenum_types.cpp" />
+    <ClCompile Include="gen-cpp\reservationtypeenum_constants.cpp" />
+    <ClCompile Include="gen-cpp\reservationtypeenum_types.cpp" />
+    <ClCompile Include="gen-cpp\returnacceptancecheckresultenum_constants.cpp" />
+    <ClCompile Include="gen-cpp\returnacceptancecheckresultenum_types.cpp" />
+    <ClCompile Include="gen-cpp\returnreasonenum_constants.cpp" />
+    <ClCompile Include="gen-cpp\returnreasonenum_types.cpp" />
+    <ClCompile Include="gen-cpp\returns_constants.cpp" />
+    <ClCompile Include="gen-cpp\returns_types.cpp" />
+    <ClCompile Include="gen-cpp\returntypeenum_constants.cpp" />
+    <ClCompile Include="gen-cpp\returntypeenum_types.cpp" />
+    <ClCompile Include="gen-cpp\shipmenttracking_constants.cpp" />
+    <ClCompile Include="gen-cpp\shipmenttracking_types.cpp" />
+    <ClCompile Include="gen-cpp\transactiontypeenum_constants.cpp" />
+    <ClCompile Include="gen-cpp\transactiontypeenum_types.cpp" />
+    <ClCompile Include="gen-cpp\weekdayenum_constants.cpp" />
+    <ClCompile Include="gen-cpp\weekdayenum_types.cpp" />
+    <ClCompile Include="gen-cpp\xmlinfolevelenum_constants.cpp" />
+    <ClCompile Include="gen-cpp\xmlinfolevelenum_types.cpp" />
+    <ClCompile Include="inquirybulkhandler.cpp" />
+    <ClCompile Include="inquiryhandler.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="msv3handler.cpp" />
+    <ClCompile Include="msv3orderlabelprocessor.cpp" />
+    <ClCompile Include="orderhandler.cpp" />
+    <ClCompile Include="returnshandler.cpp" />
+    <ClCompile Include="shipmenttrackinghandler.cpp" />
+    <ClCompile Include="thriftparameterproxy.cpp" />
+    <ClCompile Include="thriftserverframework.cpp" />
+    <ClCompile Include="version.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="idl\cscbase.thrift">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)..\ext\thrift\bin\thrift-0.12.0.exe -v -strict -r -o $(ProjectDir) -I $(SolutionDir)pxverbund\include --gen cpp $(ProjectDir)idl\cscbase.thrift</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='CscService_only|Win32'">$(SolutionDir)..\ext\thrift\bin\thrift-0.12.0.exe -v -strict -r -o $(ProjectDir) -I $(SolutionDir)pxverbund\include --gen cpp $(ProjectDir)idl\cscbase.thrift</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)..\ext\thrift\bin\thrift-0.12.0.exe -v -strict -r -o $(ProjectDir) -I $(SolutionDir)pxverbund\include --gen cpp $(ProjectDir)idl\cscbase.thrift</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='CscService_only|x64'">$(SolutionDir)..\ext\thrift_vs2010\bin\thrift-0.9.3.exe -v -strict -r -o $(ProjectDir) -I $(SolutionDir)pxverbund\include --gen cpp $(ProjectDir)idl\cscbase.thrift</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)gen-cpp\cscbase_constants.cpp;$(ProjectDir)gen-cpp\cscbase_constants.h;$(ProjectDir)gen-cpp\cscbase_types.cpp;$(ProjectDir)gen-cpp\cscbase_types.h</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='CscService_only|Win32'">$(ProjectDir)gen-cpp\cscbase_constants.cpp;$(ProjectDir)gen-cpp\cscbase_constants.h;$(ProjectDir)gen-cpp\cscbase_types.cpp;$(ProjectDir)gen-cpp\cscbase_types.h</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectDir)gen-cpp\cscbase_constants.cpp;$(ProjectDir)gen-cpp\cscbase_constants.h;$(ProjectDir)gen-cpp\cscbase_types.cpp;$(ProjectDir)gen-cpp\cscbase_types.h</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='CscService_only|x64'">$(ProjectDir)gen-cpp\cscbase_constants.cpp;$(ProjectDir)gen-cpp\cscbase_constants.h;$(ProjectDir)gen-cpp\cscbase_types.cpp;$(ProjectDir)gen-cpp\cscbase_types.h</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)..\ext\thrift\bin\thrift-0.12.0.exe -v -strict -r -o $(ProjectDir) -I $(SolutionDir)pxverbund\include --gen cpp $(ProjectDir)idl\cscbase.thrift</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)..\ext\thrift\bin\thrift-0.12.0.exe -v -strict -r -o $(ProjectDir) -I $(SolutionDir)pxverbund\include --gen cpp $(ProjectDir)idl\cscbase.thrift</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ProjectDir)gen-cpp\cscbase_constants.cpp;$(ProjectDir)gen-cpp\cscbase_constants.h;$(ProjectDir)gen-cpp\cscbase_types.cpp;$(ProjectDir)gen-cpp\cscbase_types.h</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectDir)gen-cpp\cscbase_constants.cpp;$(ProjectDir)gen-cpp\cscbase_constants.h;$(ProjectDir)gen-cpp\cscbase_types.cpp;$(ProjectDir)gen-cpp\cscbase_types.h</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="idl\csccallback.thrift">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)..\ext\thrift\bin\thrift-0.12.0.exe -v -strict -r -o $(ProjectDir) -I $(SolutionDir)pxverbund\include --gen cpp $(ProjectDir)idl\csccallback.thrift</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='CscService_only|Win32'">$(SolutionDir)..\ext\thrift\bin\thrift-0.12.0.exe -v -strict -r -o $(ProjectDir) -I $(SolutionDir)pxverbund\include --gen cpp $(ProjectDir)idl\csccallback.thrift</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)..\ext\thrift\bin\thrift-0.12.0.exe -v -strict -r -o $(ProjectDir) -I $(SolutionDir)pxverbund\include --gen cpp $(ProjectDir)idl\csccallback.thrift</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='CscService_only|x64'">$(SolutionDir)..\ext\thrift_vs2010\bin\thrift-0.9.3.exe -v -strict -r -o $(ProjectDir) -I $(SolutionDir)pxverbund\include --gen cpp $(ProjectDir)idl\csccallback.thrift</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)gen-cpp\csccallback_constants.cpp;$(ProjectDir)gen-cpp\csccallback_constants.h;$(ProjectDir)gen-cpp\csccallback_types.cpp;$(ProjectDir)gen-cpp\csccallback_types.h</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='CscService_only|Win32'">$(ProjectDir)gen-cpp\csccallback_constants.cpp;$(ProjectDir)gen-cpp\csccallback_constants.h;$(ProjectDir)gen-cpp\csccallback_types.cpp;$(ProjectDir)gen-cpp\csccallback_types.h</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectDir)gen-cpp\csccallback_constants.cpp;$(ProjectDir)gen-cpp\csccallback_constants.h;$(ProjectDir)gen-cpp\csccallback_types.cpp;$(ProjectDir)gen-cpp\csccallback_types.h</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='CscService_only|x64'">$(ProjectDir)gen-cpp\csccallback_constants.cpp;$(ProjectDir)gen-cpp\csccallback_constants.h;$(ProjectDir)gen-cpp\csccallback_types.cpp;$(ProjectDir)gen-cpp\csccallback_types.h</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)..\ext\thrift\bin\thrift-0.12.0.exe -v -strict -r -o $(ProjectDir) -I $(SolutionDir)pxverbund\include --gen cpp $(ProjectDir)idl\csccallback.thrift</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)..\ext\thrift\bin\thrift-0.12.0.exe -v -strict -r -o $(ProjectDir) -I $(SolutionDir)pxverbund\include --gen cpp $(ProjectDir)idl\csccallback.thrift</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ProjectDir)gen-cpp\csccallback_constants.cpp;$(ProjectDir)gen-cpp\csccallback_constants.h;$(ProjectDir)gen-cpp\csccallback_types.cpp;$(ProjectDir)gen-cpp\csccallback_types.h</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectDir)gen-cpp\csccallback_constants.cpp;$(ProjectDir)gen-cpp\csccallback_constants.h;$(ProjectDir)gen-cpp\csccallback_types.cpp;$(ProjectDir)gen-cpp\csccallback_types.h</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="idl\cscinquiry.thrift">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)..\ext\thrift\bin\thrift-0.12.0.exe -v -strict -r -o $(ProjectDir) -I $(SolutionDir)pxverbund\include --gen cpp $(ProjectDir)idl\cscinquiry.thrift</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='CscService_only|Win32'">$(SolutionDir)..\ext\thrift\bin\thrift-0.12.0.exe -v -strict -r -o $(ProjectDir) -I $(SolutionDir)pxverbund\include --gen cpp $(ProjectDir)idl\cscinquiry.thrift</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)..\ext\thrift\bin\thrift-0.12.0.exe -v -strict -r -o $(ProjectDir) -I $(SolutionDir)pxverbund\include --gen cpp $(ProjectDir)idl\cscinquiry.thrift</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='CscService_only|x64'">$(SolutionDir)..\ext\thrift_vs2010\bin\thrift-0.9.3.exe -v -strict -r -o $(ProjectDir) -I $(SolutionDir)pxverbund\include --gen cpp $(ProjectDir)idl\cscinquiry.thrift</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)gen-cpp\cscinquiry_constants.cpp;$(ProjectDir)gen-cpp\cscinquiry_constants.h;$(ProjectDir)gen-cpp\cscinquiry_types.cpp;$(ProjectDir)gen-cpp\cscinquiry_types.h</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='CscService_only|Win32'">$(ProjectDir)gen-cpp\cscinquiry_constants.cpp;$(ProjectDir)gen-cpp\cscinquiry_constants.h;$(ProjectDir)gen-cpp\cscinquiry_types.cpp;$(ProjectDir)gen-cpp\cscinquiry_types.h</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectDir)gen-cpp\cscinquiry_constants.cpp;$(ProjectDir)gen-cpp\cscinquiry_constants.h;$(ProjectDir)gen-cpp\cscinquiry_types.cpp;$(ProjectDir)gen-cpp\cscinquiry_types.h</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='CscService_only|x64'">$(ProjectDir)gen-cpp\cscinquiry_constants.cpp;$(ProjectDir)gen-cpp\cscinquiry_constants.h;$(ProjectDir)gen-cpp\cscinquiry_types.cpp;$(ProjectDir)gen-cpp\cscinquiry_types.h</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)..\ext\thrift\bin\thrift-0.12.0.exe -v -strict -r -o $(ProjectDir) -I $(SolutionDir)pxverbund\include --gen cpp $(ProjectDir)idl\cscinquiry.thrift</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)..\ext\thrift\bin\thrift-0.12.0.exe -v -strict -r -o $(ProjectDir) -I $(SolutionDir)pxverbund\include --gen cpp $(ProjectDir)idl\cscinquiry.thrift</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ProjectDir)gen-cpp\cscinquiry_constants.cpp;$(ProjectDir)gen-cpp\cscinquiry_constants.h;$(ProjectDir)gen-cpp\cscinquiry_types.cpp;$(ProjectDir)gen-cpp\cscinquiry_types.h</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectDir)gen-cpp\cscinquiry_constants.cpp;$(ProjectDir)gen-cpp\cscinquiry_constants.h;$(ProjectDir)gen-cpp\cscinquiry_types.cpp;$(ProjectDir)gen-cpp\cscinquiry_types.h</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="idl\cscmsv3.thrift">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)..\ext\thrift\bin\thrift-0.12.0.exe -v -strict -r -o $(ProjectDir) -I $(SolutionDir)pxverbund\include --gen cpp $(ProjectDir)idl\cscmsv3.thrift</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='CscService_only|Win32'">$(SolutionDir)..\ext\thrift\bin\thrift-0.12.0.exe -v -strict -r -o $(ProjectDir) -I $(SolutionDir)pxverbund\include --gen cpp $(ProjectDir)idl\cscmsv3.thrift</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)..\ext\thrift\bin\thrift-0.12.0.exe -v -strict -r -o $(ProjectDir) -I $(SolutionDir)pxverbund\include --gen cpp $(ProjectDir)idl\cscmsv3.thrift</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='CscService_only|x64'">$(SolutionDir)..\ext\thrift_vs2010\bin\thrift-0.9.3.exe -v -strict -r -o $(ProjectDir) -I $(SolutionDir)pxverbund\include --gen cpp $(ProjectDir)idl\cscmsv3.thrift</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)gen-cpp\cscmsv3_constants.cpp;$(ProjectDir)gen-cpp\cscmsv3_constants.h;$(ProjectDir)gen-cpp\cscmsv3_types.cpp;$(ProjectDir)gen-cpp\cscmsv3_types.h</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='CscService_only|Win32'">$(ProjectDir)gen-cpp\cscmsv3_constants.cpp;$(ProjectDir)gen-cpp\cscmsv3_constants.h;$(ProjectDir)gen-cpp\cscmsv3_types.cpp;$(ProjectDir)gen-cpp\cscmsv3_types.h</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectDir)gen-cpp\cscmsv3_constants.cpp;$(ProjectDir)gen-cpp\cscmsv3_constants.h;$(ProjectDir)gen-cpp\cscmsv3_types.cpp;$(ProjectDir)gen-cpp\cscmsv3_types.h</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='CscService_only|x64'">$(ProjectDir)gen-cpp\cscmsv3_constants.cpp;$(ProjectDir)gen-cpp\cscmsv3_constants.h;$(ProjectDir)gen-cpp\cscmsv3_types.cpp;$(ProjectDir)gen-cpp\cscmsv3_types.h</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)..\ext\thrift\bin\thrift-0.12.0.exe -v -strict -r -o $(ProjectDir) -I $(SolutionDir)pxverbund\include --gen cpp $(ProjectDir)idl\cscmsv3.thrift</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)..\ext\thrift\bin\thrift-0.12.0.exe -v -strict -r -o $(ProjectDir) -I $(SolutionDir)pxverbund\include --gen cpp $(ProjectDir)idl\cscmsv3.thrift</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ProjectDir)gen-cpp\cscmsv3_constants.cpp;$(ProjectDir)gen-cpp\cscmsv3_constants.h;$(ProjectDir)gen-cpp\cscmsv3_types.cpp;$(ProjectDir)gen-cpp\cscmsv3_types.h</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectDir)gen-cpp\cscmsv3_constants.cpp;$(ProjectDir)gen-cpp\cscmsv3_constants.h;$(ProjectDir)gen-cpp\cscmsv3_types.cpp;$(ProjectDir)gen-cpp\cscmsv3_types.h</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="idl\cscorder.thrift">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)..\ext\thrift\bin\thrift-0.12.0.exe -v -strict -r -o $(ProjectDir) -I $(SolutionDir)pxverbund\include --gen cpp $(ProjectDir)idl\cscorder.thrift</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='CscService_only|Win32'">$(SolutionDir)..\ext\thrift\bin\thrift-0.12.0.exe -v -strict -r -o $(ProjectDir) -I $(SolutionDir)pxverbund\include --gen cpp $(ProjectDir)idl\cscorder.thrift</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)..\ext\thrift\bin\thrift-0.12.0.exe -v -strict -r -o $(ProjectDir) -I $(SolutionDir)pxverbund\include --gen cpp $(ProjectDir)idl\cscorder.thrift</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='CscService_only|x64'">$(SolutionDir)..\ext\thrift_vs2010\bin\thrift-0.9.3.exe -v -strict -r -o $(ProjectDir) -I $(SolutionDir)pxverbund\include --gen cpp $(ProjectDir)idl\cscorder.thrift</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)gen-cpp\cscorder_constants.cpp;$(ProjectDir)gen-cpp\cscorder_constants.h;$(ProjectDir)gen-cpp\cscorder_types.cpp;$(ProjectDir)gen-cpp\cscorder_types.h</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='CscService_only|Win32'">$(ProjectDir)gen-cpp\cscorder_constants.cpp;$(ProjectDir)gen-cpp\cscorder_constants.h;$(ProjectDir)gen-cpp\cscorder_types.cpp;$(ProjectDir)gen-cpp\cscorder_types.h</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectDir)gen-cpp\cscorder_constants.cpp;$(ProjectDir)gen-cpp\cscorder_constants.h;$(ProjectDir)gen-cpp\cscorder_types.cpp;$(ProjectDir)gen-cpp\cscorder_types.h</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='CscService_only|x64'">$(ProjectDir)gen-cpp\cscorder_constants.cpp;$(ProjectDir)gen-cpp\cscorder_constants.h;$(ProjectDir)gen-cpp\cscorder_types.cpp;$(ProjectDir)gen-cpp\cscorder_types.h</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)..\ext\thrift\bin\thrift-0.12.0.exe -v -strict -r -o $(ProjectDir) -I $(SolutionDir)pxverbund\include --gen cpp $(ProjectDir)idl\cscorder.thrift</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)..\ext\thrift\bin\thrift-0.12.0.exe -v -strict -r -o $(ProjectDir) -I $(SolutionDir)pxverbund\include --gen cpp $(ProjectDir)idl\cscorder.thrift</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ProjectDir)gen-cpp\cscorder_constants.cpp;$(ProjectDir)gen-cpp\cscorder_constants.h;$(ProjectDir)gen-cpp\cscorder_types.cpp;$(ProjectDir)gen-cpp\cscorder_types.h</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectDir)gen-cpp\cscorder_constants.cpp;$(ProjectDir)gen-cpp\cscorder_constants.h;$(ProjectDir)gen-cpp\cscorder_types.cpp;$(ProjectDir)gen-cpp\cscorder_types.h</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="idl\cscservice.thrift">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)..\ext\thrift\bin\thrift-0.12.0.exe -v -strict -r -o $(ProjectDir) -I $(SolutionDir)pxverbund\include --gen cpp $(ProjectDir)idl\cscservice.thrift</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='CscService_only|Win32'">$(SolutionDir)..\ext\thrift\bin\thrift-0.12.0.exe -v -strict -r -o $(ProjectDir) -I $(SolutionDir)pxverbund\include --gen cpp $(ProjectDir)idl\cscservice.thrift</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)..\ext\thrift\bin\thrift-0.12.0.exe -v -strict -r -o $(ProjectDir) -I $(SolutionDir)pxverbund\include --gen cpp $(ProjectDir)idl\cscservice.thrift</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='CscService_only|x64'">$(SolutionDir)..\ext\thrift_vs2010\bin\thrift-0.9.3.exe -v -strict -r -o $(ProjectDir) -I $(SolutionDir)pxverbund\include --gen cpp $(ProjectDir)idl\cscservice.thrift</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)gen-cpp\cscservice_constants.cpp;$(ProjectDir)gen-cpp\cscservice_constants.h;$(ProjectDir)gen-cpp\cscservice_types.cpp;$(ProjectDir)gen-cpp\cscservice_types.h</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='CscService_only|Win32'">$(ProjectDir)gen-cpp\cscservice_constants.cpp;$(ProjectDir)gen-cpp\cscservice_constants.h;$(ProjectDir)gen-cpp\cscservice_types.cpp;$(ProjectDir)gen-cpp\cscservice_types.h</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectDir)gen-cpp\cscservice_constants.cpp;$(ProjectDir)gen-cpp\cscservice_constants.h;$(ProjectDir)gen-cpp\cscservice_types.cpp;$(ProjectDir)gen-cpp\cscservice_types.h</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='CscService_only|x64'">$(ProjectDir)gen-cpp\cscservice_constants.cpp;$(ProjectDir)gen-cpp\cscservice_constants.h;$(ProjectDir)gen-cpp\cscservice_types.cpp;$(ProjectDir)gen-cpp\cscservice_types.h</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)..\ext\thrift\bin\thrift-0.12.0.exe -v -strict -r -o $(ProjectDir) -I $(SolutionDir)pxverbund\include --gen cpp $(ProjectDir)idl\cscservice.thrift</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)..\ext\thrift\bin\thrift-0.12.0.exe -v -strict -r -o $(ProjectDir) -I $(SolutionDir)pxverbund\include --gen cpp $(ProjectDir)idl\cscservice.thrift</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ProjectDir)gen-cpp\cscservice_constants.cpp;$(ProjectDir)gen-cpp\cscservice_constants.h;$(ProjectDir)gen-cpp\cscservice_types.cpp;$(ProjectDir)gen-cpp\cscservice_types.h</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectDir)gen-cpp\cscservice_constants.cpp;$(ProjectDir)gen-cpp\cscservice_constants.h;$(ProjectDir)gen-cpp\cscservice_types.cpp;$(ProjectDir)gen-cpp\cscservice_types.h</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="idl\csctest.thrift">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)..\ext\thrift\bin\thrift-0.12.0.exe -v -strict -r -o $(ProjectDir) -I $(SolutionDir)pxverbund\include --gen cpp $(ProjectDir)idl\csctest.thrift</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='CscService_only|Win32'">$(SolutionDir)..\ext\thrift\bin\thrift-0.12.0.exe -v -strict -r -o $(ProjectDir) -I $(SolutionDir)pxverbund\include --gen cpp $(ProjectDir)idl\csctest.thrift</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)..\ext\thrift\bin\thrift-0.12.0.exe -v -strict -r -o $(ProjectDir) -I $(SolutionDir)pxverbund\include --gen cpp $(ProjectDir)idl\csctest.thrift</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='CscService_only|x64'">$(SolutionDir)..\ext\thrift_vs2010\bin\thrift-0.9.3.exe -v -strict -r -o $(ProjectDir) -I $(SolutionDir)pxverbund\include --gen cpp $(ProjectDir)idl\csctest.thrift</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)gen-cpp\csctest_constants.cpp;$(ProjectDir)gen-cpp\csctest_constants.h;$(ProjectDir)gen-cpp\csctest_types.cpp;$(ProjectDir)gen-cpp\csctest_types.h</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='CscService_only|Win32'">$(ProjectDir)gen-cpp\csctest_constants.cpp;$(ProjectDir)gen-cpp\csctest_constants.h;$(ProjectDir)gen-cpp\csctest_types.cpp;$(ProjectDir)gen-cpp\csctest_types.h</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectDir)gen-cpp\csctest_constants.cpp;$(ProjectDir)gen-cpp\csctest_constants.h;$(ProjectDir)gen-cpp\csctest_types.cpp;$(ProjectDir)gen-cpp\csctest_types.h</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='CscService_only|x64'">$(ProjectDir)gen-cpp\csctest_constants.cpp;$(ProjectDir)gen-cpp\csctest_constants.h;$(ProjectDir)gen-cpp\csctest_types.cpp;$(ProjectDir)gen-cpp\csctest_types.h</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)..\ext\thrift\bin\thrift-0.12.0.exe -v -strict -r -o $(ProjectDir) -I $(SolutionDir)pxverbund\include --gen cpp $(ProjectDir)idl\csctest.thrift</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)..\ext\thrift\bin\thrift-0.12.0.exe -v -strict -r -o $(ProjectDir) -I $(SolutionDir)pxverbund\include --gen cpp $(ProjectDir)idl\csctest.thrift</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ProjectDir)gen-cpp\csctest_constants.cpp;$(ProjectDir)gen-cpp\csctest_constants.h;$(ProjectDir)gen-cpp\csctest_types.cpp;$(ProjectDir)gen-cpp\csctest_types.h</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectDir)gen-cpp\csctest_constants.cpp;$(ProjectDir)gen-cpp\csctest_constants.h;$(ProjectDir)gen-cpp\csctest_types.cpp;$(ProjectDir)gen-cpp\csctest_types.h</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="idl\csctypes.thrift">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)..\ext\thrift\bin\thrift-0.12.0.exe -v -strict -r -o $(ProjectDir) -I $(SolutionDir)pxverbund\include --gen cpp $(ProjectDir)idl\csctypes.thrift</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='CscService_only|Win32'">$(SolutionDir)..\ext\thrift\bin\thrift-0.12.0.exe -v -strict -r -o $(ProjectDir) -I $(SolutionDir)pxverbund\include --gen cpp $(ProjectDir)idl\csctypes.thrift</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)..\ext\thrift\bin\thrift-0.12.0.exe -v -strict -r -o $(ProjectDir) -I $(SolutionDir)pxverbund\include --gen cpp $(ProjectDir)idl\csctypes.thrift</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='CscService_only|x64'">$(SolutionDir)..\ext\thrift_vs2010\bin\thrift-0.9.3.exe -v -strict -r -o $(ProjectDir) -I $(SolutionDir)pxverbund\include --gen cpp $(ProjectDir)idl\csctypes.thrift</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)gen-cpp\csctypes_constants.cpp;$(ProjectDir)gen-cpp\csctypes_constants.h;$(ProjectDir)gen-cpp\csctypes_types.cpp;$(ProjectDir)gen-cpp\csctypes_types.h</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='CscService_only|Win32'">$(ProjectDir)gen-cpp\csctypes_constants.cpp;$(ProjectDir)gen-cpp\csctypes_constants.h;$(ProjectDir)gen-cpp\csctypes_types.cpp;$(ProjectDir)gen-cpp\csctypes_types.h</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectDir)gen-cpp\csctypes_constants.cpp;$(ProjectDir)gen-cpp\csctypes_constants.h;$(ProjectDir)gen-cpp\csctypes_types.cpp;$(ProjectDir)gen-cpp\csctypes_types.h</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='CscService_only|x64'">$(ProjectDir)gen-cpp\csctypes_constants.cpp;$(ProjectDir)gen-cpp\csctypes_constants.h;$(ProjectDir)gen-cpp\csctypes_types.cpp;$(ProjectDir)gen-cpp\csctypes_types.h</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)..\ext\thrift\bin\thrift-0.12.0.exe -v -strict -r -o $(ProjectDir) -I $(SolutionDir)pxverbund\include --gen cpp $(ProjectDir)idl\csctypes.thrift</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)..\ext\thrift\bin\thrift-0.12.0.exe -v -strict -r -o $(ProjectDir) -I $(SolutionDir)pxverbund\include --gen cpp $(ProjectDir)idl\csctypes.thrift</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ProjectDir)gen-cpp\csctypes_constants.cpp;$(ProjectDir)gen-cpp\csctypes_constants.h;$(ProjectDir)gen-cpp\csctypes_types.cpp;$(ProjectDir)gen-cpp\csctypes_types.h</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectDir)gen-cpp\csctypes_constants.cpp;$(ProjectDir)gen-cpp\csctypes_constants.h;$(ProjectDir)gen-cpp\csctypes_types.cpp;$(ProjectDir)gen-cpp\csctypes_types.h</Outputs>
+    </CustomBuild>
+    <None Include="..\pxverbund\include\types\articleinquiryperioddatetypeenum.inc" />
+    <None Include="..\pxverbund\include\types\batchstatusenum.inc" />
+    <None Include="..\pxverbund\include\types\bookingtypeenum.inc" />
+    <None Include="..\pxverbund\include\types\cremacloseenum.inc" />
+    <None Include="..\pxverbund\include\types\cremaemailtypeenum.inc" />
+    <None Include="..\pxverbund\include\types\cremauserlevelenum.inc" />
+    <None Include="..\pxverbund\include\types\critlevelenum.inc" />
+    <None Include="..\pxverbund\include\types\documenttypeenum.inc" />
+    <None Include="..\pxverbund\include\types\languageenum.inc" />
+    <None Include="..\pxverbund\include\types\messagecodeenum.inc" />
+    <None Include="..\pxverbund\include\types\orderrelationnotypeenum.inc" />
+    <None Include="..\pxverbund\include\types\orderremarktypeenum.inc" />
+    <None Include="..\pxverbund\include\types\origintypeenum.inc" />
+    <None Include="..\pxverbund\include\types\paymentsfilterenum.inc" />
+    <None Include="..\pxverbund\include\types\pickingtypeenum.inc" />
+    <None Include="..\pxverbund\include\types\positiontypeenum.inc" />
+    <None Include="..\pxverbund\include\types\pricetypeenum.inc" />
+    <None Include="..\pxverbund\include\types\reservationtypeenum.inc" />
+    <None Include="..\pxverbund\include\types\returnacceptancecheckresultenum.inc" />
+    <None Include="..\pxverbund\include\types\returnreasonenum.inc" />
+    <None Include="..\pxverbund\include\types\returntypeenum.inc" />
+    <None Include="..\pxverbund\include\types\weekdayenum.inc" />
+    <None Include="..\pxverbund\include\types\xmlinfolevelenum.inc" />
+    <None Include="..\pxverbund\include\types\transactiontypeenum.inc" />
+
+    <CustomBuild Include="idl\deliveryadvice.thrift">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)..\ext\thrift\bin\thrift-0.12.0.exe -v -strict -r -o $(ProjectDir) -I $(SolutionDir)pxverbund\include --gen cpp $(ProjectDir)idl\deliveryadvice.thrift</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='CscService_only|Win32'">$(SolutionDir)..\ext\thrift\bin\thrift-0.12.0.exe -v -strict -r -o $(ProjectDir) -I $(SolutionDir)pxverbund\include --gen cpp $(ProjectDir)idl\deliveryadvice.thrift</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)..\ext\thrift\bin\thrift-0.12.0.exe -v -strict -r -o $(ProjectDir) -I $(SolutionDir)pxverbund\include --gen cpp $(ProjectDir)idl\deliveryadvice.thrift</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='CscService_only|x64'">$(SolutionDir)..\ext\thrift_vs2010\bin\thrift-0.9.3.exe -v -strict -r -o $(ProjectDir) -I $(SolutionDir)pxverbund\include --gen cpp $(ProjectDir)idl\deliveryadvice.thrift</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)gen-cpp\deliveryadvice_constants.cpp;$(ProjectDir)gen-cpp\deliveryadvice_constants.h;$(ProjectDir)gen-cpp\deliveryadvice_types.cpp;$(ProjectDir)gen-cpp\deliveryadvice_types.h</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='CscService_only|Win32'">$(ProjectDir)gen-cpp\deliveryadvice_constants.cpp;$(ProjectDir)gen-cpp\deliveryadvice_constants.h;$(ProjectDir)gen-cpp\deliveryadvice_types.cpp;$(ProjectDir)gen-cpp\deliveryadvice_types.h</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectDir)gen-cpp\deliveryadvice_constants.cpp;$(ProjectDir)gen-cpp\deliveryadvice_constants.h;$(ProjectDir)gen-cpp\deliveryadvice_types.cpp;$(ProjectDir)gen-cpp\deliveryadvice_types.h</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='CscService_only|x64'">$(ProjectDir)gen-cpp\deliveryadvice_constants.cpp;$(ProjectDir)gen-cpp\deliveryadvice_constants.h;$(ProjectDir)gen-cpp\deliveryadvice_types.cpp;$(ProjectDir)gen-cpp\deliveryadvice_types.h</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="idl\crema.thrift">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)..\ext\thrift\bin\thrift-0.12.0.exe -v -strict -r -o $(ProjectDir) -I $(SolutionDir)pxverbund\include --gen cpp $(ProjectDir)idl\crema.thrift</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectDir)gen-cpp\crema_constants.cpp;$(ProjectDir)gen-cpp\crema_constants.h;$(ProjectDir)gen-cpp\crema_types.cpp;$(ProjectDir)gen-cpp\crema_types.h</Outputs>
+    </CustomBuild>
+    <None Include="idl\narcoticsarchive.thrift" />
+    <None Include="idl\csccustomer.thrift" />
+    <None Include="idl\documentarchiveinformation.thrift" />
+    <None Include="idl\returns.thrift" />
+    <None Include="idl\shipmenttracking.thrift" />
+    <None Include="ini\cscservice.cfg" />
+    <None Include="ini\prod\cscservice.ini.at" />
+    <None Include="ini\prod\cscservice.ini.bg" />
+    <None Include="ini\prod\cscservice.ini.ch" />
+    <None Include="ini\prod\cscservice.ini.de_north" />
+    <None Include="ini\prod\cscservice.ini.fr" />
+    <None Include="ini\prod\cscservice.ini.hr" />
+    <None Include="ini\prod\cscservice.ini.LN" />
+    <None Include="ini\prod\cscservice.ini.pat" />
+    <None Include="ini\prod\cscservice.ini.pch" />
+    <None Include="ini\prod\cscservice.ini.pfr" />
+    <None Include="ini\prod\cscservice.ini.rs" />
+    <None Include="ini\zdev21\cscservice.ini.at" />
+    <None Include="ini\zdev21\cscservice.ini.bg" />
+    <None Include="ini\zdev21\cscservice.ini.ch" />
+    <None Include="ini\zdev21\cscservice.ini.de" />
+    <None Include="ini\zdev21\cscservice.ini.de4" />
+    <None Include="ini\zdev21\cscservice.ini.fr" />
+    <None Include="ini\zdev21\cscservice.ini.hr" />
+    <None Include="ini\zdev21\cscservice.ini.pat" />
+    <None Include="ini\zdev21\cscservice.ini.pch" />
+    <None Include="ini\zdev21\cscservice.ini.pfr" />
+    <None Include="ini\zdev21\cscservice.ini.rs" />
+    <None Include="proc\cscservice.option" />
+    <None Include="proc\cscservice.sh" />
+    <None Include="proc\cscserviceLN.option" />
+    <None Include="proc\cscserviceLN.sh" />
+    <None Include="vars\cscservice.vars.at" />
+    <None Include="vars\cscservice.vars.bg" />
+    <None Include="vars\cscservice.vars.ch" />
+    <None Include="vars\cscservice.vars.de" />
+    <None Include="vars\cscservice.vars.de4" />
+    <None Include="vars\cscservice.vars.fr" />
+    <None Include="vars\cscservice.vars.hr" />
+    <None Include="vars\cscservice.vars.pat" />
+    <None Include="vars\cscservice.vars.pch" />
+    <None Include="vars\cscservice.vars.pfr" />
+    <None Include="vars\cscservice.vars.rs" />
+    <None Include="vars\cscserviceLN.vars" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

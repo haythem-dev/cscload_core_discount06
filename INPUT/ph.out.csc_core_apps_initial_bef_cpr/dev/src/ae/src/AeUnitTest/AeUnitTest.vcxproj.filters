@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\TestObjects">
+      <UniqueIdentifier>{883b1f2a-3948-4d32-8acf-942a0fc8ad21}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\TestObjects">
+      <UniqueIdentifier>{f59d21ed-2b5b-4b9d-ae9d-1e890923ddcd}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="DAufDefImpl_RemoveBGOrderTypesTests.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ae\DAufDefImpl.cpp">
+      <Filter>Source Files\TestObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ae\Country.cpp">
+      <Filter>Source Files\TestObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ae\OrderType.cpp">
+      <Filter>Source Files\TestObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="DAufDefImpl_RemoveBGAndRSOrderTypesTests.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CountryTests.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="OrderTypeTests.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="OrderTypeModelMock.cpp">
+      <Filter>Source Files\TestObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="PropertyTests.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AeAppTests.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AeAppModelMock.cpp">
+      <Filter>Source Files\TestObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ae\AeAppPresenter.cpp">
+      <Filter>Source Files\TestObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ae\DBePosBearbPresenter.cpp">
+      <Filter>Source Files\TestObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ae\PriceType.cpp">
+      <Filter>Source Files\TestObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="DBePosBearbModelMock.cpp">
+      <Filter>Source Files\TestObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="DBePosBearbPresenterTests.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PriceTypeTests.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ae\DAufDefImpl.h">
+      <Filter>Header Files\TestObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="OrderTypeModelMock.h">
+      <Filter>Header Files\TestObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="AeAppModelMock.h">
+      <Filter>Header Files\TestObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ae\Country.h">
+      <Filter>Header Files\TestObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ae\AeAppPresenter.h">
+      <Filter>Header Files\TestObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ae\DBePosBearbPresenter.h">
+      <Filter>Header Files\TestObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ae\OrderType.h">
+      <Filter>Header Files\TestObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ae\PriceType.h">
+      <Filter>Header Files\TestObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="DBePosBearbPresenterTests.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBePosBearbModelMock.h">
+      <Filter>Header Files\TestObjects</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,323 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="UseCase">
+      <UniqueIdentifier>{36C4E149-6CC0-1014-8F49-AA9E5588203F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UseCase\MainUC">
+      <UniqueIdentifier>{36C4E1B9-6CC0-1014-8F49-AA9E5588203F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure">
+      <UniqueIdentifier>{36C4E21B-6CC0-1014-8F49-AA9E5588203F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\CommandLine">
+      <UniqueIdentifier>{36C4E27C-6CC0-1014-8F49-AA9E5588203F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\CommandLine\CmdLineEvaluator">
+      <UniqueIdentifier>{36C4E39B-6CC0-1014-8F49-AA9E5588203F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ComponentManager">
+      <UniqueIdentifier>{36C4E3F8-6CC0-1014-8F49-AA9E5588203F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ComponentManager\ApplCompMgr">
+      <UniqueIdentifier>{36C4E454-6CC0-1014-8F49-AA9E5588203F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ComponentManager\ApplCompMgr\Interface">
+      <UniqueIdentifier>{36C4E4B3-6CC0-1014-8F49-AA9E5588203F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ComponentManager\ApplCompMgr\Interface\UseCaseGetter">
+      <UniqueIdentifier>{36C4E510-6CC0-1014-8F49-AA9E5588203F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ComponentManager\ApplCompMgr\Impl">
+      <UniqueIdentifier>{36C4E570-6CC0-1014-8F49-AA9E5588203F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ComponentManager\InfrastructureCompMgr">
+      <UniqueIdentifier>{36C4E5CC-6CC0-1014-8F49-AA9E5588203F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\Setup">
+      <UniqueIdentifier>{36C4E62A-6CC0-1014-8F49-AA9E5588203F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\Setup\Interface">
+      <UniqueIdentifier>{36C4E686-6CC0-1014-8F49-AA9E5588203F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\Setup\impl">
+      <UniqueIdentifier>{36C4E705-6CC0-1014-8F49-AA9E5588203F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Ibtrelevantcalculator">
+      <UniqueIdentifier>{36C4E803-6CC0-1014-8F49-AA9E5588203F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Ibtrelevantcalculator\ApplController">
+      <UniqueIdentifier>{36C4E879-6CC0-1014-8F49-AA9E5588203F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Loggerpool">
+      <UniqueIdentifier>{4557da83-f992-42bf-9bb5-e3753dbc3a7f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModule">
+      <UniqueIdentifier>{2fc452bd-b191-4092-819b-962c2b86bc0f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModule\IbtRelevantParameter">
+      <UniqueIdentifier>{a3ba3ab2-ede7-4bf8-a3f2-c9790c984491}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModule\IbtArticle">
+      <UniqueIdentifier>{f68175a6-8aa8-40fc-b27b-2a8a3d25b34f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\Accessor">
+      <UniqueIdentifier>{0ff9fcbf-9de5-4537-a0e7-cee1c1f86559}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\MailAlert">
+      <UniqueIdentifier>{a7b8d312-c0a1-4e53-8445-ea10fda8949c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\MailAlert\Alert">
+      <UniqueIdentifier>{119d1c0d-5dc2-4ec9-8e44-2c6173c6d5e1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infrastructure\MailAlert\Proxy">
+      <UniqueIdentifier>{ac11c65d-30e6-4d6b-9c4e-3425ec605430}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="unix">
+      <UniqueIdentifier>{639fba1e-bafe-46fd-b818-68ec6a1aa726}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UseCase\ArticleBaseValues">
+      <UniqueIdentifier>{8a197228-27c6-42a4-88d9-cbeda08b7beb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UseCase\ExcludeParameter">
+      <UniqueIdentifier>{dcf596e0-f7eb-4316-a685-b3a35d2cc8ee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UseCase\BranchRelevanceParameter">
+      <UniqueIdentifier>{16cf9772-7fb6-41ed-9470-35f804b5f493}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DomainModule\IbtRelevantBranchParameter">
+      <UniqueIdentifier>{346d4ef5-41d9-45a2-a0fd-dfd00f4204ed}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="usecase\mainuc.cpp">
+      <Filter>UseCase\MainUC</Filter>
+    </ClCompile>
+    <ClCompile Include="componentmanager\ibtrelevantcalculatorapplcompmgr.cpp">
+      <Filter>ComponentManager\ApplCompMgr\Impl</Filter>
+    </ClCompile>
+    <ClCompile Include="componentmanager\ibtrelevantcalculatorinfrastructurecompmgr.cpp">
+      <Filter>ComponentManager\InfrastructureCompMgr</Filter>
+    </ClCompile>
+    <ClCompile Include="infrastructure\cmdline\ibtrelevantcalculatorcmdlineevaluator.cpp">
+      <Filter>Infrastructure\CommandLine\CmdLineEvaluator</Filter>
+    </ClCompile>
+    <ClCompile Include="ibtrelevantcalculator\main.cpp">
+      <Filter>Ibtrelevantcalculator</Filter>
+    </ClCompile>
+    <ClCompile Include="ibtrelevantcalculator\ibtrelevantcalculatorapplctrl.cpp">
+      <Filter>Ibtrelevantcalculator\ApplController</Filter>
+    </ClCompile>
+    <ClCompile Include="infrastructure\setup\ibtrelevantcalculatorinfrastructuresetup.cpp">
+      <Filter>Infrastructure\Setup\impl</Filter>
+    </ClCompile>
+    <ClCompile Include="loggerpool\ibtrelevantcalculator_loggerpool.cpp">
+      <Filter>Loggerpool</Filter>
+    </ClCompile>
+    <ClCompile Include="domainmodule\ibtarticledm.cpp">
+      <Filter>DomainModule\IbtArticle</Filter>
+    </ClCompile>
+    <ClCompile Include="domainmodule\ibtrelevantparameterdm.cpp">
+      <Filter>DomainModule\IbtRelevantParameter</Filter>
+    </ClCompile>
+    <ClCompile Include="infrastructure\accessor\ibtexcludeparameteracc.cpp">
+      <Filter>Infrastructure\Accessor</Filter>
+    </ClCompile>
+    <ClCompile Include="infrastructure\mail\mailparameterproxy.cpp">
+      <Filter>Infrastructure\MailAlert\Proxy</Filter>
+    </ClCompile>
+    <ClCompile Include="infrastructure\mail\mailalert.cpp">
+      <Filter>Infrastructure\MailAlert\Alert</Filter>
+    </ClCompile>
+    <ClCompile Include="usecase\articlebasevalues.cpp">
+      <Filter>UseCase\ArticleBaseValues</Filter>
+    </ClCompile>
+    <ClCompile Include="usecase\excludeparametervalues.cpp">
+      <Filter>UseCase\ExcludeParameter</Filter>
+    </ClCompile>
+    <ClCompile Include="usecase\branchrelevancevalues.cpp">
+      <Filter>UseCase\BranchRelevanceParameter</Filter>
+    </ClCompile>
+    <ClCompile Include="domainmodule\ibtrelevantbranchparameterdm.cpp">
+      <Filter>DomainModule\IbtRelevantBranchParameter</Filter>
+    </ClCompile>
+    <ClCompile Include="infrastructure\accessor\ibtbrancharticlerelevanceacc.cpp">
+      <Filter>Infrastructure\Accessor</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="usecase\mainuc.h">
+      <Filter>UseCase\MainUC</Filter>
+    </ClInclude>
+    <ClInclude Include="usecase\mainucptr.h">
+      <Filter>UseCase\MainUC</Filter>
+    </ClInclude>
+    <ClInclude Include="componentmanager\iusecasegetter.h">
+      <Filter>ComponentManager\ApplCompMgr\Interface\UseCaseGetter</Filter>
+    </ClInclude>
+    <ClInclude Include="componentmanager\iusecasegetterptr.h">
+      <Filter>ComponentManager\ApplCompMgr\Interface\UseCaseGetter</Filter>
+    </ClInclude>
+    <ClInclude Include="componentmanager\ibtrelevantcalculatorapplcompmgrptr.h">
+      <Filter>ComponentManager\ApplCompMgr\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="componentmanager\ibtrelevantcalculatorapplcompmgr.h">
+      <Filter>ComponentManager\ApplCompMgr\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="componentmanager\ibtrelevantcalculatorinfrastructurecompmgrptr.h">
+      <Filter>ComponentManager\InfrastructureCompMgr</Filter>
+    </ClInclude>
+    <ClInclude Include="componentmanager\ibtrelevantcalculatorinfrastructurecompmgr.h">
+      <Filter>ComponentManager\InfrastructureCompMgr</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\cmdline\ibtrelevantcalculatorcmdlineevaluator.h">
+      <Filter>Infrastructure\CommandLine\CmdLineEvaluator</Filter>
+    </ClInclude>
+    <ClInclude Include="ibtrelevantcalculator\ibtrelevantcalculatorapplctrl.h">
+      <Filter>Ibtrelevantcalculator\ApplController</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\setup\ibtrelevantcalculatorinfrastructuresetup.h">
+      <Filter>Infrastructure\Setup\impl</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\setup\ibtrelevantcalculatorinfrastructuresetupptr.h">
+      <Filter>Infrastructure\Setup\impl</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\cmdline\ibtrelevantcalculatorcmdlineevaluatorptr.h">
+      <Filter>Infrastructure\CommandLine\CmdLineEvaluator</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\setup\iibtrelevantcalculatorlogingetter.h">
+      <Filter>Infrastructure\Setup\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\setup\iibtrelevantcalculatorlogingetterptr.h">
+      <Filter>Infrastructure\Setup\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="loggerpool\ibtrelevantcalculator_loggerpool.h">
+      <Filter>Loggerpool</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\ibtrelevantcalculator_property_definitions.h">
+      <Filter>DomainModule</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\ibtarticledm.h">
+      <Filter>DomainModule\IbtArticle</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\ibtarticledmptr.h">
+      <Filter>DomainModule\IbtArticle</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\iibtarticledm.h">
+      <Filter>DomainModule\IbtArticle</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\iibtarticledmptr.h">
+      <Filter>DomainModule\IbtArticle</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\ibtrelevantparameterdm.h">
+      <Filter>DomainModule\IbtRelevantParameter</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\ibtrelevantparameterdmptr.h">
+      <Filter>DomainModule\IbtRelevantParameter</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\iibtrelevantparameterdm.h">
+      <Filter>DomainModule\IbtRelevantParameter</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\iibtrelevantparameterdmptr.h">
+      <Filter>DomainModule\IbtRelevantParameter</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\ibtarticledm_definitions.h">
+      <Filter>DomainModule\IbtArticle</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\accessor\ibtexcludeparameteracc.h">
+      <Filter>Infrastructure\Accessor</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\accessor\ibtexcludeparameteracc_definitions.h">
+      <Filter>Infrastructure\Accessor</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\mail\mailparameterkeys.h">
+      <Filter>Infrastructure\MailAlert</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\mail\imailparameterproxy.h">
+      <Filter>Infrastructure\MailAlert\Proxy</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\mail\imailparameterproxyptr.h">
+      <Filter>Infrastructure\MailAlert\Proxy</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\mail\mailparameterproxy.h">
+      <Filter>Infrastructure\MailAlert\Proxy</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\mail\mailparameterproxyptr.h">
+      <Filter>Infrastructure\MailAlert\Proxy</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\mail\imailalert.h">
+      <Filter>Infrastructure\MailAlert\Alert</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\mail\imailalertptr.h">
+      <Filter>Infrastructure\MailAlert\Alert</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\mail\mailalert.h">
+      <Filter>Infrastructure\MailAlert\Alert</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\mail\mailalertptr.h">
+      <Filter>Infrastructure\MailAlert\Alert</Filter>
+    </ClInclude>
+    <ClInclude Include="version.h">
+      <Filter>Ibtrelevantcalculator</Filter>
+    </ClInclude>
+    <ClInclude Include="usecase\articlebasevaluesptr.h">
+      <Filter>UseCase\ArticleBaseValues</Filter>
+    </ClInclude>
+    <ClInclude Include="usecase\articlebasevalues.h">
+      <Filter>UseCase\ArticleBaseValues</Filter>
+    </ClInclude>
+    <ClInclude Include="usecase\excludeparametervalues.h">
+      <Filter>UseCase\ExcludeParameter</Filter>
+    </ClInclude>
+    <ClInclude Include="usecase\excludeparametervaluesptr.h">
+      <Filter>UseCase\ExcludeParameter</Filter>
+    </ClInclude>
+    <ClInclude Include="usecase\branchrelevancevalues.h">
+      <Filter>UseCase\BranchRelevanceParameter</Filter>
+    </ClInclude>
+    <ClInclude Include="usecase\branchrelevancevaluesptr.h">
+      <Filter>UseCase\BranchRelevanceParameter</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\ibtrelevantbranchparameterdm.h">
+      <Filter>DomainModule\IbtRelevantBranchParameter</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\ibtrelevantbranchparameterdmptr.h">
+      <Filter>DomainModule\IbtRelevantBranchParameter</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\iibtrelevantbranchparameterdm.h">
+      <Filter>DomainModule\IbtRelevantBranchParameter</Filter>
+    </ClInclude>
+    <ClInclude Include="domainmodule\iibtrelevantbranchparameterdmptr.h">
+      <Filter>DomainModule\IbtRelevantBranchParameter</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\accessor\ibtbrancharticlerelevanceacc.h">
+      <Filter>Infrastructure\Accessor</Filter>
+    </ClInclude>
+    <ClInclude Include="infrastructure\accessor\ibtbrancharticlerelevanceacc_definitions.h">
+      <Filter>Infrastructure\Accessor</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ibtrelevantcalculator.cfg">
+      <Filter>Loggerpool</Filter>
+    </None>
+    <None Include="unix\ibtrelevantcalculator.option">
+      <Filter>unix</Filter>
+    </None>
+    <None Include="unix\ibtrelevantcalculator.sh">
+      <Filter>unix</Filter>
+    </None>
+    <None Include="makefile">
+      <Filter>unix</Filter>
+    </None>
+    <None Include="..\installwss.sh">
+      <Filter>unix</Filter>
+    </None>
+    <None Include="..\makefile">
+      <Filter>unix</Filter>
+    </None>
+    <None Include="makevars.inc">
+      <Filter>unix</Filter>
+    </None>
+  </ItemGroup>
+</Project>

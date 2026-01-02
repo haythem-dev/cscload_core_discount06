@@ -1,0 +1,3 @@
+<StockLevelRequest>
+	<requestparameter branchno="84" articleno="1234567"/>
+</StockLevelRequest>

@@ -1,0 +1,2440 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{06b5c4cf-3ac0-4504-8c71-18710715c44d}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;hpj;bat;for;f90</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{3ac130d7-5f92-4b7f-a343-4e85feeaaab5}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;fi;fd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{e3b7d54d-e90b-4be3-adcf-08e547a45e74}</UniqueIdentifier>
+      <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;cnt;rtf;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+    <Filter Include="Translations">
+      <UniqueIdentifier>{a30d2a8c-6535-4d79-944f-e6beeec2b302}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Models">
+      <UniqueIdentifier>{ec0cc9ea-ef5c-47a6-89a1-5877b53b4daf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Models">
+      <UniqueIdentifier>{4a0c0ec5-7c3c-435d-abf5-93f59ae67108}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Presenter">
+      <UniqueIdentifier>{9a1b8f3b-a246-4eff-8ebf-fa2dde72d9f8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Presenter">
+      <UniqueIdentifier>{a280ad35-b826-442b-9534-6ce71cdf50fa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Client_Server">
+      <UniqueIdentifier>{9bbc69fe-e2ec-473b-b71b-94cbd8f53877}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ini">
+      <UniqueIdentifier>{91cb7b74-6747-41c0-b7df-5fe8842c4de4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ini\TEST">
+      <UniqueIdentifier>{01256d5c-64dd-4f95-a308-56b1bb5f2b1b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ini\PROD">
+      <UniqueIdentifier>{eec699d2-08f7-476a-99b3-1e59869f46bb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ini\ACC">
+      <UniqueIdentifier>{4426fa4d-3ad1-4fe9-92c6-c64ef304ac57}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="aaclasses.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ae.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AeDoc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AeFax.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AeFView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AeKndNachl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DAeStatusAe.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AeTrace.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AeUser.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AeView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AIListctrl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="allg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="allgfktn.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AltFil.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AufInfListctrl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CPCallPlanLoad.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CPCallPlanLoadListe.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CPCallPlanUndertake.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CPCustomerProperties.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CPCustomerTelNo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CPRegionMaintenance.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUCustomerTimes.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUServicePlan.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUVacation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DAeAnzFeiertage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DAeAnzFrText.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DAeArtVerbundFiliale.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DAeCollOrderGrp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DAeKundeVerbundFiliale.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DAendFil.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DAeNotdienst.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DAeSammelAuft.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DAeUpdFeiertage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DAltArt.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DAnzAeUser.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DArtDef.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DArtikelkonto.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DArtikelQuota.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DArtInf.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DDelayedCstUpd.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DDistressRouting.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DDruckAuftrag.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DEncloserTimes.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DFilialpartner.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DForbidden.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DForbiddenUpd.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DHerstWahl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DHPCallin.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DHPLogon.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DHPMakeCall.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DInfAnzAuft.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DInfoListe.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DInfoUpdZ.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DKndInf.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DKndWahl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DKommiChange.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DKontrPwd.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DKritik.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DKritikErf.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DKritikUpd.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DLagerrevision.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DataQueryHelper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DataTypeHelper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dateformatter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DAttachPartner.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DAufBear.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DAufDef.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DAufEnd.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DAufInf.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DAuftragartKd.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DAuftrEreign.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DAufTxt.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DAufWerte.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DAutrStat.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DBackRouting.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DBeilage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DBenKen.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DBenKenn.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DBenKennAend.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DBenVwtng.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DBePosBearb.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DBestSB.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DBranchInfo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DBTMLicense.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DCallbackFetch.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DCallbackItem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DCallbackReason.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DCallbackUpd.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DCallbackWork.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DCheckNachl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DCheckOpenCallOrOrder.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DChooseFiliale.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DCollectiveOrders.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DCollectiveOrdersDE.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DConnect.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DCountDown.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DCountrCodes.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DCountryUpd.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DCustomerOrderCheck.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DCustomerRouting.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DCustomerRouting_Upd.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DDealerUmsatz.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DDelayedArt.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DDelayedCst.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DDelayedCstAll.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DMailControl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DMailMessage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DMailNew.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DNachlBearb.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DNewCallback.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DNewUserInfo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DOffAuftr.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DOffenAuft.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DOrderPeriod.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DOrderPeriodChg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DParAufArt.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DParAufBearb.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DParAufBearbErg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DParAuftrEndZeit.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DParBuchArt.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DParKaBaKomb.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DParKoBehTyp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DParKomArt.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DParKondGrp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DParNachart.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DPlanAbweichung.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DPlanTag.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DProductPromo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DPromoBuch.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DPromoQuota.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DPromotionen.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DPromoWahl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DProtNachLief.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DQuotaKlasse.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DQuotaSum.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DRabattOrder.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DRangeDetails.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DRechteAa.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DReimport.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DReserve.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DReserveAnz.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DRODefine.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DRoutBack.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DRrMessage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DRrNotDone.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DRrShift.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DRrUnlock.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DSammelArt.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DSammelAufDef.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DSammelKnd.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DSeperateGrp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DSeperateOrder.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DSeperatUpd.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DSepGrpCst.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DSeralog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DServiceOrder.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DServicePos.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DServiceZinsen.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DShowProforma.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DShowRanges.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DSonderFahrt.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DSonderTouren.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DSprachAuswahl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DStellerAnz.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DStockEntry.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DTelListUpd.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DTelNr.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DTenderOrder.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DTenderWahl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DTourAnz.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DTourAusw.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DTourBearb.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DTourEtAend.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DTourSperr.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DTourUpd.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DUmsHercode.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DUpdDivision.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DUpdNachl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DUpdPartner.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DUpdReason.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DUpdTime.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DUserInfo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DVaVerbund.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DVbBuchen.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DVbLief.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DVerbBestaet.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DViewKnd.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DViewPos.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DViewRabs.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="EditTime.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DWannauswahl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DWirkGruppe.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DZeitart.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="EditDate.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Entsperr.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="KCListctrl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MainFrm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PageTabCtrl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PCmn.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="OrderPeriodData.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NMDText.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NMDProgress.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PLocalOptions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PMListctrl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ppCallPlanDeviceCheck.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ppCallPlanDeviceMaintenance.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ppCallPlanLoad.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ppCallPlanParameter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ppCallPlanUndertake.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ppCheckOrderExist.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ppCheckRecallProcess.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ppCustomerCallPlan.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ppCustomerCallPlanDay.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ppCustomerCallPlanDayHist.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ppCustomerCallPlanTour.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ppCustomerDisplay.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ppCustomerEmergencyServicePlan.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ppCustomerVacation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ppDataTypes.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ppDCallPlanDeviceCheck.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ppDCallPlanDeviceMaintenance.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ppDCallPlanLoad.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ppDCallPlanParameter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ppDCheckOrderExist.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ppDCustomerCallPlan.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ppDCustomerCallPlanDay.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ppDCustomerCallPlanDayHist.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ppDCustomerCallPlanTour.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ppDCustomerDisplay.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ppDCustomerEmergencyServicePlan.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ppDCustomerVacation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ppDRegion.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ppError.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PPListctrl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ppPrint.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ppRegion.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ppSaleCenter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ppTime.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PRListctrl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ProCenter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Weekday.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="WeLaEk.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="q_crypt.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RangeListctrl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ROListctrl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ServiceListctrl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SOListctrl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SplashWnd.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="StaticBmp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="StaticRun.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TabPage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TListctrl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="aeconnection.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="datevalidator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="timevalidator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VacationListctrl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DCstBranchInfoUpd.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DViewCstBranchInfo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DSubTypeSettings.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DSubTypesSettings.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DShowRebates.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DIbtBranches.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DCremaMail.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="IBTListctrl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ArtNotFound.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DKritikAnz.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DCallbackRemarks.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DCallbackRemarkEdit.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DCstTours.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TourListctrl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DddSpecialUpd.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DddSpecialList.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DAufAuswahl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DChangeTour.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DExtraFahrt.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DExtraTourReasons.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FCOrders.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DReservationConfig.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DCSVFormat.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DAeCSVImport.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AeCopyCSV.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DAeCSVImportLog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DOrderTypeManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DOrderInformation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DOrderInformation1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DOrderInformation2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DOrderInformationDetails1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DOrderInformationDetails2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DOrderInformationDetails3.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DOrderInformationDetails4.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DOrderInformationDetails5.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PageTabCtrlMultiLang.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TabPageMultiLang.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CPCallPlanMaintenance.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CPPACallPlanDay.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CPCallPlanChangeData.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ParameterChanges.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AeLogging.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DAeMailUser.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CustomerGroups.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DAufFrText.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DAufZlBearb.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="timeformatter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pp_pch.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="yesnovalidator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="yesnoformatter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DAufDefImpl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Country.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MAufDef.cpp">
+      <Filter>Source Files\Models</Filter>
+    </ClCompile>
+    <ClCompile Include="ListCtrlHelper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LetterMan.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PageBrowser.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AeAppPresenter.cpp">
+      <Filter>Source Files\Presenter</Filter>
+    </ClCompile>
+    <ClCompile Include="AeAppModel.cpp">
+      <Filter>Source Files\Models</Filter>
+    </ClCompile>
+    <ClCompile Include="OrderTypeModel.cpp">
+      <Filter>Source Files\Models</Filter>
+    </ClCompile>
+    <ClCompile Include="OrderType.cpp">
+      <Filter>Source Files\Presenter</Filter>
+    </ClCompile>
+    <ClCompile Include="SalesBindingListCtrl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PriceType.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DBePosBearbPresenter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DBePosBearbModel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AboutDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CallbackStatusManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CDeleteReservation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="aaclasses.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ae.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AeFView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AeDoc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AeFax.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AIListctrl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AeKndNachl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AeOutputs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DAeStatusAe.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="aetexte.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AeTrace.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AeUser.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AeView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="allg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AltFil.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AufInfListctrl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CPCallPlanLoad.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CPCallPlanLoadListe.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CPCallPlanUndertake.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CPCustomerProperties.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CPCustomerTelNo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CPRegionMaintenance.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CUCustomerTimes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CUServicePlan.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CUVacation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DAeAnzFeiertage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DAeAnzFrText.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DAeArtVerbundFiliale.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DAeCollOrderGrp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DAeKundeVerbundFiliale.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DAendFil.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DAeNotdienst.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DArtInf.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DAeSammelAuft.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DAeUpdFeiertage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DAltArt.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DAnzAeUser.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DArtDef.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DArtikelkonto.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DArtikelQuota.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DLagerrevision.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DDelayedCstUpd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DDistressRouting.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DDruckAuftrag.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DEncloserTimes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DFilialpartner.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DForbidden.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DForbiddenUpd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DHerstWahl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DHPCallin.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DHPLogon.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DHPMakeCall.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DInfAnzAuft.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DInfoListe.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DInfoUpdZ.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DKndInf.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DKndWahl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DKommiChange.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DKontrPwd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DKritik.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DKritikErf.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DKritikUpd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DDelayedCstAll.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DataQueryHelper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DataTypeHelper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dateformatter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DAttachPartner.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DAufBear.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DAufDef.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DAufEnd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DAufInf.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DAuftragartKd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DAuftrEreign.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DAufTxt.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DAufwerte.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DAutrStat.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBackRouting.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBeilage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBenKen.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBenKenn.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBenKennAend.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBenVwtng.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBePosBearb.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBestSB.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBranchInfo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBTMLicense.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DCallbackFetch.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DCallbackitem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DCallbackReason.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DCallbackUpd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DCallbackWork.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DCheckNachl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DCheckOpenCallOrOrder.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DChooseFiliale.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DCollectiveOrders.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DCollectiveOrdersDE.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DConnect.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DCountDown.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DCountrCodes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DCountryUpd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DCustomerOrderCheck.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DCustomerRouting.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DCustomerRouting_Upd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DDealerUmsatz.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DDelayedArt.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DDelayedCst.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DRrUnlock.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DMailControl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DMailMessage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DMailNew.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DNachlBearb.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DNewCallback.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DNewUserInfo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DOffAuftr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DOffenAuft.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DOrderPeriod.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DOrderPeriodChg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DParAufArt.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DParAufBearb.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DParAufBearbErg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DParAuftrEndZeit.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DParBuchArt.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DParKaBaKomb.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DParKoBehTyp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DParKomArt.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DParKondGrp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DParNachart.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DPlanAbweichung.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DPlanTag.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DProductPromo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DPromoBuch.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DPromoQuota.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DPromotionen.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DPromoWahl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DProtNachLief.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DQuotaKlasse.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DQuotaSum.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DRabattOrder.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DRangeDetails.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DRechteAa.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DReimport.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DReserve.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DReserveAnz.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DRODefine.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DRoutBack.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DRrMessage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DRrNotDone.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DRrShift.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DSammelArt.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DSammelAufDef.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DSammelKnd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DSeperateGrp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DSeperateOrder.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DSeperatUpd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DSepGrpCst.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DSeralog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DServiceOrder.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DServicePos.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DServiceZinsen.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DShowProforma.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DShowRanges.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DSonderFahrt.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DSonderTouren.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DSprachAuswahl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DStellerAnz.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DStockEntry.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DTelListUpd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DTelNr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DTenderOrder.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DTenderWahl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DTourAnz.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DTourAusw.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DTourBearb.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DTourEtAend.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DTourSperr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DTourUpd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DUmsHercode.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DUpdDivision.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DUpdNachl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DUpdPartner.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DUpdReason.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DUpdTime.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DUserInfo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DVaVerbund.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DVbBuchen.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DVbLief.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DVerbBestaet.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DViewKnd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DViewPos.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DViewRabs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DWannauswahl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DWirkGruppe.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DZeitart.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="EditDate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Entsperr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GetNextPhoneCall.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="KCListctrl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MainFrm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="allgfktn.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PCmn.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OrderPeriodData.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NMDText.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NMDProgress.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ppCustomerEmergencyServicePlan.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PLocalOptions.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PMListctrl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ppCallPlanDeviceCheck.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ppCallPlanDeviceMaintenance.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ppCallPlanEvents.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ppCallPlanLoad.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ppCallPlanParameter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ppCallPlanUndertake.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ppCheckOrderExist.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ppCheckRecallProcess.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ppCustomerCallPlan.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ppCustomerCallPlanDay.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ppCustomerCallPlanDayHist.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ppCustomerCallPlanTour.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ppCustomerDisplay.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ppCustomerTourplanDay.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ppCustomerVacation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ppDataTypes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ppError.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ProCenter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PPListctrl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ppPrint.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ppRegion.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ppSaleCenter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ppTime.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PRListctrl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="WeLaEk.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Weekday.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RangeListctrl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ROListctrl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ServiceListctrl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SOListctrl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SplashWnd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="StaticBmp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="StaticRun.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="STDAFX.H">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TabPage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="timeformatter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TListctrl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="VacationListctrl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ppDadeScroll.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="EditTime.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="haustab.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="idl\AE_i.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="aeconnection.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="datevalidator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="timevalidator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="texte.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DCstBranchInfoUpd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DViewCstBranchInfo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DSubTypeSettings.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DSubTypesSettings.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DShowRebates.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="version.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DIbtBranches.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DCremaMail.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IBTListctrl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ArtNotFound.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DKritikAnz.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DCallbackRemarks.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DCallbackRemarkEdit.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DCstTours.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TourListctrl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DddSpecialUpd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DddSpecialList.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="yesnovalidator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="yesnoformatter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DAufAuswahl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DChangeTour.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DExtraFahrt.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DExtraTourReasons.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FCOrders.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DReservationConfig.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DCSVFormat.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DAeCSVImport.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AeCopyCSV.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DAeCSVImportLog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DOrderTypeManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DOrderInformation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DOrderInformation1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DOrderInformation2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DOrderInformationDetails1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DOrderInformationDetails2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DOrderInformationDetails3.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DOrderInformationDetails4.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DOrderInformationDetails5.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PageTabCtrlMultiLang.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TabPageMultiLang.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CPCallPlanMaintenance.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CPPACallPlanDay.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CPCallPlanChangeData.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ParameterChanges.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AeLogging.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DAeMailUser.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CustomerGroups.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DAufFrText.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DAufZlBearb.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PageTabCtrl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="pp_pch.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DAufDefImpl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Country.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MAufDef.h">
+      <Filter>Header Files\Models</Filter>
+    </ClInclude>
+    <ClInclude Include="ListCtrlHelper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ColumnsTypes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LetterMan.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PageBrowser.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ArtInfData.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IOrderTypeModel.h">
+      <Filter>Header Files\Models</Filter>
+    </ClInclude>
+    <ClInclude Include="IAeAppModel.h">
+      <Filter>Header Files\Models</Filter>
+    </ClInclude>
+    <ClInclude Include="AeAppModel.h">
+      <Filter>Header Files\Models</Filter>
+    </ClInclude>
+    <ClInclude Include="OrderTypeModel.h">
+      <Filter>Header Files\Models</Filter>
+    </ClInclude>
+    <ClInclude Include="AeAppPresenter.h">
+      <Filter>Header Files\Presenter</Filter>
+    </ClInclude>
+    <ClInclude Include="OrderType.h">
+      <Filter>Header Files\Presenter</Filter>
+    </ClInclude>
+    <ClInclude Include="Property.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AeAppProperty.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SalesBindingListCtrl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PriceType.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBePosBearbPresenter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBePosBearbData.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBePosBearbModel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBePosBearbModelIF.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IBTListctrlDefines.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AboutDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="q_crypt.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Client_Server\aarufpl.h">
+      <Filter>Header Files\Client_Server</Filter>
+    </ClInclude>
+    <ClInclude Include="Client_Server\aatour.h">
+      <Filter>Header Files\Client_Server</Filter>
+    </ClInclude>
+    <ClInclude Include="Client_Server\aepwd.h">
+      <Filter>Header Files\Client_Server</Filter>
+    </ClInclude>
+    <ClInclude Include="Client_Server\cprztype.h">
+      <Filter>Header Files\Client_Server</Filter>
+    </ClInclude>
+    <ClInclude Include="Client_Server\dadedb.h">
+      <Filter>Header Files\Client_Server</Filter>
+    </ClInclude>
+    <ClInclude Include="Client_Server\druckpara.h">
+      <Filter>Header Files\Client_Server</Filter>
+    </ClInclude>
+    <ClInclude Include="Client_Server\invoicesettings.h">
+      <Filter>Header Files\Client_Server</Filter>
+    </ClInclude>
+    <ClInclude Include="Client_Server\koplist.h">
+      <Filter>Header Files\Client_Server</Filter>
+    </ClInclude>
+    <ClInclude Include="Client_Server\nachlprot.h">
+      <Filter>Header Files\Client_Server</Filter>
+    </ClInclude>
+    <ClInclude Include="Client_Server\ordervalues.h">
+      <Filter>Header Files\Client_Server</Filter>
+    </ClInclude>
+    <ClInclude Include="Client_Server\rabattorder.h">
+      <Filter>Header Files\Client_Server</Filter>
+    </ClInclude>
+    <ClInclude Include="Client_Server\rangelist.h">
+      <Filter>Header Files\Client_Server</Filter>
+    </ClInclude>
+    <ClInclude Include="Client_Server\rebateprice.h">
+      <Filter>Header Files\Client_Server</Filter>
+    </ClInclude>
+    <ClInclude Include="Client_Server\seralog.h">
+      <Filter>Header Files\Client_Server</Filter>
+    </ClInclude>
+    <ClInclude Include="Client_Server\tm.h">
+      <Filter>Header Files\Client_Server</Filter>
+    </ClInclude>
+    <ClInclude Include="Client_Server\usertexte.h">
+      <Filter>Header Files\Client_Server</Filter>
+    </ClInclude>
+    <ClInclude Include="Client_Server\vbcount.h">
+      <Filter>Header Files\Client_Server</Filter>
+    </ClInclude>
+    <ClInclude Include="Client_Server\vblief.h">
+      <Filter>Header Files\Client_Server</Filter>
+    </ClInclude>
+    <ClInclude Include="Client_Server\verbundbestand.h">
+      <Filter>Header Files\Client_Server</Filter>
+    </ClInclude>
+    <ClInclude Include="Client_Server\zeitart.h">
+      <Filter>Header Files\Client_Server</Filter>
+    </ClInclude>
+    <ClInclude Include="CallbackStatusManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CDeleteReservation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resource.hm">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="res\AE.RC2">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\AEDOC.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\BITMAP1.BMP">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\BITMAP_A.BMP">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\BITMAP_D.BMP">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\BITMAP_F.BMP">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\BITMAP_H.BMP">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\BITMAP_I.BMP">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\BITMAP_N.BMP">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\BITMAP_S.BMP">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\BITMAP_T.BMP">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\BITMAP_V.BMP">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\BITMAP_W.BMP">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\BMP00001.BMP">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\BMP00002.BMP">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\BMP00003.BMP">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\BMPWARN.BMP">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\ICO00001.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\ICO00002.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\ICO00003.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\ICO00004.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\ICO00005.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\ICO00006.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\ICO00007.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\ICO00008.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\ICO00009.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\ICO00010.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\ICO00011.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\ICO00012.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\ICO00013.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\ICO00014.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\ICO00015.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\ICO00016.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\ICO00017.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\ICO00018.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\ICO00019.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\ICO00020.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\ICO00021.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\ICO00022.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\ico00023.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\ico00024.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\ico00025.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\ico00026.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\ico00027.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\ico00028.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\ico00029.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\ico00030.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\ico00031.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\ico00032.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\ico00033.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\ico00034.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\ico00035.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\ico00036.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\ico00037.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\ico00038.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\ico00039.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\ico00040.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\ico00041.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\ico00042.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\ICON1.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\ICON2.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icon3.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icon4.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\ICON_ACH.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\ICON_ALP.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icon_cha.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\ICON_DOP.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\ICON_IS_.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icon_kue.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icon_lag.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\ICON_NOA.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\ICON_NOT.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icon_pts.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icon_quo.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\ICON_TOU.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\TOOLBAR.BMP">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\TOOLBAR1.BMP">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\BITGREEN.BMP">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\HINWEIS.BMP">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\AA.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\SPLSH16.BMP">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\ae.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="resource.hm">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="RES\ICO00043.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="RES\ICO00044.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="RES\ICON5.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="RES\ICO00045.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="RES\ICO00046.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="RES\ICO00047.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="RES\ICO00048.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\ICO_TFG.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="RES\ICON6.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\WAITIBT.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="RES\ICON_HQ.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="RES\ICON_WAI.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="RES\ICON_IBT_WAIT.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\ICO_MDR.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\ICO_KUEHL_MITTEL.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\ICO_KUEHL_ULTRA.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="multilang\ae_bg.txt">
+      <Filter>Translations</Filter>
+    </None>
+    <None Include="multilang\ae_en.txt">
+      <Filter>Translations</Filter>
+    </None>
+    <None Include="multilang\ae_fr.txt">
+      <Filter>Translations</Filter>
+    </None>
+    <None Include="multilang\ae_hr.txt">
+      <Filter>Translations</Filter>
+    </None>
+    <None Include="multilang\ae_rs.txt">
+      <Filter>Translations</Filter>
+    </None>
+    <None Include="multilang\aebg_source.txt">
+      <Filter>Translations</Filter>
+    </None>
+    <None Include="multilang\aefr_fr.txt">
+      <Filter>Translations</Filter>
+    </None>
+    <None Include="multilang\aefr_source.txt">
+      <Filter>Translations</Filter>
+    </None>
+    <None Include="multilang\aehr_source.txt">
+      <Filter>Translations</Filter>
+    </None>
+    <None Include="multilang\aers_source.txt">
+      <Filter>Translations</Filter>
+    </None>
+    <None Include="multilang\ppErrorMsg.000">
+      <Filter>Translations</Filter>
+    </None>
+    <None Include="multilang\ppErrorMsg.001">
+      <Filter>Translations</Filter>
+    </None>
+    <None Include="res\AE.rgs" />
+    <None Include="res\ProCenter.rgs" />
+    <None Include="multilang\ae_ch.txt">
+      <Filter>Translations</Filter>
+    </None>
+    <None Include="..\ini\ACC\KSC.INI">
+      <Filter>ini\ACC</Filter>
+    </None>
+    <None Include="..\ini\PROD\KSC.INI">
+      <Filter>ini\PROD</Filter>
+    </None>
+    <None Include="..\ini\TEST\KSC.INI">
+      <Filter>ini\TEST</Filter>
+    </None>
+    <None Include="..\ini\KSC.ini">
+      <Filter>ini</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Midl Include="AE.idl" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="AE.RC" />
+  </ItemGroup>
+</Project>

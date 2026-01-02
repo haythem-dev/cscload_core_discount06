@@ -1,0 +1,226 @@
+#! /usr/bin/ksh
+
+if [[ $# -ne 8 ]]
+then
+   echo "$(basename $0) muss mit 8 Parametern aufgerufen werden, <Directory> <Datei> <Datum> <FTP> <USER> <PASSWORT>"
+#   echo "   z.B.: $(basename $0) /phfr003/FtoD artcondBRV"
+   echo "   z.B.: $(basename $0) /phfr003/FtoD artcondPHA 20080520 10.100.1.100 a b $WSS/fr/purchase/data dbzpps2fr"
+   exit 1
+fi
+
+set -x
+
+DIR=${1}    # /phfr004/FtoD
+FILE=${2}   # artcondBRV
+DATUM=${3}
+FTP=$4
+USER=$5
+PASS=$6
+WOHIN=$7
+DB=$8
+
+rc1=0
+LOG=/tmp/${FILE}$$
+
+cd $WOHIN
+
+mkdir legall 2> /dev/null
+mkdir legall/${FILE} 2> /dev/null
+
+cd legall/${FILE}
+
+ftp -nv $FTP <<eof > $LOG
+user $USER $PASS
+binary
+cd $DIR
+dir ${FILE}*
+prompt
+mget ${FILE}*
+quit
+eof
+
+chmod 777 $LOG
+cat $LOG
+
+for rc in $(grep '^[1-5][0-9][0-9] ' $LOG | grep -vi byte | cut -b1-3)
+do
+   if [[ $rc -ge 400 ]]
+   then
+      echo "FTP war fehlerhaft: Fehler $rc"
+      rc1=$(($rc1 + 1))
+   fi
+done
+
+rm $LOG
+
+#############################################################################
+# neuer Zusatz, runtergeladene Dateien werden auf dem FTP-Server geloescht
+# 15.04.2008 Stefan Kuespert
+#
+if [[ $rc1 -eq 0 ]]
+then
+   for i in $(ls ${FILE}*)
+   do
+      ftp -nv $FTP <<eof2 > $LOG
+user $USER $PASS
+binary
+cd $DIR
+delete ${i}
+quit
+eof2
+
+      chmod 777 $LOG
+      cat $LOG
+
+      for rc in $(grep '^[1-5][0-9][0-9] ' $LOG | grep -vi byte | cut -b1-3)
+      do
+         if [[ $rc -ge 400 ]]
+         then
+            echo "FTP war fehlerhaft: Fehler $rc"
+            rc1=$(($rc1 + 1))
+         fi
+      done
+
+      rm $LOG
+
+   done
+fi
+#
+#############################################################################
+
+LASTFIL="$(ls -1 ${FILE}*|tail -1)"
+LASTONE="$(ls -1 ${FILE}*|tail -1).$(date '+%Y%m%d_%H%M%S')"
+ANZ=$(ls -al ${LASTFIL}*|wc -l)
+if [[ ${ANZ} -eq 0 ]]
+then
+   echo "Keine ArtcondPHA-Dateien auf Server gefunden, Programm wird beendet"
+   exit 0
+fi
+
+#############################################################################
+# Jetzt rausfinden, ob Saetze mit Folgetags-Datum vorhanden sind.
+# Diese werden verarbeitet, alle anderen werden als Mail an Hr. Vanacker etc.
+# verschickt
+# 20.05.2008 Stefan Kuespert
+#
+
+# rausfinden, was passt, und was nicht...
+echo "awk -F';' '{if (\$6==\"${DATUM}\") print \$0}' $LASTFIL" > /tmp/AWK_OK
+echo "awk -F';' '{if (\$6!=\"${DATUM}\") print \$0}' $LASTFIL" > /tmp/AWK_KO
+chmod +x /tmp/AWK*
+/tmp/AWK_OK > ${LASTFIL}.OK
+/tmp/AWK_KO > ${LASTFIL}.KO
+rm /tmp/AWK*
+
+# falls fehlerhafte Datensaetze, dann Mail an Hr. Vanacker etc.
+if [[ -s ${LASTFIL}.KO ]]
+then
+   winmail -e john.vanacker@phoenixpharma.fr -c "r.raab;t.hoerath;avoperations" -b "records with wrong date in today's $LASTFIL for legall. Please correct!" -d ${LASTFIL}.KO -n ${LASTFIL}.KO -t ${LASTFIL}.KO -dos -nocc
+#   winmail -e s.kuespert -c "s.kuespert" -b "records with wrong date in today's $LASTFIL for legall. Please correct!" -d ${LASTFIL}.KO -n ${LASTFIL}.KO -t ${LASTFIL}.KO -dos -nocc
+fi
+
+cp -p $LASTFIL keep.$LASTONE
+mv ${LASTFIL}.OK ok.$LASTONE
+mv ${LASTFIL}.KO ko.$LASTONE
+
+for DATEI in $(ls ${FILE}*)
+do
+   rm $DATEI
+done
+
+if [[ -s ok.${LASTONE} ]]
+then
+   cp -p ok.${LASTONE} $LASTFIL
+else
+   exit 0
+fi
+
+#
+#############################################################################
+
+dos2unix $LASTFIL ux_${LASTONE}
+
+DATUM=$(date '+%Y%m%d_%H%M%S')
+
+${DB} -<<%
+create temp table legall_disc_th
+(code char(25), grp integer, pharmgrp char(3), cust integer, base integer, from integer,
+to integer, grpdisctyp smallint, disctype smallint, discspec smallint, qty smallint, 
+valuepct decimal(5,2), qtypct decimal(5,2), surpct decimal(5,2), pharmexl char(3),
+fixprice decimal(9,2), refpct decimal(5,2), intdisc char(1), discart char(25), monthdisc char(1),
+pharmexl2 char(3), pharmexl3 char(3));
+
+load from ux_${LASTONE}
+delimiter ';'
+insert into legall_disc_th;
+
+insert into cdiscount
+(articleno, discountgrpno, pharmacygroupid, customerno, baseqty, datefrom,
+dateto, grpdiscounttyp, discounttype, discountspec, discountqty,
+discountvaluepct, discountqtypct, surchargepct, pharmgrpexcluded,
+fixedprice, refundpct, internaldiscount, discountarticle, monthlydiscount,
+pharmgrpexcl_2, pharmgrpexcl_3)
+select 
+(select articleno from carticlecodes where code_type in 
+(select code_type from ccodetypes where artnr_substitute = 1) and article_code = ltrim(code, '0') ),
+grp, pharmgrp, cust, base, from,
+to, grpdisctyp, disctype, discspec, qty,
+valuepct, qtypct, surpct, pharmexl,
+fixprice, refpct, intdisc,
+nvl((select articleno from carticlecodes where code_type in 
+(select code_type from ccodetypes where artnr_substitute = 1) and article_code = ltrim(discart, '0') ), '0000000'),
+monthdisc, pharmexl2 , pharmexl3 
+from legall_disc_th;
+%
+rc=$?
+if [[ $rc -ne 0 ]]
+then
+   echo "Einlesen der Daten aus ux_${LASTONE} mit Fehler $rc abgebrochen. Bitte pruefen!"
+   exit $rc
+fi
+
+###############################
+${DB} -<<%
+select articleno, datefrom from cdiscount where pharmacygroupid = '020' and dateto = 21000101 and
+datefrom <= cast(to_char(current, '%Y%m%d') as integer) and articleno in
+(select articleno from cdiscount where pharmacygroupid = '020' and datefrom > cast(to_char(current, '%Y%m%d') as integer)) into temp raab1;
+
+update cdiscount set dateto =
+cast(to_char(current, '%Y%m%d') as integer)
+where dateto = 21000101
+and pharmacygroupid = '020'
+and articleno in (select articleno from raab1)
+and datefrom = (select datefrom from raab1 where raab1.articleno = cdiscount.articleno);
+%
+rc=$?
+if [[ $rc -ne 0 ]]
+then
+   echo "Update cdiscount mit Fehler $rc abgebrochen. Bitte pruefen!"
+   exit $rc
+fi
+
+${DB} -<<%
+insert into zpznpflege
+select articleno, cast(to_char(current, '%Y%m%d') as integer), '28' from cdiscount where pharmacygroupid = '020'
+and dateto = 21000101 and datefrom > cast(to_char(current, '%Y%m%d') as integer)
+and articleno not in (select artikel_nr from zpznpflege where datum = cast(to_char(current, '%Y%m%d') as integer) and dezap_sa = '28');
+%
+rc=$?
+if [[ $rc -ne 0 ]]
+then
+   echo "Update zpznpflege mit Fehler $rc abgebrochen. Bitte pruefen!"
+   exit $rc
+fi
+#########################################
+
+find . -name "*" -mtime +31 -exec rm {}\;
+
+for DATEI in $(ls ${FILE}*)
+do
+   rm $DATEI
+done
+
+cd ..
+rmdir ${FILE}
+
+exit 0

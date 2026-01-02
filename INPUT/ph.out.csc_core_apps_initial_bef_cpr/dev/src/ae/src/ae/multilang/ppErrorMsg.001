@@ -1,0 +1,23 @@
+///////////////////////////////////////////////////////
+// german error-string file              //
+///////////////////////////////////////////////////////
+
+// generic strings
+
+000 01  "Aufruf war erfolgreich"
+000 02  "xxxxxxxx"
+000 03  "Es wurden keine Daten initialisiert"
+000 04  "Positionierung ausserhalb der Liste"
+000 05  "Keinen Satz gefunden"
+000 06  "Fehler bei Datenbankzugriff"
+000 07  "Fehler in den Daten!"
+000 08  "Satz ist gesperrt!"
+000 09  "Satz ist schon vorhanden"
+000 10  "Es bestehen keine Schreibrechte"
+000 11  "keine Satzveränderung festgestellt"
+000 12  "Feldlängen-Überschreitung"
+000 13  "bereits in Transaktion"
+000 14  "es wurde noch keine Transaktion eroeffnet"
+000 15  "Satz wurde schon geändert"
+000 16  "Satz wurde mit Default-Werten belegt!"
+000 17  "Positionierung ausserhalb einer Liste!"

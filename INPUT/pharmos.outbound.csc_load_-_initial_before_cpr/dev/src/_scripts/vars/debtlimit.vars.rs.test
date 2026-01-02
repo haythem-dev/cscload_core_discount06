@@ -1,0 +1,31 @@
+######## COUNTRY SPECIFIC ########
+
+#DATABASE
+readonly DB_TURNOVER="ors21@zdev21_tcp";                                #Database from which the turnovers are loaded (table "kundemonums")
+readonly DB_DEBTLIMIT="ors21@zdev21_tcp";                               #Database in which the data will be loaded (table "debtlimit")
+
+#FILENAMES
+readonly FILE_COUNTRY_SFX="rs";                                         #File country suffix so that on the same machine no problems occur in filenames
+readonly FILE_SAP_SFX="RS10";                                           #File country suffix of SAP file (last 4 characters of file)
+
+############ GENERAL #############
+
+#FILENAMES
+readonly FILE_SAP="CLIMIT_BUK_${FILE_SAP_SFX}"                          #File delivered from SAP which contains sum_debitside and sum_creditside
+readonly FILE_SAP_FORMAT="cl_${FILE_COUNTRY_SFX}_${FILE_SAP}_format";   #File delivered from SAP which contains sum_debitside and sum_creditside
+readonly FILE_SAP_SQL="cl_${FILE_COUNTRY_SFX}_${FILE_SAP}.sql";         #File to save sql-statements which are used to update the SAP values in debtlimit needs suffix ".sql"
+readonly FILE_TURNOVER="cl_${FILE_COUNTRY_SFX}_kundemonums_unload";     #File to unload content of table "kundemonums"
+readonly FILE_TURNOVER_FORMAT="${FILE_TURNOVER}_format";                #File to format unload file
+readonly FILE_TURNOVER_SQL="${FILE_TURNOVER}.sql";                      #File to save sql-statements which are used to update the turnover values in debtlimit needs suffix ".sql"
+
+#DIRECTORYS
+readonly DIR_SAP_EXPORT="/transfer/ksc"                                 #Dir where SAP export file can be found
+readonly DIR_BACKUP="${LOG_PATH}/debtlimit_backup";                     #Dir to save/backup the input-files HAS TO CONTAIN ${LOG_PATH} for security reasons
+readonly DIR_WORK="/tmp";                                               #Dir to work with unload files etc.
+
+#CONTROL
+readonly CTRL_PRINT_DEBUG_OUTPUT=1;                                     #Print debug information (1=true, 0=false)
+readonly CTRL_BACKUP=1;                                                 #If all input shall be saved for tracing errors (1=true, 0=false)
+readonly CTRL_CONTINUE_ON_ERROR=1;                                      #If continuing on error e.g. sap file missing, load turnover anyway (1=true, 0=false)
+readonly CTRL_TRACE=0;                                                  #Enable tracing (1=true, 0=false)
+readonly CTRL_PARTNERNO_5_FLAG=1;                                       #Enable parsing of 5 digits partner numbers (default 10) (1=true, 0=false)

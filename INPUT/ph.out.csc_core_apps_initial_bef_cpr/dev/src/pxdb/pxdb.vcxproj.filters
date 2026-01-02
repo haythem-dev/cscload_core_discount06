@@ -1,0 +1,1004 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="include">
+      <UniqueIdentifier>{37fa25b5-59f1-48be-923e-ae8ac1417a27}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libsrc">
+      <UniqueIdentifier>{69bc2471-9655-46f0-ab59-b71ac846dc28}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="makefile" />
+    <None Include="libsrc\makefile.win" />
+    <None Include="libsrc\makefile.win64" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\kauftrag.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\keys.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxdbfunc.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxdbxx.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tartacct.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tartalt.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tartbpr.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tartcompack.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tarticlecharge.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tarticlecodes.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tarticlegrp.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tarticlelppr.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tarticleoldprice.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tarticlepackunit.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tartlag.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tartmasfr.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tartnum.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tartquot.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tartreservation.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tartspecialcond.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tarttext.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tartvza.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\taufart.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\taufartk.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\taufbem.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\taufende.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tauferg.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tauftrag.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tbucart.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tcountrycodes.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tcpvalidityperiod.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tcremamail.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tcstcalcavp.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tcstdiscacc.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tcstdiscountcont.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tcstpaymentterms.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tcstprint.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tcstsepordartgrp.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tcststockrsrvd.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tcustomersurcharge.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tcustphg.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tcustrou.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tdealervolume.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tdebtlim.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tdiscount.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tdiscountgrp.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tdiscountgrpmem.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tdiscountlist.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tdiscountordertyp.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tdispart.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tencloserscale.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tfiliale.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tgeneralcalcavp.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tholiday.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tkdaufdiscacc.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tkdaufin.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tkdauftragdebtrel.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tkdauftragposchange.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tkdauftragposcharge.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tkdauftragpospromo.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tkdauftragposrab.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tkdauftragposrefund.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tkdauftragprolink.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tkdauftragrechart.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tkdauftragwerte.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tkdauftrposrechart.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tkdordnr.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tkomart.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tkundbet.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tkunde.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tkundeausku.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tkundgrp.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tkundkon.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tlagrev.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tliefpo.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tmanufacturergroup.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tnarctracttrfer.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tnlprot.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tnummer.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tordercriteria.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\torderperiod.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tparamet.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tpositionparking.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tpromotionquota.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tpromotionquotacst.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tpromotions.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\trechner.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\treimprt.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tseporderartgrp.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tstkent.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ttaskctl.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ttaxrates.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ttaxtab.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ttendercustomer.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ttenderhead.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ttenderpos.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ttenderprogress.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ttour.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ttourconstime.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ttourpg.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ttourplanwoche.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ttourplconstime.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ttourpltwoche.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ttourpt.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tvartikellokal.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tzeitart.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ttoteinfo.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tcustomertour.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tkdauftragpostour.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tparaauftragbearb.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxenv.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tcustomerbusinesshours.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tibtbranches.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxrecord.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxloggerpool.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ttourmasterdata.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tcustomerspecials.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\torderrelationnotypes.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\torderrelationno.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tibttype.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tkdauftragpos.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tauftragartkomb.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tsalesman.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxdatetime.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tsuppldeliveryinfo.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tservices.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tdelayeddeliverycst.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tkundenotdienstplan.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tibtbrancharticleconfig.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\transmissionresponse.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tibtassortmenttype.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tregistersprices.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tnhifprices.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tcsccustomer.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tcustgrpflagtypes.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tcustomergroup.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tcustomergrpflags.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\teventreason.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tkdauftragposereignis.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\toeorigintypes.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\toerestrictiontypes.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\torderentryrestrictions.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\torderremarks.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\torderremarktypes.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tpromotionscale.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="libsrc\tasbccommon.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tkundeschalter.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tartikelzentral.h">
+      <Filter>include</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="libsrc\connect.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\disconn.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\rartacct.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\rartikel.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tartalt.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tartbpr.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tartcompack.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tarticlecharge.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tarticlecodes.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tarticlegrp.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tarticlelppr.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tarticleoldprice.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tarticlepackunit.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tartlag.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tartmas.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tartmasfr.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tartnum.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tartquot.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tartreservation.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tartspecialcond.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tarttext.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tartvza.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tasbc0.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tasbc1.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tasbc18.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tasbc19.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tasbc22.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tasbc25.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tasbc26.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tasbc27.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tasbc28.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tasbc29.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tasbc30.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tasbc31.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tasbc32.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tasbc33.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tasbc42.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tasbc45.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tasbc48.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tasbc49.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tasbc50.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tasbc53.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tasbc56.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tasbc57.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tasbc60.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tasbc61.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tasbc62.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tasbc63.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tasbc64.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tasbc65.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tasbc66.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tasbc67.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tasbc68.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tasbc69.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tasbc70.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tasbc71.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tasbc72.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\taufart.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\taufartk.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\taufbem.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\taufende.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tauferg.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tauftrag.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tbucart.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tcountrycodes.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tcpvalidperiod.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tcremamail.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tcstcalcavp.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tcstdiscacc.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tcstdiscountcont.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tcstpaymentterms.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tcstprint.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tcstsepordartgrp.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tcststockrsrvd.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tcustomersurcharge.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tcustphg.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tcustrou.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tdealervolume.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tdebtlim.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tdiscount.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tdiscountgrp.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tdiscountgrpmem.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tdiscountlist.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tdiscountordtyp.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tdispart.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tencloserscale.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tfiliale.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tgeneralcalcavp.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tholiday.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tkdaufdiscacc.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tkdaufin.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tkdauftragdebtrel.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tkdauftragposchange.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tkdauftragposcharge.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tkdauftragpospromo.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tkdauftragposrab.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tkdauftragposrefund.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tkdauftragprolink.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tkdauftragrechart.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tkdauftragwerte.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tkdauftrposrechart.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tkdordnr.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tkomart.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tkundbet.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tkunde.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tkundeausku.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tkundgrp.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tkundkon.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tlagrev.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tliefpo.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tmanufacturergroup.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tmsv3auftrag.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tnarctracttrfer.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tnlprot.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tnummer.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tordercriteria.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\torderperiod.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tparamet.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tpositionparking.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tpromotionquota.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tpromotionquotacst.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tpromotions.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\transact.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\trechner.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\treimprt.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tseporderartgrp.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tstkent.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\ttaskctl.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\ttaxrates.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\ttaxtab.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\ttendercustomer.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\ttenderhead.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\ttenderpos.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\ttenderprogress.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\ttour.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\ttourconstime.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\ttourplanwoche.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\ttourplconstime.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\ttourpltwoche.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\ttourpt.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tzeitart.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tcustgrpflagtypes.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tcustomergroup.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tcustomergrpflags.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tcustomertour.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\teventreason.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tkdauftragposereignis.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\toeorigintypes.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\toerestrictiontypes.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\torderentryrestrictions.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\torderremarks.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\torderremarktypes.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tpromotionscale.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\ttoteinfo.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tasbc73.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tkdauftragpostour.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tparaauftragbearb.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tcsccustomer.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tcustomerbusinesshours.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tibtbranches.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\ttourmasterdata.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tcustomerspecials.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\torderrelationnotype.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\torderrelationno.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tibttype.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tvartikellokal.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tkdauftragpos.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tauftragartkomb.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\kdauftragposinfo.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tsalesman.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\suppldeliveryinfo.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tservices.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tdelayeddeliverycst.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tkundenotdienstplan.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tibtbrancharticleconfig.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\transmissionresponse.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tibtassortmenttype.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tregistersprices.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tnhifprices.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="libsrc\tkundeschalter.cxx">
+      <Filter>libsrc</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

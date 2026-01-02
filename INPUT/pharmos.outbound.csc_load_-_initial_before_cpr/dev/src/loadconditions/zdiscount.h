@@ -1,0 +1,1609 @@
+#ifndef __PP_ZDISCOUNT_H_
+#define __PP_ZDISCOUNT_H_
+
+/******************************************************************************/
+/* c:\PHARMOS\amico\zdiscount *************************************************/
+/* produced by DADE 6.22.2 ****************************************************/
+/******************************************************************************/
+
+/* ppunixc */
+#include <pplib/bufkon.h>
+
+/* Length-Define of ZDISCOUNT *************************************************/
+
+#define L_ZDISCOUNT_ARTICLENO 11
+#define L_ZDISCOUNT_DISCOUNTGRPNO 11
+#define L_ZDISCOUNT_PHARMACYGROUPID 3
+#define L_ZDISCOUNT_CUSTOMERNO 11
+#define L_ZDISCOUNT_BASEQTY 11
+#define L_ZDISCOUNT_DATEFROM 11
+#define L_ZDISCOUNT_DATETO 11
+#define L_ZDISCOUNT_GRPDISCOUNTTYP 6
+#define L_ZDISCOUNT_DISCOUNTTYPE 6
+#define L_ZDISCOUNT_DISCOUNTSPEC 6
+#define L_ZDISCOUNT_DISCOUNTQTY 6
+#define L_ZDISCOUNT_DISCOUNTVALUEPCT 5
+#define N_ZDISCOUNT_DISCOUNTVALUEPCT 2
+#define L_ZDISCOUNT_DISCOUNTQTYPCT 5
+#define N_ZDISCOUNT_DISCOUNTQTYPCT 2
+#define L_ZDISCOUNT_SURCHARGEPCT 5
+#define N_ZDISCOUNT_SURCHARGEPCT 2
+#define L_ZDISCOUNT_PHARMGRPEXCLUDED 3
+#define L_ZDISCOUNT_FIXEDPRICE 9
+#define N_ZDISCOUNT_FIXEDPRICE 2
+#define L_ZDISCOUNT_REFUNDPCT 5
+#define N_ZDISCOUNT_REFUNDPCT 2
+#define L_ZDISCOUNT_INTERNALDISCOUNT 1
+#define L_ZDISCOUNT_DISCOUNTARTICLE 11
+#define L_ZDISCOUNT_MONTHLYDISCOUNT 1
+#define L_ZDISCOUNT_PHARMGRPEXCL_2 3
+#define L_ZDISCOUNT_PHARMGRPEXCL_3 3
+#define L_ZDISCOUNT_BASE_VALUE 10
+#define N_ZDISCOUNT_BASE_VALUE 2
+#define L_ZDISCOUNT_BASE_MULT_STD_QTY 11
+#define L_ZDISCOUNT_NO_MULTIPLE_QTY 1
+#define L_ZDISCOUNT_FIXEDDISCOUNTVALUE 9
+#define N_ZDISCOUNT_FIXEDDISCOUNTVALUE 2
+#define L_ZDISCOUNT_MANUFACTURERNO 11
+#define L_ZDISCOUNT_ARTCATEGORYNO 11
+#define L_ZDISCOUNT_PAYMENTTARGETNO 6
+#define L_ZDISCOUNT_GROSSPROFITPCT 5
+#define N_ZDISCOUNT_GROSSPROFITPCT 2
+#define L_ZDISCOUNT_ADDONDISCOUNTOK 1
+#define L_ZDISCOUNT_PAYMENTTERMTYPE 1
+#define L_ZDISCOUNT_TARGETQTY 11
+#define L_ZDISCOUNT_EXCEEDANCEPCT 5
+#define N_ZDISCOUNT_EXCEEDANCEPCT 2
+#define L_ZDISCOUNT_REFUNDTYPE 6
+#define L_ZDISCOUNT_ARTICLE_NO_PACK 11
+#define L_ZDISCOUNT_REFUNDVALUE 9
+#define N_ZDISCOUNT_REFUNDVALUE 2
+#define L_ZDISCOUNT_PROMOTION_NO 6
+#define L_ZDISCOUNT_TURNOVERCALCIMPACT 1
+#define L_ZDISCOUNT_MAXQTY 11
+#define L_ZDISCOUNT_ADDONDISCOUNT 1
+#define L_ZDISCOUNT_DISCOUNTCALCFROM 6
+#define L_ZDISCOUNT_DISCOUNTAPPLYTO 6
+
+/* Length/Count-Define of ZDISCOUNT *******************************************/
+
+#define LS_ZDISCOUNT_ARTICLENO 10 + 1
+#define LS_ZDISCOUNT_DISCOUNTGRPNO 10 + 1
+#define LS_ZDISCOUNT_PHARMACYGROUPID 3 + 1
+#define LS_ZDISCOUNT_CUSTOMERNO 10 + 1
+#define LS_ZDISCOUNT_BASEQTY 10 + 1
+#define LS_ZDISCOUNT_DATEFROM 10 + 1
+#define LS_ZDISCOUNT_DATETO 10 + 1
+#define LS_ZDISCOUNT_GRPDISCOUNTTYP 5 + 1
+#define LS_ZDISCOUNT_DISCOUNTTYPE 5 + 1
+#define LS_ZDISCOUNT_DISCOUNTSPEC 5 + 1
+#define LS_ZDISCOUNT_DISCOUNTQTY 5 + 1
+#define LS_ZDISCOUNT_DISCOUNTVALUEPCT 5 + 2
+#define LS_ZDISCOUNT_DISCOUNTQTYPCT 5 + 2
+#define LS_ZDISCOUNT_SURCHARGEPCT 5 + 2
+#define LS_ZDISCOUNT_PHARMGRPEXCLUDED 3 + 1
+#define LS_ZDISCOUNT_FIXEDPRICE 9 + 2
+#define LS_ZDISCOUNT_REFUNDPCT 5 + 2
+#define LS_ZDISCOUNT_INTERNALDISCOUNT 1 + 1
+#define LS_ZDISCOUNT_DISCOUNTARTICLE 10 + 1
+#define LS_ZDISCOUNT_MONTHLYDISCOUNT 1 + 1
+#define LS_ZDISCOUNT_PHARMGRPEXCL_2 3 + 1
+#define LS_ZDISCOUNT_PHARMGRPEXCL_3 3 + 1
+#define LS_ZDISCOUNT_BASE_VALUE 10 + 2
+#define LS_ZDISCOUNT_BASE_MULT_STD_QTY 10 + 1
+#define LS_ZDISCOUNT_NO_MULTIPLE_QTY 1 + 1
+#define LS_ZDISCOUNT_FIXEDDISCOUNTVALUE 9 + 2
+#define LS_ZDISCOUNT_MANUFACTURERNO 10 + 1
+#define LS_ZDISCOUNT_ARTCATEGORYNO 10 + 1
+#define LS_ZDISCOUNT_PAYMENTTARGETNO 5 + 1
+#define LS_ZDISCOUNT_GROSSPROFITPCT 5 + 2
+#define LS_ZDISCOUNT_ADDONDISCOUNTOK 1 + 1
+#define LS_ZDISCOUNT_PAYMENTTERMTYPE 1 + 1
+#define LS_ZDISCOUNT_TARGETQTY 10 + 1
+#define LS_ZDISCOUNT_EXCEEDANCEPCT 5 + 2
+#define LS_ZDISCOUNT_REFUNDTYPE 5 + 1
+#define LS_ZDISCOUNT_ARTICLE_NO_PACK 10 + 1
+#define LS_ZDISCOUNT_REFUNDVALUE 9 + 2
+#define LS_ZDISCOUNT_PROMOTION_NO 5 + 1
+#define LS_ZDISCOUNT_TURNOVERCALCIMPACT 1 + 1
+#define LS_ZDISCOUNT_MAXQTY 10 + 1
+#define LS_ZDISCOUNT_ADDONDISCOUNT 1 + 1
+#define LS_ZDISCOUNT_DISCOUNTCALCFROM 5 + 1
+#define LS_ZDISCOUNT_DISCOUNTAPPLYTO 5 + 1
+
+#define ZDISCOUNTARTICLENO 0
+#define ZDISCOUNTDISCOUNTGRPNO 1
+#define ZDISCOUNTPHARMACYGROUPID 2
+#define ZDISCOUNTCUSTOMERNO 3
+#define ZDISCOUNTBASEQTY 4
+#define ZDISCOUNTDATEFROM 5
+#define ZDISCOUNTDATETO 6
+#define ZDISCOUNTGRPDISCOUNTTYP 7
+#define ZDISCOUNTDISCOUNTTYPE 8
+#define ZDISCOUNTDISCOUNTSPEC 9
+#define ZDISCOUNTDISCOUNTQTY 10
+#define ZDISCOUNTDISCOUNTVALUEPCT 11
+#define ZDISCOUNTDISCOUNTQTYPCT 12
+#define ZDISCOUNTSURCHARGEPCT 13
+#define ZDISCOUNTPHARMGRPEXCLUDED 14
+#define ZDISCOUNTFIXEDPRICE 15
+#define ZDISCOUNTREFUNDPCT 16
+#define ZDISCOUNTINTERNALDISCOUNT 17
+#define ZDISCOUNTDISCOUNTARTICLE 18
+#define ZDISCOUNTMONTHLYDISCOUNT 19
+#define ZDISCOUNTPHARMGRPEXCL_2 20
+#define ZDISCOUNTPHARMGRPEXCL_3 21
+#define ZDISCOUNTBASE_VALUE 22
+#define ZDISCOUNTBASE_MULT_STD_QTY 23
+#define ZDISCOUNTNO_MULTIPLE_QTY 24
+#define ZDISCOUNTFIXEDDISCOUNTVALUE 25
+#define ZDISCOUNTMANUFACTURERNO 26
+#define ZDISCOUNTARTCATEGORYNO 27
+#define ZDISCOUNTPAYMENTTARGETNO 28
+#define ZDISCOUNTGROSSPROFITPCT 29
+#define ZDISCOUNTADDONDISCOUNTOK 30
+#define ZDISCOUNTPAYMENTTERMTYPE 31
+#define ZDISCOUNTTARGETQTY 32
+#define ZDISCOUNTEXCEEDANCEPCT 33
+#define ZDISCOUNTREFUNDTYPE 34
+#define ZDISCOUNTARTICLE_NO_PACK 35
+#define ZDISCOUNTREFUNDVALUE 36
+#define ZDISCOUNTPROMOTION_NO 37
+#define ZDISCOUNTTURNOVERCALCIMPACT 38
+#define ZDISCOUNTMAXQTY 39
+#define ZDISCOUNTADDONDISCOUNT 40
+#define ZDISCOUNTDISCOUNTCALCFROM 41
+#define ZDISCOUNTDISCOUNTAPPLYTO 42
+
+/* define of Buf_Desc *********************************************************/
+
+#if defined (BUF_DESC) || defined (C_BUF_DESC)
+#define ZDISCOUNT_H
+#define ZDISCOUNT_ANZ ( sizeof(ZDISCOUNT_BES) / sizeof(struct buf_desc) )
+#endif
+
+/* SqlDefine of ZDISCOUNT *****************************************************/
+
+#define ZDISCOUNT_LISTE \
+        CDISCOUNT.ARTICLENO,\
+        CDISCOUNT.DISCOUNTGRPNO,\
+        CDISCOUNT.PHARMACYGROUPID,\
+        CDISCOUNT.CUSTOMERNO,\
+        CDISCOUNT.BASEQTY,\
+        CDISCOUNT.DATEFROM,\
+        CDISCOUNT.DATETO,\
+        CDISCOUNT.GRPDISCOUNTTYP,\
+        CDISCOUNT.DISCOUNTTYPE,\
+        CDISCOUNT.DISCOUNTSPEC,\
+        CDISCOUNT.DISCOUNTQTY,\
+        CDISCOUNT.DISCOUNTVALUEPCT,\
+        CDISCOUNT.DISCOUNTQTYPCT,\
+        CDISCOUNT.SURCHARGEPCT,\
+        CDISCOUNT.PHARMGRPEXCLUDED,\
+        CDISCOUNT.FIXEDPRICE,\
+        CDISCOUNT.REFUNDPCT,\
+        CDISCOUNT.INTERNALDISCOUNT,\
+        CDISCOUNT.DISCOUNTARTICLE,\
+        CDISCOUNT.MONTHLYDISCOUNT,\
+        CDISCOUNT.PHARMGRPEXCL_2,\
+        CDISCOUNT.PHARMGRPEXCL_3,\
+        CDISCOUNT.BASE_VALUE,\
+        CDISCOUNT.BASE_MULT_STD_QTY,\
+        CDISCOUNT.NO_MULTIPLE_QTY,\
+        CDISCOUNT.FIXEDDISCOUNTVALUE,\
+        CDISCOUNT.MANUFACTURERNO,\
+        CDISCOUNT.ARTCATEGORYNO,\
+        CDISCOUNT.PAYMENTTARGETNO,\
+        CDISCOUNT.GROSSPROFITPCT,\
+        CDISCOUNT.ADDONDISCOUNTOK,\
+        CDISCOUNT.PAYMENTTERMTYPE,\
+        CDISCOUNT.TARGETQTY,\
+        CDISCOUNT.EXCEEDANCEPCT,\
+        CDISCOUNT.REFUNDTYPE,\
+        CDISCOUNT.ARTICLE_NO_PACK,\
+        CDISCOUNT.REFUNDVALUE,\
+        CDISCOUNT.PROMOTION_NO,\
+        CDISCOUNT.TURNOVERCALCIMPACT,\
+        CDISCOUNT.MAXQTY,\
+        CDISCOUNT.ADDONDISCOUNT,\
+        CDISCOUNT.DISCOUNTCALCFROM,\
+        CDISCOUNT.DISCOUNTAPPLYTO
+#define ZDISCOUNT_LISTE_390 \
+        ARTICLENO,\
+        DISCOUNTGRPNO,\
+        PHARMACYGROUPID,\
+        CUSTOMERNO,\
+        BASEQTY,\
+        DATEFROM,\
+        DATETO,\
+        GRPDISCOUNTTYP,\
+        DISCOUNTTYPE,\
+        DISCOUNTSPEC,\
+        DISCOUNTQTY,\
+        DISCOUNTVALUEPCT,\
+        DISCOUNTQTYPCT,\
+        SURCHARGEPCT,\
+        PHARMGRPEXCLUDED,\
+        FIXEDPRICE,\
+        REFUNDPCT,\
+        INTERNALDISCOUNT,\
+        DISCOUNTARTICLE,\
+        MONTHLYDISCOUNT,\
+        PHARMGRPEXCL_2,\
+        PHARMGRPEXCL_3,\
+        BASE_VALUE,\
+        BASE_MULT_STD_QTY,\
+        NO_MULTIPLE_QTY,\
+        FIXEDDISCOUNTVALUE,\
+        MANUFACTURERNO,\
+        ARTCATEGORYNO,\
+        PAYMENTTARGETNO,\
+        GROSSPROFITPCT,\
+        ADDONDISCOUNTOK,\
+        PAYMENTTERMTYPE,\
+        TARGETQTY,\
+        EXCEEDANCEPCT,\
+        REFUNDTYPE,\
+        ARTICLE_NO_PACK,\
+        REFUNDVALUE,\
+        PROMOTION_NO,\
+        TURNOVERCALCIMPACT,\
+        MAXQTY,\
+        ADDONDISCOUNT,\
+        DISCOUNTCALCFROM,\
+        DISCOUNTAPPLYTO
+#define ZDISCOUNT_PLISTE \
+        "CDISCOUNT.ARTICLENO,"\
+        "CDISCOUNT.DISCOUNTGRPNO,"\
+        "CDISCOUNT.PHARMACYGROUPID,"\
+        "CDISCOUNT.CUSTOMERNO,"\
+        "CDISCOUNT.BASEQTY,"\
+        "CDISCOUNT.DATEFROM,"\
+        "CDISCOUNT.DATETO,"\
+        "CDISCOUNT.GRPDISCOUNTTYP,"\
+        "CDISCOUNT.DISCOUNTTYPE,"\
+        "CDISCOUNT.DISCOUNTSPEC,"\
+        "CDISCOUNT.DISCOUNTQTY,"\
+        "CDISCOUNT.DISCOUNTVALUEPCT,"\
+        "CDISCOUNT.DISCOUNTQTYPCT,"\
+        "CDISCOUNT.SURCHARGEPCT,"\
+        "CDISCOUNT.PHARMGRPEXCLUDED,"\
+        "CDISCOUNT.FIXEDPRICE,"\
+        "CDISCOUNT.REFUNDPCT,"\
+        "CDISCOUNT.INTERNALDISCOUNT,"\
+        "CDISCOUNT.DISCOUNTARTICLE,"\
+        "CDISCOUNT.MONTHLYDISCOUNT,"\
+        "CDISCOUNT.PHARMGRPEXCL_2,"\
+        "CDISCOUNT.PHARMGRPEXCL_3,"\
+        "CDISCOUNT.BASE_VALUE,"\
+        "CDISCOUNT.BASE_MULT_STD_QTY,"\
+        "CDISCOUNT.NO_MULTIPLE_QTY,"\
+        "CDISCOUNT.FIXEDDISCOUNTVALUE,"\
+        "CDISCOUNT.MANUFACTURERNO,"\
+        "CDISCOUNT.ARTCATEGORYNO,"\
+        "CDISCOUNT.PAYMENTTARGETNO,"\
+        "CDISCOUNT.GROSSPROFITPCT,"\
+        "CDISCOUNT.ADDONDISCOUNTOK,"\
+        "CDISCOUNT.PAYMENTTERMTYPE,"\
+        "CDISCOUNT.TARGETQTY,"\
+        "CDISCOUNT.EXCEEDANCEPCT,"\
+        "CDISCOUNT.REFUNDTYPE,"\
+        "CDISCOUNT.ARTICLE_NO_PACK,"\
+        "CDISCOUNT.REFUNDVALUE,"\
+        "CDISCOUNT.PROMOTION_NO,"\
+        "CDISCOUNT.TURNOVERCALCIMPACT,"\
+        "CDISCOUNT.MAXQTY,"\
+        "CDISCOUNT.ADDONDISCOUNT,"\
+        "CDISCOUNT.DISCOUNTCALCFROM,"\
+        "CDISCOUNT.DISCOUNTAPPLYTO"
+#define ZDISCOUNT_PELISTE \
+        "ARTICLENO,"\
+        "DISCOUNTGRPNO,"\
+        "PHARMACYGROUPID,"\
+        "CUSTOMERNO,"\
+        "BASEQTY,"\
+        "DATEFROM,"\
+        "DATETO,"\
+        "GRPDISCOUNTTYP,"\
+        "DISCOUNTTYPE,"\
+        "DISCOUNTSPEC,"\
+        "DISCOUNTQTY,"\
+        "DISCOUNTVALUEPCT,"\
+        "DISCOUNTQTYPCT,"\
+        "SURCHARGEPCT,"\
+        "PHARMGRPEXCLUDED,"\
+        "FIXEDPRICE,"\
+        "REFUNDPCT,"\
+        "INTERNALDISCOUNT,"\
+        "DISCOUNTARTICLE,"\
+        "MONTHLYDISCOUNT,"\
+        "PHARMGRPEXCL_2,"\
+        "PHARMGRPEXCL_3,"\
+        "BASE_VALUE,"\
+        "BASE_MULT_STD_QTY,"\
+        "NO_MULTIPLE_QTY,"\
+        "FIXEDDISCOUNTVALUE,"\
+        "MANUFACTURERNO,"\
+        "ARTCATEGORYNO,"\
+        "PAYMENTTARGETNO,"\
+        "GROSSPROFITPCT,"\
+        "ADDONDISCOUNTOK,"\
+        "PAYMENTTERMTYPE,"\
+        "TARGETQTY,"\
+        "EXCEEDANCEPCT,"\
+        "REFUNDTYPE,"\
+        "ARTICLE_NO_PACK,"\
+        "REFUNDVALUE,"\
+        "PROMOTION_NO,"\
+        "TURNOVERCALCIMPACT,"\
+        "MAXQTY,"\
+        "ADDONDISCOUNT,"\
+        "DISCOUNTCALCFROM,"\
+        "DISCOUNTAPPLYTO"
+#define ZDISCOUNT_UPDLISTE \
+        "ARTICLENO=?,"\
+        "DISCOUNTGRPNO=?,"\
+        "PHARMACYGROUPID=?,"\
+        "CUSTOMERNO=?,"\
+        "BASEQTY=?,"\
+        "DATEFROM=?,"\
+        "DATETO=?,"\
+        "GRPDISCOUNTTYP=?,"\
+        "DISCOUNTTYPE=?,"\
+        "DISCOUNTSPEC=?,"\
+        "DISCOUNTQTY=?,"\
+        "DISCOUNTVALUEPCT=?,"\
+        "DISCOUNTQTYPCT=?,"\
+        "SURCHARGEPCT=?,"\
+        "PHARMGRPEXCLUDED=?,"\
+        "FIXEDPRICE=?,"\
+        "REFUNDPCT=?,"\
+        "INTERNALDISCOUNT=?,"\
+        "DISCOUNTARTICLE=?,"\
+        "MONTHLYDISCOUNT=?,"\
+        "PHARMGRPEXCL_2=?,"\
+        "PHARMGRPEXCL_3=?,"\
+        "BASE_VALUE=?,"\
+        "BASE_MULT_STD_QTY=?,"\
+        "NO_MULTIPLE_QTY=?,"\
+        "FIXEDDISCOUNTVALUE=?,"\
+        "MANUFACTURERNO=?,"\
+        "ARTCATEGORYNO=?,"\
+        "PAYMENTTARGETNO=?,"\
+        "GROSSPROFITPCT=?,"\
+        "ADDONDISCOUNTOK=?,"\
+        "PAYMENTTERMTYPE=?,"\
+        "TARGETQTY=?,"\
+        "EXCEEDANCEPCT=?,"\
+        "REFUNDTYPE=?,"\
+        "ARTICLE_NO_PACK=?,"\
+        "REFUNDVALUE=?,"\
+        "PROMOTION_NO=?,"\
+        "TURNOVERCALCIMPACT=?,"\
+        "MAXQTY=?,"\
+        "ADDONDISCOUNT=?,"\
+        "DISCOUNTCALCFROM=?,"\
+        "DISCOUNTAPPLYTO=?"
+/* SqlMacros-Define of ZDISCOUNT **********************************************/
+
+#define ZDISCOUNT_ZEIGER(x) \
+        :x->ARTICLENO,\
+        :x->DISCOUNTGRPNO,\
+        :x->PHARMACYGROUPID,\
+        :x->CUSTOMERNO,\
+        :x->BASEQTY,\
+        :x->DATEFROM,\
+        :x->DATETO,\
+        :x->GRPDISCOUNTTYP,\
+        :x->DISCOUNTTYPE,\
+        :x->DISCOUNTSPEC,\
+        :x->DISCOUNTQTY,\
+        :x->DISCOUNTVALUEPCT,\
+        :x->DISCOUNTQTYPCT,\
+        :x->SURCHARGEPCT,\
+        :x->PHARMGRPEXCLUDED,\
+        :x->FIXEDPRICE,\
+        :x->REFUNDPCT,\
+        :x->INTERNALDISCOUNT,\
+        :x->DISCOUNTARTICLE,\
+        :x->MONTHLYDISCOUNT,\
+        :x->PHARMGRPEXCL_2,\
+        :x->PHARMGRPEXCL_3,\
+        :x->BASE_VALUE,\
+        :x->BASE_MULT_STD_QTY,\
+        :x->NO_MULTIPLE_QTY,\
+        :x->FIXEDDISCOUNTVALUE,\
+        :x->MANUFACTURERNO,\
+        :x->ARTCATEGORYNO,\
+        :x->PAYMENTTARGETNO,\
+        :x->GROSSPROFITPCT,\
+        :x->ADDONDISCOUNTOK,\
+        :x->PAYMENTTERMTYPE,\
+        :x->TARGETQTY,\
+        :x->EXCEEDANCEPCT,\
+        :x->REFUNDTYPE,\
+        :x->ARTICLE_NO_PACK,\
+        :x->REFUNDVALUE,\
+        :x->PROMOTION_NO,\
+        :x->TURNOVERCALCIMPACT,\
+        :x->MAXQTY,\
+        :x->ADDONDISCOUNT,\
+        :x->DISCOUNTCALCFROM,\
+        :x->DISCOUNTAPPLYTO
+#define ZDISCOUNT_ZEIGERSEL(x) \
+        :x->ARTICLENO,\
+        :x->DISCOUNTGRPNO,\
+        :x->PHARMACYGROUPID,\
+        :x->CUSTOMERNO,\
+        :x->BASEQTY,\
+        :x->DATEFROM,\
+        :x->DATETO,\
+        :x->GRPDISCOUNTTYP,\
+        :x->DISCOUNTTYPE,\
+        :x->DISCOUNTSPEC,\
+        :x->DISCOUNTQTY,\
+        :x->DISCOUNTVALUEPCT,\
+        :x->DISCOUNTQTYPCT,\
+        :x->SURCHARGEPCT,\
+        :x->PHARMGRPEXCLUDED,\
+        :x->FIXEDPRICE,\
+        :x->REFUNDPCT,\
+        :x->INTERNALDISCOUNT,\
+        :x->DISCOUNTARTICLE,\
+        :x->MONTHLYDISCOUNT,\
+        :x->PHARMGRPEXCL_2,\
+        :x->PHARMGRPEXCL_3,\
+        :x->BASE_VALUE,\
+        :x->BASE_MULT_STD_QTY,\
+        :x->NO_MULTIPLE_QTY,\
+        :x->FIXEDDISCOUNTVALUE,\
+        :x->MANUFACTURERNO,\
+        :x->ARTCATEGORYNO,\
+        :x->PAYMENTTARGETNO,\
+        :x->GROSSPROFITPCT,\
+        :x->ADDONDISCOUNTOK,\
+        :x->PAYMENTTERMTYPE,\
+        :x->TARGETQTY,\
+        :x->EXCEEDANCEPCT,\
+        :x->REFUNDTYPE,\
+        :x->ARTICLE_NO_PACK,\
+        :x->REFUNDVALUE,\
+        :x->PROMOTION_NO,\
+        :x->TURNOVERCALCIMPACT,\
+        :x->MAXQTY,\
+        :x->ADDONDISCOUNT,\
+        :x->DISCOUNTCALCFROM,\
+        :x->DISCOUNTAPPLYTO
+#define ZDISCOUNT_UPDATE(x) \
+        CDISCOUNT.ARTICLENO=:x->ARTICLENO,\
+        CDISCOUNT.DISCOUNTGRPNO=:x->DISCOUNTGRPNO,\
+        CDISCOUNT.PHARMACYGROUPID=:x->PHARMACYGROUPID,\
+        CDISCOUNT.CUSTOMERNO=:x->CUSTOMERNO,\
+        CDISCOUNT.BASEQTY=:x->BASEQTY,\
+        CDISCOUNT.DATEFROM=:x->DATEFROM,\
+        CDISCOUNT.DATETO=:x->DATETO,\
+        CDISCOUNT.GRPDISCOUNTTYP=:x->GRPDISCOUNTTYP,\
+        CDISCOUNT.DISCOUNTTYPE=:x->DISCOUNTTYPE,\
+        CDISCOUNT.DISCOUNTSPEC=:x->DISCOUNTSPEC,\
+        CDISCOUNT.DISCOUNTQTY=:x->DISCOUNTQTY,\
+        CDISCOUNT.DISCOUNTVALUEPCT=:x->DISCOUNTVALUEPCT,\
+        CDISCOUNT.DISCOUNTQTYPCT=:x->DISCOUNTQTYPCT,\
+        CDISCOUNT.SURCHARGEPCT=:x->SURCHARGEPCT,\
+        CDISCOUNT.PHARMGRPEXCLUDED=:x->PHARMGRPEXCLUDED,\
+        CDISCOUNT.FIXEDPRICE=:x->FIXEDPRICE,\
+        CDISCOUNT.REFUNDPCT=:x->REFUNDPCT,\
+        CDISCOUNT.INTERNALDISCOUNT=:x->INTERNALDISCOUNT,\
+        CDISCOUNT.DISCOUNTARTICLE=:x->DISCOUNTARTICLE,\
+        CDISCOUNT.MONTHLYDISCOUNT=:x->MONTHLYDISCOUNT,\
+        CDISCOUNT.PHARMGRPEXCL_2=:x->PHARMGRPEXCL_2,\
+        CDISCOUNT.PHARMGRPEXCL_3=:x->PHARMGRPEXCL_3,\
+        CDISCOUNT.BASE_VALUE=:x->BASE_VALUE,\
+        CDISCOUNT.BASE_MULT_STD_QTY=:x->BASE_MULT_STD_QTY,\
+        CDISCOUNT.NO_MULTIPLE_QTY=:x->NO_MULTIPLE_QTY,\
+        CDISCOUNT.FIXEDDISCOUNTVALUE=:x->FIXEDDISCOUNTVALUE,\
+        CDISCOUNT.MANUFACTURERNO=:x->MANUFACTURERNO,\
+        CDISCOUNT.ARTCATEGORYNO=:x->ARTCATEGORYNO,\
+        CDISCOUNT.PAYMENTTARGETNO=:x->PAYMENTTARGETNO,\
+        CDISCOUNT.GROSSPROFITPCT=:x->GROSSPROFITPCT,\
+        CDISCOUNT.ADDONDISCOUNTOK=:x->ADDONDISCOUNTOK,\
+        CDISCOUNT.PAYMENTTERMTYPE=:x->PAYMENTTERMTYPE,\
+        CDISCOUNT.TARGETQTY=:x->TARGETQTY,\
+        CDISCOUNT.EXCEEDANCEPCT=:x->EXCEEDANCEPCT,\
+        CDISCOUNT.REFUNDTYPE=:x->REFUNDTYPE,\
+        CDISCOUNT.ARTICLE_NO_PACK=:x->ARTICLE_NO_PACK,\
+        CDISCOUNT.REFUNDVALUE=:x->REFUNDVALUE,\
+        CDISCOUNT.PROMOTION_NO=:x->PROMOTION_NO,\
+        CDISCOUNT.TURNOVERCALCIMPACT=:x->TURNOVERCALCIMPACT,\
+        CDISCOUNT.MAXQTY=:x->MAXQTY,\
+        CDISCOUNT.ADDONDISCOUNT=:x->ADDONDISCOUNT,\
+        CDISCOUNT.DISCOUNTCALCFROM=:x->DISCOUNTCALCFROM,\
+        CDISCOUNT.DISCOUNTAPPLYTO=:x->DISCOUNTAPPLYTO
+/* SqlMacros390-Define of ZDISCOUNT *******************************************/
+
+#define ZDISCOUNT_ZEIGER_390 \
+        :ARTICLENO,\
+        :DISCOUNTGRPNO,\
+        :PHARMACYGROUPID,\
+        :CUSTOMERNO,\
+        :BASEQTY,\
+        :DATEFROM,\
+        :DATETO,\
+        :GRPDISCOUNTTYP,\
+        :DISCOUNTTYPE,\
+        :DISCOUNTSPEC,\
+        :DISCOUNTQTY,\
+        :DISCOUNTVALUEPCT,\
+        :DISCOUNTQTYPCT,\
+        :SURCHARGEPCT,\
+        :PHARMGRPEXCLUDED,\
+        :FIXEDPRICE,\
+        :REFUNDPCT,\
+        :INTERNALDISCOUNT,\
+        :DISCOUNTARTICLE,\
+        :MONTHLYDISCOUNT,\
+        :PHARMGRPEXCL_2,\
+        :PHARMGRPEXCL_3,\
+        :BASE_VALUE,\
+        :BASE_MULT_STD_QTY,\
+        :NO_MULTIPLE_QTY,\
+        :FIXEDDISCOUNTVALUE,\
+        :MANUFACTURERNO,\
+        :ARTCATEGORYNO,\
+        :PAYMENTTARGETNO,\
+        :GROSSPROFITPCT,\
+        :ADDONDISCOUNTOK,\
+        :PAYMENTTERMTYPE,\
+        :TARGETQTY,\
+        :EXCEEDANCEPCT,\
+        :REFUNDTYPE,\
+        :ARTICLE_NO_PACK,\
+        :REFUNDVALUE,\
+        :PROMOTION_NO,\
+        :TURNOVERCALCIMPACT,\
+        :MAXQTY,\
+        :ADDONDISCOUNT,\
+        :DISCOUNTCALCFROM,\
+        :DISCOUNTAPPLYTO
+#define ZDISCOUNT_UPDATE_390 \
+        ARTICLENO=:ARTICLENO,\
+        DISCOUNTGRPNO=:DISCOUNTGRPNO,\
+        PHARMACYGROUPID=:PHARMACYGROUPID,\
+        CUSTOMERNO=:CUSTOMERNO,\
+        BASEQTY=:BASEQTY,\
+        DATEFROM=:DATEFROM,\
+        DATETO=:DATETO,\
+        GRPDISCOUNTTYP=:GRPDISCOUNTTYP,\
+        DISCOUNTTYPE=:DISCOUNTTYPE,\
+        DISCOUNTSPEC=:DISCOUNTSPEC,\
+        DISCOUNTQTY=:DISCOUNTQTY,\
+        DISCOUNTVALUEPCT=:DISCOUNTVALUEPCT,\
+        DISCOUNTQTYPCT=:DISCOUNTQTYPCT,\
+        SURCHARGEPCT=:SURCHARGEPCT,\
+        PHARMGRPEXCLUDED=:PHARMGRPEXCLUDED,\
+        FIXEDPRICE=:FIXEDPRICE,\
+        REFUNDPCT=:REFUNDPCT,\
+        INTERNALDISCOUNT=:INTERNALDISCOUNT,\
+        DISCOUNTARTICLE=:DISCOUNTARTICLE,\
+        MONTHLYDISCOUNT=:MONTHLYDISCOUNT,\
+        PHARMGRPEXCL_2=:PHARMGRPEXCL_2,\
+        PHARMGRPEXCL_3=:PHARMGRPEXCL_3,\
+        BASE_VALUE=:BASE_VALUE,\
+        BASE_MULT_STD_QTY=:BASE_MULT_STD_QTY,\
+        NO_MULTIPLE_QTY=:NO_MULTIPLE_QTY,\
+        FIXEDDISCOUNTVALUE=:FIXEDDISCOUNTVALUE,\
+        MANUFACTURERNO=:MANUFACTURERNO,\
+        ARTCATEGORYNO=:ARTCATEGORYNO,\
+        PAYMENTTARGETNO=:PAYMENTTARGETNO,\
+        GROSSPROFITPCT=:GROSSPROFITPCT,\
+        ADDONDISCOUNTOK=:ADDONDISCOUNTOK,\
+        PAYMENTTERMTYPE=:PAYMENTTERMTYPE,\
+        TARGETQTY=:TARGETQTY,\
+        EXCEEDANCEPCT=:EXCEEDANCEPCT,\
+        REFUNDTYPE=:REFUNDTYPE,\
+        ARTICLE_NO_PACK=:ARTICLE_NO_PACK,\
+        REFUNDVALUE=:REFUNDVALUE,\
+        PROMOTION_NO=:PROMOTION_NO,\
+        TURNOVERCALCIMPACT=:TURNOVERCALCIMPACT,\
+        MAXQTY=:MAXQTY,\
+        ADDONDISCOUNT=:ADDONDISCOUNT,\
+        DISCOUNTCALCFROM=:DISCOUNTCALCFROM,\
+        DISCOUNTAPPLYTO=:DISCOUNTAPPLYTO
+#ifdef TRANSCLASS
+#include <string.h>
+#endif
+
+#ifdef ESQL_C
+EXEC SQL BEGIN DECLARE SECTION;
+#endif
+
+/* original struct of ZDISCOUNT ***********************************************/
+
+#ifndef TRANSCLASS
+typedef struct N_ZDISCOUNT {
+    long ARTICLENO;
+    long DISCOUNTGRPNO;
+    char PHARMACYGROUPID[4];
+    long CUSTOMERNO;
+    long BASEQTY;
+    long DATEFROM;
+    long DATETO;
+    short GRPDISCOUNTTYP;
+    short DISCOUNTTYPE;
+    short DISCOUNTSPEC;
+    short DISCOUNTQTY;
+    double DISCOUNTVALUEPCT;
+    double DISCOUNTQTYPCT;
+    double SURCHARGEPCT;
+    char PHARMGRPEXCLUDED[4];
+    double FIXEDPRICE;
+    double REFUNDPCT;
+    char INTERNALDISCOUNT[2];
+    long DISCOUNTARTICLE;
+    char MONTHLYDISCOUNT[2];
+    char PHARMGRPEXCL_2[4];
+    char PHARMGRPEXCL_3[4];
+    double BASE_VALUE;
+    long BASE_MULT_STD_QTY;
+    char NO_MULTIPLE_QTY[2];
+    double FIXEDDISCOUNTVALUE;
+    long MANUFACTURERNO;
+    long ARTCATEGORYNO;
+    short PAYMENTTARGETNO;
+    double GROSSPROFITPCT;
+    char ADDONDISCOUNTOK[2];
+    char PAYMENTTERMTYPE[2];
+    long TARGETQTY;
+    double EXCEEDANCEPCT;
+    short REFUNDTYPE;
+    long ARTICLE_NO_PACK;
+    double REFUNDVALUE;
+    short PROMOTION_NO;
+    char TURNOVERCALCIMPACT[2];
+    long MAXQTY;
+    char ADDONDISCOUNT[2];
+    short DISCOUNTCALCFROM;
+    short DISCOUNTAPPLYTO;
+} zdiscountS;
+#else /* TRANSCLASS */
+typedef struct N_ZDISCOUNT {
+    long ARTICLENO;
+    long DISCOUNTGRPNO;
+    char PHARMACYGROUPID[4];
+    long CUSTOMERNO;
+    long BASEQTY;
+    long DATEFROM;
+    long DATETO;
+    short GRPDISCOUNTTYP;
+    short DISCOUNTTYPE;
+    short DISCOUNTSPEC;
+    short DISCOUNTQTY;
+    double DISCOUNTVALUEPCT;
+    double DISCOUNTQTYPCT;
+    double SURCHARGEPCT;
+    char PHARMGRPEXCLUDED[4];
+    double FIXEDPRICE;
+    double REFUNDPCT;
+    char INTERNALDISCOUNT[2];
+    long DISCOUNTARTICLE;
+    char MONTHLYDISCOUNT[2];
+    char PHARMGRPEXCL_2[4];
+    char PHARMGRPEXCL_3[4];
+    double BASE_VALUE;
+    long BASE_MULT_STD_QTY;
+    char NO_MULTIPLE_QTY[2];
+    double FIXEDDISCOUNTVALUE;
+    long MANUFACTURERNO;
+    long ARTCATEGORYNO;
+    short PAYMENTTARGETNO;
+    double GROSSPROFITPCT;
+    char ADDONDISCOUNTOK[2];
+    char PAYMENTTERMTYPE[2];
+    long TARGETQTY;
+    double EXCEEDANCEPCT;
+    short REFUNDTYPE;
+    long ARTICLE_NO_PACK;
+    double REFUNDVALUE;
+    short PROMOTION_NO;
+    char TURNOVERCALCIMPACT[2];
+    long MAXQTY;
+    char ADDONDISCOUNT[2];
+    short DISCOUNTCALCFROM;
+    short DISCOUNTAPPLYTO;
+
+    bool operator == (const N_ZDISCOUNT& right) const {
+        return (
+            ARTICLENO == right.ARTICLENO &&
+            DISCOUNTGRPNO == right.DISCOUNTGRPNO &&
+            !strcmp(PHARMACYGROUPID, right.PHARMACYGROUPID) &&
+            CUSTOMERNO == right.CUSTOMERNO &&
+            BASEQTY == right.BASEQTY &&
+            DATEFROM == right.DATEFROM &&
+            DATETO == right.DATETO &&
+            GRPDISCOUNTTYP == right.GRPDISCOUNTTYP &&
+            DISCOUNTTYPE == right.DISCOUNTTYPE &&
+            DISCOUNTSPEC == right.DISCOUNTSPEC &&
+            DISCOUNTQTY == right.DISCOUNTQTY &&
+            DISCOUNTVALUEPCT == right.DISCOUNTVALUEPCT &&
+            DISCOUNTQTYPCT == right.DISCOUNTQTYPCT &&
+            SURCHARGEPCT == right.SURCHARGEPCT &&
+            !strcmp(PHARMGRPEXCLUDED, right.PHARMGRPEXCLUDED) &&
+            FIXEDPRICE == right.FIXEDPRICE &&
+            REFUNDPCT == right.REFUNDPCT &&
+            !strcmp(INTERNALDISCOUNT, right.INTERNALDISCOUNT) &&
+            DISCOUNTARTICLE == right.DISCOUNTARTICLE &&
+            !strcmp(MONTHLYDISCOUNT, right.MONTHLYDISCOUNT) &&
+            !strcmp(PHARMGRPEXCL_2, right.PHARMGRPEXCL_2) &&
+            !strcmp(PHARMGRPEXCL_3, right.PHARMGRPEXCL_3) &&
+            BASE_VALUE == right.BASE_VALUE &&
+            BASE_MULT_STD_QTY == right.BASE_MULT_STD_QTY &&
+            !strcmp(NO_MULTIPLE_QTY, right.NO_MULTIPLE_QTY) &&
+            FIXEDDISCOUNTVALUE == right.FIXEDDISCOUNTVALUE &&
+            MANUFACTURERNO == right.MANUFACTURERNO &&
+            ARTCATEGORYNO == right.ARTCATEGORYNO &&
+            PAYMENTTARGETNO == right.PAYMENTTARGETNO &&
+            GROSSPROFITPCT == right.GROSSPROFITPCT &&
+            !strcmp(ADDONDISCOUNTOK, right.ADDONDISCOUNTOK) &&
+            !strcmp(PAYMENTTERMTYPE, right.PAYMENTTERMTYPE) &&
+            TARGETQTY == right.TARGETQTY &&
+            EXCEEDANCEPCT == right.EXCEEDANCEPCT &&
+            REFUNDTYPE == right.REFUNDTYPE &&
+            ARTICLE_NO_PACK == right.ARTICLE_NO_PACK &&
+            REFUNDVALUE == right.REFUNDVALUE &&
+            PROMOTION_NO == right.PROMOTION_NO &&
+            !strcmp(TURNOVERCALCIMPACT, right.TURNOVERCALCIMPACT) &&
+            MAXQTY == right.MAXQTY &&
+            !strcmp(ADDONDISCOUNT, right.ADDONDISCOUNT) &&
+            DISCOUNTCALCFROM == right.DISCOUNTCALCFROM &&
+            DISCOUNTAPPLYTO == right.DISCOUNTAPPLYTO
+        );
+    }
+    void clear() {
+#ifdef WIN32
+        memset((char*)this, 0, sizeof(*this));
+#else
+        ARTICLENO = 0;
+        DISCOUNTGRPNO = 0;
+        strcpy(PHARMACYGROUPID, " " );
+        CUSTOMERNO = 0;
+        BASEQTY = 0;
+        DATEFROM = 0;
+        DATETO = 0;
+        GRPDISCOUNTTYP = 0;
+        DISCOUNTTYPE = 0;
+        DISCOUNTSPEC = 0;
+        DISCOUNTQTY = 0;
+        DISCOUNTVALUEPCT = 0;
+        DISCOUNTQTYPCT = 0;
+        SURCHARGEPCT = 0;
+        strcpy(PHARMGRPEXCLUDED, " " );
+        FIXEDPRICE = 0;
+        REFUNDPCT = 0;
+        strcpy(INTERNALDISCOUNT, " " );
+        DISCOUNTARTICLE = 0;
+        strcpy(MONTHLYDISCOUNT, " " );
+        strcpy(PHARMGRPEXCL_2, " " );
+        strcpy(PHARMGRPEXCL_3, " " );
+        BASE_VALUE = 0;
+        BASE_MULT_STD_QTY = 0;
+        strcpy(NO_MULTIPLE_QTY, " " );
+        FIXEDDISCOUNTVALUE = 0;
+        MANUFACTURERNO = 0;
+        ARTCATEGORYNO = 0;
+        PAYMENTTARGETNO = 0;
+        GROSSPROFITPCT = 0;
+        strcpy(ADDONDISCOUNTOK, " " );
+        strcpy(PAYMENTTERMTYPE, " " );
+        TARGETQTY = 0;
+        EXCEEDANCEPCT = 0;
+        REFUNDTYPE = 0;
+        ARTICLE_NO_PACK = 0;
+        REFUNDVALUE = 0;
+        PROMOTION_NO = 0;
+        strcpy(TURNOVERCALCIMPACT, " " );
+        MAXQTY = 0;
+        strcpy(ADDONDISCOUNT, " " );
+        DISCOUNTCALCFROM = 0;
+        DISCOUNTAPPLYTO = 0;
+#endif
+    }
+} zdiscountS;
+#endif /* TRANSCLASS */
+
+#ifdef ESQL_C
+EXEC SQL END DECLARE SECTION;
+#endif
+
+#ifdef ESQL_C
+EXEC SQL BEGIN DECLARE SECTION;
+#endif
+
+/* Stringbuffer Structur of ZDISCOUNT *****************************************/
+
+struct S_ZDISCOUNT {
+    char ARTICLENO[11];
+    char DISCOUNTGRPNO[11];
+    char PHARMACYGROUPID[3 + 1];
+    char CUSTOMERNO[11];
+    char BASEQTY[11];
+    char DATEFROM[11];
+    char DATETO[11];
+    char GRPDISCOUNTTYP[7];
+    char DISCOUNTTYPE[7];
+    char DISCOUNTSPEC[7];
+    char DISCOUNTQTY[7];
+    char DISCOUNTVALUEPCT[5 + 2];
+    char DISCOUNTQTYPCT[5 + 2];
+    char SURCHARGEPCT[5 + 2];
+    char PHARMGRPEXCLUDED[3 + 1];
+    char FIXEDPRICE[9 + 2];
+    char REFUNDPCT[5 + 2];
+    char INTERNALDISCOUNT[1 + 1];
+    char DISCOUNTARTICLE[11];
+    char MONTHLYDISCOUNT[1 + 1];
+    char PHARMGRPEXCL_2[3 + 1];
+    char PHARMGRPEXCL_3[3 + 1];
+    char BASE_VALUE[10 + 2];
+    char BASE_MULT_STD_QTY[11];
+    char NO_MULTIPLE_QTY[1 + 1];
+    char FIXEDDISCOUNTVALUE[9 + 2];
+    char MANUFACTURERNO[11];
+    char ARTCATEGORYNO[11];
+    char PAYMENTTARGETNO[7];
+    char GROSSPROFITPCT[5 + 2];
+    char ADDONDISCOUNTOK[1 + 1];
+    char PAYMENTTERMTYPE[1 + 1];
+    char TARGETQTY[11];
+    char EXCEEDANCEPCT[5 + 2];
+    char REFUNDTYPE[7];
+    char ARTICLE_NO_PACK[11];
+    char REFUNDVALUE[9 + 2];
+    char PROMOTION_NO[7];
+    char TURNOVERCALCIMPACT[1 + 1];
+    char MAXQTY[11];
+    char ADDONDISCOUNT[1 + 1];
+    char DISCOUNTCALCFROM[7];
+    char DISCOUNTAPPLYTO[7];
+};
+#ifdef ESQL_C
+EXEC SQL END DECLARE SECTION;
+#endif
+
+#ifdef ESQL_C
+EXEC SQL BEGIN DECLARE SECTION;
+#endif
+
+/* Stringbuffer (without strend) Structur of ZDISCOUNT ************************/
+
+struct O_ZDISCOUNT {
+    char ARTICLENO[11];
+    char DISCOUNTGRPNO[11];
+    char PHARMACYGROUPID[3];
+    char CUSTOMERNO[11];
+    char BASEQTY[11];
+    char DATEFROM[11];
+    char DATETO[11];
+    char GRPDISCOUNTTYP[7];
+    char DISCOUNTTYPE[7];
+    char DISCOUNTSPEC[7];
+    char DISCOUNTQTY[7];
+    char DISCOUNTVALUEPCT[5];
+    char DISCOUNTQTYPCT[5];
+    char SURCHARGEPCT[5];
+    char PHARMGRPEXCLUDED[3];
+    char FIXEDPRICE[9];
+    char REFUNDPCT[5];
+    char INTERNALDISCOUNT[1];
+    char DISCOUNTARTICLE[11];
+    char MONTHLYDISCOUNT[1];
+    char PHARMGRPEXCL_2[3];
+    char PHARMGRPEXCL_3[3];
+    char BASE_VALUE[10];
+    char BASE_MULT_STD_QTY[11];
+    char NO_MULTIPLE_QTY[1];
+    char FIXEDDISCOUNTVALUE[9];
+    char MANUFACTURERNO[11];
+    char ARTCATEGORYNO[11];
+    char PAYMENTTARGETNO[7];
+    char GROSSPROFITPCT[5];
+    char ADDONDISCOUNTOK[1];
+    char PAYMENTTERMTYPE[1];
+    char TARGETQTY[11];
+    char EXCEEDANCEPCT[5];
+    char REFUNDTYPE[7];
+    char ARTICLE_NO_PACK[11];
+    char REFUNDVALUE[9];
+    char PROMOTION_NO[7];
+    char TURNOVERCALCIMPACT[1];
+    char MAXQTY[11];
+    char ADDONDISCOUNT[1];
+    char DISCOUNTCALCFROM[7];
+    char DISCOUNTAPPLYTO[7];
+};
+#ifdef ESQL_C
+EXEC SQL END DECLARE SECTION;
+#endif
+
+#ifdef ESQL_C
+EXEC SQL BEGIN DECLARE SECTION;
+#endif
+
+/* Structur with real chartype of ZDISCOUNT ***********************************/
+
+struct C_ZDISCOUNT {
+    long ARTICLENO;
+    long DISCOUNTGRPNO;
+    char PHARMACYGROUPID[4];
+    long CUSTOMERNO;
+    long BASEQTY;
+    long DATEFROM;
+    long DATETO;
+    short GRPDISCOUNTTYP;
+    short DISCOUNTTYPE;
+    short DISCOUNTSPEC;
+    short DISCOUNTQTY;
+    double DISCOUNTVALUEPCT;
+    double DISCOUNTQTYPCT;
+    double SURCHARGEPCT;
+    char PHARMGRPEXCLUDED[4];
+    double FIXEDPRICE;
+    double REFUNDPCT;
+    char INTERNALDISCOUNT;
+    long DISCOUNTARTICLE;
+    char MONTHLYDISCOUNT;
+    char PHARMGRPEXCL_2[4];
+    char PHARMGRPEXCL_3[4];
+    double BASE_VALUE;
+    long BASE_MULT_STD_QTY;
+    char NO_MULTIPLE_QTY;
+    double FIXEDDISCOUNTVALUE;
+    long MANUFACTURERNO;
+    long ARTCATEGORYNO;
+    short PAYMENTTARGETNO;
+    double GROSSPROFITPCT;
+    char ADDONDISCOUNTOK;
+    char PAYMENTTERMTYPE;
+    long TARGETQTY;
+    double EXCEEDANCEPCT;
+    short REFUNDTYPE;
+    long ARTICLE_NO_PACK;
+    double REFUNDVALUE;
+    short PROMOTION_NO;
+    char TURNOVERCALCIMPACT;
+    long MAXQTY;
+    char ADDONDISCOUNT;
+    short DISCOUNTCALCFROM;
+    short DISCOUNTAPPLYTO;
+};
+#ifdef ESQL_C
+EXEC SQL END DECLARE SECTION;
+#endif
+
+#ifdef ESQL_C
+EXEC SQL BEGIN DECLARE SECTION;
+#endif
+
+/* Sizetype  Structur (buf_desc) of ZDISCOUNT *********************************/
+
+struct I_ZDISCOUNT {
+    short ARTICLENO;
+    short DISCOUNTGRPNO;
+    short PHARMACYGROUPID;
+    short CUSTOMERNO;
+    short BASEQTY;
+    short DATEFROM;
+    short DATETO;
+    short GRPDISCOUNTTYP;
+    short DISCOUNTTYPE;
+    short DISCOUNTSPEC;
+    short DISCOUNTQTY;
+    short DISCOUNTVALUEPCT;
+    short DISCOUNTQTYPCT;
+    short SURCHARGEPCT;
+    short PHARMGRPEXCLUDED;
+    short FIXEDPRICE;
+    short REFUNDPCT;
+    short INTERNALDISCOUNT;
+    short DISCOUNTARTICLE;
+    short MONTHLYDISCOUNT;
+    short PHARMGRPEXCL_2;
+    short PHARMGRPEXCL_3;
+    short BASE_VALUE;
+    short BASE_MULT_STD_QTY;
+    short NO_MULTIPLE_QTY;
+    short FIXEDDISCOUNTVALUE;
+    short MANUFACTURERNO;
+    short ARTCATEGORYNO;
+    short PAYMENTTARGETNO;
+    short GROSSPROFITPCT;
+    short ADDONDISCOUNTOK;
+    short PAYMENTTERMTYPE;
+    short TARGETQTY;
+    short EXCEEDANCEPCT;
+    short REFUNDTYPE;
+    short ARTICLE_NO_PACK;
+    short REFUNDVALUE;
+    short PROMOTION_NO;
+    short TURNOVERCALCIMPACT;
+    short MAXQTY;
+    short ADDONDISCOUNT;
+    short DISCOUNTCALCFROM;
+    short DISCOUNTAPPLYTO;
+};
+#ifdef ESQL_C
+EXEC SQL END DECLARE SECTION;
+#endif
+
+/* structures of Buf_Desc *****************************************************/
+
+/* Structur (buf_desc) of ZDISCOUNT *******************************************/
+
+#if defined (BUF_DESC)
+static struct buf_desc ZDISCOUNT_BES [] = {
+   { TYP_L , 11, 0 },
+   { TYP_L , 11, 0 },
+   { TYP_C, 3, 0 },
+   { TYP_L , 11, 0 },
+   { TYP_L , 11, 0 },
+   { TYP_L , 11, 0 },
+   { TYP_L , 11, 0 },
+   { TYP_S ,  6, 0 },
+   { TYP_S ,  6, 0 },
+   { TYP_S ,  6, 0 },
+   { TYP_S ,  6, 0 },
+   { TYP_D, 5, 2 },
+   { TYP_D, 5, 2 },
+   { TYP_D, 5, 2 },
+   { TYP_C, 3, 0 },
+   { TYP_D, 9, 2 },
+   { TYP_D, 5, 2 },
+   { TYP_C, 1, 0 },
+   { TYP_L , 11, 0 },
+   { TYP_C, 1, 0 },
+   { TYP_C, 3, 0 },
+   { TYP_C, 3, 0 },
+   { TYP_D, 10, 2 },
+   { TYP_L , 11, 0 },
+   { TYP_C, 1, 0 },
+   { TYP_D, 9, 2 },
+   { TYP_L , 11, 0 },
+   { TYP_L , 11, 0 },
+   { TYP_S ,  6, 0 },
+   { TYP_D, 5, 2 },
+   { TYP_C, 1, 0 },
+   { TYP_C, 1, 0 },
+   { TYP_L , 11, 0 },
+   { TYP_D, 5, 2 },
+   { TYP_S ,  6, 0 },
+   { TYP_L , 11, 0 },
+   { TYP_D, 9, 2 },
+   { TYP_S ,  6, 0 },
+   { TYP_C, 1, 0 },
+   { TYP_L , 11, 0 },
+   { TYP_C, 1, 0 },
+   { TYP_S ,  6, 0 },
+   { TYP_S ,  6, 0 },
+};
+#elif defined (C_BUF_DESC)
+static struct buf_desc ZDISCOUNT_BES [] = {
+   { TYP_L , 11, 0 },
+   { TYP_L , 11, 0 },
+   { TYP_C, 3, 0 },
+   { TYP_L , 11, 0 },
+   { TYP_L , 11, 0 },
+   { TYP_L , 11, 0 },
+   { TYP_L , 11, 0 },
+   { TYP_S ,  6, 0 },
+   { TYP_S ,  6, 0 },
+   { TYP_S ,  6, 0 },
+   { TYP_S ,  6, 0 },
+   { TYP_D, 5, 2 },
+   { TYP_D, 5, 2 },
+   { TYP_D, 5, 2 },
+   { TYP_C, 3, 0 },
+   { TYP_D, 9, 2 },
+   { TYP_D, 5, 2 },
+   { TYP_C, 1, 0 },
+   { TYP_L , 11, 0 },
+   { TYP_C, 1, 0 },
+   { TYP_C, 3, 0 },
+   { TYP_C, 3, 0 },
+   { TYP_D, 10, 2 },
+   { TYP_L , 11, 0 },
+   { TYP_C, 1, 0 },
+   { TYP_D, 9, 2 },
+   { TYP_L , 11, 0 },
+   { TYP_L , 11, 0 },
+   { TYP_S ,  6, 0 },
+   { TYP_D, 5, 2 },
+   { TYP_C, 1, 0 },
+   { TYP_C, 1, 0 },
+   { TYP_L , 11, 0 },
+   { TYP_D, 5, 2 },
+   { TYP_S ,  6, 0 },
+   { TYP_L , 11, 0 },
+   { TYP_D, 9, 2 },
+   { TYP_S ,  6, 0 },
+   { TYP_C, 1, 0 },
+   { TYP_L , 11, 0 },
+   { TYP_C, 1, 0 },
+   { TYP_S ,  6, 0 },
+   { TYP_S ,  6, 0 },
+};
+#endif
+
+/* description for datatypes of ZDISCOUNT *************************************/
+
+ #define ZDISCOUNT_S390 \
+         long ARTICLENO; \
+         long DISCOUNTGRPNO; \
+         char PHARMACYGROUPID[4]; \
+         long CUSTOMERNO; \
+         long BASEQTY; \
+         long DATEFROM; \
+         long DATETO; \
+         short GRPDISCOUNTTYP; \
+         short DISCOUNTTYPE; \
+         short DISCOUNTSPEC; \
+         short DISCOUNTQTY; \
+         double DISCOUNTVALUEPCT; \
+         double DISCOUNTQTYPCT; \
+         double SURCHARGEPCT; \
+         char PHARMGRPEXCLUDED[4]; \
+         double FIXEDPRICE; \
+         double REFUNDPCT; \
+         char INTERNALDISCOUNT; \
+         long DISCOUNTARTICLE; \
+         char MONTHLYDISCOUNT; \
+         char PHARMGRPEXCL_2[4]; \
+         char PHARMGRPEXCL_3[4]; \
+         double BASE_VALUE; \
+         long BASE_MULT_STD_QTY; \
+         char NO_MULTIPLE_QTY; \
+         double FIXEDDISCOUNTVALUE; \
+         long MANUFACTURERNO; \
+         long ARTCATEGORYNO; \
+         short PAYMENTTARGETNO; \
+         double GROSSPROFITPCT; \
+         char ADDONDISCOUNTOK; \
+         char PAYMENTTERMTYPE; \
+         long TARGETQTY; \
+         double EXCEEDANCEPCT; \
+         short REFUNDTYPE; \
+         long ARTICLE_NO_PACK; \
+         double REFUNDVALUE; \
+         short PROMOTION_NO; \
+         char TURNOVERCALCIMPACT; \
+         long MAXQTY; \
+         char ADDONDISCOUNT; \
+         short DISCOUNTCALCFROM; \
+         short DISCOUNTAPPLYTO; \
+
+
+
+/* Copy-Function Struct to single Data ZDISCOUNT ******************************/
+
+ #define ZDISCOUNT_S390_COPY_TO_SINGLE(_x_) \
+         ARTICLENO=_x_->ARTICLENO;\
+         DISCOUNTGRPNO=_x_->DISCOUNTGRPNO;\
+          strcpy(PHARMACYGROUPID,_x_->PHARMACYGROUPID);\
+         CUSTOMERNO=_x_->CUSTOMERNO;\
+         BASEQTY=_x_->BASEQTY;\
+         DATEFROM=_x_->DATEFROM;\
+         DATETO=_x_->DATETO;\
+         GRPDISCOUNTTYP=_x_->GRPDISCOUNTTYP;\
+         DISCOUNTTYPE=_x_->DISCOUNTTYPE;\
+         DISCOUNTSPEC=_x_->DISCOUNTSPEC;\
+         DISCOUNTQTY=_x_->DISCOUNTQTY;\
+         DISCOUNTVALUEPCT=_x_->DISCOUNTVALUEPCT;\
+         DISCOUNTQTYPCT=_x_->DISCOUNTQTYPCT;\
+         SURCHARGEPCT=_x_->SURCHARGEPCT;\
+          strcpy(PHARMGRPEXCLUDED,_x_->PHARMGRPEXCLUDED);\
+         FIXEDPRICE=_x_->FIXEDPRICE;\
+         REFUNDPCT=_x_->REFUNDPCT;\
+         INTERNALDISCOUNT=_x_->INTERNALDISCOUNT;\
+         DISCOUNTARTICLE=_x_->DISCOUNTARTICLE;\
+         MONTHLYDISCOUNT=_x_->MONTHLYDISCOUNT;\
+          strcpy(PHARMGRPEXCL_2,_x_->PHARMGRPEXCL_2);\
+          strcpy(PHARMGRPEXCL_3,_x_->PHARMGRPEXCL_3);\
+         BASE_VALUE=_x_->BASE_VALUE;\
+         BASE_MULT_STD_QTY=_x_->BASE_MULT_STD_QTY;\
+         NO_MULTIPLE_QTY=_x_->NO_MULTIPLE_QTY;\
+         FIXEDDISCOUNTVALUE=_x_->FIXEDDISCOUNTVALUE;\
+         MANUFACTURERNO=_x_->MANUFACTURERNO;\
+         ARTCATEGORYNO=_x_->ARTCATEGORYNO;\
+         PAYMENTTARGETNO=_x_->PAYMENTTARGETNO;\
+         GROSSPROFITPCT=_x_->GROSSPROFITPCT;\
+         ADDONDISCOUNTOK=_x_->ADDONDISCOUNTOK;\
+         PAYMENTTERMTYPE=_x_->PAYMENTTERMTYPE;\
+         TARGETQTY=_x_->TARGETQTY;\
+         EXCEEDANCEPCT=_x_->EXCEEDANCEPCT;\
+         REFUNDTYPE=_x_->REFUNDTYPE;\
+         ARTICLE_NO_PACK=_x_->ARTICLE_NO_PACK;\
+         REFUNDVALUE=_x_->REFUNDVALUE;\
+         PROMOTION_NO=_x_->PROMOTION_NO;\
+         TURNOVERCALCIMPACT=_x_->TURNOVERCALCIMPACT;\
+         MAXQTY=_x_->MAXQTY;\
+         ADDONDISCOUNT=_x_->ADDONDISCOUNT;\
+         DISCOUNTCALCFROM=_x_->DISCOUNTCALCFROM;\
+         DISCOUNTAPPLYTO=_x_->DISCOUNTAPPLYTO;\
+
+ #define ZDISCOUNT_S390_COPY_TO_STRUCT(_x_) \
+          _x_->ARTICLENO=ARTICLENO;\
+          _x_->DISCOUNTGRPNO=DISCOUNTGRPNO;\
+          strcpy(_x_->PHARMACYGROUPID,PHARMACYGROUPID);\
+          _x_->CUSTOMERNO=CUSTOMERNO;\
+          _x_->BASEQTY=BASEQTY;\
+          _x_->DATEFROM=DATEFROM;\
+          _x_->DATETO=DATETO;\
+          _x_->GRPDISCOUNTTYP=GRPDISCOUNTTYP;\
+          _x_->DISCOUNTTYPE=DISCOUNTTYPE;\
+          _x_->DISCOUNTSPEC=DISCOUNTSPEC;\
+          _x_->DISCOUNTQTY=DISCOUNTQTY;\
+          _x_->DISCOUNTVALUEPCT=DISCOUNTVALUEPCT;\
+          _x_->DISCOUNTQTYPCT=DISCOUNTQTYPCT;\
+          _x_->SURCHARGEPCT=SURCHARGEPCT;\
+          strcpy(_x_->PHARMGRPEXCLUDED,PHARMGRPEXCLUDED);\
+          _x_->FIXEDPRICE=FIXEDPRICE;\
+          _x_->REFUNDPCT=REFUNDPCT;\
+          _x_->INTERNALDISCOUNT=INTERNALDISCOUNT;\
+          _x_->DISCOUNTARTICLE=DISCOUNTARTICLE;\
+          _x_->MONTHLYDISCOUNT=MONTHLYDISCOUNT;\
+          strcpy(_x_->PHARMGRPEXCL_2,PHARMGRPEXCL_2);\
+          strcpy(_x_->PHARMGRPEXCL_3,PHARMGRPEXCL_3);\
+          _x_->BASE_VALUE=BASE_VALUE;\
+          _x_->BASE_MULT_STD_QTY=BASE_MULT_STD_QTY;\
+          _x_->NO_MULTIPLE_QTY=NO_MULTIPLE_QTY;\
+          _x_->FIXEDDISCOUNTVALUE=FIXEDDISCOUNTVALUE;\
+          _x_->MANUFACTURERNO=MANUFACTURERNO;\
+          _x_->ARTCATEGORYNO=ARTCATEGORYNO;\
+          _x_->PAYMENTTARGETNO=PAYMENTTARGETNO;\
+          _x_->GROSSPROFITPCT=GROSSPROFITPCT;\
+          _x_->ADDONDISCOUNTOK=ADDONDISCOUNTOK;\
+          _x_->PAYMENTTERMTYPE=PAYMENTTERMTYPE;\
+          _x_->TARGETQTY=TARGETQTY;\
+          _x_->EXCEEDANCEPCT=EXCEEDANCEPCT;\
+          _x_->REFUNDTYPE=REFUNDTYPE;\
+          _x_->ARTICLE_NO_PACK=ARTICLE_NO_PACK;\
+          _x_->REFUNDVALUE=REFUNDVALUE;\
+          _x_->PROMOTION_NO=PROMOTION_NO;\
+          _x_->TURNOVERCALCIMPACT=TURNOVERCALCIMPACT;\
+          _x_->MAXQTY=MAXQTY;\
+          _x_->ADDONDISCOUNT=ADDONDISCOUNT;\
+          _x_->DISCOUNTCALCFROM=DISCOUNTCALCFROM;\
+          _x_->DISCOUNTAPPLYTO=DISCOUNTAPPLYTO;\
+
+
+
+/* FunctionNumber-Define of zdiscount *****************************************/
+
+
+#ifdef PRZ_OLD_FUNCTION
+/* Old-FunctionNumber-Define of zdiscount *************************************/
+
+
+#endif
+
+/* C++ Class ******************************************************************/
+
+#ifdef TRANSCLASS
+
+#include<vector>
+using namespace std;
+
+/* ppunixc */
+#include <sockclient.h>
+#include <ppstring.h>
+#include <ppgeneric.h>
+
+/* must be implemented */
+void FehlerBehandlung(int rc, const char * const error_msg);
+
+#ifndef __VIRTUAL_DADE_CLASS__
+#define __VIRTUAL_DADE_CLASS__
+
+class ppDadeVirtual {
+public:
+    virtual    ~ppDadeVirtual() {};
+    virtual int SelList      (int FetchRel = 1, int pos = 0) = 0;
+    virtual int SelListHist  (int FetchRel = 1, int pos = 0) = 0;
+    virtual int SelListFuture(int FetchRel = 1, int pos = 0) = 0;
+    virtual int Load         (int pos = 0                  ) = 0;
+    virtual int Delete       (int pos = 0                  ) = 0;
+    virtual int Save         (int pos = 0                  ) = 0;
+};
+#endif
+
+class CZDISCOUNT : public ppDadeVirtual {
+public:
+    zdiscountS s;
+    int  rc;
+    char error_msg[81];
+private:
+    bool bOpenCursor;
+    bool bEndOfSelect;
+    int  FncNumber;
+    int  CursorPos;
+    int  AnzPos;
+    vector<zdiscountS> lst; // class list
+
+public:
+    unsigned int GetSize() const { return static_cast<unsigned int>(lst.size()); };
+    void         ClearStruct() { s.clear(); }
+    bool         SetData(unsigned int i) {
+                     if (GetSize() <= i)
+                         return false;
+                     s = lst.at(i);
+                     return true;
+                 }
+    bool         SetList(const unsigned int i) {
+                     if (GetSize() <= i)
+                         return false;
+                     vector< zdiscountS >::iterator it = lst.begin() + i;
+                     *it = s;
+                     return true;
+                 }
+    bool         InsList() {
+                     Strip(s);
+                     zdiscountS c = s;
+                     lst.insert(lst.end(), c);
+                     AnzPos++;
+                     return true;
+                 }
+    bool         DelList(const unsigned int i) {
+                     if (GetSize() <= i)
+                         return false;
+                     vector< zdiscountS >::iterator it = lst.begin() + i;
+                     if (it != lst.end())
+                         lst.erase(it);
+                     if (--AnzPos < 0)
+                         AnzPos = 0;
+                     return true;
+                 }
+
+    vector<zdiscountS>::iterator
+                 beginList() { return lst.begin(); }
+    vector<zdiscountS>::iterator
+                 endList  () { return lst.end  (); }
+
+    long         GetArticleno() const { return s.ARTICLENO; }
+    long         GetDiscountgrpno() const { return s.DISCOUNTGRPNO; }
+    const char*  GetPharmacygroupid(ppString & t) const { t = s.PHARMACYGROUPID; t.erasespace(ppString::END); return t.c_str(); }
+    long         GetCustomerno() const { return s.CUSTOMERNO; }
+    long         GetBaseqty() const { return s.BASEQTY; }
+    long         GetDatefrom() const { return s.DATEFROM; }
+    long         GetDateto() const { return s.DATETO; }
+    short        GetGrpdiscounttyp() const { return s.GRPDISCOUNTTYP; }
+    short        GetDiscounttype() const { return s.DISCOUNTTYPE; }
+    short        GetDiscountspec() const { return s.DISCOUNTSPEC; }
+    short        GetDiscountqty() const { return s.DISCOUNTQTY; }
+    double       GetDiscountvaluepct() const { return s.DISCOUNTVALUEPCT; }
+    double       GetDiscountqtypct() const { return s.DISCOUNTQTYPCT; }
+    double       GetSurchargepct() const { return s.SURCHARGEPCT; }
+    const char*  GetPharmgrpexcluded(ppString & t) const { t = s.PHARMGRPEXCLUDED; t.erasespace(ppString::END); return t.c_str(); }
+    double       GetFixedprice() const { return s.FIXEDPRICE; }
+    double       GetRefundpct() const { return s.REFUNDPCT; }
+    char         GetInternaldiscount() const { return s.INTERNALDISCOUNT[0]; }
+    long         GetDiscountarticle() const { return s.DISCOUNTARTICLE; }
+    char         GetMonthlydiscount() const { return s.MONTHLYDISCOUNT[0]; }
+    const char*  GetPharmgrpexcl_2(ppString & t) const { t = s.PHARMGRPEXCL_2; t.erasespace(ppString::END); return t.c_str(); }
+    const char*  GetPharmgrpexcl_3(ppString & t) const { t = s.PHARMGRPEXCL_3; t.erasespace(ppString::END); return t.c_str(); }
+    double       GetBase_value() const { return s.BASE_VALUE; }
+    long         GetBase_mult_std_qty() const { return s.BASE_MULT_STD_QTY; }
+    char         GetNo_multiple_qty() const { return s.NO_MULTIPLE_QTY[0]; }
+    double       GetFixeddiscountvalue() const { return s.FIXEDDISCOUNTVALUE; }
+    long         GetManufacturerno() const { return s.MANUFACTURERNO; }
+    long         GetArtcategoryno() const { return s.ARTCATEGORYNO; }
+    short        GetPaymenttargetno() const { return s.PAYMENTTARGETNO; }
+    double       GetGrossprofitpct() const { return s.GROSSPROFITPCT; }
+    char         GetAddondiscountok() const { return s.ADDONDISCOUNTOK[0]; }
+    char         GetPaymenttermtype() const { return s.PAYMENTTERMTYPE[0]; }
+    long         GetTargetqty() const { return s.TARGETQTY; }
+    double       GetExceedancepct() const { return s.EXCEEDANCEPCT; }
+    short        GetRefundtype() const { return s.REFUNDTYPE; }
+    long         GetArticle_no_pack() const { return s.ARTICLE_NO_PACK; }
+    double       GetRefundvalue() const { return s.REFUNDVALUE; }
+    short        GetPromotion_no() const { return s.PROMOTION_NO; }
+    char         GetTurnovercalcimpact() const { return s.TURNOVERCALCIMPACT[0]; }
+    long         GetMaxqty() const { return s.MAXQTY; }
+    char         GetAddondiscount() const { return s.ADDONDISCOUNT[0]; }
+    short        GetDiscountcalcfrom() const { return s.DISCOUNTCALCFROM; }
+    short        GetDiscountapplyto() const { return s.DISCOUNTAPPLYTO; }
+
+    const zdiscountS &
+                 GetStruct() const { return s; }
+    void         SetArticleno(long t) { s.ARTICLENO = t; }
+    void         SetDiscountgrpno(long t) { s.DISCOUNTGRPNO = t; }
+    void         SetPharmacygroupid(const ppString & t) { ppGStrCopy(s.PHARMACYGROUPID, t.c_str(), L_ZDISCOUNT_PHARMACYGROUPID); }
+    void         SetCustomerno(long t) { s.CUSTOMERNO = t; }
+    void         SetBaseqty(long t) { s.BASEQTY = t; }
+    void         SetDatefrom(long t) { s.DATEFROM = t; }
+    void         SetDateto(long t) { s.DATETO = t; }
+    void         SetGrpdiscounttyp(short t) { s.GRPDISCOUNTTYP = t; }
+    void         SetDiscounttype(short t) { s.DISCOUNTTYPE = t; }
+    void         SetDiscountspec(short t) { s.DISCOUNTSPEC = t; }
+    void         SetDiscountqty(short t) { s.DISCOUNTQTY = t; }
+    void         SetDiscountvaluepct(double t) { s.DISCOUNTVALUEPCT = t; }
+    void         SetDiscountqtypct(double t) { s.DISCOUNTQTYPCT = t; }
+    void         SetSurchargepct(double t) { s.SURCHARGEPCT = t; }
+    void         SetPharmgrpexcluded(const ppString & t) { ppGStrCopy(s.PHARMGRPEXCLUDED, t.c_str(), L_ZDISCOUNT_PHARMGRPEXCLUDED); }
+    void         SetFixedprice(double t) { s.FIXEDPRICE = t; }
+    void         SetRefundpct(double t) { s.REFUNDPCT = t; }
+    void         SetInternaldiscount(char t) { s.INTERNALDISCOUNT[0] = t; s.INTERNALDISCOUNT[1] = '\0';}
+    void         SetDiscountarticle(long t) { s.DISCOUNTARTICLE = t; }
+    void         SetMonthlydiscount(char t) { s.MONTHLYDISCOUNT[0] = t; s.MONTHLYDISCOUNT[1] = '\0';}
+    void         SetPharmgrpexcl_2(const ppString & t) { ppGStrCopy(s.PHARMGRPEXCL_2, t.c_str(), L_ZDISCOUNT_PHARMGRPEXCL_2); }
+    void         SetPharmgrpexcl_3(const ppString & t) { ppGStrCopy(s.PHARMGRPEXCL_3, t.c_str(), L_ZDISCOUNT_PHARMGRPEXCL_3); }
+    void         SetBase_value(double t) { s.BASE_VALUE = t; }
+    void         SetBase_mult_std_qty(long t) { s.BASE_MULT_STD_QTY = t; }
+    void         SetNo_multiple_qty(char t) { s.NO_MULTIPLE_QTY[0] = t; s.NO_MULTIPLE_QTY[1] = '\0';}
+    void         SetFixeddiscountvalue(double t) { s.FIXEDDISCOUNTVALUE = t; }
+    void         SetManufacturerno(long t) { s.MANUFACTURERNO = t; }
+    void         SetArtcategoryno(long t) { s.ARTCATEGORYNO = t; }
+    void         SetPaymenttargetno(short t) { s.PAYMENTTARGETNO = t; }
+    void         SetGrossprofitpct(double t) { s.GROSSPROFITPCT = t; }
+    void         SetAddondiscountok(char t) { s.ADDONDISCOUNTOK[0] = t; s.ADDONDISCOUNTOK[1] = '\0';}
+    void         SetPaymenttermtype(char t) { s.PAYMENTTERMTYPE[0] = t; s.PAYMENTTERMTYPE[1] = '\0';}
+    void         SetTargetqty(long t) { s.TARGETQTY = t; }
+    void         SetExceedancepct(double t) { s.EXCEEDANCEPCT = t; }
+    void         SetRefundtype(short t) { s.REFUNDTYPE = t; }
+    void         SetArticle_no_pack(long t) { s.ARTICLE_NO_PACK = t; }
+    void         SetRefundvalue(double t) { s.REFUNDVALUE = t; }
+    void         SetPromotion_no(short t) { s.PROMOTION_NO = t; }
+    void         SetTurnovercalcimpact(char t) { s.TURNOVERCALCIMPACT[0] = t; s.TURNOVERCALCIMPACT[1] = '\0';}
+    void         SetMaxqty(long t) { s.MAXQTY = t; }
+    void         SetAddondiscount(char t) { s.ADDONDISCOUNT[0] = t; s.ADDONDISCOUNT[1] = '\0';}
+    void         SetDiscountcalcfrom(short t) { s.DISCOUNTCALCFROM = t; }
+    void         SetDiscountapplyto(short t) { s.DISCOUNTAPPLYTO = t; }
+
+    void         SetStruct(const zdiscountS & t) { s = t; }
+
+
+    // virtual functions
+public:
+    int          Load(int pos = 0) { pos = pos; return 1; }
+    int          Save(int pos = 0) { pos = pos; return 1; }
+    int          Delete(int pos = 0) { pos = pos; return 1; }
+    int          SelList(int FetchRel = 1, int pos = 0) { FetchRel = FetchRel; pos = pos; return 1; }
+    int          SelListHist(int FetchRel = 1, int pos = 0) { FetchRel = FetchRel; pos = pos; return 1; }
+    int          SelListFuture(int FetchRel = 1, int pos = 0) { FetchRel = FetchRel; pos = pos; return 1; }
+
+    // constructor
+    CZDISCOUNT() {
+        ::buf_default((void *)&s, ZDISCOUNT_BES, ZDISCOUNT_ANZ);
+        bOpenCursor   = false;
+        bEndOfSelect  = false;
+        FncNumber     = 0;
+        CursorPos     = 0;
+        AnzPos        = 0;
+        rc            = 0;
+        s.clear();
+    }
+
+    // destructor
+    virtual ~CZDISCOUNT() {
+    }
+
+    // buffer init
+    void buf_default() {
+        ::buf_default((void *)&s, ZDISCOUNT_BES, ZDISCOUNT_ANZ);
+    }
+
+    // socket server call
+    int Server(int fkt_nr, int pos = 0) {
+    #ifdef WIN32
+        rc = ::ServerNr(pos, fkt_nr, (void *)&s, ZDISCOUNT_BES, (int)ZDISCOUNT_ANZ, error_msg);
+    #else
+        rc = ::Server(fkt_nr, (void *)&s, ZDISCOUNT_BES, (int)ZDISCOUNT_ANZ, error_msg);
+    #endif
+        if (rc < 0)
+            FehlerBehandlung( rc, error_msg );
+        return rc;
+    }
+
+private:
+    void Strip(N_ZDISCOUNT & d) {
+        d = d;
+    #ifdef WIN32
+        ppGStripLast(d.PHARMACYGROUPID);
+        ppGStripLast(d.PHARMGRPEXCLUDED);
+        ppGStripLast(d.PHARMGRPEXCL_2);
+        ppGStripLast(d.PHARMGRPEXCL_3);
+    #endif
+    }
+
+    int UniqueServerCall(int FncNr, int pos = 0) {
+    #ifndef __DADE_LOAD__
+       rc = ::ServerNr(pos, FncNr, (void *)&s, ZDISCOUNT_BES, (int)ZDISCOUNT_ANZ, error_msg);
+    #else
+       pos = pos;
+       rc = DistributorFunSelect(FncNr, (void *)&s, error_msg, &rc);
+    #endif
+       if (rc < 0)
+           FehlerBehandlung( rc, error_msg );
+       return rc;
+    }
+};
+#endif    // TRANSCLASS
+/* CreateSqlStatement of ZDISCOUNT ********************************************/
+
+ #define ZDISCOUNT_CREATE(x) EXEC SQL create table x (\
+         ARTICLENO integer default 0 not null,\
+         DISCOUNTGRPNO integer default 0 not null,\
+         PHARMACYGROUPID char(3) default " " not null,\
+         CUSTOMERNO integer default 0 not null,\
+         BASEQTY integer default 0 not null,\
+         DATEFROM integer default 0 not null,\
+         DATETO integer default 0 not null,\
+         GRPDISCOUNTTYP smallint default 0 not null,\
+         DISCOUNTTYPE smallint default 0 not null,\
+         DISCOUNTSPEC smallint default 0 not null,\
+         DISCOUNTQTY smallint default 0 not null,\
+         DISCOUNTVALUEPCT decimal(5,2) default 0 not null,\
+         DISCOUNTQTYPCT decimal(5,2) default 0 not null,\
+         SURCHARGEPCT decimal(5,2) default 0 not null,\
+         PHARMGRPEXCLUDED char(3) default " " not null,\
+         FIXEDPRICE decimal(9,2) default 0 not null,\
+         REFUNDPCT decimal(5,2) default 0 not null,\
+         INTERNALDISCOUNT char(1) default " " not null,\
+         DISCOUNTARTICLE integer default 0 not null,\
+         MONTHLYDISCOUNT char(1) default " " not null,\
+         PHARMGRPEXCL_2 char(3) default " " not null,\
+         PHARMGRPEXCL_3 char(3) default " " not null,\
+         BASE_VALUE decimal(10,2) default 0 not null,\
+         BASE_MULT_STD_QTY integer default 0 not null,\
+         NO_MULTIPLE_QTY char(1) default " " not null,\
+         FIXEDDISCOUNTVALUE decimal(9,2) default 0 not null,\
+         MANUFACTURERNO integer default 0 not null,\
+         ARTCATEGORYNO integer default 0 not null,\
+         PAYMENTTARGETNO smallint default 0 not null,\
+         GROSSPROFITPCT decimal(5,2) default 0 not null,\
+         ADDONDISCOUNTOK char(1) default " " not null,\
+         PAYMENTTERMTYPE char(1) default " " not null,\
+         TARGETQTY integer default 0 not null,\
+         EXCEEDANCEPCT decimal(5,2) default 0 not null,\
+         REFUNDTYPE smallint default 0 not null,\
+         ARTICLE_NO_PACK integer default 0 not null,\
+         REFUNDVALUE decimal(9,2) default 0 not null,\
+         PROMOTION_NO smallint default 0 not null,\
+         TURNOVERCALCIMPACT char(1) default " " not null,\
+         MAXQTY integer default 0 not null,\
+         ADDONDISCOUNT char(1) default " " not null,\
+         DISCOUNTCALCFROM smallint default 0 not null,\
+         DISCOUNTAPPLYTO smallint default 0 not null) extent size 392 next size 40 lock mode row;
+
+
+
+/* CreateIndexStatement of ZDISCOUNT ******************************************/
+
+ #define ZDISCOUNT_CREATE_INDEX(_X_,_Y_)\
+              _Y_ = 0;\
+         EXEC SQL create unique index i_cdiscount_1 on _X_(\
+              ArticleNo,\
+              DiscountGrpNo,\
+              PharmacyGroupId,\
+              CustomerNo,\
+              BaseQty,\
+              DateFrom,\
+              DateTo,\
+              GrpDiscountTyp,\
+              DiscountType,\
+              DiscountSpec,\
+              base_value,\
+              base_mult_std_qty,\
+              manufacturerno,\
+              artcategoryno,\
+              paymenttargetno );\
+         if ( sqlca.sqlcode != 0 ) _Y_ = sqlca.sqlcode;\
+
+
+/* DeleteIndexStatement of ZDISCOUNT ******************************************/
+
+ #define ZDISCOUNT_DELETE_INDEX(_X_)\
+              _X_ = 0;\
+         EXEC SQL drop index i_cdiscount_1;\
+         if ( sqlca.sqlcode != 0 ) _X_ = sqlca.sqlcode;\
+
+
+
+
+#endif   // GUARD
