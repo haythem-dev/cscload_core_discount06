@@ -1,0 +1,45 @@
+table name: customerpharmacygr
+
+metadata:
+---------
+ColumnIndex	getColumnName	getColumnTypeName	getPrecision	getScale	isNullable	getTableName	getSchemaName	getCatalogName	getColumnClassName	getColumnDisplaySize	getColumnLabel	getColumnType	isAutoIncrement	isCaseSensitive	isCurrency	isDefinitelyWritable	isReadOnly	isSearchable	isSigned	isWritable
+1	customerno	int	10	0	0	customerpharmacygr	 	 	java.lang.Integer	10	customerno	4	false	false	false	true	false	true	true	true
+2	branchno	smallint	5	0	0	customerpharmacygr	 	 	java.lang.Short	5	branchno	5	false	false	false	true	false	true	true	true
+3	pharmacygroupid	char	3	0	0	customerpharmacygr	 	 	java.lang.String	3	pharmacygroupid	1	false	false	false	true	false	true	false	true
+4	ranking	smallint	5	0	0	customerpharmacygr	 	 	java.lang.Short	5	ranking	5	false	false	false	true	false	true	true	true
+5	upd_flag	char	1	0	0	customerpharmacygr	 	 	java.lang.String	1	upd_flag	1	false	false	false	true	false	true	false	true
+
+
+constraints:
+------------
+ColumnIndex	getColumnName	getColumnTypeName	getPrecision	getScale	isNullable	getTableName	getSchemaName	getCatalogName	getColumnClassName	getColumnDisplaySize	getColumnLabel	getColumnType	isAutoIncrement	isCaseSensitive	isCurrency	isDefinitelyWritable	isReadOnly	isSearchable	isSigned	isWritable
+1	constrid	serial	10	0	0		 	 	java.lang.Integer	10	constrid	4	true	false	false	true	false	true	false	true
+2	constrname	varchar	128	0	1		 	 	java.lang.String	128	constrname	12	false	false	false	true	false	true	false	true
+3	constrtype	char	1	0	1		 	 	java.lang.String	1	constrtype	1	false	false	false	true	false	true	false	true
+4	constraint_type	char	25	0	1		 	 	java.lang.String	25	constraint_type	1	false	false	false	true	false	true	false	true
+5	owner	char	32	0	1		 	 	java.lang.String	32	owner	1	false	false	false	true	false	true	false	true
+
+result:
+-------
+constrid	constrname	constrtype	constraint_type	owner
+2402	n247_2402	N	N                        	informix                        
+2403	n247_2403	N	N                        	informix                        
+2404	n247_2404	N	N                        	informix                        
+2405	n247_2405	N	N                        	informix                        
+2406	n247_2406	N	N                        	informix                        
+3542	customerpharmacygr_p1	P	Primary Key              	informix                        
+
+index:
+------
+ColumnIndex	getColumnName	getColumnTypeName	getPrecision	getScale	isNullable	getTableName	getSchemaName	getCatalogName	getColumnClassName	getColumnDisplaySize	getColumnLabel	getColumnType	isAutoIncrement	isCaseSensitive	isCurrency	isDefinitelyWritable	isReadOnly	isSearchable	isSigned	isWritable
+1	idxname	varchar	128	0	1		 	 	java.lang.String	128	idxname	12	false	false	false	true	false	true	false	true
+2	owner	char	32	0	1		 	 	java.lang.String	32	owner	1	false	false	false	true	false	true	false	true
+3	idxtype	char	1	0	1		 	 	java.lang.String	1	idxtype	1	false	false	false	true	false	true	false	true
+4	index_type	char	11	0	1		 	 	java.lang.String	11	index_type	1	false	false	false	true	false	true	false	true
+5	clustered	char	1	0	1		 	 	java.lang.String	1	clustered	1	false	false	false	true	false	true	false	true
+6	levels	smallint	5	0	1		 	 	java.lang.Short	5	levels	5	false	false	false	true	false	true	true	true
+
+result:
+-------
+idxname	owner	idxtype	index_type	clustered	levels
+i_custpharmgr_1	informix                        	U	Unique     	 	2

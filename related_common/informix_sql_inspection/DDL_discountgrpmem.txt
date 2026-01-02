@@ -1,0 +1,46 @@
+table name: discountgrpmem
+
+metadata:
+----------
+ColumnIndex	getColumnName	getColumnTypeName	getPrecision	getScale	isNullable	getTableName	getSchemaName	getCatalogName	getColumnClassName	getColumnDisplaySize	getColumnLabel	getColumnType	isAutoIncrement	isCaseSensitive	isCurrency	isDefinitelyWritable	isReadOnly	isSearchable	isSigned	isWritable
+1	branchno	smallint	5	0	0	discountgrpmem	 	 	java.lang.Short	5	branchno	5	false	false	false	true	false	true	true	true
+2	discountgrpno	int	10	0	0	discountgrpmem	 	 	java.lang.Integer	10	discountgrpno	4	false	false	false	true	false	true	true	true
+3	articleno	int	10	0	0	discountgrpmem	 	 	java.lang.Integer	10	articleno	4	false	false	false	true	false	true	true	true
+4	discountcondition	smallint	5	0	0	discountgrpmem	 	 	java.lang.Short	5	discountcondition	5	false	false	false	true	false	true	true	true
+5	updatesign	char	1	0	0	discountgrpmem	 	 	java.lang.String	1	updatesign	1	false	false	false	true	false	true	false	true
+6	manufacturerno	int	10	0	0	discountgrpmem	 	 	java.lang.Integer	10	manufacturerno	4	false	false	false	true	false	true	true	true
+
+contraint:
+----------
+ColumnIndex	getColumnName	getColumnTypeName	getPrecision	getScale	isNullable	getTableName	getSchemaName	getCatalogName	getColumnClassName	getColumnDisplaySize	getColumnLabel	getColumnType	isAutoIncrement	isCaseSensitive	isCurrency	isDefinitelyWritable	isReadOnly	isSearchable	isSigned	isWritable
+1	constrid	serial	10	0	0		 	 	java.lang.Integer	10	constrid	4	true	false	false	true	false	true	false	true
+2	constrname	varchar	128	0	1		 	 	java.lang.String	128	constrname	12	false	false	false	true	false	true	false	true
+3	constrtype	char	1	0	1		 	 	java.lang.String	1	constrtype	1	false	false	false	true	false	true	false	true
+4	constraint_type	char	25	0	1		 	 	java.lang.String	25	constraint_type	1	false	false	false	true	false	true	false	true
+5	owner	char	32	0	1		 	 	java.lang.String	32	owner	1	false	false	false	true	false	true	false	true
+
+Result:
+-------
+constrid	constrname	constrtype	constraint_type	owner
+2610	n278_2610	N	N                        	informix                        
+2611	n278_2611	N	N                        	informix                        
+2612	n278_2612	N	N                        	informix                        
+2613	n278_2613	N	N                        	informix                        
+2614	n278_2614	N	N                        	informix                        
+2615	n278_2615	N	N                        	informix                        
+
+indexes:
+--------
+ColumnIndex	getColumnName	getColumnTypeName	getPrecision	getScale	isNullable	getTableName	getSchemaName	getCatalogName	getColumnClassName	getColumnDisplaySize	getColumnLabel	getColumnType	isAutoIncrement	isCaseSensitive	isCurrency	isDefinitelyWritable	isReadOnly	isSearchable	isSigned	isWritable
+1	idxname	varchar	128	0	1		 	 	java.lang.String	128	idxname	12	false	false	false	true	false	true	false	true
+2	owner	char	32	0	1		 	 	java.lang.String	32	owner	1	false	false	false	true	false	true	false	true
+3	idxtype	char	1	0	1		 	 	java.lang.String	1	idxtype	1	false	false	false	true	false	true	false	true
+4	index_type	char	11	0	1		 	 	java.lang.String	11	index_type	1	false	false	false	true	false	true	false	true
+5	clustered	char	1	0	1		 	 	java.lang.String	1	clustered	1	false	false	false	true	false	true	false	true
+6	levels	smallint	5	0	1		 	 	java.lang.Short	5	levels	5	false	false	false	true	false	true	true	true
+
+Result:
+-------
+idxname	owner	idxtype	index_type	clustered	levels
+i_discountmem_1	informix                        	U	Unique     	 	1
+i_discountmem_2	informix                        	D	Duplicate  	 	1

@@ -1,0 +1,58 @@
+table name: cstdiscountcont
+
+metadata:
+---------
+ColumnIndex	getColumnName	getColumnTypeName	getPrecision	getScale	isNullable	getTableName	getSchemaName	getCatalogName	getColumnClassName	getColumnDisplaySize	getColumnLabel	getColumnType	isAutoIncrement	isCaseSensitive	isCurrency	isDefinitelyWritable	isReadOnly	isSearchable	isSigned	isWritable
+1	branchno	smallint	5	0	0	cstdiscountcont	 	 	java.lang.Short	5	branchno	5	false	false	false	true	false	true	true	true
+2	customerno	int	10	0	0	cstdiscountcont	 	 	java.lang.Integer	10	customerno	4	false	false	false	true	false	true	true	true
+3	order_type	char	2	0	0	cstdiscountcont	 	 	java.lang.String	2	order_type	1	false	false	false	true	false	true	false	true
+4	sub_order_type	char	3	0	0	cstdiscountcont	 	 	java.lang.String	3	sub_order_type	1	false	false	false	true	false	true	false	true
+5	payment_term	char	4	0	0	cstdiscountcont	 	 	java.lang.String	4	payment_term	1	false	false	false	true	false	true	false	true
+6	valuta_days	smallint	5	0	0	cstdiscountcont	 	 	java.lang.Short	5	valuta_days	5	false	false	false	true	false	true	true	true
+7	min_order_value	decimal	9	2	0	cstdiscountcont	 	 	java.math.BigDecimal	9	min_order_value	3	false	false	false	true	false	true	true	true
+8	min_tubes	smallint	5	0	0	cstdiscountcont	 	 	java.lang.Short	5	min_tubes	5	false	false	false	true	false	true	true	true
+9	loss_in_discount	decimal	5	2	0	cstdiscountcont	 	 	java.math.BigDecimal	5	loss_in_discount	3	false	false	false	true	false	true	true	true
+10	upd_flag	char	1	0	0	cstdiscountcont	 	 	java.lang.String	1	upd_flag	1	false	false	false	true	false	true	false	true
+
+
+constraint:
+-----------
+ColumnIndex	getColumnName	getColumnTypeName	getPrecision	getScale	isNullable	getTableName	getSchemaName	getCatalogName	getColumnClassName	getColumnDisplaySize	getColumnLabel	getColumnType	isAutoIncrement	isCaseSensitive	isCurrency	isDefinitelyWritable	isReadOnly	isSearchable	isSigned	isWritable
+1	constrid	serial	10	0	0		 	 	java.lang.Integer	10	constrid	4	true	false	false	true	false	true	false	true
+2	constrname	varchar	128	0	1		 	 	java.lang.String	128	constrname	12	false	false	false	true	false	true	false	true
+3	constrtype	char	1	0	1		 	 	java.lang.String	1	constrtype	1	false	false	false	true	false	true	false	true
+4	constraint_type	char	25	0	1		 	 	java.lang.String	25	constraint_type	1	false	false	false	true	false	true	false	true
+5	owner	char	32	0	1		 	 	java.lang.String	32	owner	1	false	false	false	true	false	true	false	true
+
+Result:
+======
+constrid	constrname	constrtype	constraint_type	owner
+2295	n232_2295	N	N                        	informix                        
+2296	n232_2296	N	N                        	informix                        
+2297	n232_2297	N	N                        	informix                        
+2298	n232_2298	N	N                        	informix                        
+2299	n232_2299	N	N                        	informix                        
+2300	n232_2300	N	N                        	informix                        
+2301	n232_2301	N	N                        	informix                        
+2302	n232_2302	N	N                        	informix                        
+2303	n232_2303	N	N                        	informix                        
+2304	n232_2304	N	N                        	informix                        
+=====
+
+index:
+------
+
+ColumnIndex	getColumnName	getColumnTypeName	getPrecision	getScale	isNullable	getTableName	getSchemaName	getCatalogName	getColumnClassName	getColumnDisplaySize	getColumnLabel	getColumnType	isAutoIncrement	isCaseSensitive	isCurrency	isDefinitelyWritable	isReadOnly	isSearchable	isSigned	isWritable
+1	idxname	varchar	128	0	1		 	 	java.lang.String	128	idxname	12	false	false	false	true	false	true	false	true
+2	owner	char	32	0	1		 	 	java.lang.String	32	owner	1	false	false	false	true	false	true	false	true
+3	idxtype	char	1	0	1		 	 	java.lang.String	1	idxtype	1	false	false	false	true	false	true	false	true
+4	index_type	char	11	0	1		 	 	java.lang.String	11	index_type	1	false	false	false	true	false	true	false	true
+5	clustered	char	1	0	1		 	 	java.lang.String	1	clustered	1	false	false	false	true	false	true	false	true
+6	levels	smallint	5	0	1		 	 	java.lang.Short	5	levels	5	false	false	false	true	false	true	true	true
+
+
+result:
+-------
+idxname	owner	idxtype	index_type	clustered	levels
+i_cstdisccont_1	informix                        	U	Unique     	 	1
+
