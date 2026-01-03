@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" style=""><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CPR0003319 - Windows PowerShell Scanning Scripts Suite</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&amp;family=Times+New+Roman:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Times New Roman', Times, serif;
+        max-width: 880px;
+        margin: 0 auto;
+        padding: 40px 80px;
+        color: #000;
+        background-color: #fff;
+        line-height: 1.6;
+        text-align: justify;
+      }
+
+      h1 {
+        font-size: 24pt;
+        font-weight: bold;
+        margin-bottom: 24px;
+        text-align: center;
+        color: #2c3e50;
+      }
+
+      h2 {
+        font-size: 18pt;
+        font-weight: bold;
+        margin-top: 32px;
+        margin-bottom: 16px;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 8px;
+        color: #2c3e50;
+        text-align: left;
+      }
+
+      h3 {
+        font-size: 14pt;
+        font-weight: bold;
+        margin-top: 24px;
+        margin-bottom: 12px;
+        color: #34495e;
+        text-align: left;
+      }
+
+      h4 {
+        font-size: 12pt;
+        font-weight: bold;
+        margin-top: 16px;
+        margin-bottom: 8px;
+        color: #444;
+        text-align: left;
+      }
+
+      p,
+      li {
+        font-size: 12pt;
+        margin-bottom: 12px;
+      }
+
+      ul,
+      ol {
+        margin-bottom: 16px;
+        padding-left: 24px;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+        font-size: 11pt;
+      }
+
+      th,
+      td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+      }
+
+      th {
+        background-color: #f8f9fa;
+        font-weight: bold;
+      }
+
+      /* PowerShell Code block styling */
+      pre {
+        background-color: #012456; /* PowerShell Blue-ish dark background */
+        color: #fff;
+        border: 1px solid #000;
+        border-radius: 4px;
+        padding: 12px;
+        font-family: 'Roboto Mono', monospace;
+        font-size: 10pt;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+        overflow-x: hidden;
+        margin-bottom: 20px;
+        text-align: left;
+      }
+
+      code {
+        font-family: 'Roboto Mono', monospace;
+        background-color: #f5f5f5;
+        color: #333;
+        padding: 2px 4px;
+        border-radius: 2px;
+        font-size: 10pt;
+      }
+
+      pre code {
+        background-color: transparent;
+        color: inherit;
+        padding: 0;
+      }
+
+      /* Semantic sections */
+      .metadata {
+        text-align: center;
+        margin-bottom: 48px;
+        border-bottom: 2px solid #2c3e50;
+        padding-bottom: 24px;
+      }
+
+      .metadata div {
+        margin-bottom: 4px;
+        font-size: 12pt;
+      }
+
+      .info-box {
+        background-color: #e8f4fd;
+        border-left: 4px solid #3498db;
+        padding: 12px;
+        margin-bottom: 16px;
+        font-style: italic;
+      }
+
+      .warning-box {
+        background-color: #fcf8e3;
+        border-left: 4px solid #f1c40f;
+        padding: 12px;
+        margin-bottom: 16px;
+      }
+
+      .critical-box {
+        background-color: #f2dede;
+        border-left: 4px solid #e74c3c;
+        padding: 12px;
+        margin-bottom: 16px;
+      }
+
+      .toc {
+        background-color: #f9f9f9;
+        padding: 20px;
+        border: 1px solid #eee;
+        margin-bottom: 40px;
+      }
+
+      .toc ul {
+        list-style-type: none;
+        padding-left: 0;
+      }
+
+      .toc li {
+        margin-bottom: 8px;
+      }
+
+      .script-header {
+        background-color: #eee;
+        padding: 8px;
+        font-weight: bold;
+        font-family: 'Roboto Mono', monospace;
+        color: #333;
+        border-top: 1px solid #ddd;
+        border-left: 1px solid #ddd;
+        border-right: 1px solid #ddd;
+        margin-bottom: 0;
+      }
+
+      .script-header + pre {
+        margin-top: 0;
+        border-top: none;
+      }
+    </style>
+  </head>
+  <body style="">
+    <div class="metadata">
+      <h1>CPR0003319 - Windows PowerShell Scanning Scripts Suite</h1>
+      <div><strong>Version:</strong> 1.0</div>
+      <div><strong>Date:</strong> January 3, 2026</div>
+      <div><strong>Project:</strong> PHARMOS Discount Workflow Consolidation</div>
+      <div><strong>Platform:</strong> Windows Server / PowerShell Core</div>
+    </div>
+
+    <div class="toc">
+      <h3>Table of Contents</h3>
+      <ul>
+        <li>1. Executive Summary</li>
+        <li>2. Script 1: BranchNo Reference Scanner (PowerShell)</li>
+        <li>3. Script 2: Context Classifier (PowerShell)</li>
+        <li>4. Script 3: SQL Query Analyzer (PowerShell)</li>
+        <li>5. Script 4: Change Impact Analyzer (PowerShell)</li>
+        <li>6. Script 5: Validation Script (PowerShell)</li>
+        <li>7. Windows Build Integration</li>
+        <li>8. Task Scheduler Integration</li>
+        <li>9. Git Hooks for Windows</li>
+        <li>10. PowerShell Module Structure</li>
+        <li>11. Output Report Formats</li>
+        <li>12. Quick Start Guide for Windows</li>
+        <li>13. Appendices</li>
+      </ul>
+    </div>
+
+    <!-- Section 1 -->
+    <div>
+      <h2>1. Executive Summary</h2>
+      <p>
+        This document details the Windows PowerShell implementation of the scanning and analysis framework for the
+        CPR0003319 project. While the core logic mirrors the functionality of the Python/Bash scripts developed in the
+        Level 2 Inspection, these scripts leverage the native capabilities of the Windows operating system and
+        PowerShell environment.
+      </p>
+
+      <h3>Windows Implementation Strategy</h3>
+      <p>The suite has been adapted to utilize Windows-specific features:</p>
+      <ul>
+        <li>
+          <strong>Object-Oriented Pipeline:</strong> Leveraging PowerShell's object pipeline for structured data passing
+          between scripts instead of raw text parsing.
+        </li>
+        <li>
+          <strong>JSON Native Support:</strong> Using <code>ConvertFrom-Json</code> and <code>ConvertTo-Json</code> for
+          robust data serialization.
+        </li>
+        <li>
+          <strong>Multithreading:</strong> Utilizing <code>Start-ThreadJob</code> or parallel loops in PowerShell 7+ for
+          performance on large codebases.
+        </li>
+        <li>
+          <strong>System Integration:</strong> Direct hooks into Windows Task Scheduler and Visual Studio / MSBuild
+          workflows.
+        </li>
+      </ul>
+
+      <h3>Compatibility</h3>
+      <p>These scripts are compatible with:</p>
+      <ul>
+        <li>Windows PowerShell 5.1 (Standard on Windows Server)</li>
+        <li>PowerShell Core 7.x (Cross-platform recommended)</li>
+      </ul>
+    </div>
+
+    <!-- Section 2 -->
+    <div>
+      <h2>2. Script 1: BranchNo Reference Scanner (PowerShell)</h2>
+      <div class="info-box">
+        <strong>Title:</strong> Scan-BranchNoReferences.ps1<br><strong>Purpose:</strong> Find ALL occurrences of
+        branchno across all file types using native PowerShell pattern matching.
+      </div>
+
+      <h3>2.1 Implementation</h3>
+      <p>
+        This script recursively scans directories for source code files, identifies <code>branchno</code> variants, and
+        extracts context lines. It generates a structured JSON output file.
+      </p>
+
+      <div class="script-header">Scan-BranchNoReferences.ps1</div>
+      <pre>&lt;#
+.SYNOPSIS
+    Universal BranchNo Reference Scanner for CPR0003319.
+.DESCRIPTION
+    Scans specified directory for branchno references in C++, SQL, Thrift, and Script files.
+    Exports findings to JSON format with context lines.
+.PARAMETER Path
+    Root path to scan. Defaults to current directory.
+.PARAMETER OutputFile
+    Path for the output JSON file.
+#&gt;
+param (
+    [string]$Path = ".",
+    [string]$OutputFile = "scan_results.json"
+)
+
+$ErrorActionPreference = "Stop"
+$SearchPatterns = @("*.cxx", "*.cpp", "*.h", "*.hpp", "*.sh", "*.thrift", "*.sql", "*.xml")
+$RegexPattern = "(?i)(branchno|branch_no|filialnr)"
+
+Write-Host "[INFO] Starting scan in: $Path" -ForegroundColor Cyan
+
+# Find all matching files
+$FilesToScan = Get-ChildItem -Path $Path -Include $SearchPatterns -Recurse -File
+
+$Results = New-Object System.Collections.Generic.List[PSObject]
+
+foreach ($File in $FilesToScan) {
+    try {
+        # Read file content efficiently
+        $Content = Get-Content -Path $File.FullName -ErrorAction SilentlyContinue
+        
+        for ($i = 0; $i -lt $Content.Count; $i++) {
+            if ($Content[$i] -match $RegexPattern) {
+                
+                # Extract Context (5 lines before and after)
+                $StartLine = [Math]::Max(0, $i - 5)
+                $EndLine = [Math]::Min($Content.Count - 1, $i + 5)
+                
+                # Join lines for context blocks
+                $ContextBefore = ($Content[$StartLine..($i-1)]) -join "`n"
+                $ContextAfter = ($Content[($i+1)..$EndLine]) -join "`n"
+
+                $MatchObject = [PSCustomObject]@{
+                    file_path      = $File.FullName
+                    line_number    = $i + 1
+                    matched_text   = $Content[$i].Trim()
+                    context_before = $ContextBefore
+                    context_after  = $ContextAfter
+                    file_type      = $File.Extension
+                    timestamp      = (Get-Date).ToString("yyyy-MM-ddTHH:mm:ssZ")
+                }
+                
+                $Results.Add($MatchObject)
+            }
+        }
+    }
+    catch {
+        Write-Warning "Could not read file: $($File.FullName)"
+    }
+}
+
+# Export to JSON
+$Results | ConvertTo-Json -Depth 5 | Out-File -FilePath $OutputFile -Encoding UTF8
+Write-Host "[SUCCESS] Found $($Results.Count) matches. Saved to $OutputFile" -ForegroundColor Green
+</pre>
+    </div>
+
+    <!-- Section 3 -->
+    <div>
+      <h2>3. Script 2: Context Classifier (PowerShell)</h2>
+      <div class="info-box">
+        <strong>Title:</strong> Measure-BranchNoContext.ps1<br><strong>Purpose:</strong> Categorize references as
+        DISCOUNT_LOOKUP, OPERATIONAL, MIXED, or UNCLEAR using scoring logic.
+      </div>
+
+      <h3>3.1 Implementation</h3>
+      <p>Takes the JSON output from the scanner and applies heuristic scoring to classify each reference.</p>
+
+      <div class="script-header">Measure-BranchNoContext.ps1</div>
+      <pre>&lt;#
+.SYNOPSIS
+    Intelligent BranchNo Context Classifier.
+.DESCRIPTION
+    Analyzes scan results and classifies usage based on context keywords.
+#&gt;
+param (
+    [string]$InputFile = "scan_results.json",
+    [string]$OutputFile = "classified_results.json"
+)
+
+if (-not (Test-Path $InputFile)) {
+    Write-Error "Input file $InputFile not found."
+    exit 1
+}
+
+$ScanData = Get-Content -Path $InputFile -Raw | ConvertFrom-Json
+$ClassifiedData = @()
+
+$Stats = @{
+    DISCOUNT_LOOKUP = 0
+    OPERATIONAL     = 0
+    MIXED           = 0
+    UNCLEAR         = 0
+}
+
+foreach ($Item in $ScanData) {
+    $Text = $Item.matched_text.ToLower()
+    $Context = ($Item.context_before + $Item.context_after).ToLower()
+    $FullBlock = "$Text $Context"
+    
+    $ScoreDiscount = 0
+    $ScoreOperational = 0
+    
+    # --- Scoring Logic ---
+    
+    # Discount Indicators
+    if ($FullBlock -match "(discount|discountgrp|cstdiscountcont)") { $ScoreDiscount += 50 }
+    if ($FullBlock -match "(select.*from.*discount)") { $ScoreDiscount += 40 }
+    if ($FullBlock -match "(pricesanddiscounts)") { $ScoreDiscount += 30 }
+    if ($Text -match "where" -and $Text -match "branchno") { $ScoreDiscount += 20 }
+    
+    # Operational Indicators
+    if ($FullBlock -match "(order|customer|delivery|shipment)") { $ScoreOperational += 30 }
+    if ($Text -match "(log|print|printf|write-host|console)") { $ScoreOperational += 50 }
+    if ($FullBlock -match "(report|analytics)") { $ScoreOperational += 40 }
+    if ($FullBlock -match "insert into orders") { $ScoreOperational += 100 }
+    
+    # Classification
+    $Classification = "UNCLEAR"
+    $Confidence = 0
+    
+    if ($ScoreDiscount -gt 80 -and $ScoreOperational -lt 30) {
+        $Classification = "DISCOUNT_LOOKUP"
+        $Confidence = [Math]::Min($ScoreDiscount, 100)
+    }
+    elseif ($ScoreOperational -gt 80 -and $ScoreDiscount -lt 30) {
+        $Classification = "OPERATIONAL"
+        $Confidence = [Math]::Min($ScoreOperational, 100)
+    }
+    elseif ($ScoreDiscount -gt 40 -and $ScoreOperational -gt 40) {
+        $Classification = "MIXED"
+        $Confidence = 50
+    }
+    
+    $Stats[$Classification]++
+    
+    # Add properties to object
+    $Item | Add-Member -MemberType NoteProperty -Name "classification" -Value $Classification
+    $Item | Add-Member -MemberType NoteProperty -Name "confidence" -Value $Confidence
+    $Item | Add-Member -MemberType NoteProperty -Name "manual_review_required" -Value (($Confidence -lt 70) -or ($Classification -eq "MIXED"))
+    
+    $ClassifiedData += $Item
+}
+
+$ClassifiedData | ConvertTo-Json -Depth 5 | Out-File -FilePath $OutputFile -Encoding UTF8
+
+Write-Host "Classification Complete:" -ForegroundColor Green
+$Stats.GetEnumerator() | Format-Table -AutoSize
+</pre>
+    </div>
+
+    <!-- Section 4 -->
+    <div>
+      <h2>4. Script 3: SQL Query Analyzer (PowerShell)</h2>
+      <div class="info-box">
+        <strong>Title:</strong> Analyze-SqlQueries.ps1<br><strong>Purpose:</strong> Extract and analyze embedded SQL
+        queries from C++ source files.
+      </div>
+
+      <h3>4.1 Implementation</h3>
+      <p>Uses Regex to capture <code>EXEC SQL</code> blocks across the codebase to audit table access patterns.</p>
+
+      <div class="script-header">Analyze-SqlQueries.ps1</div>
+      <pre>param (
+    [string]$SearchPath = "src"
+)
+
+$SqlRegex = "(?si)EXEC SQL(.*?);"
+$TablesOfInterest = @("discount", "discountgrp", "discountgrpmem", "cstdiscountcont")
+
+Write-Host "Searching for Embedded SQL in $SearchPath..."
+
+$Files = Get-ChildItem -Path $SearchPath -Recurse -Include "*.cxx", "*.cpp", "*.sqC"
+
+foreach ($File in $Files) {
+    $Content = Get-Content -Path $File.FullName -Raw
+    
+    $Matches = [regex]::Matches($Content, $SqlRegex)
+    
+    foreach ($Match in $Matches) {
+        $Query = $Match.Groups[1].Value.Trim()
+        $QueryLower = $Query.ToLower()
+        
+        $FoundTables = ($TablesOfInterest | Where-Object { $QueryLower -match $_ })
+        
+        if ($FoundTables -and $QueryLower -match "branchno") {
+            Write-Host "File: $($File.FullName)" -ForegroundColor Yellow
+            Write-Host "Tables: $($FoundTables -join ', ')"
+            Write-Host "Query: $Query" -ForegroundColor Gray
+            Write-Host ("-" * 50)
+        }
+    }
+}
+</pre>
+    </div>
+
+    <!-- Section 5 -->
+    <div>
+      <h2>5. Script 4: Change Impact Analyzer (PowerShell)</h2>
+      <div class="info-box">
+        <strong>Title:</strong> Measure-ChangeImpact.ps1<br><strong>Purpose:</strong> Estimate blast radius by
+        analyzing header inclusions and dependencies.
+      </div>
+
+      <h3>5.1 Implementation</h3>
+      <p>Calculates a risk score based on how many files reference a modified header.</p>
+
+      <div class="script-header">Measure-ChangeImpact.ps1</div>
+      <pre>param (
+    [string]$InputList = "files_to_change.txt",
+    [string]$SourceRoot = "src"
+)
+
+if (-not (Test-Path $InputList)) {
+    Write-Warning "Input list not found. Exiting."
+    exit
+}
+
+$FilesToChange = Get-Content $InputList
+$Results = @()
+
+foreach ($File in $FilesToChange) {
+    $FileName = Split-Path $File -Leaf
+    
+    # Calculate simple dependency count (grep equivalent)
+    # Finding files that #include this header
+    if ($FileName -match "\.h(pp)?$") {
+        $Dependents = Get-ChildItem -Path $SourceRoot -Recurse -Include "*.cxx", "*.cpp", "*.h" | 
+                      Select-String -Pattern "#include.*$FileName" -SimpleMatch
+        $Count = $Dependents.Count
+    }
+    else {
+        $Count = 0
+    }
+    
+    # Risk Assessment
+    $Risk = "LOW"
+    if ($Count -gt 10) { $Risk = "MEDIUM" }
+    if ($Count -gt 50) { $Risk = "HIGH" }
+    if ($Count -gt 100) { $Risk = "CRITICAL" }
+    
+    $Results += [PSCustomObject]@{
+        File = $FileName
+        DirectIncludes = $Count
+        RiskScore = $Risk
+    }
+}
+
+$Results | Sort-Object DirectIncludes -Descending | Format-Table -AutoSize
+$Results | Export-Csv -Path "impact_report.csv" -NoTypeInformation
+</pre>
+    </div>
+
+    <!-- Section 6 -->
+    <div>
+      <h2>6. Script 5: Validation Script (PowerShell)</h2>
+      <div class="info-box">
+        <strong>Title:</strong> Test-DiscountCalculation.ps1<br><strong>Purpose:</strong> Validates calculation
+        integrity by comparing legacy vs. new branch logic results.
+      </div>
+
+      <h3>6.1 Implementation</h3>
+      <p>Connects to the database (via ODBC/SQL modules) to run validation queries.</p>
+
+      <div class="script-header">Test-DiscountCalculation.ps1</div>
+      <pre>&lt;#
+.SYNOPSIS
+    Discount Logic Validator.
+    Note: Requires an ODBC DSN or SQL Module configured for the PHARMOS database.
+#&gt;
+param (
+    [string]$ConnectionString = "DSN=PharmosDB;Uid=admin;Pwd=pass;",
+    [int[]]$TestArticles = @(1001, 1002, 1003, 1004)
+)
+
+function Get-DiscountPct {
+    param ($BranchNo, $ArticleNo)
+    # Simulation of DB Call
+    # In production use: Invoke-SqlCmd or OdbcConnection
+    
+    # MOCK LOGIC for Demonstration
+    if ($BranchNo -eq 0) { return 15.5 } # New centralized value
+    if ($BranchNo -eq 1) { return 15.5 } # Old branch value
+    return 0.0
+}
+
+$Failures = 0
+
+foreach ($Article in $TestArticles) {
+    Write-Host "Testing Article $Article..." -NoNewline
+    
+    $LegacyValue = Get-DiscountPct -BranchNo 1 -ArticleNo $Article
+    $NewValue    = Get-DiscountPct -BranchNo 0 -ArticleNo $Article
+    
+    if ($LegacyValue -eq $NewValue) {
+        Write-Host " [PASS]" -ForegroundColor Green
+    }
+    else {
+        Write-Host " [FAIL]" -ForegroundColor Red
+        Write-Host "    Legacy (Br1): $LegacyValue vs New (Br0): $NewValue"
+        $Failures++
+    }
+}
+
+if ($Failures -eq 0) {
+    Write-Host "`nAll validation tests passed." -ForegroundColor Green
+    exit 0
+} else {
+    Write-Host "`n$Failures tests failed." -ForegroundColor Red
+    exit 1
+}
+</pre>
+    </div>
+
+    <!-- Section 7 -->
+    <div>
+      <h2>7. Windows Build Integration</h2>
+
+      <h3>7.1 MSBuild Integration</h3>
+      <p>You can invoke the scanner directly from your `.csproj` or `.vcxproj` files using the `Exec` task.</p>
+      <pre>&lt;Target Name="PreBuildScan" BeforeTargets="Build"&gt;
+    &lt;Message Text="Running CPR0003319 BranchNo Scanner..." Importance="high" /&gt;
+    &lt;Exec Command="pwsh.exe -File "$(ProjectDir)scripts\Scan-BranchNoReferences.ps1" -Path "$(ProjectDir)src"" /&gt;
+&lt;/Target&gt;
+</pre>
+
+      <h3>7.2 Azure DevOps / TFS Pipeline</h3>
+      <p>Add a PowerShell task to your YAML pipeline definition:</p>
+      <pre>- task: PowerShell@2
+  displayName: 'Scan BranchNo References'
+  inputs:
+    filePath: '$(System.DefaultWorkingDirectory)/scripts/Scan-BranchNoReferences.ps1'
+    arguments: '-Path src -OutputFile $(Build.ArtifactStagingDirectory)/scan_results.json'
+    errorActionPreference: 'stop'
+</pre>
+    </div>
+
+    <!-- Section 8 -->
+    <div>
+      <h2>8. Task Scheduler Integration</h2>
+      <p>
+        To run these scripts nightly for continuous auditing, use the following PowerShell command to register a
+        Scheduled Task:
+      </p>
+      <pre>$Action = New-ScheduledTaskAction -Execute "pwsh.exe" -Argument "-File C:\Scripts\Scan-BranchNoReferences.ps1"
+$Trigger = New-ScheduledTaskTrigger -Daily -At 2am
+Register-ScheduledTask -Action $Action -Trigger $Trigger -TaskName "CPR0003319_NightlyScan" -User "SYSTEM"
+</pre>
+    </div>
+
+    <!-- Section 9 -->
+    <div>
+      <h2>9. Git Hooks for Windows</h2>
+      <p>Create a file named <code>pre-commit</code> (no extension) in <code>.git/hooks/</code>:</p>
+      <pre>#!/bin/sh
+# Windows Git Hook wrapper
+# Note: Requires PowerShell in PATH
+
+echo "Running BranchNo Pre-commit Check..."
+pwsh.exe -File "./scripts/Measure-BranchNoContext.ps1" -InputFile ".scan_tmp.json"
+
+if [ $? -ne 0 ]; then
+    echo "BLOCKING COMMIT: Risky BranchNo changes detected."
+    exit 1
+fi
+</pre>
+    </div>
+
+    <!-- Section 10 -->
+    <div>
+      <h2>10. PowerShell Module Structure</h2>
+      <p>For better maintainability, organize the scripts into a module <code>CPRScanning.psm1</code>:</p>
+      <pre>MyProject/
+└── scripts/
+    └── CPRScanning/
+        ├── CPRScanning.psd1        # Module Manifest
+        ├── CPRScanning.psm1        # Root Module
+        ├── Public/
+        │   ├── Scan-BranchNoReferences.ps1
+        │   ├── Measure-BranchNoContext.ps1
+        │   └── Test-DiscountCalculation.ps1
+        └── Private/
+            └── Get-SqlRegexPatterns.ps1
+        </pre>
+    </div>
+
+    <!-- Section 11 -->
+    <div>
+      <h2>11. Output Report Formats</h2>
+      <p>
+        The PowerShell scripts utilize standard JSON for interoperability, identical to the Python implementation. This
+        allows the Windows and Linux toolchains to share report data seamlessly.
+      </p>
+      <pre>{
+  "file_path": "C:\\Dev\\src\\ksc\\load\\proc\\loadconditions.cxx",
+  "line_number": 145,
+  "matched_text": "exec sql insert into discount (branchno, articleno)...",
+  "classification": "DISCOUNT_LOOKUP",
+  "confidence": 100,
+  "timestamp": "2026-01-03T10:00:00Z"
+}
+</pre>
+    </div>
+
+    <!-- Section 12 -->
+    <div>
+      <h2>12. Quick Start Guide for Windows</h2>
+      <ol>
+        <li><strong>Prerequisites:</strong> Ensure Windows PowerShell 5.1 or PowerShell Core 7+ is installed.</li>
+        <li><strong>Installation:</strong> Copy the scripts folder to your project root.</li>
+        <li>
+          <strong>Execution Policy:</strong> Run
+          <code>Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass</code> if scripts are blocked.
+        </li>
+        <li>
+          <strong>Run Scan:</strong>
+          <code>.\scripts\Scan-BranchNoReferences.ps1 -Path "C:\MyProject\src"</code>
+        </li>
+        <li><strong>Review:</strong> Check <code>scan_results.json</code> generated in the current directory.</li>
+      </ol>
+    </div>
+
+    <!-- Section 13 -->
+    <div>
+      <h2>13. Appendices</h2>
+      <h3>Appendix A: Common PowerShell Errors</h3>
+      <ul>
+        <li><strong>UnauthorizedAccess:</strong> Run PowerShell as Administrator if scanning protected folders.</li>
+        <li>
+          <strong>FileInUse:</strong> Some log files might be locked. The script includes <code>try/catch</code> blocks
+          to skip these.
+        </li>
+        <li>
+          <strong>Encoding Issues:</strong> Scripts force UTF8 encoding to handle special characters in source comments.
+        </li>
+      </ul>
+    </div>
+  
+
+</body></html>
