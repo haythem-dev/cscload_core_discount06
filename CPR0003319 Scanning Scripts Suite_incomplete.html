@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" style=""><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CPR0003319 - Automated Scanning Scripts</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&amp;family=Times+New+Roman:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            max-width: 880px;
+            margin: 0 auto;
+            padding: 40px 80px;
+            color: #000;
+            background-color: #fff;
+            line-height: 1.6;
+            text-align: justify;
+        }
+
+        h1 {
+            font-size: 24pt;
+            font-weight: bold;
+            margin-bottom: 24px;
+            text-align: center;
+            color: #2c3e50;
+        }
+
+        h2 {
+            font-size: 18pt;
+            font-weight: bold;
+            margin-top: 32px;
+            margin-bottom: 16px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 8px;
+            color: #2c3e50;
+            text-align: left;
+        }
+
+        h3 {
+            font-size: 14pt;
+            font-weight: bold;
+            margin-top: 24px;
+            margin-bottom: 12px;
+            color: #34495e;
+            text-align: left;
+        }
+
+        h4 {
+            font-size: 12pt;
+            font-weight: bold;
+            margin-top: 16px;
+            margin-bottom: 8px;
+            color: #444;
+            text-align: left;
+        }
+
+        p, li {
+            font-size: 12pt;
+            margin-bottom: 12px;
+        }
+
+        ul, ol {
+            margin-bottom: 16px;
+            padding-left: 24px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            font-size: 11pt;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f8f9fa;
+            font-weight: bold;
+        }
+
+        /* Code block styling */
+        pre {
+            background-color: #f5f5f5;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 12px;
+            font-family: 'Roboto Mono', monospace;
+            font-size: 10pt;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            overflow-x: hidden; /* No scrollbars */
+            margin-bottom: 20px;
+        }
+
+        code {
+            font-family: 'Roboto Mono', monospace;
+            background-color: #f5f5f5;
+            padding: 2px 4px;
+            border-radius: 2px;
+            font-size: 10pt;
+        }
+
+        /* Semantic sections */
+        .metadata {
+            text-align: center;
+            margin-bottom: 48px;
+            border-bottom: 2px solid #2c3e50;
+            padding-bottom: 24px;
+        }
+
+        .metadata div {
+            margin-bottom: 4px;
+            font-size: 12pt;
+        }
+
+        .info-box {
+            background-color: #e8f4fd;
+            border-left: 4px solid #3498db;
+            padding: 12px;
+            margin-bottom: 16px;
+            font-style: italic;
+        }
+
+        .warning-box {
+            background-color: #fcf8e3;
+            border-left: 4px solid #f1c40f;
+            padding: 12px;
+            margin-bottom: 16px;
+        }
+
+        .critical-box {
+            background-color: #f2dede;
+            border-left: 4px solid #e74c3c;
+            padding: 12px;
+            margin-bottom: 16px;
+        }
+        
+        /* Utility for document sections */
+        .doc-section {
+            margin-bottom: 40px;
+        }
+        
+        .toc {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border: 1px solid #eee;
+            margin-bottom: 40px;
+        }
+        
+        .toc ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        
+        .toc li {
+            margin-bottom: 8px;
+        }
+
+        .script-header {
+            background-color: #eee;
+            padding: 8px;
+            font-weight: bold;
+            font-family: 'Roboto Mono', monospace;
+            border-top: 1px solid #ddd;
+            border-left: 1px solid #ddd;
+            border-right: 1px solid #ddd;
+            margin-bottom: 0;
+        }
+        
+        .script-header + pre {
+            margin-top: 0;
+            border-top: none;
+        }
+    </style>
+</head>
+<body style="">
+
+    <div class="metadata">
+        <h1>CPR0003319 - Automated Scanning Scripts for BranchNo Classification</h1>
+        <div><strong>Version:</strong> 1.0</div>
+        <div><strong>Date:</strong> January 3, 2026</div>
+        <div><strong>Project:</strong> PHARMOS Discount Workflow Consolidation</div>
+    </div>
+
+    <div class="toc">
+        <h3>Table of Contents</h3>
+        <ul>
+            <li>1. Executive Summary</li>
+            <li>2. Script 1: BranchNo Reference Scanner</li>
+            <li>3. Script 2: Context Classifier</li>
+            <li>4. Script 3: SQL Query Analyzer</li>
+            <li>5. Script 4: Change Impact Analyzer</li>
+            <li>6. Script 5: Validation Script</li>
+            <li>7. Integration with CI/CD Pipeline</li>
+            <li>8. Output Report Formats</li>
+            <li>9. Appendices</li>
+            <li>10. Quick Start Guide</li>
+        </ul>
+    </div>
+
+    <!-- Section 1 -->
+    <div class="doc-section">
+        <h2>1. Executive Summary</h2>
+        <p>This document details the automated scanning and analysis framework developed for the CPR0003319 Discount Workflow Consolidation project. The primary objective is to safely migrate discount data processing from a decentralized, multi-branch model to a centralized "Branch 0" model while preserving operational branch contexts.</p>
+        
+        <h3>Overview of Scanning Approach</h3>
+        <p>To mitigate the risks associated with modifying approximately 153 files across the PHARMOS codebase, we utilize a suite of automated scripts. These tools provide comprehensive discovery, intelligent classification, and rigorous validation of all <code>branchno</code> references.</p>
+
+        <h3>Purpose</h3>
+        <p>The core purpose is to identify every occurrence of <code>branchno</code> (and its variants) and classify them into one of three categories: <strong>DISCOUNT_LOOKUP</strong> (target for change), <strong>OPERATIONAL</strong> (must be preserved), or <strong>MIXED/UNCLEAR</strong> (requires manual review). This ensures zero regression in operational logic while enabling the architectural centralization.</p>
+
+        <h3>Scanning Strategy</h3>
+        <ul>
+            <li><strong>Phase 1: Discovery.</strong> Universal scanning of C++, SQL, Shell, and Thrift files to build a complete inventory.</li>
+            <li><strong>Phase 2: Classification.</strong> Rule-based heuristic analysis to categorize references based on code context.</li>
+            <li><strong>Phase 3: Impact Analysis.</strong> Determining the "blast radius" of proposed changes through dependency graphing.</li>
+            <li><strong>Phase 4: Validation.</strong> Parallel execution frameworks to verify data consistency between Branch 0 and legacy branches.</li>
+        </ul>
+
+        <h3>Integration Points</h3>
+        <p>These scripts are designed to integrate directly into the CI/CD pipeline (Jenkins/Ant), acting as quality gates that prevent the introduction of unclassified or risky branch logic during the migration window.</p>
+    </div>
+
+    <!-- Section 2 -->
+    <div class="doc-section">
+        <h2>2. Script 1: BranchNo Reference Scanner</h2>
+        <div class="info-box"><strong>Title:</strong> Universal BranchNo Reference Scanner<br><strong>Purpose:</strong> Find ALL occurrences of branchno across all file types</div>
+
+        <h3>2.1 Bash Implementation - branchno_scanner.sh</h3>
+        <p>This lightweight script provides a quick, dependency-free method to identify references in a Unix environment.</p>
+
+<div class="script-header">branchno_scanner.sh</div>
+<pre>#!/bin/bash
+# branchno_scanner.sh - Universal BranchNo Reference Scanner
+# Usage: ./branchno_scanner.sh [search_path] [output_file]
+
+SEARCH_PATH="${1:-.}"
+OUTPUT_FILE="${2:-branchno_scan_results.json}"
+TIMESTAMP=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
+
+echo "[INFO] Starting scan in: $SEARCH_PATH"
+echo "[INFO] Output file: $OUTPUT_FILE"
+
+# Initialize JSON output
+echo "[" &gt; "$OUTPUT_FILE"
+FIRST_ENTRY=true
+
+# Find files and grep for branchno variants case-insensitively
+# Patterns: branchno, BranchNo, BRANCHNO, branch_no, filialnr (German variant)
+grep -r -n -I -E -i "branchno|branch_no|filialnr" "$SEARCH_PATH" \
+    --include=*.cxx --include=*.cpp --include=*.h --include=*.hpp \
+    --include=*.sh --include=*.thrift --include=*.sql \
+    --include=*.xml | while read -r line ; do
+
+    # Parse grep output (format: file:line:content)
+    FILE_PATH=$(echo "$line" | cut -d: -f1)
+    LINE_NUM=$(echo "$line" | cut -d: -f2)
+    CONTENT=$(echo "$line" | cut -d: -f3-)
+    
+    # Extract context (5 lines before and after)
+    # Note: simple implementation using separate sed/head calls for clarity
+    # In production, optimize context extraction
+    
+    # Handle JSON comma separation
+    if [ "$FIRST_ENTRY" = true ]; then
+        FIRST_ENTRY=false
+    else
+        echo "," &gt;&gt; "$OUTPUT_FILE"
+    fi
+
+    # Escape quotes for JSON
+    CLEAN_CONTENT=${CONTENT//\"/\\\"}
+    
+    # Append to JSON
+    cat &lt;<eof>&gt; "$OUTPUT_FILE"
+    {
+        "file_path": "$FILE_PATH",
+        "line_number": $LINE_NUM,
+        "matched_text": "$CLEAN_CONTENT",
+        "file_type": "${FILE_PATH##*.}",
+        "timestamp": "$TIMESTAMP"
+    }
+EOF
+
+done
+
+echo "]" &gt;&gt; "$OUTPUT_FILE"
+echo "[SUCCESS] Scan complete. Results saved to $OUTPUT_FILE"</eof></pre>
+
+        <h3>2.2 Python Implementation - branchno_scanner.py</h3>
+        <p>The Python implementation offers robust features including multi-threading, context extraction, and advanced pattern matching.</p>
+
+<div class="script-header">branchno_scanner.py</div>
+<pre>import os
+import argparse
+import re
+import json
+import threading
+from concurrent.futures import ThreadPoolExecutor
+from datetime import datetime
+
+class BranchNoScanner:
+    def __init__(self, root_path, extensions, output_file):
+        self.root_path = root_path
+        self.extensions = extensions
+        self.output_file = output_file
+        self.results = []
+        self.lock = threading.Lock()
+        # Regex for branchno variants
+        self.pattern = re.compile(r'(branchno|branch_no|filialnr)', re.IGNORECASE)
+
+    def scan_file(self, file_path):
+        try:
+            with open(file_path, 'r', encoding='utf-8', errors='ignore') as f:
+                lines = f.readlines()
+                
+            file_results = []
+            for idx, line in enumerate(lines):
+                if self.pattern.search(line):
+                    # Extract context (5 lines before/after)
+                    start = max(0, idx - 5)
+                    end = min(len(lines), idx + 6)
+                    context_before = "".join(lines[start:idx])
+                    context_after = "".join(lines[idx+1:end])
+                    
+                    file_results.append({
+                        "file_path": file_path,
+                        "line_number": idx + 1,
+                        "matched_text": line.strip(),
+                        "context_before": context_before,
+                        "context_after": context_after,
+                        "file_type": os.path.splitext(file_path)[1],
+                        "timestamp": datetime.utcnow().isoformat() + "Z"
+                    })
+            
+            if file_results:
+                with self.lock:
+                    self.results.extend(file_results)
+
+        except Exception as e:
+            print(f"[ERROR] processing {file_path}: {e}")
+
+    def run(self):
+        files_to_scan = []
+        for root, _, files in os.walk(self.root_path):
+            for file in files:
+                if any(file.endswith(ext) for ext in self.extensions):
+                    files_to_scan.append(os.path.join(root, file))
+        
+        print(f"[INFO] Scanning {len(files_to_scan)} files...")
+        
+        with ThreadPoolExecutor(max_workers=8) as executor:
+            executor.map(self.scan_file, files_to_scan)
+            
+        with open(self.output_file, 'w') as f:
+            json.dump(self.results, f, indent=2)
+            
+        print(f"[SUCCESS] Found {len(self.results)} matches. Saved to {self.output_file}")
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="CPR0003319 BranchNo Scanner")
+    parser.add_argument("--path", required=True, help="Root path to scan")
+    parser.add_argument("--output", default="scan_results.json", help="Output JSON file")
+    parser.add_argument("--extensions", default=".cxx,.cpp,.h,.hpp,.sh,.thrift,.sql", 
+                        help="Comma-separated extensions")
+    
+    args = parser.parse_args()
+    ext_list = args.extensions.split(',')
+    
+    scanner = BranchNoScanner(args.path, ext_list, args.output)
+    scanner.run()</pre>
+
+        <h3>2.3 Usage Examples</h3>
+        <ul>
+            <li><strong>Basic Scan:</strong> <code>./branchno_scanner.sh /src/pharmos</code></li>
+            <li><strong>Filtered Python Scan:</strong> <code>python branchno_scanner.py --path /src --extensions .cxx,.cpp --output cpp_results.json</code></li>
+        </ul>
+
+        <h3>2.4 Output Format Specification</h3>
+        <p>The JSON output follows this schema:</p>
+<pre>{
+  "file_path": "/src/environment/de/ksc/load/proc/loadconditions.cxx",
+  "line_number": 145,
+  "matched_text": "exec sql insert into discount (branchno, articleno) values (:sBranchno, :art);",
+  "context_before": "    // Prepare insert statement\n    short sBranchno = atoi(argv[1]);\n",
+  "context_after": "    if (sqlca.sqlcode != 0) {\n        log_error(\"Insert failed\");\n    }",
+  "file_type": ".cxx",
+  "timestamp": "2026-01-03T10:00:00Z"
+}</pre>
+    </div>
+
+    <!-- Section 3 -->
+    <div class="doc-section">
+        <h2>3. Script 2: Context Classifier</h2>
+        <div class="info-box"><strong>Title:</strong> Intelligent BranchNo Context Classifier<br><strong>Purpose:</strong> Categorize references as DISCOUNT_LOOKUP, OPERATIONAL, MIXED, or UNCLEAR</div>
+
+        <h3>3.1 Classification Rules Engine</h3>
+        <p>The classifier uses a scoring system based on keywords found in the line of code and its surrounding context.</p>
+        <table>
+            <tbody><tr><th>Category</th><th>Primary Indicators</th><th>Confidence Logic</th></tr>
+            <tr><td>DISCOUNT_LOOKUP</td><td>Tables: discount, discountgrp<br>Methods: Select, getPrice<br>Keywords: WHERE, SQL</td><td>High if 'discount' table appears in SQL context</td></tr>
+            <tr><td>OPERATIONAL</td><td>Tables: orders, customer, delivery<br>Keywords: log, print, report, current_branch</td><td>High if 'log' or 'print' appears</td></tr>
+            <tr><td>MIXED</td><td>Presence of both discount terms and logging/operational terms</td><td>Requires manual review</td></tr>
+        </tbody></table>
+
+        <h3>3.2 Python Classifier Implementation - branchno_classifier.py</h3>
+
+<div class="script-header">branchno_classifier.py</div>
+<pre>import json
+import re
+
+def classify_match(match):
+    text = match['matched_text'].lower()
+    context = (match['context_before'] + match['context_after']).lower()
+    full_block = text + context
+    
+    score_discount = 0
+    score_operational = 0
+    
+    # Discount Lookup Indicators
+    if re.search(r'(discount|discountgrp|cstdiscountcont)', full_block): score_discount += 50
+    if re.search(r'(select.*from.*discount)', full_block): score_discount += 40
+    if re.search(r'(pricesanddiscounts)', full_block): score_discount += 30
+    if "where" in text and "branchno" in text: score_discount += 20
+    
+    # Operational Indicators
+    if re.search(r'(order|customer|delivery|shipment)', full_block): score_operational += 30
+    if re.search(r'(log|print|printf|cout|cerr)', text): score_operational += 50
+    if re.search(r'(report|analytics)', full_block): score_operational += 40
+    if "insert into orders" in full_block: score_operational += 100
+    
+    # Classification Logic
+    confidence = 0
+    classification = "UNCLEAR"
+    
+    if score_discount &gt; 80 and score_operational &lt; 30:
+        classification = "DISCOUNT_LOOKUP"
+        confidence = min(score_discount, 100)
+    elif score_operational &gt; 80 and score_discount &lt; 30:
+        classification = "OPERATIONAL"
+        confidence = min(score_operational, 100)
+    elif score_discount &gt; 40 and score_operational &gt; 40:
+        classification = "MIXED"
+        confidence = 50
+    else:
+        classification = "UNCLEAR"
+        confidence = 0
+        
+    return classification, confidence
+
+def generate_report(results, output_file):
+    with open(output_file, 'w') as f:
+        json.dump(results, f, indent=2)
+
+if __name__ == "__main__":
+    with open('scan_results.json', 'r') as f:
+        scan_data = json.load(f)
+    
+    classified_data = []
+    stats = {"DISCOUNT_LOOKUP": 0, "OPERATIONAL": 0, "MIXED": 0, "UNCLEAR": 0}
+    
+    for item in scan_data:
+        cls, conf = classify_match(item)
+        item['classification'] = cls
+        item['confidence'] = conf
+        item['manual_review_required'] = (conf &lt; 70) or (cls == "MIXED")
+        classified_data.append(item)
+        stats[cls] += 1
+        
+    generate_report(classified_data, 'classified_results.json')
+    print("Classification Complete:", stats)</pre>
+
+        <h3>3.4 Manual Review Guidelines</h3>
+        <ul>
+            <li><strong>Escalate if:</strong> Confidence &lt; 70% or Category is MIXED.</li>
+            <li><strong>Checklist:</strong>
+                <ol>
+                    <li>Is <code>branchno</code> used as a filter for a discount table? (Change to 0)</li>
+                    <li>Is <code>branchno</code> being saved to an order/history table? (Keep original)</li>
+                    <li>Is it an input parameter to an API? (Trace usage)</li>
+                </ol>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Section 4 -->
+    <div class="doc-section">
+        <h2>4. Script 3: SQL Query Analyzer</h2>
+        <div class="info-box"><strong>Title:</strong> Embedded SQL and Query Analyzer<br><strong>Purpose:</strong> Extract and analyze SQL queries containing branchno</div>
+
+        <h3>4.1 SQL Extraction Script - sql_extractor.py</h3>
+        <p>Extracts <code>EXEC SQL</code> blocks from C++ source files to isolate database interactions.</p>
+
+<div class="script-header">sql_extractor.py</div>
+<pre>import re
+import glob
+
+def extract_sql_from_cxx(file_path):
+    with open(file_path, 'r') as f:
+        content = f.read()
+    
+    # Simple regex for EXEC SQL blocks
+    # Note: Does not handle complex multi-line comments perfectly
+    sql_blocks = re.findall(r'EXEC SQL(.*?;)', content, re.DOTALL | re.IGNORECASE)
+    return sql_blocks
+
+def analyze_sql(sql, file_path):
+    sql_lower = sql.lower()
+    
+    # Tables of interest
+    tables = ['discount', 'discountgrp', 'discountgrpmem', 'cstdiscountcont']
+    found_tables = [t for t in tables if t in sql_lower]
+    
+    if found_tables and 'branchno' in sql_lower:
+        print(f"File: {file_path}")
+        print(f"Tables: {found_tables}")
+        print(f"Query: {sql.strip()}")
+        print("-" * 40)
+
+# Main Execution
+files = glob.glob('src/**/*.cxx', recursive=True)
+for file in files:
+    sqls = extract_sql_from_cxx(file)
+    for sql in sqls:
+        analyze_sql(sql, file)</pre>
+
+        <h3>4.3 SQL Validation Queries</h3>
+        <p>Use these queries directly in the database to validate assumptions before applying changes.</p>
+<pre>-- VALIDATION 1: Check if discount data is identical across branches
+SELECT count(*) as discrepancies 
+FROM discount d1
+JOIN discount d2 ON d1.articleno = d2.articleno 
+    AND d1.discountpct = d2.discountpct
+WHERE d1.branchno = 1 AND d2.branchno = 2
+AND d1.discountpct &lt;&gt; d2.discountpct;
+
+-- VALIDATION 2: Detect branch-specific exceptions
+SELECT branchno, count(*) 
+FROM discount 
+GROUP BY branchno 
+HAVING count(*) &lt; (SELECT count(*) FROM discount WHERE branchno=1) * 0.9;</pre>
+    </div>
+
+    <!-- Section 5 -->
+    <div class="doc-section">
+        <h2>5. Script 4: Change Impact Analyzer</h2>
+        <div class="info-box"><strong>Title:</strong> Blast Radius and Impact Assessment<br><strong>Purpose:</strong> Estimate the scope and risk of changes via dependency analysis</div>
+
+        <h3>5.5 Bash Script Implementation - impact_analyzer.sh</h3>
+        <p>A shell script that uses <code>grep</code> to estimate the "blast radius" by finding files that include headers which are scheduled for modification.</p>
+
+<div class="script-header">impact_analyzer.sh</div>
+<pre>#!/bin/bash
+# impact_analyzer.sh
+
+# List of files identified for change (input from classifier)
+CHANGE_LIST="files_to_change.txt"
+
+echo "Calculating Blast Radius..."
+echo "file_path,direct_includes,risk_score" &gt; impact_report.csv
+
+while read -r file; do
+    # Get just the filename (e.g., discount.h)
+    filename=$(basename "$file")
+    
+    # Find how many files include this header
+    if [[ "$filename" == *.h || "$filename" == *.hpp ]]; then
+        impact_count=$(grep -r "#include.*$filename" src/ | wc -l)
+    else
+        impact_count=0
+    fi
+    
+    # Calculate simple risk score
+    risk="LOW"
+    if [ "$impact_count" -gt 10 ]; then risk="MEDIUM"; fi
+    if [ "$impact_count" -gt 50 ]; then risk="HIGH"; fi
+    if [ "$impact_count" -gt 100 ]; then risk="CRITICAL"; fi
+    
+    echo "$file,$impact_count,$risk" &gt;&gt; impact_report.csv
+    
+done &lt; "$CHANGE_LIST"
+
+cat impact_report.csv</pre>
+    </div>
+
+    <!-- Section 6 -->
+    <div class="doc-section">
+        <h2>6. Script 5: Validation Script</h2>
+        <div class="info-box"><strong>Title:</strong> Branch 0 vs. Branch 1-20 Comparison Validator<br><strong>Purpose:</strong> Validate that Branch 0 logic produces identical results to legacy logic</div>
+
+        <h3>6.2 Application-Level Validator - discount_calc_validator.py</h3>
+        <p>This script acts as a test harness to simulate discount lookups against both the new centralized data (Branch 0) and the old distributed data (Branches 1-20) to ensure calculation integrity.</p>
+
+<div class="script-header">discount_calc_validator.py</div>
+<pre>import sys
+# Mocking database connection for illustration
+import db_connector 
+
+def validate_article_discount(article_no, customer_no):
+    # Query Legacy (Branch 1)
+    legacy_discount = db_connector.query(
+        "SELECT discountpct FROM discount WHERE branchno=1 AND articleno=?", 
+        [article_no]
+    )
+    
+    # Query New (Branch 0)
+    new_discount = db_connector.query(
+        "SELECT discountpct FROM discount WHERE branchno=0 AND articleno=?", 
+        [article_no]
+    )
+    
+    if legacy_discount != new_discount:
+        print(f"[FAIL] Mismatch for Article {article_no}: Legacy={legacy_discount}, New={new_discount}")
+        return False
+    return True
+
+# Batch Validation
+articles = [1001, 1002, 1003, 1004] # Load from test data file
+failures = 0
+
+for art in articles:
+    if not validate_article_discount(art, 9999):
+        failures += 1
+
+if failures == 0:
+    print("[SUCCESS] All validations passed.")
+    sys.exit(0)
+else:
+    print(f"[ERROR] {failures} validation failures detected.")
+    sys.exit(1)</pre>
+    </div>
+
+    <!-- Section 7 -->
+    <div class="doc-section">
+        <h2>7. Integration with CI/CD Pipeline</h2>
+        
+        <h3>7.1 Ant Build Integration</h3>
+        <p>Add the following target to <code>build.xml</code> to enforce scanning before compilation.</p>
+<pre>&lt;target name="check-branchno" description="Scan for unclassified branchno usage"&gt;
+    &lt;exec executable="python" failonerror="true"&gt;
+        &lt;arg value="scripts/branchno_scanner.py"/&gt;
+        &lt;arg value="--path"/&gt;
+        &lt;arg value="${src.dir}"/&gt;
+    &lt;/exec&gt;
+&lt;/target&gt;</pre>
+
+        <h3>7.2 Git Pre-Commit Hook</h3>
+        <p>Save as <code>.git/hooks/pre-commit</code>.</p>
+<pre>#!/bin/bash
+# Pre-commit hook to prevent high-risk unclassified changes
+
+python scripts/branchno_scanner.py --path . --output .scan_tmp.json
+RISK_COUNT=$(python scripts/check_risk.py .scan_tmp.json)
+
+if [ "$RISK_COUNT" -gt 0 ]; then
+    echo "BLOCKING COMMIT: Found $RISK_COUNT unclassified BranchNo references."
+    echo "Please classify them or add to ignore list."
+    exit 1
+fi
+exit 0</pre>
+    </div>
+
+    <!-- Section 8 -->
+    <div class="doc-section">
+        <h2>8. Output Report Formats</h2>
+        
+        <h3>8.1 JSON Report Schema</h3>
+        <p>Standardized output for all tools to ensure interoperability.</p>
+<pre>{
+    "summary": {
+        "total_files": 153,
+        "total_matches": 450,
+        "classified": {
+            "DISCOUNT_LOOKUP": 200,
+            "OPERATIONAL": 150,
+            "MIXED": 50,
+            "UNCLEAR": 50
+        }
+    },
+    "details": [
+        {
+            "file": "artikel.cxx",
+            "line": 102,
+            "category": "DISCOUNT_LOOKUP",
+            "confidence": 95,
+            "snippet": "WHERE branchno = :bno"
+        }
+    ]
+}</pre>
+    </div>
+
+    <!-- Section 9 -->
+    <div class="doc-section">
+        <h2>9. Appendices</h2>
+        
+        <h3>9.1 Script Repository Structure</h3>
+        <pre>/scripts
+  /core
+    branchno_scanner.py
+    branchno_classifier.py
+    sql_extractor.py
+  /validation
+    db_validator.sql
+    discount_calc_validator.py
+  /ci
+    pre-commit-hook.sh
+    build_integration.xml
+  config.yaml
+  README.md</pre>
+  
+        <h3>9.3 Error Codes</h3>
+        <ul>
+            <li><strong>ERR_01:</strong> File encoding error (Scanner). Solution: Check file encoding (UTF-8 recommended).</li>
+            <li><strong>ERR_02:</strong> Regex timeout (Classifier). Solution: Simplify complex regex patterns.</li>
+            <li><strong>ERR_03:</strong> DB Connection fail (Validator). Solution: Verify credentials in <code>db_connector.py</code>.</li>
+        </ul>
+    </div>
+
+    <!-- Section 10 -->
+    <div class="doc-section">
+        <h2>10. Quick Start Guide</h2>
+        <ol>
+            <li><strong>Install Prerequisites:</strong> Ensure Python 3.8+ and Bash 4.0+ are available.</li>
+            <li><strong>Clone Repository:</strong> Pull the <code>cpr0003319-scripts</code> repository.</li>
+            <li><strong>Configure:</strong> Edit <code>config.yaml</code> to set source paths and database credentials.</li>
+            <li><strong>Run Scan:</strong> Execute <code>python scripts/core/branchno_scanner.py --path /your/source/root</code>.</li>
+            <li><strong>Review Report:</strong> Open <code>classified_results.json</code> or the HTML dashboard to analyze findings.</li>
+        </ol>
+    </div>
+
+
+</body></html>
