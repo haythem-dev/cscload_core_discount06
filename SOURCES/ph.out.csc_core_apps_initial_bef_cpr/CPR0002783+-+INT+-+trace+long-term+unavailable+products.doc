@@ -1,0 +1,704 @@
+Date: Fri, 9 Jan 2026 10:56:34 +0000 (UTC)
+Message-ID: <1037901209.27.1767956194723@46554fe2dc14>
+Subject: Exported From Confluence
+MIME-Version: 1.0
+Content-Type: multipart/related; 
+	boundary="----=_Part_26_1606290375.1767956194723"
+
+------=_Part_26_1606290375.1767956194723
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+Content-Location: file:///C:/exported.html
+
+<html xmlns:o=3D'urn:schemas-microsoft-com:office:office'
+      xmlns:w=3D'urn:schemas-microsoft-com:office:word'
+      xmlns:v=3D'urn:schemas-microsoft-com:vml'
+      xmlns=3D'urn:w3-org-ns:HTML'>
+<head>
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8=
+">
+    <title>CPR0002783 - INT - trace long-term unavailable products</title>
+    <!--[if gte mso 9]>
+    <xml>
+        <o:OfficeDocumentSettings>
+            <o:TargetScreenSize>1024x640</o:TargetScreenSize>
+            <o:PixelsPerInch>72</o:PixelsPerInch>
+            <o:AllowPNG/>
+        </o:OfficeDocumentSettings>
+        <w:WordDocument>
+            <w:View>Print</w:View>
+            <w:Zoom>90</w:Zoom>
+            <w:DoNotOptimizeForBrowser/>
+        </w:WordDocument>
+    </xml>
+    <![endif]-->
+    <style>
+                <!--
+        @page Section1 {
+            size: 8.5in 11.0in;
+            margin: 1.0in;
+            mso-header-margin: .5in;
+            mso-footer-margin: .5in;
+            mso-paper-source: 0;
+        }
+
+        table {
+            border: solid 1px;
+            border-collapse: collapse;
+        }
+
+        table td, table th {
+            border: solid 1px;
+            padding: 5px;
+        }
+
+        td {
+            page-break-inside: avoid;
+        }
+
+        tr {
+            page-break-after: avoid;
+        }
+
+        div.Section1 {
+            page: Section1;
+        }
+
+        /* Confluence print stylesheet. Common to all themes for print medi=
+a */
+/* Full of !important until we improve batching for print CSS */
+
+@media print {
+    #main {
+        padding-bottom: 1em !important; /* The default padding of 6em is to=
+o much for printouts */
+    }
+
+    body {
+        font: var(--ds-font-body-small, Arial, Helvetica, FreeSans, sans-se=
+rif);
+    }
+
+    body, #full-height-container, #main, #page, #content, .has-personal-sid=
+ebar #content {
+        background: var(--ds-surface, #fff) !important;
+        color: var(--ds-text, #000) !important;
+        border: 0 !important;
+        width: 100% !important;
+        height: auto !important;
+        min-height: auto !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        display: block !important;
+    }
+
+    a, a:link, a:visited, a:focus, a:hover, a:active {
+        color: var(--ds-text, #000);
+    }
+
+    #content h1,
+    #content h2,
+    #content h3,
+    #content h4,
+    #content h5,
+    #content h6 {
+        page-break-after: avoid;
+    }
+
+    pre {
+        font: var(--ds-font-code, Monaco, "Courier New", monospace);
+    }
+
+    #header,
+    .aui-header-inner,
+    #navigation,
+    #sidebar,
+    .sidebar,
+    #personal-info-sidebar,
+    .ia-fixed-sidebar,
+    .page-actions,
+    .navmenu,
+    .ajs-menu-bar,
+    .noprint,
+    .inline-control-link,
+    .inline-control-link a,
+    a.show-labels-editor,
+    .global-comment-actions,
+    .comment-actions,
+    .quick-comment-container,
+    #addcomment {
+        display: none !important;
+    }
+
+    /* CONF-28544 cannot print multiple pages in IE */
+    #splitter-content {
+        position: relative !important;
+    }
+
+    .comment .date::before {
+        content: none !important; /* remove middot for print view */
+    }
+
+    h1.pagetitle img {
+        height: auto;
+        width: auto;
+    }
+
+    .print-only {
+        display: block;
+    }
+
+    #footer {
+        position: relative !important; /* CONF-17506 Place the footer at en=
+d of the content */
+        margin: 0;
+        padding: 0;
+        background: none;
+        clear: both;
+    }
+
+    #poweredby {
+        border-top: none;
+        background: none;
+    }
+
+    #poweredby li.print-only {
+        display: list-item;
+        font-style: italic;
+    }
+
+    #poweredby li.noprint {
+        display: none;
+    }
+
+    /* no width controls in print */
+    .wiki-content .table-wrap,
+    .wiki-content p,
+    .panel .codeContent,
+    .panel .codeContent pre,
+    .image-wrap {
+        overflow: visible !important;
+    }
+
+    /* TODO - should this work? */
+    #children-section,
+    #comments-section .comment,
+    #comments-section .comment .comment-body,
+    #comments-section .comment .comment-content,
+    #comments-section .comment p {
+        page-break-inside: avoid;
+    }
+
+    #page-children a {
+        text-decoration: none;
+    }
+
+    /**
+     hide twixies
+
+     the specificity here is a hack because print styles
+     are getting loaded before the base styles. */
+    #comments-section.pageSection .section-header,
+    #comments-section.pageSection .section-title,
+    #children-section.pageSection .section-header,
+    #children-section.pageSection .section-title,
+    .children-show-hide {
+        padding-left: 0;
+        margin-left: 0;
+    }
+
+    .children-show-hide.icon {
+        display: none;
+    }
+
+    /* personal sidebar */
+    .has-personal-sidebar #content {
+        margin-right: 0px;
+    }
+
+    .has-personal-sidebar #content .pageSection {
+        margin-right: 0px;
+    }
+
+    .no-print, .no-print * {
+        display: none !important;
+    }
+}
+-->
+    </style>
+</head>
+<body>
+    <h1>CPR0002783 - INT - trace long-term unavailable products</h1>
+    <div class=3D"Section1">
+        <div class=3D"contentLayout2">
+<div class=3D"columnLayout two-right-sidebar" data-layout=3D"two-right-side=
+bar">
+<div class=3D"cell normal" data-type=3D"normal">
+<div class=3D"innerCell">
+<h3 local-id=3D"29d6fa1c-af45-4db1-92a0-e43faabb19a9" id=3D"CPR0002783-INT-=
+tracelong-termunavailableproducts-CPR/ProjectSummary">CPR/Project Summary</=
+h3>
+<ul local-id=3D"b33fd514-78e0-42f9-ae7b-f8f01f4800a6">
+<li local-id=3D"29907bb5-6ab4-45f1-b48e-2f2d0251020b">
+<p local-id=3D"97afd4b9-8d48-48c3-b854-f83a697f0e09">some products are mark=
+ed as long term unavailable</p></li>
+<li local-id=3D"9a4afc03-5020-4faf-b998-37793d0078cc">
+<p local-id=3D"0ebf2791-e7d1-4405-8de7-3d3b33638326">in this case they shou=
+ld not be used for subsequent delivery positions</p></li>
+<li local-id=3D"833d39e9-ba82-4eea-af97-06a042781222">
+<p local-id=3D"831471fa-0921-4885-93e3-f81e2295eec1">This is an automatic p=
+rocess, already established in Germany.</p></li>
+<li local-id=3D"e6ef0b8a-1511-4c65-814b-2565d29249c4">
+<p local-id=3D"3222800a-953f-403d-bf15-d6853809062f">Adaptations will be re=
+quired to tailor this for France specifics, e.g. criteria for putting artic=
+les in this table</p></li>
+<li local-id=3D"a3c87568-010f-4630-9a65-187ae61b60c9">
+<p local-id=3D"102b3d06-76eb-415d-bc58-a181fae8c6a8">this was related to an=
+ major incident on 01.07.2025, so details can be discussed with Bj=C3=B6rn =
+Bischof</p></li>
+</ul>
+<h3 local-id=3D"7ac9acec-98b3-44cc-98d1-9d656e5faa2b" id=3D"CPR0002783-INT-=
+tracelong-termunavailableproducts-CPR/ProjectScope">CPR/Project Scope</h3>
+<ul local-id=3D"b5f0f2ac-a2cf-4c78-b2f7-2c087a2c661e">
+<li local-id=3D"ec1dc3d3-eff6-4e9b-b57c-d6920daac847">
+<p local-id=3D"3b6bce17-146d-44ba-a1d6-edca29b57252">verify the current log=
+ic of long term unavailability for products in cscservice</p></li>
+<li local-id=3D"c34c77e2-ab08-4e1e-858c-af21d0387899">
+<p local-id=3D"c1a013c7-5797-4870-948d-e5499e579250">update corresponding p=
+art to enable it for FR as well</p></li>
+</ul>
+<h3 local-id=3D"e3d8e134-c201-4d2c-bbde-2bbc6eecfeda" id=3D"CPR0002783-INT-=
+tracelong-termunavailableproducts-Links(externalsharepoints,teamschannelsor=
+GxPdocuments)">Links (external sharepoints, teams channels or GxP documents=
+)</h3>
+<ul local-id=3D"4206bb27-0cbc-4956-a56a-f657a697013c">
+<li local-id=3D"8aaf951b-23b6-414d-8d9d-ee743663ab07">
+<p local-id=3D"8e0b00d9-8820-499e-ad18-a03c16f22c01">no</p></li>
+</ul>
+<h3 local-id=3D"6ba6e303-4655-43ec-b9ef-f71b5336774d" id=3D"CPR0002783-INT-=
+tracelong-termunavailableproducts-Applications/Packages">Applications/Packa=
+ges</h3>
+<div class=3D"table-wrap">
+<table data-table-width=3D"760" data-layout=3D"default" data-local-id=3D"6d=
+b66947-3324-46ca-8d99-8e22726b1ddb" class=3D"confluenceTable">
+<tbody>
+<tr ac:local-id=3D"109ea1b3-9a9b-4ef6-8b46-7de8ee9c7640">
+<th data-local-id=3D"3b72d1f7-3da9-42b2-abff-8afd655192c1" class=3D"conflue=
+nceTh">
+<p local-id=3D"a817eafb-3a29-4452-b39c-6050aa8a0f5b"><strong>Package</stron=
+g></p></th>
+<th data-local-id=3D"1032b07c-d3bd-4ee3-904b-76cc61b50465" class=3D"conflue=
+nceTh">
+<p local-id=3D"d987b718-b725-4a86-bf9b-ebd2cad63c1d"><strong>Application/Bi=
+nary</strong></p></th>
+<th data-local-id=3D"cf811da4-f53f-4e0e-853f-10bf1bc0a26f" class=3D"conflue=
+nceTh">
+<p local-id=3D"3e590a32-6bcd-435b-af74-edbe91317eff"><strong>git Branch</st=
+rong></p></th>
+<th data-local-id=3D"15293749-5ae9-4452-8de8-1d218cde2f20" class=3D"conflue=
+nceTh">
+<p local-id=3D"c37383b3-1cdd-4348-b639-ac336c3203c3"><strong>Description</s=
+trong></p></th>
+</tr>
+<tr ac:local-id=3D"4a9eede6-b9ff-4970-9b34-88dc8d6774e4">
+<td data-local-id=3D"525bd18a-c4e5-48ff-a98d-5aaa3566bc1c" class=3D"conflue=
+nceTd">
+<p local-id=3D"bc2d7d93-6033-4e44-a305-c4eee3d9ea85">pharmos.outbound.csc_c=
+ore_applications</p></td>
+<td data-local-id=3D"b55e449d-c2a2-432f-9f7e-d4250d1a2b6d" class=3D"conflue=
+nceTd">
+<p local-id=3D"6d5426f7-2aea-4267-bbdd-9b1cdd685452"></p></td>
+<td data-local-id=3D"64870e88-a06f-4b71-b131-d90b1bcbef2a" class=3D"conflue=
+nceTd">
+<p local-id=3D"02594ee9-538e-4302-942d-160e36c2e083">CPR0002783</p></td>
+<td data-local-id=3D"d159174b-d203-41a8-855d-38e7586192c3" class=3D"conflue=
+nceTd">
+<p local-id=3D"e85b158c-583d-4fad-8fa8-02f99d660755"></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 local-id=3D"f2f8e12b-37d1-4f8b-bc75-27a35709e217" id=3D"CPR0002783-INT-=
+tracelong-termunavailableproducts-KanbanCards(Demand,EPICs,Features)">Kanba=
+n Cards (Demand, EPICs, Features)</h3>
+<ul local-id=3D"4a66ae0d-5a9c-4ad9-85ea-b32561f2b1ac">
+<li local-id=3D"174c2bc3-70da-48a7-a3a5-147fbe929868">
+<p local-id=3D"c67f8e34-4cc8-4d28-aa8f-de7582a572f1">Demand: <a class=3D"ex=
+ternal-link" href=3D"http://tfs.phoenix.loc:8080/tfs/DefaultCollection/Phar=
+mos/_workitems/edit/30894" rel=3D"nofollow">http://tfs.phoenix.loc:8080/tfs=
+/DefaultCollection/Pharmos/_workitems/edit/30894</a></p></li>
+</ul>
+<h3 local-id=3D"7ec00bc9-21b1-46aa-ba7c-38e24211340d" id=3D"CPR0002783-INT-=
+tracelong-termunavailableproducts-ServiceRequests/ChangeRequest">Service Re=
+quests / Change Request</h3>
+<div class=3D"table-wrap">
+<table data-layout=3D"default" data-local-id=3D"9451787c-9796-45e7-8700-306=
+2e7062bd8" class=3D"confluenceTable">
+<tbody>
+<tr ac:local-id=3D"1b5b4537-e0ce-41c4-8785-8d43b3635684">
+<th data-local-id=3D"6194acce-5e9d-4567-8259-a7dc6a6b079e" class=3D"conflue=
+nceTh">
+<p local-id=3D"b3816004-b36b-4cd0-9eeb-38507ed74324"><strong>SR / RFC</stro=
+ng></p></th>
+<th data-local-id=3D"f9a92b46-db7f-4b0b-bd34-066c7f8f1518" class=3D"conflue=
+nceTh">
+<p local-id=3D"1ef8044a-79ef-4f8e-a496-7248a27321a2"><strong>Creation Date<=
+/strong></p></th>
+<th data-local-id=3D"4ef80cb3-6f9d-4614-b4a2-e9746b5c4a76" class=3D"conflue=
+nceTh">
+<p local-id=3D"1acb717d-11b8-4c92-89c1-5ff3db4f67e4"><strong>Execution Date=
+</strong></p></th>
+<th data-local-id=3D"619baca5-a2c8-4d47-89e1-ed8c5117354d" class=3D"conflue=
+nceTh">
+<p local-id=3D"17a7c4c0-31d9-40dd-83c0-8fd74ad5ca4f"><strong>Developer Scri=
+pt(s)</strong></p></th>
+<th data-local-id=3D"07ae67e2-4b42-4636-8573-6ca282a07a7f" class=3D"conflue=
+nceTh">
+<p local-id=3D"9592707b-7b2f-4abd-a64d-e5e31435577c"><strong>DBA Script(s)<=
+/strong></p></th>
+<th data-local-id=3D"9378c770-4437-4048-b0c4-686fe64692fb" class=3D"conflue=
+nceTh">
+<p local-id=3D"be09afb2-4433-45e8-8e56-dd76fbf7a387"><strong>Description</s=
+trong></p></th>
+</tr>
+<tr ac:local-id=3D"ed0c71cd-1422-4c8e-b058-739a8c2b165d">
+<td data-local-id=3D"b8804ef4-36ad-4d5b-8aa9-5b35d32f7a89" class=3D"conflue=
+nceTd">
+<p local-id=3D"b1da3551-d1b7-4a41-b94f-d10e328cb1b3"></p></td>
+<td data-local-id=3D"30acf06a-a36b-4a0d-9c9f-c01e4818ef15" class=3D"conflue=
+nceTd">
+<p local-id=3D"48cc3769-b37f-401a-9248-e8f281f4aabf"></p></td>
+<td data-local-id=3D"b43823e3-7b3d-4a0a-a293-878c970e1bf3" class=3D"conflue=
+nceTd">
+<p local-id=3D"769ff4ed-f611-476e-88c7-08f75a7e3ccf"></p></td>
+<td data-local-id=3D"f7bad2fb-af00-4827-825c-254636c500bd" class=3D"conflue=
+nceTd">
+<p local-id=3D"b6535ae2-6a43-4976-a415-f444c80d1711"></p></td>
+<td data-local-id=3D"cb6cd312-7da7-4778-a28a-9ab50bc201e0" class=3D"conflue=
+nceTd">
+<p local-id=3D"253b9d8c-3507-4462-98d0-68731ad7ba2c"></p></td>
+<td data-local-id=3D"b637c6d9-081c-45fb-8c53-addb85944748" class=3D"conflue=
+nceTd">
+<p local-id=3D"4120e7c9-9cef-41c6-b5db-2b0d7228a095"></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 local-id=3D"40d7da4b-5c5d-4924-b4bd-0a16b9dc05ff" id=3D"CPR0002783-INT-=
+tracelong-termunavailableproducts-SchedulerAPXJobs">Scheduler APX Jobs</h3>
+<div class=3D"table-wrap">
+<table data-layout=3D"default" data-local-id=3D"90fb81d6-d4a6-47dd-9367-b61=
+3b5c1331b" class=3D"confluenceTable">
+<tbody>
+<tr ac:local-id=3D"5be55de7-2bfa-4b89-89e3-2f509139401e">
+<th data-local-id=3D"970a4797-3f00-443d-a5be-155181b6bf6d" class=3D"conflue=
+nceTh">
+<p local-id=3D"91c49744-8615-41c4-8ad7-a54367c15513"><strong>Country (globa=
+l/branch)</strong></p></th>
+<th data-local-id=3D"9b864f7d-1d3b-46f7-ba9c-0c49d3ca8656" class=3D"conflue=
+nceTh">
+<p local-id=3D"25c493c4-1128-42f6-9a5e-e6ea8e13dc7e"><strong>Job</strong></=
+p></th>
+<th data-local-id=3D"4c064c71-95ca-4ed5-9335-b564e683618e" class=3D"conflue=
+nceTh">
+<p local-id=3D"38e216e5-eb59-454c-a25e-373192edcd7c"><strong>APX-Folder</st=
+rong></p></th>
+<th data-local-id=3D"43c6ed95-a653-401e-9ba0-c62dc7bedbda" class=3D"conflue=
+nceTh">
+<p local-id=3D"de8c42cf-e453-419f-b5d6-076f8c136bf6"><strong>Description</s=
+trong></p></th>
+</tr>
+<tr ac:local-id=3D"e6927fd3-f48c-4f1e-ab3d-5a8249c883f5">
+<td data-local-id=3D"70e9d2d5-79a3-4202-b704-11610f152ce5" class=3D"conflue=
+nceTd">
+<p local-id=3D"2307d2ee-d39a-4313-96c8-9a3688a20512"></p></td>
+<td data-local-id=3D"c36f1817-3da6-4671-a7dd-01eefff88a89" class=3D"conflue=
+nceTd">
+<p local-id=3D"79ecd3de-3430-4375-887f-6d3927703751"></p></td>
+<td data-local-id=3D"a0f365da-3b0e-492b-861f-4e2ec960e14d" class=3D"conflue=
+nceTd">
+<p local-id=3D"075f9b21-28d4-4927-b231-9e581fc1669e"></p></td>
+<td data-local-id=3D"48c323e7-37f1-4c47-a657-bd89a86b0adc" class=3D"conflue=
+nceTd">
+<p local-id=3D"9477adcb-cbea-41e6-a88b-43d73fb50989"></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 local-id=3D"7af763a6-c31e-4af7-9e46-2cf59057f223" id=3D"CPR0002783-INT-=
+tracelong-termunavailableproducts-DeploymentList">Deployment List</h3>
+<div class=3D"table-wrap">
+<table data-layout=3D"default" data-local-id=3D"dc61ee11-8769-4892-8972-3de=
+1fbdc3198" class=3D"confluenceTable">
+<tbody>
+<tr ac:local-id=3D"e26a536b-b3d4-42ab-9093-5f45bf605bc7">
+<th data-local-id=3D"e5ce3575-8298-4e21-a2ed-d0e0ba860d80" class=3D"conflue=
+nceTh">
+<p local-id=3D"60a2974f-e150-4aa4-ab3b-48b920366dfa"><strong>Category</stro=
+ng></p></th>
+<th data-local-id=3D"14b68ab9-779c-42f9-ae93-8501c825f24b" class=3D"conflue=
+nceTh">
+<p local-id=3D"f7e1711f-77cb-4d8f-916d-73491362c0a0"><strong>Package / Area=
+</strong></p></th>
+<th data-local-id=3D"e90b2f03-6c17-4c22-bd6a-12b8ffffc5d7" class=3D"conflue=
+nceTh">
+<p local-id=3D"37a67ac0-425a-4eb0-8600-ad82c7d7efba"><strong>binary / activ=
+ity</strong></p></th>
+<th data-local-id=3D"ed8055f1-5c69-43b1-8d8f-bb4980ec1ac7" class=3D"conflue=
+nceTh">
+<p local-id=3D"0495e495-46e6-4f50-ad25-2fa6e5945042"><strong>extra files</s=
+trong></p></th>
+<th data-local-id=3D"617dad08-492c-42f3-963e-264f5251f359" class=3D"conflue=
+nceTh">
+<p local-id=3D"0e5ab5ff-e94d-4afe-82eb-3cd646d87ce8"><strong>when</strong><=
+/p></th>
+<th data-local-id=3D"0cb76a67-3bae-4d2e-9d75-3a7ba2c21e64" class=3D"conflue=
+nceTh">
+<p local-id=3D"5e7df1da-1080-4d92-8995-8beb8e876b65"><strong>status</strong=
+></p></th>
+</tr>
+<tr ac:local-id=3D"bfc28ec9-976c-4890-9def-fa138dabdb96">
+<td data-local-id=3D"9fe2a92e-c27e-428b-b110-fc21b4945331" class=3D"conflue=
+nceTd">
+<p local-id=3D"2e0a7359-2332-4ddb-ba39-0fb109840b2c"></p></td>
+<td data-local-id=3D"64595b08-0bd4-4fbe-9790-d6ddaf84c5db" class=3D"conflue=
+nceTd">
+<p local-id=3D"def5127e-56aa-4f33-bf51-a02438fe0efb"></p></td>
+<td data-local-id=3D"99c145cb-9bb6-4860-93a2-37c8f0528e47" class=3D"conflue=
+nceTd">
+<p local-id=3D"a3e695ed-6e9c-47e0-af9e-d8a77bf38483"></p></td>
+<td data-local-id=3D"f45a5d46-6110-42cd-a5de-f1176cde808d" class=3D"conflue=
+nceTd">
+<p local-id=3D"907dcbe9-3445-41a8-be61-ddeaf66c092d"></p></td>
+<td data-local-id=3D"9614cc20-c5af-4e60-8a5f-bc9fe949e78b" class=3D"conflue=
+nceTd">
+<p local-id=3D"3a480dbb-eedf-46e5-9dcc-df754704f0c2"></p></td>
+<td data-local-id=3D"38185452-852b-4950-ba7a-90c949ea94e8" class=3D"conflue=
+nceTd">
+<p local-id=3D"eef011da-b8f1-4f19-9205-288be22a5501"></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class=3D"cell aside" data-type=3D"aside">
+<div class=3D"innerCell">
+<div class=3D"table-wrap">
+<table data-table-width=3D"760" data-layout=3D"default" data-local-id=3D"23=
+902efb-8f93-437d-8aed-341758cb9c54" class=3D"confluenceTable">
+<tbody>
+<tr ac:local-id=3D"6c5c7e07-c484-485c-a7ce-11b9896227b8">
+<th colspan=3D"2" data-local-id=3D"cd3c5ae8-d416-40c3-9361-96d11cb79e12" cl=
+ass=3D"confluenceTh">
+<p local-id=3D"b1d12614-8912-4a7b-bfe7-5acf41ad35b9"><strong>Short Profile<=
+/strong></p></th>
+</tr>
+<tr ac:local-id=3D"3d5dcbec-cfd8-4a67-9432-57bfe4a62bf8">
+<th data-local-id=3D"6de5cbd0-d510-431f-9e15-1154ebd7c4b0" class=3D"conflue=
+nceTh">
+<p local-id=3D"e14b6b17-458b-4c3a-9d6a-6aae2cf2d260"><strong>CPR/Project Te=
+am</strong></p></th>
+<td data-local-id=3D"224a9889-d0d5-46d6-a76d-1e29eb6f203d" class=3D"conflue=
+nceTd">
+<p local-id=3D"08e0f917-f119-46a9-b194-61ed6c8797c7">NTTDATA</p>
+<ul local-id=3D"b8bceda6-e152-4388-a825-c39c6acc0f65">
+<li local-id=3D"dc24d998-8a48-49f2-b1f2-3d09d2d538fd">
+<p local-id=3D"19a2889e-5b0a-4741-944c-46c0ee7188bb">Team members</p></li>
+<li local-id=3D"f5fe0a2c-d176-4c1d-8ab8-b173d3af5681">
+<p local-id=3D"d2a11684-2867-44aa-89cf-e57561f94396">Haythem Ben Abdelaziz<=
+/p></li>
+</ul></td>
+</tr>
+<tr ac:local-id=3D"fb1b93f3-92f6-4d0e-b17f-9295d9bd12b3">
+<th data-local-id=3D"da3dc499-f838-49bd-84e2-00fafa587041" class=3D"conflue=
+nceTh">
+<p local-id=3D"6740d565-f6af-4b3a-8fc7-a56437ffaf7d"><strong>CPR Type</stro=
+ng></p></th>
+<td data-local-id=3D"d962ed60-e269-4f48-9984-1f468d93d897" class=3D"conflue=
+nceTd">
+<p local-id=3D"c389b3ce-278a-49df-8241-d1639a95c355">Change</p></td>
+</tr>
+<tr ac:local-id=3D"ff70d1ec-2fa2-4b44-aefe-4450857e6296">
+<th data-local-id=3D"bdc80e54-b05a-48d1-aafa-52510af0163c" class=3D"conflue=
+nceTh">
+<p local-id=3D"b8978beb-bc29-4726-a7c9-c04492357be0"><strong>GxP relevant</=
+strong></p></th>
+<td data-local-id=3D"08da2a57-5876-477c-a3fd-c512cdd564d1" class=3D"conflue=
+nceTd">
+<p local-id=3D"971ef76a-abd0-4c08-9299-7513407178c4">No</p></td>
+</tr>
+<tr ac:local-id=3D"f1e7a44c-15cf-43ed-8c46-a7e3bc048814">
+<th data-local-id=3D"86da11cb-8590-46e5-9f15-58cadc133872" class=3D"conflue=
+nceTh">
+<p local-id=3D"27fca77d-108d-4d9b-a6a5-c90649f2ca28"><strong>Release Train =
+Quarter</strong></p></th>
+<td data-local-id=3D"7f77b391-4bd8-4be4-bb66-a35bf39c6b91" class=3D"conflue=
+nceTd">
+<p local-id=3D"0a2b0dff-5977-4bef-a886-1384d8d9ac8f">Q4-2025</p></td>
+</tr>
+<tr ac:local-id=3D"16a27faa-5587-4de1-81ce-bd5723d3b5da">
+<th data-local-id=3D"7c648f82-4128-42f9-bb8d-825ee6137c94" class=3D"conflue=
+nceTh">
+<p local-id=3D"4d5014c2-1954-419b-8bb3-95e5403c6058"><strong>CPR Creation D=
+ate</strong></p></th>
+<td data-local-id=3D"3a682255-921a-483c-addc-b567f255f26d" class=3D"conflue=
+nceTd">
+<p local-id=3D"5728b234-f99b-4235-988d-d40ff1563083">31.10.2025</p></td>
+</tr>
+<tr ac:local-id=3D"9f577c5b-af61-4f09-9fa6-379b389c9167">
+<th data-local-id=3D"0ae5cc92-d962-4560-ac6f-2aef38678324" class=3D"conflue=
+nceTh">
+<p local-id=3D"c3aa6c87-ac16-41a0-b7e1-cbee2aedcb33"><strong>CPR Start Date=
+</strong></p></th>
+<td data-local-id=3D"448bed9e-081a-4ba3-980a-000f37c75b6c" class=3D"conflue=
+nceTd">
+<p local-id=3D"dad33cc8-0746-495f-8e72-e73d3d088c9c"></p></td>
+</tr>
+<tr ac:local-id=3D"cfb4509e-c37b-4266-9a2f-c6c5a56fd034">
+<th data-local-id=3D"3d423f07-f63b-4aaf-9ce9-b991c554cbaf" class=3D"conflue=
+nceTh">
+<p local-id=3D"bdb42c66-af9c-4d2c-ace5-b233db33c33a"><strong>CPR End Date</=
+strong></p></th>
+<td data-local-id=3D"95817203-b5bc-4d6e-993c-de54ff971a43" class=3D"conflue=
+nceTd">
+<p local-id=3D"54cac723-495f-4d87-b5f7-a7377d85ce3c"></p></td>
+</tr>
+<tr ac:local-id=3D"83985ad7-086b-42c1-8989-2b7e2ec08997">
+<th data-local-id=3D"2113b07e-21bf-44fa-bdf7-8821518ddffb" class=3D"conflue=
+nceTh">
+<p local-id=3D"accd0a38-cba5-4781-9320-c46a74ad766c"><strong>Contact Person=
+s</strong></p></th>
+<td data-local-id=3D"1d933dfb-d7f0-4e0c-b233-cb945598e734" class=3D"conflue=
+nceTd">
+<ul local-id=3D"f4e704dc-48d6-4358-8c71-7bb89571905a">
+<li local-id=3D"fd5734e4-4706-41ad-9b56-20b8349f6117">
+<p local-id=3D"e7115f5e-7672-40c7-a0c8-099aa5f8025d">Jurij Doppler (BAM)</p=
+></li>
+<li local-id=3D"d174633c-019c-4dca-a0fd-250ad5105c29">
+<p local-id=3D"6f4029b3-2768-4c46-bb76-72b054a9b200">Claus Merkl (Requestor=
+)</p></li>
+<li local-id=3D"0ef10d47-805b-4ad8-818b-713adee87bbd">
+<p local-id=3D"dcc41582-7732-4203-b8c5-b3fe61598097">Allain Thollon (Tester=
+)</p></li>
+</ul></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class=3D"columnLayout fixed-width" data-layout=3D"fixed-width">
+<div class=3D"cell normal" data-type=3D"normal">
+<div class=3D"innerCell">
+<h2 local-id=3D"c33de56b-51ec-4355-954f-41a167db40f8" id=3D"CPR0002783-INT-=
+tracelong-termunavailableproducts-CPR/Projects-Documents(BusinessRequiremen=
+ts,MeetingMinutes)">CPR/Projects-Documents (Business Requirements, Meeting =
+Minutes)</h2>
+<p local-id=3D"ced3df94-b14e-4322-af62-28a2b9d78b78">(which are not in any =
+other system, otherwise use the Links section to add)</p>
+<div class=3D"plugin_attachments_container">
+<div class=3D"plugin_attachments_table_container">
+<fieldset class=3D"hidden">
+<input type=3D"hidden" class=3D"plugin_attachments_macro_render_param" name=
+=3D"pageId" value=3D"5688590434"> <input type=3D"hidden" class=3D"plugin_at=
+tachments_macro_render_param" name=3D"pageSize" value=3D"500"> <input type=
+=3D"hidden" class=3D"plugin_attachments_macro_render_param" name=3D"totalPa=
+ges" value=3D"1"> <input type=3D"hidden" name=3D"deleteConfirmMessage" valu=
+e=3D"Are you sure you want to send the attached file " {0} to the trash? on=
+ly a space administrator can undo this action.> <input type=3D"hidden" name=
+=3D"outputType" value=3D"word">
+</fieldset>
+<table class=3D"attachments aui" data-sort-by=3D"date" data-sort-order=3D""=
+ data-tablesorter-headers=3D"{&quot;0&quot;: {&quot;sorter&quot;: false}}">
+<tbody>
+<tr class=3D"header-row">
+<th class=3D"expand-column attachment-summary-toggle">&nbsp;</th>
+<th class=3D"filename-column">File</th>
+<th class=3D"modified-column">Modified</th>
+</tr>
+</tbody>
+<tbody>
+</tbody>
+</table>
+</div>
+<div class=3D"plugin_attachments_upload_container">
+<div class=3D"attachments-table-drop-zone">
+<div class=3D"drop-zone-empty-text">
+No files shared here yet.
+</div>
+<li class=3D"drop-zone-text">
+<div class=3D"drop-zone-image"></div><span>Drag and drop to upload or <a cl=
+ass=3D"aui-button aui-button-link browse-files">browse for files</a></span>=
+ <img src=3D"999c4a54a1d631b9463deb289934c49e59d234389606206787c86a080c2c2e=
+cc" class=3D"plugin_attachments_dropzone_uploadwaiticon" width=3D"16" heigh=
+t=3D"16"></li>
+<form method=3D"POST" class=3D"plugin_attachments_uploadform aui hidden" ac=
+tion=3D"/wiki/pages/plugins/attachments/doattachfile.action?pageId=3D568859=
+0434" enctype=3D"multipart/form-data">
+<input type=3D"hidden" name=3D"atl_token" value=3D"850287976693f931935591db=
+6a918390c711aa01">
+<div class=3D"field-group">
+<label>Upload file</label> <input type=3D"file" name=3D"file_0" size=3D"30"=
+>
+</div>
+<div class=3D"field-group">
+<label>File description</label> <input type=3D"text" class=3D"blank-search =
+text" name=3D"comment_0" size=3D"20" placeholder=3D"Comment"> <input type=
+=3D"hidden" name=3D"labels" value=3D"$macroParams.labels">
+</div>
+<div class=3D"field-group">
+<input type=3D"submit" class=3D"submit aui-button" name=3D"confirm" value=
+=3D"Upload">
+</div><iframe class=3D"plugin_attachments_uploadiframe hidden" name=3D"WKUW=
+4410NCvllioNB4RjH7XAVtBwgxBoxXdgoAqxTEFdnbSMtq24PZIpI8vxovND" src=3D""></if=
+rame>
+</form>
+</div>
+</div>
+<div>
+</div>
+</div>
+<p local-id=3D"e017713c-442e-44de-90ca-6c848946a4cb"></p>
+</div>
+</div>
+</div>
+</div>
+    </div>
+</body>
+</html>
+------=_Part_26_1606290375.1767956194723
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: base64
+Content-Location: file:///C:/999c4a54a1d631b9463deb289934c49e59d234389606206787c86a080c2c2ecc
+
+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
+fySDhGYQdDWGQyUhADs=
+------=_Part_26_1606290375.1767956194723--
