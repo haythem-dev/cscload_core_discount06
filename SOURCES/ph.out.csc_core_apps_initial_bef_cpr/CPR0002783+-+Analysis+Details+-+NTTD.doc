@@ -1,0 +1,395 @@
+Date: Fri, 9 Jan 2026 14:57:09 +0000 (UTC)
+Message-ID: <1783316365.7.1767970629902@b1f3cc9c809f>
+Subject: Exported From Confluence
+MIME-Version: 1.0
+Content-Type: multipart/related; 
+	boundary="----=_Part_6_1859979225.1767970629902"
+
+------=_Part_6_1859979225.1767970629902
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+Content-Location: file:///C:/exported.html
+
+<html xmlns:o=3D'urn:schemas-microsoft-com:office:office'
+      xmlns:w=3D'urn:schemas-microsoft-com:office:word'
+      xmlns:v=3D'urn:schemas-microsoft-com:vml'
+      xmlns=3D'urn:w3-org-ns:HTML'>
+<head>
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8=
+">
+    <title>CPR0002783 - Analysis Details - NTTD</title>
+    <!--[if gte mso 9]>
+    <xml>
+        <o:OfficeDocumentSettings>
+            <o:TargetScreenSize>1024x640</o:TargetScreenSize>
+            <o:PixelsPerInch>72</o:PixelsPerInch>
+            <o:AllowPNG/>
+        </o:OfficeDocumentSettings>
+        <w:WordDocument>
+            <w:View>Print</w:View>
+            <w:Zoom>90</w:Zoom>
+            <w:DoNotOptimizeForBrowser/>
+        </w:WordDocument>
+    </xml>
+    <![endif]-->
+    <style>
+                <!--
+        @page Section1 {
+            size: 8.5in 11.0in;
+            margin: 1.0in;
+            mso-header-margin: .5in;
+            mso-footer-margin: .5in;
+            mso-paper-source: 0;
+        }
+
+        table {
+            border: solid 1px;
+            border-collapse: collapse;
+        }
+
+        table td, table th {
+            border: solid 1px;
+            padding: 5px;
+        }
+
+        td {
+            page-break-inside: avoid;
+        }
+
+        tr {
+            page-break-after: avoid;
+        }
+
+        div.Section1 {
+            page: Section1;
+        }
+
+        /* Confluence print stylesheet. Common to all themes for print medi=
+a */
+/* Full of !important until we improve batching for print CSS */
+
+@media print {
+    #main {
+        padding-bottom: 1em !important; /* The default padding of 6em is to=
+o much for printouts */
+    }
+
+    body {
+        font: var(--ds-font-body-small, Arial, Helvetica, FreeSans, sans-se=
+rif);
+    }
+
+    body, #full-height-container, #main, #page, #content, .has-personal-sid=
+ebar #content {
+        background: var(--ds-surface, #fff) !important;
+        color: var(--ds-text, #000) !important;
+        border: 0 !important;
+        width: 100% !important;
+        height: auto !important;
+        min-height: auto !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        display: block !important;
+    }
+
+    a, a:link, a:visited, a:focus, a:hover, a:active {
+        color: var(--ds-text, #000);
+    }
+
+    #content h1,
+    #content h2,
+    #content h3,
+    #content h4,
+    #content h5,
+    #content h6 {
+        page-break-after: avoid;
+    }
+
+    pre {
+        font: var(--ds-font-code, Monaco, "Courier New", monospace);
+    }
+
+    #header,
+    .aui-header-inner,
+    #navigation,
+    #sidebar,
+    .sidebar,
+    #personal-info-sidebar,
+    .ia-fixed-sidebar,
+    .page-actions,
+    .navmenu,
+    .ajs-menu-bar,
+    .noprint,
+    .inline-control-link,
+    .inline-control-link a,
+    a.show-labels-editor,
+    .global-comment-actions,
+    .comment-actions,
+    .quick-comment-container,
+    #addcomment {
+        display: none !important;
+    }
+
+    /* CONF-28544 cannot print multiple pages in IE */
+    #splitter-content {
+        position: relative !important;
+    }
+
+    .comment .date::before {
+        content: none !important; /* remove middot for print view */
+    }
+
+    h1.pagetitle img {
+        height: auto;
+        width: auto;
+    }
+
+    .print-only {
+        display: block;
+    }
+
+    #footer {
+        position: relative !important; /* CONF-17506 Place the footer at en=
+d of the content */
+        margin: 0;
+        padding: 0;
+        background: none;
+        clear: both;
+    }
+
+    #poweredby {
+        border-top: none;
+        background: none;
+    }
+
+    #poweredby li.print-only {
+        display: list-item;
+        font-style: italic;
+    }
+
+    #poweredby li.noprint {
+        display: none;
+    }
+
+    /* no width controls in print */
+    .wiki-content .table-wrap,
+    .wiki-content p,
+    .panel .codeContent,
+    .panel .codeContent pre,
+    .image-wrap {
+        overflow: visible !important;
+    }
+
+    /* TODO - should this work? */
+    #children-section,
+    #comments-section .comment,
+    #comments-section .comment .comment-body,
+    #comments-section .comment .comment-content,
+    #comments-section .comment p {
+        page-break-inside: avoid;
+    }
+
+    #page-children a {
+        text-decoration: none;
+    }
+
+    /**
+     hide twixies
+
+     the specificity here is a hack because print styles
+     are getting loaded before the base styles. */
+    #comments-section.pageSection .section-header,
+    #comments-section.pageSection .section-title,
+    #children-section.pageSection .section-header,
+    #children-section.pageSection .section-title,
+    .children-show-hide {
+        padding-left: 0;
+        margin-left: 0;
+    }
+
+    .children-show-hide.icon {
+        display: none;
+    }
+
+    /* personal sidebar */
+    .has-personal-sidebar #content {
+        margin-right: 0px;
+    }
+
+    .has-personal-sidebar #content .pageSection {
+        margin-right: 0px;
+    }
+
+    .no-print, .no-print * {
+        display: none !important;
+    }
+}
+-->
+    </style>
+</head>
+<body>
+    <h1>CPR0002783 - Analysis Details - NTTD</h1>
+    <div class=3D"Section1">
+        <p local-id=3D"a63b82d2-896a-4f64-8858-8087c0a03996">This page must=
+ be filled out for each Change. Without Analysis no implementation will be =
+started.</p>
+<h3 local-id=3D"d8f768c5-d845-49b4-8a5e-fba03e27074c" id=3D"CPR0002783-Anal=
+ysisDetails-NTTD-BusinessContext(mandatory):">Business Context (mandatory):=
+</h3>
+<ul local-id=3D"9ddaaf67-ecc7-495b-944f-870a475f373f">
+<li local-id=3D"bac6d24e-828b-4061-b21f-80645943dca0">
+<p local-id=3D"b024b3b0-841f-4fb3-9930-58dc400d1dbb"></p></li>
+</ul>
+<h3 local-id=3D"d301ca97-481e-4e39-ac53-bcfa2f9e5462" id=3D"CPR0002783-Anal=
+ysisDetails-NTTD-Process(mandatory):">Process (mandatory):</h3>
+<ul local-id=3D"441ebc95-42fe-49ac-bd45-045673d971c8">
+<li local-id=3D"75bd99a2-83a3-4dec-a2c8-869ddb46bf95">
+<p local-id=3D"eb6807f6-65d3-4b70-b8b3-f041b034b66f"></p></li>
+</ul>
+<h3 local-id=3D"01bb1922-7efd-402a-910e-f1d87096bbba" id=3D"CPR0002783-Anal=
+ysisDetails-NTTD-DataModel/DBTables(optionalifDBisinvolvedand/ortobechanged=
+):">Data Model/DB Tables (optional if DB is involved and/or to be changed):=
+</h3>
+<ul local-id=3D"68fa7883-3a48-4f63-82dd-23d348486cd6">
+<li local-id=3D"d2deef0f-faf3-4901-826a-a49717c255c8">
+<p local-id=3D"b2cb2792-60e1-4fe8-bc91-61aaa60eb10f"></p></li>
+</ul>
+<h3 local-id=3D"51067822-7a77-4f9c-84b8-22b0f8a955aa" id=3D"CPR0002783-Anal=
+ysisDetails-NTTD-Frontend-Windows/Citrix(optionalifaFrontendisinvolvedand/o=
+rtobechanged):">Frontend - Windows/Citrix (optional if a Frontend is involv=
+ed and/or to be changed):</h3>
+<ul local-id=3D"2f70df42-cadc-4a0e-8762-316b969fd43e">
+<li local-id=3D"a460fed4-5791-4ac3-8431-b89199a9fe17">
+<p local-id=3D"ea2c2648-d921-4612-8709-fdeb776b002d"></p></li>
+</ul>
+<h3 local-id=3D"4d890b84-dcb4-4fd3-bf25-ac2c5cdac522" id=3D"CPR0002783-Anal=
+ysisDetails-NTTD-Backend-AIX/WindowsWebserver(optionalifaBackendisinvolveda=
+nd/ortobechanged):">Backend - AIX / Windows Webserver (optional if a Backen=
+d is involved and/or to be changed):</h3>
+<ul local-id=3D"bb79e387-3fb9-4517-b343-31ce2f4931b4">
+<li local-id=3D"3b083da1-5a82-4b06-b70b-0d23c4510185">
+<p local-id=3D"032a2a4d-dcbc-46d1-8d70-e45bc029653d"></p></li>
+</ul>
+<h3 local-id=3D"f8ab3108-64fd-4b28-8c73-5896a19d075c" id=3D"CPR0002783-Anal=
+ysisDetails-NTTD-Dependentdepartmentinputs(optionalifanyexternaldepartmento=
+utsidePHARMOSisinvolved):">Dependent department inputs (optional if any ext=
+ernal department outside PHARMOS is involved):</h3>
+<ul local-id=3D"b56e8c7f-c016-495f-abf0-5aa2a79ec8fc">
+<li local-id=3D"85abd30f-fbe5-4819-a02e-6034ec37f1bc">
+<p local-id=3D"ed3a46c0-4a33-48d3-9c55-9d75a14ff076">PINT</p></li>
+<li local-id=3D"02fa0495-74b4-4d68-bfe3-514396a70592">
+<p local-id=3D"67dbbfbf-fb5b-4141-b6ef-f75e800c8636">Citrix</p></li>
+<li local-id=3D"5c43e03c-f33b-4f05-85c8-0120560796e4">
+<p local-id=3D"31f95e8d-aff9-47fc-85c5-c71e9358bf1c">Infrastructure Env</p>=
+</li>
+<li local-id=3D"b56a0455-e95b-4766-9531-4e68e181e683">
+<p local-id=3D"d29bee18-af1f-4924-a8a3-db91a91b1a23">Schedule/Batch</p></li=
+>
+<li local-id=3D"6ae922c4-5f3f-4fc1-b49e-387c5edf1ffc">
+<p local-id=3D"5c89417c-5022-4684-be65-8a989dea4ec5">BI</p></li>
+<li local-id=3D"6a0d30b4-65f3-45fd-b252-c08638c442ad">
+<p local-id=3D"efe6cf93-a000-4e71-90c6-43e1f14e2098">GxP (in case of GxP re=
+levance)</p></li>
+</ul>
+<h3 local-id=3D"8f9c4597-ec0d-4e0f-aa07-6b7eaa181e51" id=3D"CPR0002783-Anal=
+ysisDetails-NTTD-Documents(AnalysisandSolutionSpecification):">Documents (A=
+nalysis and Solution Specification):</h3>
+<div class=3D"plugin_attachments_container">
+<div class=3D"plugin_attachments_table_container">
+<fieldset class=3D"hidden">
+<input type=3D"hidden" class=3D"plugin_attachments_macro_render_param" name=
+=3D"pageId" value=3D"5874515969"> <input type=3D"hidden" class=3D"plugin_at=
+tachments_macro_render_param" name=3D"pageSize" value=3D"500"> <input type=
+=3D"hidden" class=3D"plugin_attachments_macro_render_param" name=3D"totalPa=
+ges" value=3D"1"> <input type=3D"hidden" name=3D"deleteConfirmMessage" valu=
+e=3D"Are you sure you want to send the attached file " {0} to the trash? on=
+ly a space administrator can undo this action.> <input type=3D"hidden" name=
+=3D"outputType" value=3D"word">
+</fieldset>
+<table class=3D"attachments aui" data-sort-by=3D"date" data-sort-order=3D""=
+ data-tablesorter-headers=3D"{&quot;0&quot;: {&quot;sorter&quot;: false}}">
+<tbody>
+<tr class=3D"header-row">
+<th class=3D"expand-column attachment-summary-toggle">&nbsp;</th>
+<th class=3D"filename-column">File</th>
+<th class=3D"modified-column">Modified</th>
+</tr>
+</tbody>
+<tbody>
+</tbody>
+</table>
+</div>
+<div class=3D"plugin_attachments_upload_container">
+<div class=3D"attachments-table-drop-zone">
+<div class=3D"drop-zone-empty-text">
+No files shared here yet.
+</div>
+<li class=3D"drop-zone-text">
+<div class=3D"drop-zone-image"></div><span>Drag and drop to upload or <a cl=
+ass=3D"aui-button aui-button-link browse-files">browse for files</a></span>=
+ <img src=3D"999c4a54a1d631b9463deb289934c49e59d234389606206787c86a080c2c2e=
+cc" class=3D"plugin_attachments_dropzone_uploadwaiticon" width=3D"16" heigh=
+t=3D"16"></li>
+<form method=3D"POST" class=3D"plugin_attachments_uploadform aui hidden" ac=
+tion=3D"/wiki/pages/plugins/attachments/doattachfile.action?pageId=3D587451=
+5969" enctype=3D"multipart/form-data">
+<input type=3D"hidden" name=3D"atl_token" value=3D"1826555e7d6c2c78eebc7ca3=
+c7e3c301a0d812c0">
+<div class=3D"field-group">
+<label>Upload file</label> <input type=3D"file" name=3D"file_0" size=3D"30"=
+>
+</div>
+<div class=3D"field-group">
+<label>File description</label> <input type=3D"text" class=3D"blank-search =
+text" name=3D"comment_0" size=3D"20" placeholder=3D"Comment"> <input type=
+=3D"hidden" name=3D"labels" value=3D"$macroParams.labels">
+</div>
+<div class=3D"field-group">
+<input type=3D"submit" class=3D"submit aui-button" name=3D"confirm" value=
+=3D"Upload">
+</div><iframe class=3D"plugin_attachments_uploadiframe hidden" name=3D"y4gP=
+UztflGaZZoz4XmVVbYbw3bwNAnHzi9mhpwM0D28CXBuEVX6SKt9FkT66psIw" src=3D""></if=
+rame>
+</form>
+</div>
+</div>
+<div>
+</div>
+</div>
+    </div>
+</body>
+</html>
+------=_Part_6_1859979225.1767970629902
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: base64
+Content-Location: file:///C:/999c4a54a1d631b9463deb289934c49e59d234389606206787c86a080c2c2ecc
+
+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
+fySDhGYQdDWGQyUhADs=
+------=_Part_6_1859979225.1767970629902--
