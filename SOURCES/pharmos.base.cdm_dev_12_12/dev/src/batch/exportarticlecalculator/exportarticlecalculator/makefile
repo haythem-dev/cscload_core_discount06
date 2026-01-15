@@ -46,7 +46,7 @@ DIR_INCS       = $(DIR_SRCS)
 LIBS_STATIC    = $(LIBUTIL_LIB)
 
 LIBS_SHARED    = $(LOG4CPLUS_SHARED_LIBS) $(BOOST_SYSTEM_SHARED_LIBS) $(BASAR_SHARED_LIBS) \
-                 $(QT_CORE_SHARED_LIBS) -liconv
+                 $(QT_CORE_SHARED_LIBS) -liconv -lbsd
 
 # additional library dirs to add with -L like -L$(LIB_DIR)
 ADD_LIB_DIRS   =
